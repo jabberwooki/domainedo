@@ -1,0 +1,16 @@
+<?php
+/**
+ * Implements hook_install().
+ *
+ * Performs actions to set up the site for this profile.
+ *
+ * @see system_install()
+ */
+function domainedo_config_install() {
+	// Themes settings.
+	theme_disable(array('bartik','seven'));
+	theme_enable(array('domainedo'));
+	
+	// Modules settings.
+	module_disable(array('toolbar'));
+}
