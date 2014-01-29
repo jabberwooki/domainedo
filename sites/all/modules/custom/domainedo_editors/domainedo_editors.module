@@ -1,5 +1,7 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the Domaine d'O Editors feature.
  */
+
+include_once 'domainedo_editors.features.inc';
