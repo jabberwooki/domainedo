@@ -136,7 +136,7 @@ function scald_galleria_scald_player_settings_form_validate($form, &$form_state)
   if (!preg_match('/^[a-zA-Z0-9%]+$/', $form_state['values']['height'])) {
     form_set_error('height', t('Incorrect height format.'));
   }
-  if (!json_decode($form_state['values']['options'])) {
+  if (!empty($form_state['values']['options']) && !json_decode($form_state['values']['options'])) {
     form_set_error('options', t('Incorrect options format.'));
   }
 }
@@ -182,7 +182,10 @@ function scald_galleria_scald_prerender($atom, $context, $options, $mode) {
     // Load URLs to thumb, normal and fullscreen images.
     $images = array();
     foreach ($items as $item) {
-      $item_atom = scald_atom_load($item['sid']);
+      if (!$item_atom = scald_atom_load($item['sid'])) {
+        continue;
+      }
+
       $thumbnail = field_get_items('scald_atom', $item_atom, 'scald_thumbnail');
 
       if (!empty($thumbnail[0]['fid'])) {
@@ -222,8 +225,26 @@ function scald_galleria_scald_prerender($atom, $context, $options, $mode) {
       }
     }
 
-    $atom->rendered->player = theme('scald_galleria', array('atom' => $atom, 'images' => $images, 'options' => $galleria_opts));
-    // We are not caching since we include JS in preprocess.
+    $galleria_id = 'scald-gallery-' . $atom->sid;
+    $options = empty($galleria_opts['options']) ? '' : ', ' . $galleria_opts['options'];
+    $inline_js = "Galleria.run('#" . $galleria_id . "'" . $options . ");";
+
+    $atom->rendered->player = array(
+      '#theme' => 'scald_galleria',
+      '#atom' => $atom,
+      '#images' => $images,
+      '#options' => $galleria_opts,
+      '#attached' => array(
+        'js' => array(
+          scald_gallery_get_library_file() => array(),
+          scald_gallery_get_library_file($galleria_opts['theme']) => array(),
+          $inline_js => array('type' => 'inline', 'scope' => 'footer'),
+        ),
+      ),
+    );
+
+    // Scald does not cache renderable array properly until 1.2.
+    // @todo remove when Scald 1.2 is released.
     $atom->rendered->nocache = TRUE;
   }
 }
@@ -257,19 +278,7 @@ function scald_gallery_preprocess_scald_galleria(&$vars) {
   }
 
   $vars['items'] = $items;
-
-  // Init galleria.
   $vars['galleria_id'] = 'scald-gallery-' . $vars['atom']->sid;
-  $galleria_path = libraries_get_path('galleria');
-  $galleria_js_path = scald_gallery_get_library_file();
-  drupal_add_js($galleria_js_path);
-
-  $theme_js_path = scald_gallery_get_library_file($vars['options']['theme']);
-  drupal_add_js($theme_js_path);
-
-  $options = empty($vars['options']['options']) ? '' : ', ' . $vars['options']['options'];
-  $inline_js = "Galleria.run('#" . $vars['galleria_id'] . "'" . $options . ");";
-  drupal_add_js($inline_js, array('type' => 'inline', 'scope' => 'footer'));
 }
 
 /**

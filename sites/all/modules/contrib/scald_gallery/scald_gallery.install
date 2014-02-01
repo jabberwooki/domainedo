@@ -18,12 +18,17 @@ function scald_gallery_install() {
   $context_config->transcoder['gallery']['*'] = 'style-Library';
   scald_context_config_save($context_config);
 
-  // Create fields and instances.
-  foreach (scald_gallery_installed_fields() as $field) {
-    field_create_field($field);
+  // Create fields and instances. Ignore the exceptions when field exists
+  // (because it is in a feature etc.).
+  try {
+    foreach (scald_gallery_installed_fields() as $field) {
+      field_create_field($field);
+    }
+    foreach (scald_gallery_installed_instances() as $instance) {
+      field_create_instance($instance);
+    }
   }
-  foreach (scald_gallery_installed_instances() as $instance) {
-    field_create_instance($instance);
+  catch (Exception $e) {
   }
 }
 

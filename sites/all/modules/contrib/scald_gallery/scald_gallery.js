@@ -37,9 +37,6 @@ Drupal.behaviors.scald_gallery = {
 };
 
 $(document).bind('CToolsDetachBehaviors', Drupal.behaviors.scald_gallery.detach);
-$(document).bind('CToolsDetachBehaviors', function() {
-  console.log('detach');
-});
 
 }) (jQuery);
 
