@@ -20,6 +20,7 @@ dependencies[] = scald_soundcloud
 dependencies[] = scald_twitter
 dependencies[] = scald_youtube
 dependencies[] = strongarm
+dependencies[] = views
 features[ctools][] = scald:context_config:1
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
