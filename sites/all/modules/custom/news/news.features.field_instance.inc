@@ -65,6 +65,57 @@ function news_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-news-field_attached_files'
+  $field_instances['node-news-field_attached_files'] = array(
+    'bundle' => 'news',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'atom_reference',
+        'settings' => array(),
+        'type' => 'title',
+        'weight' => 18,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_attached_files',
+    'label' => 'Fichiers attaches',
+    'required' => 0,
+    'settings' => array(
+      'referencable_types' => array(
+        'audio' => 0,
+        'file' => 'file',
+        'gallery' => 0,
+        'image' => 0,
+        'twitter' => 0,
+        'video' => 0,
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'atom_reference',
+      'settings' => array(),
+      'type' => 'atom_reference_textfield',
+      'weight' => 8,
+    ),
+  );
+
   // Exported field_instance: 'node-news-field_date'
   $field_instances['node-news-field_date'] = array(
     'bundle' => 'news',
@@ -131,8 +182,8 @@ function news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-news-field_news_attached_file'
-  $field_instances['node-news-field_news_attached_file'] = array(
+  // Exported field_instance: 'node-news-field_galery'
+  $field_instances['node-news-field_galery'] = array(
     'bundle' => 'news',
     'default_value' => NULL,
     'deleted' => 0,
@@ -143,7 +194,7 @@ function news_field_default_field_instances() {
         'module' => 'atom_reference',
         'settings' => array(),
         'type' => 'title',
-        'weight' => 18,
+        'weight' => 17,
       ),
       'full' => array(
         'label' => 'above',
@@ -159,59 +210,7 @@ function news_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_news_attached_file',
-    'label' => 'Fichier attaché',
-    'required' => 0,
-    'settings' => array(
-      'referencable_types' => array(
-        'audio' => 0,
-        'file' => 'file',
-        'gallery' => 0,
-        'image' => 0,
-        'twitter' => 0,
-        'video' => 0,
-      ),
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'atom_reference',
-      'settings' => array(),
-      'type' => 'atom_reference_textfield',
-      'weight' => 8,
-    ),
-  );
-
-  // Exported field_instance: 'node-news-field_news_galery'
-  $field_instances['node-news-field_news_galery'] = array(
-    'bundle' => 'news',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'atom_reference',
-        'settings' => array(),
-        'type' => 'title',
-        'weight' => 15,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'module' => 'atom_reference',
-        'settings' => array(),
-        'type' => 'title',
-        'weight' => 1,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_news_galery',
+    'field_name' => 'field_galery',
     'label' => 'Galerie',
     'required' => 0,
     'settings' => array(
@@ -230,12 +229,12 @@ function news_field_default_field_instances() {
       'module' => 'atom_reference',
       'settings' => array(),
       'type' => 'atom_reference_textfield',
-      'weight' => 7,
+      'weight' => 6,
     ),
   );
 
-  // Exported field_instance: 'node-news-field_news_image'
-  $field_instances['node-news-field_news_image'] = array(
+  // Exported field_instance: 'node-news-field_image'
+  $field_instances['node-news-field_image'] = array(
     'bundle' => 'news',
     'default_value' => NULL,
     'deleted' => 0,
@@ -252,7 +251,7 @@ function news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -262,7 +261,7 @@ function news_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_news_image',
+    'field_name' => 'field_image',
     'label' => 'Image',
     'required' => 0,
     'settings' => array(
@@ -337,108 +336,6 @@ function news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-news-field_news_son'
-  $field_instances['node-news-field_news_son'] = array(
-    'bundle' => 'news',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'atom_reference',
-        'settings' => array(),
-        'type' => 'title',
-        'weight' => 17,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_news_son',
-    'label' => 'Son',
-    'required' => 0,
-    'settings' => array(
-      'referencable_types' => array(
-        'audio' => 'audio',
-        'file' => 0,
-        'gallery' => 0,
-        'image' => 0,
-        'twitter' => 0,
-        'video' => 0,
-      ),
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'atom_reference',
-      'settings' => array(),
-      'type' => 'atom_reference_textfield',
-      'weight' => 6,
-    ),
-  );
-
-  // Exported field_instance: 'node-news-field_news_video'
-  $field_instances['node-news-field_news_video'] = array(
-    'bundle' => 'news',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'atom_reference',
-        'settings' => array(),
-        'type' => 'title',
-        'weight' => 16,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_news_video',
-    'label' => 'Vidéos',
-    'required' => 0,
-    'settings' => array(
-      'referencable_types' => array(
-        'audio' => 0,
-        'file' => 0,
-        'gallery' => 0,
-        'image' => 0,
-        'twitter' => 0,
-        'video' => 'video',
-      ),
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'atom_reference',
-      'settings' => array(),
-      'type' => 'atom_reference_textfield',
-      'weight' => 5,
-    ),
-  );
-
   // Exported field_instance: 'node-news-field_promoted'
   $field_instances['node-news-field_promoted'] = array(
     'bundle' => 'news',
@@ -484,6 +381,108 @@ function news_field_default_field_instances() {
       ),
       'type' => 'options_onoff',
       'weight' => 9,
+    ),
+  );
+
+  // Exported field_instance: 'node-news-field_sound'
+  $field_instances['node-news-field_sound'] = array(
+    'bundle' => 'news',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'atom_reference',
+        'settings' => array(),
+        'type' => 'title',
+        'weight' => 16,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_sound',
+    'label' => 'Son',
+    'required' => 0,
+    'settings' => array(
+      'referencable_types' => array(
+        'audio' => 'audio',
+        'file' => 0,
+        'gallery' => 0,
+        'image' => 0,
+        'twitter' => 0,
+        'video' => 0,
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'atom_reference',
+      'settings' => array(),
+      'type' => 'atom_reference_textfield',
+      'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'node-news-field_video'
+  $field_instances['node-news-field_video'] = array(
+    'bundle' => 'news',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'atom_reference',
+        'settings' => array(),
+        'type' => 'title',
+        'weight' => 15,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_video',
+    'label' => 'Vidéo',
+    'required' => 0,
+    'settings' => array(
+      'referencable_types' => array(
+        'audio' => 0,
+        'file' => 0,
+        'gallery' => 0,
+        'image' => 0,
+        'twitter' => 0,
+        'video' => 'video',
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'atom_reference',
+      'settings' => array(),
+      'type' => 'atom_reference_textfield',
+      'weight' => 5,
     ),
   );
 
@@ -540,12 +539,12 @@ function news_field_default_field_instances() {
   t('Body');
   t('Date d\'événement');
   t('Date de parution');
-  t('Fichier attaché');
+  t('Fichiers attaches');
   t('Galerie');
   t('Image');
   t('Promu en page d\'accueil');
   t('Son');
-  t('Vidéos');
+  t('Vidéo');
   t('Zoom sur');
 
   return $field_instances;
