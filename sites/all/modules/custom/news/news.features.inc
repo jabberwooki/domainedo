@@ -22,7 +22,7 @@ function news_ctools_plugin_api($module = NULL, $api = NULL) {
 function news_node_info() {
   $items = array(
     'news' => array(
-      'name' => t('news'),
+      'name' => t('Evénement'),
       'base' => 'node_content',
       'description' => t('News pour le domaine d\'o'),
       'has_title' => '1',

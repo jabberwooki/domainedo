@@ -39,26 +39,6 @@ function news_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
-  // Exported field_base: 'field_attached_files'
-  $field_bases['field_attached_files'] = array(
-    'active' => 1,
-    'cardinality' => -1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_attached_files',
-    'foreign keys' => array(),
-    'indexes' => array(
-      'sid' => array(
-        0 => 'sid',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'atom_reference',
-    'settings' => array(),
-    'translatable' => 0,
-    'type' => 'atom_reference',
-  );
-
   // Exported field_base: 'field_date'
   $field_bases['field_date'] = array(
     'active' => 1,
@@ -87,46 +67,6 @@ function news_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'date',
-  );
-
-  // Exported field_base: 'field_galery'
-  $field_bases['field_galery'] = array(
-    'active' => 1,
-    'cardinality' => -1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_galery',
-    'foreign keys' => array(),
-    'indexes' => array(
-      'sid' => array(
-        0 => 'sid',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'atom_reference',
-    'settings' => array(),
-    'translatable' => 0,
-    'type' => 'atom_reference',
-  );
-
-  // Exported field_base: 'field_image'
-  $field_bases['field_image'] = array(
-    'active' => 1,
-    'cardinality' => -1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_image',
-    'foreign keys' => array(),
-    'indexes' => array(
-      'sid' => array(
-        0 => 'sid',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'atom_reference',
-    'settings' => array(),
-    'translatable' => 0,
-    'type' => 'atom_reference',
   );
 
   // Exported field_base: 'field_news_publication_date'
@@ -185,13 +125,13 @@ function news_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_sound'
-  $field_bases['field_sound'] = array(
+  // Exported field_base: 'field_scald_file'
+  $field_bases['field_scald_file'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_sound',
+    'field_name' => 'field_scald_file',
     'foreign keys' => array(),
     'indexes' => array(
       'sid' => array(
@@ -205,13 +145,73 @@ function news_field_default_field_bases() {
     'type' => 'atom_reference',
   );
 
-  // Exported field_base: 'field_video'
-  $field_bases['field_video'] = array(
+  // Exported field_base: 'field_scald_gallery'
+  $field_bases['field_scald_gallery'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_video',
+    'field_name' => 'field_scald_gallery',
+    'foreign keys' => array(),
+    'indexes' => array(
+      'sid' => array(
+        0 => 'sid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'atom_reference',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'atom_reference',
+  );
+
+  // Exported field_base: 'field_scald_image'
+  $field_bases['field_scald_image'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_scald_image',
+    'foreign keys' => array(),
+    'indexes' => array(
+      'sid' => array(
+        0 => 'sid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'atom_reference',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'atom_reference',
+  );
+
+  // Exported field_base: 'field_scald_sound'
+  $field_bases['field_scald_sound'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_scald_sound',
+    'foreign keys' => array(),
+    'indexes' => array(
+      'sid' => array(
+        0 => 'sid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'atom_reference',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'atom_reference',
+  );
+
+  // Exported field_base: 'field_scald_video'
+  $field_bases['field_scald_video'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_scald_video',
     'foreign keys' => array(),
     'indexes' => array(
       'sid' => array(
