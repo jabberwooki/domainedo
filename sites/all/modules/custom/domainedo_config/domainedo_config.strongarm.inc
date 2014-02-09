@@ -41,25 +41,6 @@ function domainedo_config_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'language_default';
-  $strongarm->value = (object) array(
-    'language' => 'fr',
-    'name' => 'French',
-    'native' => 'Français',
-    'direction' => '0',
-    'enabled' => '1',
-    'plurals' => '2',
-    'formula' => '($n>1)',
-    'domain' => '',
-    'prefix' => 'fr',
-    'weight' => '0',
-    'javascript' => 'g8bBygsAWf6BNSYUss-n1yb8etlLfQP1TsMTJLk_L-c',
-  );
-  $export['language_default'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'logintoboggan_confirm_email_at_registration';
   $strongarm->value = '1';
   $export['logintoboggan_confirm_email_at_registration'] = $strongarm;
