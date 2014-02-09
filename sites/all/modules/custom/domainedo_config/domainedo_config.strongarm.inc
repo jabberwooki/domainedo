@@ -42,21 +42,21 @@ function domainedo_config_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'date_format_long';
-  $strongarm->value = 'l d F Y - H:i';
+  $strongarm->value = 'l d F Y - H\\hi';
   $export['date_format_long'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'date_format_medium';
-  $strongarm->value = 'D d M Y - H:i';
+  $strongarm->value = 'D d M Y - H\\hi';
   $export['date_format_medium'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'date_format_short';
-  $strongarm->value = 'd/m/y - H:i';
+  $strongarm->value = 'd/m/y - H\\hi';
   $export['date_format_short'] = $strongarm;
 
   $strongarm = new stdClass();
