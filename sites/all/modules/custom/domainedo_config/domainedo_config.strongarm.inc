@@ -41,6 +41,27 @@ function domainedo_config_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_long';
+  $strongarm->value = 'l d F Y - H:i';
+  $export['date_format_long'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_medium';
+  $strongarm->value = 'D d M Y - H:i';
+  $export['date_format_medium'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_short';
+  $strongarm->value = 'd/m/y - H:i';
+  $export['date_format_short'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'logintoboggan_confirm_email_at_registration';
   $strongarm->value = '1';
   $export['logintoboggan_confirm_email_at_registration'] = $strongarm;
