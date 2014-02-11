@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Domaine d'O Contextes feature.
+ */
+
+include_once 'domainedo_contexts.features.inc';
