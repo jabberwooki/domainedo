@@ -26,12 +26,6 @@ function domainedo_contexts_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'menu-menu-contact' => array(
-          'module' => 'menu',
-          'delta' => 'menu-contact',
-          'region' => 'user_first',
-          'weight' => '-10',
-        ),
         'boxes-logos_top' => array(
           'module' => 'boxes',
           'delta' => 'logos_top',
@@ -72,11 +66,17 @@ function domainedo_contexts_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'menu-menu-contact' => array(
+          'module' => 'menu',
+          'delta' => 'menu-contact',
+          'region' => 'user_first',
+          'weight' => '-10',
+        ),
         'menu-menu-top-courtesy-nav' => array(
           'module' => 'menu',
           'delta' => 'menu-top-courtesy-nav',
           'region' => 'user_first',
-          'weight' => '-10',
+          'weight' => '-9',
         ),
         'boxes-social_network' => array(
           'module' => 'boxes',
@@ -166,32 +166,38 @@ function domainedo_contexts_context_default_contexts() {
         'menu-menu-contact' => array(
           'module' => 'menu',
           'delta' => 'menu-contact',
-          'region' => 'content',
+          'region' => 'user_first',
           'weight' => '-10',
         ),
         'system-main-menu' => array(
           'module' => 'system',
           'delta' => 'main-menu',
-          'region' => 'content',
+          'region' => 'user_first',
           'weight' => '-9',
         ),
         'menu-menu-practicle-menu' => array(
           'module' => 'menu',
           'delta' => 'menu-practicle-menu',
-          'region' => 'content',
+          'region' => 'user_first',
           'weight' => '-8',
         ),
         'menu-menu-top-courtesy-nav' => array(
           'module' => 'menu',
           'delta' => 'menu-top-courtesy-nav',
-          'region' => 'content',
+          'region' => 'user_first',
           'weight' => '-7',
         ),
         'menu-menu-bottom-courtesy' => array(
           'module' => 'menu',
           'delta' => 'menu-bottom-courtesy',
-          'region' => 'content',
+          'region' => 'user_first',
           'weight' => '-6',
+        ),
+        'boxes-social_network' => array(
+          'module' => 'boxes',
+          'delta' => 'social_network',
+          'region' => 'footer_first',
+          'weight' => '-10',
         ),
       ),
     ),
