@@ -29,7 +29,13 @@ function domainedo_contexts_context_default_contexts() {
         'boxes-logos_top' => array(
           'module' => 'boxes',
           'delta' => 'logos_top',
-          'region' => 'branding',
+          'region' => 'header_first',
+          'weight' => '-10',
+        ),
+        'menu-menu-contact' => array(
+          'module' => 'menu',
+          'delta' => 'menu-contact',
+          'region' => 'header_second',
           'weight' => '-10',
         ),
         'boxes-logos_bottom' => array(
@@ -66,30 +72,6 @@ function domainedo_contexts_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'menu-menu-contact' => array(
-          'module' => 'menu',
-          'delta' => 'menu-contact',
-          'region' => 'user_first',
-          'weight' => '-10',
-        ),
-        'menu-menu-top-courtesy-nav' => array(
-          'module' => 'menu',
-          'delta' => 'menu-top-courtesy-nav',
-          'region' => 'user_first',
-          'weight' => '-9',
-        ),
-        'boxes-social_network' => array(
-          'module' => 'boxes',
-          'delta' => 'social_network',
-          'region' => 'branding',
-          'weight' => '-10',
-        ),
-        'search-form' => array(
-          'module' => 'search',
-          'delta' => 'form',
-          'region' => 'branding',
-          'weight' => '-9',
-        ),
         'system-main-menu' => array(
           'module' => 'system',
           'delta' => 'main-menu',
@@ -101,6 +83,24 @@ function domainedo_contexts_context_default_contexts() {
           'delta' => 'menu-practicle-menu',
           'region' => 'menu',
           'weight' => '-9',
+        ),
+        'menu-menu-top-courtesy-nav' => array(
+          'module' => 'menu',
+          'delta' => 'menu-top-courtesy-nav',
+          'region' => 'header_second',
+          'weight' => '-10',
+        ),
+        'boxes-social_network' => array(
+          'module' => 'boxes',
+          'delta' => 'social_network',
+          'region' => 'header_second',
+          'weight' => '-9',
+        ),
+        'search-form' => array(
+          'module' => 'search',
+          'delta' => 'form',
+          'region' => 'header_second',
+          'weight' => '-8',
         ),
         'menu-menu-bottom-courtesy' => array(
           'module' => 'menu',
@@ -163,35 +163,29 @@ function domainedo_contexts_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'menu-menu-contact' => array(
-          'module' => 'menu',
-          'delta' => 'menu-contact',
-          'region' => 'user_first',
-          'weight' => '-10',
-        ),
         'system-main-menu' => array(
           'module' => 'system',
           'delta' => 'main-menu',
-          'region' => 'user_first',
-          'weight' => '-9',
+          'region' => 'menu',
+          'weight' => '-10',
         ),
         'menu-menu-practicle-menu' => array(
           'module' => 'menu',
           'delta' => 'menu-practicle-menu',
-          'region' => 'user_first',
-          'weight' => '-8',
+          'region' => 'menu',
+          'weight' => '-9',
         ),
         'menu-menu-top-courtesy-nav' => array(
           'module' => 'menu',
           'delta' => 'menu-top-courtesy-nav',
-          'region' => 'user_first',
-          'weight' => '-7',
+          'region' => 'menu',
+          'weight' => '-8',
         ),
         'menu-menu-bottom-courtesy' => array(
           'module' => 'menu',
           'delta' => 'menu-bottom-courtesy',
-          'region' => 'user_first',
-          'weight' => '-6',
+          'region' => 'menu',
+          'weight' => '-7',
         ),
         'boxes-social_network' => array(
           'module' => 'boxes',

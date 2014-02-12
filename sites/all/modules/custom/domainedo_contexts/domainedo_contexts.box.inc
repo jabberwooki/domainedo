@@ -51,8 +51,9 @@ Tél. : 0800 200 165</p>
   $box->options = array(
     'body' => array(
       'value' => '<div id="logos-top">
-<h1 id="base-line"><a href="/."><img alt="domaine d\'O" src="/sites/default/files/logos/logo-domaine-do.gif" style="height:38px; width:216px" /></a>domaine départemental d\'art et de culture</h1>
-<a href="http://www.herault.fr/" target="_blank"><img alt="Département de l\'Hérault" src="/sites/default/files/logos/cg34.gif" style="height:66px; width:51px" /></a></div>
+<h1><a href="/."><img alt="domaine d\'O" id="logo-domainedo-top" src="/sites/default/files/logos/logo-domaine-do.gif" /></a><br />
+<span style="color:#757575">domaine départemental d\'art et de culture</span></h1>
+<a href="http://www.herault.fr/" target="_blank"><img alt="Département de l\'Hérault" id="cg-top" src="/sites/default/files/logos/cg34.gif" /></a></div>
 ',
       'format' => 'full_html',
     ),
