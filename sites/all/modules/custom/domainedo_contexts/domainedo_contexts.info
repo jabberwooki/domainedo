@@ -6,6 +6,7 @@ version = 7.x-1.0
 project = domainedo_contexts
 dependencies[] = boxes
 dependencies[] = context
+dependencies[] = context_mobile_detect
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = menu

@@ -70,9 +70,15 @@ Tél. : 0800 200 165</p>
   $box->description = 'Réseaux sociaux';
   $box->options = array(
     'body' => array(
-      'value' => '',
+      'value' => '<ul class="ul-sprite">
+            <li class="sprite sprite-facebook"><a target="_blank" onclick="_gaq.push([\'_trackEvent\', \'socialmedia\', \'click\', \'facebook\',1,true]);" href="http://www.facebook.com/domaine.do">facebook</a></li>
+            <li class="sprite sprite-twitter"><a target="_blank" onclick="_gaq.push([\'_trackEvent\', \'socialmedia\', \'click\', \'twitter\',1,true]);"href="https://twitter.com/domainedo">Twitter</a></li>
+            <li class="sprite sprite-youtube"><a target="_blank" onclick="_gaq.push([\'_trackEvent\', \'socialmedia\', \'click\', \'youtube\',1,true]);" href="https://www.youtube.com/user/domainedO">youtube</a></li>
+            <li class="sprite sprite-tripadvisor"><a target="_blank" onclick="_gaq.push([\'_trackEvent\', \'socialmedia\', \'click\', \'tripadvisor\',1,true]);" href="http://www.tripadvisor.fr/Attraction_Review-g187153-d2480803-Reviews-Domaine_d_O-Montpellier_Herault_Languedoc_Roussillon.html">tripadvisor</a></li>
+        </ul>',
       'format' => 'full_html',
     ),
+    'additional_classes' => '',
   );
   $export['social_network'] = $box;
 
