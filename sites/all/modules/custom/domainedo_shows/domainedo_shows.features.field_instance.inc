@@ -512,7 +512,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 8,
+        'weight' => 9,
       ),
       'list' => array(
         'label' => 'hidden',
@@ -569,7 +569,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 17,
+        'weight' => 20,
       ),
       'frontpage_block' => array(
         'label' => 'inline',
@@ -588,7 +588,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 15,
+        'weight' => 23,
       ),
       'list' => array(
         'label' => 'inline',
@@ -620,9 +620,9 @@ function domainedo_shows_field_default_field_instances() {
       ),
       'enable_tokens' => 1,
       'rel_remove' => 'default',
-      'title' => 'none',
+      'title' => 'value',
       'title_maxlength' => 128,
-      'title_value' => '',
+      'title_value' => 'Réserver',
       'url' => 0,
       'user_register_form' => FALSE,
       'validate_url' => 1,
@@ -650,7 +650,7 @@ function domainedo_shows_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'frontpage_block' => array(
         'label' => 'inline',
@@ -671,7 +671,7 @@ function domainedo_shows_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'list' => array(
         'label' => 'inline',
@@ -718,7 +718,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 27,
+        'weight' => 5,
       ),
       'frontpage_block' => array(
         'label' => 'above',
@@ -734,9 +734,10 @@ function domainedo_shows_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'type' => 'text_default',
+        'weight' => 10,
       ),
       'list' => array(
         'label' => 'above',
@@ -787,7 +788,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 28,
+        'weight' => 4,
       ),
       'frontpage_block' => array(
         'label' => 'above',
@@ -803,9 +804,10 @@ function domainedo_shows_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'type' => 'text_default',
+        'weight' => 7,
       ),
       'list' => array(
         'label' => 'above',
@@ -851,7 +853,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 19,
+        'weight' => 22,
       ),
       'frontpage_block' => array(
         'label' => 'above',
@@ -870,7 +872,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 17,
+        'weight' => 22,
       ),
       'list' => array(
         'label' => 'above',
@@ -916,7 +918,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 15,
+        'weight' => 18,
       ),
       'frontpage_block' => array(
         'label' => 'above',
@@ -935,7 +937,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 10,
+        'weight' => 12,
       ),
       'list' => array(
         'label' => 'above',
@@ -981,7 +983,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 6,
+        'weight' => 9,
       ),
       'frontpage_block' => array(
         'label' => 'inline',
@@ -1000,7 +1002,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 11,
+        'weight' => 19,
       ),
       'list' => array(
         'label' => 'inline',
@@ -1046,7 +1048,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 21,
+        'weight' => 24,
       ),
       'frontpage_block' => array(
         'label' => 'inline',
@@ -1065,7 +1067,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 14,
+        'weight' => 18,
       ),
       'list' => array(
         'label' => 'inline',
@@ -1110,7 +1112,7 @@ function domainedo_shows_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 4,
+        'weight' => 7,
       ),
       'frontpage_block' => array(
         'label' => 'inline',
@@ -1131,7 +1133,7 @@ function domainedo_shows_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 6,
+        'weight' => 2,
       ),
       'list' => array(
         'label' => 'inline',
@@ -1178,7 +1180,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 26,
+        'weight' => 2,
       ),
       'frontpage_block' => array(
         'label' => 'above',
@@ -1194,9 +1196,10 @@ function domainedo_shows_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'type' => 'text_default',
+        'weight' => 4,
       ),
       'list' => array(
         'label' => 'above',
@@ -1242,7 +1245,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 18,
+        'weight' => 21,
       ),
       'frontpage_block' => array(
         'label' => 'above',
@@ -1261,7 +1264,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 16,
+        'weight' => 24,
       ),
       'list' => array(
         'label' => 'above',
@@ -1307,7 +1310,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 5,
+        'weight' => 8,
       ),
       'frontpage_block' => array(
         'label' => 'above',
@@ -1326,7 +1329,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 3,
+        'weight' => 17,
       ),
       'list' => array(
         'label' => 'above',
@@ -1374,7 +1377,7 @@ function domainedo_shows_field_default_field_instances() {
           'thousand_separator' => ' ',
         ),
         'type' => 'number_integer',
-        'weight' => 7,
+        'weight' => 10,
       ),
       'frontpage_block' => array(
         'label' => 'inline',
@@ -1398,7 +1401,7 @@ function domainedo_shows_field_default_field_instances() {
           'thousand_separator' => ' ',
         ),
         'type' => 'number_integer',
-        'weight' => 12,
+        'weight' => 20,
       ),
       'list' => array(
         'label' => 'inline',
@@ -1445,7 +1448,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 9,
+        'weight' => 12,
       ),
       'frontpage_block' => array(
         'label' => 'inline',
@@ -1464,7 +1467,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 13,
+        'weight' => 21,
       ),
       'list' => array(
         'label' => 'inline',
@@ -1510,7 +1513,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 14,
+        'weight' => 17,
       ),
       'frontpage_block' => array(
         'label' => 'above',
@@ -1529,7 +1532,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 9,
+        'weight' => 11,
       ),
       'list' => array(
         'label' => 'above',
@@ -1579,7 +1582,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 12,
+        'weight' => 15,
       ),
       'frontpage_block' => array(
         'label' => 'hidden',
@@ -1597,7 +1600,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 32,
+        'weight' => 35,
       ),
       'list' => array(
         'label' => 'hidden',
@@ -1644,7 +1647,7 @@ function domainedo_shows_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 3,
+        'weight' => 6,
       ),
       'frontpage_block' => array(
         'label' => 'inline',
@@ -1665,7 +1668,7 @@ function domainedo_shows_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'list' => array(
         'label' => 'inline',
@@ -1712,7 +1715,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 20,
+        'weight' => 23,
       ),
       'frontpage_block' => array(
         'label' => 'above',
@@ -1731,7 +1734,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 18,
+        'weight' => 25,
       ),
       'list' => array(
         'label' => 'above',
@@ -1777,7 +1780,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 16,
+        'weight' => 19,
       ),
       'frontpage_block' => array(
         'label' => 'above',
@@ -1795,7 +1798,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 34,
+        'weight' => 37,
       ),
       'list' => array(
         'label' => 'above',
@@ -1838,7 +1841,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'atom_reference',
         'settings' => array(),
         'type' => 'full',
-        'weight' => 22,
+        'weight' => 25,
       ),
       'frontpage_block' => array(
         'label' => 'hidden',
@@ -1857,7 +1860,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'atom_reference',
         'settings' => array(),
         'type' => 'full',
-        'weight' => 19,
+        'weight' => 13,
       ),
       'list' => array(
         'label' => 'hidden',
@@ -1908,7 +1911,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'atom_reference',
         'settings' => array(),
         'type' => 'full',
-        'weight' => 11,
+        'weight' => 14,
       ),
       'frontpage_block' => array(
         'label' => 'hidden',
@@ -1927,7 +1930,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'atom_reference',
         'settings' => array(),
         'type' => 'full',
-        'weight' => 0,
+        'weight' => 8,
       ),
       'list' => array(
         'label' => 'hidden',
@@ -1978,7 +1981,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'atom_reference',
         'settings' => array(),
         'type' => 'full',
-        'weight' => 24,
+        'weight' => 27,
       ),
       'frontpage_block' => array(
         'label' => 'hidden',
@@ -1997,7 +2000,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'atom_reference',
         'settings' => array(),
         'type' => 'full',
-        'weight' => 21,
+        'weight' => 15,
       ),
       'list' => array(
         'label' => 'hidden',
@@ -2048,7 +2051,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'atom_reference',
         'settings' => array(),
         'type' => 'title',
-        'weight' => 23,
+        'weight' => 26,
       ),
       'frontpage_block' => array(
         'label' => 'hidden',
@@ -2067,7 +2070,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'atom_reference',
         'settings' => array(),
         'type' => 'full',
-        'weight' => 20,
+        'weight' => 14,
       ),
       'list' => array(
         'label' => 'hidden',
@@ -2123,7 +2126,7 @@ function domainedo_shows_field_default_field_instances() {
           'multiple_to' => '',
         ),
         'type' => 'date_default',
-        'weight' => 8,
+        'weight' => 11,
       ),
       'frontpage_block' => array(
         'label' => 'hidden',
@@ -2162,7 +2165,7 @@ function domainedo_shows_field_default_field_instances() {
           'multiple_to' => '',
         ),
         'type' => 'date_default',
-        'weight' => 7,
+        'weight' => 16,
       ),
       'list' => array(
         'label' => 'hidden',
@@ -2223,7 +2226,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 25,
+        'weight' => 28,
       ),
       'frontpage_block' => array(
         'label' => 'hidden',
@@ -2242,7 +2245,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'list' => array(
         'label' => 'hidden',
@@ -2351,7 +2354,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'atom_reference',
         'settings' => array(),
         'type' => 'full',
-        'weight' => 10,
+        'weight' => 13,
       ),
       'frontpage_block' => array(
         'label' => 'hidden',
@@ -2371,7 +2374,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 34,
       ),
       'list' => array(
         'label' => 'hidden',
@@ -2427,7 +2430,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 13,
+        'weight' => 16,
       ),
       'frontpage_block' => array(
         'label' => 'hidden',
@@ -2445,7 +2448,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 33,
+        'weight' => 36,
       ),
       'list' => array(
         'label' => 'hidden',

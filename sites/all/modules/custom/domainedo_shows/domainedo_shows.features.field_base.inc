@@ -657,6 +657,7 @@ function domainedo_shows_field_default_field_bases() {
         'billetterie' => 'url billetterie',
         'complet' => 'complet',
         'prochainement' => 'prochainement',
+        'annule' => 'annulé',
       ),
       'allowed_values_function' => '',
     ),
