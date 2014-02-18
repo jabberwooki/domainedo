@@ -12,6 +12,7 @@ dependencies[] = ctools
 dependencies[] = date
 dependencies[] = ds
 dependencies[] = empty_front_page
+dependencies[] = exclude_node_title
 dependencies[] = features
 dependencies[] = features_date_formats
 dependencies[] = field_group
