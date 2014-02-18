@@ -230,6 +230,33 @@ function domainedo_shows_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'exclude_node_title_content_type_modes_news';
+  $strongarm->value = array(
+    'full' => 0,
+    'teaser' => 0,
+    'rss' => 0,
+    'search_index' => 0,
+    'search_result' => 0,
+    'diff_standard' => 0,
+    'token' => 0,
+    'frontpage_block' => 0,
+    'frontpage_block_mobile' => 0,
+    'list' => 0,
+    'revision' => 0,
+    'nodeform' => 0,
+  );
+  $export['exclude_node_title_content_type_modes_news'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'exclude_node_title_content_type_value_show';
+  $strongarm->value = 'all';
+  $export['exclude_node_title_content_type_value_show'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__festival';
   $strongarm->value = array(
     'view_modes' => array(
