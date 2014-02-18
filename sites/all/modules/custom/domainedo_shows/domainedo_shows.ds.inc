@@ -208,8 +208,8 @@ function domainedo_shows_ds_layout_settings_info() {
       'left' => array(
         0 => 'title',
         1 => 'field_subtitle',
-        2 => 'field_festival',
-        3 => 'field_show_type',
+        2 => 'field_show_type',
+        3 => 'field_festival',
         4 => 'field_from',
         5 => 'field_by',
         6 => 'field_proposed_by',
@@ -239,8 +239,8 @@ function domainedo_shows_ds_layout_settings_info() {
     'fields' => array(
       'title' => 'left',
       'field_subtitle' => 'left',
-      'field_festival' => 'left',
       'field_show_type' => 'left',
+      'field_festival' => 'left',
       'field_from' => 'left',
       'field_by' => 'left',
       'field_proposed_by' => 'left',
