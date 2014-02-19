@@ -21,6 +21,12 @@ function domainedo_shows_ds_field_settings_info() {
       'weight' => '0',
       'label' => 'hidden',
       'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '1',
+        'wrapper' => 'h3',
+        'class' => '',
+        'exclude node title settings' => '0',
+      ),
     ),
   );
   $export['node|show|frontpage_block'] = $ds_fieldsetting;
@@ -36,6 +42,12 @@ function domainedo_shows_ds_field_settings_info() {
       'weight' => '0',
       'label' => 'hidden',
       'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '1',
+        'wrapper' => 'h3',
+        'class' => '',
+        'exclude node title settings' => '0',
+      ),
     ),
   );
   $export['node|show|frontpage_block_mobile'] = $ds_fieldsetting;
