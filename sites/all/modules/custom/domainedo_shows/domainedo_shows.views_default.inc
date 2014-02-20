@@ -108,6 +108,7 @@ function domainedo_shows_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['group_by'] = TRUE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -136,10 +137,11 @@ function domainedo_shows_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Sort criterion: Contenu: Date(s) (field_show_dates) */
+  /* Sort criterion: MIN(Contenu: Date(s) (field_show_dates)) */
   $handler->display->display_options['sorts']['field_show_dates_value']['id'] = 'field_show_dates_value';
   $handler->display->display_options['sorts']['field_show_dates_value']['table'] = 'field_data_field_show_dates';
   $handler->display->display_options['sorts']['field_show_dates_value']['field'] = 'field_show_dates_value';
+  $handler->display->display_options['sorts']['field_show_dates_value']['group_type'] = 'min';
   /* Sort criterion: Contenu: Titre */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
@@ -207,16 +209,12 @@ function domainedo_shows_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'show' => 'show',
   );
-  /* Filter criterion: Contenu: Date(s) (field_show_dates) */
-  $handler->display->display_options['filters']['field_show_dates_value']['id'] = 'field_show_dates_value';
-  $handler->display->display_options['filters']['field_show_dates_value']['table'] = 'field_data_field_show_dates';
-  $handler->display->display_options['filters']['field_show_dates_value']['field'] = 'field_show_dates_value';
-  $handler->display->display_options['filters']['field_show_dates_value']['operator'] = '>=';
-  $handler->display->display_options['filters']['field_show_dates_value']['default_date'] = 'now';
+  $handler->display->display_options['filters']['type']['group'] = 1;
   /* Filter criterion: Contenu: Type de spectacle (field_show_type) */
   $handler->display->display_options['filters']['field_show_type_tid']['id'] = 'field_show_type_tid';
   $handler->display->display_options['filters']['field_show_type_tid']['table'] = 'field_data_field_show_type';
   $handler->display->display_options['filters']['field_show_type_tid']['field'] = 'field_show_type_tid';
+  $handler->display->display_options['filters']['field_show_type_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_show_type_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_show_type_tid']['expose']['operator_id'] = 'field_show_type_tid_op';
   $handler->display->display_options['filters']['field_show_type_tid']['expose']['label'] = 'Type de spectacle (field_show_type)';
