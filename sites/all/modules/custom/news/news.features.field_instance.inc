@@ -240,7 +240,7 @@ function news_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'atom_reference',
+        'module' => 'domainedo_media',
         'settings' => array(),
         'type' => 'title',
         'weight' => 23,
@@ -291,7 +291,7 @@ function news_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'atom_reference',
+        'module' => 'domainedo_media',
         'settings' => array(),
         'type' => 'title',
         'weight' => 21,
@@ -342,7 +342,7 @@ function news_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'atom_reference',
+        'module' => 'domainedo_media',
         'settings' => array(),
         'type' => 'title',
         'weight' => 19,
@@ -393,7 +393,7 @@ function news_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'atom_reference',
+        'module' => 'domainedo_media',
         'settings' => array(),
         'type' => 'title',
         'weight' => 22,
@@ -444,7 +444,7 @@ function news_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'atom_reference',
+        'module' => 'domainedo_media',
         'settings' => array(),
         'type' => 'title',
         'weight' => 20,
