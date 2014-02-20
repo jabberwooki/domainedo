@@ -9,6 +9,7 @@ dependencies[] = cer
 dependencies[] = conditional_fields
 dependencies[] = ctools
 dependencies[] = date
+dependencies[] = domainedo_media
 dependencies[] = ds
 dependencies[] = entityreference
 dependencies[] = features

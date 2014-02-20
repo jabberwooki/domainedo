@@ -74,14 +74,14 @@ function domainedo_shows_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'atom_reference',
+        'module' => 'domainedo_media',
         'settings' => array(),
         'type' => 'title',
         'weight' => 3,
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'atom_reference',
+        'module' => 'domainedo_media',
         'settings' => array(),
         'type' => 'title',
         'weight' => 2,
@@ -175,14 +175,14 @@ function domainedo_shows_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'atom_reference',
+        'module' => 'domainedo_media',
         'settings' => array(),
         'type' => 'title',
         'weight' => 1,
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'atom_reference',
+        'module' => 'domainedo_media',
         'settings' => array(),
         'type' => 'title',
         'weight' => 1,
@@ -227,15 +227,17 @@ function domainedo_shows_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'atom_reference',
+        'module' => 'domainedo_media',
         'settings' => array(),
         'type' => 'title',
         'weight' => 4,
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'atom_reference',
-        'settings' => array(),
+        'module' => 'domainedo_media',
+        'settings' => array(
+          'link' => 0,
+        ),
         'type' => 'full',
         'weight' => 4,
       ),
@@ -279,14 +281,14 @@ function domainedo_shows_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'atom_reference',
+        'module' => 'domainedo_media',
         'settings' => array(),
         'type' => 'title',
         'weight' => 2,
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'atom_reference',
+        'module' => 'domainedo_media',
         'settings' => array(),
         'type' => 'title',
         'weight' => 0,
@@ -331,15 +333,17 @@ function domainedo_shows_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'atom_reference',
+        'module' => 'domainedo_media',
         'settings' => array(),
         'type' => 'title',
         'weight' => 6,
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'atom_reference',
-        'settings' => array(),
+        'module' => 'domainedo_media',
+        'settings' => array(
+          'link' => 0,
+        ),
         'type' => 'full',
         'weight' => 6,
       ),
@@ -383,15 +387,17 @@ function domainedo_shows_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'atom_reference',
+        'module' => 'domainedo_media',
         'settings' => array(),
         'type' => 'title',
         'weight' => 5,
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'atom_reference',
-        'settings' => array(),
+        'module' => 'domainedo_media',
+        'settings' => array(
+          'link' => 0,
+        ),
         'type' => 'full',
         'weight' => 5,
       ),
@@ -1838,8 +1844,10 @@ function domainedo_shows_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'atom_reference',
-        'settings' => array(),
+        'module' => 'domainedo_media',
+        'settings' => array(
+          'link' => 0,
+        ),
         'type' => 'full',
         'weight' => 25,
       ),
@@ -1857,8 +1865,10 @@ function domainedo_shows_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'atom_reference',
-        'settings' => array(),
+        'module' => 'domainedo_media',
+        'settings' => array(
+          'link' => 0,
+        ),
         'type' => 'full',
         'weight' => 13,
       ),
@@ -1908,8 +1918,10 @@ function domainedo_shows_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'atom_reference',
-        'settings' => array(),
+        'module' => 'domainedo_media',
+        'settings' => array(
+          'link' => 0,
+        ),
         'type' => 'full',
         'weight' => 14,
       ),
@@ -1927,8 +1939,10 @@ function domainedo_shows_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'atom_reference',
-        'settings' => array(),
+        'module' => 'domainedo_media',
+        'settings' => array(
+          'link' => 0,
+        ),
         'type' => 'full',
         'weight' => 8,
       ),
@@ -1978,8 +1992,10 @@ function domainedo_shows_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'atom_reference',
-        'settings' => array(),
+        'module' => 'domainedo_media',
+        'settings' => array(
+          'link' => 0,
+        ),
         'type' => 'full',
         'weight' => 27,
       ),
@@ -1997,8 +2013,10 @@ function domainedo_shows_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'atom_reference',
-        'settings' => array(),
+        'module' => 'domainedo_media',
+        'settings' => array(
+          'link' => 0,
+        ),
         'type' => 'full',
         'weight' => 15,
       ),
@@ -2048,7 +2066,7 @@ function domainedo_shows_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'atom_reference',
+        'module' => 'domainedo_media',
         'settings' => array(),
         'type' => 'title',
         'weight' => 26,
@@ -2067,8 +2085,10 @@ function domainedo_shows_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'atom_reference',
-        'settings' => array(),
+        'module' => 'domainedo_media',
+        'settings' => array(
+          'link' => 0,
+        ),
         'type' => 'full',
         'weight' => 14,
       ),
@@ -2351,22 +2371,28 @@ function domainedo_shows_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'atom_reference',
-        'settings' => array(),
+        'module' => 'domainedo_media',
+        'settings' => array(
+          'link' => 0,
+        ),
         'type' => 'full',
         'weight' => 13,
       ),
       'frontpage_block' => array(
         'label' => 'hidden',
-        'module' => 'atom_reference',
-        'settings' => array(),
+        'module' => 'domainedo_media',
+        'settings' => array(
+          'link' => 1,
+        ),
         'type' => 'block',
         'weight' => 10,
       ),
       'frontpage_block_mobile' => array(
         'label' => 'hidden',
-        'module' => 'atom_reference',
-        'settings' => array(),
+        'module' => 'domainedo_media',
+        'settings' => array(
+          'link' => 1,
+        ),
         'type' => 'block',
         'weight' => 10,
       ),
@@ -2378,8 +2404,10 @@ function domainedo_shows_field_default_field_instances() {
       ),
       'list' => array(
         'label' => 'hidden',
-        'module' => 'atom_reference',
-        'settings' => array(),
+        'module' => 'domainedo_media',
+        'settings' => array(
+          'link' => 1,
+        ),
         'type' => 'list',
         'weight' => 2,
       ),
@@ -2594,14 +2622,14 @@ function domainedo_shows_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'atom_reference',
+        'module' => 'domainedo_media',
         'settings' => array(),
         'type' => 'title',
         'weight' => 0,
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'atom_reference',
+        'module' => 'domainedo_media',
         'settings' => array(),
         'type' => 'title',
         'weight' => 1,
@@ -2646,15 +2674,17 @@ function domainedo_shows_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'atom_reference',
+        'module' => 'domainedo_media',
         'settings' => array(),
         'type' => 'title',
         'weight' => 6,
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'atom_reference',
-        'settings' => array(),
+        'module' => 'domainedo_media',
+        'settings' => array(
+          'link' => 0,
+        ),
         'type' => 'full',
         'weight' => 6,
       ),
@@ -2698,14 +2728,14 @@ function domainedo_shows_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'atom_reference',
+        'module' => 'domainedo_media',
         'settings' => array(),
         'type' => 'title',
         'weight' => 1,
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'atom_reference',
+        'module' => 'domainedo_media',
         'settings' => array(),
         'type' => 'title',
         'weight' => 2,
@@ -2750,15 +2780,17 @@ function domainedo_shows_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'atom_reference',
+        'module' => 'domainedo_media',
         'settings' => array(),
         'type' => 'title',
         'weight' => 8,
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'atom_reference',
-        'settings' => array(),
+        'module' => 'domainedo_media',
+        'settings' => array(
+          'link' => 0,
+        ),
         'type' => 'full',
         'weight' => 8,
       ),
@@ -2802,15 +2834,17 @@ function domainedo_shows_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'atom_reference',
+        'module' => 'domainedo_media',
         'settings' => array(),
         'type' => 'title',
         'weight' => 7,
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'atom_reference',
-        'settings' => array(),
+        'module' => 'domainedo_media',
+        'settings' => array(
+          'link' => 0,
+        ),
         'type' => 'full',
         'weight' => 7,
       ),
@@ -3007,14 +3041,16 @@ function domainedo_shows_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'atom_reference',
-        'settings' => array(),
+        'module' => 'domainedo_media',
+        'settings' => array(
+          'link' => 0,
+        ),
         'type' => 'full',
         'weight' => 1,
       ),
       'full' => array(
         'label' => 'above',
-        'module' => 'atom_reference',
+        'module' => 'domainedo_media',
         'settings' => array(),
         'type' => 'title',
         'weight' => 1,
@@ -3053,14 +3089,16 @@ function domainedo_shows_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'atom_reference',
-        'settings' => array(),
+        'module' => 'domainedo_media',
+        'settings' => array(
+          'link' => 0,
+        ),
         'type' => 'full',
         'weight' => 3,
       ),
       'full' => array(
         'label' => 'above',
-        'module' => 'atom_reference',
+        'module' => 'domainedo_media',
         'settings' => array(),
         'type' => 'title',
         'weight' => 3,
@@ -3099,14 +3137,16 @@ function domainedo_shows_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'atom_reference',
-        'settings' => array(),
+        'module' => 'domainedo_media',
+        'settings' => array(
+          'link' => 0,
+        ),
         'type' => 'full',
         'weight' => 2,
       ),
       'full' => array(
         'label' => 'above',
-        'module' => 'atom_reference',
+        'module' => 'domainedo_media',
         'settings' => array(),
         'type' => 'title',
         'weight' => 2,
