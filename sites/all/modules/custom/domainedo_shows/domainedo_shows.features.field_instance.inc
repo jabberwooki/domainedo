@@ -2310,7 +2310,7 @@ function domainedo_shows_field_default_field_instances() {
         'weight' => 1,
       ),
       'list' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
