@@ -559,7 +559,7 @@ function domainedo_shows_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 14,
+      'weight' => 13,
     ),
   );
 
@@ -638,7 +638,7 @@ function domainedo_shows_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 23,
+      'weight' => 22,
     ),
   );
 
@@ -773,7 +773,7 @@ function domainedo_shows_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 15,
+      'weight' => 14,
     ),
   );
 
@@ -809,7 +809,7 @@ function domainedo_shows_field_default_field_instances() {
         'weight' => 0,
       ),
       'full' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -843,7 +843,7 @@ function domainedo_shows_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 8,
+      'weight' => 32,
     ),
   );
 
@@ -908,7 +908,7 @@ function domainedo_shows_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 25,
+      'weight' => 24,
     ),
   );
 
@@ -973,7 +973,7 @@ function domainedo_shows_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 17,
+      'weight' => 16,
     ),
   );
 
@@ -1038,7 +1038,7 @@ function domainedo_shows_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 18,
+      'weight' => 17,
     ),
   );
 
@@ -1100,7 +1100,7 @@ function domainedo_shows_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 21,
+      'weight' => 20,
     ),
   );
 
@@ -1201,7 +1201,7 @@ function domainedo_shows_field_default_field_instances() {
         'weight' => 0,
       ),
       'full' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -1300,7 +1300,7 @@ function domainedo_shows_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 24,
+      'weight' => 23,
     ),
   );
 
@@ -1331,7 +1331,7 @@ function domainedo_shows_field_default_field_instances() {
         'weight' => 5,
       ),
       'full' => array(
-        'label' => 'hidden',
+        'label' => 'inline',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
@@ -1352,7 +1352,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_location',
-    'label' => 'Lieu du spectacle',
+    'label' => 'Lieu',
     'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -1361,7 +1361,7 @@ function domainedo_shows_field_default_field_instances() {
       'active' => 1,
       'module' => 'options',
       'settings' => array(),
-      'type' => 'options_select',
+      'type' => 'options_buttons',
       'weight' => 4,
     ),
   );
@@ -1430,7 +1430,7 @@ function domainedo_shows_field_default_field_instances() {
       'max' => '',
       'min' => '',
       'prefix' => '',
-      'suffix' => 'ans',
+      'suffix' => ' ans',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1438,7 +1438,7 @@ function domainedo_shows_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 19,
+      'weight' => 18,
     ),
   );
 
@@ -1469,7 +1469,7 @@ function domainedo_shows_field_default_field_instances() {
         'weight' => 9,
       ),
       'full' => array(
-        'label' => 'inline',
+        'label' => 'above',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -1503,7 +1503,7 @@ function domainedo_shows_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 20,
+      'weight' => 19,
     ),
   );
 
@@ -1568,7 +1568,7 @@ function domainedo_shows_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 16,
+      'weight' => 15,
     ),
   );
 
@@ -1635,7 +1635,7 @@ function domainedo_shows_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 11,
+      'weight' => 10,
     ),
   );
 
@@ -1770,7 +1770,7 @@ function domainedo_shows_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 26,
+      'weight' => 25,
     ),
   );
 
@@ -1831,7 +1831,7 @@ function domainedo_shows_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 22,
+      'weight' => 21,
     ),
   );
 
@@ -1905,7 +1905,7 @@ function domainedo_shows_field_default_field_instances() {
       'module' => 'atom_reference',
       'settings' => array(),
       'type' => 'atom_reference_textfield',
-      'weight' => 27,
+      'weight' => 26,
     ),
   );
 
@@ -1979,7 +1979,7 @@ function domainedo_shows_field_default_field_instances() {
       'module' => 'atom_reference',
       'settings' => array(),
       'type' => 'atom_reference_textfield',
-      'weight' => 10,
+      'weight' => 9,
     ),
   );
 
@@ -2053,7 +2053,7 @@ function domainedo_shows_field_default_field_instances() {
       'module' => 'atom_reference',
       'settings' => array(),
       'type' => 'atom_reference_textfield',
-      'weight' => 29,
+      'weight' => 28,
     ),
   );
 
@@ -2125,7 +2125,7 @@ function domainedo_shows_field_default_field_instances() {
       'module' => 'atom_reference',
       'settings' => array(),
       'type' => 'atom_reference_textfield',
-      'weight' => 28,
+      'weight' => 27,
     ),
   );
 
@@ -2175,7 +2175,7 @@ function domainedo_shows_field_default_field_instances() {
         'weight' => 8,
       ),
       'full' => array(
-        'label' => 'hidden',
+        'label' => 'inline',
         'module' => 'date',
         'settings' => array(
           'format_type' => 'long',
@@ -2230,7 +2230,7 @@ function domainedo_shows_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 13,
+      'weight' => 12,
     ),
   );
 
@@ -2438,7 +2438,7 @@ function domainedo_shows_field_default_field_instances() {
       'module' => 'atom_reference',
       'settings' => array(),
       'type' => 'atom_reference_textfield',
-      'weight' => 9,
+      'weight' => 8,
     ),
   );
 
@@ -2505,7 +2505,7 @@ function domainedo_shows_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 12,
+      'weight' => 11,
     ),
   );
 
@@ -3247,7 +3247,7 @@ function domainedo_shows_field_default_field_instances() {
   t('Image en surimpression.');
   t('Jauge');
   t('Lien distribution');
-  t('Lieu du spectacle');
+  t('Lieu');
   t('Logo');
   t('Par');
   t('Photo du spectacle');

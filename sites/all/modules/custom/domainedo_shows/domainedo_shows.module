@@ -5,3 +5,11 @@
  */
 
 include_once 'domainedo_shows.features.inc';
+
+/**
+ * Implements hook_form_FORM_ID_alter()
+ */
+function domainedo_shows_form_show_node_form_alter(&$form, &$form_state, $form_id) {
+	// "Lien distribution" vertical tab moved to bottom of existing vertical tabs in create/edit form.
+	$form['#groups']['group_casting']->weight = 1000;
+}

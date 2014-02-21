@@ -399,16 +399,16 @@ function domainedo_shows_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '30',
+          'weight' => '29',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '31',
+          'weight' => '30',
         ),
         'redirect' => array(
-          'weight' => '32',
+          'weight' => '31',
         ),
       ),
       'display' => array(),
