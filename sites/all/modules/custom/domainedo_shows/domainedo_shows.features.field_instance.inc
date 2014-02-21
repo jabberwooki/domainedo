@@ -1789,16 +1789,18 @@ function domainedo_shows_field_default_field_instances() {
         'weight' => 19,
       ),
       'frontpage_block' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'list',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 16,
+        'type' => 'list_default',
+        'weight' => 11,
       ),
       'frontpage_block_mobile' => array(
         'label' => 'above',
+        'module' => 'list',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 16,
+        'type' => 'list_default',
+        'weight' => 11,
       ),
       'full' => array(
         'label' => 'hidden',

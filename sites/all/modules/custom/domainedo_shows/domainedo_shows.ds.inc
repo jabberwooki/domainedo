@@ -163,12 +163,16 @@ function domainedo_shows_ds_layout_settings_info() {
         0 => 'title',
         1 => 'field_show_dates',
         2 => 'field_thumbnail',
+        3 => 'field_reservation',
+        4 => 'group_vsr',
       ),
     ),
     'fields' => array(
       'title' => 'ds_content',
       'field_show_dates' => 'ds_content',
       'field_thumbnail' => 'ds_content',
+      'field_reservation' => 'ds_content',
+      'group_vsr' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -195,12 +199,16 @@ function domainedo_shows_ds_layout_settings_info() {
         0 => 'title',
         1 => 'field_show_dates',
         2 => 'field_thumbnail',
+        3 => 'field_reservation',
+        4 => 'group_vsrm',
       ),
     ),
     'fields' => array(
       'title' => 'ds_content',
       'field_show_dates' => 'ds_content',
       'field_thumbnail' => 'ds_content',
+      'field_reservation' => 'ds_content',
+      'group_vsrm' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
