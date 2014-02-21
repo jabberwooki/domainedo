@@ -654,10 +654,10 @@ function domainedo_shows_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        'billetterie' => 'url billetterie',
-        'complet' => 'complet',
-        'prochainement' => 'prochainement',
-        'annule' => 'annulé',
+        1 => 'prochainement',
+        2 => 'url billetterie',
+        3 => 'complet',
+        4 => 'annulé',
       ),
       'allowed_values_function' => '',
     ),

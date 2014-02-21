@@ -38,5 +38,37 @@ function domainedo_shows_field_group_info() {
   );
   $export['group_casting|node|show|form'] = $field_group;
 
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_psr|node|show|full';
+  $field_group->group_name = 'group_psr';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'show';
+  $field_group->mode = 'full';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Photo et statut réservation',
+    'weight' => '8',
+    'children' => array(
+      0 => 'field_scald_image',
+      1 => 'field_reservation',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Photo et statut réservation',
+      'instance_settings' => array(
+        'classes' => 'group-psr field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_psr|node|show|full'] = $field_group;
+
   return $export;
 }

@@ -50,15 +50,15 @@ See http://api.drupal.org/api/function/theme_field/7 for details.
 After copying this file to your theme's folder and customizing it, remove this
 HTML comment.
 -->
-<?php
-	$id_info = '';
-	if ($element['#field_name'] == 'field_casting') {
-		$id_info = 'id="casting"';
-	}
-?>
-<div <?php print $id_info; ?> class="<?php print $classes; ?>"<?php print $attributes; ?>>
+<?php if ($element['#field_name'] == 'field_casting'): ?>
+<div id="casting" class="<?php print $classes; ?>"<?php print $attributes; ?>>
+<?php elseif ($element['#field_name'] == 'field_reservation'): ?>
+<div class="<?php print $classes; ?> reservation-status-<?php print $element['#items'][0]['value']; ?>" <?php print $attributes; ?>>
+<?php else: ?>
+<div class="<?php print $classes; ?>"<?php print $attributes; ?>>
+<?php endif; ?>
   <?php if (!$label_hidden): ?>
-    <div class="field-label"<?php print $title_attributes; ?>><?php print $label ?>:&nbsp;</div>
+    <div class="field-label"<?php print $title_attributes; ?>><?php print $label ?> :&nbsp;</div>
   <?php endif; ?>
   <div class="field-items"<?php print $content_attributes; ?>>
     <?php foreach ($items as $delta => $item): ?>
