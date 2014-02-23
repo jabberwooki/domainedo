@@ -231,6 +231,12 @@ function domainedo_shows_views_default_views() {
   $handler->display->display_options['filters']['field_show_type_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_show_type_tid']['vocabulary'] = 'show_types';
   $handler->display->display_options['path'] = 'spectacles/tous-les-spectacles';
+  $handler->display->display_options['menu']['type'] = 'normal';
+  $handler->display->display_options['menu']['title'] = 'Tous les spectacles';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['name'] = 'main-menu';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
 
   /* Display: Accueil */
   $handler = $view->new_display('block', 'Accueil', 'block_1');

@@ -20,3 +20,68 @@ function domainedo_shows_form_show_node_form_alter(&$form, &$form_state, $form_i
 function domainedo_shows_node_view_alter(&$build) {
 	//dsm($build);
 }
+
+/**
+ * Implements hook_menu().
+ */
+// function domainedo_shows_menu() {
+// 	$items = array();
+// 	$items['saperlipopette'] = array(
+// 		'title' => 'Saperlipopette',
+// 		'page callback' => 'domainedo_node_page_view',
+// 		'access callback' => TRUE,
+// 		//'page argument' => 13,
+// 		'expanded' => TRUE,
+// 		//'menu_name' => 'primary-links',
+// 		'weight' => 10,
+// 	);
+	
+// 	return items;
+// }
+
+// function domainedo_node_page_view() {
+// 	//$node = node_load($nid);
+// 	//return node_show($node);
+// 	drupal_goto('node/13');
+// }
+
+// function domainedo_shows_menu() {
+// 	$items = array();
+
+// 	$items['my-menu-item'] = array(
+// 			'title' => 'My Menu',
+// 			'description' => 'My description',
+// 			'page callback' => 'test_function',
+// 			'expanded' => TRUE,
+// 			'weight' => -100,
+// 			'menu_name' => 'menu-primary-links',
+// 	);
+
+// 	return $items;
+// }
+
+// function test_function(){
+// 	return 'TEST';
+// }
+
+function domainedo_shows_menu(){
+	$items = array();
+	// First, we seek menu link id of the "Spectacles" menu item.
+	$mlid = db_query("SELECT mlid FROM {menu_links} WHERE link_title = :title", array(  ':title' => 'Spectacles',))->fetchField();
+	
+	$items['spectacles/saperlipopette'] = array(
+			// page title
+			'title' => 'Saperlipopette',
+			'description' => '',
+			// function that is called when visiting the new path
+			'page callback' => 'domaine_do_saperlipopette',
+			'access arguments' => array('access content'),
+			'menu_name' => 'main-menu',
+			'plid' => $mlid,
+	);
+	return $items;
+}
+
+function domaine_do_saperlipopette(){
+	drupal_goto('node/13');
+}
