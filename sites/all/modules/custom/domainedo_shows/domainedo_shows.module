@@ -23,65 +23,143 @@ function domainedo_shows_node_view_alter(&$build) {
 
 /**
  * Implements hook_menu().
+ * 
+ * Used to generate dynamically all festival menu items into 'main-menu' and 'menu-shows-menu'
+ * List of menu items to be created :
+ * - Saperlipopette,
+ * - Printemps des comédients,
+ * - Folies d'O,
+ * - Radio France,
+ * - Nuits d'O,
+ * - Arabesques,
+ * - Festival d'hiver
  */
-// function domainedo_shows_menu() {
-// 	$items = array();
-// 	$items['saperlipopette'] = array(
-// 		'title' => 'Saperlipopette',
-// 		'page callback' => 'domainedo_node_page_view',
-// 		'access callback' => TRUE,
-// 		//'page argument' => 13,
-// 		'expanded' => TRUE,
-// 		//'menu_name' => 'primary-links',
-// 		'weight' => 10,
-// 	);
-	
-// 	return items;
-// }
-
-// function domainedo_node_page_view() {
-// 	//$node = node_load($nid);
-// 	//return node_show($node);
-// 	drupal_goto('node/13');
-// }
-
-// function domainedo_shows_menu() {
-// 	$items = array();
-
-// 	$items['my-menu-item'] = array(
-// 			'title' => 'My Menu',
-// 			'description' => 'My description',
-// 			'page callback' => 'test_function',
-// 			'expanded' => TRUE,
-// 			'weight' => -100,
-// 			'menu_name' => 'menu-primary-links',
-// 	);
-
-// 	return $items;
-// }
-
-// function test_function(){
-// 	return 'TEST';
-// }
-
 function domainedo_shows_menu(){
 	$items = array();
-	// First, we seek menu link id of the "Spectacles" menu item.
+	
+	// List of festivals to manage.
+	$festivals = domainedo_shows_get_festivals();
+	
+	// First, we seek menu link id (mlid) of the "Spectacles" menu item.
 	$mlid = db_query("SELECT mlid FROM {menu_links} WHERE link_title = :title", array(  ':title' => 'Spectacles',))->fetchField();
 	
-	$items['spectacles/saperlipopette'] = array(
-			// page title
-			'title' => 'Saperlipopette',
-			'description' => '',
-			// function that is called when visiting the new path
-			'page callback' => 'domaine_do_saperlipopette',
-			'access arguments' => array('access content'),
-			'menu_name' => 'main-menu',
-			'plid' => $mlid,
-	);
+	// Then, we seek nids and season of latest edition for published festivals.
+	$published_festivals = domainedo_shows_latest_published_festival();
+	
+	foreach ($published_festivals as $key=>$festival) {
+	  $items['spectacles/' . $key . '/' . $festival['season']] = array(
+	    'title' => $festivals[$key]['title'],
+	    'page callback' => 'domainedo_shows_festival_link',
+	    'page arguments' => array($festival['nid']),
+	    'access arguments' => array('access content'),
+	    'menu_name' => 'main-menu',
+	    'plid' => $mlid,
+	    'weight' => $festivals[$key]['weight'],
+	  );
+	}
+
 	return $items;
 }
 
-function domaine_do_saperlipopette(){
-	drupal_goto('node/13');
+/**
+ * Call function for hook_menu().
+ * 
+ * @param int $festival_id
+ */
+function domainedo_shows_festival_link($festival_id){
+	drupal_goto('node/'.$festival_id);
+}
+
+/**
+ * Returns the latest nid of all published festivals.
+ * 
+ * @return array Published festivals nids in the following form :
+ * array(
+ * 	'saperlipopette' => array(
+ * 		'nid' => xxx,
+ * 		'season' => '2014',
+ * 		),
+ * 	...
+ * 	'festival-hiver' => array(
+ * 		'nid' => 'zzz',
+ * 		'season' => '2013',
+ * );
+ * 
+ */
+function domainedo_shows_latest_published_festival() {
+	$query = db_select('node', 'n');
+	$query->join('field_data_field_festival_name', 'f', 'n.nid = f.entity_id');
+	$query->join('field_data_field_season', 's', 'n.nid = s.entity_id');
+	
+	$query->addField('n', 'nid');
+	$query->addField('f', 'field_festival_name_value', 'name');
+	$query->addField('s', 'field_season_value', 'season');
+	$query->condition('n.type', 'festival')
+	->condition('n.status', '1');
+	
+	$result = $query->execute()->fetchAll();
+	
+	$festivals = array();
+	$festival_seasons = array();
+	foreach ($result as $festival) {
+		if (isset($festival_seasons[$festival->name]) && $festival->season < $festival_seasons[$festival->name] ) {
+			continue;
+		}
+		$festivals[$festival->name]['nid'] = $festival->nid;
+		$festivals[$festival->name]['season'] = $festival->season;
+		$festival_seasons[$festival->name] = $festival->season;
+	}
+	
+	return $festivals;
+}
+
+/**
+ * Returns the list of managed festivals.
+ * 
+ * @return array Festivals.
+ */
+function domainedo_shows_get_festivals() {
+	$festivals = array(
+			'saperlipopette' => array('title' => 'Saperlipopette', 'weight' => 11),
+			'printemps-des-comediens' => array('title' => 'Printemps des comédiens', 'weight' => 12),
+			'folies-do' => array('title' => 'Folies d\'O', 'weight' => 13),
+			'radio-france' => array('title' => 'Radio France', 'weight' => 14),
+			'nuits-do' => array('title' => 'Nuits d\'O', 'weight' => 15),
+			'arabesques' => array('title' => 'Arabesques', 'weight' => 16),
+			'festival-hiver' => array('title' => 'Festival d\'hiver', 'weight' => 17),
+	);
+	
+	return $festivals;
+}
+
+/**
+ * Inplements hook_nod_insert().
+ */
+function domainedo_shows_node_insert($node) {
+	if ($node->type == 'festival' && $node->status == 1) {
+		menu_cache_clear('main-menu');
+		menu_rebuild();
+	}
+}
+
+/**
+ * Implements hook_node_update().
+ */
+function domainedo_shows_node_update($node) {
+	if ($node->type == 'festival') {
+		if ($node->status != $node->original->status) {
+			menu_cache_clear('main-menu');
+			menu_rebuild();
+		}
+	}
+}
+
+/**
+ * Implements hook_node_delete().
+ */
+function domainedo_shows_node_delete($node) {
+	if ($node->type == 'festival') {
+		menu_cache_clear('main-menu');
+		menu_rebuild();
+	}
 }

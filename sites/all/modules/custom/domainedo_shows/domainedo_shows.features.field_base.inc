@@ -321,6 +321,37 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
+  // Exported field_base: 'field_festival_name'
+  $field_bases['field_festival_name'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_festival_name',
+    'foreign keys' => array(),
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'saperlipopette' => 'Saperlipopette',
+        'printemps-des-comediens' => 'Printemps des comédiens',
+        'folies-do' => 'Folies d\'O',
+        'radio-france' => 'Radio France',
+        'nuits-do' => 'Nuits d\'O',
+        'arabesques' => 'Arabesques',
+        'festival-hiver' => 'Festival d\'hiver',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_festival_poster'
   $field_bases['field_festival_poster'] = array(
     'active' => 1,
@@ -663,6 +694,22 @@ function domainedo_shows_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'list_text',
+  );
+
+  // Exported field_base: 'field_season'
+  $field_bases['field_season'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_season',
+    'foreign keys' => array(),
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'number',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'number_integer',
   );
 
   // Exported field_base: 'field_seating'

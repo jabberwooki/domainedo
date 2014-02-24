@@ -288,16 +288,16 @@ function domainedo_shows_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '40',
+          'weight' => '11',
         ),
         'title' => array(
-          'weight' => '-5',
+          'weight' => '0',
         ),
         'path' => array(
-          'weight' => '30',
+          'weight' => '12',
         ),
         'redirect' => array(
-          'weight' => '30',
+          'weight' => '13',
         ),
       ),
       'display' => array(),
@@ -698,6 +698,20 @@ function domainedo_shows_strongarm() {
   $strongarm->name = 'page_title_type_structure_showfield';
   $strongarm->value = 1;
   $export['page_title_type_structure_showfield'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_festival_pattern';
+  $strongarm->value = 'spectacles/[node:field_festival_name]/[node:field_season]';
+  $export['pathauto_node_festival_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_show_pattern';
+  $strongarm->value = 'spectacles/tous-les-spectacles/[node:title]';
+  $export['pathauto_node_show_pattern'] = $strongarm;
 
   return $export;
 }
