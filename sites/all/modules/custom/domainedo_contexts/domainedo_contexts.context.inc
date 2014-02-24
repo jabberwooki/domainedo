@@ -138,8 +138,25 @@ function domainedo_contexts_context_default_contexts() {
       ),
     ),
   );
-  $context->reactions = array();
-  $context->condition_mode = 0;
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'menu-menu-shows-menu' => array(
+          'module' => 'menu',
+          'delta' => 'menu-shows-menu',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
+        'views-shows-block_1' => array(
+          'module' => 'views',
+          'delta' => 'shows-block_1',
+          'region' => 'content',
+          'weight' => '-9',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 1;
 
   // Translatables
   // Included for use with string extractors like potx.
