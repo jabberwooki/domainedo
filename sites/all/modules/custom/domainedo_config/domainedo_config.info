@@ -32,6 +32,7 @@ dependencies[] = pathauto
 dependencies[] = redirect
 dependencies[] = search
 dependencies[] = strongarm
+dependencies[] = superfish
 dependencies[] = system
 dependencies[] = taxonomy
 dependencies[] = token
