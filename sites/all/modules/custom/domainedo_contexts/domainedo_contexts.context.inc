@@ -26,6 +26,12 @@ function domainedo_contexts_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'system-main' => array(
+          'module' => 'system',
+          'delta' => 'main',
+          'region' => 'content',
+          'weight' => '0',
+        ),
         'boxes-logos_top' => array(
           'module' => 'boxes',
           'delta' => 'logos_top',

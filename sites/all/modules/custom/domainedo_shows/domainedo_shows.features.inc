@@ -11,6 +11,9 @@ function domainedo_shows_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "cer" && $api == "default_cer_presets") {
     return array("version" => "1");
   }
+  if ($module == "context" && $api == "context") {
+    return array("version" => "3");
+  }
   if ($module == "ds" && $api == "ds") {
     return array("version" => "1");
   }
