@@ -2009,9 +2009,10 @@ function domainedo_shows_field_default_field_instances() {
         'weight' => 10,
       ),
       'list' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'list',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'list_default',
         'weight' => 24,
       ),
       'teaser' => array(

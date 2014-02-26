@@ -342,6 +342,7 @@ function domainedo_shows_ds_layout_settings_info() {
       ),
       'left' => array(
         2 => 'field_thumbnail',
+        5 => 'field_reservation',
       ),
       'right' => array(
         3 => 'field_show_dates',
@@ -354,6 +355,7 @@ function domainedo_shows_ds_layout_settings_info() {
       'field_thumbnail' => 'left',
       'field_show_dates' => 'right',
       'body' => 'right',
+      'field_reservation' => 'left',
     ),
     'classes' => array(),
     'wrappers' => array(

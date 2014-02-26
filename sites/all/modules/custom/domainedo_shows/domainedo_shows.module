@@ -18,7 +18,20 @@ function domainedo_shows_form_show_node_form_alter(&$form, &$form_state, $form_i
  * Implements hook_node_view_alter().
  */
 function domainedo_shows_node_view_alter(&$build) {
-	//dsm($build);
+	if (isset($build['field_reservation']) && $build['field_reservation']['#items'][0]['value'] == 4) {
+		$start_tag = '';
+		$end_tag = '';
+		if ($build['#view_mode'] == 'full') {
+			$start_tag = '<h3>';
+			$end_tag = '</h3>';
+		}
+		if ($build['#view_mode'] == 'list') {
+			$start_tag = '<h4>';
+			$end_tag = '</h4>';
+		}
+		
+		$build['field_reservation'][0]['#markup'] = $start_tag . $build['field_reservation'][0]['#markup'] . $end_tag;
+	}
 }
 
 /**
