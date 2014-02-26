@@ -88,33 +88,51 @@ function domainedo_shows_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'festival';
   $ds_layout->view_mode = 'full';
-  $ds_layout->layout = 'ds_1col';
+  $ds_layout->layout = 'ds_3col_stacked_fluid';
   $ds_layout->settings = array(
     'regions' => array(
-      'ds_content' => array(
-        0 => 'field_scald_image',
-        1 => 'field_logo',
-        2 => 'field_festival_poster',
-        3 => 'body',
-        4 => 'field_festival_shows',
-        5 => 'field_scald_gallery',
-        6 => 'field_scald_video',
-        7 => 'field_scald_sound',
+      'right' => array(
+        0 => 'field_right_info_block',
+      ),
+      'left' => array(
+        1 => 'field_left_info_block',
+      ),
+      'header' => array(
+        2 => 'field_logo',
+        3 => 'title',
+        4 => 'field_scald_image',
+        5 => 'field_festival_poster',
+      ),
+      'middle' => array(
+        6 => 'body',
+      ),
+      'footer' => array(
+        7 => 'field_scald_video',
+        8 => 'field_scald_gallery',
+        9 => 'field_scald_sound',
+        10 => 'field_festival_shows',
       ),
     ),
     'fields' => array(
-      'field_scald_image' => 'ds_content',
-      'field_logo' => 'ds_content',
-      'field_festival_poster' => 'ds_content',
-      'body' => 'ds_content',
-      'field_festival_shows' => 'ds_content',
-      'field_scald_gallery' => 'ds_content',
-      'field_scald_video' => 'ds_content',
-      'field_scald_sound' => 'ds_content',
+      'field_right_info_block' => 'right',
+      'field_left_info_block' => 'left',
+      'field_logo' => 'header',
+      'title' => 'header',
+      'field_scald_image' => 'header',
+      'field_festival_poster' => 'header',
+      'body' => 'middle',
+      'field_scald_video' => 'footer',
+      'field_scald_gallery' => 'footer',
+      'field_scald_sound' => 'footer',
+      'field_festival_shows' => 'footer',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'ds_content' => 'div',
+      'header' => 'div',
+      'left' => 'div',
+      'middle' => 'div',
+      'right' => 'div',
+      'footer' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',

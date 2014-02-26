@@ -29,7 +29,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -61,7 +61,7 @@ function domainedo_shows_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -83,7 +83,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 18,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -125,9 +125,11 @@ function domainedo_shows_field_default_field_instances() {
       'full' => array(
         'label' => 'hidden',
         'module' => 'domainedo_media',
-        'settings' => array(),
-        'type' => 'title',
-        'weight' => 2,
+        'settings' => array(
+          'link' => 0,
+        ),
+        'type' => 'full',
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -180,10 +182,11 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'link' => FALSE,
+          'links' => 1,
+          'view_mode' => 'list',
         ),
-        'type' => 'entityreference_label',
-        'weight' => 4,
+        'type' => 'entityreference_entity_view',
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -208,7 +211,54 @@ function domainedo_shows_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 10,
+      'weight' => 12,
+    ),
+  );
+
+  // Exported field_instance: 'node-festival-field_left_info_block'
+  $field_instances['node-festival-field_left_info_block'] = array(
+    'bundle' => 'festival',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 10,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_left_info_block',
+    'label' => 'Bloc infos gauche',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 6,
     ),
   );
 
@@ -229,9 +279,11 @@ function domainedo_shows_field_default_field_instances() {
       'full' => array(
         'label' => 'hidden',
         'module' => 'domainedo_media',
-        'settings' => array(),
-        'type' => 'title',
-        'weight' => 1,
+        'settings' => array(
+          'link' => 0,
+        ),
+        'type' => 'full',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -264,6 +316,53 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-festival-field_right_info_block'
+  $field_instances['node-festival-field_right_info_block'] = array(
+    'bundle' => 'festival',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 11,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_right_info_block',
+    'label' => 'Bloc infos droit',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 8,
+    ),
+  );
+
   // Exported field_instance: 'node-festival-field_scald_gallery'
   $field_instances['node-festival-field_scald_gallery'] = array(
     'bundle' => 'festival',
@@ -285,7 +384,7 @@ function domainedo_shows_field_default_field_instances() {
           'link' => 0,
         ),
         'type' => 'full',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -314,7 +413,7 @@ function domainedo_shows_field_default_field_instances() {
       'module' => 'atom_reference',
       'settings' => array(),
       'type' => 'atom_reference_textfield',
-      'weight' => 7,
+      'weight' => 9,
     ),
   );
 
@@ -335,9 +434,11 @@ function domainedo_shows_field_default_field_instances() {
       'full' => array(
         'label' => 'hidden',
         'module' => 'domainedo_media',
-        'settings' => array(),
-        'type' => 'title',
-        'weight' => 0,
+        'settings' => array(
+          'link' => 0,
+        ),
+        'type' => 'full',
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -420,7 +521,7 @@ function domainedo_shows_field_default_field_instances() {
       'module' => 'atom_reference',
       'settings' => array(),
       'type' => 'atom_reference_textfield',
-      'weight' => 9,
+      'weight' => 11,
     ),
   );
 
@@ -445,7 +546,7 @@ function domainedo_shows_field_default_field_instances() {
           'link' => 0,
         ),
         'type' => 'full',
-        'weight' => 6,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -474,7 +575,7 @@ function domainedo_shows_field_default_field_instances() {
       'module' => 'atom_reference',
       'settings' => array(),
       'type' => 'atom_reference_textfield',
-      'weight' => 8,
+      'weight' => 10,
     ),
   );
 
@@ -501,7 +602,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 15,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3334,6 +3435,8 @@ function domainedo_shows_field_default_field_instances() {
   t('A partir de');
   t('Affiche du festival');
   t('Artiste associé');
+  t('Bloc infos droit');
+  t('Bloc infos gauche');
   t('Complet');
   t('Coproducteurs');
   t('Date(s)');
