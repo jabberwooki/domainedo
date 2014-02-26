@@ -10,7 +10,7 @@ include_once 'domainedo_shows.features.inc';
  * Implements hook_form_FORM_ID_alter().
  */
 function domainedo_shows_form_show_node_form_alter(&$form, &$form_state, $form_id) {
-	// "Lien distribution" vertical tab moved to bottom of existing vertical tabs in create/edit form.
+	// Vertical tab "Lien distribution" moved to bottom of existing tabs in create/edit form.
 	$form['#groups']['group_casting']->weight = 1000;
 }
 
@@ -19,4 +19,167 @@ function domainedo_shows_form_show_node_form_alter(&$form, &$form_state, $form_i
  */
 function domainedo_shows_node_view_alter(&$build) {
 	//dsm($build);
+}
+
+/**
+ * Returns the list of managed festivals.
+ * 
+ * @return array Festivals.
+ */
+function domainedo_shows_get_festivals() {
+	$festivals = array(
+			'saperlipopette' => array('title' => 'Saperlipopette', 'weight' => 11),
+			'printemps-des-comediens' => array('title' => 'Printemps des comédiens', 'weight' => 12),
+			'folies-do' => array('title' => 'Folies d\'O', 'weight' => 13),
+			'radio-france' => array('title' => 'Radio France', 'weight' => 14),
+			'nuits-do' => array('title' => 'Nuits d\'O', 'weight' => 15),
+			'arabesques' => array('title' => 'Arabesques', 'weight' => 16),
+			'festival-hiver' => array('title' => 'Festival d\'hiver', 'weight' => 17),
+	);
+	
+	return $festivals;
+}
+
+/**
+ * Implements hook_node_presave().
+ */
+function domainedo_shows_node_presave($node) {
+	// If node is festival, we must manage menu links.
+	if ($node->type == 'festival') {
+		// Insertion of a new festival node.
+		if ($node->is_new) {
+			// and if the festival is the latest one,
+			if ($previous_festival_nid = is_latest_festival($node)) {
+				// a new menu link is prepared
+				$festivals = domainedo_shows_get_festivals();
+				$mlid = db_query("SELECT mlid FROM {menu_links} WHERE link_title = :title", array(  ':title' => 'Spectacles',))->fetchField();
+				$node->menu['link_title'] = $festivals[$node->field_festival_name['und'][0]['value']]['title'];
+				$node->menu['plid'] = $mlid;
+				$node->menu['weight'] = $festivals[$node->field_festival_name['und'][0]['value']]['weight'];
+				$node->menu['parent'] = 'parent:' . $mlid;;
+				$node->menu['enabled'] = 1;
+				$node->menu['description'] = '';
+				
+				// and the menu link of the previous festival, if any, is deleted.
+				if(!is_bool($previous_festival_nid)) {
+					$mlid = db_query("SELECT mlid FROM {menu_links} WHERE link_path = :path", array(  ':path' => 'node/' . $previous_festival_nid,))->fetchField();
+					menu_link_delete($mlid);
+				}
+			}
+		}
+		// Update of an existing festival and it's the latest one,
+		if (!$node->is_new && is_latest_festival($node, FALSE)) {
+			$menu_link_modified = FALSE;
+			if ($node->field_season['und'][0]['value'] != $node->original->field_season['und'][0]['value']) {
+				$menu_link_modified = TRUE;
+			}
+			if ($node->field_festival_name['und'][0]['value'] != $node->original->field_festival_name['und'][0]['value']) {
+				$menu_link_modified = TRUE;
+			}
+			// If menu link data have been altered,
+			if ($menu_link_modified) {
+				// the existing menu link is deleted
+				$mlid = db_query("SELECT mlid FROM {menu_links} WHERE link_path = :path", array(  ':path' => 'node/' . $node->nid,))->fetchField();
+				menu_link_delete($mlid);
+				// a new menu link is prepared
+				$festivals = domainedo_shows_get_festivals();
+				$mlid = db_query("SELECT mlid FROM {menu_links} WHERE link_title = :title", array(  ':title' => 'Spectacles',))->fetchField();
+				$node->menu['link_title'] = $festivals[$node->field_festival_name['und'][0]['value']]['title'];
+				$node->menu['plid'] = $mlid;
+				$node->menu['weight'] = $festivals[$node->field_festival_name['und'][0]['value']]['weight'];
+				$node->menu['parent'] = 'parent:' . $mlid;;
+				$node->menu['enabled'] = 1;
+				$node->menu['description'] = '';
+			}
+		}
+	}
+}
+
+/**
+ * Tests if a processed festival ($node) is the more recent one.
+ * If yes, returns nid of the previous season's festival, or TRUE if there is no previous festival.
+ * If no, return FALSE.
+ * 
+ * @param Object $node The tested festival.
+ * @return mixed
+ * 	 A boolean TRUE if the processed festival is the latest one and no previous festival exists.
+ *   A int $nid of the previous festival, if any.
+ *   A boolean FALSE if the processed festival is not the latest one.
+ */
+function is_latest_festival($node, $is_new=TRUE) {
+	// First, seeks all the registered festivals whose name is $festival_name
+	$query = db_select('node', 'n');
+	$query->join('field_data_field_festival_name', 'f', 'n.nid = f.entity_id');
+	$query->join('field_data_field_season', 's', 'n.nid = s.entity_id');
+	
+	$query->addField('n', 'nid');
+	$query->addField('s', 'field_season_value', 'season');
+	$query->condition('n.type', 'festival')
+	->condition('f.field_festival_name_value', $node->field_festival_name['und'][0]['value']);
+	//->condition('n.status', '1');
+	
+	// If current process is an update or deletion, the festival node being performed
+	// must NOT be retrieved from database to prevent to be compared to itself.
+	if(!$is_new) {
+		$query->condition('s.field_season_value', $node->field_season['und'][0]['value'], '<>');
+	}
+	
+	$result = $query->execute()->fetchAll();
+	
+	// If no registered festival
+	if (empty($result)){
+		return TRUE;
+	}
+	
+	// else gets the season and nid values of the latest registered festival
+	$max_season = 0;
+	$previous_nid = 0;
+	foreach($result as $festival) {
+		if ($festival->season > $max_season) {
+			$max_season = $festival->season;
+			$previous_nid = $festival->nid;
+		}
+	}
+	
+	// Finally, compares theses values to the festival in registration process
+	$season_to_save = $node->field_season['und'][0]['value'];
+	// If this festival is latest
+	if ($season_to_save > $max_season) {
+		return $previous_nid;
+	}
+	// else
+	else {
+		return FALSE;
+	}
+}
+
+/**
+ * Implements hook_node_delete().
+ */
+function domainedo_shows_node_delete($node) {
+	if ($node->type == 'festival') {
+		// If latest
+		if ($previous_festival_nid = is_latest_festival($node, FALSE)) {
+			// and if a previous festival exists, a menu link is re-created for this festival
+			if(!is_bool($previous_festival_nid)) {
+				$festivals = domainedo_shows_get_festivals();
+				$mlid = db_query("SELECT mlid FROM {menu_links} WHERE link_title = :title", array(  ':title' => 'Spectacles',))->fetchField();
+				$item = array(
+					'link_title' => $festivals[$node->field_festival_name['und'][0]['value']]['title'],
+					'link_path' => 'node/' . $previous_festival_nid,
+					'menu_name' => 'main-menu:' . $mlid,
+					'plid' => $mlid,
+					'weight' => $festivals[$node->field_festival_name['und'][0]['value']]['weight'],
+				);
+				menu_link_save($item);
+			}
+		}
+	}
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function domainedo_shows_form_festival_node_form_alter(&$form, &$form_state, $form_id) {
+	//dsm($form_state);
 }
