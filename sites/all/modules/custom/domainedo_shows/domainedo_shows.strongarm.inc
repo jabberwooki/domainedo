@@ -581,14 +581,14 @@ function domainedo_shows_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_1_level';
-  $strongarm->value = '2';
+  $strongarm->value = '1';
   $export['menu_block_1_level'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_1_parent';
-  $strongarm->value = 'main-menu:0';
+  $strongarm->value = 'main-menu:650';
   $export['menu_block_1_parent'] = $strongarm;
 
   $strongarm = new stdClass();
