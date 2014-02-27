@@ -23,6 +23,7 @@ dependencies[] = l10n_update
 dependencies[] = locale
 dependencies[] = logintoboggan
 dependencies[] = menu
+dependencies[] = menu_block
 dependencies[] = metatag
 dependencies[] = module_filter
 dependencies[] = node
