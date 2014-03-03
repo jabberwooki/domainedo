@@ -535,7 +535,7 @@ function domainedo_shows_views_default_views() {
   $handler->display->display_options['filters']['field_show_dates_value']['default_date'] = 'now';
 
   /* Display: Tous les spectacles */
-  $handler = $view->new_display('page_with_page_title', 'Tous les spectacles', 'page_with_page_title_1');
+  $handler = $view->new_display('page_with_page_title', 'Tous les spectacles', 'list');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Tous les spectacles au domaine d\'O';
   $handler->display->display_options['defaults']['exposed_form'] = FALSE;
@@ -561,6 +561,22 @@ function domainedo_shows_views_default_views() {
       ),
     ),
   );
+  $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Entête: Global: Block area */
+  $handler->display->display_options['header']['block']['id'] = 'block';
+  $handler->display->display_options['header']['block']['table'] = 'views';
+  $handler->display->display_options['header']['block']['field'] = 'block';
+  $handler->display->display_options['header']['block']['label'] = 'Left info';
+  $handler->display->display_options['header']['block']['empty'] = TRUE;
+  $handler->display->display_options['header']['block']['block_to_insert'] = 'boxes:left_shows_info';
+  /* Entête: Global: Block area */
+  $handler->display->display_options['header']['block_1']['id'] = 'block_1';
+  $handler->display->display_options['header']['block_1']['table'] = 'views';
+  $handler->display->display_options['header']['block_1']['field'] = 'block';
+  $handler->display->display_options['header']['block_1']['label'] = 'Info droite';
+  $handler->display->display_options['header']['block_1']['empty'] = TRUE;
+  $handler->display->display_options['header']['block_1']['block_to_insert'] = 'boxes:right_shows_infos';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Contenu: Publié */
@@ -660,6 +676,8 @@ function domainedo_shows_views_default_views() {
     t('dernier »'),
     t('Tous les spectacles'),
     t('Tous les spectacles au domaine d\'O'),
+    t('Left info'),
+    t('Info droite'),
     t('Type de spectacle (field_show_type)'),
     t('Accueil'),
     t('Spectacles à l\'affiche'),
