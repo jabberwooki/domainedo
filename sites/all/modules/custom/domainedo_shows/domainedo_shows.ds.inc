@@ -91,40 +91,36 @@ function domainedo_shows_ds_layout_settings_info() {
   $ds_layout->layout = 'ds_3col_stacked_fluid';
   $ds_layout->settings = array(
     'regions' => array(
-      'right' => array(
-        0 => 'field_right_info_block',
+      'header' => array(
+        0 => 'title',
       ),
       'left' => array(
-        1 => 'field_left_info_block',
+        1 => 'body',
       ),
-      'header' => array(
-        2 => 'field_logo',
-        3 => 'title',
-        4 => 'field_scald_image',
-        5 => 'field_festival_poster',
-      ),
-      'middle' => array(
-        6 => 'body',
+      'right' => array(
+        2 => 'field_festival_poster',
       ),
       'footer' => array(
-        7 => 'field_scald_video',
-        8 => 'field_scald_gallery',
-        9 => 'field_scald_sound',
-        10 => 'field_festival_shows',
+        3 => 'field_scald_video',
+        4 => 'field_scald_gallery',
+        5 => 'field_scald_sound',
+        6 => 'field_festival_shows',
+      ),
+      'middle' => array(
+        7 => 'field_scald_file',
+        8 => 'field_calendar_archive',
       ),
     ),
     'fields' => array(
-      'field_right_info_block' => 'right',
-      'field_left_info_block' => 'left',
-      'field_logo' => 'header',
       'title' => 'header',
-      'field_scald_image' => 'header',
-      'field_festival_poster' => 'header',
-      'body' => 'middle',
+      'body' => 'left',
+      'field_festival_poster' => 'right',
       'field_scald_video' => 'footer',
       'field_scald_gallery' => 'footer',
       'field_scald_sound' => 'footer',
       'field_festival_shows' => 'footer',
+      'field_scald_file' => 'middle',
+      'field_calendar_archive' => 'middle',
     ),
     'classes' => array(),
     'wrappers' => array(

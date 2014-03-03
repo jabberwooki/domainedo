@@ -194,5 +194,5 @@ function domainedo_shows_node_delete($node) {
  * Implements hook_form_FORM_ID_alter().
  */
 function domainedo_shows_form_festival_node_form_alter(&$form, &$form_state, $form_id) {
-	//dsm($form_state);
+	$form['#groups']['group_technical_fiels']->weight = 1000;
 }
