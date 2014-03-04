@@ -201,9 +201,11 @@ function domainedo_shows_form_festival_node_form_alter(&$form, &$form_state, $fo
  * Implements hook_views_pre_render().
  */
 function domainedo_shows_views_pre_render(&$view) {
-	//dsm($view->header['area']->options['content']);
-	$block = module_invoke('views', 'block_view', '-exp-shows-list');
-	$view->header['area']->options['content'] = render($block['content']);
+	//dsm($view);
+	if ($view->name == 'shows' && $view->current_display == 'list') {
+		$block = module_invoke('views', 'block_view', '-exp-shows-list');
+		$view->header['area']->options['content'] = render($block['content']);
+	}
 }
 
 /**
