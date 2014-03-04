@@ -570,11 +570,18 @@ function domainedo_shows_views_default_views() {
   $handler->display->display_options['header']['block']['label'] = 'Left info';
   $handler->display->display_options['header']['block']['empty'] = TRUE;
   $handler->display->display_options['header']['block']['block_to_insert'] = 'boxes:left_shows_info';
+  /* Entête: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['label'] = 'Shows list filter';
+  $handler->display->display_options['header']['area']['empty'] = TRUE;
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
   /* Entête: Global: Block area */
   $handler->display->display_options['header']['block_1']['id'] = 'block_1';
   $handler->display->display_options['header']['block_1']['table'] = 'views';
   $handler->display->display_options['header']['block_1']['field'] = 'block';
-  $handler->display->display_options['header']['block_1']['label'] = 'Info droite';
+  $handler->display->display_options['header']['block_1']['label'] = 'Right info';
   $handler->display->display_options['header']['block_1']['empty'] = TRUE;
   $handler->display->display_options['header']['block_1']['block_to_insert'] = 'boxes:right_shows_infos';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
@@ -594,6 +601,23 @@ function domainedo_shows_views_default_views() {
     'show' => 'show',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Contenu: Festival (field_festival) */
+  $handler->display->display_options['filters']['field_festival_target_id']['id'] = 'field_festival_target_id';
+  $handler->display->display_options['filters']['field_festival_target_id']['table'] = 'field_data_field_festival';
+  $handler->display->display_options['filters']['field_festival_target_id']['field'] = 'field_festival_target_id';
+  $handler->display->display_options['filters']['field_festival_target_id']['group'] = 1;
+  $handler->display->display_options['filters']['field_festival_target_id']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_festival_target_id']['expose']['operator_id'] = 'field_festival_target_id_op';
+  $handler->display->display_options['filters']['field_festival_target_id']['expose']['label'] = 'Festival';
+  $handler->display->display_options['filters']['field_festival_target_id']['expose']['operator'] = 'field_festival_target_id_op';
+  $handler->display->display_options['filters']['field_festival_target_id']['expose']['identifier'] = 'field_festival_target_id';
+  $handler->display->display_options['filters']['field_festival_target_id']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    5 => 0,
+    4 => 0,
+    3 => 0,
+  );
   /* Filter criterion: Contenu: Type de spectacle (field_show_type) */
   $handler->display->display_options['filters']['field_show_type_tid']['id'] = 'field_show_type_tid';
   $handler->display->display_options['filters']['field_show_type_tid']['table'] = 'field_data_field_show_type';
@@ -601,7 +625,7 @@ function domainedo_shows_views_default_views() {
   $handler->display->display_options['filters']['field_show_type_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_show_type_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_show_type_tid']['expose']['operator_id'] = 'field_show_type_tid_op';
-  $handler->display->display_options['filters']['field_show_type_tid']['expose']['label'] = 'Type de spectacle (field_show_type)';
+  $handler->display->display_options['filters']['field_show_type_tid']['expose']['label'] = 'Type de spectacle';
   $handler->display->display_options['filters']['field_show_type_tid']['expose']['operator'] = 'field_show_type_tid_op';
   $handler->display->display_options['filters']['field_show_type_tid']['expose']['identifier'] = 'field_show_type_tid';
   $handler->display->display_options['filters']['field_show_type_tid']['expose']['multiple'] = TRUE;
@@ -677,8 +701,10 @@ function domainedo_shows_views_default_views() {
     t('Tous les spectacles'),
     t('Tous les spectacles au domaine d\'O'),
     t('Left info'),
-    t('Info droite'),
-    t('Type de spectacle (field_show_type)'),
+    t('Shows list filter'),
+    t('Right info'),
+    t('Festival'),
+    t('Type de spectacle'),
     t('Accueil'),
     t('Spectacles à l\'affiche'),
     t('Accueil mobile'),

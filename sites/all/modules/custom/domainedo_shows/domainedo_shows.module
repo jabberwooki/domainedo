@@ -196,3 +196,21 @@ function domainedo_shows_node_delete($node) {
 function domainedo_shows_form_festival_node_form_alter(&$form, &$form_state, $form_id) {
 	$form['#groups']['group_technical_fiels']->weight = 1000;
 }
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function domainedo_shows_views_pre_render(&$view) {
+	//dsm($view->header['area']->options['content']);
+	$block = module_invoke('views', 'block_view', '-exp-shows-list');
+	$view->header['area']->options['content'] = render($block['content']);
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function domainedo_shows_form_views_exposed_form_alter(&$form, &$form_state, $form_id) {
+	if (isset($form['field_festival_target_id'])) {
+		$form['field_festival_target_id']['#options']['All'] = t('All upcoming shows');
+	}
+}
