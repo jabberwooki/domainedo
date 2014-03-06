@@ -54,6 +54,12 @@ HTML comment.
 <div id="casting" class="<?php print $classes; ?>"<?php print $attributes; ?>>
 <?php elseif ($element['#field_name'] == 'field_reservation'): ?>
 <div class="<?php print $classes; ?> reservation-status-<?php print $element['#items'][0]['value']; ?>" <?php print $attributes; ?>>
+<?php elseif ($element['#field_name'] == 'field_scald_video'): ?>
+<div id="scald-video" class="<?php print $classes; ?>"<?php print $attributes; ?>>
+<?php elseif ($element['#field_name'] == 'field_scald_audio'): ?>
+<div id="scald-audio" class="<?php print $classes; ?>"<?php print $attributes; ?>>
+<?php elseif ($element['#field_name'] == 'field_scald_gallery'): ?>
+<div id="scald-gallery" class="<?php print $classes; ?>"<?php print $attributes; ?>>
 <?php else: ?>
 <div class="<?php print $classes; ?>"<?php print $attributes; ?>>
 <?php endif; ?>
