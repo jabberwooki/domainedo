@@ -19,6 +19,7 @@ function domainedo_shows_form_show_node_form_alter(&$form, &$form_state, $form_i
  */
 function domainedo_shows_node_view_alter(&$build) {
 	if ($build['#bundle'] == 'show') {
+		// "Annulation" info processing.
 		if (isset($build['field_reservation']) && $build['field_reservation']['#items'][0]['value'] == 4) {
 			$start_tag = '';
 			$end_tag = '';
@@ -33,12 +34,24 @@ function domainedo_shows_node_view_alter(&$build) {
 			
 			$build['field_reservation'][0]['#markup'] = $start_tag . $build['field_reservation'][0]['#markup'] . $end_tag;
 		}
+		
+		// Festival name processing.
 		if ($build['#view_mode'] == 'list' && isset($build['field_festival'][0]['#markup'])) {
-			if ($name = domainedo_shows_get_festival_name($build['field_festival'][0]['#markup'])) {
-				$build['field_festival'][0]['#markup'] = $name;
+			$festival_infos = domainedo_shows_get_festival_infos($build['field_festival'][0]['#markup'], array('title'));
+			if (!empty($festival_infos)) {
+				$build['field_festival'][0]['#markup'] = $festival_infos['title'];
 			}
 			else {
 				unset($build['field_festival']);
+			}
+		}
+		
+		// Puts a link on Festival name, except for Festival Hiver.
+		if ($build['#view_mode'] == 'full') {
+			// If different from 'festival-hiver'
+			$festival_infos = domainedo_shows_get_festival_infos($build['field_festival']['#items'][0]['target_id'], array('title', 'url'));
+			if (!empty($festival_infos)) {
+				$build['field_festival'][0]['#markup'] = '<a href="' . $festival_infos['url'] . '">' . $build['field_festival'][0]['#markup'] . '</a>';
 			}
 		}
 	}
@@ -51,13 +64,13 @@ function domainedo_shows_node_view_alter(&$build) {
  */
 function domainedo_shows_get_festivals() {
 	$festivals = array(
-			'saperlipopette' => array('title' => 'Saperlipopette', 'weight' => 11),
-			'printemps-des-comediens' => array('title' => 'Printemps des comédiens', 'weight' => 12),
-			'folies-do' => array('title' => 'Folies d\'O', 'weight' => 13),
-			'radio-france' => array('title' => 'Radio France', 'weight' => 14),
-			'nuits-do' => array('title' => 'Nuits d\'O', 'weight' => 15),
-			'arabesques' => array('title' => 'Arabesques', 'weight' => 16),
-			'festival-hiver' => array('title' => 'Festival d\'hiver', 'weight' => 17),
+			'saperlipopette' => array('title' => 'Saperlipopette', 'weight' => 11, 'url' => 'http://www.coopernet.fr'),
+			'printemps-des-comediens' => array('title' => 'Printemps des comédiens', 'weight' => 12, 'url' => 'http://www.coopernet.fr'),
+			'folies-do' => array('title' => 'Folies d\'O', 'weight' => 13, 'url' => 'http://www.coopernet.fr'),
+			'radio-france' => array('title' => 'Radio France', 'weight' => 14, 'url' => 'http://www.coopernet.fr'),
+			'nuits-do' => array('title' => 'Nuits d\'O', 'weight' => 15, 'url' => 'http://www.coopernet.fr'),
+			'arabesques' => array('title' => 'Arabesques', 'weight' => 16, 'url' => 'http://www.coopernet.fr'),
+			'festival-hiver' => array('title' => 'Festival d\'hiver', 'weight' => 17, 'url' => 'http://www.coopernet.fr'),
 	);
 	
 	return $festivals;
@@ -66,20 +79,26 @@ function domainedo_shows_get_festivals() {
 /** 
  * Returns the Festival name of a given edition
  * 
- * @return string Name of the festival
+ * @param int Nid of the Festival edition.
+ * @param array An array containing the requested info types.
+ * @return array Array containing requested festival info values.
  */
-function domainedo_shows_get_festival_name($edition_id) {
+function domainedo_shows_get_festival_infos($edition_id, $info_types) {
 	$query = db_select('node', 'n');
 	$query->join('field_data_field_festival_name', 'f', 'n.nid = f.entity_id');
 	
 	$query->addField('f', 'field_festival_name_value', 'name');
 	$query->condition('n.nid', $edition_id);
-	
-	$result = $query->execute()->fetchField();
+
+	$result = $query->execute()->fetchField();//
 	
 	if ($result != 'festival-hiver') {
 		$festivals = domainedo_shows_get_festivals();
-		return $festivals[$result]['title'];
+		$info_values = array('title' => '', 'url' => '');
+		foreach ($info_types as $type) {
+			$info_values[$type] = $festivals[$result][$type];
+		}
+		return $info_values;
 	}
 	return null;
 }
@@ -232,7 +251,6 @@ function domainedo_shows_form_festival_node_form_alter(&$form, &$form_state, $fo
  * Implements hook_views_pre_render().
  */
 function domainedo_shows_views_pre_render(&$view) {
-	//dsm($view);
 	if ($view->name == 'shows' && $view->current_display == 'list') {
 		$block = module_invoke('views', 'block_view', '-exp-shows-list');
 		$view->header['area']->options['content'] = render($block['content']);
