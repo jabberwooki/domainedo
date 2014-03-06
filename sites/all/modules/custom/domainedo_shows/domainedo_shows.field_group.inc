@@ -24,6 +24,11 @@ function domainedo_shows_field_group_info() {
     'weight' => '33',
     'children' => array(
       0 => 'field_casting_link',
+      1 => 'field_video_link',
+      2 => 'field_sound_link',
+      3 => 'field_photos_link',
+      4 => 'field_comments_link',
+      5 => 'field_back_to_top_link',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
