@@ -49,7 +49,7 @@ function domainedo_shows_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Photo et statut réservation',
-    'weight' => '8',
+    'weight' => '7',
     'children' => array(
       0 => 'field_scald_image',
       1 => 'field_reservation',
