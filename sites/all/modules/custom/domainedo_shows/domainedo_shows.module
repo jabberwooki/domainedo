@@ -18,19 +18,29 @@ function domainedo_shows_form_show_node_form_alter(&$form, &$form_state, $form_i
  * Implements hook_node_view_alter().
  */
 function domainedo_shows_node_view_alter(&$build) {
-	if (isset($build['field_reservation']) && $build['field_reservation']['#items'][0]['value'] == 4) {
-		$start_tag = '';
-		$end_tag = '';
-		if ($build['#view_mode'] == 'full') {
-			$start_tag = '<h3>';
-			$end_tag = '</h3>';
+	if ($build['#bundle'] == 'show') {
+		if (isset($build['field_reservation']) && $build['field_reservation']['#items'][0]['value'] == 4) {
+			$start_tag = '';
+			$end_tag = '';
+			if ($build['#view_mode'] == 'full') {
+				$start_tag = '<h3>';
+				$end_tag = '</h3>';
+			}
+			if ($build['#view_mode'] == 'list') {
+				$start_tag = '<h4>';
+				$end_tag = '</h4>';
+			}
+			
+			$build['field_reservation'][0]['#markup'] = $start_tag . $build['field_reservation'][0]['#markup'] . $end_tag;
 		}
-		if ($build['#view_mode'] == 'list') {
-			$start_tag = '<h4>';
-			$end_tag = '</h4>';
+		if ($build['#view_mode'] == 'list' && isset($build['field_festival'][0]['#markup'])) {
+			if ($name = domainedo_shows_get_festival_name($build['field_festival'][0]['#markup'])) {
+				$build['field_festival'][0]['#markup'] = $name;
+			}
+			else {
+				unset($build['field_festival']);
+			}
 		}
-		
-		$build['field_reservation'][0]['#markup'] = $start_tag . $build['field_reservation'][0]['#markup'] . $end_tag;
 	}
 }
 
@@ -51,6 +61,27 @@ function domainedo_shows_get_festivals() {
 	);
 	
 	return $festivals;
+}
+
+/** 
+ * Returns the Festival name of a given edition
+ * 
+ * @return string Name of the festival
+ */
+function domainedo_shows_get_festival_name($edition_id) {
+	$query = db_select('node', 'n');
+	$query->join('field_data_field_festival_name', 'f', 'n.nid = f.entity_id');
+	
+	$query->addField('f', 'field_festival_name_value', 'name');
+	$query->condition('n.nid', $edition_id);
+	
+	$result = $query->execute()->fetchField();
+	
+	if ($result != 'festival-hiver') {
+		$festivals = domainedo_shows_get_festivals();
+		return $festivals[$result]['title'];
+	}
+	return null;
 }
 
 /**
