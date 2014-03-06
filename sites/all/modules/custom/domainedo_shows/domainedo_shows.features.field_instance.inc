@@ -1459,9 +1459,10 @@ function domainedo_shows_field_default_field_instances() {
         'weight' => 3,
       ),
       'list' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
+        'module' => 'entityreference',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'entityreference_entity_id',
         'weight' => 14,
       ),
       'teaser' => array(
