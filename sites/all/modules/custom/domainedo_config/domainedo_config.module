@@ -5,3 +5,39 @@
  */
 
 include_once 'domainedo_config.features.inc';
+
+/**
+ * Implements hook_block_info().
+ */
+function domainedo_config_block_info() {
+	$blocks = array();
+
+	$blocks['domainedo_breadcrumb'] = array(
+		'info' => t('Fil d\'Ariane domaine d\'O'),
+    'cache' => DRUPAL_NO_CACHE,
+	);
+
+	return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function domainedo_config_block_view($delta = '') {
+	switch ($delta) {
+		case 'domainedo_breadcrumb':
+			$block['subject'] = t('Breadcrumb');
+			//dsm(theme('breadcrumb', array('breadcrumb'=>drupal_get_breadcrumb())));
+			$block['content'] = theme('breadcrumb', array('breadcrumb'=>drupal_get_breadcrumb()));
+			return $block;
+			break;
+	}
+}
+
+/**
+ * Implements hook_menu_breadcrumb_alter().
+ */
+function domainedo_config_menu_breadcrumb_alter(&$active_trail, $item) {
+//  	dpm($active_trail);
+//  	dpm($item);
+}
