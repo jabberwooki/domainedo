@@ -68,7 +68,7 @@ function _custom_breadcrumbs_construct_view_path($display) {
  */
 function _custom_breadcrumbs_allowed_display($display) {
   // @todo Changes needed for D7?
-  $allowed_display_types = array('page', 'calendar', 'image_gallery');
+  $allowed_display_types = array('page', 'page_with_page_title', 'calendar', 'image_gallery');
   if (in_array($display->display_plugin, $allowed_display_types)) {
     if (!(isset($display->handler->view->is_attachment) && $display->handler->view->is_attachment)) {
       if (isset($display->display_options['path']) ) {
