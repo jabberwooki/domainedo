@@ -248,7 +248,7 @@ function domainedo_shows_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'show';
   $ds_layout->view_mode = 'full';
-  $ds_layout->layout = 'ds_2col_fluid';
+  $ds_layout->layout = 'ds_2col_stacked_fluid';
   $ds_layout->settings = array(
     'regions' => array(
       'left' => array(
@@ -277,10 +277,19 @@ function domainedo_shows_ds_layout_settings_info() {
         20 => 'field_duration',
         21 => 'field_minimum_age',
         22 => 'field_price',
-        23 => 'field_coming_soon',
-        24 => 'field_boxoffice_url',
-        25 => 'field_full',
-        26 => 'field_reimbursement',
+        23 => 'field_additional_infos',
+        24 => 'field_coming_soon',
+        25 => 'field_boxoffice_url',
+        26 => 'field_full',
+        27 => 'field_reimbursement',
+        28 => 'field_video_link',
+        29 => 'field_sound_link',
+        30 => 'field_photos_link',
+        31 => 'field_comments_link',
+        32 => 'field_back_to_top_link',
+      ),
+      'footer' => array(
+        33 => 'comments',
       ),
     ),
     'fields' => array(
@@ -307,15 +316,24 @@ function domainedo_shows_ds_layout_settings_info() {
       'field_duration' => 'right',
       'field_minimum_age' => 'right',
       'field_price' => 'right',
+      'field_additional_infos' => 'right',
       'field_coming_soon' => 'right',
       'field_boxoffice_url' => 'right',
       'field_full' => 'right',
       'field_reimbursement' => 'right',
+      'field_video_link' => 'right',
+      'field_sound_link' => 'right',
+      'field_photos_link' => 'right',
+      'field_comments_link' => 'right',
+      'field_back_to_top_link' => 'right',
+      'comments' => 'footer',
     ),
     'classes' => array(),
     'wrappers' => array(
+      'header' => 'div',
       'left' => 'div',
       'right' => 'div',
+      'footer' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
