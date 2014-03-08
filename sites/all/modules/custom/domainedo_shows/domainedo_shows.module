@@ -47,13 +47,27 @@ function domainedo_shows_node_view_alter(&$build) {
 			}
 		}
 		
-		// 
 		if ($build['#view_mode'] == 'full') {
+			// Breadcrumb processing : if the show node is requested from a festival page,
+			// the breadcrumb link 'Tous les spectacles' must send user to the shows list
+			// filtered on the latest edition of the same festival.
+			$url_elements = explode('/', $_SERVER['HTTP_REFERER']);
+			// If the fourth element of the referer url contains a festival name, then we come from a festival page.
+			if (isset($url_elements[4]) && in_array($url_elements[4], array_keys(domainedo_shows_get_festivals()))) {
+				$latest_festival_id = domainedo_shows_get_latest_festival($url_elements[4]);
+				$breadcrumb = drupal_get_breadcrumb();
+				$modified_url = url('spectacles/tous-les-spectacles', array('query' => array('field_festival_target_id' => $latest_festival_id)));
+				$modified_link = '<a href="' . $modified_url . '">Tous les spectacles</a>';
+				$breadcrumb[2] = $modified_link;
+				drupal_set_breadcrumb($breadcrumb);
+			}
+			
 			//Puts a link on Festival name, except for festival-hiver.
 			$festival_infos = domainedo_shows_get_festival_infos($build['field_festival']['#items'][0]['target_id'], array('title', 'url'));
 			if (!empty($festival_infos)) {
 				$build['field_festival'][0]['#markup'] = '<a href="' . $festival_infos['url'] . '">' . $build['field_festival'][0]['#markup'] . '</a>';
 			}
+			
 			// Displays video, sound and photos links only if corresponding fields contain data.
 			if (!isset($build['field_scald_video'])) {
 				unset($build['field_video_link']);
@@ -112,6 +126,28 @@ function domainedo_shows_get_festival_infos($edition_id, $info_types) {
 		return $info_values;
 	}
 	return null;
+}
+
+function domainedo_shows_get_latest_festival($festival_name) {
+	$query = db_select('node', 'n');
+	$query->join('field_data_field_festival_name', 'f', 'n.nid = f.entity_id');
+	$query->join('field_data_field_season', 's', 'n.nid = s.entity_id');
+	
+	$query->addField('n', 'nid');
+	$query->addField('f', 'field_festival_name_value', 'name');
+	$query->addField('s', 'field_season_value', 'season');
+	$query->condition('n.type', 'festival')
+	->condition('f.field_festival_name_value', $festival_name)
+	->condition('n.status', '1');
+	
+	$result = $query->execute()->fetchAll();
+	
+	$festivals = array();
+	foreach ($result as $festival) {
+		$festivals[$festival->season] = $festival->nid;
+	}
+	krsort($festivals);
+	return current($festivals);
 }
 
 /**
