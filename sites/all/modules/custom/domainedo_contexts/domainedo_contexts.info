@@ -8,6 +8,7 @@ dependencies[] = boxes
 dependencies[] = context
 dependencies[] = context_mobile_detect
 dependencies[] = ctools
+dependencies[] = domainedo_config
 dependencies[] = features
 dependencies[] = menu
 dependencies[] = search

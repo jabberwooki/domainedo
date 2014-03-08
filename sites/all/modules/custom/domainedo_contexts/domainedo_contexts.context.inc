@@ -44,6 +44,12 @@ function domainedo_contexts_context_default_contexts() {
           'region' => 'header_second',
           'weight' => '-10',
         ),
+        'domainedo_config-domainedo_breadcrumb' => array(
+          'module' => 'domainedo_config',
+          'delta' => 'domainedo_breadcrumb',
+          'region' => 'preface_first',
+          'weight' => '-10',
+        ),
         'boxes-logos_bottom' => array(
           'module' => 'boxes',
           'delta' => 'logos_bottom',
