@@ -54,3 +54,9 @@ function domainedo_date_nav_title($params) {
 		return $title;
 	}
 }
+/**
+ * Add a google font.
+ */
+function omega_preprocess_html(&$variables) {
+  drupal_add_css('http://fonts.googleapis.com/css?family=Lato',array('type' => 'external'));
+}
