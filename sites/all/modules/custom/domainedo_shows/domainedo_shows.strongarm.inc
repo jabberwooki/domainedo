@@ -813,7 +813,7 @@ function domainedo_shows_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_festival_pattern';
-  $strongarm->value = 'spectacles/[node:field_festival_name]/[node:field_season]';
+  $strongarm->value = 'spectacles/[node:field_festival_name]';
   $export['pathauto_node_festival_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
