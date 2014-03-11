@@ -444,9 +444,10 @@ function domainedo_shows_form_festival_node_form_alter(&$form, &$form_state, $fo
 	// but I'm too lazy to delete and recreate the corresponding custom field group in festival content type.
 	$form['#groups']['group_technical_fiels']->weight = 1000;
 	
-	// Disables the festival_name field to prevent user to change it.
-	dsm($form);
-	$form['field_festival_name']['#disabled'] = TRUE;
+	// In edit form only, disables the festival_name field to prevent user to change it.
+	if (isset($form_state['node']->nid)) {
+		$form['field_festival_name']['#disabled'] = TRUE;
+	}
 }
 
 /**
