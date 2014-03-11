@@ -48,6 +48,7 @@ features[ctools][] = strongarm:strongarm:1
 features[ds_view_modes][] = frontpage_block
 features[ds_view_modes][] = frontpage_block_mobile
 features[ds_view_modes][] = list
+features[ds_view_modes][] = zoom
 features[features_api][] = api:2
 features[language][] = en
 features[language][] = fr
