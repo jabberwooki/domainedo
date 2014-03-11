@@ -1,8 +1,5 @@
 /* This file will hold styles for the mobile version of your website (mobile first). */
 /* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
-#boxes-box-logos_top{
-    padding : 27px 0 17px 0; 
-}
 #logos-top h1{
     float : left;
     font-size :0.8077em; /* 9/16 */
@@ -51,7 +48,21 @@
     height: 23px;
     background-position: -40px -38px;
 }
-
+/* menu contact ***************************************************************/
+#block-menu-menu-contact ul{
+    padding:0;
+    margin:0;
+}
+#block-menu-menu-contact ul li{
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+#block-menu-menu-contact ul li a{
+        color:black;
+        text-transform: uppercase;
+        font-family: lato,arial;
+    }
 
 /* media queries **************************************************************/
 @media screen and (max-width:740px){ 
@@ -60,7 +71,7 @@
         float : left;
     }
     #boxes-box-logos_top{
-        /*max-width: 50%; */ 
+        margin-top:10px; 
     }
     #logos-top h1{
         max-width : 70%;      
@@ -73,6 +84,39 @@
     }
     #logos-top h1 span{
         display:none;
+    }
+    #zone-header{
+        background: url(../images/sp/background_top_sp.gif) no-repeat 100% 0;
+    }
+    /* Menu contact***********************************************************/
+    #zone-header{
+        /*border : 1px solid red;*/
+        padding:0;
+    }
+    #region-header-second{
+        width: 43%;
+        margin:0;
+        float:right;
+    }
+    
+    #block-menu-menu-contact ul li a{
+        display:block;
+        height: 47px;
+        background: url(../images/sp/location.png) no-repeat 100% 50%;
+        text-decoration: none;
+        font-size : 1.2em;
+        text-align: right;
+        padding: 20px 45px 0 10px;
+    }
+    #block-menu-menu-contact ul li.active-trail a{
+        background: url(../images/sp/location_over.png) no-repeat 100% 50%;
+    }
+       
+}
+@media screen and (max-width:480px){ 
+    
+    #zone-header{
+        background: url(../images/sp/background_top_sp.gif) no-repeat 150% 0;
     }
        
 }
