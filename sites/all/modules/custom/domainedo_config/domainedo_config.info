@@ -10,6 +10,7 @@ dependencies[] = better_exposed_filters
 dependencies[] = comment
 dependencies[] = ctools
 dependencies[] = custom_breadcrumbs
+dependencies[] = custom_breadcrumbs_features
 dependencies[] = custom_breadcrumbs_views
 dependencies[] = date
 dependencies[] = draggableviews
