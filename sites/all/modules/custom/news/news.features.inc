@@ -33,7 +33,7 @@ function news_node_info() {
       'base' => 'node_content',
       'description' => t('News pour le domaine d\'o'),
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Titre'),
       'help' => '',
     ),
   );

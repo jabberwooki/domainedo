@@ -89,6 +89,18 @@ function news_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'zoom' => array(
+        'custom_settings' => TRUE,
+      ),
+      'frontpage_block' => array(
+        'custom_settings' => FALSE,
+      ),
+      'frontpage_block_mobile' => array(
+        'custom_settings' => FALSE,
+      ),
+      'list' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

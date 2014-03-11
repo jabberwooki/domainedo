@@ -242,6 +242,7 @@ function domainedo_shows_strongarm() {
     'frontpage_block' => 0,
     'frontpage_block_mobile' => 0,
     'list' => 0,
+    'zoom' => 0,
     'revision' => 0,
     'nodeform' => 0,
   );
@@ -252,6 +253,7 @@ function domainedo_shows_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'exclude_node_title_content_type_modes_news';
   $strongarm->value = array(
+    'zoom' => 'zoom',
     'full' => 0,
     'teaser' => 0,
     'rss' => 0,
@@ -276,6 +278,7 @@ function domainedo_shows_strongarm() {
     'frontpage_block' => 'frontpage_block',
     'frontpage_block_mobile' => 'frontpage_block_mobile',
     'list' => 'list',
+    'zoom' => 'zoom',
     'teaser' => 0,
     'rss' => 0,
     'search_index' => 0,
@@ -298,7 +301,7 @@ function domainedo_shows_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'exclude_node_title_content_type_value_news';
-  $strongarm->value = 'none';
+  $strongarm->value = 'all';
   $export['exclude_node_title_content_type_value_news'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -447,6 +450,9 @@ function domainedo_shows_strongarm() {
         'custom_settings' => TRUE,
       ),
       'frontpage_block_mobile' => array(
+        'custom_settings' => TRUE,
+      ),
+      'zoom' => array(
         'custom_settings' => TRUE,
       ),
     ),
