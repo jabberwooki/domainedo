@@ -113,7 +113,7 @@ function news_field_default_field_instances() {
         'weight' => 0,
       ),
       'zoom' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'date',
         'settings' => array(
           'format_type' => 'shows_block',
@@ -514,7 +514,7 @@ function news_field_default_field_instances() {
         'weight' => 0,
       ),
       'zoom' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'domainedo_media',
         'settings' => array(
           'link' => 1,
