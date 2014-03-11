@@ -153,17 +153,23 @@ function domainedo_contexts_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'views-zoom-block' => array(
+          'module' => 'views',
+          'delta' => 'zoom-block',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
         'views-shows-block_1' => array(
           'module' => 'views',
           'delta' => 'shows-block_1',
           'region' => 'content',
-          'weight' => '-22',
+          'weight' => '-9',
         ),
         'menu-menu-shows-menu' => array(
           'module' => 'menu',
           'delta' => 'menu-shows-menu',
           'region' => 'content',
-          'weight' => '-21',
+          'weight' => '-8',
         ),
       ),
     ),
