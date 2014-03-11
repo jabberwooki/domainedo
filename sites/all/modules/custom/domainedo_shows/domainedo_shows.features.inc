@@ -36,6 +36,65 @@ function domainedo_shows_views_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_custom_breadcrumb_features_default_settings().
+ */
+function domainedo_shows_custom_breadcrumb_features_default_settings() {
+  $custom_breadcrumbs = array();
+
+  // Exported custom breadcrumb: fiche_festival.
+  $custom_breadcrumbs['fiche_festival'] = array(
+    'name' => 'Fiche festival',
+    'titles' => 'Spectacles
+[current-page:page-title]',
+    'paths' => 'spectacles/tous-les-spectacles
+<none>',
+    'visibility_php' => '',
+    'node_type' => 'festival',
+    'language' => '',
+    'machine_name' => 'fiche_festival',
+  );
+
+  // Exported custom breadcrumb: fiche_spectacle.
+  $custom_breadcrumbs['fiche_spectacle'] = array(
+    'name' => 'Fiche spectacle',
+    'titles' => 'Spectacles
+Tous les spectacles
+[current-page:page-title]',
+    'paths' => 'spectacles/tous-les-spectacles
+spectacles/tous-les-spectacles
+<none>',
+    'visibility_php' => '',
+    'node_type' => 'show',
+    'language' => '',
+    'machine_name' => 'fiche_spectacle',
+  );
+
+  return $custom_breadcrumbs;
+}
+
+/**
+ * Implements hook_custom_breadcrumbs_views_features_default_settings().
+ */
+function domainedo_shows_custom_breadcrumbs_views_features_default_settings() {
+  $custom_breadcrumbs = array();
+
+  // Exported custom breadcrumb: liste_spectacles.
+  $custom_breadcrumbs['liste_spectacles'] = array(
+    'name' => 'Liste spectacles',
+    'titles' => 'Spectacles
+Tous les spectacles',
+    'paths' => 'spectacles/tous-les-spectacles
+<none>',
+    'visibility_php' => '',
+    'views_path' => 'spectacles/tous-les-spectacles',
+    'language' => '',
+    'machine_name' => 'liste_spectacles',
+  );
+
+  return $custom_breadcrumbs;
+}
+
+/**
  * Implements hook_features_date_format_default().
  */
 function domainedo_shows_features_date_format_default() {
