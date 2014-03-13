@@ -111,6 +111,18 @@
     #block-menu-menu-contact ul li.active-trail a{
         background: url(../images/sp/location_over.png) no-repeat 100% 50%;
     }
+    #menu-accordion{
+        border-top : 1px solid #181818;
+        border-bottom : 1px solid #181818;
+        text-align : right;
+        padding-right : 50px;
+        height : 41px;
+        font-family: lato,arial;
+        text-transform: uppercase;
+        color : #181818;
+        background: url(../images/sp/menu.png) no-repeat 100% 0%;
+        font-size : 1.5em;
+    }
        
 }
 @media screen and (max-width:480px){ 
