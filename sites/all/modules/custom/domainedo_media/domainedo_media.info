@@ -57,5 +57,6 @@ features[variable][] = scald_actions_powers
 features[variable][] = scald_atom_defaults
 features[variable][] = scald_author_vocabulary
 features[variable][] = scald_context_fallbacks
+features[variable][] = scald_custom_contexts
 features[variable][] = scald_tags_vocabulary
 project path = sites/all/modules/custom

@@ -40,6 +40,7 @@ function domainedo_media_default_scald_context_config() {
     ),
     'file' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'gallery' => array(
       '*' => 'default',
@@ -144,6 +145,7 @@ function domainedo_media_default_scald_context_config() {
     ),
     'file' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'gallery' => array(
       '*' => 'default',

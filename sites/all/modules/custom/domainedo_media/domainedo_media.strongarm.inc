@@ -57,6 +57,98 @@ function domainedo_media_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'scald_custom_contexts';
+  $strongarm->value = array(
+    'list' => array(
+      'name' => 'list',
+      'title' => 'List',
+      'description' => 'To be used in views, page display type.',
+      'render_language' => 'XHTML',
+      'parseable' => TRUE,
+      'formats' => array(),
+      'provider' => 'scald',
+      'type_format' => array(
+        'audio' => array(
+          'file_format' => '*',
+          'transcoder' => 'passthrough',
+        ),
+        'file' => array(
+          'file_format' => '*',
+          'transcoder' => 'passthrough',
+        ),
+        'gallery' => array(
+          'file_format' => '*',
+          'transcoder' => 'passthrough',
+        ),
+        'image' => array(
+          'file_format' => '*',
+          'transcoder' => 'style-medium',
+        ),
+        'twitter' => array(
+          'file_format' => '*',
+          'transcoder' => 'passthrough',
+        ),
+        'video' => array(
+          'file_format' => '*',
+          'transcoder' => 'passthrough',
+        ),
+      ),
+      'transcoder' => array(
+        'audio' => array(
+          '*' => 'passthrough',
+        ),
+        'file' => array(
+          '*' => 'passthrough',
+        ),
+        'gallery' => array(
+          '*' => 'passthrough',
+        ),
+        'image' => array(
+          '*' => 'style-medium',
+        ),
+        'twitter' => array(
+          '*' => 'passthrough',
+        ),
+        'video' => array(
+          '*' => 'passthrough',
+        ),
+      ),
+      'player' => array(
+        'audio' => array(
+          '*' => 'default',
+        ),
+        'file' => array(
+          '*' => 'default',
+        ),
+        'gallery' => array(
+          '*' => 'default',
+        ),
+        'image' => array(
+          '*' => 'default',
+          'settings' => array(),
+        ),
+        'twitter' => array(
+          '*' => 'default',
+        ),
+        'video' => array(
+          '*' => 'default',
+        ),
+      ),
+    ),
+    'block' => array(
+      'name' => 'block',
+      'title' => 'Block',
+      'description' => '',
+      'render_language' => 'XHTML',
+      'parseable' => TRUE,
+      'formats' => array(),
+    ),
+  );
+  $export['scald_custom_contexts'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'scald_tags_vocabulary';
   $strongarm->value = '3';
   $export['scald_tags_vocabulary'] = $strongarm;
