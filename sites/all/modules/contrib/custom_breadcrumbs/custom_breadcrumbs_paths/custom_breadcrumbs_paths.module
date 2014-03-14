@@ -94,15 +94,15 @@ function custom_breadcrumbs_paths_node_view($node, $build_mode) {
  */
 function custom_breadcrumbs_paths_views_pre_render(&$view) {
   // Don't really do anything with the view. This is just a pretense to insert a breadcrumb.
-  $curpath = drupal_get_normal_path($_GET['q']);
+  $curpath = drupal_get_normal_path($_GET['q']);dsm($curpath);
   // Check to see if the view path matches the current path.
   $viewpage = FALSE;
-  foreach ($view->display as $display) {
+  foreach ($view->display as $display) {dsm($display);
     // We're only interested in main page views.
-    if (!_custom_breadcrumbs_allowed_display($display)) {
+    if (!_custom_breadcrumbs_allowed_display($display)) {dsm('no');
       continue;
-    }
-    $viewpath = _custom_breadcrumbs_construct_view_path($display);
+    }else dsm('yes');
+    $viewpath = _custom_breadcrumbs_construct_view_path($display); dsm($viewpath);
     $viewpage = $viewpage || _custom_breadcrumbs_match_path($curpath, $viewpath);
   }
   if ($viewpage) {
@@ -269,7 +269,8 @@ function custom_breadcrumbs_paths_form($form, &$form_state, $type) {
   $breadcrumb = NULL;
   if (isset($bid)) {
     drupal_set_title(t('Edit Custom Breadcrumb for Path'));
-    $breadcrumb = array_pop(custom_breadcrumbs_load_breadcrumbs('custom_breadcrumbs_paths', NULL, array('bid' => $bid)));
+    $path_breadcrumbs = custom_breadcrumbs_load_breadcrumbs('custom_breadcrumbs_paths', NULL, array('bid' => $bid));
+    $breadcrumb = array_pop($path_breadcrumbs);
   }
   else {
     drupal_set_title(t('Add Custom Breadcrumb for Path'));
