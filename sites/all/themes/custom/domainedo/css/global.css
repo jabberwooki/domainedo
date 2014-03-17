@@ -10,44 +10,20 @@
 #logos-top h1 span{
     padding-left:18px;
 }
-/* Sprite *********************************************************************/
-.sprite {
-    background-image: url(../images/spritesheet.png);
-    background-repeat: no-repeat;
-    display: block;
-    float : left;
-    margin : 0 5px 0 0;
+/* menus **********************************************************************/
+.block-menu a{
+    font-family: lato,arial;
 }
-.sprite a{
-    display:block;
-    text-indent:-6000px;
-    width : 100%;
-    height: 100%;
-}
-
-.sprite-facebook {
-    width: 25px;
-    height: 23px;
-    background-position: -5px -5px;
+/* Eléments invisibles ********************************************************/
+#block-boxes-social-network h2,
+#block-search-form h2,
+.block-superfish h2{
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
 }
 
-.sprite-tripadvisor {
-    width: 25px;
-    height: 23px;
-    background-position: -5px -38px;
-}
-
-.sprite-twitter {
-    width: 25px;
-    height: 23px;
-    background-position: -40px -5px;
-}
-
-.sprite-youtube {
-    width: 25px;
-    height: 23px;
-    background-position: -40px -38px;
-}
 /* menu contact ***************************************************************/
 #block-menu-menu-contact ul{
     padding:0;
@@ -61,7 +37,6 @@
 #block-menu-menu-contact ul li a{
         color:black;
         text-transform: uppercase;
-        font-family: lato,arial;
     }
 
 /* media queries **************************************************************/
@@ -107,7 +82,6 @@
         font-size : 1.2em;
         text-align: right;
         padding: 20px 45px 0 10px;
-        font-family: lato,arial;
         font-weight : bold;
         text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
     }
@@ -121,11 +95,11 @@
         text-align : right;
         padding-right : 50px;
         height : 35px;
-        font-family: lato,arial;
         text-transform: uppercase;
         color : #181818;
         padding-top : 6px;
         font-size : 1.5em;
+        font-family: lato,arial;
     }
     .menu-off{
         background: #FFFFFF url(../images/sp/menu.png) no-repeat 100% 0%;
@@ -152,7 +126,6 @@
        display:block;
        padding :10px 0;
        border-bottom : 1px solid white;
-       font-family: lato,arial;
     }
     #region-menu div.block-menu ul li.expanded>a{
         background: url(../images/sp/arrow_menu.png) no-repeat 100% 50%;
