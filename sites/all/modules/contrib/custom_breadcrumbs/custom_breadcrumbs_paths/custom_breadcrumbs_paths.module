@@ -269,7 +269,8 @@ function custom_breadcrumbs_paths_form($form, &$form_state, $type) {
   $breadcrumb = NULL;
   if (isset($bid)) {
     drupal_set_title(t('Edit Custom Breadcrumb for Path'));
-    $breadcrumb = array_pop(custom_breadcrumbs_load_breadcrumbs('custom_breadcrumbs_paths', NULL, array('bid' => $bid)));
+    $path_breadcrumbs = custom_breadcrumbs_load_breadcrumbs('custom_breadcrumbs_paths', NULL, array('bid' => $bid));
+    $breadcrumb = array_pop($path_breadcrumbs);
   }
   else {
     drupal_set_title(t('Add Custom Breadcrumb for Path'));
