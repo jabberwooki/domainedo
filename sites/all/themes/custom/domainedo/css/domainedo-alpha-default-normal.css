@@ -211,3 +211,23 @@ ul.sf-horizontal li a > .sf-sub-indicator {
     height: 23px;
     background-position: -40px -38px;
 }
+
+/*footer ******************************************************************/
+#footer-bottom{
+    background: #f5f3f4 url(../images/icons/background_footer.png) no-repeat 56% 0;
+    padding : 10px;
+    border-bottom : 1px solid black;
+    height: 57px;
+}
+#address-bottom{
+    float : left;
+    width: 62%;
+}
+#partner-text{
+    float : left;
+    width: 25%;
+}
+#partner-images{
+    float : right;
+    width: 11%;
+}

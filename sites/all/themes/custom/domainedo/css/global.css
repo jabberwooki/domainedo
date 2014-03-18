@@ -17,7 +17,8 @@
 /* Eléments invisibles ********************************************************/
 #block-boxes-social-network h2,
 #block-search-form h2,
-.block-superfish h2{
+.block-superfish h2,
+#address-bottom h2{
     clip: rect(1px, 1px, 1px, 1px);
     height: 1px;
     overflow: hidden;
@@ -150,7 +151,7 @@
         background-color: #f5f4f4;
     }
     #footer-bottom{
-        background: url(../images/sp/background_footer_sp.png) no-repeat 0 0;
+        background: url(../images/icons/background_footer.png) no-repeat -10px 0;
         height:85px;
     }
     #address-bottom{
