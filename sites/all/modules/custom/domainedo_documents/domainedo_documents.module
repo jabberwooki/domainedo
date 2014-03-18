@@ -1,0 +1,81 @@
+<?php
+/**
+ * @file
+ * Code for the Domaine d'O Documents feature.
+ */
+
+include_once 'domainedo_documents.features.inc';
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function domainedo_documents_views_pre_render(&$view) {
+	if ($view->name == 'documents') {
+		// Breadcrumb building.
+		$current_display = $view->current_display;
+		$view_path = $view->display[$current_display]->display_options['path'];
+		
+		global $language;
+		$languages = array('language' => $language->language, 'all' => '',);
+		$custom_breadcrumbs_views = custom_breadcrumbs_load_breadcrumbs('custom_breadcrumbs_views', NULL, array('views_path' => $view_path), $languages);
+		
+		if (!empty($custom_breadcrumbs_views)) {
+			$titles = explode("\n", $custom_breadcrumbs_views[0]->titles);
+			$paths = explode("\n", $custom_breadcrumbs_views[0]->paths);
+			
+			$breadcrumb = array(l(t('Home'), '<front>'));
+			$i = 0;
+			while ($i < count($titles)) {
+				if (trim($paths[$i]) == '<none>' && isset($view->display[$current_display]->display_title)) {
+					$breadcrumb[] = $view->display[$current_display]->display_title;
+				}
+				else {
+					$breadcrumb[] = l(trim($titles[$i]), trim($paths[$i]));
+				}
+				$i++;
+			}
+			
+			drupal_set_breadcrumb($breadcrumb);
+		}
+	}
+}
+
+/**
+ * Implementations of hook_form_FORM_ID_alter().
+ */
+function domainedo_documents_form_relpub_document_node_form_alter(&$form, &$form_state, $form_id) {
+	$form['field_doc_section']['und']['#disabled'] = TRUE;
+}
+function domainedo_documents_form_press_document_node_form_alter(&$form, &$form_state, $form_id) {
+	$form['field_doc_section']['und']['#disabled'] = TRUE;
+}
+function domainedo_documents_form_tech_document_node_form_alter(&$form, &$form_state, $form_id) {
+	dsm($form['field_doc_section']);
+	$form['field_doc_section']['#disabled'] = TRUE;
+}
+
+function domainedo_documents_form_views_exposed_form_alter(&$form, &$form_state) {
+	if ($form_state['view']->name == 'documents') {
+		// Removal of 'All' value in 'Lieu' exposed filter for technical documents.
+		if ($form_state['view']->current_display == 'page_with_page_title_1') {
+			$options = $form['field_described_location_tid']['#options'];
+			unset($options['All']);
+			$form['field_described_location_tid']['#options'] = $options;
+			$form['field_described_location_tid']['#default_value'] = key($options);
+		}
+		//Removal of 'All' value in 'Catégorie' exposed filter for public documents.
+		if ($form_state['view']->current_display == 'page_with_page_title_2') {
+			$options = $form['field_relpub_document_type_value']['#options'];
+			unset($options['All']);
+			$form['field_relpub_document_type_value']['#options'] =  $options;
+			$form['field_relpub_document_type_value']['#default_value'] = key($options);
+		}
+		// Removal of 'All' value in 'Catégorie' exposed filter for press documents.
+		if ($form_state['view']->current_display == 'page_with_page_title_3') {
+			$options = $form['field_press_document_type_value']['#options'];
+			unset($options['All']);
+			$form['field_press_document_type_value']['#options'] =  $options;
+			$form['field_press_document_type_value']['#default_value'] = key($options);
+		}
+	}
+}

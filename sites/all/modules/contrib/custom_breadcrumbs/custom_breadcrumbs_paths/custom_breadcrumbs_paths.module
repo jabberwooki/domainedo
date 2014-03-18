@@ -94,15 +94,15 @@ function custom_breadcrumbs_paths_node_view($node, $build_mode) {
  */
 function custom_breadcrumbs_paths_views_pre_render(&$view) {
   // Don't really do anything with the view. This is just a pretense to insert a breadcrumb.
-  $curpath = drupal_get_normal_path($_GET['q']);dsm($curpath);
+  $curpath = drupal_get_normal_path($_GET['q']);
   // Check to see if the view path matches the current path.
   $viewpage = FALSE;
-  foreach ($view->display as $display) {dsm($display);
+  foreach ($view->display as $display) {
     // We're only interested in main page views.
-    if (!_custom_breadcrumbs_allowed_display($display)) {dsm('no');
+    if (!_custom_breadcrumbs_allowed_display($display)) {
       continue;
-    }else dsm('yes');
-    $viewpath = _custom_breadcrumbs_construct_view_path($display); dsm($viewpath);
+    }
+    $viewpath = _custom_breadcrumbs_construct_view_path($display);
     $viewpage = $viewpage || _custom_breadcrumbs_match_path($curpath, $viewpath);
   }
   if ($viewpage) {
