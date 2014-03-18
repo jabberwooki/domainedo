@@ -145,6 +145,88 @@
     #block-menu-menu-bottom-courtesy{
         background-color :#4d4d4d;
     }
+    /*footer ******************************************************************/
+    .zone-footer-wrapper{
+        background-color: #f5f4f4;
+    }
+    #footer-bottom{
+        background: url(../images/sp/background_footer_sp.png) no-repeat 0 0;
+        height:85px;
+    }
+    #address-bottom{
+        display:none;
+    }
+    #partner-bottom{
+        padding-left :100px;
+    }
+    #partner-text{
+        font-size : 0.6em;
+        max-width: 48%;
+        float : left;
+        padding-top: 15px
+    }
+    #partner-images{
+        max-width: 44%;
+        float : right;
+        margin: 5px 0 0 15px;
+    }
+    #partner-images img{
+        max-width: 45%;
+        margin-left : 1px;
+    }
+   
+    
+    /* sprite *****************************************************************/
+      .ul-sprite{
+        width: 100%;
+        border:1px solid black;
+        height : 48px;
+        margin:0;
+        padding:0;
+        background-color: #ebeaea;
+   }
+   .sprite {
+        background: #ebeaea url(../images/sp/social_sp.png);
+        background-repeat: no-repeat;
+        display: block;
+        float : left;
+        margin : 0;
+        padding:0;
+        height : 48px;
+        width:24%;
+        border-right:1px solid black;
+    }
+    .sprite a{
+        display:block;
+        text-indent:-6000px;
+        width : 100%;
+        height: 100%;
+    }
+    .sprite-facebook {
+        background-position: 50% 0;
+      }
+      .sprite-facebook:hover {
+        background-position: 50% -48px;
+      }
+      .sprite-youtube {
+          background-position: 50% -96px;
+      }
+      .sprite-youtube:hover {
+          background-position: 50% -144px;
+      }
+      .sprite-twitter {
+          background-position: 50% -192px;
+      }
+      .sprite-twitter:hover {
+          background-position: 50% -240px;
+      }
+      .sprite-tripadvisor{
+          background-position: 50% -288px;
+          border-right:0;
+      }
+      .sprite-tripadvisor:hover {
+          background-position: 50% -332px;
+      }
     
        
 }

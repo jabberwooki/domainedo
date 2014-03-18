@@ -32,17 +32,25 @@
     margin:0;
 }
 ul#superfish-1 li.sf-depth-1>a{
-   width : 195px;
+   width : 192px;
    text-align: center;
    height : 45px;
    border-bottom : 3px solid #ff6701;
    color : #292929;
-   background: transparent url(../images/icons/separator_menu_1.png) no-repeat 100% 50%;
-   
+   background: transparent url(../images/icons/separator_menu_1.png) no-repeat 100% 50%; 
+}
+
+ul#superfish-1 li.sf-depth-1.first>a:hover{
+   border-bottom : 0;
 }
 ul#superfish-1 li.sf-depth-1.last>a{
    background-image: none;
    border-bottom : 3px solid #feca29;
+}
+ul#superfish-1 li.sf-depth-1>a.active,
+ul#superfish-1 li.sf-depth-1>a:hover,
+ul#superfish-1 li.sf-depth-1>a.last:hover{
+   border-bottom : 3px solid #C10000;
 }
 ul#superfish-2{
    border : 1px solid #000000;
@@ -51,22 +59,43 @@ ul#superfish-2{
    background-color : #ebe9ea;
 }
 ul#superfish-2 li.sf-depth-1 a{
-   width : 149px;
+   width : 153px;
    text-align: center;
    height : 47px;
 }
 ul#superfish-2 li.sf-depth-1.first>a{
    border-right:1px solid #000000;
 }
-ul#superfish-1 li.first a{
+ul#superfish-2 li.sf-depth-1.last>a{
+   background: url(../images/icons/ticket_menu.png) no-repeat 95% 18px; 
+}
+ul#superfish-2 li.sf-depth-1>a:hover,
+ul#superfish-2 li.sf-depth-1>a.active{
+   border-radius : 8px 8px 8px 8px;
+   height : 49px;
+   color : white;
+   background-color: #C10000 ; 
+}
+ul#superfish-1 li.first>a{
     background: url(../images/wide/home.png) no-repeat 0 0; 
     text-indent : -3000px;
-    width : 48px;
+    width : 50px;
     height: 48px;
     border-bottom : 0;
+    
 }
-ul#superfish-1 li.first a:hover{
+ul#superfish-1 li.first a:hover,
+ul#superfish-1 li.first a.active{
     background: url(../images/wide/home.png) no-repeat 0 100%; 
+    border-bottom : 0;
+}
+a > .sf-sub-indicator {
+    top: 1.2em;
+}
+ul.sf-horizontal li a > .sf-sub-indicator {
+    background: url(../images/icons/arrow_menu_bottom.png) no-repeat 0 0; 
+    height : 12px;
+    width: 12px;
 }
 
 /* Menu déroulant superfish niveau 2 ******************************************/
@@ -144,6 +173,7 @@ ul#superfish-1 li.first a:hover{
     background: url(../images/icons/search_submit.gif) no-repeat 0 100%;
 }
 /* Sprite *********************************************************************/
+
 .sprite {
     background-image: url(../images/spritesheet.png);
     background-repeat: no-repeat;
