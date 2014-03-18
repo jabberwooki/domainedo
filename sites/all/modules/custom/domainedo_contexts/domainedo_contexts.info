@@ -20,6 +20,7 @@ features[context][] = all
 features[context][] = desktop-all
 features[context][] = front
 features[context][] = mobile-all
+features[context][] = mobile-front
 features[context][] = not-front
 features[ctools][] = boxes:box:1
 features[ctools][] = context:context:3

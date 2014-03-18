@@ -84,17 +84,17 @@ function domainedo_contexts_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'system-main-menu' => array(
-          'module' => 'system',
-          'delta' => 'main-menu',
+        'superfish-1' => array(
+          'module' => 'superfish',
+          'delta' => '1',
           'region' => 'menu',
-          'weight' => '-10',
+          'weight' => '-8',
         ),
-        'menu-menu-practicle-menu' => array(
-          'module' => 'menu',
-          'delta' => 'menu-practicle-menu',
+        'superfish-2' => array(
+          'module' => 'superfish',
+          'delta' => '2',
           'region' => 'menu',
-          'weight' => '-9',
+          'weight' => '-7',
         ),
         'menu-menu-top-courtesy-nav' => array(
           'module' => 'menu',
@@ -237,6 +237,43 @@ function domainedo_contexts_context_default_contexts() {
   // Included for use with string extractors like potx.
   t('mobile layout');
   $export['mobile-all'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'mobile-front';
+  $context->description = '';
+  $context->tag = 'mobile layout';
+  $context->conditions = array(
+    'cmd' => array(
+      'values' => array(
+        1 => 1,
+      ),
+    ),
+    'path' => array(
+      'values' => array(
+        '<front>' => '<front>',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-shows-block_2' => array(
+          'module' => 'views',
+          'delta' => 'shows-block_2',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 1;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('mobile layout');
+  $export['mobile-front'] = $context;
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
