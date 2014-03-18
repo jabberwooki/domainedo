@@ -27,7 +27,7 @@ function domainedo_shows_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 1,
     'expanded' => 1,
-    'weight' => 0,
+    'weight' => -49,
     'customized' => 1,
   );
   // Exported menu link: menu-shows-menu_calendrier:calendrier
