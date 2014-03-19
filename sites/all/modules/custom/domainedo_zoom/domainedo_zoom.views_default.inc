@@ -155,7 +155,7 @@ function domainedo_zoom_views_default_views() {
     'multiple_to' => '',
   );
   $handler->display->display_options['fields']['field_show_dates']['delta_offset'] = '0';
-  /* Champ: Contenu: Image */
+  /* Champ: Champ: Image */
   $handler->display->display_options['fields']['field_scald_image']['id'] = 'field_scald_image';
   $handler->display->display_options['fields']['field_scald_image']['table'] = 'field_data_field_scald_image';
   $handler->display->display_options['fields']['field_scald_image']['field'] = 'field_scald_image';
