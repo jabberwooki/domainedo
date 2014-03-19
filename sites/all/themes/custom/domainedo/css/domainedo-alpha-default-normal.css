@@ -4,7 +4,9 @@
 #boxes-box-logos_top{
     padding : 27px 0 17px 0; 
 }
-
+#section-content{
+    margin-top:36px;
+}
 /* This file will hold styles that are loaded using the same media query as the wide grid. */
 
 #zone-header{
@@ -139,6 +141,30 @@ ul.sf-horizontal li a > .sf-sub-indicator {
     display : block;
     padding : 0 7px;
 }
+#block-menu-menu-top-courtesy-nav ul li.last a{
+    padding : 0 0 0 7px;
+    margin-right:-7px;
+}
+/* menu bas *******************************************************************/
+#region-footer-second ul{
+  text-align: center;  
+}
+#region-footer-second ul li{
+    list-style: none;
+    text-decoration: none;
+    display : inline;
+}
+
+#region-footer-second ul li a{
+    text-decoration: none;
+    color : #282828;
+    text-transform: uppercase;
+    padding : 0 8px;
+    border-right : 1px solid #282828;
+}
+#region-footer-second ul li.last a{
+   border-right :0;
+}
 /* Réseaux sociaux ************************************************************/
 #block-boxes-social-network{
     clear :left;
@@ -217,7 +243,8 @@ ul.sf-horizontal li a > .sf-sub-indicator {
     background: #f5f3f4 url(../images/icons/background_footer.png) no-repeat 56% 0;
     padding : 10px;
     border-bottom : 1px solid black;
-    height: 57px;
+    height: 56px;
+    margin:0;
 }
 #address-bottom{
     float : left;
@@ -230,4 +257,21 @@ ul.sf-horizontal li a > .sf-sub-indicator {
 #partner-images{
     float : right;
     width: 11%;
+}
+#partner-images img{
+    margin-left:3px;
+}
+
+/* Page d'accueil *************************************************************/
+#block-views-zoom-block h2{
+    background: url(../images/icons/arrow_orange_yellow.png) no-repeat 0 0;
+    height:34px;
+    border-bottom : 1px solid black;
+    font-family: Lato,arial;
+    text-transform: uppercase;
+    width: 320px;
+    text-align: right;
+    padding-top:13px;
+    font-weight: bold;
+    font-size :1.8em;
 }
