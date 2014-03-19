@@ -37,14 +37,5 @@ function domainedo_config_ds_view_modes_info() {
   );
   $export['list'] = $ds_view_mode;
 
-  $ds_view_mode = new stdClass();
-  $ds_view_mode->api_version = 1;
-  $ds_view_mode->view_mode = 'zoom';
-  $ds_view_mode->label = 'Zoom';
-  $ds_view_mode->entities = array(
-    'node' => 'node',
-  );
-  $export['zoom'] = $ds_view_mode;
-
   return $export;
 }
