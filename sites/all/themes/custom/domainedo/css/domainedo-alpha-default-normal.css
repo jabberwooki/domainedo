@@ -275,3 +275,21 @@ ul.sf-horizontal li a > .sf-sub-indicator {
     font-weight: bold;
     font-size :1.8em;
 }
+#block-views-zoom-block{
+    width : 320px;
+    float : left;
+}
+#block-views-shows-block-1{
+    width : 566px;
+    height: 400px;
+    background: url(../images/wide/background_home_slideshow.png) no-repeat 0 0;
+    padding:28px 26px;
+    float:left;
+}
+#block-views-shows-block-1 .views-row{
+    width : 150px;
+    height: 150px;
+    overflow: hidden;
+    border : 1px solid red;
+    float : left;
+}
