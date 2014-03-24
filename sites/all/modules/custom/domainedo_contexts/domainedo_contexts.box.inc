@@ -29,9 +29,9 @@ Tél. : 0800 200 165</p>
 </div>
 
 <div id="partner-bottom">
-<p>Le domaine d\'O est soutenu par le Conseil général de l\'Hérault et Montpellier Agglomération</p>
+<p id="partner-text">Le domaine d\'O est soutenu par le Conseil général de l\'Hérault et Montpellier Agglomération</p>
 
-<p><a href="http://www.herault.fr" style="line-height: 1.6;" target="_blank"><img alt="Département de l\'Hérault" id="img-logo-34-bottom" src="/sites/all/themes/custom/domainedo/images/logos/cg34-bas.gif" /></a><img alt="Montpellier Agglomération" id="img-logo-agglo-bottom" src="/sites/all/themes/custom/domainedo/images/logos/agglo-montpellier-bas.gif" style="height:61px; width:47px" />&nbsp;</p>
+<p id="partner-images"><a href="http://www.herault.fr" style="line-height: 1.6;" target="_blank"><img alt="Département de l\'Hérault" id="img-logo-34-bottom" src="/sites/all/themes/custom/domainedo/images/logos/cg34-bas.gif" /></a><img alt="Montpellier Agglomération" id="img-logo-agglo-bottom" src="/sites/all/themes/custom/domainedo/images/logos/agglo-montpellier-bas.gif" style="height:61px; width:47px" />&nbsp;</p>
 </div>
 </div>
 ',
