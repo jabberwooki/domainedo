@@ -78,7 +78,7 @@ ul#superfish-2 li.sf-depth-1 > a.active{
    color : white;
    background-color: #C10000 ; 
 }
-ul#superfish-1 li.first > a{
+ul#superfish-1 > li.first > a{
     background: url(../images/wide/home.png) no-repeat 0 0; 
     text-indent : -3000px;
     width : 50px;
@@ -86,7 +86,7 @@ ul#superfish-1 li.first > a{
     border-bottom : 0;
     
 }
-ul#superfish-1 li.first a:hover,
+ul#superfish-1 > li.first > a:hover,
 ul#superfish-1 li.first a.active{
     background: url(../images/wide/home.png) no-repeat 0 100%; 
     border-bottom : 0;
@@ -101,10 +101,14 @@ ul.sf-horizontal li a > .sf-sub-indicator {
 }
 
 /* Menu déroulant superfish niveau 2 ******************************************/
-#superfish-1 > li > ul,
-#superfish-2 > li > ul{
+.sf-horizontal > li > ul{
     margin-top:16px;
 }
+.sf-horizontal > li > ul li a{
+    display : block;
+    padding : 10px;
+}
+
 
 /* menu contact ***************************************************************/
 #block-menu-menu-contact{
