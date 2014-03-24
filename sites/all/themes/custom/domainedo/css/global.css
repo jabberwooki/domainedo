@@ -18,6 +18,8 @@
 #block-boxes-social-network h2,
 #block-search-form h2,
 .block-superfish h2,
+#block-menu-menu-top-courtesy-nav h2,
+#block-menu-menu-contact h2,
 #address-bottom h2{
     clip: rect(1px, 1px, 1px, 1px);
     height: 1px;
