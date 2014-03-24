@@ -30,10 +30,10 @@
    display:table-cell;
    vertical-align: middle;
 }
-.block-superfish ul.menu>li.sf-depth-1{
+.block-superfish ul.menu > li.sf-depth-1{
     margin:0;
 }
-ul#superfish-1 li.sf-depth-1>a{
+ul#superfish-1 li.sf-depth-1 > a{
    width : 192px;
    text-align: center;
    height : 45px;
@@ -42,16 +42,16 @@ ul#superfish-1 li.sf-depth-1>a{
    background: transparent url(../images/icons/separator_menu_1.png) no-repeat 100% 50%; 
 }
 
-ul#superfish-1 li.sf-depth-1.first>a:hover{
+ul#superfish-1 li.sf-depth-1.first > a:hover{
    border-bottom : 0;
 }
-ul#superfish-1 li.sf-depth-1.last>a{
+ul#superfish-1 li.sf-depth-1.last > a{
    background-image: none;
    border-bottom : 3px solid #feca29;
 }
-ul#superfish-1 li.sf-depth-1>a.active,
-ul#superfish-1 li.sf-depth-1>a:hover,
-ul#superfish-1 li.sf-depth-1>a.last:hover{
+ul#superfish-1 li.sf-depth-1 > a.active,
+ul#superfish-1 li.sf-depth-1 > a:hover,
+ul#superfish-1 li.sf-depth-1 > a.last:hover{
    border-bottom : 3px solid #C10000;
 }
 ul#superfish-2{
@@ -65,20 +65,20 @@ ul#superfish-2 li.sf-depth-1 a{
    text-align: center;
    height : 47px;
 }
-ul#superfish-2 li.sf-depth-1.first>a{
+ul#superfish-2 li.sf-depth-1.first > a{
    border-right:1px solid #000000;
 }
-ul#superfish-2 li.sf-depth-1.last>a{
+ul#superfish-2 li.sf-depth-1.last > a{
    background: url(../images/icons/ticket_menu.png) no-repeat 95% 18px; 
 }
-ul#superfish-2 li.sf-depth-1>a:hover,
-ul#superfish-2 li.sf-depth-1>a.active{
+ul#superfish-2 li.sf-depth-1 > a:hover,
+ul#superfish-2 li.sf-depth-1 > a.active{
    border-radius : 8px 8px 8px 8px;
    height : 49px;
    color : white;
    background-color: #C10000 ; 
 }
-ul#superfish-1 li.first>a{
+ul#superfish-1 li.first > a{
     background: url(../images/wide/home.png) no-repeat 0 0; 
     text-indent : -3000px;
     width : 50px;
@@ -101,8 +101,8 @@ ul.sf-horizontal li a > .sf-sub-indicator {
 }
 
 /* Menu déroulant superfish niveau 2 ******************************************/
-#superfish-1>li>ul,
-#superfish-2>li>ul{
+#superfish-1 > li > ul,
+#superfish-2 > li > ul{
     margin-top:16px;
 }
 
@@ -186,7 +186,7 @@ ul.sf-horizontal li a > .sf-sub-indicator {
     width : 146px
 }
 
-#block-search-form #edit-submit{
+#block-search-form .form-submit{
     width : 28px;
     text-indent: -6000px;
     height : 25px;
