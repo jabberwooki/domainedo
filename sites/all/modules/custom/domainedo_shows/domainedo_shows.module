@@ -17,10 +17,29 @@ function domainedo_shows_form_show_node_form_alter(&$form, &$form_state, $form_i
 /**
  * Implements hook_node_view_alter().
  */
-function domainedo_shows_node_view_alter(&$build) {
+function domainedo_shows_node_view_alter(&$build) {dpm($build);
 	// If show node
 	if ($build['#bundle'] == 'show') {
-		// Processing of info "Annulation".
+		// Manage display of fields depending on Reservation value : prochainement=1, url billetterie=2, complet=3, annulé=4)
+		$field_reservation_value = $build['field_reservation']['#items'][0]['value'];
+		$dependent_fields = array(
+			'1' => 'field_coming_soon',
+			'2' => 'field_boxoffice_url',
+			'3' => 'field_full',
+			'4' => 'field_reimbursement',
+		);
+		foreach ($dependent_fields as $key=>$field_name) {
+			if ($key != $field_reservation_value) {
+				unset($build[$field_name]);
+			}
+		}
+		
+		// Manage display of link Distribution
+		if (!isset($build['field_casting'])) {
+			unset($build['field_casting_link']);
+		}
+		
+		// Processing of field Reservation when its value is 'annulé'.
 		if (isset($build['field_reservation']) && $build['field_reservation']['#items'][0]['value'] == 4) {
 			$start_tag = '';
 			$end_tag = '';
