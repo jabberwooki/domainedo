@@ -34,7 +34,6 @@ features[box][] = left_shows_info
 features[box][] = right_shows_infos
 features[cer][] = node*show*field_by*node*structure*field_structure_shows
 features[cer][] = node*show*field_festival*node*festival*field_festival_shows
-features[conditional_fields][] = node:show
 features[context][] = desktop-shows
 features[ctools][] = boxes:box:1
 features[ctools][] = cer:default_cer_presets:1
