@@ -10,7 +10,6 @@ dependencies[] = better_exposed_filters
 dependencies[] = boxes
 dependencies[] = calendar
 dependencies[] = comment
-dependencies[] = conditional_fields
 dependencies[] = ctools
 dependencies[] = custom_breadcrumbs
 dependencies[] = custom_breadcrumbs_features
