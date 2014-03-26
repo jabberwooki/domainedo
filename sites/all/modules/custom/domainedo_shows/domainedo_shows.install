@@ -1,0 +1,8 @@
+<?php
+/**
+ * Contrib module Conditional Fields has become useless.
+ */
+function domainedo_shows_update_7001() {
+	module_disable(array('conditional_fields'));
+	drupal_uninstall_modules(array('conditional_fields'));
+}
