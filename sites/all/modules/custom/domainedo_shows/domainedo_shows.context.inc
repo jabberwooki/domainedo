@@ -36,7 +36,7 @@ function domainedo_shows_context_default_contexts() {
           'module' => 'menu_block',
           'delta' => 'domainedo-shows-tab-menu',
           'region' => 'preface_first',
-          'weight' => '-10',
+          'weight' => '0',
         ),
       ),
     ),
