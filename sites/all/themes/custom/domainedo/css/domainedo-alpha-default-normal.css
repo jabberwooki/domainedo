@@ -284,17 +284,80 @@ ul.sf-horizontal li a > .sf-sub-indicator {
     float : left;
 }
 #block-views-shows-block-1{
-    width : 539px;
-    height: 400px;
+    width : 549px;
+    height: 327px;
     background: url(../images/wide/background_home_slideshow.png) no-repeat 0 0;
-    padding:28px 26px;
+    padding:28px 16px 28px 26px;
     float:left;
     margin-left : 27px;
+    overflow: hidden;
+    
+}
+#block-views-shows-block-1 .block-inner{
+    width : 5000px;
+}
+div.group6{
+    float:left;
+    width : 480px;
 }
 #block-views-shows-block-1 .views-row{
     width : 150px;
     height: 150px;
     overflow: hidden;
-    border : 1px solid red;
     float : left;
+    margin-right:10px;
+    position : relative;
+    margin-bottom:25px;
+}
+#block-views-shows-block-1 .views-row img{
+    border-radius : 4px;
+}
+#block-views-shows-block-1 .views-row div.group-td{
+    position:absolute;
+    bottom:0;
+    left : 0;
+    background-color: #EBEAEA;
+    opacity:0.8;
+}
+#block-views-shows-block-1 .views-row div.group-td h3{
+    margin : 0;
+}
+#block-views-shows-block-1 .views-row div.group-td h3 a{
+    margin : 0;
+    padding:5px 10px;
+    text-decoration: none;
+    color : #000000;
+    display:block;
+    font-family: lato,arial;
+    line-height:1em;
+    font-size : 0.8em;
+}
+#block-views-shows-block-1 .views-row div.group-td h3 a:hover,
+#block-menu-menu-shows-menu ul > li > a:hover{
+    color : #C10000;
+}
+#block-views-shows-block-1 .views-row div.group-td .field-type-date{
+    padding:0 10px;
+}
+#block-menu-menu-shows-menu ul,#block-menu-menu-shows-menu ul li{
+    list-style: none;
+    float : left;
+    
+}
+#block-menu-menu-shows-menu ul{
+    margin : -18px 0 0 60px;
+}
+#block-menu-menu-shows-menu ul > li > a{
+    color : #000000;
+    text-decoration: none;
+    height:18px;
+    display : block;
+}
+#block-menu-menu-shows-menu ul > li.first > a{
+    padding-right: 25px;
+    background: url(../images/icons/all_shows.png) no-repeat 100% 4px;
+}
+#block-menu-menu-shows-menu ul > li.last > a{
+    padding-right: 25px;
+    background: url(../images/icons/calendar-small.png) no-repeat 100% 0px;
 }
