@@ -3249,10 +3249,8 @@ function domainedo_shows_field_default_field_instances() {
       'frontpage_block' => array(
         'label' => 'hidden',
         'module' => 'domainedo_media',
-        'settings' => array(
-          'link' => 1,
-        ),
-        'type' => 'block',
+        'settings' => array(),
+        'type' => 'slideshow_home',
         'weight' => 10,
       ),
       'frontpage_block_mobile' => array(
