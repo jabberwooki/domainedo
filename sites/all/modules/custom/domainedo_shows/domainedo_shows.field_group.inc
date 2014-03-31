@@ -78,6 +78,38 @@ function domainedo_shows_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_td|node|show|frontpage_block';
+  $field_group->group_name = 'group_td';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'show';
+  $field_group->mode = 'frontpage_block';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Titre et dates',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_show_dates',
+      1 => 'title',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Titre et dates',
+      'instance_settings' => array(
+        'classes' => 'group-td field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_td|node|show|frontpage_block'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_technical_fiels|node|festival|form';
   $field_group->group_name = 'group_technical_fiels';
   $field_group->entity_type = 'node';
@@ -145,7 +177,7 @@ function domainedo_shows_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Vignette et statut réservation',
-    'weight' => '28',
+    'weight' => '1',
     'children' => array(
       0 => 'field_reservation',
       1 => 'field_thumbnail',

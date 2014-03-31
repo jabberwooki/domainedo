@@ -822,7 +822,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 11,
       ),
       'frontpage_block_mobile' => array(
         'label' => 'hidden',
@@ -907,7 +907,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 17,
       ),
       'frontpage_block_mobile' => array(
         'label' => 'above',
@@ -982,7 +982,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 14,
       ),
       'frontpage_block_mobile' => array(
         'label' => 'above',
@@ -1053,7 +1053,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 32,
       ),
       'frontpage_block_mobile' => array(
         'label' => 'inline',
@@ -1140,7 +1140,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 20,
       ),
       'frontpage_block_mobile' => array(
         'label' => 'inline',
@@ -1214,7 +1214,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 15,
       ),
       'frontpage_block_mobile' => array(
         'label' => 'above',
@@ -1290,7 +1290,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 16,
       ),
       'frontpage_block_mobile' => array(
         'label' => 'above',
@@ -1361,7 +1361,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 34,
       ),
       'frontpage_block_mobile' => array(
         'label' => 'above',
@@ -1436,7 +1436,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 18,
       ),
       'frontpage_block_mobile' => array(
         'label' => 'above',
@@ -1507,7 +1507,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 31,
       ),
       'frontpage_block_mobile' => array(
         'label' => 'above',
@@ -1578,7 +1578,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 24,
       ),
       'frontpage_block_mobile' => array(
         'label' => 'inline',
@@ -1649,7 +1649,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 36,
       ),
       'frontpage_block_mobile' => array(
         'label' => 'inline',
@@ -1719,7 +1719,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 22,
       ),
       'frontpage_block_mobile' => array(
         'label' => 'inline',
@@ -1794,7 +1794,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 13,
       ),
       'frontpage_block_mobile' => array(
         'label' => 'above',
@@ -1865,7 +1865,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 33,
       ),
       'frontpage_block_mobile' => array(
         'label' => 'above',
@@ -1936,7 +1936,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 23,
       ),
       'frontpage_block_mobile' => array(
         'label' => 'above',
@@ -2009,7 +2009,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 25,
       ),
       'frontpage_block_mobile' => array(
         'label' => 'inline',
@@ -2090,7 +2090,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 10,
       ),
       'frontpage_block_mobile' => array(
         'label' => 'above',
@@ -2161,7 +2161,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 26,
       ),
       'frontpage_block_mobile' => array(
         'label' => 'inline',
@@ -2232,7 +2232,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 30,
       ),
       'frontpage_block_mobile' => array(
         'label' => 'above',
@@ -2307,7 +2307,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 28,
       ),
       'frontpage_block_mobile' => array(
         'label' => 'hidden',
@@ -2378,7 +2378,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 21,
       ),
       'frontpage_block_mobile' => array(
         'label' => 'inline',
@@ -2452,7 +2452,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 20,
+        'weight' => 35,
       ),
       'frontpage_block_mobile' => array(
         'label' => 'above',
@@ -2596,7 +2596,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 37,
       ),
       'frontpage_block_mobile' => array(
         'label' => 'hidden',
@@ -2676,7 +2676,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 27,
       ),
       'frontpage_block_mobile' => array(
         'label' => 'hidden',
@@ -2759,7 +2759,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 24,
+        'weight' => 39,
       ),
       'frontpage_block_mobile' => array(
         'label' => 'hidden',
@@ -2837,7 +2837,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 23,
+        'weight' => 38,
       ),
       'frontpage_block_mobile' => array(
         'label' => 'hidden',
@@ -2927,7 +2927,7 @@ function domainedo_shows_field_default_field_instances() {
           'multiple_to' => '',
         ),
         'type' => 'date_default',
-        'weight' => 8,
+        'weight' => 2,
       ),
       'frontpage_block_mobile' => array(
         'label' => 'hidden',
@@ -3033,7 +3033,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 25,
+        'weight' => 40,
       ),
       'frontpage_block_mobile' => array(
         'label' => 'hidden',
@@ -3105,7 +3105,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 9,
       ),
       'frontpage_block_mobile' => array(
         'label' => 'above',
@@ -3176,7 +3176,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 1,
+        'weight' => 19,
       ),
       'frontpage_block_mobile' => array(
         'label' => 'above',
@@ -3336,7 +3336,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 12,
       ),
       'frontpage_block_mobile' => array(
         'label' => 'above',
@@ -3411,7 +3411,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 29,
       ),
       'frontpage_block_mobile' => array(
         'label' => 'hidden',

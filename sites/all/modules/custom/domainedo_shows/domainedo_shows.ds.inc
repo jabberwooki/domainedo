@@ -18,7 +18,7 @@ function domainedo_shows_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'frontpage_block';
   $ds_fieldsetting->settings = array(
     'title' => array(
-      'weight' => '0',
+      'weight' => '1',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -180,19 +180,21 @@ function domainedo_shows_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'title',
-        1 => 'field_show_dates',
-        2 => 'field_thumbnail',
-        3 => 'field_reservation',
-        4 => 'group_vsr',
+        0 => 'group_td',
+        1 => 'group_vsr',
+        2 => 'title',
+        3 => 'field_show_dates',
+        4 => 'field_thumbnail',
+        5 => 'field_reservation',
       ),
     ),
     'fields' => array(
+      'group_td' => 'ds_content',
+      'group_vsr' => 'ds_content',
       'title' => 'ds_content',
       'field_show_dates' => 'ds_content',
       'field_thumbnail' => 'ds_content',
       'field_reservation' => 'ds_content',
-      'group_vsr' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
