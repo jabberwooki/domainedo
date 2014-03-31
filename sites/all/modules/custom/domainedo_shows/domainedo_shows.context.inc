@@ -32,11 +32,11 @@ function domainedo_shows_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'menu_block-1' => array(
+        'menu_block-domainedo-shows-tab-menu' => array(
           'module' => 'menu_block',
-          'delta' => '1',
+          'delta' => 'domainedo-shows-tab-menu',
           'region' => 'preface_first',
-          'weight' => '-5',
+          'weight' => '0',
         ),
       ),
     ),
