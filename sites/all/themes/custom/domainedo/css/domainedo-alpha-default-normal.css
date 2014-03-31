@@ -284,11 +284,12 @@ ul.sf-horizontal li a > .sf-sub-indicator {
     float : left;
 }
 #block-views-shows-block-1{
-    width : 566px;
+    width : 539px;
     height: 400px;
     background: url(../images/wide/background_home_slideshow.png) no-repeat 0 0;
     padding:28px 26px;
     float:left;
+    margin-left : 27px;
 }
 #block-views-shows-block-1 .views-row{
     width : 150px;

@@ -20,6 +20,8 @@
 .block-superfish h2,
 #block-menu-menu-top-courtesy-nav h2,
 #block-menu-menu-contact h2,
+#block-views-shows-block-1 h2,
+#block-menu-menu-shows-menu h2,
 #address-bottom h2{
     clip: rect(1px, 1px, 1px, 1px);
     height: 1px;
