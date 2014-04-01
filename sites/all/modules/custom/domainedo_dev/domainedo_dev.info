@@ -6,6 +6,7 @@ project = domainedo_dev
 dependencies[] = context_ui
 dependencies[] = ctools
 dependencies[] = devel
+dependencies[] = diff
 dependencies[] = ds_ui
 dependencies[] = features
 dependencies[] = masquerade
