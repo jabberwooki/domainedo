@@ -93,7 +93,10 @@ function domainedo_media_field_formatter_view($entity_type, $entity, $field, $in
 			$sid = $item['sid'];
 			//////// modified part /////////
 			$markup = scald_render($sid, $render_context);
-			$linkable = $display['settings']['link'];
+			$linkable = FALSE;
+			if (isset($display['settings']['link'])) {
+				$linkable = $display['settings']['link'];
+			}
 			if (in_array($render_context, array('list','block')) && $linkable) {
 				$node_path = '/' . drupal_get_path_alias('node/' . $entity->nid);
 				$markup = '<a href="' . $node_path . '">' . $markup . '</a>';
