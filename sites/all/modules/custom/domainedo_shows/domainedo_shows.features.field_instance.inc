@@ -1419,7 +1419,8 @@ function domainedo_shows_field_default_field_instances() {
     'bundle' => 'show',
     'default_value' => array(
       0 => array(
-        'value' => '<a href="#comments">Commentaires</a>',
+        'value' => '<a href="#block-disqus-disqus-comments">Commentaires</a>',
+        'format' => 'full_html',
       ),
     ),
     'deleted' => 0,
