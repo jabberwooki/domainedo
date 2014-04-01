@@ -18,11 +18,9 @@ var base_url="";
   // Objet diaporama
   function Diaporama(){
       this.nb_diapo = $("div.group6").length;
-      console.log ("nb diapos : "+this.nb_diapo);
       this.largeur = diaporama_visible_width;
       this.hauteur = diaporama_height;
       this.largeur_cachee = this.nb_diapo*this.largeur+20; // 20 : marge pour le cas où l'on placerait un contour aux diapos
-      console.log ("largeur cachée : "+this.largeur_cachee);
       this.position_left = 0;
       this.selected_controler = 0;
       this.previous = '<div id="previous_diapo"><</div>';
@@ -65,10 +63,8 @@ var base_url="";
       
       // dimensionnement initial du diaporama et de ses éléments
       (function(){
-          console.log("dimensionnement du diaporama et de ses éléments");
             // dimmensionner le diapo
             $(id_du_diapo).width(thediapo.largeur);
-            console.log ("largeur visible du diapo : "+thediapo.largeur+' px');
             $(conteneur_long).height(thediapo.hauteur);
 
             //dimmensionner le conteneur de toutes les diapos
@@ -100,8 +96,6 @@ var base_url="";
           $("#controler_"+id_ncs).addClass("selected_controler");
           $("#controler_"+thediapo.selected_controler).removeClass("selected_controler");
           thediapo.selected_controler ++;
-          console.log("controleur selectionné : "+thediapo.selected_controler);
-          console.log("nbdiapo : "+thediapo.nb_diapo);
           // dimmensionner les boutons suivants et précédents
             (thediapo.selected_controler == (thediapo.nb_diapo-1)) ? $("#next_diapo").width(1) : $("#next_diapo").width(54);
             $("#previous_diapo").width(50);
@@ -121,7 +115,6 @@ var base_url="";
               $("#previous_diapo").width(0);
               $("#next_diapo").width(86);
           } 
-          console.log("controleur selectionné : "+thediapo.selected_controler);
       }
   }
   function selected_diapo(num_controler,thediapo){
@@ -157,8 +150,6 @@ var base_url="";
           $("#controler_"+thediapo.selected_controler).removeClass("selected_controler");
           thediapo.selected_controler -= mvt;
       }
-      console.log("selecteur en cours : "+thediapo.selected_controler);
-      console.log("nb de selecteur : "+thediapo.nb_diapo);
       if (thediapo.selected_controler == (thediapo.nb_diapo-1)){
           $("#previous_diapo").width(50);
           $("#next_diapo").width(0);
