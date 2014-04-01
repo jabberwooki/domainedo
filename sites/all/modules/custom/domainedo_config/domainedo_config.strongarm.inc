@@ -181,6 +181,53 @@ function domainedo_config_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'disqus_domain';
+  $strongarm->value = 'domainedo';
+  $export['disqus_domain'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'disqus_inherit_login';
+  $strongarm->value = 1;
+  $export['disqus_inherit_login'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'disqus_localization';
+  $strongarm->value = 1;
+  $export['disqus_localization'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'disqus_location';
+  $strongarm->value = 'block';
+  $export['disqus_location'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'disqus_nodetypes';
+  $strongarm->value = array(
+    'show' => 'show',
+    'news' => 'news',
+    'press_document' => 0,
+    'relpub_document' => 0,
+    'tech_document' => 0,
+    'festival' => 0,
+    'programmer' => 0,
+    'structure' => 0,
+    'article' => 0,
+    'media_tester' => 0,
+    'page' => 0,
+  );
+  $export['disqus_nodetypes'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'logintoboggan_confirm_email_at_registration';
   $strongarm->value = '1';
   $export['logintoboggan_confirm_email_at_registration'] = $strongarm;
