@@ -3,7 +3,7 @@
  * Atention, pour pouvoir bouger avec la fonction animate, le div concerné doit
  * être en position:relative
  */
-jQuery(function() {
+jQuery(function($) {
 
 //paramètres de base
 var diaporama_visible_width = 549;
@@ -17,12 +17,10 @@ var base_url="";
 
   // Objet diaporama
   function Diaporama(){
-      this.nb_diapo = jQuery("div.group6").length;
-      console.log ("nb diapos : "+this.nb_diapo);
+      this.nb_diapo = $("div.group6").length;
       this.largeur = diaporama_visible_width;
       this.hauteur = diaporama_height;
       this.largeur_cachee = this.nb_diapo*this.largeur+20; // 20 : marge pour le cas où l'on placerait un contour aux diapos
-      console.log ("largeur cachée : "+this.largeur_cachee);
       this.position_left = 0;
       this.selected_controler = 0;
       this.previous = '<div id="previous_diapo"><</div>';
@@ -35,110 +33,132 @@ var base_url="";
       
       var thediapo = this;
       
-      // dimensionnement du diaporama et de ses éléments
+      // création des boutons précédents et suivants et des boutons de contrôle
       (function(){
-          console.log("dimensionnement du diaporama et de ses éléments");
-            // dimmensionner le diapo
-            jQuery(id_du_diapo).width(thediapo.largeur);
-            console.log ("largeur visible du diapo : "+thediapo.largeur+' px');
-            jQuery(conteneur_long).height(thediapo.hauteur);
-
-            //dimmensionner le conteneur de toutes les diapos
-            jQuery(conteneur_long).width(thediapo.largeur_cachee);
-            jQuery(conteneur_long).height(thediapo.hauteur);
-
-            // dimmensionner chaque diapo
-            jQuery(groupe_6).width((thediapo.largeur)-69);//
-            jQuery(groupe_6).height(thediapo.hauteur);
-      })();
-      
-      // création des boutons précédents et suivants
-      (function(){
-          jQuery(id_du_diapo).prepend('<div id="previous_diapo"><</div><div id="next_diapo">></div>');
-          jQuery("#next_diapo").click(function() {
+          var buttons_controlers='<div id="buttons_controlers">';
+          for(var i=0;i<thediapo.nb_diapo;i++){
+              if(i==0) buttons_controlers +='<div id="controler_'+i+'" class="button_controler selected_controler"></div>';      
+              else buttons_controlers +='<div id="controler_'+i+'" class="button_controler"></div>';
+          }
+          buttons_controlers +='</div>';
+          
+          var buttons_previous_next = '<div id="previous_diapo"></div><div id="next_diapo"></div>';
+          $(id_du_diapo).prepend(buttons_controlers+buttons_previous_next);  
+          
+          for(i=0;i<thediapo.nb_diapo;i++){  
+              (function(j){
+                $('#controler_'+j).click(function() {
+                    thediapo.selected_diapo(j,thediapo);
+                });
+               })(i);     
+          }
+          
+          $("#next_diapo").click(function() {
             thediapo.next_diapo(thediapo);
           });
-          jQuery("#previous_diapo").click(function() {
+          $("#previous_diapo").click(function() {
             thediapo.previous_diapo(thediapo);
           });
       })();
       
+      // dimensionnement initial du diaporama et de ses éléments
+      (function(){
+            // dimmensionner le diapo
+            $(id_du_diapo).width(thediapo.largeur);
+            $(conteneur_long).height(thediapo.hauteur);
+
+            //dimmensionner le conteneur de toutes les diapos
+            $(conteneur_long).width(thediapo.largeur_cachee);
+            $(conteneur_long).height(thediapo.hauteur);
+
+            // dimmensionner chaque diapo
+            $(groupe_6).width((thediapo.largeur)-69);//
+            $(groupe_6).height(thediapo.hauteur);
+            
+            // dimmensionner les boutons suivants et précédents
+            $("#next_diapo").width(86);
+            $("#next_diapo").height(350);
+            $("#previous_diapo").width(0);
+            $("#previous_diapo").height(350);
+      })();
+      
+      
   }
   
   function next_diapo(thediapo){
-        console.log("next_diapo activé");
+        
       if(thediapo.nb_diapo>thediapo.selected_controler+1){// ???
-          console.log("dans le premier if");
-          jQuery(conteneur_long).animate({"left": "-="+(thediapo.largeur-100)+"px"}, "slow");
-          console.log("animation : "+(thediapo.largeur-100)+"px");
+          
+          $(conteneur_long).animate({"left": "-="+(thediapo.largeur-100)+"px"}, "slow");
+          
           thediapo.position_left += thediapo.largeur;
           var id_ncs = thediapo.selected_controler+1;
-          jQuery("#controler_"+id_ncs).addClass("selected_controler");
-          jQuery("#controler_"+thediapo.selected_controler).removeClass("selected_controler");
-          thediapo.selected_controler = thediapo.selected_controler+1;
+          $("#controler_"+id_ncs).addClass("selected_controler");
+          $("#controler_"+thediapo.selected_controler).removeClass("selected_controler");
+          thediapo.selected_controler ++;
+          // dimmensionner les boutons suivants et précédents
+            (thediapo.selected_controler == (thediapo.nb_diapo-1)) ? $("#next_diapo").width(1) : $("#next_diapo").width(54);
+            $("#previous_diapo").width(50);
 
-      }else{
-          console.log("dans le else ");
-          var long_mvt = thediapo.largeur*(thediapo.nb_diapo-1);//alert(long_mvt);
-           jQuery(id_du_diapo).animate({opacity: 0}, 200);
-           jQuery(id_du_diapo).animate({"left": "+="+long_mvt+"px"}, 400,"swing");
-           jQuery(id_du_diapo).animate({opacity: 1}, 200);
-           jQuery("#controler_0").addClass("selected_controler");
-           jQuery("#controler_"+thediapo.selected_controler).removeClass("selected_controler");
-           thediapo.selected_controler =0;
       }
   }
-  function previous_diapo(){
+  function previous_diapo(thediapo){
 
-       if(this.selected_controler>0){
-          jQuery(conteneur_long).animate({"left": "+="+(this.largeur-100)+"px"}, "slow");
-          this.position_left -= this.largeur;
-          var id_ncs = this.selected_controler-1;
-          jQuery("#controler_"+id_ncs).addClass("selected_controler");
-          jQuery("#controler_"+this.selected_controler).removeClass("selected_controler");
-          this.selected_controler --;
-      }else{
-          var long_mvt = this.largeur*(this.nb_diapo-1);//alert(long_mvt);
-           jQuery(id_du_diapo).animate({opacity: 0}, 200);
-           jQuery(id_du_diapo).animate({"left": "-="+long_mvt+"px"}, 400,"swing");
-           jQuery(id_du_diapo).animate({opacity: 1}, 200);
-           jQuery("#controler_"+(this.nb_diapo-1)).addClass("selected_controler");
-           jQuery("#controler_"+this.selected_controler).removeClass("selected_controler");
-           this.selected_controler =this.nb_diapo-1;
+       if(thediapo.selected_controler>0){
+          $(conteneur_long).animate({"left": "+="+(thediapo.largeur-100)+"px"}, "slow");
+          thediapo.position_left -= thediapo.largeur;
+          var id_ncs = thediapo.selected_controler-1;
+          $("#controler_"+id_ncs).addClass("selected_controler");
+          $("#controler_"+thediapo.selected_controler).removeClass("selected_controler");
+          thediapo.selected_controler --;
+          if(!thediapo.selected_controler){
+              $("#previous_diapo").width(0);
+              $("#next_diapo").width(86);
+          } 
       }
   }
-  function selected_diapo(num_controler){
-      
-      var mvt = (this.selected_controler-num_controler);
-      var long_mvt = Math.abs(mvt)*this.largeur;
+  function selected_diapo(num_controler,thediapo){
+      //alert(num_controler);
+      var mvt = (thediapo.selected_controler-num_controler);
+      var long_mvt = Math.abs(mvt)*(thediapo.largeur-100);
       //var id_new_selected = "#controler"+num_controler;
-      //alert("controler cliqué : "+num_controler+" diapo affichée : "+this.selected_controler+" long_mvt : "+long_mvt+" px");
-      if (!mvt || (jQuery(document).width() < 600)) {           
-              jQuery("#controler_"+num_controler).addClass("selected_controler");
-              jQuery("#controler_"+this.selected_controler).removeClass("selected_controler");
-              location.href=base_url+this.urlArray[num_controler];
-          }//alert("envoi vers l'url : "+this.urlArray[num_controler]);
-      else if (mvt<0){
-          if(Math.abs(mvt)<3) jQuery(id_du_diapo).animate({"left": "-="+long_mvt+"px"}, "slow");
-          else  {
-              jQuery(id_du_diapo).animate({opacity: 0}, 200);
-              jQuery(id_du_diapo).animate({"left": "-="+long_mvt+"px"}, 400,"swing");
-              jQuery(id_du_diapo).animate({opacity: 1}, 200);
+      //alert("controler cliqué : "+num_controler+" diapo affichée : "+thediapo.selected_controler+" long_mvt : "+long_mvt+" px");
+      if (!mvt || ($(document).width() < 600)) {           
+              $("#controler_"+num_controler).addClass("selected_controler");
+              $("#controler_"+thediapo.selected_controler).removeClass("selected_controler");
+             
           }
-          jQuery("#controler_"+num_controler).addClass("selected_controler");
-          jQuery("#controler_"+this.selected_controler).removeClass("selected_controler");
-          this.selected_controler -= mvt;      
+      else if (mvt<0){
+          if(Math.abs(mvt)<3) $(conteneur_long).animate({"left": "-="+long_mvt+"px"}, "slow");
+          else  {
+              $(conteneur_long).animate({opacity: 0}, 200);
+              $(conteneur_long).animate({"left": "-="+long_mvt+"px"}, 400,"swing");
+              $(conteneur_long).animate({opacity: 1}, 200);
+          }
+          $("#controler_"+num_controler).addClass("selected_controler");
+          $("#controler_"+thediapo.selected_controler).removeClass("selected_controler");
+          thediapo.selected_controler -= mvt;      
       }
       else {
-          if(Math.abs(mvt)<3) jQuery(id_du_diapo).animate({"left": "+="+long_mvt+"px"}, "slow");
+          if(Math.abs(mvt)<3) $(conteneur_long).animate({"left": "+="+long_mvt+"px"}, "slow");
           else {
-              jQuery(id_du_diapo).animate({opacity: 0}, 200);
-              jQuery(id_du_diapo).animate({"left": "+="+long_mvt+"px"}, 400,"swing");
-              jQuery(id_du_diapo).animate({opacity: 1}, 200);
+              $(conteneur_long).animate({opacity: 0}, 200);
+              $(conteneur_long).animate({"left": "+="+long_mvt+"px"}, 400,"swing");
+              $(conteneur_long).animate({opacity: 1}, 200);
           }
-          jQuery("#controler_"+num_controler).addClass("selected_controler");
-          jQuery("#controler_"+this.selected_controler).removeClass("selected_controler");
-          this.selected_controler -= mvt;
+          $("#controler_"+num_controler).addClass("selected_controler");
+          $("#controler_"+thediapo.selected_controler).removeClass("selected_controler");
+          thediapo.selected_controler -= mvt;
+      }
+      if (thediapo.selected_controler == (thediapo.nb_diapo-1)){
+          $("#previous_diapo").width(50);
+          $("#next_diapo").width(0);
+      }else if(thediapo.selected_controler == 0){
+          $("#previous_diapo").width(0);
+          $("#next_diapo").width(86);
+      }else{
+          $("#previous_diapo").width(50);
+          $("#next_diapo").width(54);
       }
   }
   

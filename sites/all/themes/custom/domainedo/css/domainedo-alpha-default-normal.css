@@ -285,13 +285,12 @@ ul.sf-horizontal li a > .sf-sub-indicator {
 }
 #block-views-shows-block-1{
     /*width : 549px;*/
-    height: 327px;
+    height: 337px;
     background: url(../images/wide/background_home_slideshow.png) no-repeat 0 0;
     padding:28px 16px 28px 26px;
     float:left;
     margin-left : 27px;
     overflow: hidden;
-    border : 1px solid green;
     position : relative;
 }
 #block-views-shows-block-1 .block-inner{
@@ -347,7 +346,10 @@ div.group6{
     
 }
 #block-menu-menu-shows-menu ul{
-    margin : -18px 0 0 60px;
+    margin : 0 0 0 60px;
+    position : relative;
+    z-index : 999;
+    top:-28px;
 }
 #block-menu-menu-shows-menu ul > li > a{
     color : #000000;
@@ -368,31 +370,39 @@ div.group6{
 #controlers{
     height:20px;
     widht:20px;
-    border : 1px solid green;
 }
 #previous_diapo,#next_diapo{
     height:20px;
     width:20px;
-    border : 1px solid green;
 }
 #previous_diapo{
     position:absolute;
     top:0px;
     left : 0;
-    border : 1px solid red;
-    width:57px;
-    height:380px;
     cursor: pointer;
-    z-index:9999;
+    z-index:9;
 }
 #next_diapo{
     position:absolute;
     top:0px;
     right : 0;
-    border : 1px solid red;
-    width:57px;
-    height:380px;
     cursor: pointer;
-    z-index:9999;
+    z-index:9;
 }
 
+#buttons_controlers{
+    position:absolute;
+    bottom:0;
+    right:25px;
+    z-index:99;
+}
+#buttons_controlers div{
+    display:inline-block;
+    width : 20px;
+    height:20px;
+    cursor: pointer;
+    background: url(../images/icons/on-off-home-ss.png) no-repeat 0 100%;
+}
+#buttons_controlers div.selected_controler{
+    background: url(../images/icons/on-off-home-ss.png) no-repeat 0 0;
+}
