@@ -2920,7 +2920,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'date',
         'settings' => array(
-          'format_type' => 'long',
+          'format_type' => 'shows_block',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
