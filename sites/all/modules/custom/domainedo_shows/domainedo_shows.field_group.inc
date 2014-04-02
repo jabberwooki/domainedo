@@ -179,8 +179,8 @@ function domainedo_shows_field_group_info() {
     'label' => 'Vignette et statut réservation',
     'weight' => '1',
     'children' => array(
-      0 => 'field_reservation',
-      1 => 'field_thumbnail',
+      0 => 'field_thumbnail',
+      1 => 'field_reservation',
     ),
     'format_type' => 'div',
     'format_settings' => array(

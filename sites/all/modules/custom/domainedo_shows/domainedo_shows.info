@@ -316,4 +316,5 @@ features_exclude[dependencies][custom_breadcrumbs_views] = custom_breadcrumbs_vi
 features_exclude[dependencies][uuid] = uuid
 features_exclude[dependencies][uuid_features] = uuid_features
 features_exclude[dependencies][conditional_fields] = conditional_fields
+features_exclude[dependencies][disqus] = disqus
 project path = sites/all/modules/custom
