@@ -381,6 +381,10 @@ div.group6{
     left : 0;
     cursor: pointer;
     z-index:9;
+    background: url(../images/icons/arrow_ss.png) no-repeat -207px 150px;
+}
+#previous_diapo:hover{
+    background: url(../images/icons/arrow_ss.png) no-repeat 100% 150px;
 }
 #next_diapo{
     position:absolute;
@@ -388,6 +392,10 @@ div.group6{
     right : 0;
     cursor: pointer;
     z-index:9;
+    background: url(../images/icons/arrow_ss.png) no-repeat -88px 150px;
+}
+#next_diapo:hover{
+    background: url(../images/icons/arrow_ss.png) no-repeat 1px 150px;
 }
 
 #buttons_controlers{

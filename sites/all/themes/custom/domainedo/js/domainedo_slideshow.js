@@ -77,9 +77,9 @@ var base_url="";
             
             // dimmensionner les boutons suivants et précédents
             $("#next_diapo").width(86);
-            $("#next_diapo").height(350);
+            $("#next_diapo").height(360);
             $("#previous_diapo").width(0);
-            $("#previous_diapo").height(350);
+            $("#previous_diapo").height(360);
       })();
       
       
@@ -98,7 +98,7 @@ var base_url="";
           thediapo.selected_controler ++;
           // dimmensionner les boutons suivants et précédents
             (thediapo.selected_controler == (thediapo.nb_diapo-1)) ? $("#next_diapo").width(1) : $("#next_diapo").width(54);
-            $("#previous_diapo").width(50);
+            $("#previous_diapo").width(46);
 
       }
   }
@@ -151,13 +151,13 @@ var base_url="";
           thediapo.selected_controler -= mvt;
       }
       if (thediapo.selected_controler == (thediapo.nb_diapo-1)){
-          $("#previous_diapo").width(50);
+          $("#previous_diapo").width(46);
           $("#next_diapo").width(0);
       }else if(thediapo.selected_controler == 0){
           $("#previous_diapo").width(0);
           $("#next_diapo").width(86);
       }else{
-          $("#previous_diapo").width(50);
+          $("#previous_diapo").width(46);
           $("#next_diapo").width(54);
       }
   }
