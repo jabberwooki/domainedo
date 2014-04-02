@@ -115,6 +115,16 @@ function domainedo_config_user_default_permissions() {
     'module' => 'comment',
   );
 
+  // Exported permission: 'administer disqus'.
+  $permissions['administer disqus'] = array(
+    'name' => 'administer disqus',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'webmaster' => 'webmaster',
+    ),
+    'module' => 'disqus',
+  );
+
   // Exported permission: 'administer menu'.
   $permissions['administer menu'] = array(
     'name' => 'administer menu',
@@ -221,6 +231,15 @@ function domainedo_config_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
+  // Exported permission: 'display disqus comments on profile'.
+  $permissions['display disqus comments on profile'] = array(
+    'name' => 'display disqus comments on profile',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'disqus',
+  );
+
   // Exported permission: 'edit any page content'.
   $permissions['edit any page content'] = array(
     'name' => 'edit any page content',
@@ -314,6 +333,15 @@ function domainedo_config_user_default_permissions() {
     'module' => 'comment',
   );
 
+  // Exported permission: 'toggle disqus comments'.
+  $permissions['toggle disqus comments'] = array(
+    'name' => 'toggle disqus comments',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'disqus',
+  );
+
   // Exported permission: 'translate interface'.
   $permissions['translate interface'] = array(
     'name' => 'translate interface',
@@ -355,6 +383,19 @@ function domainedo_config_user_default_permissions() {
       'webmaster' => 'webmaster',
     ),
     'module' => 'filter',
+  );
+
+  // Exported permission: 'view disqus comments'.
+  $permissions['view disqus comments'] = array(
+    'name' => 'view disqus comments',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+      'redacteur' => 'redacteur',
+      'webmaster' => 'webmaster',
+    ),
+    'module' => 'disqus',
   );
 
   // Exported permission: 'view own unpublished content'.
