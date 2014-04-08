@@ -78,6 +78,38 @@ function domainedo_shows_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_summary_dates|node|show|zoom';
+  $field_group->group_name = 'group_summary_dates';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'show';
+  $field_group->mode = 'zoom';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Résumé et dates',
+    'weight' => '45',
+    'children' => array(
+      0 => 'body',
+      1 => 'field_show_dates',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Résumé et dates',
+      'instance_settings' => array(
+        'classes' => 'group-summary-dates field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_summary_dates|node|show|zoom'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_td|node|show|frontpage_block';
   $field_group->group_name = 'group_td';
   $field_group->entity_type = 'node';
