@@ -106,16 +106,18 @@ function domainedo_zoom_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'title',
-        1 => 'field_show_dates',
-        2 => 'field_scald_image',
-        3 => 'body',
+        1 => 'field_scald_image',
+        2 => 'body',
+        3 => 'field_show_dates',
+        4 => 'group_summary_dates',
       ),
     ),
     'fields' => array(
       'title' => 'ds_content',
-      'field_show_dates' => 'ds_content',
       'field_scald_image' => 'ds_content',
       'body' => 'ds_content',
+      'field_show_dates' => 'ds_content',
+      'group_summary_dates' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
