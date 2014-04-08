@@ -38,7 +38,7 @@
     margin-right:5px
 }
 .block-superfish li.sf-depth-1 > ul li{
-    margin-right:5px
+    margin-right:3px
 }
 .block-superfish li.sf-depth-1 > ul li.first >a{
     margin-top:3px;
@@ -296,6 +296,14 @@ ul.sf-horizontal li a > .sf-sub-indicator {
 }
 
 /* Page d'accueil *************************************************************/
+/* Zoom ***********************************************************************/
+#block-views-zoom-block{
+    width : 320px;
+    float : left;
+    position : relative;
+    padding-bottom : 16px;
+    background: url(../images/wide/zoom_bg.png) no-repeat 0 100%;
+}
 #block-views-zoom-block h2{
     background: url(../images/icons/arrow_orange_yellow.png) no-repeat 0 0;
     height:34px;
@@ -308,10 +316,30 @@ ul.sf-horizontal li a > .sf-sub-indicator {
     font-weight: bold;
     font-size :1.8em;
 }
-#block-views-zoom-block{
-    width : 320px;
-    float : left;
+#block-views-zoom-block p{
+    margin:5px 0;
 }
+
+#block-views-zoom-block h3{
+    margin : 8px 0 9px 0;
+}
+#block-views-zoom-block h3 a{
+    font-family: lato, arial;
+    text-decoration: none;
+    color: #000000;
+    text-transform: uppercase;
+    display: block;
+}
+#node_show_zoom_group_summary_dates{
+    position : absolute;
+    bottom: 16px;
+    left: 0;
+    background-color: #DED9D6;
+    width : 300px;
+    opacity: 0.8;
+    padding:10px;
+}
+/* Slideshow ******************************************************************/
 #block-views-shows-block-1{
     /*width : 549px;*/
     height: 337px;
@@ -370,26 +398,37 @@ div.group6{
 #block-views-shows-block-1 .views-row div.group-td .field-type-date{
     padding:0 10px;
 }
-#block-menu-menu-shows-menu ul,#block-menu-menu-shows-menu ul li{
-    list-style: none;
-    float : left;
+
+/* menu du slideshow **********************************************************/
+#block-menu-menu-shows-menu{
+    width : 250px;
+    height : 30px;
+    /*clear : both;*/
+    position : absolute;
+    left : 381px;
+    top: 366px;
     
 }
-#block-menu-menu-shows-menu ul{
-    margin : 0 0 0 60px;
-    position : relative;
-    z-index : 99;
-    top:-28px;
+#block-menu-menu-shows-menu ul,#block-menu-menu-shows-menu ul li{
+    list-style: none;  
+    height: 30px;
 }
+#block-menu-menu-shows-menu ul li{
+    float: left; 
+    height: 30px;
+}
+
 #block-menu-menu-shows-menu ul > li > a{
-    color : #000000;
+    color : black;
     text-decoration: none;
-    height:18px;
+    height:20px;
     display : block;
+    z-index : 99;
 }
 #block-menu-menu-shows-menu ul > li.first > a{
     padding-right: 25px;
     background: url(../images/icons/all_shows.png) no-repeat 100% 4px;
+    
 }
 #block-menu-menu-shows-menu ul > li.last > a{
     padding-right: 25px;
