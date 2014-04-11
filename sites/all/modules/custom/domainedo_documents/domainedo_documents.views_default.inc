@@ -363,7 +363,7 @@ function domainedo_documents_views_default_views() {
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'taxonomy_term_data';
-  $view->human_name = 'Espaces';
+  $view->human_name = 'Espace Pro';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
@@ -448,6 +448,7 @@ Morbi elementum augue eleifend, lacinia quam a, tincidunt mauris. Mauris consequ
   $handler = $view->new_display('page_with_page_title', 'Rubriques Multimedia', 'page_with_page_title_2');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Espace Multimedia';
+  $handler->display->display_options['enabled'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
   /* Entête: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
