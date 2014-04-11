@@ -3250,7 +3250,9 @@ function domainedo_shows_field_default_field_instances() {
       'frontpage_block' => array(
         'label' => 'hidden',
         'module' => 'domainedo_media',
-        'settings' => array(),
+        'settings' => array(
+          'link' => 1,
+        ),
         'type' => 'slideshow_home',
         'weight' => 10,
       ),
