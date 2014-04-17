@@ -149,6 +149,10 @@ function domainedo_superfish($variables) {
   return $output;
 }
 
-function domainedo_menu_tree($variables) {
+/*
+ * Don't use this function. It dumps <nav> makup inside menus and so the accordion 
+ * menu doesn't work any more on smartphones - Yvan Douënel
+ * 
+ * function domainedo_menu_tree($variables) {
   return '<nav><ul class="menu">' . $variables['tree'] . '</ul></nav>';
-}
+}*/
