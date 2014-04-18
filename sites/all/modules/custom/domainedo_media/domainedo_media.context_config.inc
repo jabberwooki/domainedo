@@ -130,7 +130,7 @@ function domainedo_media_default_scald_context_config() {
       '*' => 'passthrough',
     ),
     'image' => array(
-      '*' => 'style-medium',
+      '*' => 'style-list_image_shows__240x180_',
     ),
     'twitter' => array(
       '*' => 'passthrough',
