@@ -640,6 +640,9 @@ div.view-display-id-list div.group6 > div > div .field-item h3 a{
     padding : 3px 10px;
     width: auto;
 }
+div.view-display-id-list .ds-2col-stacked-fluid > .group-right {
+    width: 45%;
+}
 /* Footer *********************************************************************/
 #region-footer-first{
     height : 80px;

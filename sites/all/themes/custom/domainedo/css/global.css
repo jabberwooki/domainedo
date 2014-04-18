@@ -63,6 +63,31 @@ h2#page-title{
     margin-top: 15px;
     border-bottom : 1px solid black;
 }
+.field-name-field-show-dates .field-items{
+    max-height : 36px;
+    overflow-y: auto;
+    text-align: left;
+    padding-right : 5px;
+    margin-bottom: 15px;
+}
+.number_show_dates{
+    color: #C20000;
+    font-weight: bold;
+    text-transform:uppercase;
+    text-align: left;
+}
+.view-shows .group-left{
+    position : relative;
+}
+.view-shows .group-left .reservation-status-4{
+    position: absolute;
+    top : 0;
+    left : 0;
+    width: 240px;
+    height : 57px;
+    background: url("../images/icons/canceled.png") no-repeat 100% 0;
+    text-indent: -2000px;
+}
 
 /* media queries **************************************************************/
 @media screen and (max-width:740px){ 
