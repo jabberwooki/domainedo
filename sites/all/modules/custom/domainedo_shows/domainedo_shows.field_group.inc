@@ -56,8 +56,8 @@ function domainedo_shows_field_group_info() {
     'label' => 'Photo et statut réservation',
     'weight' => '7',
     'children' => array(
-      0 => 'field_scald_image',
-      1 => 'field_reservation',
+      0 => 'field_reservation',
+      1 => 'field_scald_image',
     ),
     'format_type' => 'div',
     'format_settings' => array(

@@ -666,6 +666,12 @@ function domainedo_shows_views_default_views() {
   );
   $handler->display->display_options['filters']['field_show_type_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_show_type_tid']['vocabulary'] = 'show_types';
+  /* Filter criterion: Content: Date(s) (field_show_dates) */
+  $handler->display->display_options['filters']['field_show_dates_value']['id'] = 'field_show_dates_value';
+  $handler->display->display_options['filters']['field_show_dates_value']['table'] = 'field_data_field_show_dates';
+  $handler->display->display_options['filters']['field_show_dates_value']['field'] = 'field_show_dates_value';
+  $handler->display->display_options['filters']['field_show_dates_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_show_dates_value']['default_date'] = 'now';
   $handler->display->display_options['path'] = 'spectacles/tous-les-spectacles';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'Tous les spectacles';

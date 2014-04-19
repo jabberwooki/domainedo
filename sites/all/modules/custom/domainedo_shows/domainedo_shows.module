@@ -6,7 +6,13 @@
 
 include_once 'domainedo_shows.features.inc';
 
-drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_shows.js');
+/**
+ * Implements hook_init().
+ */
+function domainedo_shows_init(){
+    drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_shows.js');
+}
+
 
 /**
  * Implements hook_form_FORM_ID_alter().
