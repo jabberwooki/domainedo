@@ -632,16 +632,12 @@ div.view-display-id-list div.group6 > div > div .field-item h3 a{
     color: #000000;
     text-decoration : none;
 }
-#block-system-main ul.pager{
-    margin-bottom : 20px;
-}
-#block-system-main ul.pager li a{
-    display :block;
-    padding : 3px 10px;
-    width: auto;
-}
 div.view-display-id-list .ds-2col-stacked-fluid > .group-right {
     width: 45%;
+}
+/*full page show **************************************************************/
+.ds-2col-stacked-fluid > .group-right {
+    width: 36%;
 }
 /* Footer *********************************************************************/
 #region-footer-first{

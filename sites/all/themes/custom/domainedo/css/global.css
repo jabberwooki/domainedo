@@ -64,7 +64,7 @@ h2#page-title{
     border-bottom : 1px solid black;
 }
 .field-name-field-show-dates .field-items{
-    max-height : 36px;
+    max-height : 39px;
     overflow-y: auto;
     text-align: left;
     padding-right : 5px;
@@ -87,6 +87,17 @@ h2#page-title{
     height : 57px;
     background: url("../images/icons/canceled.png") no-repeat 100% 0;
     text-indent: -2000px;
+}
+#block-system-main ul.pager{
+    margin-bottom : 20px;
+}
+#block-system-main ul.pager li a{
+    display :block;
+    padding : 3px 10px;
+    width: auto;
+}
+.pager li.pager-next{
+    width: 90px;
 }
 
 /* media queries **************************************************************/
