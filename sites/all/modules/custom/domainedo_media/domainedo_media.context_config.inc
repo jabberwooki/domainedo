@@ -70,7 +70,7 @@ function domainedo_media_default_scald_context_config() {
       '*' => 'passthrough',
     ),
     'image' => array(
-      '*' => 'style-main_show__590_',
+      '*' => 'style-main_show__570_',
     ),
     'twitter' => array(
       '*' => 'passthrough',
