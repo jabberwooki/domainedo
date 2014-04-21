@@ -597,6 +597,7 @@ function domainedo_shows_views_default_views() {
   $handler->display->display_options['header']['block']['field'] = 'block';
   $handler->display->display_options['header']['block']['label'] = 'Left info';
   $handler->display->display_options['header']['block']['empty'] = TRUE;
+  $handler->display->display_options['header']['block']['block_to_insert'] = 'boxes:left_shows_info';
   /* Entête: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
@@ -610,6 +611,7 @@ function domainedo_shows_views_default_views() {
   $handler->display->display_options['header']['block_1']['field'] = 'block';
   $handler->display->display_options['header']['block_1']['label'] = 'Right info';
   $handler->display->display_options['header']['block_1']['empty'] = TRUE;
+  $handler->display->display_options['header']['block_1']['block_to_insert'] = 'boxes:right_shows_infos';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Contenu: Publié */
