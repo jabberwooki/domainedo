@@ -19,12 +19,15 @@ function domainedo_shows_default_box() {
   $box->description = 'Info spectacles gauche';
   $box->options = array(
     'body' => array(
-      'value' => '<p>Mauris condimentum condimentum nisi molestie mattis. Ut condimentum cursus turpis eget ullamcorper. Integer tincidunt dictum tempor. Maecenas facilisis nunc nec sapien laoreet, a sodales ligula semper. Curabitur sed bibendum tortor.</p>
+      'value' => '<p>C\'est le festival Saperlipopette.</p>
+
+<p><a href="http://domaine-do-34.eu/spectacles/%C3%A9t%C3%A9/l-%C3%A9t%C3%A9-au-domaine-do">Voir les dates des festivals à venir</a></p>
 
 <p>&nbsp;</p>
 ',
       'format' => 'full_html',
     ),
+    'additional_classes' => '',
   );
   $export['left_shows_info'] = $box;
 
@@ -37,12 +40,10 @@ function domainedo_shows_default_box() {
   $box->description = 'Info spectacles droite';
   $box->options = array(
     'body' => array(
-      'value' => '<p>Curabitur eget nibh laoreet, condimentum leo a, tempor libero. Duis quis neque nec arcu lacinia fermentum.</p>
-
-<p>&nbsp;</p>
-',
+      'value' => '<p><a class="link_calendar" href="/calendrier">Calendrier et archives &gt;</a></p>',
       'format' => 'full_html',
     ),
+    'additional_classes' => '',
   );
   $export['right_shows_infos'] = $box;
 

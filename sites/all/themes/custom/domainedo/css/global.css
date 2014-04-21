@@ -10,6 +10,12 @@
 #logos-top h1 span{
     padding-left:18px;
 }
+.link_calendar{
+    background: url("../images/icons/calendar-small.png") no-repeat 0 0;
+    padding-left: 25px;
+    display : block;
+    color : #C20003;
+}
 /* menus **********************************************************************/
 .block-menu a{
     font-family: lato,arial;
@@ -22,11 +28,18 @@
 #block-menu-menu-contact h2,
 #block-views-shows-block-1 h2,
 #block-menu-menu-shows-menu h2,
-#address-bottom h2{
+#address-bottom h2,
+#block-menu-menu-practicle-menu h2,
+#block-menu-menu-bottom-courtesy h2,
+.block-domainedo-breadcrumb h2,
+#block-menu-block-domainedo-shows-tab-menu h2{
     clip: rect(1px, 1px, 1px, 1px);
     height: 1px;
     overflow: hidden;
     position: absolute !important;
+}
+label br{
+    display:none;
 }
 
 /* menu contact ***************************************************************/
@@ -40,9 +53,52 @@
     margin:0;
 }
 #block-menu-menu-contact ul li a{
-        color:black;
-        text-transform: uppercase;
-    }
+    color:black;
+    text-transform: uppercase;
+}
+h2{
+    font-family: lato,arial;
+}
+h2#page-title{
+    margin-top: 15px;
+    border-bottom : 1px solid black;
+}
+.field-name-field-show-dates .field-items{
+    max-height : 39px;
+    overflow-y: auto;
+    text-align: left;
+    padding-right : 5px;
+    margin-bottom: 15px;
+}
+.number_show_dates{
+    color: #C20000;
+    font-weight: bold;
+    text-transform:uppercase;
+    text-align: left;
+}
+.view-shows .group-left{
+    position : relative;
+}
+.view-shows .group-left .reservation-status-4{
+    position: absolute;
+    top : 0;
+    left : 0;
+    width: 240px;
+    height : 57px;
+    background: url("../images/icons/canceled.png") no-repeat 100% 0;
+    text-indent: -2000px;
+}
+#block-system-main ul.pager{
+    margin-bottom : 20px;
+}
+#block-system-main ul.pager li a{
+    display :block;
+    padding : 3px 10px;
+    width: auto;
+}
+.pager li.pager-next{
+    width: 90px;
+}
 
 /* media queries **************************************************************/
 @media screen and (max-width:740px){ 

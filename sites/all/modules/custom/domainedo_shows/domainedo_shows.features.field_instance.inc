@@ -1659,7 +1659,7 @@ function domainedo_shows_field_default_field_instances() {
         'weight' => 21,
       ),
       'full' => array(
-        'label' => 'inline',
+        'label' => 'above',
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
@@ -1946,7 +1946,7 @@ function domainedo_shows_field_default_field_instances() {
         'weight' => 5,
       ),
       'full' => array(
-        'label' => 'inline',
+        'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
@@ -2944,7 +2944,7 @@ function domainedo_shows_field_default_field_instances() {
         'weight' => 8,
       ),
       'full' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'date',
         'settings' => array(
           'format_type' => 'long',

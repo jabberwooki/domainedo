@@ -30,6 +30,7 @@ dependencies[] = page_title
 dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = text
+dependencies[] = views_block_area
 features[box][] = left_shows_info
 features[box][] = right_shows_infos
 features[cer][] = node*show*field_by*node*structure*field_structure_shows

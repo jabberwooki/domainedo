@@ -1,8 +1,9 @@
 jQuery(function($) {
+    
     var menu = $('<h2 id="menu-accordion" class="menu-off">Menu</h2>');
     var accordion = $('#zone-menu-wrapper');
     var hide = true;
-    if($(document).width() < 800){
+    if($(document).width() < 1200){
         $('div.block-menu',accordion).hide();  
         menu.prependTo(accordion);
 
