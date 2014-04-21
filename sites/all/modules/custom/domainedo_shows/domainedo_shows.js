@@ -10,6 +10,10 @@ jQuery(function($) {
         
         
     });
+    $(window).scroll(function(){
+        var y = $(window).scrollTop();
+        if(y>200)$('.node-show > .group-right').css('top',(y-200));
+    });
    
 					
 });
