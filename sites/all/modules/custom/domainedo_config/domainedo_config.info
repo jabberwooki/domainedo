@@ -63,6 +63,7 @@ dependencies[] = user
 dependencies[] = uuid
 dependencies[] = uuid_features
 dependencies[] = views
+dependencies[] = views_block_area
 dependencies[] = views_ui_basic
 dependencies[] = xmlsitemap
 features[ctools][] = ds:ds:1
