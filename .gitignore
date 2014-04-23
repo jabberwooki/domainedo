@@ -9,5 +9,5 @@ sites/*/private
 # Ignore netbeans files
 nbproject/*
 
-# Ignore .gitignore
-.gitignore
+# Ignore database dumps
+dbdump
