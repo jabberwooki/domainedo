@@ -19,6 +19,12 @@ body.front #section-content{
 #region-header-first{
     height : 112px;
 }
+h2#menu-accordion{
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+}
 /* Menu déroulant superfish niveau 1 ******************************************/
 #block-superfish-1,#block-superfish-2{
     display : inline-table;
@@ -93,7 +99,7 @@ ul#superfish-2{
    background-color : #ebe9ea;
 }
 ul#superfish-2 li.sf-depth-1 a{
-   width : 153px;
+   width : 152px;
    text-align: center;
    height : 47px;
 }
@@ -632,13 +638,120 @@ div.view-display-id-list div.group6 > div > div .field-item h3 a{
     color: #000000;
     text-decoration : none;
 }
-div.view-display-id-list .ds-2col-stacked-fluid > .group-right {
+.ds-2col-stacked-fluid > .group-right {
     width: 45%;
+    
 }
 /*full page show **************************************************************/
-.ds-2col-stacked-fluid > .group-right {
-    width: 36%;
+.group-left > .field-name-title h2{
+    font-size:1.6em;
+    padding-left: 37px;
+    background : url(../images/icons/bg_h2_show.png) no-repeat 0 0;
+    min-height:33px;
+    border-bottom:1px solid black;
+    vertical-align: bottom;
 }
+.ds-2col-stacked-fluid.view-mode-full > .group-left {
+    width: 61%;
+}
+
+.node-show.view-mode-full > .group-right {
+    width: 348px;
+    background : url(../images/wide/bottom-right-full-page-show.png) no-repeat 0 100%;
+    padding-bottom : 40px;
+    /*position: fixed;
+    margin-top:0px;
+    left:10px;
+    margin: 0 auto;*/
+    position: relative;
+}
+.node-show.view-mode-full > .group-right .field-name-field-show-dates .field-items {
+    padding : 5px 5px 5px 50px;
+    background : #F5F5F5 url(../images/icons/calendar-show-full-page.png) no-repeat 5px 5px;
+    border-radius: 5px;
+}
+.node-show.view-mode-full > .group-right .field-name-field-show-dates .field-items:hover {
+    max-height:none;
+}
+.node-show.view-mode-full > .group-right .field-name-field-location{
+    padding : 5px 5px 5px 50px;
+    margin : 0 10px;
+    border-radius: 5px;
+    background : #F5F5F5 url(../images/icons/location-show-full-page.png) no-repeat 5px 5px;
+}
+.ds-2col-stacked-fluid > .group-right .field-name-field-boxoffice-url{
+    position : absolute;
+    bottom : -10px;
+    left:68px;
+    width: 208px;
+    height : 40px;
+    background-color: #C20000;
+}
+.ds-2col-stacked-fluid.view-mode-full > .group-right .field-name-field-boxoffice-url a{
+    display : block;
+    height : 35px;
+    text-align: center;
+    text-decoration: none;
+    color   : white;
+    font-size: 1.4em;
+    padding-top:5px;
+    text-transform: uppercase;
+    background : url(../images/icons/arrow_white.png) no-repeat 90% 50%;
+}
+.ds-2col-stacked-fluid.view-mode-full > .group-right > div.field-name-field-show-dates{
+    background : url(../images/wide/top-right-full-page-show.png) no-repeat 0 0;
+    padding: 16px 10px 0 10px;
+}
+.ds-2col-stacked-fluid.view-mode-full > .group-right > div{
+    padding: 0 10px;
+    
+}
+div#node_show_full_group_shorts_links{
+    width : 348px;
+    height : 36px;
+    position : absolute;
+    bottom : -50px;
+    left:0px;
+    text-align: center;
+}
+ul.group-ul-short-links{
+    
+    height : 36px;
+    margin : 0 auto;
+    padding : 0;
+    display:inline-block;
+
+}
+ul.group-ul-short-links> div{
+   display: list-item;
+   list-style: none;
+   height: 36px;
+   margin : 0 auto;
+   padding : 0;
+   display: inline-block;
+}
+
+
+ul.group-ul-short-links> div a{
+   display:block;
+   height: 36px;
+   width: 74px;
+   text-indent: -6000px;
+   z-index:9;
+   border-right: 1px solid #C1C1C1;
+   
+}
+.field-name-field-video-link a{
+    background : url(../images/icons/video-show-full-page.png) no-repeat 50% 50%;
+}
+.field-name-field-comments-link a{
+    background : url(../images/icons/comment-show-full-page.png) no-repeat 50% 50%;
+}
+ul.group-ul-short-links> div.field-name-field-back-to-top-link a{
+    background : url(../images/icons/arrow-top-show-full-page.png) no-repeat 50% 50%;
+    border : 0;
+}
+
 /* Footer *********************************************************************/
 #region-footer-first{
     height : 80px;

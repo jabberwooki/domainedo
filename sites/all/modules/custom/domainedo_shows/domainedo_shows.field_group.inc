@@ -78,6 +78,37 @@ function domainedo_shows_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_shorts_links|node|show|full';
+  $field_group->group_name = 'group_shorts_links';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'show';
+  $field_group->mode = 'full';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Groupe short links',
+    'weight' => '26',
+    'children' => array(
+      0 => 'group_ul_short_links',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Groupe short links',
+      'instance_settings' => array(
+        'classes' => 'group-shorts-links-show',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_shorts_links|node|show|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_summary_dates|node|show|zoom';
   $field_group->group_name = 'group_summary_dates';
   $field_group->entity_type = 'node';
@@ -165,6 +196,37 @@ function domainedo_shows_field_group_info() {
     ),
   );
   $export['group_technical_fiels|node|festival|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_ul_short_links|node|show|full';
+  $field_group->group_name = 'group_ul_short_links';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'show';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_shorts_links';
+  $field_group->data = array(
+    'label' => 'Group UL short links',
+    'weight' => '27',
+    'children' => array(
+      0 => 'field_back_to_top_link',
+      1 => 'field_comments_link',
+      2 => 'field_photos_link',
+      3 => 'field_sound_link',
+      4 => 'field_video_link',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Group UL short links',
+      'instance_settings' => array(
+        'classes' => 'group-ul-short-links field-group-html-element',
+        'element' => 'ul',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $export['group_ul_short_links|node|show|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
