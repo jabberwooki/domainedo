@@ -651,11 +651,11 @@ div.view-display-id-list div.group6 > div > div .field-item h3 a{
     border-bottom:1px solid black;
     vertical-align: bottom;
 }
-.ds-2col-stacked-fluid > .group-left {
+.ds-2col-stacked-fluid.view-mode-full > .group-left {
     width: 61%;
 }
 
-.node-show > .group-right {
+.node-show.view-mode-full > .group-right {
     width: 348px;
     background : url(../images/wide/bottom-right-full-page-show.png) no-repeat 0 100%;
     padding-bottom : 40px;
@@ -665,15 +665,15 @@ div.view-display-id-list div.group6 > div > div .field-item h3 a{
     margin: 0 auto;*/
     position: relative;
 }
-.node-show > .group-right .field-name-field-show-dates .field-items {
+.node-show.view-mode-full > .group-right .field-name-field-show-dates .field-items {
     padding : 5px 5px 5px 50px;
     background : #F5F5F5 url(../images/icons/calendar-show-full-page.png) no-repeat 5px 5px;
     border-radius: 5px;
 }
-.node-show > .group-right .field-name-field-show-dates .field-items:hover {
+.node-show.view-mode-full > .group-right .field-name-field-show-dates .field-items:hover {
     max-height:none;
 }
-.node-show > .group-right .field-name-field-location{
+.node-show.view-mode-full > .group-right .field-name-field-location{
     padding : 5px 5px 5px 50px;
     margin : 0 10px;
     border-radius: 5px;
@@ -687,7 +687,7 @@ div.view-display-id-list div.group6 > div > div .field-item h3 a{
     height : 40px;
     background-color: #C20000;
 }
-.ds-2col-stacked-fluid > .group-right .field-name-field-boxoffice-url a{
+.ds-2col-stacked-fluid.view-mode-full > .group-right .field-name-field-boxoffice-url a{
     display : block;
     height : 35px;
     text-align: center;
@@ -698,11 +698,11 @@ div.view-display-id-list div.group6 > div > div .field-item h3 a{
     text-transform: uppercase;
     background : url(../images/icons/arrow_white.png) no-repeat 90% 50%;
 }
-.ds-2col-stacked-fluid > .group-right > div.field-name-field-show-dates{
+.ds-2col-stacked-fluid.view-mode-full > .group-right > div.field-name-field-show-dates{
     background : url(../images/wide/top-right-full-page-show.png) no-repeat 0 0;
     padding: 16px 10px 0 10px;
 }
-.ds-2col-stacked-fluid > .group-right > div{
+.ds-2col-stacked-fluid.view-mode-full > .group-right > div{
     padding: 0 10px;
     
 }
@@ -736,8 +736,10 @@ ul.group-ul-short-links> div a{
    display:block;
    height: 36px;
    width: 74px;
-   text-indent: -2000px;
+   text-indent: -6000px;
    z-index:9;
+   border-right: 1px solid #C1C1C1;
+   
 }
 .field-name-field-video-link a{
     background : url(../images/icons/video-show-full-page.png) no-repeat 50% 50%;
@@ -745,8 +747,9 @@ ul.group-ul-short-links> div a{
 .field-name-field-comments-link a{
     background : url(../images/icons/comment-show-full-page.png) no-repeat 50% 50%;
 }
-.field-name-field-back-to-top-link a{
+ul.group-ul-short-links> div.field-name-field-back-to-top-link a{
     background : url(../images/icons/arrow-top-show-full-page.png) no-repeat 50% 50%;
+    border : 0;
 }
 
 /* Footer *********************************************************************/
