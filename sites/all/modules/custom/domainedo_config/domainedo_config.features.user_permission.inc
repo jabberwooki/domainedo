@@ -120,7 +120,6 @@ function domainedo_config_user_default_permissions() {
     'name' => 'administer disqus',
     'roles' => array(
       'administrator' => 'administrator',
-      'webmaster' => 'webmaster',
     ),
     'module' => 'disqus',
   );
@@ -390,10 +389,6 @@ function domainedo_config_user_default_permissions() {
     'name' => 'view disqus comments',
     'roles' => array(
       'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
-      'redacteur' => 'redacteur',
-      'webmaster' => 'webmaster',
     ),
     'module' => 'disqus',
   );
