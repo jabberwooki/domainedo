@@ -11,12 +11,12 @@ var diaporama_height = 376;
 
 var id_du_diapo ="#block-views-shows-block-1";
 var conteneur_long ="#block-views-shows-block-1 .block-inner";
-var groupe_6 ="div.group6";
+var groupe_6 ="#block-views-shows-block-1 div.group6";
 var base_url="";
 
 
   // Objet diaporama
-  function Diaporama(){
+  function Diaporama() {
       this.nb_diapo = $("div.group6").length;
       this.largeur = diaporama_visible_width;
       this.hauteur = diaporama_height;
@@ -161,9 +161,43 @@ var base_url="";
           $("#next_diapo").width(54);
       }
   }
-  
 
-  var diapo = new Diaporama();
-
+    var diapo = new Diaporama();
+    
+ /*
+  * Manage date display
+  */
+ $('.field-name-field-show-dates .field-items','#block-views-shows-block-1').each(function(){
+   var nb_dates = $('.field-item',this).length;
+   if( nb_dates && nb_dates > 1) {
+     var mvt = ((nb_dates+1)*10)+'px';
+     
+     $(this).addClass('more-dates');
+     $(this).click(function(){
+       if($(this).hasClass('bg-white')){
+         $(this).removeClass('bg-white');
+         $(this).animate({top:'0px'},1000);
+       }else{
+        $(this).addClass('bg-white');
+        $(this).css({position:'relative'},{zindex:'999'},{backgroundColor:'#FFFFFF'},{opacity:1});
+        $(this).animate({top:'-'+mvt},1000);
+       }
+       
+     });
+    
+   }
+ });
+ var month_date = '';
+ $('.field-name-field-show-dates .field-items','.view-display-id-block_2').each(function(){
+   month_date = '';
+   var nb_dates = $('.field-item',this).length;
+   if( nb_dates && nb_dates > 1) {
+     $('.field-item',this).each(function(){
+       if ($(this).text() == month_date) $(this).css({display:'none'}); 
+       month_date = $(this).text();
+     });
+      
+   }
+ });
  
 });
