@@ -1,0 +1,55 @@
+.ds-2col-stacked-fluid > .group-right .field-name-field-boxoffice-url{
+    position : absolute;
+    bottom : -10px;
+    left:68px;
+    width: 208px;
+    height : 40px;
+    background-color: #C20000;
+}
+.ds-2col-stacked-fluid.view-mode-full > .group-right .field-name-field-boxoffice-url a{
+    display : block;
+    height : 35px;
+    text-align: center;
+    text-decoration: none;
+    color   : white;
+    font-size: 1.4em;
+    padding-top:5px;
+    text-transform: uppercase;
+    background : url(../images/icons/arrow_white.png) no-repeat 90% 50%;
+}
+.ds-2col-stacked-fluid.view-mode-full > .group-left {
+    width: 61%;
+}
+div#node_show_full_group_shorts_links{
+    width : 348px;
+    height : 36px;
+    position : absolute;
+    bottom : -50px;
+    left:0px;
+    text-align: center;
+}
+ul.group-ul-short-links{
+    
+    height : 36px;
+    margin : 0 auto;
+    padding : 0;
+    display:inline-block;
+
+}
+ul.group-ul-short-links> div{
+   display: list-item;
+   list-style: none;
+   height: 36px;
+   margin : 0 auto;
+   padding : 0;
+   display: inline-block;
+}
+ul.group-ul-short-links> div a{
+   display:block;
+   height: 36px;
+   width: 74px;
+   text-indent: -6000px;
+   z-index:9;
+   border-right: 1px solid #C1C1C1;
+   
+}

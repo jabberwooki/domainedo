@@ -531,9 +531,7 @@ div.view-display-id-list div.group6 > div > div .field-item h3 a{
     border-bottom:1px solid black;
     vertical-align: bottom;
 }
-.ds-2col-stacked-fluid.view-mode-full > .group-left {
-    width: 61%;
-}
+
 
 .node-show.view-mode-full > .group-right {
     width: 348px;
@@ -562,25 +560,8 @@ div.view-display-id-list div.group6 > div > div .field-item h3 a{
     background : #F5F5F5 url(../images/icons/location-show-full-page.png) no-repeat 5px 5px;
     clear:both;
 }
-.ds-2col-stacked-fluid > .group-right .field-name-field-boxoffice-url{
-    position : absolute;
-    bottom : -10px;
-    left:68px;
-    width: 208px;
-    height : 40px;
-    background-color: #C20000;
-}
-.ds-2col-stacked-fluid.view-mode-full > .group-right .field-name-field-boxoffice-url a{
-    display : block;
-    height : 35px;
-    text-align: center;
-    text-decoration: none;
-    color   : white;
-    font-size: 1.4em;
-    padding-top:5px;
-    text-transform: uppercase;
-    background : url(../images/icons/arrow_white.png) no-repeat 90% 50%;
-}
+
+
 .ds-2col-stacked-fluid.view-mode-full > .group-right > div.field-name-field-show-dates{
     background : url(../images/wide/top-right-full-page-show.png) no-repeat 0 0;
     padding: 16px 10px 0 10px;
@@ -588,41 +569,6 @@ div.view-display-id-list div.group6 > div > div .field-item h3 a{
 .ds-2col-stacked-fluid.view-mode-full > .group-right > div{
     padding: 0 10px;
     
-}
-div#node_show_full_group_shorts_links{
-    width : 348px;
-    height : 36px;
-    position : absolute;
-    bottom : -50px;
-    left:0px;
-    text-align: center;
-}
-ul.group-ul-short-links{
-    
-    height : 36px;
-    margin : 0 auto;
-    padding : 0;
-    display:inline-block;
-
-}
-ul.group-ul-short-links> div{
-   display: list-item;
-   list-style: none;
-   height: 36px;
-   margin : 0 auto;
-   padding : 0;
-   display: inline-block;
-}
-
-
-ul.group-ul-short-links> div a{
-   display:block;
-   height: 36px;
-   width: 74px;
-   text-indent: -6000px;
-   z-index:9;
-   border-right: 1px solid #C1C1C1;
-   
 }
 .field-name-field-video-link a{
     background : url(../images/icons/video-show-full-page.png) no-repeat 50% 50%;
@@ -634,6 +580,16 @@ ul.group-ul-short-links> div.field-name-field-back-to-top-link a{
     background : url(../images/icons/arrow-top-show-full-page.png) no-repeat 50% 50%;
     border : 0;
 }
+.ds-2col-stacked-fluid.view-mode-full > .group-right .field-name-field-boxoffice-url {
+  right: 10%;
+}
+.ds-2col-stacked-fluid.view-mode-full > .group-right #practical_sm_button {
+  left: 12%;
+}
+.ds-2col-stacked-fluid.view-mode-full > .group-right .field-name-field-comments-link{
+  right: 35%;
+}
+
 
 /* Footer *********************************************************************/
 #region-footer-first{
@@ -641,3 +597,5 @@ ul.group-ul-short-links> div.field-name-field-back-to-top-link a{
     overflow: hidden;
     
 }
+
+
