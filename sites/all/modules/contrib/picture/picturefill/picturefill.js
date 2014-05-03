@@ -9,8 +9,9 @@
     // Copy attributes from the source to the destination.
     function _copyAttributes(src, tar) {
       if (src.getAttribute('data-width') && src.getAttribute('data-height')) {
-        tar.width = src.getAttribute('data-width');
-        tar.height = src.getAttribute('data-height');
+        
+        //tar.width = src.getAttribute('data-width');
+        //tar.height = src.getAttribute('data-height');
       }
       else {
         tar.removeAttribute('width');
