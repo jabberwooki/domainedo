@@ -16,6 +16,13 @@
     display : block;
     color : #C20003;
 }
+.bg-white{
+  background-color: white;
+}
+/* images *********************************************************************/
+img{
+  max-width: 100%;
+}
 /* menus **********************************************************************/
 .block-menu a{
     font-family: lato,arial;
@@ -32,7 +39,9 @@
 #block-menu-menu-practicle-menu h2,
 #block-menu-menu-bottom-courtesy h2,
 .block-domainedo-breadcrumb h2,
-#block-menu-block-domainedo-shows-tab-menu h2{
+#block-menu-block-domainedo-shows-tab-menu h2,
+div.reservation-status-1,div.reservation-status-2,div.reservation-status-3,div.reservation-status-5,
+.block-shows-block-2 .field-name-scald-authors{
     clip: rect(1px, 1px, 1px, 1px);
     height: 1px;
     overflow: hidden;
@@ -99,9 +108,232 @@ h2#page-title{
 .pager li.pager-next{
     width: 90px;
 }
+/* Sprite *********************************************************************/
+
+.region-header-second .sprite {
+    background-image: url(../images/wide/sprite-social.png);
+    background-repeat: no-repeat;
+    display: block;
+    float : left;
+    margin : 0 5px 0 0;
+}
+.region-header-second .sprite a{
+    display:block;
+    text-indent:-6000px;
+    width : 100%;
+    height: 100%;
+}
+
+.region-header-second .sprite-facebook {
+    width: 25px;
+    height: 25px;
+    background-position: -5px -5px;
+}
+.region-header-second .sprite-facebook:hover {
+    background-position: -5px -69px;
+}
+
+.region-header-second .sprite-tripadvisor {
+    width: 25px;
+    height: 25px;
+    background-position: -5px -38px;
+}
+.region-header-second .sprite-tripadvisor:hover {
+    background-position: -5px -102px;
+}
+
+.region-header-second .sprite-twitter {
+    width: 25px;
+    height: 25px;
+    background-position: -40px -5px;
+}
+.region-header-second .sprite-twitter:hover {
+    background-position: -40px -69px;
+}
+
+.region-header-second .sprite-youtube {
+    width: 25px;
+    height: 25px;
+    background-position: -40px -38px;
+}
+.region-header-second .sprite-youtube:hover {
+    background-position: -40px -102px;
+}
+
+/*footer ******************************************************************/
+#footer-bottom{
+    background: #f5f3f4 url(../images/icons/background_footer.png) no-repeat 56% 0;
+    padding : 10px;
+    border-bottom : 1px solid black;
+    height: 56px;
+    margin:0;
+}
+#address-bottom{
+    float : left;
+    width: 62%;
+}
+#partner-text{
+    float : left;
+    width: 25%;
+}
+#partner-images{
+    float : right;
+    width: 11%;
+}
+#partner-images img{
+    margin-left:3px;
+}
+
+/* Page d'accueil *************************************************************/
+/* Zoom ***********************************************************************/
+#block-views-zoom-block{
+    width : 320px;
+    float : left;
+    position : relative;
+    padding-bottom : 16px;
+    background: url(../images/wide/zoom_bg.png) no-repeat 0 100%;
+}
+#block-views-zoom-block h2{
+    background: url(../images/icons/arrow_orange_yellow.png) no-repeat 0 0;
+    height:34px;
+    border-bottom : 1px solid black;
+    font-family: Lato,arial;
+    text-transform: uppercase;
+    width: 320px;
+    text-align: right;
+    padding-top:13px;
+    font-weight: bold;
+    font-size :1.8em;
+}
+#block-views-zoom-block p{
+    margin:5px 0;
+}
+
+#block-views-zoom-block h3{
+    margin : 8px 0 9px 0;
+}
+#block-views-zoom-block h3 a{
+    font-family: lato, arial;
+    text-decoration: none;
+    color: #000000;
+    text-transform: uppercase;
+    display: block;
+}
+#node_show_zoom_group_summary_dates{
+    position : absolute;
+    bottom: 16px;
+    left: 0;
+    background-color: #DED9D6;
+    width : 300px;
+    opacity: 0.8;
+    padding:10px;
+}
+/* Menu de commodité haut *****************************************************/
+#region-header-second #block-menu-menu-top-courtesy-nav{
+    float:right;
+    margin : 6px 0 0 0;
+}
+#region-header-second #block-menu-menu-top-courtesy-nav ul li{
+    float:left;
+    list-style: none;
+}
+#region-header-second #block-menu-menu-top-courtesy-nav ul li a{
+    text-decoration: none;
+    color : #272727;
+    border-left: 1px solid #757575;
+    display : block;
+    padding : 0 7px;
+}
+#region-header-second #block-menu-menu-top-courtesy-nav ul li.last{
+    padding-right : 0;
+}
+
+#region-header-second #block-menu-menu-top-courtesy-nav ul li.last a{
+    padding : 0 0 0 7px;
+    
+}
+
+/* Menu en select *************************************************************/
+#superfish-1-select{
+  position : relative;
+  top :106px;
+}
+#superfish-2-select{
+  position : relative;
+  top :83px;
+  left:222px;
+}
+
+/* Liste des spectacles en page d'accueil du mobile ****************************/
+
+.block-shows-block-2 div.views-row-even div.node-show{/*première colonne*/
+  margin-left: 1%;
+  position : relative;
+}
+/*.block-shows-block-2 div.views-row-odd :after{/*deuxième colonne
+  content:"";
+  display:block;
+  clear:both;
+}*/
+.block-shows-block-2 div.views-row-odd div.node-show{
+  margin-right: 1%;
+  position : relative;
+}
+.block-shows-block-2 div div.node-show h3{
+  margin-bottom :5px;
+  padding : 0 5px;
+}
+.block-shows-block-2 div div.node-show h3 a{
+  text-decoration: none;
+  color: #323033;
+  font-size: 0.85em;
+}
+.block-shows-block-2 h2.block-title{
+  line-height : 22px;
+  background: url("../images/icons/bg_h2_show_home_SP.png") no-repeat 0 0;
+  border-bottom: 3px solid black;
+  padding-left: 45px;
+}
+.block-shows-block-2 .views-row{
+  max-width: 50%;
+  float:left;
+  margin: 10px 0 10px 0;
+}
+
+.block-shows-block-2 .views-row .field-name-title{
+  position:absolute;
+  bottom  :0;
+  background-color: #EBEAEA;
+  opacity: 0.8;
+  width: 100%;
+}
+.block-shows-block-2 .field-name-field-show-dates{
+  height  :15px;
+  overflow: hidden;
+  background: url("../images/icons/bg_dates_show_home_SP.png") no-repeat 0 0;
+  padding-left:12px;
+}
+
+ .block-shows-block-2 .field-name-field-show-dates .field-items .field-item{
+  float: left;
+  margin-right:10px;
+}
+.block-shows-block-2 .reservation-status-4{
+    position: absolute;
+    top : 15px;
+    left : 0;
+    width: 100%;
+    height : 57px;
+    background: url("../images/icons/canceled.png") no-repeat 100% 0;
+    text-indent: -2000px;
+}
 
 /* media queries **************************************************************/
-@media screen and (max-width:740px){ 
+@media screen and (max-width:740px){
+  #region-header-second #block-menu-menu-top-courtesy-nav{ //pas un smartphone mais un desktop redimensionné
+    position : absolulte;
+    z-index: 99;
+  }
     #region-header-first,#region-header-second{
         max-width: 50%;
         float : left;
@@ -197,13 +429,13 @@ h2#page-title{
     #block-system-main-menu{
         background-color :black;
     }
-    #block-menu-menu-practicle-menu{
+    #region-menu #block-menu-menu-practicle-menu{
         background-color :#2e2c2d;
     }
-    #block-menu-menu-top-courtesy-nav{
+    #region-menu #block-menu-menu-top-courtesy-nav{
         background-color :#3b3b3b;
     }
-    #block-menu-menu-bottom-courtesy{
+    #region-menu  #block-menu-menu-bottom-courtesy{
         background-color :#4d4d4d;
     }
     /*footer ******************************************************************/
@@ -219,26 +451,29 @@ h2#page-title{
     }
     #partner-bottom{
         padding-left :100px;
+
     }
     #partner-text{
         font-size : 0.6em;
-        max-width: 48%;
+        width: 60%;
         float : left;
-        padding-top: 15px
+        padding-top: 15px;
+
     }
     #partner-images{
-        max-width: 44%;
+        width: 30%;
         float : right;
         margin: 5px 0 0 15px;
+        text-align: right;
     }
     #partner-images img{
-        max-width: 45%;
+        max-width: 48%;
         margin-left : 1px;
     }
    
     
     /* sprite *****************************************************************/
-      .ul-sprite{
+      #region-footer-first .ul-sprite{
         width: 100%;
         border:1px solid black;
         height : 48px;
@@ -246,7 +481,7 @@ h2#page-title{
         padding:0;
         background-color: #ebeaea;
    }
-   .sprite {
+   #region-footer-first .sprite {
         background: #ebeaea url(../images/sp/social_sp.png);
         background-repeat: no-repeat;
         display: block;
@@ -257,36 +492,92 @@ h2#page-title{
         width:24%;
         border-right:1px solid black;
     }
-    .sprite a{
+    #region-footer-first .sprite a{
         display:block;
         text-indent:-6000px;
         width : 100%;
         height: 100%;
     }
-    .sprite-facebook {
+    #region-footer-first .sprite-facebook {
         background-position: 50% 0;
       }
-      .sprite-facebook:hover {
+      #region-footer-first .sprite-facebook:hover {
         background-position: 50% -48px;
       }
-      .sprite-youtube {
+      #region-footer-first .sprite-youtube {
           background-position: 50% -96px;
       }
-      .sprite-youtube:hover {
+      #region-footer-first .sprite-youtube:hover {
           background-position: 50% -144px;
       }
-      .sprite-twitter {
+      #region-footer-first .sprite-twitter {
           background-position: 50% -192px;
       }
-      .sprite-twitter:hover {
+      #region-footer-first .sprite-twitter:hover {
           background-position: 50% -240px;
       }
-      .sprite-tripadvisor{
+      #region-footer-first .sprite-tripadvisor{
           background-position: 50% -288px;
           border-right:0;
       }
-      .sprite-tripadvisor:hover {
+      #region-footer-first .sprite-tripadvisor:hover {
           background-position: 50% -332px;
+      }
+      
+      /* Fiche de spectacle ***************************************************/
+      .ds-2col-stacked-fluid.view-mode-full > .group-left {
+        width: 100%;
+      }
+      .ds-2col-stacked-fluid.view-mode-full > .group-right {
+        width: 100%;
+      }
+      .ds-2col-stacked-fluid.view-mode-full > .group-right .field-name-field-boxoffice-url{
+        position : fixed;
+        bottom :0;
+        right:0;
+        margin:0;
+         padding:0;
+         z-index:999;
+      }
+      .ds-2col-stacked-fluid.view-mode-full > .group-right .field-name-field-boxoffice-url a{
+       color: white;
+       padding : 15px 35px 15px 15px;
+       background: #C10000 url(../images/icons/arrow_white.png) no-repeat 90% 50%;
+       font-size: 1.5em;
+       text-decoration: none;
+      }
+      .ds-2col-stacked-fluid.view-mode-full > .group-right .field-name-field-comments-link {
+        position : fixed;
+        bottom :0;
+        right:30%;   
+        margin:0;
+        padding:0;
+        z-index:999;
+      }
+      .ds-2col-stacked-fluid.view-mode-full > .group-right .field-name-field-comments-link p {
+        margin:0;
+      }
+      .ds-2col-stacked-fluid.view-mode-full > .group-right .field-name-field-comments-link a{
+       color: white;
+       padding : 15px 45px 15px 15px;
+       background: #000000 url(../images/icons/comment-show-full-page-white.png) no-repeat 90% 50%;
+       font-size: 1.5em;
+       text-decoration: none;
+      }
+      .ds-2col-stacked-fluid.view-mode-full > .group-right #practical_sm_button{
+        position : fixed;
+        bottom :0;
+        left:0;   
+        margin:0;
+        padding:0;
+        z-index:999;
+      }
+      .ds-2col-stacked-fluid.view-mode-full > .group-right #practical_sm_button a{
+       color: white;
+       padding : 15px 45px 15px 15px;
+       background: #000000 url(../images/icons/information.png) no-repeat 90% 50%;
+       font-size: 1.5em;
+       text-decoration: none;
       }
     
        
@@ -296,5 +587,11 @@ h2#page-title{
     #zone-header{
         background: url(../images/sp/background_top_sp.gif) no-repeat 150% 0;
     }
+    .ds-2col-stacked-fluid.view-mode-full > .group-right #practical_sm_button a,
+    .ds-2col-stacked-fluid.view-mode-full > .group-right .field-name-field-comments-link a,
+    .ds-2col-stacked-fluid.view-mode-full > .group-right .field-name-field-boxoffice-url a{
+       padding : 15px 33px 10px 10px;
+       font-size: 1em;
+      }
        
 }

@@ -2,3 +2,642 @@
 /* If you are using the default media queries provided by Omega, these styles will also
  *  apply to the normal and widescreen layouts. You may override these styles in the normal
  *  and widescreen CSS files as appropriate. */
+
+/* This file will hold styles that are loaded using the same media query as the normal grid. */
+/* If you are using the default media queries provided by Omega, these styles will also
+ *  apply to the widescreen layout unless they are overridden by the widescreen styles. */
+#boxes-box-logos_top{
+    padding : 27px 0 17px 0; 
+}
+body.front #section-content{
+    margin-top:36px;
+}
+#section-content{
+    margin-top:15px;
+}
+/* This file will hold styles that are loaded using the same media query as the wide grid. */
+
+#zone-header{
+    height : 112px;
+    background: url(../images/wide/background_top_wide.gif) no-repeat 322px 0; 
+}
+#region-header-first{
+    height : 112px;
+}
+h2#menu-accordion{
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+}
+/* Menu déroulant superfish niveau 1 ******************************************/
+#block-superfish-1,#block-superfish-2{
+    display : inline-table;
+}
+
+.block-superfish li.sf-depth-1 a{
+   text-transform: uppercase;
+   font-family: lato,arial;
+   font-size : 1.2em;
+   text-decoration : none;
+   color : #282828;
+   display:table-cell;
+   vertical-align: middle;
+   border-bottom: 1px dotted white;
+}
+.block-superfish li.sf-depth-1 > ul li >a{
+    color : #FFFFFF;
+    border-bottom: 1px dotted white;
+    display:block;
+    margin-right:5px
+}
+.block-superfish li.sf-depth-1 > ul li{
+    margin-right:3px
+}
+.block-superfish li.sf-depth-1 > ul li[class*="first"] >a{
+    margin-top:8px;
+    border-top-right-radius : 8px;
+}
+.block-superfish li.sf-depth-1 > ul li.last >a{
+    border-bottom-left-radius : 8px;
+}
+.block-superfish li.sf-depth-1 > ul li.active-trail>a,
+.block-superfish li.sf-depth-1 > ul li>a:hover{
+    background-color: #C10000;
+}
+.block-superfish li.sf-depth-1 > ul li.last > a{
+   border-bottom: 0;
+}
+.block-superfish ul.menu > li.sf-depth-1{
+    margin:0;
+}
+ul#superfish-1 li.sf-depth-1 > a{
+   width : 192px;
+   text-align: center;
+   height : 45px;
+   border-bottom : 3px solid #ff6701;
+   color : #292929;
+   background: transparent url(../images/icons/separator_menu_1.png) no-repeat 100% 50%; 
+   
+}
+.sf-menu.sf-horizontal.sf-shadow ul, .sf-menu.sf-vertical.sf-shadow ul, .sf-menu.sf-navbar.sf-shadow ul ul {
+    background-image: none;
+    background-color : #9F0000;
+}
+
+ul#superfish-1 li.sf-depth-1.first > a:hover{
+   border-bottom : 0;
+}
+ul#superfish-1 li.sf-depth-1.last > a{
+   background-image: none;
+   border-bottom : 3px solid #feca29;
+}
+ul#superfish-1 li.sf-depth-1 > a.active,
+ul#superfish-1 li.sf-depth-1 > a:hover,
+ul#superfish-1 li.sf-depth-1 > a.last:hover{
+   border-bottom : 3px solid #C10000;
+}
+ul#superfish-2{
+   border : 1px solid #000000;
+   border-radius : 8px 8px 8px 8px;
+   height : 48px;
+   background-color : #ebe9ea;
+}
+ul#superfish-2 li.sf-depth-1 a{
+   width : 152px;
+   text-align: center;
+   height : 47px;
+}
+ul#superfish-2 li.sf-depth-1.first > a{
+   border-right:1px solid #000000;
+}
+ul#superfish-2 li.sf-depth-1.last > a{
+   background: url(../images/icons/ticket_menu.png) no-repeat 95% 18px; 
+}
+ul#superfish-2 li.sf-depth-1 > a:hover,
+ul#superfish-2 li.sf-depth-1 > a.active{
+   border-radius : 8px 8px 8px 8px;
+   height : 48px;
+   color : white;
+   background-color: #C10000 ; 
+}
+ul#superfish-1 > li.first > a{
+    background: url(../images/wide/home.png) no-repeat 0 0; 
+    text-indent : -3000px;
+    width : 50px;
+    height: 48px;
+    border-bottom : 0;   
+}
+
+ul#superfish-1 > li.first > a:hover,
+ul#superfish-1 > li.first > a.active{
+    background: url(../images/wide/home.png) no-repeat 0 100%; 
+    border-bottom : 0;
+}
+a > .sf-sub-indicator {
+    top: 1.1em;
+}
+ul#superfish-1 li.sf-depth-2  a > .sf-sub-indicator{
+    top: 0.8em;
+}
+ul.sf-horizontal li a > .sf-sub-indicator {
+    background: url(../images/icons/arrow_menu_bottom.png) no-repeat 0 0; 
+    height : 14px;
+    width: 14px;
+}
+ul.sf-horizontal li.sf-depth-1 ul li:hover> a > .sf-sub-indicator {
+    background: url(../images/icons/arrow_menu_bottom-right.png) no-repeat 0 0; 
+}
+
+/* Menu déroulant superfish niveau 2 ******************************************/
+.sf-horizontal > li > ul{
+    margin-top:16px;
+}
+.sf-horizontal > li > ul li a{
+    display : block;
+    padding : 10px;
+}
+
+
+/* menu contact ***************************************************************/
+#block-menu-menu-contact{
+    width : 75px;
+    float : left;
+    margin : 8px 0 10px 95px;
+}
+#block-menu-menu-contact ul li a{
+     background: url(../images/icons/location_wide.gif) no-repeat 0 4px;
+     display : block;
+     padding-left : 20px;
+     text-transform: capitalize;
+     text-decoration: none;
+     color : #272727;
+}
+#block-menu-menu-contact ul li a:hover{
+     background: url(../images/icons/location_wide.gif) no-repeat 0 110%;
+     color : #c10000;
+}
+
+
+/* menu bas *******************************************************************/
+#region-footer-second ul{
+  text-align: center;  
+}
+#region-footer-second ul li{
+    list-style: none;
+    text-decoration: none;
+    display : inline;
+}
+
+#region-footer-second ul li a{
+    text-decoration: none;
+    color : #282828;
+    
+    padding : 0 8px;
+    border-right : 1px solid #282828;
+}
+#region-footer-second ul li.last a{
+   border-right :0;
+}
+/* Réseaux sociaux ************************************************************/
+#block-boxes-social-network{
+    clear :left;
+    margin : 0 0 0 150px;
+    float : left;
+}
+/* zone de recherche **********************************************************/
+#block-search-form{
+    float:right;
+    margin-top : 20px;
+}
+#block-search-form input{
+    border : 1px solid #ebe9ea;
+}
+#block-search-form div.container-inline{
+    background-color : #ebe9ea;
+}
+#block-search-form input.form-text{
+    width : 146px
+}
+
+#block-search-form .form-submit{
+    width : 28px;
+    text-indent: -6000px;
+    height : 25px;
+    background: url(../images/icons/search_submit.gif) no-repeat 0 0;
+    margin : 0;
+    border : 0;
+    border-radius : 0;
+}
+#block-search-form #edit-submit:hover{
+    background: url(../images/icons/search_submit.gif) no-repeat 0 100%;
+}
+
+/* Slideshow ******************************************************************/
+#block-views-shows-block-1{
+    /*width : 549px;*/
+    height: 337px;
+    background: url(../images/wide/background_home_slideshow.png) no-repeat 0 0;
+    padding:28px 16px 28px 26px;
+    float:left;
+    margin-left : 27px;
+    overflow: hidden;
+    position : relative;
+}
+#block-views-shows-block-1 .block-inner{
+    position:relative;
+}
+
+div.group6{
+    float:left;
+ 
+}
+#block-views-shows-block-1 .views-row{
+    width : 150px;
+    height: 150px;
+    overflow: hidden;
+    float : left;
+    margin-right:10px;
+    position : relative;
+    margin-bottom:25px;
+}
+#block-views-shows-block-1 .views-row img{
+    border-radius : 4px;
+}
+#block-views-shows-block-1 .views-row div.group-td{
+    position:absolute;
+    bottom:0;
+    left : 0;
+    background-color: #EBEAEA;
+    opacity:0.8;
+    width:150px;
+}
+#block-views-shows-block-1 .views-row div.group-td h3{
+    margin : 0;
+}
+#block-views-shows-block-1 .views-row div.group-td h3 a{
+    margin : 0;
+    padding:5px 10px;
+    text-decoration: none;
+    color : #000000;
+    display:block;
+    font-family: lato,arial;
+    line-height:1em;
+    font-size : 0.8em;
+}
+#block-views-shows-block-1 .views-row div.group-td h3 a:hover,
+#block-menu-menu-shows-menu ul > li > a:hover{
+    color : #C10000;
+}
+#block-views-shows-block-1 .views-row div.group-td .field-type-date{
+    padding:0 10px;
+}
+.view-display-id-block_1 .field-name-field-show-dates .field-items{
+  width: 100%;
+  margin-bottom:0;
+  overflow-y: hidden;
+}
+.view-display-id-block_1 .field-name-field-show-dates .field-items.more-dates{
+  background: url(../images/icons/plus_black.png) no-repeat 100% 0px;
+}
+
+.view-display-id-block_1 .field-name-field-show-dates .field-items.bg-white{
+  max-height:none;
+  background: white url(../images/icons/minus_black.png) no-repeat 100% 0px;
+  opacity : 1;
+}
+#block-views-shows-block-1 .field-name-field-show-dates .field-items:hover{
+  
+  /*border:1px solid blue;*/
+}
+/* menu du slideshow **********************************************************/
+#block-menu-menu-shows-menu{
+    width : 250px;
+    height : 30px;
+    /*clear : both;*/
+    position : absolute;
+    left : 381px;
+    top: 366px;
+    
+}
+#block-menu-menu-shows-menu ul,#block-menu-menu-shows-menu ul li{
+    list-style: none;  
+    height: 30px;
+}
+#block-menu-menu-shows-menu ul li{
+    float: left; 
+    height: 30px;
+}
+
+#block-menu-menu-shows-menu ul > li > a{
+    color : black;
+    text-decoration: none;
+    height:20px;
+    display : block;
+    z-index : 99;
+}
+#block-menu-menu-shows-menu ul > li.first > a{
+    padding-right: 25px;
+    background: url(../images/icons/all_shows.png) no-repeat 100% 4px;
+    
+}
+#block-menu-menu-shows-menu ul > li.last > a{
+    padding-right: 25px;
+    background: url(../images/icons/calendar-small.png) no-repeat 100% 0px;
+}
+
+/* slideshow ******************************************************************/
+#controlers{
+    height:20px;
+    widht:20px;
+}
+#previous_diapo,#next_diapo{
+    height:20px;
+    width:20px;
+}
+#previous_diapo{
+    position:absolute;
+    top:0px;
+    left : 0;
+    cursor: pointer;
+    z-index:9;
+    background: url(../images/icons/arrow_ss.png) no-repeat -207px 150px;
+}
+#previous_diapo:hover{
+    background: url(../images/icons/arrow_ss.png) no-repeat 100% 150px;
+}
+#next_diapo{
+    position:absolute;
+    top:0px;
+    right : 0;
+    cursor: pointer;
+    z-index:9;
+    background: url(../images/icons/arrow_ss.png) no-repeat -88px 150px;
+}
+#next_diapo:hover{
+    background: url(../images/icons/arrow_ss.png) no-repeat 1px 150px;
+}
+
+#buttons_controlers{
+    position:absolute;
+    bottom:0;
+    right:25px;
+    z-index:99;
+}
+#buttons_controlers div{
+    display:inline-block;
+    width : 20px;
+    height:20px;
+    cursor: pointer;
+    background: url(../images/icons/on-off-home-ss.png) no-repeat 0 100%;
+}
+#buttons_controlers div.selected_controler{
+    background: url(../images/icons/on-off-home-ss.png) no-repeat 0 0;
+}
+/* Menus spectacles ***********************************************************/
+div.menu-block-domainedo-shows-tab-menu > ul{
+    height : 25px;
+    border-top : 1px solid black;
+    border-bottom : 1px solid black;
+    padding : 0;
+    margin : 0;
+    background-color: #F5F5F5;
+}
+div.menu-block-domainedo-shows-tab-menu > ul > li{
+    float :left;
+    list-style: none;
+    padding : 0;
+    margin : 0;
+}
+div.menu-block-domainedo-shows-tab-menu > ul > li > a{
+    display:block;
+    padding : 2px 13px 0 13px;
+    text-decoration: none;
+    color: #878787;
+    margin : 0;
+    border-right : 1px solid black;
+    height : 23px;
+}
+div.menu-block-domainedo-shows-tab-menu > ul > li.first > a{
+    padding : 2px 13px 0 0;
+
+}
+div.menu-block-domainedo-shows-tab-menu > ul > li > a:hover,
+div.menu-block-domainedo-shows-tab-menu > ul > li > a.active-trail{
+    color: #C71D20;
+}
+
+/* Pages tous les spectacles **************************************************/
+#block-boxes-left-shows-info{
+    width: 253px;
+    height: 115px;
+    background: #F5F5F5 url(../images/icons/bg_next_festival.png) no-repeat 100% 0;
+    float: left;
+    padding : 20px 5px 5px 12px;
+    margin : 0 20px 20px 0;
+}
+#views-exposed-form-shows-list{
+    width: 347px;
+    height: 120px;
+    float: left;
+    padding : 20px 25px 0 0;
+    margin-right : 20px;
+    border-right : 1px solid black;
+}
+#views-exposed-form-shows-list div,
+#views-exposed-form-shows-list label{
+    padding : 0;
+    margin : 0;
+}
+#views-exposed-form-shows-list label{
+   padding-left: 10px;
+}
+#edit-field-show-type-tid-wrapper{
+    display: block;
+    clear:both;
+}
+#edit-field-festival-target-id{
+    width: 325px;
+}
+label[for="edit-field-show-type-tid"]{
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+}
+div.bef-checkboxes div.form-type-bef-checkbox{
+    float : left;
+    width: 90px;
+}
+#views-exposed-form-shows-list .views-submit-button{
+    float :right;
+}
+#views-exposed-form-shows-list .views-submit-button input{
+    padding : 5px 30px 5px 15px;
+    margin : -40px 27px 0 0;
+    width:140px;
+    color : white;
+    background: #C20000 url(../images/icons/arrow_white.png) no-repeat 90% 50%;
+}
+#views-exposed-form-shows-list div.form-item-edit-field-show-type-tid-6,
+#views-exposed-form-shows-list div.form-item-edit-field-show-type-tid-1{
+    margin-top : 10px;
+}
+#block-boxes-right-shows-infos{
+    width: 250px;
+    height: 120px;
+    float: left;
+    padding : 20px 0 0 0;
+    margin-bottom : 20px;
+}
+
+/* la liste des résultats ****************************************************/
+div.view-display-id-list .view-content{
+    margin-top :20px;
+    clear: both;
+}
+
+div.view-display-id-list div.group6 > div{
+    float : left;
+    width: 50%;
+    height: 225px;
+    overflow: hidden;
+    margin : 0 0 20px 0;
+    padding : 0;
+}
+div.view-display-id-list div.group6 > div.views-row-odd > div{
+    padding-right: 20px;
+}
+
+div.view-display-id-list div.group6 > div > div .field-item h3{
+    padding : 5px 15px 5px 5px;
+    background-color: #F5F5F5;
+    margin-bottom :10px;
+}
+div.view-display-id-list div.group6 > div > div .field-item h3 a{
+    color: #000000;
+    text-decoration : none;
+}
+.ds-2col-stacked-fluid > .group-right {
+    width: 45%;
+    
+}
+/*full page show **************************************************************/
+.group-left > .field-name-title h2{
+    font-size:1.6em;
+    padding-left: 37px;
+    background : url(../images/icons/bg_h2_show.png) no-repeat 0 0;
+    min-height:33px;
+    border-bottom:1px solid black;
+    vertical-align: bottom;
+}
+.ds-2col-stacked-fluid.view-mode-full > .group-left {
+    width: 61%;
+}
+
+.node-show.view-mode-full > .group-right {
+    width: 348px;
+    background : url(../images/wide/bottom-right-full-page-show.png) no-repeat 0 100%;
+    padding-bottom : 40px;
+    /*position: fixed;
+    margin-top:0px;
+    left:10px;
+    margin: 0 auto;*/
+    position: relative;
+}
+.node-show.view-mode-full > .group-right .field-name-field-show-dates .field-items {
+    padding : 5px 5px 5px 50px;
+    background : #F5F5F5 url(../images/icons/calendar-show-full-page.png) no-repeat 5px 5px;
+    border-radius: 5px;
+    width: 83%;
+
+}
+.node-show.view-mode-full > .group-right .field-name-field-show-dates .field-items:hover {
+    max-height:none;
+}
+.node-show.view-mode-full > .group-right .field-name-field-location{
+    padding : 5px 5px 5px 50px;
+    margin : 0 10px;
+    border-radius: 5px;
+    background : #F5F5F5 url(../images/icons/location-show-full-page.png) no-repeat 5px 5px;
+    clear:both;
+}
+.ds-2col-stacked-fluid > .group-right .field-name-field-boxoffice-url{
+    position : absolute;
+    bottom : -10px;
+    left:68px;
+    width: 208px;
+    height : 40px;
+    background-color: #C20000;
+}
+.ds-2col-stacked-fluid.view-mode-full > .group-right .field-name-field-boxoffice-url a{
+    display : block;
+    height : 35px;
+    text-align: center;
+    text-decoration: none;
+    color   : white;
+    font-size: 1.4em;
+    padding-top:5px;
+    text-transform: uppercase;
+    background : url(../images/icons/arrow_white.png) no-repeat 90% 50%;
+}
+.ds-2col-stacked-fluid.view-mode-full > .group-right > div.field-name-field-show-dates{
+    background : url(../images/wide/top-right-full-page-show.png) no-repeat 0 0;
+    padding: 16px 10px 0 10px;
+}
+.ds-2col-stacked-fluid.view-mode-full > .group-right > div{
+    padding: 0 10px;
+    
+}
+div#node_show_full_group_shorts_links{
+    width : 348px;
+    height : 36px;
+    position : absolute;
+    bottom : -50px;
+    left:0px;
+    text-align: center;
+}
+ul.group-ul-short-links{
+    
+    height : 36px;
+    margin : 0 auto;
+    padding : 0;
+    display:inline-block;
+
+}
+ul.group-ul-short-links> div{
+   display: list-item;
+   list-style: none;
+   height: 36px;
+   margin : 0 auto;
+   padding : 0;
+   display: inline-block;
+}
+
+
+ul.group-ul-short-links> div a{
+   display:block;
+   height: 36px;
+   width: 74px;
+   text-indent: -6000px;
+   z-index:9;
+   border-right: 1px solid #C1C1C1;
+   
+}
+.field-name-field-video-link a{
+    background : url(../images/icons/video-show-full-page.png) no-repeat 50% 50%;
+}
+.field-name-field-comments-link a{
+    background : url(../images/icons/comment-show-full-page.png) no-repeat 50% 50%;
+}
+ul.group-ul-short-links> div.field-name-field-back-to-top-link a{
+    background : url(../images/icons/arrow-top-show-full-page.png) no-repeat 50% 50%;
+    border : 0;
+}
+
+/* Footer *********************************************************************/
+#region-footer-first{
+    height : 80px;
+    overflow: hidden;
+    
+}
