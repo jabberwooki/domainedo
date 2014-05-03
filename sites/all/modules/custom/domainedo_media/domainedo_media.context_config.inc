@@ -54,6 +54,7 @@ function domainedo_media_default_scald_context_config() {
     ),
     'video' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
   );
   $export['block'] = $context_config;
@@ -76,7 +77,7 @@ function domainedo_media_default_scald_context_config() {
       '*' => 'passthrough',
     ),
     'video' => array(
-      '*' => 'passthrough',
+      '*' => 'style-main_show__570_',
     ),
     'file' => array(
       '*' => 'passthrough',
@@ -107,6 +108,7 @@ function domainedo_media_default_scald_context_config() {
     ),
     'video' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'file' => array(
       '*' => 'default',
@@ -159,6 +161,7 @@ function domainedo_media_default_scald_context_config() {
     ),
     'video' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
   );
   $export['list'] = $context_config;
@@ -212,6 +215,7 @@ function domainedo_media_default_scald_context_config() {
     ),
     'video' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'file' => array(
       '*' => 'default',
@@ -261,6 +265,7 @@ function domainedo_media_default_scald_context_config() {
     ),
     'video' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'file' => array(
       '*' => 'default',
@@ -310,6 +315,7 @@ function domainedo_media_default_scald_context_config() {
     ),
     'video' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'file' => array(
       '*' => 'default',
@@ -361,6 +367,7 @@ function domainedo_media_default_scald_context_config() {
     ),
     'video' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
   );
   $export['slideshow_home'] = $context_config;
@@ -406,6 +413,7 @@ function domainedo_media_default_scald_context_config() {
     ),
     'video' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'file' => array(
       '*' => 'default',
