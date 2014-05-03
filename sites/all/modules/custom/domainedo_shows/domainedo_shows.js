@@ -5,7 +5,10 @@ jQuery(function($) {
      */ 
     resizeFrame();
     
-    window.onresize = resizeFrame();
+    window.onresize = function(){
+      resizeFrame();
+      if ($(".node-show").length && $(window).width() < 980) managePracticalButton();
+    }
     
     function resizeFrame() {
       $('iframe').each(function(){
@@ -47,11 +50,20 @@ jQuery(function($) {
     /*
      * Change position of practicals element for smartphone show display
      */
-    if ($(window).width() < 740){
+    if ($(".node-show").length && $(window).width() < 980 ){
  
       $(".field-name-field-show-dates",".node-show").clone().insertAfter(".field-name-field-by");
       $('<div id="practical_sm_button"><a href="#practical_div">Pratique</a></div>').insertAfter(".field-name-field-price");
       $('.group-right',".node-show").attr('id', 'practical_div');
+    }
+    function managePracticalButton() {
+       
+      if(!$('#practical_sm_button').length) {
+        console.log("ajout du bouton Pratique");
+        $('<div id="practical_sm_button"><a href="#practical_div">Pratique</a></div>').insertAfter(".field-name-field-price");
+      }
+      if($('#practical_div').length) $('.group-right',".node-show").attr('id', 'practical_div');
+      
     }
 					
 });
