@@ -127,7 +127,7 @@ h2#page-title{
     left : 0;
     width: 240px;
     height : 57px;
-    background: url("../images/icons/canceled.png") no-repeat 100% 0;
+    background: url("../images/icons/canceled.png") no-repeat 0 0;
     text-indent: -2000px;
 }
 #block-system-main ul.pager{
@@ -357,9 +357,10 @@ h2#page-title{
     left : 0;
     width: 100%;
     height : 57px;
-    background: url("../images/icons/canceled.png") no-repeat 100% 0;
+    background: url("../images/icons/canceled.png") no-repeat 0 0;
     text-indent: -2000px;
 }
+
 
 /* media queries **************************************************************/
 @media screen and (max-width:980px){
@@ -632,8 +633,45 @@ h2#page-title{
       #region-footer-first .sprite-tripadvisor:hover {
           background-position: 50% -332px;
       }
-      
-             
+            
+}
+@media screen and (min-width:481px){
+  /* la liste des résultats ****************************************************/
+      div.view-display-id-list .view-content{
+          margin-top :20px;
+          clear: both;
+      }
+
+      div.view-display-id-list div.group6 > div{
+          float : left;
+          width: 50%;
+          height: 225px;
+          overflow: hidden;
+          margin : 0 0 20px 0;
+          padding : 0;
+      }
+      div.view-display-id-list div.group6 > div.views-row-odd > div{
+          padding-right: 20px;
+      }
+
+      div.view-display-id-list div.group6 > div > div .field-item h3{
+          padding : 5px 15px 5px 5px;
+          background-color: #F5F5F5;
+          margin-bottom :10px;
+      }
+      div.view-display-id-list div.group6 > div > div .field-item h3 a{
+          color: #000000;
+          text-decoration : none;
+      }
+      .ds-2col-stacked-fluid > .group-right {
+          width: 45%;  
+      }
+      .view-shows .field-name-field-show-dates .field-items {
+        width: 90%;
+      }   
+      div.view-display-id-list div.group6 > div .field-name-scald-authors{
+        display:none;
+      }
 }
 @media screen and (max-width:480px){ 
     
@@ -645,6 +683,21 @@ h2#page-title{
     .ds-2col-stacked-fluid.view-mode-full > .group-right .field-name-field-boxoffice-url a{
        padding : 15px 33px 10px 10px;
        font-size: 1em;
+    }
+    div.view-display-id-list div.group6 > div{
+          float : none;
+          width: 100%;
+          height: auto;
+          overflow: visible;
+          margin : 0 0 20px 0;
+          padding : 0;
       }
+      div.view-display-id-list div.group6 > div .field-name-scald-authors{
+        display:none;
+      }
+      div.view-display-id-list div.group6 > div .ds-2col-stacked-fluid > .group-right {
+        width: 48%;
+      }
+      
        
 }
