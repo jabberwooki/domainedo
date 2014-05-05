@@ -58,9 +58,13 @@
 #node_show_zoom_group_summary_dates .field-name-field-show-dates .field-items{
     width:90%;
 }
-.field-name-field-show-dates .field-items .field-item{
+.field-name-field-show-dates .field-items .field-item,
+#node_news_zoom_group_event_summa_dates .field-items .field-item{
     float : left;
     padding: 0 10px;
+}
+#node_news_zoom_group_event_summa_dates {
+  width: initial;
 }
 .view-id-zoom .field-name-scald-authors{
   display:none;

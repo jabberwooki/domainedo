@@ -253,12 +253,13 @@ h2#page-title{
     text-transform: uppercase;
     display: block;
 }
-#node_show_zoom_group_summary_dates{
+#node_show_zoom_group_summary_dates,
+#node_news_zoom_group_event_summa_dates{
     position : absolute;
     bottom: 0px;
     left: 0;
     background-color: #DED9D6;
-    width : 97%;
+    width : 300px;
     opacity: 0.8;
     padding:10px;
 }
