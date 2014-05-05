@@ -6,6 +6,67 @@
 /* This file will hold styles that are loaded using the same media query as the normal grid. */
 /* If you are using the default media queries provided by Omega, these styles will also
  *  apply to the widescreen layout unless they are overridden by the widescreen styles. */
+
+/* Zoom ***********************************************************************/
+#block-views-zoom-block{
+    width : 591px;
+    position : relative;
+    left: 25px;
+    margin-bottom : 20px;
+}
+#block-views-zoom-block h2{
+    background: url(../images/icons/arrow_orange_yellow.png) no-repeat 0 0;
+    height:34px;
+    border-bottom : 1px solid black;
+    font-family: Lato,arial;
+    text-transform: uppercase;
+    width: 591px;
+    text-align: right;
+    padding-top:13px;
+    font-weight: bold;
+    font-size :1.8em;
+}
+#block-views-zoom-block p{
+    margin:5px 0;
+}
+
+#block-views-zoom-block h3{
+    margin : 8px 0 9px 0;
+}
+#block-views-zoom-block h3 a{
+    font-family: lato, arial;
+    text-decoration: none;
+    color: #000000;
+    text-transform: uppercase;
+    display: block;
+}
+#node_show_zoom_group_summary_dates{
+    position : absolute;
+    bottom: 0px;
+    left: 0;
+    background-color: #DED9D6;
+    width : 97%;
+    opacity: 0.8;
+    padding:10px;
+}
+.field-name-field-show-dates .field-items{
+    max-height : 40px;
+    padding-right : 5px;
+    margin-bottom: 0;
+    display: inline-block;
+}
+#node_show_zoom_group_summary_dates .field-name-field-show-dates .field-items{
+    width:90%;
+}
+.field-name-field-show-dates .field-items .field-item{
+    float : left;
+    padding: 0 10px;
+}
+.view-id-zoom .field-name-scald-authors{
+  display:none;
+}
+
+/******************************************************************************/
 #boxes-box-logos_top{
     padding : 27px 0 17px 0; 
 }
@@ -277,7 +338,7 @@ div.group6{
 }
 #block-views-shows-block-1 .views-row div.group-td h3 a{
     margin : 0;
-    padding:5px 10px;
+    padding:5px;
     text-decoration: none;
     color : #000000;
     display:block;
@@ -290,12 +351,13 @@ div.group6{
     color : #C10000;
 }
 #block-views-shows-block-1 .views-row div.group-td .field-type-date{
-    padding:0 10px;
+    padding:0 5px;
 }
 .view-display-id-block_1 .field-name-field-show-dates .field-items{
   width: 100%;
   margin-bottom:0;
   overflow-y: hidden;
+  max-height:20px;
 }
 .view-display-id-block_1 .field-name-field-show-dates .field-items.more-dates{
   background: url(../images/icons/plus_black.png) no-repeat 100% 0px;
@@ -303,7 +365,7 @@ div.group6{
 
 .view-display-id-block_1 .field-name-field-show-dates .field-items.bg-white{
   max-height:none;
-  background: white url(../images/icons/minus_black.png) no-repeat 100% 0px;
+  background: white url(../images/icons/minus_black.png) no-repeat 100% 100%;
   opacity : 1;
 }
 #block-views-shows-block-1 .field-name-field-show-dates .field-items:hover{
@@ -316,8 +378,8 @@ div.group6{
     height : 30px;
     /*clear : both;*/
     position : absolute;
-    left : 381px;
-    top: 366px;
+    left : 330px;
+    top: 385px;
     
 }
 #block-menu-menu-shows-menu ul,#block-menu-menu-shows-menu ul li{
