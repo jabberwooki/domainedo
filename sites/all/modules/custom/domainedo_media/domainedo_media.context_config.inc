@@ -71,7 +71,7 @@ function domainedo_media_default_scald_context_config() {
       '*' => 'passthrough',
     ),
     'image' => array(
-      '*' => 'group-domainedo',
+      '*' => 'group-max',
     ),
     'twitter' => array(
       '*' => 'passthrough',
@@ -116,6 +116,53 @@ function domainedo_media_default_scald_context_config() {
     ),
   );
   $export['full'] = $context_config;
+
+  $context_config = new stdClass();
+  $context_config->disabled = FALSE; /* Edit this to true to make a default context_config disabled initially */
+  $context_config->api_version = 1;
+  $context_config->context = 'full_show';
+  $context_config->transcoder = array(
+    'audio' => array(
+      '*' => 'passthrough',
+    ),
+    'file' => array(
+      '*' => 'passthrough',
+    ),
+    'gallery' => array(
+      '*' => 'passthrough',
+    ),
+    'image' => array(
+      '*' => 'group-domainedo',
+    ),
+    'twitter' => array(
+      '*' => 'passthrough',
+    ),
+    'video' => array(
+      '*' => 'passthrough',
+    ),
+  );
+  $context_config->player = array(
+    'audio' => array(
+      '*' => 'default',
+    ),
+    'file' => array(
+      '*' => 'default',
+    ),
+    'gallery' => array(
+      '*' => 'default',
+    ),
+    'image' => array(
+      '*' => 'default',
+      'settings' => array(),
+    ),
+    'twitter' => array(
+      '*' => 'default',
+    ),
+    'video' => array(
+      '*' => 'default',
+    ),
+  );
+  $export['full_show'] = $context_config;
 
   $context_config = new stdClass();
   $context_config->disabled = FALSE; /* Edit this to true to make a default context_config disabled initially */
@@ -178,7 +225,7 @@ function domainedo_media_default_scald_context_config() {
       '*' => 'passthrough',
     ),
     'image' => array(
-      '*' => 'style-large',
+      '*' => 'group-max',
     ),
     'twitter' => array(
       '*' => 'passthrough',
@@ -421,6 +468,53 @@ function domainedo_media_default_scald_context_config() {
     ),
   );
   $export['title'] = $context_config;
+
+  $context_config = new stdClass();
+  $context_config->disabled = FALSE; /* Edit this to true to make a default context_config disabled initially */
+  $context_config->api_version = 1;
+  $context_config->context = 'zoom';
+  $context_config->transcoder = array(
+    'audio' => array(
+      '*' => 'passthrough',
+    ),
+    'file' => array(
+      '*' => 'passthrough',
+    ),
+    'gallery' => array(
+      '*' => 'passthrough',
+    ),
+    'image' => array(
+      '*' => 'group-zoom',
+    ),
+    'twitter' => array(
+      '*' => 'passthrough',
+    ),
+    'video' => array(
+      '*' => 'passthrough',
+    ),
+  );
+  $context_config->player = array(
+    'audio' => array(
+      '*' => 'default',
+    ),
+    'file' => array(
+      '*' => 'default',
+    ),
+    'gallery' => array(
+      '*' => 'default',
+    ),
+    'image' => array(
+      '*' => 'default',
+      'settings' => array(),
+    ),
+    'twitter' => array(
+      '*' => 'default',
+    ),
+    'video' => array(
+      '*' => 'default',
+    ),
+  );
+  $export['zoom'] = $context_config;
 
   return $export;
 }
