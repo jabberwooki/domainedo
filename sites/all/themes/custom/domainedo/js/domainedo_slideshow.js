@@ -170,7 +170,7 @@ var base_url="";
  $('.field-name-field-show-dates .field-items','#block-views-shows-block-1').each(function(){
    var nb_dates = $('.field-item',this).length;
    if( nb_dates && nb_dates > 1) {
-     var mvt = ((nb_dates+1)*10)+'px';
+     var mvt = ((nb_dates-2)*3)+'px';
      
      $(this).addClass('more-dates');
      $(this).click(function(){

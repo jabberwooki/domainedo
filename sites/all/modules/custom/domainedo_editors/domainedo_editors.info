@@ -10,6 +10,7 @@ dependencies[] = features
 dependencies[] = filter
 dependencies[] = imce
 dependencies[] = imce_mkdir
+dependencies[] = picture
 dependencies[] = strongarm
 features[ckeditor_profile][] = Advanced
 features[ckeditor_profile][] = CKEditor Global Profile

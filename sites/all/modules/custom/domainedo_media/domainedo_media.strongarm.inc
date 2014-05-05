@@ -151,6 +151,22 @@ function domainedo_media_strongarm() {
       'parseable' => TRUE,
       'formats' => array(),
     ),
+    'full_show' => array(
+      'name' => 'full_show',
+      'title' => 'Full show',
+      'description' => '',
+      'render_language' => 'XHTML',
+      'parseable' => TRUE,
+      'formats' => array(),
+    ),
+    'zoom' => array(
+      'name' => 'zoom',
+      'title' => 'zoom',
+      'description' => '',
+      'render_language' => 'XHTML',
+      'parseable' => TRUE,
+      'formats' => array(),
+    ),
   );
   $export['scald_custom_contexts'] = $strongarm;
 

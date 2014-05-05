@@ -259,11 +259,17 @@ function domainedo_contexts_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'views-zoom-block' => array(
+          'module' => 'views',
+          'delta' => 'zoom-block',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
         'views-shows-block_2' => array(
           'module' => 'views',
           'delta' => 'shows-block_2',
           'region' => 'content',
-          'weight' => '-10',
+          'weight' => '-9',
         ),
       ),
     ),

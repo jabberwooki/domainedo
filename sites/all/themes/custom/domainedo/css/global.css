@@ -80,6 +80,9 @@ h2#page-title{
     margin-bottom: 15px;
     display: inline-block;
 }
+#node_show_zoom_group_summary_dates .field-name-field-show-dates .field-items{
+    width:60%;
+}
 .group-left .field-name-field-show-dates .field-items{
     display: inline-block;
     min-width: 70%;
@@ -220,11 +223,9 @@ h2#page-title{
 /* Page d'accueil *************************************************************/
 /* Zoom ***********************************************************************/
 #block-views-zoom-block{
-    width : 320px;
-    float : left;
+    width : 100%;
     position : relative;
-    padding-bottom : 16px;
-    background: url(../images/wide/zoom_bg.png) no-repeat 0 100%;
+    margin-bottom : 20px;
 }
 #block-views-zoom-block h2{
     background: url(../images/icons/arrow_orange_yellow.png) no-repeat 0 0;
@@ -232,7 +233,7 @@ h2#page-title{
     border-bottom : 1px solid black;
     font-family: Lato,arial;
     text-transform: uppercase;
-    width: 320px;
+    width: 100%;
     text-align: right;
     padding-top:13px;
     font-weight: bold;
@@ -254,13 +255,30 @@ h2#page-title{
 }
 #node_show_zoom_group_summary_dates{
     position : absolute;
-    bottom: 16px;
+    bottom: 0px;
     left: 0;
     background-color: #DED9D6;
-    width : 300px;
+    width : 97%;
     opacity: 0.8;
     padding:10px;
 }
+.field-name-field-show-dates .field-items{
+    max-height : 40px;
+    padding-right : 5px;
+    margin-bottom: 0;
+    display: inline-block;
+}
+#node_show_zoom_group_summary_dates .field-name-field-show-dates .field-items{
+    width:90%;
+}
+.field-name-field-show-dates .field-items .field-item{
+    float : left;
+    padding: 0 10px;
+}
+.view-id-zoom .field-name-scald-authors{
+  display:none;
+}
+
 /* Menu de commodité haut *****************************************************/
 #region-header-second #block-menu-menu-top-courtesy-nav{
     float:right;

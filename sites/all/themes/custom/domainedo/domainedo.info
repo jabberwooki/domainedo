@@ -6,6 +6,7 @@ screenshot = 'screenshot.png'
 base theme = 'omega'
 breakpoints[mobile] = (min-width: 0px)
 breakpoints[narrow] = (min-width: 560px)
+breakpoints[wide] = (min-width: 960px)
 regions[page_top] = 'Page Top'
 regions[page_bottom] = 'Page Bottom'
 regions[content] = 'Content'
