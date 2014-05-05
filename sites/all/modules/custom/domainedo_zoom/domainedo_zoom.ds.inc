@@ -72,15 +72,17 @@ function domainedo_zoom_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'title',
-        1 => 'field_date',
-        2 => 'field_scald_image',
-        3 => 'body',
+        1 => 'field_scald_image',
+        2 => 'group_event_summa_dates',
+        3 => 'field_date',
+        4 => 'body',
       ),
     ),
     'fields' => array(
       'title' => 'ds_content',
-      'field_date' => 'ds_content',
       'field_scald_image' => 'ds_content',
+      'group_event_summa_dates' => 'ds_content',
+      'field_date' => 'ds_content',
       'body' => 'ds_content',
     ),
     'classes' => array(),
