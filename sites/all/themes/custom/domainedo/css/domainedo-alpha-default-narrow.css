@@ -381,7 +381,7 @@ div.group6{
     width : 250px;
     height : 30px;
     /*clear : both;*/
-    position : absolute;
+    position : relative;
     left : 330px;
     top: 385px;
     

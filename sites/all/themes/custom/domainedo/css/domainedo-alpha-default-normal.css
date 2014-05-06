@@ -1,3 +1,31 @@
+/* info flash *****************************************************************/
+body.front #block-views-evenements-block-1{
+  float:right;
+  background-color : #F5F3F4;
+  width: 592px;
+  height  : 76px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+body.front #block-views-evenements-block-1 h2{
+  float:left;
+  width: 84px;
+  height: 64px;
+  padding-right: 26px;
+  padding-left: 110px;
+  margin: 6px 20px 6px 0;
+  border-right: 1px solid black;
+  word-wrap: break-word;
+  color: #B20002;
+  text-transform: uppercase;
+  text-align: right;
+  font-size: 1.6em;
+}
+body.front #block-views-evenements-block-1 .field-content p{
+  padding: 10px 0 ;
+  font-weight: bold;
+}
+
 /* Zoom ***********************************************************************/
 #block-views-zoom-block{
     width : 320px;
@@ -44,10 +72,14 @@
     padding:10px;
 }
 /* menu du slideshow **********************************************************/
+
 #block-menu-menu-shows-menu{
-    left : 381px;
-    top: 366px;
-    
+    /*left : 381px;
+    top: 366px;*/
+    position: static;
+    float: right;
+    z-index: 9999;
+    margin: -30px 305px 0 0;
 }
 
 /* show full page *************************************************************/
