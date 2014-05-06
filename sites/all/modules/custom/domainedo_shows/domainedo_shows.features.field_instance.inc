@@ -2201,14 +2201,14 @@ function domainedo_shows_field_default_field_instances() {
     'label' => 'Tarif',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'size' => 60,
+        'size' => 255,
       ),
       'type' => 'text_textfield',
       'weight' => 19,
