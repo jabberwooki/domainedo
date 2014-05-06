@@ -15,6 +15,7 @@ function domainedo_media_user_default_permissions() {
     'name' => 'access scald dnd library',
     'roles' => array(
       'administrator' => 'administrator',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'scald_dnd_library',
   );
@@ -51,6 +52,7 @@ function domainedo_media_user_default_permissions() {
     'name' => 'administer scald atoms',
     'roles' => array(
       'administrator' => 'administrator',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'scald',
   );
