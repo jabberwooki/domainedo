@@ -13,28 +13,36 @@ function domainedo_shows_user_default_permissions() {
   // Exported permission: 'create festival content'.
   $permissions['create festival content'] = array(
     'name' => 'create festival content',
-    'roles' => array(),
+    'roles' => array(
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'create programmer content'.
   $permissions['create programmer content'] = array(
     'name' => 'create programmer content',
-    'roles' => array(),
+    'roles' => array(
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'create show content'.
   $permissions['create show content'] = array(
     'name' => 'create show content',
-    'roles' => array(),
+    'roles' => array(
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'create structure content'.
   $permissions['create structure content'] = array(
     'name' => 'create structure content',
-    'roles' => array(),
+    'roles' => array(
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'node',
   );
 
@@ -69,28 +77,36 @@ function domainedo_shows_user_default_permissions() {
   // Exported permission: 'delete own festival content'.
   $permissions['delete own festival content'] = array(
     'name' => 'delete own festival content',
-    'roles' => array(),
+    'roles' => array(
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'delete own programmer content'.
   $permissions['delete own programmer content'] = array(
     'name' => 'delete own programmer content',
-    'roles' => array(),
+    'roles' => array(
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'delete own show content'.
   $permissions['delete own show content'] = array(
     'name' => 'delete own show content',
-    'roles' => array(),
+    'roles' => array(
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'delete own structure content'.
   $permissions['delete own structure content'] = array(
     'name' => 'delete own structure content',
-    'roles' => array(),
+    'roles' => array(
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'node',
   );
 
@@ -125,56 +141,72 @@ function domainedo_shows_user_default_permissions() {
   // Exported permission: 'edit any festival content'.
   $permissions['edit any festival content'] = array(
     'name' => 'edit any festival content',
-    'roles' => array(),
+    'roles' => array(
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'edit any programmer content'.
   $permissions['edit any programmer content'] = array(
     'name' => 'edit any programmer content',
-    'roles' => array(),
+    'roles' => array(
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'edit any show content'.
   $permissions['edit any show content'] = array(
     'name' => 'edit any show content',
-    'roles' => array(),
+    'roles' => array(
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'edit any structure content'.
   $permissions['edit any structure content'] = array(
     'name' => 'edit any structure content',
-    'roles' => array(),
+    'roles' => array(
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'edit own festival content'.
   $permissions['edit own festival content'] = array(
     'name' => 'edit own festival content',
-    'roles' => array(),
+    'roles' => array(
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'edit own programmer content'.
   $permissions['edit own programmer content'] = array(
     'name' => 'edit own programmer content',
-    'roles' => array(),
+    'roles' => array(
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'edit own show content'.
   $permissions['edit own show content'] = array(
     'name' => 'edit own show content',
-    'roles' => array(),
+    'roles' => array(
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'edit own structure content'.
   $permissions['edit own structure content'] = array(
     'name' => 'edit own structure content',
-    'roles' => array(),
+    'roles' => array(
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'node',
   );
 
