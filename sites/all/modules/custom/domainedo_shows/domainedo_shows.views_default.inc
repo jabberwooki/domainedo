@@ -711,6 +711,20 @@ function domainedo_shows_views_default_views() {
   $handler->display->display_options['row_options']['grouping_fieldset']['group_field'] = 'field_data_field_show_dates|field_show_dates_value';
   $handler->display->display_options['row_options']['default_fieldset']['view_mode'] = 'frontpage_block';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  /* Footer: Global: Text area */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['content'] = '<div class="block block-menu contextual-links-region block-menu-shows-menu block-menu-menu-shows-menu even" id="block-menu-menu-shows-menu">
+    <div class="block-inner clearfix">              <h2 class="block-title">Menu Spectacles</h2>
+        <div class="contextual-links-wrapper contextual-links-processed"><a class="contextual-links-trigger contextual-links-trigger-active" href="#">Configure</a><ul class="contextual-links"><li class="menu-list first"><a href="/admin/structure/menu/manage/menu-shows-menu/list?destination=node">List links</a></li><li class="menu-edit"><a href="/admin/structure/menu/manage/menu-shows-menu/edit?destination=node">Edit menu</a></li><li class="block-configure last"><a href="/admin/structure/block/manage/menu/menu-shows-menu/configure?destination=node">Configure block</a></li></ul></div>
+    <div class="content clearfix">
+      <ul class="menu"><li class="first leaf"><a href="/spectacles/tous-les-spectacles" title="">Tous les spectacles</a></li>
+<li class="last leaf"><a href="/calendrier" title="">Calendrier</a></li>
+</ul>    </div>
+  </div></div>';
+  $handler->display->display_options['footer']['area']['format'] = 'full_html';
 
   /* Display: Accueil mobile */
   $handler = $view->new_display('block', 'Accueil mobile', 'block_2');
@@ -755,6 +769,14 @@ function domainedo_shows_views_default_views() {
     t('Type de spectacle'),
     t('Accueil'),
     t('Spectacles à l\'affiche'),
+    t('<div class="block block-menu contextual-links-region block-menu-shows-menu block-menu-menu-shows-menu even" id="block-menu-menu-shows-menu">
+    <div class="block-inner clearfix">              <h2 class="block-title">Menu Spectacles</h2>
+        <div class="contextual-links-wrapper contextual-links-processed"><a class="contextual-links-trigger contextual-links-trigger-active" href="#">Configure</a><ul class="contextual-links"><li class="menu-list first"><a href="/admin/structure/menu/manage/menu-shows-menu/list?destination=node">List links</a></li><li class="menu-edit"><a href="/admin/structure/menu/manage/menu-shows-menu/edit?destination=node">Edit menu</a></li><li class="block-configure last"><a href="/admin/structure/block/manage/menu/menu-shows-menu/configure?destination=node">Configure block</a></li></ul></div>
+    <div class="content clearfix">
+      <ul class="menu"><li class="first leaf"><a href="/spectacles/tous-les-spectacles" title="">Tous les spectacles</a></li>
+<li class="last leaf"><a href="/calendrier" title="">Calendrier</a></li>
+</ul>    </div>
+  </div></div>'),
     t('Accueil mobile'),
   );
   $export['shows'] = $view;
