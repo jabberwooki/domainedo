@@ -166,6 +166,13 @@ function news_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  /* Footer: Global: Unfiltered text */
+  $handler->display->display_options['footer']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['footer']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['footer']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['footer']['area_text_custom']['label'] = 'Tous les événements';
+  $handler->display->display_options['footer']['area_text_custom']['content'] = '<p class="all_home_events"><a href="evenements">Tous les événements</a></p>';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Contenu: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -443,6 +450,8 @@ function news_views_default_views() {
     t('more'),
     t('Block Flash Info'),
     t('Info Flash'),
+    t('Tous les événements'),
+    t('<p class="all_home_events"><a href="evenements">Tous les événements</a></p>'),
     t('<h2 class="title-flash-info">[title]</h2>'),
     t('Page-evenement-draggable'),
     t('Classement des événements'),
