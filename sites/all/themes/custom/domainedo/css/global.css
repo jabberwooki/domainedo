@@ -195,6 +195,51 @@ h2#page-title{
 .region-header-second .sprite-youtube:hover {
     background-position: -40px -102px;
 }
+/* info flash *****************************************************************/
+body.front #block-views-evenements-block-1{
+  height  : 76px;
+  margin-bottom: 5px;
+  /*overflow: hidden;*/
+  background : #F5F3F4 url(../images/icons/bg_flash.png) no-repeat 0 0;
+}
+body.front #block-views-evenements-block-1 .view-content{
+  float: left;
+}
+body.front #block-views-evenements-block-1 h2{
+  float:left;
+  width: 20%;
+  height: 63px;
+  padding-right: 3%;
+  padding-left: 20%;
+  margin: 0 20px 10px 0;
+  border-right: 1px solid black;
+  word-wrap: break-word;
+  color: #B20002;
+  text-transform: uppercase;
+  text-align: right;
+  font-size: 1.4em;
+}
+body.front #block-views-evenements-block-1 .field-content p{
+  float: left;
+  padding: 0 ;
+  margin: 7px 0;
+  font-weight: bold;
+  width: 33%;
+  height:63px;
+  border-right: 1px solid black;
+}
+body.front #block-views-evenements-block-1 .view-footer{
+  float:right;
+}
+body.front #block-views-evenements-block-1 .view-footer a{
+  font-size: 0.8em;
+  display:block;
+  height: 18px;
+  color : black;
+  background : url(../images/icons/plus_black.png) no-repeat 90% 10px;
+  padding: 55px 10px 0 0;
+}
+
 
 /*footer ******************************************************************/
 #footer-bottom{

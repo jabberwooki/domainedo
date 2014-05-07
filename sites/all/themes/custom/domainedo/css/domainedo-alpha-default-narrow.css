@@ -7,6 +7,27 @@
 /* If you are using the default media queries provided by Omega, these styles will also
  *  apply to the widescreen layout unless they are overridden by the widescreen styles. */
 
+/* info flash *****************************************************************/
+body.front #block-views-evenements-block-1{
+  width: 592px;
+  margin-bottom: 20px;
+  margin-left: 23px;
+  overflow: hidden;
+ }
+ body.front #block-views-evenements-block-1 h2{
+  width: 84px;
+  padding-right: 26px;
+  padding-left: 110px;
+  margin: 0 20px 10px 0;
+  border-right: 1px solid black;
+  word-wrap: break-word;
+  color: #B20002;
+  font-size: 1.6em;
+}
+body.front #block-views-evenements-block-1 .field-content p{
+  float: none;
+  width: 468px;
+}
 /* Zoom ***********************************************************************/
 #block-views-zoom-block{
     width : 591px;
