@@ -27,7 +27,7 @@ jQuery(function($) {
         var nb_date = $("div > div > div.field-item > span.date-display-single",$(this)).length;
         var zone_date = $("div > div.field-items",$(this)).first();
         var msg_date = (nb_date > 1) ? '<div class="number_show_dates" >'+nb_date+' dates</div>' : '<div class="number_show_dates">'+nb_date+' date</div>';
-        $(msg_date).insertBefore($(zone_date));        
+        if (nb_date != 0 ) $(msg_date).insertBefore($(zone_date));        
         
     });
     
