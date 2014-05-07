@@ -27,6 +27,14 @@ body.front #block-views-evenements-block-1{
 body.front #block-views-evenements-block-1 .field-content p{
   float: none;
   width: 468px;
+  font-size: 1em;
+}
+
+body.front #block-views-evenements-block-1 .view-footer a{
+  width: auto;
+  text-indent: 0;
+  padding: 55px 10px 0 0;
+  background : url(../images/icons/plus_black.png) no-repeat 90% 10px;
 }
 /* Zoom ***********************************************************************/
 #block-views-zoom-block{
@@ -578,7 +586,20 @@ div.bef-checkboxes div.form-type-bef-checkbox{
     padding : 20px 0 0 0;
     margin-bottom : 20px;
 }
-
+/* festivals ******************************************************************/
+.node-festival > .group-left {
+    float:left;
+    width: 63%;
+}
+.ds-3col-stacked-fluid.group-two-sidebars > .group-middle {
+    width: 33%;
+    float :right;
+}
+.node-festival > .group-right {
+    float: right;
+    width: 33%;
+    clear:right;
+}
 
 /*full page show **************************************************************/
 .group-left > .field-name-title h2{

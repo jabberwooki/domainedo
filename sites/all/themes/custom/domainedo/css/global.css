@@ -24,9 +24,10 @@ img{
   max-width: 100%;
 }
 /* menus **********************************************************************/
-.block-menu a{
+.block-menu a, h2 a, h3 a{
     font-family: lato,arial;
 }
+
 /* Eléments invisibles ********************************************************/
 #block-boxes-social-network h2,
 #block-search-form h2,
@@ -207,11 +208,11 @@ body.front #block-views-evenements-block-1 .view-content{
 }
 body.front #block-views-evenements-block-1 h2{
   float:left;
-  width: 20%;
+  width: 30%;
   height: 63px;
   padding-right: 3%;
   padding-left: 20%;
-  margin: 0 20px 10px 0;
+  margin: 7px 20px 10px 0;
   border-right: 1px solid black;
   word-wrap: break-word;
   color: #B20002;
@@ -224,9 +225,10 @@ body.front #block-views-evenements-block-1 .field-content p{
   padding: 0 ;
   margin: 7px 0;
   font-weight: bold;
-  width: 33%;
+  font-size:0.8em;
   height:63px;
   border-right: 1px solid black;
+  width: 35%;
 }
 body.front #block-views-evenements-block-1 .view-footer{
   float:right;
@@ -234,10 +236,13 @@ body.front #block-views-evenements-block-1 .view-footer{
 body.front #block-views-evenements-block-1 .view-footer a{
   font-size: 0.8em;
   display:block;
-  height: 18px;
+  height: 63px;
   color : black;
-  background : url(../images/icons/plus_black.png) no-repeat 90% 10px;
-  padding: 55px 10px 0 0;
+  background : url(../images/icons/plus_black.png) no-repeat 0 50%;
+  padding: 0 10px 0 0 ;
+  width: 22px;
+  text-indent: -6000px;
+
 }
 
 
@@ -424,6 +429,25 @@ body.front #block-views-evenements-block-1 .view-footer a{
     background: url("../images/icons/canceled.png") no-repeat 0 0;
     text-indent: -2000px;
 }
+
+/* festivals ******************************************************************/
+.node-festival > .group-left {
+    width: 100%;
+}
+.ds-3col-stacked-fluid.group-two-sidebars > .group-middle {
+    width: 48%;
+    float :left;
+}
+.node-festival > .group-right {
+    float: left;
+    width: 50%;
+}
+.field-name-field-festival-shows > .field-items > .field-item h3,
+      div.view-display-id-list div.group6 > div > div .field-item h3{
+          padding : 5px 15px 5px 5px;
+          background-color: #F5F5F5;
+          margin-bottom :10px; 
+      }
 
 
 /* media queries **************************************************************/
@@ -701,11 +725,13 @@ body.front #block-views-evenements-block-1 .view-footer a{
 }
 @media screen and (min-width:481px){
   /* la liste des résultats ****************************************************/
-      div.view-display-id-list .view-content{
+      
+    div.view-display-id-list .view-content{
           margin-top :20px;
           clear: both;
       }
 
+      .field-name-field-festival-shows > .field-items > .field-item,
       div.view-display-id-list div.group6 > div{
           float : left;
           width: 50%;
@@ -714,15 +740,13 @@ body.front #block-views-evenements-block-1 .view-footer a{
           margin : 0 0 20px 0;
           padding : 0;
       }
+      .field-name-field-festival-shows > .field-items > .field-item.even > div,
       div.view-display-id-list div.group6 > div.views-row-odd > div{
           padding-right: 20px;
       }
 
-      div.view-display-id-list div.group6 > div > div .field-item h3{
-          padding : 5px 15px 5px 5px;
-          background-color: #F5F5F5;
-          margin-bottom :10px;
-      }
+      
+      .field-name-field-festival-shows > .field-items > .field-item h3 a,
       div.view-display-id-list div.group6 > div > div .field-item h3 a{
           color: #000000;
           text-decoration : none;
