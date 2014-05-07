@@ -51,12 +51,8 @@ body.front #block-views-evenements-block-1{
 /* menu du slideshow **********************************************************/
 
 #block-menu-menu-shows-menu{
-    /*left : 381px;
-    top: 366px;*/
-    position: static;
-    float: right;
-    z-index: 9999;
-    margin: -30px 305px 0 0;
+    z-index: 9;
+    margin: 0;
 }
 
 /* show full page *************************************************************/

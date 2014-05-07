@@ -402,9 +402,10 @@ div.group6{
     width : 250px;
     height : 30px;
     /*clear : both;*/
-    position : relative;
-    left : 330px;
-    top: 385px;
+    position : absolute;
+    left: 15px;
+    top: 335px;
+    z-index : 9;
     
 }
 #block-menu-menu-shows-menu ul,#block-menu-menu-shows-menu ul li{
@@ -421,7 +422,7 @@ div.group6{
     text-decoration: none;
     height:20px;
     display : block;
-    z-index : 99;
+    
 }
 #block-menu-menu-shows-menu ul > li.first > a{
     padding-right: 25px;
