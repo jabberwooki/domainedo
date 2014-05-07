@@ -23,8 +23,8 @@
 img{
   max-width: 100%;
 }
-/* menus **********************************************************************/
-.block-menu a, h2 a, h3 a{
+/* titres **********************************************************************/
+.block-menu a, h2 a, h3 a, h2, h3{
     font-family: lato,arial;
 }
 
@@ -783,7 +783,8 @@ body.front #block-views-evenements-block-1 .view-footer a{
       div.view-display-id-list div.group6 > div .field-name-scald-authors{
         display:none;
       }
-      div.view-display-id-list div.group6 > div .ds-2col-stacked-fluid > .group-right {
+      div.view-display-id-list div.group6 > div .ds-2col-stacked-fluid > .group-right,
+      .node-festival .ds-2col-stacked-fluid > .group-right {
         width: 48%;
       }
       
