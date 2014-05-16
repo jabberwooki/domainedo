@@ -336,7 +336,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'module' => 'domainedo_media',
         'settings' => array(),
-        'type' => 'title',
+        'type' => 'sdl_editor_representation',
         'weight' => 16,
       ),
       'teaser' => array(
