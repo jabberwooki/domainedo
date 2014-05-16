@@ -101,6 +101,24 @@ function domainedo_shows_features_date_format_default() {
   $fdf_config = array();
 
   $fdf_config[] = array(
+    'dfid' => 36,
+    'format' => 'l d F Y - H\\hi',
+    'type' => 'custom',
+    'locked' => 0,
+  );
+  $fdf_config[] = array(
+    'dfid' => 37,
+    'format' => 'D d M Y - H\\hi',
+    'type' => 'custom',
+    'locked' => 0,
+  );
+  $fdf_config[] = array(
+    'dfid' => 38,
+    'format' => 'd/m/y - H\\hi',
+    'type' => 'custom',
+    'locked' => 0,
+  );
+  $fdf_config[] = array(
     'dfid' => 39,
     'format' => 'l d M - H\\hi',
     'type' => 'custom',
@@ -118,6 +136,12 @@ function domainedo_shows_features_date_format_default() {
     'type' => 'custom',
     'locked' => 0,
   );
+  $fdf_config[] = array(
+    'dfid' => 42,
+    'format' => 'H\\hi',
+    'type' => 'custom',
+    'locked' => 0,
+  );
   return $fdf_config;
 }
 
@@ -127,6 +151,13 @@ function domainedo_shows_features_date_format_default() {
 function domainedo_shows_features_date_type_default() {
   $fdt_config = array();
 
+  $fdt_config[] = array(
+    'is_new' => FALSE,
+    'module' => '',
+    'type' => 'calendar_time',
+    'title' => 'Calendrier (heure)',
+    'locked' => 0,
+  );
   $fdt_config[] = array(
     'is_new' => FALSE,
     'module' => '',
