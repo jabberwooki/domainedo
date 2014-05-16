@@ -2201,14 +2201,14 @@ function domainedo_shows_field_default_field_instances() {
     'label' => 'Tarif',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'size' => 60,
+        'size' => 255,
       ),
       'type' => 'text_textfield',
       'weight' => 19,
@@ -2688,10 +2688,8 @@ function domainedo_shows_field_default_field_instances() {
       'full' => array(
         'label' => 'hidden',
         'module' => 'domainedo_media',
-        'settings' => array(
-          'link' => 0,
-        ),
-        'type' => 'full',
+        'settings' => array(),
+        'type' => 'full_show',
         'weight' => 9,
       ),
       'list' => array(
@@ -2709,10 +2707,8 @@ function domainedo_shows_field_default_field_instances() {
       'zoom' => array(
         'label' => 'hidden',
         'module' => 'domainedo_media',
-        'settings' => array(
-          'link' => 1,
-        ),
-        'type' => 'block',
+        'settings' => array(),
+        'type' => 'zoom',
         'weight' => 1,
       ),
     ),

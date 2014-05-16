@@ -133,7 +133,7 @@ function domainedo_superfish($variables) {
           $wmul = array();
         }
         $output['content'] = isset($wmul[0]) ? $wmul[0] : '';
-        $output['content'] .= '<nav><ul id="superfish-' . $id . '"';
+        $output['content'] .= '<nav id="nav-superfish-' . $id .'><ul id="superfish-' . $id . '"';
         $output['content'] .= ' class="menu sf-menu sf-' . $menu_name . ' sf-' . $sfsettings['type'] . ' sf-style-' . $sfsettings['style'];
         $output['content'] .= ($sfsettings['itemcounter']) ? ' sf-total-items-' . $menu_tree['total_children'] : '';
         $output['content'] .= ($sfsettings['itemcounter']) ? ' sf-parent-items-' . $menu_tree['parent_children'] : '';
@@ -156,3 +156,11 @@ function domainedo_superfish($variables) {
  * function domainedo_menu_tree($variables) {
   return '<nav><ul class="menu">' . $variables['tree'] . '</ul></nav>';
 }*/
+
+function domainedo_preprocess_image(&$variables) {
+  foreach (array('width', 'height') as $key) {
+  
+   unset($variables[$key]);
+   unset($variables[$key]);
+ }
+}

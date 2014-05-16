@@ -117,7 +117,7 @@ function domainedo_shows_node_view_alter(&$build) {
  */
 function domainedo_shows_get_festivals() {
 	$festivals = array(
-			'saperlipopette' => array('title' => 'Saperlipopette', 'weight' => 11, 'url' => 'http://www.coopernet.fr'),
+			'saperlipopette' => array('title' => 'Saperlipopette', 'weight' => 11, 'url' => 'spectacles/saperlipopette'),
 			'printemps-des-comediens' => array('title' => 'Printemps des comédiens', 'weight' => 12, 'url' => 'http://www.coopernet.fr'),
 			'folies-do' => array('title' => 'Folies d\'O', 'weight' => 13, 'url' => 'http://www.coopernet.fr'),
 			'radio-france' => array('title' => 'Radio France', 'weight' => 14, 'url' => 'http://www.coopernet.fr'),

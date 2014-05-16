@@ -153,23 +153,29 @@ function domainedo_contexts_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'views-evenements-block_1' => array(
+          'module' => 'views',
+          'delta' => 'evenements-block_1',
+          'region' => 'content',
+          'weight' => '-29',
+        ),
         'views-zoom-block' => array(
           'module' => 'views',
           'delta' => 'zoom-block',
           'region' => 'content',
-          'weight' => '-10',
+          'weight' => '-28',
         ),
         'views-shows-block_1' => array(
           'module' => 'views',
           'delta' => 'shows-block_1',
           'region' => 'content',
-          'weight' => '-9',
+          'weight' => '-27',
         ),
         'menu-menu-shows-menu' => array(
           'module' => 'menu',
           'delta' => 'menu-shows-menu',
           'region' => 'content',
-          'weight' => '-8',
+          'weight' => '-26',
         ),
       ),
     ),
@@ -259,11 +265,23 @@ function domainedo_contexts_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'views-evenements-block_1' => array(
+          'module' => 'views',
+          'delta' => 'evenements-block_1',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
+        'views-zoom-block' => array(
+          'module' => 'views',
+          'delta' => 'zoom-block',
+          'region' => 'content',
+          'weight' => '-9',
+        ),
         'views-shows-block_2' => array(
           'module' => 'views',
           'delta' => 'shows-block_2',
           'region' => 'content',
-          'weight' => '-10',
+          'weight' => '-8',
         ),
       ),
     ),
