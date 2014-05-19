@@ -449,7 +449,11 @@ body.front #block-views-evenements-block-1 .view-footer a{
           margin-bottom :10px; 
       }
 
-
+.field-name-field-festival-shows > .field-items > .field-item h3 a,
+      div.view-display-id-list div.group6 > div > div .field-item h3 a{
+          color: #000000;
+          text-decoration : none;
+      }
 /* media queries **************************************************************/
 @media screen and (max-width:980px){
   /* Fiche de spectacle ***************************************************/
@@ -746,11 +750,7 @@ body.front #block-views-evenements-block-1 .view-footer a{
       }
 
       
-      .field-name-field-festival-shows > .field-items > .field-item h3 a,
-      div.view-display-id-list div.group6 > div > div .field-item h3 a{
-          color: #000000;
-          text-decoration : none;
-      }
+      
       .ds-2col-stacked-fluid > .group-right {
           width: 45%;  
       }
