@@ -118,12 +118,13 @@ function domainedo_shows_node_view_alter(&$build) {
 function domainedo_shows_get_festivals() {
 	$festivals = array(
 			'saperlipopette' => array('title' => 'Saperlipopette', 'weight' => 11, 'url' => 'spectacles/saperlipopette'),
-			'printemps-des-comediens' => array('title' => 'Printemps des comédiens', 'weight' => 12, 'url' => 'http://www.coopernet.fr'),
-			'folies-do' => array('title' => 'Folies d\'O', 'weight' => 13, 'url' => 'http://www.coopernet.fr'),
-			'radio-france' => array('title' => 'Radio France', 'weight' => 14, 'url' => 'http://www.coopernet.fr'),
-			'nuits-do' => array('title' => 'Nuits d\'O', 'weight' => 15, 'url' => 'http://www.coopernet.fr'),
-			'arabesques' => array('title' => 'Arabesques', 'weight' => 16, 'url' => 'http://www.coopernet.fr'),
-			'festival-hiver' => array('title' => 'Festival d\'hiver', 'weight' => 17, 'url' => 'http://www.coopernet.fr'),
+			'printemps-des-comediens' => array('title' => 'Printemps des comédiens', 'weight' => 12, 'url' => 'spectacles/printemps-des-comédiens'),
+			'folies-do' => array('title' => 'Folies d\'O', 'weight' => 13, 'url' => 'spectacles/folies-do'),
+			'radio-france' => array('title' => 'Radio France', 'weight' => 14, 'url' => 'spectacles/radio-france'),
+			'nuits-do' => array('title' => 'Nuits d\'O', 'weight' => 15, 'url' => 'spectacles/nuits-do'),
+			'arabesques' => array('title' => 'Arabesques', 'weight' => 16, 'url' => 'spectacles/arabesques'),
+			'festival-hiver' => array('title' => 'Festival d\'hiver', 'weight' => 17, 'url' => 'spectacles/festival-dhiver'),
+      'nuit-gitane' => array('title' => 'Nuit Gitane', 'weight' => 18, 'url' => 'spectacles/nuit-gitane'),
 	);
 	
 	return $festivals;
