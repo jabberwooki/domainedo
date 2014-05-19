@@ -491,7 +491,7 @@ div.group6{
     background: url(../images/icons/on-off-home-ss.png) no-repeat 0 0;
 }
 /* Menus spectacles ***********************************************************/
-div.menu-block-domainedo-shows-tab-menu > ul{
+div.menu-block-domainedo-shows-tab-menu > ul,.block-menu-block-1 ul{
     height : 25px;
     border-top : 1px solid black;
     border-bottom : 1px solid black;
@@ -499,13 +499,18 @@ div.menu-block-domainedo-shows-tab-menu > ul{
     margin : 0;
     background-color: #F5F5F5;
 }
-div.menu-block-domainedo-shows-tab-menu > ul > li{
+
+div.menu-block-domainedo-shows-tab-menu > ul > li, .block-menu-block-1 ul > li{
     float :left;
     list-style: none;
     padding : 0;
     margin : 0;
 }
-div.menu-block-domainedo-shows-tab-menu > ul > li > a{
+div.menu-block-domainedo-shows-tab-menu > ul > li.last{
+    display : none;
+}
+div.menu-block-domainedo-shows-tab-menu > ul > li > a,
+.menu-name-main-menu > ul > li > a{
     display:block;
     padding : 2px 13px 0 13px;
     text-decoration: none;
@@ -514,12 +519,15 @@ div.menu-block-domainedo-shows-tab-menu > ul > li > a{
     border-right : 1px solid black;
     height : 23px;
 }
-div.menu-block-domainedo-shows-tab-menu > ul > li.first > a{
+div.menu-block-domainedo-shows-tab-menu > ul > li.first > a,
+.menu-name-main-menu > ul > li.first > a{
     padding : 2px 13px 0 0;
 
 }
 div.menu-block-domainedo-shows-tab-menu > ul > li > a:hover,
-div.menu-block-domainedo-shows-tab-menu > ul > li > a.active-trail{
+div.menu-block-domainedo-shows-tab-menu > ul > li > a.active-trail,
+.menu-name-main-menu > ul > li > a:hover,
+.menu-name-main-menu > ul > li > a.active-trail{
     color: #C71D20;
 }
 
