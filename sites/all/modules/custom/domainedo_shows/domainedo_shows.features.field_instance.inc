@@ -3998,7 +3998,7 @@ function domainedo_shows_field_default_field_instances() {
           'link' => 0,
         ),
         'type' => 'full',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'full' => array(
         'label' => 'above',
@@ -4032,6 +4032,47 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-show_locations-field_scald_image'
+  $field_instances['taxonomy_term-show_locations-field_scald_image'] = array(
+    'bundle' => 'show_locations',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'domainedo_media',
+        'settings' => array(
+          'link' => 0,
+        ),
+        'type' => 'full',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_scald_image',
+    'label' => 'Image',
+    'required' => 0,
+    'settings' => array(
+      'referencable_types' => array(
+        'audio' => 0,
+        'file' => 0,
+        'gallery' => 0,
+        'image' => 'image',
+        'twitter' => 0,
+        'video' => 0,
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'atom_reference',
+      'settings' => array(),
+      'type' => 'atom_reference_textfield',
+      'weight' => 42,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-show_locations-field_scald_sound'
   $field_instances['taxonomy_term-show_locations-field_scald_sound'] = array(
     'bundle' => 'show_locations',
@@ -4046,7 +4087,7 @@ function domainedo_shows_field_default_field_instances() {
           'link' => 0,
         ),
         'type' => 'full',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'full' => array(
         'label' => 'above',
@@ -4094,7 +4135,7 @@ function domainedo_shows_field_default_field_instances() {
           'link' => 0,
         ),
         'type' => 'full',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'full' => array(
         'label' => 'above',
