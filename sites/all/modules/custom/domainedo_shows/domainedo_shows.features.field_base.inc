@@ -459,6 +459,7 @@ function domainedo_shows_field_default_field_bases() {
         'nuits-do' => 'Nuits d\'O',
         'arabesques' => 'Arabesques',
         'festival-hiver' => 'Festival d\'hiver',
+        'nuit-gitane' => 'Nuit Gitane',
       ),
       'allowed_values_function' => '',
     ),
