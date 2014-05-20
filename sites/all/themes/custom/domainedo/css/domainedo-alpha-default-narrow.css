@@ -531,12 +531,7 @@ div.menu-block-domainedo-shows-tab-menu > ul > li > a.active-trail,
     color: #C71D20;
 }
 /* Menus de troisième niveau **************************************************/
-/*.menu-block-2 > ul.menu > li{
-  display:none;
-}
-.menu-block-2 > ul > li{
-  display:none;
-}*/
+
 .menu-block-2{
   margin-top : 15px;
 }
@@ -544,18 +539,6 @@ div.menu-block-domainedo-shows-tab-menu > ul > li > a.active-trail,
 .menu-block-2 > ul li{
   padding:0;
   margin:0;
-}
-.menu-block-2 > ul > li li{
-  display:none;
-}
-
-.menu-block-2 > ul > li.active{
-  display:block;
-  background-color : #F5F5F5;
-  margin-bottom : 10px;
-}
-.menu-block-2 > ul > li.active li,.menu-block-2 > ul > li.active-trail li{
-  display:block;
 }
 .menu-block-2 > ul li{
   list-style: none;
@@ -569,21 +552,19 @@ div.menu-block-domainedo-shows-tab-menu > ul > li > a.active-trail,
 .menu-block-2 > ul li.active > a{
   background-color : #FFC929;
 }
-.menu-block-2 > ul > li > a{
-  display: none;
-}
+
 .menu-block-2 > ul li.active.expanded > a{
   background-color : transparent;
 }
-.menu-block-2 > ul > li > ul{
+.menu-block-2 > ul{
   background-color : #F5F5F5;
   margin-bottom : 5px;
 }
-.menu-block-2 > ul > li > ul > li > a{
+.menu-block-2 > ul.menu > li  > a{
   padding : 5px 0 5px 30px;
-  background: url(../images/icons/arrow-nav-3.png) no-repeat 17px 50%;
+  background: url(../images/icons/arrow-nav-3.png) no-repeat 17px 40%;
 }
-.menu-block-2 > ul > li > ul > li >ul > li > a{
+.menu-block-2 > ul > li > ul > li > a{
   padding : 5px 0 5px 42px;
 }
 /* Pages tous les spectacles **************************************************/
