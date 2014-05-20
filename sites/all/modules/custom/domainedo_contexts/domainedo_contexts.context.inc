@@ -48,7 +48,7 @@ function domainedo_contexts_context_default_contexts() {
           'module' => 'domainedo_config',
           'delta' => 'domainedo_breadcrumb',
           'region' => 'preface_first',
-          'weight' => '-10',
+          'weight' => '1',
         ),
         'boxes-logos_bottom' => array(
           'module' => 'boxes',
@@ -130,6 +130,52 @@ function domainedo_contexts_context_default_contexts() {
   t('Partout sur le site version "bureau"');
   t('desktop layout ');
   $export['desktop-all'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'desktop-no-show';
+  $context->description = 'Partout sur le site desktop sauf en page d\'accueil et sur les pages de spectacles';
+  $context->tag = 'desktop layout ';
+  $context->conditions = array(
+    'cmd' => array(
+      'values' => array(
+        2 => 2,
+        3 => 3,
+      ),
+    ),
+    'path' => array(
+      'values' => array(
+        '~<front>' => '~<front>',
+        '~spectacles/*' => '~spectacles/*',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'menu_block-2' => array(
+          'module' => 'menu_block',
+          'delta' => '2',
+          'region' => 'sidebar_first',
+          'weight' => '-10',
+        ),
+        'menu_block-1' => array(
+          'module' => 'menu_block',
+          'delta' => '1',
+          'region' => 'preface_first',
+          'weight' => '2',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 1;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Partout sur le site desktop sauf en page d\'accueil et sur les pages de spectacles');
+  t('desktop layout ');
+  $export['desktop-no-show'] = $context;
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
