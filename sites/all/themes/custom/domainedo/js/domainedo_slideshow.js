@@ -200,4 +200,40 @@ var base_url="";
    }
  });
  
+ /*
+  * Gestion de l'apparition et la disparition du slideshow en page d'accueil
+  * au redimensionnement de la fenêtre
+  */
+ var ss_visible = true;
+ var link_shows_visible = false;
+ var link_shows_created = false;
+ var link_shows = '<h2 class="h2-event" id="h2-js-shows"><a href="spectacles/tous-les-spectacles">Prochains spectacles</a></h2>'
+ 
+ if ($(window).width() < 740) manageDisplayHomeSlideshow();
+ window.onresize = function(){
+      
+      if (($(window).width() < 740) && ss_visible) manageDisplayHomeSlideshow();
+      else if (!ss_visible && ($(window).width() > 740)) {
+        $('#block-views-shows-block-1').show();
+        ss_visible = true;
+        console.log('lien créé : '+link_shows_created+' lien visible : '+link_shows_visible);
+        if(link_shows_created && link_shows_visible){
+          $('#h2-js-shows').hide();
+          link_shows_visible = false;
+        }
+      }
+ }
+ function manageDisplayHomeSlideshow(){
+   $('#block-views-shows-block-1').hide();
+   if(!link_shows_visible && !link_shows_created) {
+     $(link_shows).insertBefore('#h2-event-home');
+     link_shows_created = true;
+   }
+   else if (!link_shows_visible && link_shows_created){
+     $('#h2-js-shows').show();
+     link_shows_visible = true;
+   }
+   ss_visible = false;
+   link_shows_visible = true;
+ }
 });
