@@ -19,9 +19,10 @@ function domainedo_contexts_default_box() {
   $box->description = 'Titre lien vers les événements en page d\'accueil';
   $box->options = array(
     'body' => array(
-      'value' => '<h2 class="h2-event"><a href="evenements">Autres événements</a></h2>',
+      'value' => '<h2 class="h2-event" id="h2-event-home"><a href="evenements">Autres événements</a></h2>',
       'format' => 'full_html',
     ),
+    'additional_classes' => '',
   );
   $export['event_home_title'] = $box;
 
