@@ -13,6 +13,7 @@ dependencies[] = features
 dependencies[] = menu
 dependencies[] = search
 dependencies[] = views
+features[box][] = event_home_title
 features[box][] = logos_bottom
 features[box][] = logos_top
 features[box][] = social_network

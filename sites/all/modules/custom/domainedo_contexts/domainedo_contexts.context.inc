@@ -217,11 +217,11 @@ function domainedo_contexts_context_default_contexts() {
           'region' => 'content',
           'weight' => '-27',
         ),
-        'menu-menu-shows-menu' => array(
-          'module' => 'menu',
-          'delta' => 'menu-shows-menu',
+        'boxes-event_home_title' => array(
+          'module' => 'boxes',
+          'delta' => 'event_home_title',
           'region' => 'content',
-          'weight' => '-26',
+          'weight' => '-10',
         ),
       ),
     ),

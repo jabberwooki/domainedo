@@ -13,6 +13,21 @@ function domainedo_contexts_default_box() {
   $box = new stdClass();
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
   $box->api_version = 1;
+  $box->delta = 'event_home_title';
+  $box->plugin_key = 'simple';
+  $box->title = '<none>';
+  $box->description = 'Titre lien vers les événements en page d\'accueil';
+  $box->options = array(
+    'body' => array(
+      'value' => '<h2 class="h2-event"><a href="evenements">Autres événements</a></h2>',
+      'format' => 'full_html',
+    ),
+  );
+  $export['event_home_title'] = $box;
+
+  $box = new stdClass();
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
   $box->delta = 'logos_bottom';
   $box->plugin_key = 'simple';
   $box->title = '<none>';
