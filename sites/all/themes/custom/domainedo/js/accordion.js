@@ -3,7 +3,11 @@ jQuery(function($) {
     var menu = $('<h2 id="menu-accordion" class="menu-off">Menu</h2>');
     var accordion = $('#zone-menu-wrapper');
     var hide = true;
-    if($(document).width() < 1200){
+    var mobile = false;
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      mobile = true;
+    }
+    if(($(document).width() < 1200) && mobile){
         $('div.block-menu',accordion).hide();  
         menu.prependTo(accordion);
 
