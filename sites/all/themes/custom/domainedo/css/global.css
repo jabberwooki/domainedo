@@ -51,7 +51,50 @@ div.reservation-status-1,div.reservation-status-2,div.reservation-status-3,div.r
 label br{
     display:none;
 }
+/* Home page ******************************************************************/
+h2.h2-event{
+  float:left;
+  width:590px;
+  background-color : #EBE9EA; 
+  font-family: Lato, arial;
+  margin-left: 0;
+  margin-top: 20px;
+}
+h2.h2-event a{
+  text-decoration : none; 
+  color : black;
+  padding-left : 40px;
+  background : url(../images/icons/arrow-home-event.png) no-repeat 0 0;
+  display:block;
+  line-height: 40px;
+}
+/* zone de recherche **********************************************************/
+#block-search-form{
+    float:right;
+    margin-top : 20px;
+}
+#block-search-form input{
+    border : 1px solid #ebe9ea;
+}
+#block-search-form div.container-inline{
+    background-color : #ebe9ea;
+}
+#block-search-form input.form-text{
+    width : 146px
+}
 
+#block-search-form .form-submit{
+    width : 28px;
+    text-indent: -6000px;
+    height : 25px;
+    background: url(../images/icons/search_submit.gif) no-repeat 0 0;
+    margin : 0;
+    border : 0;
+    border-radius : 0;
+}
+#block-search-form #edit-submit:hover{
+    background: url(../images/icons/search_submit.gif) no-repeat 0 100%;
+}
 /* menu contact ***************************************************************/
 #block-menu-menu-contact ul{
     padding:0;
@@ -203,12 +246,10 @@ body.front #block-views-evenements-block-1{
   /*overflow: hidden;*/
   background : #F5F3F4 url(../images/icons/bg_flash.png) no-repeat 0 0;
 }
-body.front #block-views-evenements-block-1 .view-content{
-  float: left;
-}
+
 body.front #block-views-evenements-block-1 h2{
   float:left;
-  width: 30%;
+  width: 130px;
   height: 63px;
   padding-right: 3%;
   padding-left: 20%;
@@ -220,6 +261,7 @@ body.front #block-views-evenements-block-1 h2{
   text-align: right;
   font-size: 1.4em;
 }
+
 body.front #block-views-evenements-block-1 .field-content p{
   float: left;
   padding: 0 ;
@@ -358,12 +400,11 @@ body.front #block-views-evenements-block-1 .view-footer a{
 /* Menu en select *************************************************************/
 #superfish-1-select{
   position : relative;
-  top :106px;
+  top :0px;
 }
 #superfish-2-select{
   position : relative;
-  top :83px;
-  left:222px;
+  top :0px;
 }
 
 /* Liste des spectacles en page d'accueil du mobile ****************************/

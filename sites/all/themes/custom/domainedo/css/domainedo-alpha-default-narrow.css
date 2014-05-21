@@ -15,25 +15,14 @@ body.not-front #region-content h2{
   font-family: Lato, arial;
 }
 
-/* Home page ******************************************************************/
 h2.h2-event{
-  float:left;
-  width:320px;
-  background-color : #EBE9EA; 
-  font-family: Lato, arial;
-  position: relative;
-  top: -52px;
-}
-h2.h2-event a{
-  text-decoration : none; 
-  color : black;
-  padding-left : 40px;
-  background : url(../images/icons/arrow-home-event.png) no-repeat 0 0;
-  display:block;
-  line-height: 40px;
+  margin-left: 28px;
 }
 
 /* info flash *****************************************************************/
+body.front #block-views-evenements-block-1 .view-content{
+  float: left;
+}
 body.front #block-views-evenements-block-1{
   width: 592px;
   margin-bottom: 20px;
@@ -152,7 +141,10 @@ h2#menu-accordion{
 }
 /* Menu déroulant superfish niveau 1 ******************************************/
 #block-superfish-1,#block-superfish-2{
-    display : inline-table;
+    display : block;
+}
+#block-superfish-2{
+   width: 90%;
 }
 
 .block-superfish li.sf-depth-1 a{
@@ -217,6 +209,11 @@ ul#superfish-1 li.sf-depth-1 > a:hover,
 ul#superfish-1 li.sf-depth-1 > a.last:hover{
    border-bottom : 3px solid #C10000;
 }
+ul#superfish-2 li.sf-depth-1{
+  width: 50%;
+  display: inline-block;
+  float: none;
+}
 ul#superfish-2{
    border : 1px solid #000000;
    border-radius : 8px 8px 8px 8px;
@@ -224,9 +221,11 @@ ul#superfish-2{
    background-color : #ebe9ea;
 }
 ul#superfish-2 li.sf-depth-1 a{
-   width : 152px;
+   width : 100%;
    text-align: center;
-   height : 47px;
+   height : 32px;
+   padding-top : 15px;
+   display: block;
 }
 ul#superfish-2 li.sf-depth-1.first > a{
    border-right:1px solid #000000;
@@ -319,39 +318,16 @@ ul.sf-horizontal li.sf-depth-1 ul li:hover> a > .sf-sub-indicator {
 #region-footer-second ul li.last a{
    border-right :0;
 }
+#partner-text {
+  font-size: 0.8em;
+}
 /* Réseaux sociaux ************************************************************/
 #block-boxes-social-network{
     clear :left;
     margin : 0 0 0 150px;
     float : left;
 }
-/* zone de recherche **********************************************************/
-#block-search-form{
-    float:right;
-    margin-top : 20px;
-}
-#block-search-form input{
-    border : 1px solid #ebe9ea;
-}
-#block-search-form div.container-inline{
-    background-color : #ebe9ea;
-}
-#block-search-form input.form-text{
-    width : 146px
-}
 
-#block-search-form .form-submit{
-    width : 28px;
-    text-indent: -6000px;
-    height : 25px;
-    background: url(../images/icons/search_submit.gif) no-repeat 0 0;
-    margin : 0;
-    border : 0;
-    border-radius : 0;
-}
-#block-search-form #edit-submit:hover{
-    background: url(../images/icons/search_submit.gif) no-repeat 0 100%;
-}
 
 /* Slideshow ******************************************************************/
 #block-views-shows-block-1{
