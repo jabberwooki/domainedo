@@ -7,6 +7,29 @@
 /* If you are using the default media queries provided by Omega, these styles will also
  *  apply to the widescreen layout unless they are overridden by the widescreen styles. */
 
+/* Classic pages **************************************************************/
+body.not-front #region-content h2{
+  background : url(../images/icons/bg_h2_classic.png) no-repeat 0 0;
+  line-height: 33px;
+  padding-left : 48px;
+  font-family: Lato, arial;
+}
+
+/* Home page ******************************************************************/
+h2.h2-event{
+  clear :both;
+  background-color : #EBE9EA; 
+  font-family: Lato, arial;
+}
+h2.h2-event a{
+  text-decoration : none; 
+  color : black;
+  padding-left : 40px;
+  background : url(../images/icons/arrow-home-event.png) no-repeat 0 0;
+  display:block;
+  line-height: 40px;
+}
+
 /* info flash *****************************************************************/
 body.front #block-views-evenements-block-1{
   width: 592px;
