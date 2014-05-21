@@ -17,9 +17,12 @@ body.not-front #region-content h2{
 
 /* Home page ******************************************************************/
 h2.h2-event{
-  clear :both;
+  float:left;
+  width:320px;
   background-color : #EBE9EA; 
   font-family: Lato, arial;
+  position: relative;
+  top: -52px;
 }
 h2.h2-event a{
   text-decoration : none; 
@@ -429,38 +432,38 @@ div.group6{
   /*border:1px solid blue;*/
 }
 /* menu du slideshow **********************************************************/
-#block-menu-menu-shows-menu{
+#nav-home-slider{
     width : 250px;
     height : 30px;
     /*clear : both;*/
     position : absolute;
     left: 15px;
-    top: 335px;
+    top: 320px;
     z-index : 9;
     
 }
-#block-menu-menu-shows-menu ul,#block-menu-menu-shows-menu ul li{
+#nav-home-slider ul,#nav-home-slider ul li{
     list-style: none;  
     height: 30px;
 }
-#block-menu-menu-shows-menu ul li{
+#nav-home-slider ul li{
     float: left; 
     height: 30px;
 }
 
-#block-menu-menu-shows-menu ul > li > a{
+#nav-home-slider ul > li > a{
     color : black;
     text-decoration: none;
     height:20px;
     display : block;
     
 }
-#block-menu-menu-shows-menu ul > li.first > a{
+#nav-home-slider ul > li.first > a{
     padding-right: 25px;
     background: url(../images/icons/all_shows.png) no-repeat 100% 4px;
     
 }
-#block-menu-menu-shows-menu ul > li.last > a{
+#nav-home-slider ul > li.last > a{
     padding-right: 25px;
     background: url(../images/icons/calendar-small.png) no-repeat 100% 0px;
 }
