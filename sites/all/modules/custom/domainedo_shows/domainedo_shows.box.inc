@@ -19,9 +19,9 @@ function domainedo_shows_default_box() {
   $box->description = 'Info spectacles gauche';
   $box->options = array(
     'body' => array(
-      'value' => '<p>C\'est le festival Saperlipopette.</p>
+      'value' => '<p>C\'est le <strong>Printemps des comédiens</strong> du 03 au 29 juin</p>
 
-<p><a href="http://domaine-do-34.eu/spectacles/%C3%A9t%C3%A9/l-%C3%A9t%C3%A9-au-domaine-do">Voir les dates des festivals à venir</a></p>
+<p><a href="spectacles/%C3%A9t%C3%A9/l-%C3%A9t%C3%A9-au-domaine-do">Voir les dates des festivals à venir</a></p>
 
 <p>&nbsp;</p>
 ',
