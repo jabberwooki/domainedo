@@ -133,6 +133,9 @@ ul.group-ul-short-links> div a{
 #block-superfish-1,#block-superfish-2{
     display : inline-table;
 }
+ul#superfish-2{
+    margin-top : 0;
+}
 ul#superfish-2 li.sf-depth-1{
    display : block;
    float: left;

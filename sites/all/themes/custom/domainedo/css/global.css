@@ -13,6 +13,7 @@
 .link_calendar{
     background: url("../images/icons/calendar-small.png") no-repeat 0 0;
     padding-left: 25px;
+    margin-left:50px;
     display : block;
     color : #C20003;
 }
@@ -401,10 +402,24 @@ body.front #block-views-evenements-block-1 .view-footer a{
 #superfish-1-select{
   position : relative;
   top :0px;
+  left  : -70px;
+  margin-top :10px;
 }
 #superfish-2-select{
   position : relative;
-  top :0px;
+  top :-22px;
+  left  : 140px;
+}
+/* Liste tous les spectacles **************************************************/
+.view-display-id-list .field-name-field-festival {
+position: relative;
+top: -40px;
+text-align: center;
+background: white;
+opacity: 0.8;
+}
+.view-display-id-list div.odd .field-name-field-festival {
+top: -30px;
 }
 
 /* Liste des spectacles en page d'accueil du mobile ****************************/
@@ -495,6 +510,26 @@ body.front #block-views-evenements-block-1 .view-footer a{
           color: #000000;
           text-decoration : none;
       }
+      
+/* page des fesitvals ***************************************************/
+.affiche-festival {
+  float: left;
+  width: 236px;
+  margin-left: 20px;
+}
+.affiche-festival img{
+  max-width: 100%;
+}
+.h3-festival {
+  font-size: 1.8em;
+  padding-left: 11px;
+  height: 35px;
+  overflow: hidden;
+}
+p.date-festival {
+  margin-bottom: -2px;
+  padding-left: 11px;
+}
 /* media queries **************************************************************/
 @media screen and (max-width:980px){
   /* Fiche de spectacle ***************************************************/

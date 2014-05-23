@@ -139,6 +139,15 @@ h2#menu-accordion{
     overflow: hidden;
     position: absolute !important;
 }
+/* Menu en select *************************************************************/
+#superfish-1-select{
+  position : relative;
+  top :0px;
+}
+#superfish-2-select{
+  position : relative;
+  top :0px;
+}
 /* Menu déroulant superfish niveau 1 ******************************************/
 #block-superfish-1,#block-superfish-2{
     display : block;
@@ -219,6 +228,7 @@ ul#superfish-2{
    border-radius : 8px 8px 8px 8px;
    height : 48px;
    background-color : #ebe9ea;
+   margin-top : 20px;
 }
 ul#superfish-2 li.sf-depth-1 a{
    width : 100%;
@@ -236,7 +246,7 @@ ul#superfish-2 li.sf-depth-1.last > a{
 ul#superfish-2 li.sf-depth-1 > a:hover,
 ul#superfish-2 li.sf-depth-1 > a.active{
    border-radius : 8px 8px 8px 8px;
-   height : 48px;
+   height : 33px;
    color : white;
    background-color: #C10000 ; 
 }
@@ -282,7 +292,7 @@ ul.sf-horizontal li.sf-depth-1 ul li:hover> a > .sf-sub-indicator {
 #block-menu-menu-contact{
     width : 75px;
     float : left;
-    margin : 8px 0 10px 95px;
+    margin : 8px 0 10px 390px
 }
 #block-menu-menu-contact ul li a{
      background: url(../images/icons/location_wide.gif) no-repeat 0 4px;
@@ -551,9 +561,6 @@ div.menu-block-domainedo-shows-tab-menu > ul > li > a.active-trail,
   text-decoration: none;
   color: #010101;
 }
-.menu-block-2 > ul li.active > a{
-  background-color : #FFC929;
-}
 
 .menu-block-2 > ul li.active.expanded > a{
   background-color : transparent;
@@ -565,6 +572,9 @@ div.menu-block-domainedo-shows-tab-menu > ul > li > a.active-trail,
 .menu-block-2 > ul.menu > li  > a{
   padding : 5px 0 5px 30px;
   background: url(../images/icons/arrow-nav-3.png) no-repeat 17px 40%;
+}
+.menu-block-2 > ul.menu li.active > a, .menu-block-2 > ul.menu > li.active > a{
+  background-color : #FFC929;
 }
 .menu-block-2 > ul > li > ul > li > a{
   padding : 5px 0 5px 42px;
