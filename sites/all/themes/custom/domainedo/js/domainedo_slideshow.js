@@ -89,7 +89,8 @@ var base_url="";
         
       if(thediapo.nb_diapo>thediapo.selected_controler+1){// ???
           
-          $(conteneur_long).animate({"left": "-="+(thediapo.largeur-100)+"px"}, "slow");
+          if(!thediapo.selected_controler) $(conteneur_long).animate({"left": "-="+(thediapo.largeur-100)+"px"}, "slow");
+          else $(conteneur_long).animate({"left": "-="+(thediapo.largeur-69)+"px"}, "slow");
           
           thediapo.position_left += thediapo.largeur;
           var id_ncs = thediapo.selected_controler+1;
@@ -105,7 +106,8 @@ var base_url="";
   function previous_diapo(thediapo){
 
        if(thediapo.selected_controler>0){
-          $(conteneur_long).animate({"left": "+="+(thediapo.largeur-100)+"px"}, "slow");
+         if(thediapo.selected_controler == 1) $(conteneur_long).animate({"left": "+="+(thediapo.largeur-100)+"px"}, "slow");
+          else $(conteneur_long).animate({"left": "+="+(thediapo.largeur-69)+"px"}, "slow");
           thediapo.position_left -= thediapo.largeur;
           var id_ncs = thediapo.selected_controler-1;
           $("#controler_"+id_ncs).addClass("selected_controler");
@@ -114,9 +116,10 @@ var base_url="";
           if(!thediapo.selected_controler){
               $("#previous_diapo").width(0);
               $("#next_diapo").width(86);
-          } 
+          }else $("#next_diapo").width(54);
       }
   }
+
   function selected_diapo(num_controler,thediapo){
       //alert(num_controler);
       var mvt = (thediapo.selected_controler-num_controler);
