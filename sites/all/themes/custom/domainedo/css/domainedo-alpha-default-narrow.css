@@ -108,7 +108,7 @@ body.front #block-views-evenements-block-1 .view-footer a{
 .field-name-field-show-dates .field-items .field-item,
 #node_news_zoom_group_event_summa_dates .field-items .field-item{
     float : left;
-    padding: 0 10px;
+    padding: 0;
 }
 #block-views-shows-block-1 .field-name-field-show-dates .field-items .field-item{
   padding:0;
@@ -524,13 +524,10 @@ div.menu-block-domainedo-shows-tab-menu > ul > li, .block-menu-block-1 ul > li{
     padding : 0;
     margin : 0;
 }
-div.menu-block-domainedo-shows-tab-menu > ul > li.last{
-    display : none;
-}
 div.menu-block-domainedo-shows-tab-menu > ul > li > a,
 .menu-name-main-menu > ul > li > a{
     display:block;
-    padding : 2px 13px 0 13px;
+    padding : 2px 10px 0 10px;
     text-decoration: none;
     color: #878787;
     margin : 0;

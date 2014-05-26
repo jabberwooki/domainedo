@@ -194,6 +194,10 @@ h2#page-title{
 .pager li.pager-next{
     width: 90px;
 }
+.node-show .field-name-scald-authors .field-item{
+  text-align: right;
+  font-size: 0.8em;
+}
 /* Sprite *********************************************************************/
 
 .region-header-second .sprite {
