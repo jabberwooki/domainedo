@@ -724,6 +724,35 @@ function domainedo_shows_views_default_views() {
 </ul>    </nav>
   </div>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Contenu: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Contenu: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'show' => 'show',
+  );
+  /* Filter criterion: Contenu: Date(s) (field_show_dates) */
+  $handler->display->display_options['filters']['field_show_dates_value']['id'] = 'field_show_dates_value';
+  $handler->display->display_options['filters']['field_show_dates_value']['table'] = 'field_data_field_show_dates';
+  $handler->display->display_options['filters']['field_show_dates_value']['field'] = 'field_show_dates_value';
+  $handler->display->display_options['filters']['field_show_dates_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_show_dates_value']['default_date'] = 'now';
+  /* Filter criterion: Contenu: Promu en page d&#039;accueil (field_promoted) */
+  $handler->display->display_options['filters']['field_promoted_value']['id'] = 'field_promoted_value';
+  $handler->display->display_options['filters']['field_promoted_value']['table'] = 'field_data_field_promoted';
+  $handler->display->display_options['filters']['field_promoted_value']['field'] = 'field_promoted_value';
+  $handler->display->display_options['filters']['field_promoted_value']['value'] = array(
+    1 => '1',
+  );
 
   /* Display: Accueil mobile */
   $handler = $view->new_display('block', 'Accueil mobile', 'block_2');
