@@ -28,6 +28,11 @@ img{
 .block-menu a, h2 a, h3 a, h2, h3{
     font-family: lato,arial;
 }
+/* listes *********************************************************************/
+#region-content div.content ul li{
+  padding-left:10px;
+  list-style-position:inside;
+}
 
 /* Eléments invisibles ********************************************************/
 #block-boxes-social-network h2,
@@ -831,7 +836,7 @@ p.date-festival {
           width: 45%;  
       }
       .view-shows .field-name-field-show-dates .field-items {
-        width: 90%;
+        width: 100%;
       }   
       div.view-display-id-list div.group6 > div .field-name-scald-authors{
         display:none;
