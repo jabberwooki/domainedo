@@ -89,8 +89,10 @@ var base_url="";
         
       if(thediapo.nb_diapo>thediapo.selected_controler+1){// ???
           
-          if(!thediapo.selected_controler) $(conteneur_long).animate({"left": "-="+(thediapo.largeur-100)+"px"}, "slow");
-          else $(conteneur_long).animate({"left": "-="+(thediapo.largeur-69)+"px"}, "slow");
+          if(!thediapo.selected_controler) {
+            $(conteneur_long).animate({"left": "-="+(thediapo.largeur-100)+"px"}, "slow");
+            console.log("deplacement : "+(thediapo.largeur-100));
+          } else $(conteneur_long).animate({"left": "-="+(thediapo.largeur-69)+"px"}, "slow");
           
           thediapo.position_left += thediapo.largeur;
           var id_ncs = thediapo.selected_controler+1;
@@ -121,9 +123,15 @@ var base_url="";
   }
 
   function selected_diapo(num_controler,thediapo){
-      //alert(num_controler);
+      console.log("num_controler : "+num_controler);
       var mvt = (thediapo.selected_controler-num_controler);
-      var long_mvt = Math.abs(mvt)*(thediapo.largeur-100);
+      console.log("mvt : "+mvt);
+      var long_mvt = Math.abs(mvt)*(thediapo.largeur-69);
+      if (mvt == -num_controler || !num_controler){
+        long_mvt -= 31;
+      }
+      
+      console.log("deplacement : "+long_mvt);
       //var id_new_selected = "#controler"+num_controler;
       //alert("controler cliqué : "+num_controler+" diapo affichée : "+thediapo.selected_controler+" long_mvt : "+long_mvt+" px");
       if (!mvt || ($(document).width() < 600)) {           
