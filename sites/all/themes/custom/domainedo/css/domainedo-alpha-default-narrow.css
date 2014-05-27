@@ -21,6 +21,15 @@ body.not-front #region-content div.block-boxes h2{
 h2.h2-event{
   margin-left: 28px;
 }
+.col1,.col2{
+  width : 48%;
+  float: left;
+}
+.col2{
+  border-left : 1px solid #B90000;
+   width : 45%;
+   padding-left:3%;
+}
 
 /* info flash *****************************************************************/
 body.front #block-views-evenements-block-1 .view-content{

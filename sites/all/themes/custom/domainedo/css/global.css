@@ -32,7 +32,7 @@ img{
   border-radius : 8px;
 }
 .atom-align-left, .gauche{
-  float:right;
+  float:left;
   margin : 0 0 0 20px;
 }
 /* titres **********************************************************************/
@@ -209,7 +209,7 @@ h2#page-title{
 .pager li.pager-next{
     width: 90px;
 }
-.field-name-scald-authors .field-item{
+.field-name-scald-authors .field-item, .type-image .meta{
   text-align: right;
   font-size: 0.8em;
 }
