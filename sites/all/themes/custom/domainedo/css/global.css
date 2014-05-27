@@ -74,6 +74,10 @@ h2.h2-event a{
   display:block;
   line-height: 40px;
 }
+/* Lien vers les événements ***************************************************/
+#block-boxes-event-home-title{
+  float: left;
+}
 /* zone de recherche **********************************************************/
 #block-search-form{
     float:right;
@@ -539,6 +543,9 @@ p.date-festival {
   margin-bottom: -2px;
   padding-left: 11px;
 }
+div#partner-bottom{
+        text-align: right;
+}
 /* media queries **************************************************************/
 @media screen and (max-width:980px){
   /* Fiche de spectacle ***************************************************/
@@ -736,10 +743,7 @@ p.date-festival {
     #address-bottom{
         display:none;
     }
-    #partner-bottom{
-        padding-left :100px;
-
-    }
+    
     #partner-text{
         font-size : 0.6em;
         width: 60%;
