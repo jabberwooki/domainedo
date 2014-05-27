@@ -45,9 +45,7 @@ Tél. : 0800 200 165</p>
 </div>
 
 <div id="partner-bottom">
-<p id="partner-text">Le domaine d\'O est soutenu par le Conseil général de l\'Hérault et Montpellier Agglomération</p>
-
-<p id="partner-images"><a href="http://www.herault.fr" style="line-height: 1.6;" target="_blank"><img alt="Département de l\'Hérault" id="img-logo-34-bottom" src="/sites/all/themes/custom/domainedo/images/logos/cg34-bas.gif" /></a><img alt="Montpellier Agglomération" id="img-logo-agglo-bottom" src="/sites/all/themes/custom/domainedo/images/logos/agglo-montpellier-bas.gif" style="height:61px; width:47px" />&nbsp;</p>
+<p><a href="http://www.herault.fr" style="font-size: 13px; line-height: 1.6;" target="_blank"><img alt="Pour la culture, le département de l\'Hérault est là" id="img-logo-34-bottom" src="/sites/all/themes/custom/domainedo/images/logos/cg-culture.gif" style="height:62px; width:222px" /></a><span style="font-size:13px">&nbsp;</span></p>
 </div>
 </div>
 ',
@@ -69,7 +67,7 @@ Tél. : 0800 200 165</p>
       'value' => '<div id="logos-top">
 <h1><a href="/."><img alt="domaine d\'O" id="logo-domainedo-top" src="/sites/all/themes/custom/domainedo/images/logos/logo-domaine-do.gif" /></a><br />
 <span style="color:#757575">domaine départemental d\'art et de culture</span></h1>
-<a href="http://www.herault.fr/" target="_blank"><img alt="Département de l\'Hérault" id="cg-top" src="/sites/all/themes/custom/domainedo/images/logos/cg34.gif" /></a></div>
+<!--<a href="http://www.herault.fr/" target="_blank"><img alt="Département de l\'Hérault" id="cg-top" src="/sites/all/themes/custom/domainedo/images/logos/cg34.gif" /></a> --></div>
 ',
       'format' => 'full_html',
     ),
