@@ -1949,7 +1949,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'taxonomy_term_reference_plain',
         'weight' => 16,
       ),
       'list' => array(
@@ -4040,6 +4040,15 @@ function domainedo_shows_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'hidden',
+        'module' => 'domainedo_media',
+        'settings' => array(
+          'link' => 0,
+        ),
+        'type' => 'full',
+        'weight' => 1,
+      ),
+      'full' => array(
         'label' => 'hidden',
         'module' => 'domainedo_media',
         'settings' => array(
