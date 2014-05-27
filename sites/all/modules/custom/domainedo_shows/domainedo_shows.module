@@ -492,9 +492,28 @@ function domainedo_shows_views_pre_render(&$view) {
  * Implements hook_form_FORM_ID_alter().
  */
 function domainedo_shows_form_views_exposed_form_alter(&$form, &$form_state, $form_id) {
-	if (isset($form['field_festival_target_id'])) {
-		$form['field_festival_target_id']['#options']['All'] = t('All upcoming shows');
-	}
+       if (isset($form['field_festival_target_id'])) {                
+               // Get the id of the latest festival for each festival type.
+               $festivals = domainedo_shows_get_festivals();
+               $latest_festival_ids = array();
+               foreach ($festivals as $name=>$festival) {
+                       $latest_festival = domainedo_shows_get_latest_festival_values($name);
+                       if ($latest_festival['nid'] != 0) {
+                               $latest_festival_ids[$latest_festival['nid']] = $latest_festival['nid'];
+                       }
+               }
+               
+               // Compare the exposed festival list and the latest festival list
+               // to get rid of festivals not being the latest.
+               foreach ($form['field_festival_target_id']['#options'] as $key=>$label) {
+                       if (!is_numeric($key)) continue;
+                       if (!in_array($key, $latest_festival_ids)) {
+                               unset($form['field_festival_target_id']['#options'][$key]);
+                       }
+               }
+               
+               $form['field_festival_target_id']['#options']['All'] = t('All upcoming shows');
+       }
 }
 
 /**
