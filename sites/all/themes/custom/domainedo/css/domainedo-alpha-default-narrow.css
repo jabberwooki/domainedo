@@ -13,6 +13,7 @@ body.not-front #region-content h2{
   line-height: 33px;
   padding-left : 48px;
   font-family: Lato, arial;
+  font-weight: 400;
 }
 body.not-front #region-content div.block-boxes h2{
   background-image : none;
@@ -25,6 +26,9 @@ h2.h2-event{
   width : 48%;
   float: left;
 }
+.col1{
+  margin-right: 1%;
+}
 .col2{
   border-left : 1px solid #B90000;
    width : 45%;
@@ -32,8 +36,29 @@ h2.h2-event{
 }
 
 /* info flash *****************************************************************/
+body.front #block-views-evenements-block-1{
+  background : #F5F3F4 url(../images/icons/bg_flash.png) no-repeat 0 0;
+}
+.field-name-field-festival-shows > .field-items > .field-item, 
+div.view-display-id-list div.group6 > div{
+   width: 50%;
+}
+body.front .views-row {
+   width: 100%;
+}
+body.front .view-id-evenements{
+    width: 100%;
+}
 body.front #block-views-evenements-block-1 .view-content{
   float: left;
+  width: 80%;
+}
+body.front #block-views-evenements-block-1 .view-content .views-field-title{
+  float: left;  
+}
+body.front #block-views-evenements-block-1 .view-content .views-field-body{
+  float: left;
+  width: 185px;
 }
 body.front #block-views-evenements-block-1{
   width: 592px;
@@ -42,14 +67,14 @@ body.front #block-views-evenements-block-1{
   overflow: hidden;
  }
  body.front #block-views-evenements-block-1 h2{
-  width: 84px;
-  padding-right: 26px;
-  padding-left: 110px;
-  margin: 0 20px 10px 0;
-  border-right: 1px solid black;
-  word-wrap: break-word;
-  color: #B20002;
-  font-size: 1.6em;
+  width: 134px;
+padding-right: 26px;
+padding-left: 51px;
+margin: 0 20px 10px 0;
+border-right: 1px solid black;
+word-wrap: break-word;
+color: #B20002;
+font-size: 1.3em;
 }
 body.front #block-views-evenements-block-1 .field-content p{
   float: none;
