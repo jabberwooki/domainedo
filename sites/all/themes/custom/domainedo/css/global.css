@@ -241,6 +241,9 @@ h2#page-title{
     padding : 3px 10px;
     width: auto;
 }
+#block-system-main ul.pager li.date-next a{
+    margin-bottom:-20px
+}
 .pager li.pager-next{
     width: 90px;
 }
