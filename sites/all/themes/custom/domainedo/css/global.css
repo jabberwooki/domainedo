@@ -17,11 +17,14 @@
     display : block;
     color : #C20003;
 }
-.bg-white{
+.bg-white, .fond-blanc{
   background-color: white;
 }
 .fond-rouge{
   background-color : #C10000;
+}
+.blanc{
+  color:white;
 }
 .gras{
   font-weight: bold;
