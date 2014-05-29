@@ -892,6 +892,10 @@ body.node-type-show div.view-mode-full div.group-left .field-name-field-by .fiel
           margin : 0 0 20px 0;
           padding : 0;
       }
+      body.page-evenements .view-evenements .views-row 
+          width: 50%;
+          
+      }
       .field-name-field-festival-shows > .field-items > .field-item.even > div,
       div.view-display-id-list div.group6 > div.views-row-odd > div,
       .view-evenements .views-row-odd > div {
