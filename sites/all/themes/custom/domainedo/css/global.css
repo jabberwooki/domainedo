@@ -20,6 +20,15 @@
 .bg-white{
   background-color: white;
 }
+.fond-rouge{
+  background-color : #C10000;
+}
+.gras{
+  font-weight: bold;
+}
+.grand{
+  font-size: 1.3em;
+}
 /*liens ***********************************************************************/
 a.location{
      background: url(../images/icons/location_wide.gif) no-repeat 0 4px;
