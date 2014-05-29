@@ -892,7 +892,7 @@ body.node-type-show div.view-mode-full div.group-left .field-name-field-by .fiel
           margin : 0 0 20px 0;
           padding : 0;
       }
-      body.page-evenements .view-evenements .views-row 
+      body.page-evenements .view-evenements .views-row{ 
           width: 50%;
           
       }
