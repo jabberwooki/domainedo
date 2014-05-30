@@ -3,6 +3,13 @@ body.front #block-views-evenements-block-1{
   float:right;
   margin-left: 0;
 }
+body.front #block-views-evenements-block-1 div.view-content{
+  width:75%
+}
+
+body.front #block-views-evenements-block-1 div.view-footer{
+  width:25%
+}
 /* Zoom ***********************************************************************/
 #block-views-zoom-block{
     width : 320px;

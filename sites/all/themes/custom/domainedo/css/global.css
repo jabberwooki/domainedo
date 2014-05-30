@@ -35,6 +35,12 @@
 .grand{
   font-size: 1.3em;
 }
+.padding-5{
+  padding:5px;
+}
+.centrer, .center{
+  text-align: center;
+}
 /*liens ***********************************************************************/
 a.location{
      background: url(../images/icons/location_wide.gif) no-repeat 0 4px;
@@ -324,31 +330,46 @@ body.front #block-views-evenements-block-1{
   /*overflow: hidden;*/
   /*background : #F5F3F4 url(../images/icons/bg_flash.png) no-repeat 0 0;*/
 }
-
+body.front #block-views-evenements-block-1 div.view-content{
+  width:90%
+}
+body.front #block-views-evenements-block-1 div.view-content .views-field-title{
+  width:50%;
+  float: left;
+}
+body.front #block-views-evenements-block-1 div.view-content .views-field-title a{
+    text-decoration: none;
+}
+body.front #block-views-evenements-block-1 div.view-content .views-field-body{
+  width:45%;
+  float: left;
+  padding-left: 2%;
+}
+body.front #block-views-evenements-block-1 div.view-footer{
+  width:10%
+}
 body.front #block-views-evenements-block-1 h2{
-  float:left;
-  width: 150px;
-  height: 63px;
-  padding-right: 3%;
+    height: 63px;
   padding-left: 0;
-  margin: 7px 20px 10px 0;
-  border-right: 1px solid black;
+  margin: 7px 0 10px 0;
   word-wrap: break-word;
   color: #B20002;
   text-transform: uppercase;
-  text-align: right;
-  font-size: 1.4em;
+  text-align: left;
+  font-size: 1.2em;
+  text-decoration: none;
+  border-right: 1px solid black;
+  padding-right: 3%;
 }
 
 body.front #block-views-evenements-block-1 .field-content p{
-  float: left;
   padding: 0 ;
   margin: 7px 0;
   font-weight: bold;
   font-size:0.8em;
   height:63px;
   border-right: 1px solid black;
-  width: 35%;
+  text-align: center;
 }
 body.front #block-views-evenements-block-1 .view-footer{
   float:right;
@@ -358,7 +379,7 @@ body.front #block-views-evenements-block-1 .view-footer a{
   display:block;
   height: 63px;
   color : black;
-  background : url(../images/icons/plus_black.png) no-repeat 0 50%;
+  background : url(../images/icons/plus_black.png) no-repeat 50% 70%;
   padding: 0 10px 0 0 ;
   width: 22px;
   text-indent: -6000px;
@@ -915,6 +936,9 @@ body.node-type-show div.view-mode-full div.group-left .field-name-field-by .fiel
       div.view-display-id-list div.group6 > div.views-row-odd > div,
       .view-evenements .views-row-odd > div {
           padding-right: 20px;
+      }
+      body.front .view-evenements .views-row-odd > div {
+          padding-right: 0;
       }
       .view-evenements .views-row > .views-field-field-scald-image{
         float : left;

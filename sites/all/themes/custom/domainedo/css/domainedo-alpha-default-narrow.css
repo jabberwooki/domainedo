@@ -51,7 +51,11 @@ body.front .view-id-evenements{
 }
 body.front #block-views-evenements-block-1 .view-content{
   float: left;
-  width: 80%;
+  /*width: 80%;*/
+  width:76%;
+}
+body.front #block-views-evenements-block-1 .field-content p{
+ width: 100%;
 }
 body.front #block-views-evenements-block-1 .view-content .views-field-title{
   float: left;  
@@ -67,18 +71,15 @@ body.front #block-views-evenements-block-1{
   overflow: hidden;
  }
  body.front #block-views-evenements-block-1 h2{
-  width: 134px;
-padding-right: 26px;
-padding-left: 51px;
-margin: 0 20px 10px 0;
-border-right: 1px solid black;
-word-wrap: break-word;
-color: #B20002;
-font-size: 1.3em;
+  padding-left: 51px;
+  word-wrap: break-word;
+  color: #B20002;
+  font-size: 1.3em;
+  text-align: right;
 }
 body.front #block-views-evenements-block-1 .field-content p{
   float: none;
-  width: 468px;
+  /*width: 468px;*/
   font-size: 1em;
 }
 
@@ -87,6 +88,15 @@ body.front #block-views-evenements-block-1 .view-footer a{
   text-indent: 0;
   padding: 55px 10px 0 0;
   background : url(../images/icons/plus_black.png) no-repeat 90% 10px;
+  text-align: right;
+}
+
+
+body.front #block-views-evenements-block-1 div.view-content{
+  width:66%
+}
+body.front #block-views-evenements-block-1 div.view-footer{
+  width:33%
 }
 /* Zoom ***********************************************************************/
 #block-views-zoom-block{
@@ -332,7 +342,7 @@ ul.sf-horizontal li.sf-depth-1 ul li:hover> a > .sf-sub-indicator {
 #block-menu-menu-contact{
     width : 75px;
     float : left;
-    margin : 8px 0 10px 390px
+    margin : 8px 0 10px 290px
 }
 #block-menu-menu-contact ul li a{
      background: url(../images/icons/location_wide.gif) no-repeat 0 4px;
