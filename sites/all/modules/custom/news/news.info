@@ -16,7 +16,6 @@ dependencies[] = features
 dependencies[] = field_group
 dependencies[] = list
 dependencies[] = menu
-dependencies[] = node
 dependencies[] = options
 dependencies[] = pathauto
 dependencies[] = strongarm
