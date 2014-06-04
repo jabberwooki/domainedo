@@ -1,3 +1,6 @@
+blockquote{
+  text-align: justify;
+}
 /* info flash *****************************************************************/
 body.front #block-views-evenements-block-1{
   float:right;

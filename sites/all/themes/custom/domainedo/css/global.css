@@ -41,6 +41,16 @@
 .centrer, .center{
   text-align: center;
 }
+blockquote{
+  border-left: 5px solid #CCCCCC;
+  margin-left: 5%;
+  padding-left:2.5%; 
+  padding-right:2.5%; 
+  font-family: "Times New Roman", serif;
+  font-style: italic;
+  color: #333333;
+  font-size: 1.2em;
+}
 /*liens ***********************************************************************/
 a.location{
      background: url(../images/icons/location_wide.gif) no-repeat 0 4px;
@@ -50,6 +60,10 @@ a.location{
 a.location:hover{
      background: url(../images/icons/location_wide.gif) no-repeat 0 110%;
      color : #c10000;
+}
+div.field-name-link-shows{
+  float: left;
+  margin-right: 20px;
 }
 /* images *********************************************************************/
 img{
