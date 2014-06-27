@@ -21,10 +21,7 @@ function domainedo_shows_default_box() {
     'body' => array(
       'value' => '<p>C\'est le <strong>Printemps des comédiens</strong> du 03 au 29 juin</p>
 
-<p><a href="spectacles/%C3%A9t%C3%A9/l-%C3%A9t%C3%A9-au-domaine-do">Voir les dates des festivals à venir</a></p>
-
-<p>&nbsp;</p>
-',
+<p><a href="/spectacles/été/l-été-au-domaine-do">Voir les dates des festivals à venir</a></p>',
       'format' => 'full_html',
     ),
     'additional_classes' => '',
