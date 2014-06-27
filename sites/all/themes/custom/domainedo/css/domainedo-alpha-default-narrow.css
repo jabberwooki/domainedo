@@ -8,15 +8,21 @@
  *  apply to the widescreen layout unless they are overridden by the widescreen styles. */
 
 /* Classic pages **************************************************************/
-body.not-front #region-content h2{
+body.not-front #region-content h2,
+body.not-front #region-content .block-right-shows-infos h2{
   background : url(../images/icons/bg_h2_classic.png) no-repeat 0 0;
   line-height: 33px;
   padding-left : 48px;
   font-family: Lato, arial;
   font-weight: 400;
+  border-bottom : 1px solid black;
+  display: block;
+}
+.link_calendar{
+    margin-left:50px;
 }
 body.not-front #region-content div.block-boxes h2{
-  background-image : none;
+  border-bottom : 0;
 }
 
 h2.h2-event{
@@ -635,6 +641,12 @@ div.menu-block-domainedo-shows-tab-menu > ul > li > a.active-trail,
     padding : 20px 5px 5px 12px;
     margin : 0 20px 20px 0;
 }
+.page-spectacles-tous-les-spectacles .view-id-shows .view-header .block-left-shows-info{
+  display: block;
+}
+#block-boxes-right-shows-infos{
+    padding : 20px 0 0 0;
+}
 #views-exposed-form-shows-list{
     width: 347px;
     height: 120px;
@@ -658,29 +670,12 @@ div.menu-block-domainedo-shows-tab-menu > ul > li > a.active-trail,
 #edit-field-festival-target-id{
     width: 325px;
 }
-label[for="edit-field-show-type-tid"]{
-    clip: rect(1px, 1px, 1px, 1px);
-    height: 1px;
-    overflow: hidden;
-    position: absolute !important;
-}
-div.bef-checkboxes div.form-type-bef-checkbox{
-    float : left;
-    width: 90px;
-}
-#views-exposed-form-shows-list .views-submit-button{
-    float :right;
-}
 #views-exposed-form-shows-list .views-submit-button input{
     padding : 5px 30px 5px 15px;
     margin : -40px 27px 0 0;
     width:140px;
     color : white;
     background: #C20000 url(../images/icons/arrow_white.png) no-repeat 90% 50%;
-}
-#views-exposed-form-shows-list div.form-item-edit-field-show-type-tid-6,
-#views-exposed-form-shows-list div.form-item-edit-field-show-type-tid-1{
-    margin-top : 10px;
 }
 #block-boxes-right-shows-infos{
     width: 250px;
@@ -689,6 +684,12 @@ div.bef-checkboxes div.form-type-bef-checkbox{
     padding : 20px 0 0 0;
     margin-bottom : 20px;
 }
+.link_calendar{
+    margin-left:30px;
+    float :left;
+}
+
+
 /* festivals ******************************************************************/
 .node-festival > .group-left {
     float:left;
