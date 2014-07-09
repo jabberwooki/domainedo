@@ -19,9 +19,10 @@ function domainedo_shows_default_box() {
   $box->description = 'Info spectacles gauche';
   $box->options = array(
     'body' => array(
-      'value' => '<p>C\'est le <strong>Printemps des comédiens</strong> du 03 au 29 juin</p>
+      'value' => '<p>C\'est le festival &nbsp;<strong>Folies d\'O&nbsp;</strong>du 07 au 12 juillet</p>
 
-<p><a href="/spectacles/été/l-été-au-domaine-do">Voir les dates des festivals à venir</a></p>',
+<p><a href="/spectacles/été/l-été-au-domaine-do">Voir les dates des festivals à venir</a></p>
+',
       'format' => 'full_html',
     ),
     'additional_classes' => '',
