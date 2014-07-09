@@ -103,7 +103,7 @@ function domainedo_editors_ckeditor_profile_defaults() {
     'Full' => array(
       'name' => 'Full',
       'settings' => array(
-        'ss' => 2,
+        'ss' => 1,
         'default' => 't',
         'show_toggle' => 't',
         'uicolor' => 'default',
@@ -152,11 +152,11 @@ function domainedo_editors_ckeditor_profile_defaults() {
         'filebrowser_flash' => '',
         'UserFilesPath' => '%b%f/',
         'UserFilesAbsolutePath' => '%d%b%f/',
-        'forcePasteAsPlainText' => 'f',
+        'forcePasteAsPlainText' => 't',
         'html_entities' => 'f',
         'scayt_autoStartup' => 'f',
         'theme_config_js' => 'f',
-        'js_conf' => '',
+        'js_conf' => 'config.allowedContent = true;',
         'loadPlugins' => array(
           'dnd' => array(
             'name' => 'dnd',

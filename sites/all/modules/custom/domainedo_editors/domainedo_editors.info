@@ -5,6 +5,7 @@ package = Domaine d'O
 version = 7.x-1.0
 project = domainedo_editors
 dependencies[] = ckeditor
+dependencies[] = ckeditor
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = filter
