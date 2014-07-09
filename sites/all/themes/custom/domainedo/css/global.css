@@ -173,6 +173,7 @@ h2.h2-event a{
 /* Lien vers les événements ***************************************************/
 #block-boxes-event-home-title{
   float: left;
+  clear: both;
 }
 /* zone de recherche **********************************************************/
 #block-search-form{
@@ -826,6 +827,23 @@ body.node-type-show div.view-mode-full div.group-left .field-name-field-by .fiel
       
 }
 @media screen and (max-width:740px){
+  h3.medium.gauche{
+  font-size:1em;
+  margin:0;
+}
+h3.medium.no-link{
+  padding: 4px 5px 2px 0;
+  margin-bottom : 3px;
+}
+h3.medium a{
+  font-size:1.1em;
+  border : 1px solid black;
+  border-radius : 5px 5px 0 0;
+  display :block;
+  padding: 2px 5px 2px 5px;
+  margin-bottom : 3px;
+  text-decoration: none;
+}
   #region-header-second #block-menu-menu-top-courtesy-nav{ //pas un smartphone mais un desktop redimensionné
     position : absolulte;
     z-index: 99;
