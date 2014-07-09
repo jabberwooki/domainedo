@@ -234,6 +234,7 @@ function domainedo_config_user_default_permissions() {
     'name' => 'display disqus comments on profile',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
     ),
     'module' => 'disqus',
   );
@@ -336,6 +337,7 @@ function domainedo_config_user_default_permissions() {
     'name' => 'toggle disqus comments',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
     ),
     'module' => 'disqus',
   );
@@ -388,6 +390,7 @@ function domainedo_config_user_default_permissions() {
     'name' => 'view disqus comments',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
     ),
     'module' => 'disqus',
   );
