@@ -10,10 +10,13 @@
 #logos-top h1 span{
     padding-left:18px;
 }
+body.not-front #region-content .block-right-shows-infos h2{
+    display:none;
+}
 .link_calendar{
     background: url("../images/icons/calendar-small.png") no-repeat 0 0;
     padding-left: 25px;
-    margin-left:50px;
+    margin-left:0px;
     display : block;
     color : #C20003;
 }
@@ -28,6 +31,9 @@
 }
 .blanc{
   color:white;
+}
+.blanc.fond-rouge a{
+  color: white;
 }
 .gras{
   font-weight: bold;
@@ -51,6 +57,12 @@ blockquote{
   color: #333333;
   font-size: 1.2em;
 }
+h3.medium{
+  font-size:1.6em;
+}
+h1, h2, h3, h4,h5,h6,h7{
+  font-family : lato,arial;
+}
 /*liens ***********************************************************************/
 a.location{
      background: url(../images/icons/location_wide.gif) no-repeat 0 4px;
@@ -72,6 +84,9 @@ img{
 .atom-align-right, .droite{
   float:right;
   margin : 0 0 0 20px;
+}
+.field-name-field-festival-poster img{
+  max-width:300px;
 }
 .atom-align-right img,.atom-align-left img, img.gauche, img.droite{
   border-radius : 8px;
@@ -259,7 +274,11 @@ h2#page-title{
 .view-shows .group-left{
     position : relative;
 }
-.view-shows .group-left .reservation-status-4{
+#node_show_full_group_psr,body.node-type-festival .ds-2col-stacked-fluid.node-show div.group-left{
+  position  : relative;
+}
+.view-shows .reservation-status-4,#node_show_frontpage_block_group_vsr .reservation-status-4,
+#node_show_full_group_psr .reservation-status-4,.ds-2col-stacked-fluid.node-show .reservation-status-4{
     position: absolute;
     top : 0;
     left : 0;
@@ -267,6 +286,9 @@ h2#page-title{
     height : 57px;
     background: url("../images/icons/canceled.png") no-repeat 0 0;
     text-indent: -2000px;
+}
+.node-type-festival .field-name-field-festival-poster{
+  float: right;
 }
 #block-system-main ul.pager{
     margin-bottom : 20px;
@@ -533,6 +555,12 @@ opacity: 0.8;
 .view-display-id-list div.odd .field-name-field-festival {
 top: -30px;
 }
+.search-show-on{
+  background: #F5F5F5 url(../images/icons/arrow_menu_bottom-right.png) no-repeat 80% 50%;
+}
+.search-show-off{
+  background: #F5F5F5 url(../images/icons/arrow_menu_bottom-right.png) no-repeat 80% 50%;
+}
 
 /* Liste des spectacles en page d'accueil du mobile ****************************/
 
@@ -597,8 +625,74 @@ top: -30px;
     background: url("../images/icons/canceled.png") no-repeat 0 0;
     text-indent: -2000px;
 }
+/* Détail d'un spectacle ******************************************************/
+body.node-type-show #node_show_full_group_psr .field-name-field-scald-image img{
+  margin-bottom:20px;
+}
+/* Page tous les spectacles ***************************************************/
+.page-spectacles-tous-les-spectacles .view-id-shows .view-header .block-left-shows-info{
+  display: none;
+}
+#block-boxes-left-shows-info{
+    width: 95%;
+    height: auto;
+    background: #F5F5F5 url(../images/icons/bg_next_festival.png) no-repeat 100% 0;
+    padding : 20px 5px 5px 12px;
+    margin : 0 20px 0 0;
+}
+#edit-field-festival-target-id{
+    width: 80%;
+}
+body.page-spectacles-tous-les-spectacles .form-checkboxes a.bef-toggle{
+  display: none;
+}
+label[for="edit-field-show-type-tid"]{
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+}
+div.bef-checkboxes div.form-type-bef-checkbox{
+    float : left;
+    width: 90px;
+}
+div.bef-checkboxes div.form-type-bef-checkbox.form-item-edit-field-show-type-tid-6{
+  clear:left;
+}
+#views-exposed-form-shows-list .views-submit-button{
+    float :right;
+}
+#views-exposed-form-shows-list .views-submit-button input{
+    padding : 5px 10px 5px 5px;
+    margin : -50px 27px 0 0;
+    width:100px;
+    color : white;
+    background: #C20000 url(../images/icons/arrow_white.png) no-repeat 95% 50%;
+}
+#views-exposed-form-shows-list div.form-item-edit-field-show-type-tid-6,
+#views-exposed-form-shows-list div.form-item-edit-field-show-type-tid-1{
+    margin-top : 10px;
+}
+#block-boxes-right-shows-infos{
+    width: 100%;
+    height: auto;
+    float: none;
+    padding : 0;
+    margin-bottom : 0;
+}
 
 /* festivals ******************************************************************/
+body.node-type-festival .field-name-link-shows a,
+body.node-type-festival .field-name-field-calendar-archive a{
+    padding-left: 25px;
+    background: url(../images/icons/all_shows.png) no-repeat 0 4px;
+    display: inline-block;
+    height:20px;
+}
+
+body.node-type-festival .field-name-field-calendar-archive a{
+    background: url(../images/icons/calendar-small.png) no-repeat 0 0;
+}
 .node-festival > .group-left {
     width: 100%;
 }
@@ -996,6 +1090,7 @@ body.node-type-show div.view-mode-full div.group-left .field-name-field-by .fiel
       .node-festival .ds-2col-stacked-fluid > .group-right {
         width: 48%;
       }
+      
       
        
 }

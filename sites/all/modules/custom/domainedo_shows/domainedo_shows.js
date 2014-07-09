@@ -65,5 +65,25 @@ jQuery(function($) {
       if($('#practical_div').length) $('.group-right',".node-show").attr('id', 'practical_div');
       
     }
-					
+    /*
+     *  Display or no the show search form
+     */
+    var zone_search = $(".page-spectacles-tous-les-spectacles .view-id-shows .view-header");
+    var title_search = $('<h3 class="search-show-on">Rechercher un spectacle</h3>');
+		if (zone_search.length && $(window).width() < 740 ){  
+      zone_search.hide(); 
+      title_search.insertBefore(zone_search);
+      title_search.click(function(){
+        zone_search.toggle();
+        if($('.search-show-on').lenght){
+          $('.search-show-on').addClass("search-show-off");
+          $('.search-show-on').removeClass("search-show-on");
+        }else{
+          $('.search-show-off').addClass("search-show-on");
+          $('.search-show-off').removeClass("search-show-off");
+          
+        }
+      });
+    }	
+    
 });
