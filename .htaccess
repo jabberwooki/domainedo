@@ -146,4 +146,9 @@ DirectoryIndex index.php index.html index.htm
   # on staging servers listed in rewrite conditions.
   RewriteCond %{HTTP_HOST} ^ddod7\.korora\.fr$ [NC]
   RewriteRule ^robots\.txt /robots.exclude.txt
+
+ # Use the robots.exclude.txt files instead of original robots.txt file
+  # on staging servers listed in rewrite conditions.
+  RewriteCond %{HTTP_HOST} ^*\.coopernet\.fr$ [NC]
+  RewriteRule ^robots\.txt /robots.exclude.txt
 </IfModule>
