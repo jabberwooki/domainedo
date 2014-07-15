@@ -418,7 +418,12 @@ function domainedo_shows_views_default_views() {
   $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
   $handler->display->display_options['arguments']['nid']['exception']['title'] = 'Tout';
   $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'php';
-  $handler->display->display_options['arguments']['nid']['default_argument_options']['code'] = 'return $_GET[\'field_festival_target_id\'];';
+  $handler->display->display_options['arguments']['nid']['default_argument_options']['code'] = 'if (isset($_GET[\'field_festival_target_id\'])) {
+  return $_GET[\'field_festival_target_id\'];
+}
+else {
+  return 0;
+}';
   $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
