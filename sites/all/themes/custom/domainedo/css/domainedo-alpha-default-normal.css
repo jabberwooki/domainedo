@@ -29,8 +29,7 @@ body.front #block-views-evenements-block-1 div.view-footer{
     border-bottom : 1px solid black;
     font-family: Lato,arial;
     text-transform: uppercase;
-    width: 320px;
-    text-align: right;
+    width: 245px;
     padding-top:13px;
     font-weight: bold;
     font-size :1.8em;
@@ -59,7 +58,21 @@ body.front #block-views-evenements-block-1 div.view-footer{
     padding:10px;
 }
 /* slideshow **********************************************************/
-
+#block-views-shows-block-1 h2.title-ss-home{
+  clip: auto;
+  height : auto;
+  top: -30px;
+  left: 33px;
+  font-size : 1.4em;
+}
+#block-views-shows-block-1 h2.title-ss-home a{
+  text-decoration: none;
+}
+#block-views-shows-block-1 h2.title-ss-home a:hover{
+  text-decoration: underline;
+  color : #0062a0;
+}
+ 
 #block-views-shows-block-1{
     float:right;
 }
@@ -70,11 +83,10 @@ body.front #block-views-evenements-block-1 div.view-footer{
 
 /* Home page ******************************************************************/
 h2.h2-event{
-  width:320px;
   margin-left:0;
-  margin-top:40px;
-  float : left;
-  clear:left;
+  margin-top:20px;
+  clear:both;
+  width: 320px;
 }
 
 /* show full page *************************************************************/
@@ -157,4 +169,48 @@ ul#superfish-2 li.sf-depth-1 a{
 /* footer *********************************************************************/
 #partner-text {
   font-size: 1em;
+}
+/* Home autres événements *****************************************************/
+.view-evenements.view-display-id-block_2{
+  clear: both;
+}
+.view-evenements.view-display-id-block_2 .views-row {
+          float : left;
+          width: 32%;
+          height:auto;
+          overflow: visible;
+          margin : 0 0.5% 2% 0;
+          padding : 0 0 30px 0;
+          position: relative;
+          background : transparent url(../images/icons/bg_bottom_home_events.jpg) no-repeat 50% 100%;
+}
+.view-evenements.view-display-id-block_2 .views-row.views-row-1 {
+          clear : both;
+          width: 35%;
+          padding : 0 0 22px 0;
+}
+.view-evenements.view-display-id-block_2 .views-row.views-row-3 {
+          margin : 0;
+}
+.view-evenements.view-display-id-block_2  .views-row h3.title-event-list{
+  padding-left : 30px;
+  background : transparent url(../images/icons/bg-h3-home-event.gif) no-repeat 0 50%;
+}
+
+.view-evenements.view-display-id-block_2  .views-row > .views-field-field-scald-image{
+        float : none;
+        margin-right: 0;
+}
+.view-evenements.view-display-id-block_2  .views-row >.views-field-body{
+  position: absolute;
+  bottom : 22px;
+  background-color: #DED9D6;
+  opacity: 0.8;
+  width: 301px;
+}
+.view-evenements.view-display-id-block_2  .views-row.views-row-1 >.views-field-body{
+  width: 325px;
+}
+.view-evenements.view-display-id-block_2 div.more-link{
+  margin-bottom : 20px;
 }

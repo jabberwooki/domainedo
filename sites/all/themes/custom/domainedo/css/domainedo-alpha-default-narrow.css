@@ -11,8 +11,8 @@
 body.not-front #region-content h2,
 body.not-front #region-content .block-right-shows-infos h2{
   background : url(../images/icons/bg_h2_classic.png) no-repeat 0 0;
-  line-height: 33px;
-  padding-left : 48px;
+  line-height: 30px;
+  padding : 3px 0 0 48px;
   font-family: Lato, arial;
   font-weight: 400;
   border-bottom : 1px solid black;
@@ -633,6 +633,9 @@ div.menu-block-domainedo-shows-tab-menu > ul > li > a.active-trail,
   padding : 5px 0 5px 42px;
 }
 /* Pages tous les spectacles **************************************************/
+.menu-block-domainedo-shows-tab-menu{
+  margin-bottom : 15px;
+}
 #block-boxes-left-shows-info{
     width: 253px;
     height: 115px;
