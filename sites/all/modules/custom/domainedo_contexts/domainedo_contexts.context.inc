@@ -217,9 +217,9 @@ function domainedo_contexts_context_default_contexts() {
           'region' => 'content',
           'weight' => '-27',
         ),
-        'boxes-event_home_title' => array(
-          'module' => 'boxes',
-          'delta' => 'event_home_title',
+        'views-evenements-block_2' => array(
+          'module' => 'views',
+          'delta' => 'evenements-block_2',
           'region' => 'content',
           'weight' => '-10',
         ),
