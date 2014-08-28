@@ -318,6 +318,62 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-festival-field_no_result'
+  $field_instances['node-festival-field_no_result'] = array(
+    'bundle' => 'festival',
+    'default_value' => array(
+      0 => array(
+        'value' => '<div class="views-row views-row-2 views-row-even">
+<div class="views-field views-field-field-no-result">
+<div class="field-content">&nbsp;</div>
+</div>
+</div>
+',
+        'format' => 'full_html',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 15,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_no_result',
+    'label' => 'Pas de résultat',
+    'required' => 1,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 12,
+    ),
+  );
+
   // Exported field_instance: 'node-festival-field_scald_file'
   $field_instances['node-festival-field_scald_file'] = array(
     'bundle' => 'festival',
@@ -2706,9 +2762,8 @@ function domainedo_shows_field_default_field_instances() {
       ),
       'zoom' => array(
         'label' => 'hidden',
-        'module' => 'domainedo_media',
         'settings' => array(),
-        'type' => 'zoom',
+        'type' => 'hidden',
         'weight' => 1,
       ),
     ),
@@ -3284,8 +3339,11 @@ function domainedo_shows_field_default_field_instances() {
       ),
       'zoom' => array(
         'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
+        'module' => 'domainedo_media',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'zoom',
         'weight' => 22,
       ),
     ),
@@ -4262,6 +4320,7 @@ function domainedo_shows_field_default_field_instances() {
   t('Logo');
   t('Nom du festival');
   t('Par');
+  t('Pas de résultat');
   t('Photo du spectacle');
   t('Prochainement en vente');
   t('Production');

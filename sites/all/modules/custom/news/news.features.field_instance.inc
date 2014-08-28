@@ -516,7 +516,9 @@ function news_field_default_field_instances() {
       'zoom' => array(
         'label' => 'hidden',
         'module' => 'domainedo_media',
-        'settings' => array(),
+        'settings' => array(
+          'link' => 1,
+        ),
         'type' => 'zoom',
         'weight' => 1,
       ),

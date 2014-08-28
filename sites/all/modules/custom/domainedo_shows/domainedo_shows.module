@@ -58,7 +58,7 @@ function domainedo_shows_node_view_alter(&$build) {
 			if (isset($build['field_festival'])) {
 				$festival_infos = domainedo_shows_get_festival_infos($build['field_festival']['#items'][0]['target_id'], array('title', 'url'));
 				if (!empty($festival_infos)) {
-					$build['field_festival'][0]['#markup'] = '<a href="' . $festival_infos['url'] . '">' . $build['field_festival'][0]['#markup'] . '</a>';
+					$build['field_festival'][0]['#markup'] = '<a href="/' . $festival_infos['url'] . '">' . $build['field_festival'][0]['#markup'] . '</a>';
 				}
 			}
 			

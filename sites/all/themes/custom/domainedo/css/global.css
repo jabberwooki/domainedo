@@ -1034,6 +1034,9 @@ h3.medium a{
       #region-footer-first .sprite-tripadvisor:hover {
           background-position: 50% -332px;
       }
+      div.field-name-field-festival-poster{
+        display:none;
+      }
             
 }
 @media screen and (min-width:481px){

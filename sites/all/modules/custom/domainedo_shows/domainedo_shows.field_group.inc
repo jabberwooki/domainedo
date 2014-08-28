@@ -184,6 +184,7 @@ function domainedo_shows_field_group_info() {
     'weight' => '18',
     'children' => array(
       0 => 'field_calendar_archive',
+      1 => 'field_no_result',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

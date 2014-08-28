@@ -35,6 +35,7 @@ var base_url="";
       
       // création des boutons précédents et suivants et des boutons de contrôle
       (function(){
+        if(thediapo.nb_diapo>1){
           var buttons_controlers='<div id="buttons_controlers">';
           for(var i=0;i<thediapo.nb_diapo;i++){
               if(i==0) buttons_controlers +='<div id="controler_'+i+'" class="button_controler selected_controler"></div>';      
@@ -59,6 +60,7 @@ var base_url="";
           $("#previous_diapo").click(function() {
             thediapo.previous_diapo(thediapo);
           });
+        }
       })();
       
       // dimensionnement initial du diaporama et de ses éléments
@@ -74,12 +76,15 @@ var base_url="";
             // dimmensionner chaque diapo
             $(groupe_6).width((thediapo.largeur)-69);//
             $(groupe_6).height(thediapo.hauteur);
-            
+            if(thediapo.nb_diapo>1){
             // dimmensionner les boutons suivants et précédents
-            $("#next_diapo").width(86);
-            $("#next_diapo").height(360);
-            $("#previous_diapo").width(0);
-            $("#previous_diapo").height(360);
+              $("#next_diapo").width(86);
+              $("#next_diapo").height(360);
+              $("#previous_diapo").width(0);
+              $("#previous_diapo").height(360);
+            }else{
+              $(groupe_6).css({'margin-left':'34px'});
+            }
       })();
       
       

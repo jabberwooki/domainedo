@@ -59,7 +59,7 @@ function domainedo_shows_custom_breadcrumb_features_default_settings() {
     'name' => 'Fiche spectacle',
     'titles' => 'Spectacles
 Tous les spectacles
-[current-page:page-title]',
+[node:title]',
     'paths' => 'spectacles/tous-les-spectacles
 spectacles/tous-les-spectacles
 <none>',
