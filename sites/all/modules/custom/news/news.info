@@ -17,6 +17,7 @@ dependencies[] = field_group
 dependencies[] = image
 dependencies[] = list
 dependencies[] = menu
+dependencies[] = node
 dependencies[] = options
 dependencies[] = pathauto
 dependencies[] = scald

@@ -2762,9 +2762,8 @@ function domainedo_shows_field_default_field_instances() {
       ),
       'zoom' => array(
         'label' => 'hidden',
-        'module' => 'domainedo_media',
         'settings' => array(),
-        'type' => 'zoom',
+        'type' => 'hidden',
         'weight' => 1,
       ),
     ),
@@ -3340,8 +3339,11 @@ function domainedo_shows_field_default_field_instances() {
       ),
       'zoom' => array(
         'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
+        'module' => 'domainedo_media',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'zoom',
         'weight' => 22,
       ),
     ),

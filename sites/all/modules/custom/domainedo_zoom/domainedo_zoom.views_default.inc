@@ -37,14 +37,14 @@ function domainedo_zoom_views_default_views() {
   $handler->display->display_options['row_options']['advanced'] = 0;
   $handler->display->display_options['row_options']['delta_fieldset']['delta_fields'] = array();
   $handler->display->display_options['row_options']['default_fieldset']['view_mode'] = 'zoom';
-  /* Field: Contenu: Title */
+  /* Champ: Contenu: Titre */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Filter criterion: Contenu: Published */
+  /* Filter criterion: Contenu: Publié */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -76,7 +76,7 @@ function domainedo_zoom_views_default_views() {
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Contenu: Published */
+  /* Filter criterion: Contenu: Publié */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -120,14 +120,14 @@ function domainedo_zoom_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Contenu: Title */
+  /* Champ: Contenu: Titre */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Contenu: Date d'événement */
+  /* Champ: Contenu: Date d'événement */
   $handler->display->display_options['fields']['field_date']['id'] = 'field_date';
   $handler->display->display_options['fields']['field_date']['table'] = 'field_data_field_date';
   $handler->display->display_options['fields']['field_date']['field'] = 'field_date';
@@ -141,7 +141,7 @@ function domainedo_zoom_views_default_views() {
     'multiple_to' => '',
   );
   $handler->display->display_options['fields']['field_date']['delta_offset'] = '0';
-  /* Field: Contenu: Date(s) */
+  /* Champ: Contenu: Date(s) */
   $handler->display->display_options['fields']['field_show_dates']['id'] = 'field_show_dates';
   $handler->display->display_options['fields']['field_show_dates']['table'] = 'field_data_field_show_dates';
   $handler->display->display_options['fields']['field_show_dates']['field'] = 'field_show_dates';
@@ -155,7 +155,7 @@ function domainedo_zoom_views_default_views() {
     'multiple_to' => '',
   );
   $handler->display->display_options['fields']['field_show_dates']['delta_offset'] = '0';
-  /* Field: Contenu: Image */
+  /* Champ: Champ: Image */
   $handler->display->display_options['fields']['field_scald_image']['id'] = 'field_scald_image';
   $handler->display->display_options['fields']['field_scald_image']['table'] = 'field_data_field_scald_image';
   $handler->display->display_options['fields']['field_scald_image']['field'] = 'field_scald_image';
@@ -166,7 +166,7 @@ function domainedo_zoom_views_default_views() {
     'link' => '0',
   );
   $handler->display->display_options['fields']['field_scald_image']['delta_offset'] = '0';
-  /* Field: Contenu: Description */
+  /* Champ: Contenu: Description */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -176,7 +176,7 @@ function domainedo_zoom_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '35',
   );
-  /* Field: Draggableviews: Contenu */
+  /* Champ: Draggableviews: Contenu */
   $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
   $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
   $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
@@ -186,7 +186,7 @@ function domainedo_zoom_views_default_views() {
   $handler->display->display_options['fields']['draggableviews']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['draggableviews']['draggableviews']['save_button_label'] = 'Update';
   $handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 0;
-  /* Field: Contenu: Zoom sur */
+  /* Champ: Contenu: Zoom sur */
   $handler->display->display_options['fields']['field_zoom']['id'] = 'field_zoom';
   $handler->display->display_options['fields']['field_zoom']['table'] = 'field_data_field_zoom';
   $handler->display->display_options['fields']['field_zoom']['field'] = 'field_zoom';
@@ -200,7 +200,7 @@ function domainedo_zoom_views_default_views() {
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Contenu: Published */
+  /* Filter criterion: Contenu: Publié */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
