@@ -504,7 +504,7 @@ function news_views_default_views() {
   $handler->display->display_options['fields']['field_scald_image']['field'] = 'field_scald_image';
   $handler->display->display_options['fields']['field_scald_image']['label'] = '';
   $handler->display->display_options['fields']['field_scald_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_scald_image']['type'] = 'home_event';
+  $handler->display->display_options['fields']['field_scald_image']['type'] = 'event_home';
   $handler->display->display_options['fields']['field_scald_image']['settings'] = array(
     'link' => '0',
   );

@@ -72,38 +72,6 @@ function news_custom_breadcrumbs_views_features_default_settings() {
 }
 
 /**
- * Implements hook_image_default_styles().
- */
-function news_image_default_styles() {
-  $styles = array();
-
-  // Exported image style: home_event.
-  $styles['home_event'] = array(
-    'name' => 'home_event',
-    'label' => 'home_event',
-    'effects' => array(
-      17 => array(
-        'label' => 'Scale and crop',
-        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
-        'effect callback' => 'image_scale_and_crop_effect',
-        'dimensions callback' => 'image_resize_dimensions',
-        'form callback' => 'image_resize_form',
-        'summary theme' => 'image_resize_summary',
-        'module' => 'image',
-        'name' => 'image_scale_and_crop',
-        'data' => array(
-          'width' => 325,
-          'height' => 136,
-        ),
-        'weight' => 1,
-      ),
-    ),
-  );
-
-  return $styles;
-}
-
-/**
  * Implements hook_node_info().
  */
 function news_node_info() {
