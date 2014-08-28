@@ -167,6 +167,14 @@ function domainedo_media_strongarm() {
       'parseable' => TRUE,
       'formats' => array(),
     ),
+    'event_home' => array(
+      'name' => 'event_home',
+      'title' => 'event_home',
+      'description' => '',
+      'render_language' => 'XHTML',
+      'parseable' => TRUE,
+      'formats' => array(),
+    ),
   );
   $export['scald_custom_contexts'] = $strongarm;
 
