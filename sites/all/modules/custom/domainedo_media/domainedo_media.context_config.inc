@@ -137,7 +137,7 @@ function domainedo_media_default_scald_context_config() {
     'gallery' => array(
       '*' => 'galleria',
       'settings' => array(
-        'width' => '690',
+        'width' => '100%',
         'height' => '450',
         'thumb_style' => 'thumbnail',
         'normal_style' => 'large',

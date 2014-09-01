@@ -47,6 +47,7 @@ body.front #block-views-evenements-block-1 div.view-footer{
     color: #000000;
     text-transform: uppercase;
     display: block;
+    font-size:0.8em;
 }
 #node_show_zoom_group_summary_dates{
     position : absolute;
