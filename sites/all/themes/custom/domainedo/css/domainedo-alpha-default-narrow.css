@@ -762,6 +762,9 @@ div.menu-block-domainedo-shows-tab-menu > ul > li > a.active-trail,
 .field-name-field-comments-link a{
     background : url(../images/icons/comment-show-full-page.png) no-repeat 50% 50%;
 }
+.field-name-field-photos-link a{
+    background : url(../images/icons/camera-show-full-page.png) no-repeat 50% 50%;
+}
 ul.group-ul-short-links> div.field-name-field-back-to-top-link a{
     background : url(../images/icons/arrow-top-show-full-page.png) no-repeat 50% 50%;
     border : 0;

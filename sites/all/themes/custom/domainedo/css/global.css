@@ -749,6 +749,14 @@ body.node-type-show div.view-mode-full div.group-left .field-name-field-by .fiel
 body.node-type-show div.view-mode-full div.group-left .field-name-field-by .field-item.even{
   padding-right : 5px;
 }
+/* Gallery ********************************************************************
+.galleria-container {
+    background: none repeat scroll 0 0 #FFC929;
+    border-radius: 6px;
+}*/
+.block-evenements-block-2{
+        clear:both;
+}
 /* media queries **************************************************************/
 @media screen and (max-width:980px){
   /* Fiche de spectacle ***************************************************/
@@ -1037,6 +1045,7 @@ h3.medium a{
       div.field-name-field-festival-poster{
         display:none;
       }
+      
             
 }
 @media screen and (min-width:481px){
