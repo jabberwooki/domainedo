@@ -786,5 +786,30 @@ ul.group-ul-short-links> div.field-name-field-back-to-top-link a{
     overflow: hidden;
     
 }
+/* Pratique *******************************************************************/
+div.pratique{
+  border : 2px solid #C20000;
+  border-radius : 8px;
+  padding : 8px;
+  float:right;
+  width:39.5833333%;
+  margin-left : 1.041666%;
+}
+div.pratique div.button_subscribe{
+  background-color : #C20000;
+  width : 150px;
+  margin : 0 auto;
+  border-radius: 6px;
+}
+div.pratique div.button_subscribe a{
+  color: white;
+  text-decoration : none;
+  padding: 5px;
+  text-align: center;
+  display: block;
 
+}
+#webform-client-form-590 label{
+  display:block;
+}
 
