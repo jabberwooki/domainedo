@@ -88,7 +88,7 @@ function domainedo_documents_views_default_views() {
       'secondary_label' => 'Options avancées',
     ),
     'field_described_location_tid' => array(
-      'bef_format' => 'bef_links',
+      'bef_format' => 'default',
       'more_options' => array(
         'bef_select_all_none' => FALSE,
         'bef_collapsible' => 0,
@@ -171,6 +171,7 @@ function domainedo_documents_views_default_views() {
   );
   $handler->display->display_options['filters']['field_described_location_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_described_location_tid']['expose']['operator_id'] = 'field_described_location_tid_op';
+  $handler->display->display_options['filters']['field_described_location_tid']['expose']['label'] = 'Lieu concerné';
   $handler->display->display_options['filters']['field_described_location_tid']['expose']['operator'] = 'field_described_location_tid_op';
   $handler->display->display_options['filters']['field_described_location_tid']['expose']['identifier'] = 'field_described_location_tid';
   $handler->display->display_options['filters']['field_described_location_tid']['expose']['remember_roles'] = array(
@@ -198,7 +199,7 @@ function domainedo_documents_views_default_views() {
       'secondary_label' => 'Options avancées',
     ),
     'field_relpub_document_type_value' => array(
-      'bef_format' => 'bef_links',
+      'bef_format' => 'default',
       'more_options' => array(
         'bef_select_all_none' => FALSE,
         'bef_collapsible' => 0,
@@ -246,6 +247,7 @@ function domainedo_documents_views_default_views() {
   );
   $handler->display->display_options['filters']['field_relpub_document_type_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_relpub_document_type_value']['expose']['operator_id'] = 'field_relpub_document_type_value_op';
+  $handler->display->display_options['filters']['field_relpub_document_type_value']['expose']['label'] = 'Type de document';
   $handler->display->display_options['filters']['field_relpub_document_type_value']['expose']['operator'] = 'field_relpub_document_type_value_op';
   $handler->display->display_options['filters']['field_relpub_document_type_value']['expose']['identifier'] = 'field_relpub_document_type_value';
   $handler->display->display_options['filters']['field_relpub_document_type_value']['expose']['required'] = TRUE;
@@ -310,24 +312,7 @@ function domainedo_documents_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'press_document' => 'press_document',
   );
-  /* Filter criterion: Contenu: Catégorie (field_press_document_type) */
-  $handler->display->display_options['filters']['field_press_document_type_value']['id'] = 'field_press_document_type_value';
-  $handler->display->display_options['filters']['field_press_document_type_value']['table'] = 'field_data_field_press_document_type';
-  $handler->display->display_options['filters']['field_press_document_type_value']['field'] = 'field_press_document_type_value';
-  $handler->display->display_options['filters']['field_press_document_type_value']['value'] = array(
-    'dossier' => 'dossier',
-  );
-  $handler->display->display_options['filters']['field_press_document_type_value']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_press_document_type_value']['expose']['operator_id'] = 'field_press_document_type_value_op';
-  $handler->display->display_options['filters']['field_press_document_type_value']['expose']['operator'] = 'field_press_document_type_value_op';
-  $handler->display->display_options['filters']['field_press_document_type_value']['expose']['identifier'] = 'field_press_document_type_value';
-  $handler->display->display_options['filters']['field_press_document_type_value']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    5 => 0,
-    4 => 0,
-    3 => 0,
-  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
   $handler->display->display_options['path'] = 'espace-pro/documents-presse';
   $translatables['documents'] = array(
     t('Master'),
@@ -348,9 +333,11 @@ function domainedo_documents_views_default_views() {
     t('Documents techniques'),
     t('Intro rubrique Technique'),
     t('Texte d\'intro de la rubrique technique'),
+    t('Lieu concerné'),
     t('Documents Relations Publiques'),
     t('Intro rubrique RP'),
     t('Texte d\'intro de la rubrique Relations Publiques.'),
+    t('Type de document'),
     t('Documents Presse'),
     t('Documents presse'),
     t('Intro rubrique Presse'),

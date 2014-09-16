@@ -55,27 +55,12 @@ function domainedo_documents_form_tech_document_node_form_alter(&$form, &$form_s
 }
 
 function domainedo_documents_form_views_exposed_form_alter(&$form, &$form_state) {
-	if ($form_state['view']->name == 'documents') {
-		// Removal of 'All' value in 'Lieu' exposed filter for technical documents.
+	if ($form_state['view']->name == 'documents') {		
+		// 'Lieu concerné' exposed filter default value set to 'All' for technical documents.
 		if ($form_state['view']->current_display == 'page_with_page_title_1') {
-			$options = $form['field_described_location_tid']['#options'];
-			unset($options['All']);
-			$form['field_described_location_tid']['#options'] = $options;
-			$form['field_described_location_tid']['#default_value'] = key($options);
-		}
-		//Removal of 'All' value in 'Catégorie' exposed filter for public documents.
-		if ($form_state['view']->current_display == 'page_with_page_title_2') {
-			$options = $form['field_relpub_document_type_value']['#options'];
-			unset($options['All']);
-			$form['field_relpub_document_type_value']['#options'] =  $options;
-			$form['field_relpub_document_type_value']['#default_value'] = key($options);
-		}
-		// Removal of 'All' value in 'Catégorie' exposed filter for press documents.
-		if ($form_state['view']->current_display == 'page_with_page_title_3') {
-			$options = $form['field_press_document_type_value']['#options'];
-			unset($options['All']);
-			$form['field_press_document_type_value']['#options'] =  $options;
-			$form['field_press_document_type_value']['#default_value'] = key($options);
+			if (empty($_GET['field_described_location_tid'])) {
+				$form_state['input']['field_described_location_tid'] = 'All';
+			}
 		}
 	}
 }

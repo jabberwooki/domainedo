@@ -47,6 +47,7 @@ features[field_instance][] = node-tech_document-field_doc_section
 features[field_instance][] = node-tech_document-field_scald_file
 features[field_instance][] = node-tech_document-field_tech_document_type
 features[field_instance][] = taxonomy_term-espace_pro-field_section_image
+features[menu_links][] = menu-top-courtesy-nav_espace-pro:espace-pro
 features[node][] = press_document
 features[node][] = relpub_document
 features[node][] = tech_document
