@@ -757,6 +757,12 @@ body.node-type-show div.view-mode-full div.group-left .field-name-field-by .fiel
 .block-evenements-block-2{
         clear:both;
 }
+.field-name-scald-authors.field-label-hidden{
+  display: none;
+}
+.view-display-id-block_2 h3 a{
+  font-size: 0.8em;
+}
 /* media queries **************************************************************/
 @media screen and (max-width:980px){
   /* Fiche de spectacle ***************************************************/
