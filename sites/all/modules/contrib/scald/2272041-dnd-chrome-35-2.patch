@@ -1,0 +1,27 @@
+diff --git a/modules/fields/atom_reference/atom_reference.js b/modules/fields/atom_reference/atom_reference.js
+index ab186fb..2fe8be6 100644
+--- a/modules/fields/atom_reference/atom_reference.js
++++ b/modules/fields/atom_reference/atom_reference.js
+@@ -30,7 +30,7 @@ Drupal.behaviors.atom_reference = {
+         .bind('dragover', function(e) {e.preventDefault();})
+         .bind('dragenter', function(e) {e.preventDefault();})
+         .bind('drop', function(e) {
+-          var dt = e.originalEvent.dataTransfer.getData('Text').replace(/^\[scald=(\d+).*$/, '$1');
++          var dt = Drupal.dnd.currentAtom.replace(/^\[scald=(\d+).*$/, '$1');
+           var ret = Drupal.atom_reference.droppable(dt, this);
+           var $this = $(this);
+           if (ret.found && ret.keepgoing) {
+diff --git a/modules/library/dnd/js/dnd-library.js b/modules/library/dnd/js/dnd-library.js
+index 8aaa25f..fa36b3c 100644
+--- a/modules/library/dnd/js/dnd-library.js
++++ b/modules/library/dnd/js/dnd-library.js
+@@ -352,7 +352,8 @@ renderLibrary: function(data, editor) {
+         }
+         var id = $img.data('atom-id');
+         dt.dropEffect = 'copy';
+-        dt.setData("Text", Drupal.dnd.Atoms[id].sas);
++        dt.setData("text", Drupal.dnd.Atoms[id].sas);
++        Drupal.dnd.currentAtom = Drupal.dnd.Atoms[id].sas;
+         try {
+           // Trick: if not the image might come out and go into the current hovered
+           // paragraph.

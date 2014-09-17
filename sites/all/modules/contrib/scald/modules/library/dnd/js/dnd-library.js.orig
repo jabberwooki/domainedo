@@ -294,8 +294,7 @@ renderLibrary: function(data, editor) {
         }
         var id = $img.data('atom-id');
         dt.dropEffect = 'copy';
-        dt.setData("text", Drupal.dnd.Atoms[id].sas);
-        Drupal.dnd.currentAtom = Drupal.dnd.Atoms[id].sas;
+        dt.setData("Text", Drupal.dnd.Atoms[id].sas);
         try {
           dt.setData("text/html", Drupal.theme('scaldEmbed', Drupal.dnd.Atoms[id]));
         }
