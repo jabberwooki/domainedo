@@ -360,6 +360,9 @@ function domainedo_shows_field_default_field_instances() {
     'label' => 'Pas de résultat',
     'required' => 1,
     'settings' => array(
+      'context' => '',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -1002,6 +1005,9 @@ function domainedo_shows_field_default_field_instances() {
     'label' => 'Infos supplémentaires',
     'required' => 0,
     'settings' => array(
+      'context' => '',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -1309,6 +1315,9 @@ function domainedo_shows_field_default_field_instances() {
     'label' => 'Distribution',
     'required' => 0,
     'settings' => array(
+      'context' => '',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -1456,6 +1465,9 @@ function domainedo_shows_field_default_field_instances() {
     'label' => 'Prochainement en vente',
     'required' => 0,
     'settings' => array(
+      'context' => '',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -1603,6 +1615,9 @@ function domainedo_shows_field_default_field_instances() {
     'label' => 'Coproducteurs',
     'required' => 0,
     'settings' => array(
+      'context' => '',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -1961,6 +1976,9 @@ function domainedo_shows_field_default_field_instances() {
     'label' => 'Complet',
     'required' => 0,
     'settings' => array(
+      'context' => '',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -2328,6 +2346,9 @@ function domainedo_shows_field_default_field_instances() {
     'label' => 'Production',
     'required' => 0,
     'settings' => array(
+      'context' => '',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -2548,6 +2569,9 @@ function domainedo_shows_field_default_field_instances() {
     'label' => 'Remboursement',
     'required' => 0,
     'settings' => array(
+      'context' => '',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),

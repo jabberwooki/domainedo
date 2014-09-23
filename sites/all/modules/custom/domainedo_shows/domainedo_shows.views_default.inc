@@ -42,7 +42,7 @@ function domainedo_shows_views_default_views() {
   $handler->display->display_options['style_options']['theme_style'] = '1';
   $handler->display->display_options['style_options']['max_items'] = '0';
   $handler->display->display_options['row_plugin'] = 'calendar_entity';
-  /* Champ: Contenu: Date(s) */
+  /* Field: Contenu: Date(s) */
   $handler->display->display_options['fields']['field_show_dates']['id'] = 'field_show_dates';
   $handler->display->display_options['fields']['field_show_dates']['table'] = 'field_data_field_show_dates';
   $handler->display->display_options['fields']['field_show_dates']['field'] = 'field_show_dates';
@@ -58,7 +58,7 @@ function domainedo_shows_views_default_views() {
   );
   $handler->display->display_options['fields']['field_show_dates']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_show_dates']['delta_offset'] = '0';
-  /* Champ: Contenu: Date d'événement */
+  /* Field: Contenu: Date d'événement */
   $handler->display->display_options['fields']['field_date']['id'] = 'field_date';
   $handler->display->display_options['fields']['field_date']['table'] = 'field_data_field_date';
   $handler->display->display_options['fields']['field_date']['field'] = 'field_date';
@@ -72,7 +72,7 @@ function domainedo_shows_views_default_views() {
     'multiple_to' => '',
   );
   $handler->display->display_options['fields']['field_date']['delta_offset'] = '0';
-  /* Champ: Contenu: Titre */
+  /* Field: Contenu: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -85,7 +85,7 @@ function domainedo_shows_views_default_views() {
   $handler->display->display_options['sorts']['field_show_dates_value']['id'] = 'field_show_dates_value';
   $handler->display->display_options['sorts']['field_show_dates_value']['table'] = 'field_data_field_show_dates';
   $handler->display->display_options['sorts']['field_show_dates_value']['field'] = 'field_show_dates_value';
-  /* Filter criterion: Contenu: Publié */
+  /* Filter criterion: Contenu: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -249,7 +249,7 @@ function domainedo_shows_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'calendar_entity';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Champ: Contenu: Titre */
+  /* Field: Contenu: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -258,7 +258,7 @@ function domainedo_shows_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['hide_alter_empty'] = FALSE;
-  /* Champ: Contenu: Date(s) */
+  /* Field: Contenu: Date(s) */
   $handler->display->display_options['fields']['field_show_dates']['id'] = 'field_show_dates';
   $handler->display->display_options['fields']['field_show_dates']['table'] = 'field_data_field_show_dates';
   $handler->display->display_options['fields']['field_show_dates']['field'] = 'field_show_dates';
@@ -345,7 +345,7 @@ function domainedo_shows_views_default_views() {
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Contenu: Publié */
+  /* Filter criterion: Contenu: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -405,7 +405,7 @@ function domainedo_shows_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Champ: Contenu: Pas de résultat */
+  /* Field: Contenu: Pas de résultat */
   $handler->display->display_options['fields']['field_no_result']['id'] = 'field_no_result';
   $handler->display->display_options['fields']['field_no_result']['table'] = 'field_data_field_no_result';
   $handler->display->display_options['fields']['field_no_result']['field'] = 'field_no_result';
@@ -427,7 +427,7 @@ else {
   $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
-  /* Filter criterion: Contenu: Publié */
+  /* Filter criterion: Contenu: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -489,18 +489,18 @@ else {
   $handler->display->display_options['pager']['options']['tags']['last'] = 'dernier »';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Champ: Contenu: Titre */
+  /* Field: Contenu: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Sort criterion: Contenu: Titre */
+  /* Sort criterion: Contenu: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
-  /* Filter criterion: Contenu: Publié */
+  /* Filter criterion: Contenu: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -599,7 +599,7 @@ else {
   $handler->display->display_options['row_options']['delta_fieldset']['delta_fields'] = array();
   $handler->display->display_options['row_options']['grouping_fieldset']['group_field'] = 'node|created';
   $handler->display->display_options['row_options']['default_fieldset']['view_mode'] = 'list';
-  /* Champ: Contenu: Titre */
+  /* Field: Contenu: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -611,11 +611,11 @@ else {
   $handler->display->display_options['sorts']['field_show_dates_value']['table'] = 'field_data_field_show_dates';
   $handler->display->display_options['sorts']['field_show_dates_value']['field'] = 'field_show_dates_value';
   $handler->display->display_options['sorts']['field_show_dates_value']['group_type'] = 'min';
-  /* Sort criterion: Contenu: Titre */
+  /* Sort criterion: Contenu: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
-  /* Filter criterion: Contenu: Publié */
+  /* Filter criterion: Contenu: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -667,21 +667,21 @@ else {
   );
   $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Entête: Global: Block area */
+  /* Header: Global: Block area */
   $handler->display->display_options['header']['block']['id'] = 'block';
   $handler->display->display_options['header']['block']['table'] = 'views';
   $handler->display->display_options['header']['block']['field'] = 'block';
   $handler->display->display_options['header']['block']['label'] = 'Left info';
   $handler->display->display_options['header']['block']['empty'] = TRUE;
   $handler->display->display_options['header']['block']['block_to_insert'] = 'boxes:left_shows_info';
-  /* Entête: Global: Text area */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['label'] = 'Shows list filter';
   $handler->display->display_options['header']['area']['empty'] = TRUE;
   $handler->display->display_options['header']['area']['format'] = 'full_html';
-  /* Entête: Global: Block area */
+  /* Header: Global: Block area */
   $handler->display->display_options['header']['block_1']['id'] = 'block_1';
   $handler->display->display_options['header']['block_1']['table'] = 'views';
   $handler->display->display_options['header']['block_1']['field'] = 'block';
@@ -699,7 +699,7 @@ else {
   $handler->display->display_options['empty']['view']['inherit_arguments'] = TRUE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Contenu: Publié */
+  /* Filter criterion: Contenu: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -797,7 +797,7 @@ else {
   $handler->display->display_options['row_options']['default_fieldset']['view_mode'] = 'frontpage_block';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
-  /* Pied de page: Global: Text area */
+  /* Footer: Global: Text area */
   $handler->display->display_options['footer']['area']['id'] = 'area';
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
@@ -811,7 +811,7 @@ else {
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Contenu: Publié */
+  /* Filter criterion: Contenu: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -831,7 +831,7 @@ else {
   $handler->display->display_options['filters']['field_show_dates_value']['field'] = 'field_show_dates_value';
   $handler->display->display_options['filters']['field_show_dates_value']['operator'] = '>=';
   $handler->display->display_options['filters']['field_show_dates_value']['default_date'] = 'now';
-  /* Filter criterion: Contenu: Promu en info flash (field_promoted) */
+  /* Filter criterion: Contenu: Promu en page d&#039;accueil (field_promoted) */
   $handler->display->display_options['filters']['field_promoted_value']['id'] = 'field_promoted_value';
   $handler->display->display_options['filters']['field_promoted_value']['table'] = 'field_data_field_promoted';
   $handler->display->display_options['filters']['field_promoted_value']['field'] = 'field_promoted_value';

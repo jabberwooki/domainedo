@@ -13,25 +13,6 @@ function domainedo_shows_default_box() {
   $box = new stdClass();
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
   $box->api_version = 1;
-  $box->delta = 'left_shows_info';
-  $box->plugin_key = 'simple';
-  $box->title = 'En ce moment';
-  $box->description = 'Info spectacles gauche';
-  $box->options = array(
-    'body' => array(
-      'value' => '<p>C\'est le festival &nbsp;<strong>Folies d\'O&nbsp;</strong>du 07 au 12 juillet</p>
-
-<p><a href="/spectacles/été/l-été-au-domaine-do">Voir les dates des festivals à venir</a></p>
-',
-      'format' => 'full_html',
-    ),
-    'additional_classes' => '',
-  );
-  $export['left_shows_info'] = $box;
-
-  $box = new stdClass();
-  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
-  $box->api_version = 1;
   $box->delta = 'right_shows_infos';
   $box->plugin_key = 'simple';
   $box->title = 'Calendrier et archive';
