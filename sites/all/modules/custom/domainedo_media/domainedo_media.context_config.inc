@@ -37,6 +37,7 @@ function domainedo_media_default_scald_context_config() {
   $context_config->player = array(
     'audio' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'file' => array(
       '*' => 'default',
@@ -44,6 +45,7 @@ function domainedo_media_default_scald_context_config() {
     ),
     'gallery' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'image' => array(
       '*' => 'default',
@@ -86,12 +88,14 @@ function domainedo_media_default_scald_context_config() {
   $context_config->player = array(
     'audio' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'file' => array(
       '*' => 'default',
     ),
     'gallery' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'image' => array(
       '*' => 'default',
@@ -133,6 +137,7 @@ function domainedo_media_default_scald_context_config() {
   $context_config->player = array(
     'audio' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'gallery' => array(
       '*' => 'galleria',
@@ -191,12 +196,14 @@ function domainedo_media_default_scald_context_config() {
   $context_config->player = array(
     'audio' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'file' => array(
       '*' => 'default',
     ),
     'gallery' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'image' => array(
       '*' => 'default',
@@ -238,13 +245,23 @@ function domainedo_media_default_scald_context_config() {
   $context_config->player = array(
     'audio' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'file' => array(
       '*' => 'default',
       'settings' => array(),
     ),
     'gallery' => array(
-      '*' => 'default',
+      '*' => 'galleria',
+      'settings' => array(
+        'width' => '690',
+        'height' => '450',
+        'thumb_style' => 'thumbnail',
+        'normal_style' => 'large',
+        'big_style' => 'original',
+        'theme' => 'classic',
+        'options' => '',
+      ),
     ),
     'image' => array(
       '*' => 'default',
@@ -287,12 +304,14 @@ function domainedo_media_default_scald_context_config() {
   $context_config->player = array(
     'audio' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'file' => array(
       '*' => 'default',
     ),
     'gallery' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'image' => array(
       '*' => 'default',
@@ -334,6 +353,7 @@ function domainedo_media_default_scald_context_config() {
   $context_config->player = array(
     'audio' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'gallery' => array(
       '*' => 'galleria',
@@ -396,6 +416,7 @@ function domainedo_media_default_scald_context_config() {
     ),
     'audio' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'gallery' => array(
       '*' => 'default',
@@ -442,6 +463,7 @@ function domainedo_media_default_scald_context_config() {
   $context_config->player = array(
     'audio' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'gallery' => array(
       '*' => 'default',
@@ -492,12 +514,14 @@ function domainedo_media_default_scald_context_config() {
   $context_config->player = array(
     'audio' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'file' => array(
       '*' => 'default',
     ),
     'gallery' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'image' => array(
       '*' => 'default',
@@ -540,6 +564,7 @@ function domainedo_media_default_scald_context_config() {
   $context_config->player = array(
     'audio' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'gallery' => array(
       '*' => 'default',
@@ -590,12 +615,14 @@ function domainedo_media_default_scald_context_config() {
   $context_config->player = array(
     'audio' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'file' => array(
       '*' => 'default',
     ),
     'gallery' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'image' => array(
       '*' => 'default',

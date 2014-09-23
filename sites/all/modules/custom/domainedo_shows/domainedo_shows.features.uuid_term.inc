@@ -49,10 +49,10 @@ function domainedo_shows_uuid_features_default_terms() {
     'weight' => 0,
     'uuid' => '11ad532f-7299-418f-8b7a-63a3142873db',
     'vocabulary_machine_name' => 'show_locations',
-    'field_seating' => array(),
     'field_scald_gallery' => array(),
-    'field_scald_video' => array(),
     'field_scald_sound' => array(),
+    'field_scald_video' => array(),
+    'field_seating' => array(),
     'field_scald_image' => array(),
     'metatags' => array(),
   );
@@ -95,10 +95,10 @@ function domainedo_shows_uuid_features_default_terms() {
     'weight' => 0,
     'uuid' => '52cf41cb-1714-41ac-9abf-9c94d8093795',
     'vocabulary_machine_name' => 'show_locations',
-    'field_seating' => array(),
     'field_scald_gallery' => array(),
-    'field_scald_video' => array(),
     'field_scald_sound' => array(),
+    'field_scald_video' => array(),
+    'field_seating' => array(),
     'field_scald_image' => array(
       'und' => array(
         0 => array(
@@ -140,10 +140,10 @@ function domainedo_shows_uuid_features_default_terms() {
     'weight' => 0,
     'uuid' => '867307bd-23e0-4fe9-a76e-d97da41f6687',
     'vocabulary_machine_name' => 'show_locations',
-    'field_seating' => array(),
     'field_scald_gallery' => array(),
-    'field_scald_video' => array(),
     'field_scald_sound' => array(),
+    'field_scald_video' => array(),
+    'field_seating' => array(),
     'field_scald_image' => array(),
     'metatags' => array(),
   );
@@ -161,10 +161,10 @@ function domainedo_shows_uuid_features_default_terms() {
     'weight' => 0,
     'uuid' => 'abca78c7-6522-4171-a33a-05f5d75e0b73',
     'vocabulary_machine_name' => 'show_locations',
-    'field_seating' => array(),
     'field_scald_gallery' => array(),
-    'field_scald_video' => array(),
     'field_scald_sound' => array(),
+    'field_scald_video' => array(),
+    'field_seating' => array(),
     'field_scald_image' => array(),
     'metatags' => array(),
   );

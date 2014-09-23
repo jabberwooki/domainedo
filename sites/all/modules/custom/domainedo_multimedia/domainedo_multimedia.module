@@ -1,0 +1,54 @@
+<?php
+/**
+ * @file
+ * Code for the Domaine d'O Multimedia feature.
+ */
+
+include_once 'domainedo_multimedia.features.inc';
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function domainedo_multimedia_views_pre_render(&$view) {
+	if ($view->name == 'multimedia') {
+		// Breadcrumb building.
+		$current_display = $view->current_display;
+		$view_path = $view->display[$current_display]->display_options['path'];
+
+		global $language;
+		$languages = array('language' => $language->language, 'all' => '',);
+		$custom_breadcrumbs_views = custom_breadcrumbs_load_breadcrumbs('custom_breadcrumbs_views', NULL, array('views_path' => $view_path), $languages);
+
+		if (!empty($custom_breadcrumbs_views)) {
+			$titles = explode("\n", $custom_breadcrumbs_views[0]->titles);
+			$paths = explode("\n", $custom_breadcrumbs_views[0]->paths);
+				
+			$breadcrumb = array(l(t('Home'), '<front>'));
+			$i = 0;
+			while ($i < count($titles)) {
+				if (trim($paths[$i]) == '<none>' && isset($view->display[$current_display]->display_title)) {
+					$breadcrumb[] = $view->display[$current_display]->display_title;
+				}
+				else {
+					$breadcrumb[] = l(trim($titles[$i]), trim($paths[$i]));
+				}
+				$i++;
+			}
+				
+			drupal_set_breadcrumb($breadcrumb);
+		}
+	}
+}
+
+function domainedo_multimedia_form_views_exposed_form_alter(&$form, &$form_state) {
+	if ($form_state['view']->name == 'multimedia_space') {
+		// Reordering of media types filter
+		$options = array(
+				'All' => 'Tous media',
+				'video' => 'Videos',
+				'gallery' => 'Photos',
+				'audio' => 'Sons',
+		);
+		$form['type']['#options'] = $options;
+	}
+}

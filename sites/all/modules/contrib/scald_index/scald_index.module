@@ -1,0 +1,224 @@
+<?php
+/**
+ * @file
+ *   Management of insert, update and delete actions on node to record atom associations.
+ */
+
+include_once 'scald_index.features.inc';
+
+/**
+ * Implements hook_menu().
+ */
+function scald_index_menu() {
+  $items['admin/structure/scald/atoms-index/rebuild'] = array(
+    'title' => 'Rebuild index',
+    'page callback' => 'scald_index_rebuild',
+    'page arguments' => array(),
+    'access arguments' => array('administer scald atoms'),
+    'type' => MENU_LOCAL_ACTION,
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_node_insert().
+ */
+function scald_index_node_insert($node) {
+  scald_index_build_node_index($node);
+}
+
+/**
+ * Implements hook_node_update().
+ */
+function scald_index_node_update($node) {
+  scald_index_delete_node_index($node);
+  scald_index_build_node_index($node);
+}
+
+/**
+ * Implements hook_node_delete().
+ */
+function scald_index_node_delete($node) {
+  scald_index_delete_node_index($node);
+}
+
+/**
+ * Implements hook_scald_atom_delete().
+ */
+function scald_index_scald_atom_delete($atom) {
+  db_delete('scald_index')->condition('sid', $atom->sid)->execute();
+}
+
+/**
+ * Implements hook_field_delete()
+ */
+function scald_index_field_delete_instance($instance) {
+  // Delete all atom associations for this field
+  $field = field_info_field($instance['field_name']);
+  if ($field['module'] == 'atom_reference' && $field['storage']['type'] == 'field_sql_storage') {
+   db_delete('scald_index')
+   ->condition('field_name', $instance['field_name'])
+   ->condition('type', $instance['bundle'])
+   ->execute();
+ }
+}
+
+/**
+ * Builds index for a given node.
+ *
+ * @param $node
+ *   The node object.
+ */
+function scald_index_build_node_index($node) {
+  // If a node property is not set in the node object when node_save() is
+  // called, the old value from $node->original is used.
+  $status = NULL;
+  $type = NULL;
+  if (!empty($node->original)) {
+    $status = (int)(!empty($node->status) || (!isset($node->status) && !empty($node->original->status)));
+    $type = $node->original->type;
+  } else {
+    $status = (int)(!empty($node->status));
+    $type = $node->type;
+  }
+
+  // Collect a unique list of all the atom ids from all node fields.
+  $sid_all = array();
+  foreach (field_info_instances('node', $node->type) as $instance) {
+    $field_name = $instance['field_name'];
+    $field = field_info_field($field_name);
+    if ($field['module'] == 'atom_reference' && $field['storage']['type'] == 'field_sql_storage') {
+      // If a field value is not set in the node object when node_save() is
+      // called, the old value from $node->original is used.
+      if (isset($node->{$field_name})) {
+        $items = $node->{$field_name};
+      } elseif (isset($node->original->{$field_name})) {
+        $items = $node->original->{$field_name};
+      } else {
+        continue;
+      }
+      foreach (field_available_languages('node', $field) as $langcode) {
+        if (!empty($items[$langcode])) {
+          foreach ($items[$langcode] as $item) {
+            $sid_all[$item['sid']]['sid'] = $item['sid'];
+            $sid_all[$item['sid']]['field_name'] = $field_name;
+          }
+        }
+      }
+    }
+  }
+
+  // Look for more atom references in the body field's markup
+  if ($body = field_get_items('node', $node, 'body')) {
+    foreach (field_available_languages('node', $body) as $langcode) {
+      $body = field_get_items('node', $node, 'body', $langcode);
+      if (!empty($body)) {
+        foreach ($body as $item) {
+          $body_sids = scald_included($item['value']);
+          foreach ($body_sids as $sid) {
+            $sid_all[$sid]['sid'] = $sid;
+            $sid_all[$sid]['field_name'] = 'body';
+          }
+        }
+      }
+    }
+  }
+
+  // Create index entries for all the node's atoms.
+  if (!empty($sid_all)) {
+    $query = db_insert('scald_index')->fields(array('nid', 'sid', 'status', 'type', 'field_name'));
+    foreach ($sid_all as $sid_infos) {
+      $query->values(array(
+        'nid' => $node->nid,
+        'sid' => $sid_infos['sid'],
+        'status' => $status,
+        'type' => $type,
+        'field_name' => $sid_infos['field_name'],
+      ));
+    }
+    $query->execute();
+  }
+}
+
+/**
+ * Deletes index for a given node.
+ *
+ * @param $node
+ *   The node object.
+ */
+function scald_index_delete_node_index($node) {
+  db_delete('scald_index')->condition('nid', $node->nid)->execute();
+}
+
+/**
+ * Rebuilds the entire index using the batch API.
+ */
+function scald_index_rebuild() {
+  // Deleting old entries
+  db_delete('scald_index')->execute();
+
+  // Run batches of 5 nodes per batch.
+  $nids = db_query('SELECT nid FROM {node}')->fetchCol();
+  $step = 5;
+  $current = 0;
+  $i = 0;
+  $batch_operations = array();
+  foreach ($nids as $nid) {
+    if (!isset($batch_operations[$i])) {
+      $batch_operations[$i] = array('scald_index_rebuild_run', array(array($nid)));
+    }
+    else {
+      $batch_operations[$i][1][0][] = $nid;
+    }
+
+    $current++;
+    if ($current == $step) {
+      $current = 0;
+      // Start next batch
+      $i++;
+    }
+  }
+
+  // Execute the batch
+  batch_set(array(
+    'title' => t('Adding existing atom/node references'),
+    'operations' => $batch_operations,
+    'init_message' => t('The atom/node association is getting added.'),
+    'progress_message' => t('Processed @current groups of '.$step.' nodes out of @total.'),
+    'finished' => 'scald_index_rebuild_finished',
+    ));
+  batch_process('admin/structure/scald/atoms-index');
+}
+
+/**
+ * Rebuilds the index for a batch of nodes.
+ *
+ * @param array $nids Node IDs
+ */
+function scald_index_rebuild_run($nids) {
+  $nodes = node_load_multiple($nids, array());
+  foreach ($nodes as $current_node) {
+    scald_index_build_node_index($current_node);
+  }
+}
+
+/**
+ * Finishes the batch run.
+ *
+ * @param bool $success
+ * @param array $results
+ * @param array $operations
+ */
+function scald_index_rebuild_finished($success, $results, $operations) {
+  if ($success) {
+    drupal_set_message('Rebuilding index complete.');
+  }
+  else {
+    // An error occurred.
+    // $operations contains the operations that remained unprocessed.
+    $error_operation = reset($operations);
+    $message = t('An error occurred while processing %error_operation with arguments: @arguments', array('%error_operation' => $error_operation[0], '@arguments' => print_r($error_operation[1], TRUE)));
+    drupal_set_message($message, 'error');
+  }
+}
