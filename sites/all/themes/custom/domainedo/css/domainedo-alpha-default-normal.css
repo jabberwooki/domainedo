@@ -152,6 +152,7 @@ ul.group-ul-short-links> div a{
 }
 #block-superfish-2{
    width: auto;
+   float: right;
 }
 #block-superfish-1,#block-superfish-2{
     display : inline-table;
