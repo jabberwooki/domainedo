@@ -760,6 +760,10 @@ body.node-type-show div.view-mode-full div.group-left .field-name-field-by .fiel
 .field-name-scald-authors.field-label-hidden{
   display: none;
 }
+.node-type-show .field-name-scald-authors.field-label-hidden{
+  display: block;
+  margin-top: -20px 0 0 0;
+}
 .view-display-id-block_2 h3 a{
   font-size: 0.8em;
 }
