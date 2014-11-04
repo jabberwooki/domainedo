@@ -768,7 +768,7 @@ body.node-type-show div.view-mode-full div.group-left .field-name-field-by .fiel
   display: block;
   margin: -20px 0 0 0;
 }
-node-type-news .field-name-scald-authors.field-label-hidden{
+.node-type-news .field-name-scald-authors.field-label-hidden{
   margin:  0;
 }
 .view-display-id-block_2 h3 a{
