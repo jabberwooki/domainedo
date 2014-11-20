@@ -34,7 +34,7 @@ function atom_reference_field_info() {
       'label' => t('Atom Reference'),
       'description' => t('This field stores the ID of a related atom as an integer value.'),
       'instance_settings' => array(
-        'referencable_types' => array()
+        'referencable_types' => array(),
       ),
       'default_widget' => 'textfield',
       'default_formatter' => 'title',
@@ -51,6 +51,7 @@ function atom_reference_field_instance_settings_form($field, $instance) {
   foreach(scald_types() as $name => $type) {
     $options[$name] = $type->title;
   }
+
   $form = array();
   $form['referencable_types'] = array(
     '#type' => 'checkboxes',
@@ -59,6 +60,7 @@ function atom_reference_field_instance_settings_form($field, $instance) {
     '#options' => $options,
     '#default_value' => $instance['settings']['referencable_types']
   );
+
   return $form;
 }
 
@@ -155,8 +157,31 @@ function atom_reference_field_widget_info() {
     'atom_reference_textfield' => array(
       'label' => t('Drop box'),
       'field types' => array('atom_reference'),
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
     )
   );
+}
+
+/**
+ * Implements hook_field_widget_settings_form.
+ */
+function atom_reference_field_widget_settings_form($field, $instance) {
+  $context_options = array();
+  foreach (scald_contexts() as $name => $context) {
+    $context_options[$name] = $context['title'];
+  }
+
+  $form['context'] = array(
+    '#type' => 'select',
+    '#title' => t('Scald context'),
+    '#description' => t('Context used in the field widget. It is not the context used in field display, which is configured separately.'),
+    '#default_value' => $instance['widget']['settings']['context'],
+    '#options' => $context_options,
+  );
+
+  return $form;
 }
 
 /**
@@ -180,14 +205,13 @@ function atom_reference_field_widget_form(&$form, &$form_state, $field, $instanc
     array('%types' => implode(', ', $options))
   );
 
+  $preview_context = $instance['widget']['settings']['context'];
   $element['#description'] .= ' ' . $help;
   $element['#type'] = 'textfield';
-  $element['#attributes'] = array('data-types' => implode(',', array_keys($options)));
+  $element['#attributes'] = array('data-types' => implode(',', array_keys($options)), 'data-dnd-context' => $preview_context);
   $element['#default_value'] = isset($items[$delta]) ? $items[$delta]['sid'] : '';
+  $element['#preview_context'] = $preview_context;
   $element['#process'][] = 'atom_reference_field_widget_form_process';
-
-  // Attach our JS and CSS to the element
-  $path = drupal_get_path('module', 'atom_reference');
   $element['#attached'] = array('library' => array(array('atom_reference', 'library')));
 
   return array('sid' => $element);
@@ -218,7 +242,7 @@ function atom_reference_field_widget_form_process(&$element) {
   // Get the default value, and format the placeholder accordingly.
   $default = $element['#value'];
   if ($default) {
-    $prefix = '<div class="atom_reference_drop_zone">' . scald_render($default, variable_get('dnd_context_default', 'sdl_editor_representation')) .'</div>';
+    $prefix = '<div class="atom_reference_drop_zone">' . scald_render($default, $element['#preview_context']) .'</div>';
   }
   else {
     $placeholder = t('Drop a resource here');

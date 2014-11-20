@@ -40,7 +40,7 @@ function domainedo_media_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'scald_author_vocabulary';
-  $strongarm->value = '2';
+  $strongarm->value = 'scald_authors';
   $export['scald_author_vocabulary'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -190,7 +190,7 @@ function domainedo_media_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'scald_tags_vocabulary';
-  $strongarm->value = '3';
+  $strongarm->value = 'scald_tags';
   $export['scald_tags_vocabulary'] = $strongarm;
 
   return $export;
