@@ -420,7 +420,9 @@ function news_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'atom_reference',
-      'settings' => array(),
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
       'type' => 'atom_reference_textfield',
       'weight' => 10,
     ),
@@ -479,7 +481,9 @@ function news_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'atom_reference',
-      'settings' => array(),
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
       'type' => 'atom_reference_textfield',
       'weight' => 8,
     ),
@@ -541,7 +545,9 @@ function news_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'atom_reference',
-      'settings' => array(),
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
       'type' => 'atom_reference_textfield',
       'weight' => 4,
     ),
@@ -600,7 +606,9 @@ function news_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'atom_reference',
-      'settings' => array(),
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
       'type' => 'atom_reference_textfield',
       'weight' => 9,
     ),
@@ -659,9 +667,66 @@ function news_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'atom_reference',
-      'settings' => array(),
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
       'type' => 'atom_reference_textfield',
       'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'node-news-field_visible_bas_accueil'
+  $field_instances['node-news-field_visible_bas_accueil'] = array(
+    'bundle' => 'news',
+    'default_value' => array(
+      0 => array(
+        'value' => 1,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 26,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'zoom' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_visible_bas_accueil',
+    'label' => 'Visible bas accueil',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 16,
     ),
   );
 
@@ -734,6 +799,7 @@ function news_field_default_field_instances() {
   t('Son');
   t('Url de destination');
   t('Vidéo');
+  t('Visible bas accueil');
   t('Zoom sur');
 
   return $field_instances;
