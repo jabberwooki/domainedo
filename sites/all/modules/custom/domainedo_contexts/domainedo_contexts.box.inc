@@ -41,7 +41,7 @@ function domainedo_contexts_default_box() {
 
 <p>domaine d\'O<br />
 178, rue de la Carriérasse - 34090 Montpellier<br />
-Tél. : 0800 200 165</p>
+Tél. : 0800 200 165 - appel gratuit depuis un poste fixe</p>
 </div>
 
 <div id="partner-bottom">
