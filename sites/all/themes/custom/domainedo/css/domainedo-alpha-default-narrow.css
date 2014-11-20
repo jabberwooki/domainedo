@@ -813,7 +813,7 @@ div.pratique div.button_subscribe a{
   display:block;
 }
 /* commentaires ***************************************************************/
-#layout{
+body > #layout{
   width: 61%;
 }
 
