@@ -995,7 +995,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 22,
+        'weight' => 23,
       ),
       'list' => array(
         'label' => 'above',
@@ -1034,7 +1034,7 @@ function domainedo_shows_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 22,
+      'weight' => 23,
     ),
   );
 
@@ -1144,7 +1144,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 24,
+        'weight' => 25,
       ),
       'list' => array(
         'label' => 'inline',
@@ -1194,7 +1194,7 @@ function domainedo_shows_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 25,
+      'weight' => 26,
     ),
   );
 
@@ -1455,7 +1455,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 23,
+        'weight' => 24,
       ),
       'list' => array(
         'label' => 'above',
@@ -1494,7 +1494,7 @@ function domainedo_shows_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 24,
+      'weight' => 25,
     ),
   );
 
@@ -1966,7 +1966,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 25,
+        'weight' => 26,
       ),
       'list' => array(
         'label' => 'above',
@@ -2005,7 +2005,7 @@ function domainedo_shows_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 26,
+      'weight' => 27,
     ),
   );
 
@@ -2487,7 +2487,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 40,
+        'weight' => 41,
       ),
       'list' => array(
         'label' => 'hidden',
@@ -2633,7 +2633,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 26,
+        'weight' => 27,
       ),
       'list' => array(
         'label' => 'above',
@@ -2672,7 +2672,7 @@ function domainedo_shows_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 27,
+      'weight' => 28,
     ),
   );
 
@@ -2743,7 +2743,86 @@ function domainedo_shows_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 23,
+      'weight' => 24,
+    ),
+  );
+
+  // Exported field_instance: 'node-show-field_restauration'
+  $field_instances['node-show-field_restauration'] = array(
+    'bundle' => 'show',
+    'default_value' => array(
+      0 => array(
+        'value' => 'Une restauration légère est proposée tous les soirs de spectacle une heure avant la représentation et une heure après la représentation.',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 36,
+      ),
+      'frontpage_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'frontpage_block_mobile' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 22,
+      ),
+      'list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'zoom' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_restauration',
+    'label' => 'Restauration',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'debug',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 1,
+      'mee_enabled' => 1,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 22,
     ),
   );
 
@@ -2825,7 +2904,7 @@ function domainedo_shows_field_default_field_instances() {
         'context' => 'sdl_editor_representation',
       ),
       'type' => 'atom_reference_textfield',
-      'weight' => 28,
+      'weight' => 29,
     ),
   );
 
@@ -2987,7 +3066,7 @@ function domainedo_shows_field_default_field_instances() {
         'context' => 'sdl_editor_representation',
       ),
       'type' => 'atom_reference_textfield',
-      'weight' => 30,
+      'weight' => 31,
     ),
   );
 
@@ -3067,7 +3146,7 @@ function domainedo_shows_field_default_field_instances() {
         'context' => 'sdl_editor_representation',
       ),
       'type' => 'atom_reference_textfield',
-      'weight' => 29,
+      'weight' => 30,
     ),
   );
 
@@ -3219,7 +3298,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 38,
+        'weight' => 39,
       ),
       'list' => array(
         'label' => 'hidden',
@@ -3442,7 +3521,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 39,
+        'weight' => 40,
       ),
       'list' => array(
         'label' => 'hidden',
@@ -3604,7 +3683,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 41,
+        'weight' => 42,
       ),
       'list' => array(
         'label' => 'hidden',
@@ -4469,6 +4548,7 @@ function domainedo_shows_field_default_field_instances() {
   t('Production');
   t('Promu en page d\'accueil');
   t('Remboursement');
+  t('Restauration');
   t('Réservation');
   t('Saisir l\'année du festival. Un festival d\'hiver étant à cheval sur 2 années, ne saisir que la première année. Par exemple, pour le festival d\'hiver 2013/2014, saisir "2013".');
   t('Saison');

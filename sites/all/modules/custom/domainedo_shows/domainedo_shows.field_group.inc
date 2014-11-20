@@ -21,7 +21,7 @@ function domainedo_shows_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Distribution',
-    'weight' => '34',
+    'weight' => '35',
     'children' => array(
       0 => 'field_back_to_top_link',
       1 => 'field_casting_link',
@@ -86,7 +86,7 @@ function domainedo_shows_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Groupe short links',
-    'weight' => '27',
+    'weight' => '28',
     'children' => array(
       0 => 'group_ul_short_links',
     ),
