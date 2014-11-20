@@ -373,6 +373,9 @@ body.front #block-views-evenements-block-1{
 body.front #block-views-evenements-block-1 div.view-content{
   width:90%
 }
+body.front #block-views-evenements-block-1 div.view-content a{
+  color: #B20002;
+}
 body.front #block-views-evenements-block-1 div.view-content .views-field-title{
   width:50%;
   float: left;
