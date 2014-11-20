@@ -208,7 +208,9 @@ function domainedo_shows_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'atom_reference',
-      'settings' => array(),
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
       'type' => 'atom_reference_textfield',
       'weight' => 5,
     ),
@@ -312,7 +314,9 @@ function domainedo_shows_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'atom_reference',
-      'settings' => array(),
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
       'type' => 'atom_reference_textfield',
       'weight' => 3,
     ),
@@ -423,7 +427,9 @@ function domainedo_shows_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'atom_reference',
-      'settings' => array(),
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
       'type' => 'atom_reference_textfield',
       'weight' => 10,
     ),
@@ -477,7 +483,9 @@ function domainedo_shows_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'atom_reference',
-      'settings' => array(),
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
       'type' => 'atom_reference_textfield',
       'weight' => 11,
     ),
@@ -528,7 +536,9 @@ function domainedo_shows_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'atom_reference',
-      'settings' => array(),
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
       'type' => 'atom_reference_textfield',
       'weight' => 4,
     ),
@@ -582,7 +592,9 @@ function domainedo_shows_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'atom_reference',
-      'settings' => array(),
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
       'type' => 'atom_reference_textfield',
       'weight' => 13,
     ),
@@ -636,7 +648,9 @@ function domainedo_shows_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'atom_reference',
-      'settings' => array(),
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
       'type' => 'atom_reference_textfield',
       'weight' => 12,
     ),
@@ -857,7 +871,9 @@ function domainedo_shows_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'atom_reference',
-      'settings' => array(),
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
       'type' => 'atom_reference_textfield',
       'weight' => 1,
     ),
@@ -2805,7 +2821,9 @@ function domainedo_shows_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'atom_reference',
-      'settings' => array(),
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
       'type' => 'atom_reference_textfield',
       'weight' => 28,
     ),
@@ -2881,9 +2899,11 @@ function domainedo_shows_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
+      'active' => 1,
       'module' => 'atom_reference',
-      'settings' => array(),
+      'settings' => array(
+        'context' => 'petit_100',
+      ),
       'type' => 'atom_reference_textfield',
       'weight' => 9,
     ),
@@ -2963,7 +2983,9 @@ function domainedo_shows_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'atom_reference',
-      'settings' => array(),
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
       'type' => 'atom_reference_textfield',
       'weight' => 30,
     ),
@@ -3041,7 +3063,9 @@ function domainedo_shows_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'atom_reference',
-      'settings' => array(),
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
       'type' => 'atom_reference_textfield',
       'weight' => 29,
     ),
@@ -3461,9 +3485,11 @@ function domainedo_shows_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
+      'active' => 1,
       'module' => 'atom_reference',
-      'settings' => array(),
+      'settings' => array(
+        'context' => 'petit_100',
+      ),
       'type' => 'atom_reference_textfield',
       'weight' => 8,
     ),
@@ -3767,7 +3793,9 @@ function domainedo_shows_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'atom_reference',
-      'settings' => array(),
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
       'type' => 'atom_reference_textfield',
       'weight' => 2,
     ),
@@ -3821,7 +3849,9 @@ function domainedo_shows_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'atom_reference',
-      'settings' => array(),
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
       'type' => 'atom_reference_textfield',
       'weight' => 7,
     ),
@@ -3873,7 +3903,9 @@ function domainedo_shows_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'atom_reference',
-      'settings' => array(),
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
       'type' => 'atom_reference_textfield',
       'weight' => 3,
     ),
@@ -3927,7 +3959,9 @@ function domainedo_shows_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'atom_reference',
-      'settings' => array(),
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
       'type' => 'atom_reference_textfield',
       'weight' => 9,
     ),
@@ -3981,7 +4015,9 @@ function domainedo_shows_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'atom_reference',
-      'settings' => array(),
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
       'type' => 'atom_reference_textfield',
       'weight' => 8,
     ),
@@ -4182,7 +4218,9 @@ function domainedo_shows_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'atom_reference',
-      'settings' => array(),
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
       'type' => 'atom_reference_textfield',
       'weight' => 3,
     ),
@@ -4232,7 +4270,9 @@ function domainedo_shows_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'atom_reference',
-      'settings' => array(),
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
       'type' => 'atom_reference_textfield',
       'weight' => 42,
     ),
@@ -4280,7 +4320,9 @@ function domainedo_shows_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'atom_reference',
-      'settings' => array(),
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
       'type' => 'atom_reference_textfield',
       'weight' => 5,
     ),
@@ -4328,7 +4370,9 @@ function domainedo_shows_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'atom_reference',
-      'settings' => array(),
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
       'type' => 'atom_reference_textfield',
       'weight' => 4,
     ),
