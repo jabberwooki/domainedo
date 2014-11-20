@@ -636,6 +636,11 @@ top: -30px;
 body.node-type-show #node_show_full_group_psr .field-name-field-scald-image img{
   margin-bottom:20px;
 }
+.field-name-field-additional-infos h2,
+.field-name-field-additional-infos h3,
+.field-name-field-additional-infos h4{
+  margin-bottom: 0;
+}
 /* Page tous les spectacles ***************************************************/
 .page-spectacles-tous-les-spectacles .view-id-shows .view-header .block-left-shows-info{
   display: none;
