@@ -19,11 +19,6 @@
  * variables being passed to the hooks.
  *
  *
- * system_modules_submit() [The form at /admin/build/modules is submitted]
- *   -> {provider}_install() [Drupal hook]
- *   -> {provider}_enable() [Drupal hook]
- *   -> {provider}_scald_provider()
- *
  * scald_render()
  *   -> scald_fetch()
  *     -> {type_provider}_scald_fetch($mode = 'type')
@@ -63,26 +58,29 @@ function hook_scald_atom_providers() {
 }
 
 /**
- * Define information about atom actions.
+ * Define information about atom transcoders provided by a module.
  *
- * The 'create' action machine name is reserved by Scald core and must not be
- * used.
- *
- * @return array
- *   The array is keyed by action machine name, each array element is another
- *   array, keyed by
- *   - 'title'
- *   - 'adjective': with -able suffix to generate permission name
- *   - 'description'
+ * @return array $transcoder
+ *   An array of atom transcoders. This array is keyed by the machine-readable
+ *   transcoder name. Each transcoder is defined as an associative array
+ *   containing the following item:
+ *   - "title": the human-readable name of the transcoder.
+ *   - "description": the longer description of the transcoder.
+ *   - "formats": array of supported formats for each atom type. Currently unused.
  */
-function hook_scald_actions() {
-  return array(
-    'embed' => array(
-      'title' => t('Embed'),
-      'adjective' => t('Embedable'),
-      'description' => t('Allows to embed atom in a 3rd website.'),
-    ),
-  );
+function hook_scald_transcoders() {
+  $transcoders = array();
+  foreach (image_styles() as $name => $style) {
+    $label = isset($style['label']) ? $style['label'] : $style['name'];
+    $transcoders['style-' . $name] = array(
+      'title' => t('@style (Image style)', array('@style' => $label)),
+      'description' => t('Use the Image style @style to prepare the image', array('@style' => $label)),
+      'formats' => array(
+        'image' => 'passthrough',
+      ),
+    );
+  }
+  return $transcoders;
 }
 
 /**
@@ -125,6 +123,29 @@ function hook_scald_player() {
  * $form_state['scald'] contains atom type, context and player value.
  */
 function hook_scald_player_settings_form($form, &$form_state) {
+}
+
+/**
+ * Define information about atom actions.
+ *
+ * The 'create' action machine name is reserved by Scald core and must not be
+ * used.
+ *
+ * @return array
+ *   The array is keyed by action machine name, each array element is another
+ *   array, keyed by
+ *   - 'title'
+ *   - 'adjective': with -able suffix to generate permission name
+ *   - 'description'
+ */
+function hook_scald_actions() {
+  return array(
+    'embed' => array(
+      'title' => t('Embed'),
+      'adjective' => t('Embedable'),
+      'description' => t('Allows to embed atom in a 3rd website.'),
+    ),
+  );
 }
 
 /**
@@ -359,14 +380,14 @@ function hook_scald_add_atom_count(&$form, &$form_state) {
  * form, into atoms.
  *
  * @param mixed $atoms
- *   An array of atoms if the provider implements
- *   hook_scald_add_atom_account_count(), otherwise a single atom.
+ *   An array of atoms if the provider implements hook_scald_add_atom_count(),
+ *   otherwise a single atom.
  *
  * @param array $form
  *
  * @param array $form_state
  */
-function scald_image_scald_add_form_fill(&$atoms, $form, $form_state) {
+function hook_scald_add_form_fill(&$atoms, $form, $form_state) {
   foreach ($atoms as $delta => $atom) {
     if (is_array($form_state['values']['file']) && module_exists('plupload')) {
       module_load_include('inc', 'scald', 'includes/scald.plupload');

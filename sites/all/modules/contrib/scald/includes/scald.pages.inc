@@ -78,7 +78,11 @@ function scald_atom_add_page($js, $type, $step = NULL, $atom_id = NULL) {
     'scald' => ctools_object_cache_get('scald_atom', $cache_id),
   );
 
-  $form_state['atom'] = $form_state['scald']['atoms'][0];
+  // Entity Translation workaround when the fix https://drupal.org/node/2027513
+  // is not corporated in a stable release.
+  if (isset($form_state['scald']['atoms'][0])) {
+    $form_state['atom'] = $form_state['scald']['atoms'][0];
+  }
 
   if (empty($form_state['scald'])) {
     $form_state['scald'] = array(
@@ -253,6 +257,15 @@ function scald_atom_add_form_options($form, &$form_state) {
       '#suffix' => '</div>',
       '#parents' => array('atom' . $delta),
     );
+    if (count($atoms) > 1) {
+      $title = 'atom' . $delta .' : '. $atom->title;
+      $form['atom' . $delta] += array(
+        '#title' => $title,
+        '#type' => 'fieldset',
+        '#collapsible' => TRUE,
+        '#collapsed' => FALSE,
+      );
+    }
     $form['atom' . $delta]['title'] = array(
       '#type' => 'textfield',
       '#title' => t('Title'),
@@ -279,7 +292,7 @@ function scald_atom_add_form_options($form, &$form_state) {
     }
     $form['atom' . $delta]['scald_actions'] = array(
       '#type' => 'checkboxes',
-      '#title' => 'Openly available actions',
+      '#title' => t('Openly available actions'),
       '#group' => 'additional_settings',
       '#options' => $options,
       '#default_value' => $options_default,
@@ -394,7 +407,7 @@ function scald_atom_delete_confirm($form, &$form_state, $atom) {
   return confirm_form($form,
     t('Are you sure you want to delete %title?', array('%title' => $atom->title)),
     'admin/content/atoms',
-    t('<p>Note that unchecking the Fetch checkbox in the "<em>Openly available actions</em>" field of this atom <a href="!url">edit form</a> makes the atom disapears for everyone but scald administrators, and is usally a better idea.</p><p>This action cannot be undone.</p>', array('!url' => url("atom/{$atom->sid}/edit"))),
+    t('<p>Note that unchecking the Fetch checkbox in the "<em>Openly available actions</em>" field of this atom <a href="!url">edit form</a> makes the atom disappear for everyone but Scald administrators, and is usually a better idea.</p><p>This action cannot be undone.</p>', array('!url' => url("atom/{$atom->sid}/edit"))),
     t('Delete'),
     t('Cancel')
   );
@@ -436,7 +449,6 @@ function scald_atom_fetch_atoms($sids) {
       'meta' => array(
         'title' => $atom->title,
         'type' => $atom->type,
-        'legend' => '',
       ),
       'actions' => array_keys(scald_atom_actions_available($atom)),
     );

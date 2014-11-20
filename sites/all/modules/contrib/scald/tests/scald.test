@@ -108,6 +108,13 @@ class ScaldWebTestCase extends DrupalWebTestCase {
     $this->drupalPost('admin/structure/scald/image/fields/scald_thumbnail', array('field[settings][uri_scheme]' => 'private'), t('Save settings'));
     $this->assertRaw(t('Saved %label configuration.', array('%label' => 'Image')), 'Use private file for Scald Image.');
   }
+
+  /**
+   * Make a HTML markup parseable.
+   */
+  public function makeParseable($markup, $atom, $context) {
+    return '<!-- scald=' . $atom->sid . ':' . $context . ' -->' . $markup . '<!-- END scald=' . $atom->sid . ' -->';
+  }
 }
 
 /**
@@ -207,6 +214,10 @@ class ScaldBaseTestCase extends ScaldWebTestCase {
       'caption' => $caption,
     );
     $this->drupalPost(NULL, $edit, t('Update'));
+
+    // We are in another request, static cache is no longer relevant and needs
+    // to be cleared.
+    drupal_static_reset('_scald_get_info');
 
     // Verify new context settings. There is no easy way to verify a context
     // other than "full".
@@ -502,3 +513,122 @@ class ScaldAtomEntityTestCase extends ScaldWebTestCase {
     $this->assertIdentical('scald_image', $atom->provider, 'Atom provider does not change when being updated.');
   }
 }
+
+/**
+ * Test the Scald DnD functionality.
+ */
+class ScaldDnDTestCase extends ScaldWebTestCase {
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function getInfo() {
+    return array(
+      'name' => 'Scald DnD',
+      'description' => 'Test the Scald DnD functionality.',
+      'group' => 'Scald',
+    );
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  protected function setUp() {
+    parent::setUp(array('scald_image', 'scald_dnd_library'));
+    $this->web_user = $this->drupalCreateUser(array(
+      'create atom of image type',
+      'view any atom',
+      'fetch any atom',
+      'edit own atom',
+    ));
+    $this->drupalLogin($this->web_user);
+  }
+
+  /**
+   * Test Scald DnD Library.
+   */
+  function testScaldDndLibrary() {
+    // I don't know why scald_dnd_library contexts are not avaiable. Try to
+    // clear the cache manually.
+    scald_contexts(TRUE);
+
+    $atom = $this->createAtom();
+    $content = scald_render($atom, 'sdl_editor_representation');
+
+    // Check if the widely used context sdl_editor_representation is correct.
+    $langcode = field_language('scald_atom', $atom, 'scald_thumbnail');
+    $atom->scald_thumbnail[$langcode][0]['alt'] = $atom->title;
+    $atom->scald_thumbnail[$langcode][0]['title'] = $atom->title;
+    $thumbnail = field_view_value('scald_atom', $atom, 'scald_thumbnail', $atom->scald_thumbnail[$langcode][0]);
+    $expected = $this->makeParseable('<div class=\'image\'>' . drupal_render($thumbnail) . '</div>', $atom, 'sdl_editor_representation');
+    $this->assertEqual($content, $expected, 'Context: sdl_editor_representation works correctly.');
+  }
+}
+/**
+ * Test the Scald localization.
+ */
+class ScaldLocalizeTestCase extends ScaldWebTestCase {
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function getInfo() {
+    return array(
+      'name' => 'Scald Localize',
+      'description' => 'Test the Scald localization functionality.',
+      'group' => 'Scald',
+    );
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  protected function setUp() {
+    parent::setUp(array('scald_image', 'locale'));
+    $this->web_user = $this->drupalCreateUser(array(
+      'administer scald',
+      'create atom of image type',
+      'view any atom',
+      'fetch any atom',
+      'edit own atom',
+      'administer languages',
+      'access administration pages',
+      'translate interface',
+    ));
+    $this->drupalLogin($this->web_user);
+  }
+
+  /**
+   * Adds a language and tests string translation.
+   */
+  public function testStringTranslation() {
+    $langcode = 'fr';
+
+    // Add predefined language.
+    $this->drupalPost('admin/config/regional/language/add', array('langcode' => $langcode), t('Add language'));
+    // Enable URL language detection and selection.
+    $edit = array('language[enabled][locale-url]' => '1');
+    $this->drupalPost('admin/config/regional/language/configure', $edit, t('Save settings'));
+    // Go to Scald page in another language to add action name into translation
+    // database.
+    $this->drupalGet('fr/admin/structure/scald/image');
+    // Translate an action name.
+    $edit = array(
+      'string' => 'Edit',
+    );
+    $this->drupalPost('admin/config/regional/translate/translate', $edit, t('Filter'));
+    // The first result is an exact match, because we don't surf much.
+    $this->clickLink(t('edit'));
+    $edit = array(
+      "translations[$langcode]" => 'Modifier',
+    );
+    $this->drupalPost(NULL, $edit, t('Save translations'));
+
+    cache_clear_all('*', 'cache_scald', TRUE);
+    $this->drupalGet('fr/admin/structure/scald/image');
+    $this->assertFieldByXPath('//label[@for="edit-type-image-actin-edit"]', 'Modifier ', 'Action name is correctly translated.');
+    $this->drupalGet('admin/structure/scald/image');
+    $this->assertFieldByXPath('//label[@for="edit-type-image-actin-edit"]', 'Edit ', 'Action name is correctly cached per language.');
+  }
+}
+
