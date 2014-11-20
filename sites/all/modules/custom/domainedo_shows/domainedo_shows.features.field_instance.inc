@@ -1973,10 +1973,10 @@ function domainedo_shows_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_full',
-    'label' => 'Complet',
+    'label' => 'Non disponible',
     'required' => 0,
     'settings' => array(
-      'context' => '',
+      'context' => 'debug',
       'dnd_enabled' => 0,
       'mee_enabled' => 0,
       'text_processing' => 1,
@@ -4392,7 +4392,6 @@ function domainedo_shows_field_default_field_instances() {
   t('Affiche du festival');
   t('Artiste associé');
   t('Calendrier/Archive');
-  t('Complet');
   t('Coproducteurs');
   t('Date(s)');
   t('De');
@@ -4417,6 +4416,7 @@ function domainedo_shows_field_default_field_instances() {
   t('Lieu');
   t('Logo');
   t('Nom du festival');
+  t('Non disponible');
   t('Par');
   t('Partenariats');
   t('Pas de résultat');
