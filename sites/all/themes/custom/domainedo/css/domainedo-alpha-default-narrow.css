@@ -812,4 +812,8 @@ div.pratique div.button_subscribe a{
 #webform-client-form-590 label{
   display:block;
 }
+/* commentaires ***************************************************************/
+body > #layout{
+  width: 61%;
+}
 
