@@ -21,7 +21,7 @@ function domainedo_shows_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Distribution',
-    'weight' => '35',
+    'weight' => '37',
     'children' => array(
       0 => 'field_back_to_top_link',
       1 => 'field_casting_link',
@@ -42,6 +42,38 @@ function domainedo_shows_field_group_info() {
     ),
   );
   $export['group_casting|node|show|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_lieu|node|show|full';
+  $field_group->group_name = 'group_lieu';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'show';
+  $field_group->mode = 'full';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => '',
+    'weight' => '17',
+    'children' => array(
+      0 => 'field_location',
+      1 => 'field_lieu_generique',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => '',
+      'instance_settings' => array(
+        'classes' => 'group-lieu field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_lieu|node|show|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -86,7 +118,7 @@ function domainedo_shows_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Groupe short links',
-    'weight' => '28',
+    'weight' => '30',
     'children' => array(
       0 => 'group_ul_short_links',
     ),

@@ -54,6 +54,7 @@ function domainedo_shows_uuid_features_default_terms() {
     'field_scald_video' => array(),
     'field_seating' => array(),
     'field_scald_image' => array(),
+    'field_geolocalisation' => array(),
     'metatags' => array(),
   );
   $terms[] = array(
@@ -106,6 +107,21 @@ function domainedo_shows_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_geolocalisation' => array(
+      'und' => array(
+        0 => array(
+          'geom' => 'POINT (3.840907216072 43.631792682469)',
+          'geo_type' => 'point',
+          'lat' => 43.631792682469,
+          'lon' => 3.840907216072,
+          'left' => 3.840907216072,
+          'top' => 43.631792682469,
+          'right' => 3.840907216072,
+          'bottom' => 43.631792682469,
+          'geohash' => 'spf8pquveeevrypf',
+        ),
+      ),
+    ),
     'metatags' => array(),
   );
   $terms[] = array(
@@ -145,6 +161,7 @@ function domainedo_shows_uuid_features_default_terms() {
     'field_scald_video' => array(),
     'field_seating' => array(),
     'field_scald_image' => array(),
+    'field_geolocalisation' => array(),
     'metatags' => array(),
   );
   $terms[] = array(
@@ -166,6 +183,7 @@ function domainedo_shows_uuid_features_default_terms() {
     'field_scald_video' => array(),
     'field_seating' => array(),
     'field_scald_image' => array(),
+    'field_geolocalisation' => array(),
     'metatags' => array(),
   );
   $terms[] = array(
