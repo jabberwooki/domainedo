@@ -739,7 +739,7 @@ div.menu-block-domainedo-shows-tab-menu > ul > li > a.active-trail,
 .node-show.view-mode-full > .group-right .field-name-field-show-dates .field-items:hover {
     max-height:none;
 }
-.node-show.view-mode-full > .group-right .field-name-field-location{
+.node-show.view-mode-full > .group-right #node_show_full_group_lieu{
     padding : 5px 5px 5px 50px;
     margin : 0 10px;
     border-radius: 5px;
