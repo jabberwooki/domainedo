@@ -61,7 +61,6 @@ dependencies[] = system
 dependencies[] = taxonomy
 dependencies[] = token
 dependencies[] = transliteration
-dependencies[] = tvi
 dependencies[] = user
 dependencies[] = uuid
 dependencies[] = uuid_features
