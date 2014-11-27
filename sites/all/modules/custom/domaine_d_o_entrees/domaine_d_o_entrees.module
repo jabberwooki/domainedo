@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Domaine d'O Entrées feature.
+ */
+
+include_once 'domaine_d_o_entrees.features.inc';
