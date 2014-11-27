@@ -55,6 +55,7 @@ function domainedo_shows_uuid_features_default_terms() {
     'field_seating' => array(),
     'field_scald_image' => array(),
     'field_geolocalisation' => array(),
+    'field_ls_practical' => array(),
     'metatags' => array(),
   );
   $terms[] = array(
@@ -122,6 +123,23 @@ function domainedo_shows_uuid_features_default_terms() {
         ),
       ),
     ),
+    'field_ls_practical' => array(
+      'und' => array(
+        0 => array(
+          'value' => '<ul>
+	<li>Le théâtre Jean-Claude Carrière se situe au nord du domaine d\'O.</li>
+	<li><a href="#scald-video">Voir la vidéo</a></li>
+	<li><a href="#geolocalisation">Localiser sur une carte</a></li>
+</ul>
+',
+          'format' => 'full_html',
+          'safe_value' => '<ul><li>Le théâtre Jean-Claude Carrière se situe au nord du domaine d\'O.</li>
+<li><a href="#scald-video">Voir la vidéo</a></li>
+<li><a href="#geolocalisation">Localiser sur une carte</a></li>
+</ul>',
+        ),
+      ),
+    ),
     'metatags' => array(),
   );
   $terms[] = array(
@@ -162,6 +180,7 @@ function domainedo_shows_uuid_features_default_terms() {
     'field_seating' => array(),
     'field_scald_image' => array(),
     'field_geolocalisation' => array(),
+    'field_ls_practical' => array(),
     'metatags' => array(),
   );
   $terms[] = array(
@@ -184,6 +203,7 @@ function domainedo_shows_uuid_features_default_terms() {
     'field_seating' => array(),
     'field_scald_image' => array(),
     'field_geolocalisation' => array(),
+    'field_ls_practical' => array(),
     'metatags' => array(),
   );
   $terms[] = array(

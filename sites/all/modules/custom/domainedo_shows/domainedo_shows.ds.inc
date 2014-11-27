@@ -106,7 +106,7 @@ function domainedo_shows_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
     'ancre_geolocalisation' => array(
-      'weight' => '6',
+      'weight' => '7',
       'label' => 'hidden',
       'format' => 'default',
     ),
@@ -598,17 +598,19 @@ function domainedo_shows_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'description',
-        1 => 'field_seating',
-        2 => 'field_scald_image',
-        3 => 'field_scald_gallery',
-        4 => 'field_scald_video',
-        5 => 'field_scald_sound',
-        6 => 'ancre_geolocalisation',
-        7 => 'field_geolocalisation',
+        0 => 'field_ls_practical',
+        1 => 'description',
+        2 => 'field_seating',
+        3 => 'field_scald_image',
+        4 => 'field_scald_gallery',
+        5 => 'field_scald_video',
+        6 => 'field_scald_sound',
+        7 => 'ancre_geolocalisation',
+        8 => 'field_geolocalisation',
       ),
     ),
     'fields' => array(
+      'field_ls_practical' => 'ds_content',
       'description' => 'ds_content',
       'field_seating' => 'ds_content',
       'field_scald_image' => 'ds_content',

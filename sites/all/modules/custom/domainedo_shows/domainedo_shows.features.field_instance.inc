@@ -4373,7 +4373,7 @@ function domainedo_shows_field_default_field_instances() {
           'geofield_map_zoom' => 15,
         ),
         'type' => 'geofield_map_map',
-        'weight' => 7,
+        'weight' => 8,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -4394,6 +4394,59 @@ function domainedo_shows_field_default_field_instances() {
       ),
       'type' => 'geofield_gmap',
       'weight' => 43,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-show_locations-field_ls_practical'
+  $field_instances['taxonomy_term-show_locations-field_ls_practical'] = array(
+    'bundle' => 'show_locations',
+    'default_value' => array(
+      0 => array(
+        'value' => '<ul>
+	<li>Le théâtre Jean-Claude Carrière se situe au nord du domaine d\'O.</li>
+	<li><a href="#scald-video">Voir la vidéo</a></li>
+	<li><a href="#geolocalisation">Localiser sur une carte</a></li>
+</ul>',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 6,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_ls_practical',
+    'label' => 'Pratique',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'debug',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 44,
     ),
   );
 
@@ -4418,7 +4471,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'domainedo_media',
         'settings' => array(),
         'type' => 'title',
-        'weight' => 3,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -4470,7 +4523,7 @@ function domainedo_shows_field_default_field_instances() {
           'link' => 0,
         ),
         'type' => 'full',
-        'weight' => 2,
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -4520,7 +4573,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'domainedo_media',
         'settings' => array(),
         'type' => 'title',
-        'weight' => 5,
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -4572,7 +4625,7 @@ function domainedo_shows_field_default_field_instances() {
           'link' => 0,
         ),
         'type' => 'full',
-        'weight' => 4,
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -4630,7 +4683,7 @@ function domainedo_shows_field_default_field_instances() {
           'thousand_separator' => ' ',
         ),
         'type' => 'number_integer',
-        'weight' => 1,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -4690,6 +4743,7 @@ function domainedo_shows_field_default_field_instances() {
   t('Partenariats');
   t('Pas de résultat');
   t('Photo du spectacle');
+  t('Pratique');
   t('Prochainement en vente');
   t('Production');
   t('Promu en page d\'accueil');
