@@ -98,6 +98,21 @@ function domainedo_shows_ds_field_settings_info() {
   );
   $export['node|show|list'] = $ds_fieldsetting;
 
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'taxonomy_term|show_locations|full';
+  $ds_fieldsetting->entity_type = 'taxonomy_term';
+  $ds_fieldsetting->bundle = 'show_locations';
+  $ds_fieldsetting->view_mode = 'full';
+  $ds_fieldsetting->settings = array(
+    'ancre_geolocalisation' => array(
+      'weight' => '6',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+  );
+  $export['taxonomy_term|show_locations|full'] = $ds_fieldsetting;
+
   return $export;
 }
 
@@ -124,6 +139,24 @@ function domainedo_shows_ds_custom_fields_info() {
     'use_token' => 0,
   );
   $export['anchor_shows'] = $ds_field;
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
+  $ds_field->field = 'ancre_geolocalisation';
+  $ds_field->label = 'ancre géolocalisation';
+  $ds_field->field_type = 5;
+  $ds_field->entities = array(
+    'taxonomy_term' => 'taxonomy_term',
+  );
+  $ds_field->ui_limit = '';
+  $ds_field->properties = array(
+    'code' => array(
+      'value' => '<a name="geolocalisation" id="geolocalisation"></a>',
+      'format' => 'full_html',
+    ),
+    'use_token' => 0,
+  );
+  $export['ancre_geolocalisation'] = $ds_field;
 
   $ds_field = new stdClass();
   $ds_field->api_version = 1;

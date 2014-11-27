@@ -4373,7 +4373,7 @@ function domainedo_shows_field_default_field_instances() {
           'geofield_map_zoom' => 15,
         ),
         'type' => 'geofield_map_map',
-        'weight' => 6,
+        'weight' => 7,
       ),
     ),
     'entity_type' => 'taxonomy_term',
