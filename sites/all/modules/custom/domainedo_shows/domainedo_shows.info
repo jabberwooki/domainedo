@@ -18,6 +18,7 @@ dependencies[] = fe_block
 dependencies[] = features
 dependencies[] = features_date_formats
 dependencies[] = field_group
+dependencies[] = geofield
 dependencies[] = geofield_gmap
 dependencies[] = geofield_map
 dependencies[] = link

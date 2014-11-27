@@ -4347,11 +4347,8 @@ function domainedo_shows_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'geofield',
-        'settings' => array(
-          'data' => 'full',
-        ),
-        'type' => 'geofield_wkt',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 5,
       ),
       'full' => array(
@@ -4579,8 +4576,10 @@ function domainedo_shows_field_default_field_instances() {
       'full' => array(
         'label' => 'above',
         'module' => 'domainedo_media',
-        'settings' => array(),
-        'type' => 'title',
+        'settings' => array(
+          'link' => 0,
+        ),
+        'type' => 'full',
         'weight' => 4,
       ),
     ),
