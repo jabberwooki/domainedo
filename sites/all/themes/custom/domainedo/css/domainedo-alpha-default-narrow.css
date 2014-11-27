@@ -816,4 +816,21 @@ div.pratique div.button_subscribe a{
 #disqus_thread{
   width: 61%;
 }
+/* pratique lieux de spectacle ************************************************/
+.field-name-field-ls-practical{
+  float: right;
+  background: url("../images/wide/bottom-right-full-page-show.png") no-repeat scroll 0 100% rgba(0, 0, 0, 0);
+  padding-bottom: 40px;
+  position: relative;
+  width: 348px;
+  margin: 0 0 10px 10px;
+}
+.field-name-field-ls-practical>div{
+  background: url("../images/wide/top-right-full-page-show.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  padding: 16px 10px 0 10px;
+}
+.field-name-field-ls-practical>div ul{
+  list-style: none;
+}
+
 

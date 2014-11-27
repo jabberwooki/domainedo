@@ -77,6 +77,21 @@ div.field-name-link-shows{
   float: left;
   margin-right: 20px;
 }
+a.localisation, a.video, a.tram{
+  display: block;
+  height: 40px;
+  padding-left: 50px;
+  margin-bottom: 10px;
+}
+a.localisation{
+  background: #F5F5F5 url("../images/icons/location-show-full-page.png") no-repeat scroll 5px 5px;
+}
+a.video{
+  background: #F5F5F5 url("../images/icons/video-location.png") no-repeat scroll 5px 5px;
+}
+a.tram{
+  background: #F5F5F5 url("../images/icons/montpellier-tramway.png") no-repeat scroll 5px 5px;
+}
 /* images *********************************************************************/
 img{
   max-width: 100%;
