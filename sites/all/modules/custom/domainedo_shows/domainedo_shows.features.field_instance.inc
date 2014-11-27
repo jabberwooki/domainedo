@@ -4333,15 +4333,7 @@ function domainedo_shows_field_default_field_instances() {
   // Exported field_instance: 'taxonomy_term-show_locations-field_geolocalisation'
   $field_instances['taxonomy_term-show_locations-field_geolocalisation'] = array(
     'bundle' => 'show_locations',
-    'default_value' => array(
-      0 => array(
-        'geom' => array(
-          'lat' => '43.63573350110512',
-          'lon' => '3.836202621459961',
-        ),
-        'input_format' => 'lat/lon',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -4386,7 +4378,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
     'entity_type' => 'taxonomy_term',
     'field_name' => 'field_geolocalisation',
-    'label' => 'Geolocalisation',
+    'label' => 'Géolocalisation',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -4676,7 +4668,7 @@ function domainedo_shows_field_default_field_instances() {
   t('Entrée');
   t('Festival');
   t('Galerie');
-  t('Geolocalisation');
+  t('Géolocalisation');
   t('Image');
   t('Image en surimpression');
   t('Image en surimpression.');
