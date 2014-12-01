@@ -24,10 +24,14 @@ function domaine_d_o_entrees_views_default_views() {
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Entrées';
   $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'plus';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Appliquer';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Réinitialiser';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Trier par';
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
   $handler->display->display_options['style_plugin'] = 'geofield_map_map';
@@ -36,13 +40,14 @@ function domaine_d_o_entrees_views_default_views() {
   $handler->display->display_options['style_options']['geofield_map_zoom'] = '15';
   $handler->display->display_options['style_options']['geofield_map_min_zoom'] = '0';
   $handler->display->display_options['style_options']['geofield_map_max_zoom'] = '0';
+  $handler->display->display_options['style_options']['geofield_map_draggable'] = 1;
   $handler->display->display_options['style_options']['geofield_map_streetview_show'] = 1;
   $handler->display->display_options['style_options']['geofield_map_center'] = array(
     'lat' => '',
     'lon' => '',
     'geocode' => 'Find my location',
   );
-  /* Field: Contenu: Title */
+  /* Field: Contenu: Titre */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -107,10 +112,10 @@ function domaine_d_o_entrees_views_default_views() {
   $translatables['entrees'] = array(
     t('Master'),
     t('Entrées'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
+    t('plus'),
+    t('Appliquer'),
+    t('Réinitialiser'),
+    t('Trier par'),
     t('Asc'),
     t('Desc'),
     t('Geolocalisation'),
