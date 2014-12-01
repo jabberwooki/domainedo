@@ -56,6 +56,7 @@ features[ds_field_settings][] = taxonomy_term|show_locations|full
 features[ds_fields][] = anchor_shows
 features[ds_fields][] = ancre_geolocalisation
 features[ds_fields][] = link_shows
+features[ds_fields][] = partage
 features[ds_layout_settings][] = node|festival|full
 features[ds_layout_settings][] = node|programmer|full
 features[ds_layout_settings][] = node|show|frontpage_block

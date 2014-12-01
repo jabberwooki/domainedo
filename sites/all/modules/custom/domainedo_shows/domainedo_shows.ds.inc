@@ -177,6 +177,25 @@ function domainedo_shows_ds_custom_fields_info() {
   );
   $export['link_shows'] = $ds_field;
 
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
+  $ds_field->field = 'partage';
+  $ds_field->label = 'Partage';
+  $ds_field->field_type = 5;
+  $ds_field->entities = array(
+    'node' => 'node',
+  );
+  $ds_field->ui_limit = '';
+  $ds_field->properties = array(
+    'code' => array(
+      'value' => '<p>Vous y allez ? Vous avez aimé ? Faites le savoir :</p>
+',
+      'format' => 'full_html',
+    ),
+    'use_token' => 0,
+  );
+  $export['partage'] = $ds_field;
+
   return $export;
 }
 
