@@ -248,6 +248,8 @@ function domainedo_shows_field_group_info() {
       2 => 'field_photos_link',
       3 => 'field_sound_link',
       4 => 'field_video_link',
+      5 => 'sharethis',
+      6 => 'partage',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(

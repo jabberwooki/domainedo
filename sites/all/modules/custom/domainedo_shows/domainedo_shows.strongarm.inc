@@ -471,7 +471,14 @@ function domainedo_shows_strongarm() {
           'weight' => '36',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'sharethis' => array(
+          'full' => array(
+            'weight' => '39',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__show'] = $strongarm;
