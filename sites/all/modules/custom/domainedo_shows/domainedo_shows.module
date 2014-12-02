@@ -71,21 +71,23 @@ function domainedo_shows_node_view_alter(&$build) {
       $now = date('Y-m-d');
       $now = new DateTime( $now );
       $now = $now->format('Ymd');
-      $show_is_past = true;
+      $show_is_past = false;
       if (isset($build['field_reservation']) && $build['field_reservation']['#items'][0]['value'] == 2 && isset($build['field_show_dates']['#items'])){     
         for ($i = 0; $i < count($build['field_show_dates']['#items']); $i++) {    
           $show_date_item = $build['field_show_dates']['#items'][$i]['value'];
           $show_date_item = substr($show_date_item, 0, 10);
           $show_date_item = new DateTime( $show_date_item );
           $show_date_item = $show_date_item->format('Ymd');
-          if($now < $show_date_item) {
+          
+          if ($now < $show_date_item) {
             $show_is_past  = false; 
             break;
-          }     
-          if ($show_is_past) $field_reservation_value = 5;
+          } else {
+            $show_is_past = true;
+          }
         }
       }
-      
+      if ($show_is_past) $field_reservation_value = 5;
 			$dependent_fields = array(
 					'1' => 'field_coming_soon',
 					'2' => 'field_boxoffice_url',
