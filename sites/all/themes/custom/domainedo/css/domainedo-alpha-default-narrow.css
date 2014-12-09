@@ -832,5 +832,59 @@ div.pratique div.button_subscribe a{
 .field-name-field-ls-practical>div ul{
   list-style: none;
 }
-
-
+/* spectacles liés ************************************************************/
+.group-footer .field-name-field-linked-shows{
+  width: 61%;
+}
+.group-footer .field-name-field-linked-shows > .field-items{
+  padding-left: 30px;
+  border-bottom : 1px solid black;
+}
+.group-footer .field-name-field-linked-shows > .field-items:after{
+  content: '';
+  display: block;
+  clear: left;
+}
+.group-footer .field-name-field-linked-shows > .field-items > div.field-item{
+  float: left;
+}
+.group-footer .field-name-field-linked-shows > .field-items > div.field-item > .node-show{
+  margin: 0 20px 10px 0;
+  position: relative;
+}
+.group-footer .field-name-field-linked-shows > .field-items > div.field-item > .node-show h4{
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #EBEAEA;
+  opacity: 0.8;
+  width: 150px;
+}
+.group-footer .field-name-field-linked-shows > .field-items > div.field-item > .node-show h4 a{
+  color: #000000;
+  font-family: sans-serif;
+  font-weight: normal;
+  display: block;
+  font-size: 0.8em;
+  line-height: 1em;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  padding: 3px;
+}
+.group-footer .field-name-field-linked-shows > .field-items > div.field-item > .node-show .field-name-scald-authors{
+  display: none;
+}
+.group-footer .field-type-entityreference > .field-label{
+  background: url("/sites/all/themes/custom/domainedo/images/icons/bg_h2_classic.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  border-bottom: 1px solid #000000;
+  display: block;
+  font-family: Lato,arial;
+  font-weight: 400;
+  line-height: 30px;
+  padding: 3px 0 0 48px;
+  font-size: 1.5em;
+  margin : 0 0 10px 0;
+  border-top: 15px solid white;
+}
