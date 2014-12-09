@@ -537,6 +537,38 @@ function domainedo_shows_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|show|liste_aussi';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'show';
+  $ds_layout->view_mode = 'liste_aussi';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'title',
+        1 => 'field_thumbnail',
+        2 => 'field_show_dates',
+      ),
+    ),
+    'fields' => array(
+      'title' => 'ds_content',
+      'field_thumbnail' => 'ds_content',
+      'field_show_dates' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['node|show|liste_aussi'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'node|structure|full';
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'structure';
