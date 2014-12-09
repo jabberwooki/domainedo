@@ -455,6 +455,9 @@ function domainedo_shows_strongarm() {
       'zoom' => array(
         'custom_settings' => TRUE,
       ),
+      'liste_aussi' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -476,6 +479,14 @@ function domainedo_shows_strongarm() {
           'full' => array(
             'weight' => '39',
             'visible' => TRUE,
+          ),
+          'default' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+          'liste_aussi' => array(
+            'weight' => '23',
+            'visible' => FALSE,
           ),
         ),
       ),

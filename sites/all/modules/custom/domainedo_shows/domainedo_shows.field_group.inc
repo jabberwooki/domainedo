@@ -118,7 +118,7 @@ function domainedo_shows_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Groupe short links',
-    'weight' => '30',
+    'weight' => '28',
     'children' => array(
       0 => 'group_ul_short_links',
     ),
