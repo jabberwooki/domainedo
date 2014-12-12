@@ -1160,8 +1160,122 @@ h3.medium a{
       div.view-display-id-list div.group6 > div .ds-2col-stacked-fluid > .group-right,
       .node-festival .ds-2col-stacked-fluid > .group-right {
         width: 48%;
-      }
-      
-      
-       
+      }    
+}
+/* Polaroïd *******************************************************************/
+.group-pola-imgs{
+  padding: 27px 28px 0 28px;
+}
+.group-pola-imgs:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.page-node-415 .field-type-atom-reference .field-item img{
+  float: left;
+}
+.field-name-field-person-img-1 img{
+  /*margin-right: 3px;*/
+}
+.page-node-415 .views-row {
+  float: left;
+  width: 460px;
+  background: url(../images/polaroid.jpg) no-repeat 0 0;
+  transform: rotate(7deg);
+  -moz-transform:rotate(7deg); /*firefox*/
+  -webkit-transform:rotate(7deg); /*Chrome, Safari*/
+  -o-transform:rotate(7deg); /*Opera*/
+
+}
+.page-node-415 .views-row-1 {
+  transform: rotate(-3deg);
+  -moz-transform:rotate(-3deg); /*firefox*/
+  -webkit-transform:rotate(-3deg); /*Chrome, Safari*/
+  -o-transform:rotate(-3deg); /*Opera*/
+  position: relative;
+  left : 30px;
+  top: -20px;
+}
+.page-node-415 .views-row-2 {
+  transform: rotate(7deg);
+  -moz-transform:rotate(7deg); /*firefox*/
+  -webkit-transform:rotate(7deg); /*Chrome, Safari*/
+  -o-transform:rotate(7deg); /*Opera*/
+  position: relative;
+  left : -10px;
+  top: 20px;
+  z-index: 5;
+}
+.page-node-415 .views-row-3 {
+  transform: rotate(2deg);
+  -moz-transform:rotate(2deg); /*firefox*/
+  -webkit-transform:rotate(2deg); /*Chrome, Safari*/
+  -o-transform:rotate(2deg); /*Opera*/
+}
+.page-node-415 .views-row-4 {
+  transform: rotate(-5deg);
+  -moz-transform:rotate(-5deg); /*firefox*/
+  -webkit-transform:rotate(-5deg); /*Chrome, Safari*/
+  -o-transform:rotate(-5deg); /*Opera*/
+  position: relative;
+  left : -30px;
+  top: 20px;
+  z-index: 5;
+}
+.page-node-415 .views-row-5 {
+  transform: rotate(-3deg);
+  -moz-transform:rotate(-3deg); /*firefox*/
+  -webkit-transform:rotate(-3deg); /*Chrome, Safari*/
+  -o-transform:rotate(-3deg); /*Opera*/
+  position: relative;
+  left : 28px;
+  top: 20px;
+  z-index: 5;
+}
+.page-node-415 .views-row-6 {
+  transform: rotate(6deg);
+  -moz-transform:rotate(6deg); /*firefox*/
+  -webkit-transform:rotate(6deg); /*Chrome, Safari*/
+  -o-transform:rotate(6deg); /*Opera*/
+}
+.page-node-415 .views-row-7 {
+  transform: rotate(4deg);
+  -moz-transform:rotate(4deg); /*firefox*/
+  -webkit-transform:rotate(4deg); /*Chrome, Safari*/
+  -o-transform:rotate(4deg); /*Opera*/
+}
+.page-node-415 .views-row-8 {
+  transform: rotate(-3deg);
+  -moz-transform:rotate(-3deg); /*firefox*/
+  -webkit-transform:rotate(-3deg); /*Chrome, Safari*/
+  -o-transform:rotate(-3deg); /*Opera*/
+}
+.group-person-legend{
+  height: 100px;
+  clear: both;
+  padding: 5px 20px 0 28px;
+}
+.field-name-field-person-img-1 img{
+  /*border: 1px solid black;
+  border-radius: 6px 0 0 6px;*/
+}
+.field-name-field-person-img-2 img{
+  /*border: 1px solid black;
+  border-radius: 0 6px 6px 0;*/
+}
+.page-node-415 h3{
+  margin: 0;
+  text-align: right;
+  padding-right: 64px;
+}
+
+.page-node-415 #region-content h2.block-title {
+    background-image: none;
+    display: block;
+    font-family:arial;
+    font-weight: 400;
+    line-height: 30px;
+    text-align : right;
+    padding: 5px;
 }
