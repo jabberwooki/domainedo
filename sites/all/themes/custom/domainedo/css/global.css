@@ -1281,9 +1281,9 @@ h3.medium a{
     margin-top: 20px;
 }
 /* boutons réseaux sociaux ****************************************************/
-.field-name-partage{
+ul.group-ul-short-links > div.field-name-partage{
   margin : 15px 0 -15px 0;
 }
 .pluginButton[title=like]{
-  height: 30px;
+  border: 3px solid blue;
 }
