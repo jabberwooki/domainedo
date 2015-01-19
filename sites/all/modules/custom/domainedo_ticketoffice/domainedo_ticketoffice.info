@@ -1,0 +1,12 @@
+name = Domaine d'O Ticket Office
+core = 7.x
+package = Domaine d'O
+version = 7.x-1.0
+project = domainedo_ticketoffice
+dependencies[] = colorbox
+dependencies[] = context
+features[context][] = ticketoffice_all
+features[ctools][] = context:context:3
+features[features_api][] = api:2
+mtime = 1421424092
+project path = sites/all/modules/custom
