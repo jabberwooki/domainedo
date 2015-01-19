@@ -3968,7 +3968,7 @@ function domainedo_shows_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_thumbnail',
     'label' => 'Vignette du spectacle',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'referencable_types' => array(
         'audio' => 0,
