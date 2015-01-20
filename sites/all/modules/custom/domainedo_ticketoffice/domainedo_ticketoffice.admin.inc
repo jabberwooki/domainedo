@@ -25,13 +25,13 @@ function rsi_ws_settings_form() {
 			'#type' => 'textfield',
 			'#title' => t('Shows List webservice'),
 			'#size' => 25,
-			'#default_value' => variable_get('rsi_ws_show_list_name', 'ws_list_spectacle'),
+			'#default_value' => variable_get('rsi_ws_show_list_name', 'ws_cat_spectacle'),
 	);
 	$form['rsi_webservices']['rsi_ws_show_name'] = array(
 			'#type' => 'textfield',
 			'#title' => t('Show details webservice'),
 			'#size' => 25,
-			'#default_value' => variable_get('rsi_ws_show_name', 'ws_spectacle'),
+			'#default_value' => variable_get('rsi_ws_show_name', 'ws_det_spectacle'),
 	);
 	$form['rsi_webservices']['rsi_ws_event_name'] = array(
 			'#type' => 'textfield',
