@@ -26,17 +26,11 @@ function domainedo_ticketoffice_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'domainedo_ticketoffice-rsi_ws_ts' => array(
-          'module' => 'domainedo_ticketoffice',
-          'delta' => 'rsi_ws_ts',
-          'region' => 'menu',
-          'weight' => '-37',
-        ),
         'domainedo_ticketoffice-rsi_ws_user_links' => array(
           'module' => 'domainedo_ticketoffice',
           'delta' => 'rsi_ws_user_links',
           'region' => 'menu',
-          'weight' => '-36',
+          'weight' => '-37',
         ),
       ),
     ),
