@@ -247,16 +247,31 @@ function domainedo_ticketoffice_node_view($node, $view_mode, $langcode) {
 			// Wraps event dates with a span whose class depends on event avaibility.
 			$dates_number = sizeof($node->content['field_show_dates']['#items']);
 			$full = TRUE;
-			for ($key=0; $key < $dates_number; $key++) {
-				//$events[$key]['@attributes']['REP_DISPO'] = 0; // Ligne à conserver pour tester le passage à 'complet'.
-				if ($events[$key]['@attributes']['REP_DISPO'] == 0) {
+			
+			// Only one event
+			if (sizeof($events) == 1) {
+				if ($events['@attributes']['REP_DISPO'] == 0) {
 					$class = 'sold-out';
 				}
 				else {
 					$class = 'on-sale';
 					$full = FALSE;
 				}
-				$node->content['field_show_dates'][$key]['#markup'] = '<span class="' . $class . '">' . $node->content['field_show_dates'][$key]['#markup'] . '</span>';
+				$node->content['field_show_dates'][0]['#markup'] = '<span class="' . $class . '">' . $node->content['field_show_dates'][0]['#markup'] . '</span>';
+			}
+			// Several events
+			else {
+				for ($key=0; $key < $dates_number; $key++) {
+					//$events[$key]['@attributes']['REP_DISPO'] = 0; // Ligne à conserver pour tester le passage à 'complet'.
+					if ($events[$key]['@attributes']['REP_DISPO'] == 0) {
+						$class = 'sold-out';
+					}
+					else {
+						$class = 'on-sale';
+						$full = FALSE;
+					}
+					$node->content['field_show_dates'][$key]['#markup'] = '<span class="' . $class . '">' . $node->content['field_show_dates'][$key]['#markup'] . '</span>';
+				}
 			}
 			
 			// If $full=TRUE and show is neither cancelled (4) nor over (5), we must display it being full.
