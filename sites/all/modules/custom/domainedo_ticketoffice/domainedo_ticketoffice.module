@@ -313,20 +313,21 @@ function domainedo_ticketoffice_block_view($delta = '') {
 			$block['subject'] = '';
 			$url = rsi_get_domain();
 			$credentials = rsi_ws_credentials();
+			$popup = rsi_popup_dimensions();
 			
 			// Account link
-			$account_url = $url . 'account_home?' . $credentials . '&lng=1&width=1000&height=800&iframe=true';
+			$account_url = $url . 'account_home?' . $credentials . '&lng=1&width=' . $popup['width'] . '&height=' . $popup['height']	. '&iframe=true';
 			$items[] = l(t('My account'), $account_url, array('attributes' => array('class' => array('colorbox-load'))));
 			// Subscription link
 			$prog = rsi_get_programmation();
 			$ident = $prog['ABONNEMENTS']['ABONNEMENT']['@attributes']['IDENT'];
-			$subscription_url = $url . 'abonnement?' . $credentials . '&lng=1&id_abonnement=' . $ident . '&width=1000&height=800&iframe=true';
+			$subscription_url = $url . 'abonnement?' . $credentials . '&lng=1&id_abonnement=' . $ident . '&width=' . $popup['width'] . '&height=' . $popup['height']	. '&iframe=true';
 			$items[] = l(t('Subscription'), $subscription_url, array('attributes' => array('class' => array('colorbox-load'))));
 			// Basket link
-			$basket_url = $url . 'basket?' . $credentials . '&lng=1&width=1000&height=800&iframe=true';
+			$basket_url = $url . 'basket?' . $credentials . '&lng=1&width=' . $popup['width'] . '&height=' . $popup['height']	. '&iframe=true';
 			$items[] = l(t('My basket'), $basket_url, array('attributes' => array('class' => array('colorbox-load'))));
 			// CGU link
-			$terms_url = $url . 'conditions_gene?' . $credentials . '&lng=1&width=1000&height=800&iframe=true';
+			$terms_url = $url . 'conditions_gene?' . $credentials . '&lng=1&width=' . $popup['width'] . '&height=' . $popup['height']	. '&iframe=true';
 			$items[] = l(t('Terms of use'), $terms_url, array('attributes' => array('class' => array('colorbox-load'))));
 
 			$variables = array(
