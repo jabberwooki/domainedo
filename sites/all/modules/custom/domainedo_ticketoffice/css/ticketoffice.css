@@ -17,8 +17,13 @@
    font-style: italic;
    border: none;
 }
-.sold-out {
+.past-event {
+  color: gray;
+  font-style: italic;
+}
+.on-sale-event {
+	
+}
+.sold-out-event {
 	text-decoration: line-through;
-	color: gray;
-	font-style: italic;
 }
