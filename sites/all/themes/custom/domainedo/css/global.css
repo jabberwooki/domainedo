@@ -1180,7 +1180,7 @@ h3.medium a{
 }
 .page-node-415 .views-row {
   float: left;
-  width: 460px;
+  width: 300px;
   background: url(../images/polaroid.jpg) no-repeat 0 0;
   transform: rotate(7deg);
   -moz-transform:rotate(7deg); /*firefox*/
@@ -1254,7 +1254,7 @@ h3.medium a{
 .group-person-legend{
   height: 100px;
   clear: both;
-  padding: 5px 20px 0 28px;
+  padding: 15px 20px 0 10px;
 }
 .field-name-field-person-img-1 img{
   /*border: 1px solid black;
@@ -1266,7 +1266,7 @@ h3.medium a{
 }
 .page-node-415 h3{
   margin: 0;
-  text-align: right;
+  text-align: left;
   padding-right: 64px;
 }
 
@@ -1276,9 +1276,26 @@ h3.medium a{
     font-family:arial;
     font-weight: 400;
     line-height: 30px;
-    text-align : right;
+    text-align : left;
     padding: 5px;
-    margin-top: 20px;
+    margin-top: 10px;
+}
+.view-personnes img{
+  width: 42%;
+}
+.page-node-415 .field-name-field-person-txt-1,
+.page-node-415 .field-name-field-person-txt-2,
+.page-node-415 .field-name-field-person-txt-3{
+  font-size: 10px;
+}
+.page-node-415 h2.block-title,
+.page-node-415 .view-header h3{
+  font-size: 1.4em;
+  margin-bottom : 20px;
+}
+.page-node-415 .view-header h3{
+  margin-top: 30px;
+  border-bottom: 1px solid black;
 }
 /* boutons réseaux sociaux ****************************************************/
 ul.group-ul-short-links > div.field-name-partage{
