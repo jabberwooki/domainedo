@@ -93,8 +93,8 @@ function domainedo_shows_node_view_alter(&$build) {
       
       
       $show_has_ticket_link = (isset($build['field_reservation']) && $build['field_reservation']['#items'][0]['value'] == 2);
-      if ($show_has_ticket_link && isset($build['field_show_dates']['#items'])){   
-        $show_is_past = false;
+      $show_is_past = false;
+      if ($show_has_ticket_link && isset($build['field_show_dates']['#items'])){
         for ($i = 0; $i < count($build['field_show_dates']['#items']); $i++) {    
           $show_date_item = $build['field_show_dates']['#items'][$i]['value'];
           $show_date_item = substr($show_date_item, 0, 10);
