@@ -29,8 +29,8 @@ function domainedo_ticketoffice_context_default_contexts() {
         'domainedo_ticketoffice-rsi_ws_user_links' => array(
           'module' => 'domainedo_ticketoffice',
           'delta' => 'rsi_ws_user_links',
-          'region' => 'menu',
-          'weight' => '-37',
+          'region' => 'header_second',
+          'weight' => '10',
         ),
       ),
     ),
