@@ -351,9 +351,10 @@ function domainedo_ticketoffice_block_view($delta = '') {
 			// Basket link
 			$basket_url = $url . 'basket?' . $credentials . '&lng=1&width=' . $popup['width'] . '&height=' . $popup['height']	. '&iframe=true';
 			$items[] = l(t('My basket'), $basket_url, array('attributes' => array('class' => array('colorbox-load'))));
+			
 			// CGU link
-			$terms_url = $url . 'conditions_gene?' . $credentials . '&lng=1&width=' . $popup['width'] . '&height=' . $popup['height']	. '&iframe=true';
-			$items[] = l(t('Terms of use'), $terms_url, array('attributes' => array('class' => array('colorbox-load'))));
+			//$terms_url = $url . 'conditions_gene?' . $credentials . '&lng=1&width=' . $popup['width'] . '&height=' . $popup['height']	. '&iframe=true';
+			//$items[] = l(t('Terms of use'), $terms_url, array('attributes' => array('class' => array('colorbox-load'))));
 
 			$variables = array(
 					'items' => $items,
