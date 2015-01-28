@@ -1,5 +1,6 @@
 <?php
 function rsi_ws_settings_form() {
+	// Ticket office location
 	$form['rsi_ticket_office'] = array(
 			'#type' => 'fieldset',
 			'#title' => t('Ticket Office'),
@@ -11,6 +12,7 @@ function rsi_ws_settings_form() {
 			'#default_value' => variable_get('rsi_ws_url', 'http://billetterie.domaine-do-34.eu/'),
 	);
 	
+	// Webservice names
 	$form['rsi_webservices'] = array(
 			'#type' => 'fieldset',
 			'#title' => t('Webservices names'),
@@ -40,23 +42,7 @@ function rsi_ws_settings_form() {
 			'#default_value' => variable_get('rsi_ws_event_name', 'event'),
 	);
 	
-	$form['rsi_popup'] = array(
-			'#type' => 'fieldset',
-			'#title' => t('RSI Webservices access credentials'),
-	);
-	$form['rsi_popup']['rsi_popup_width'] = array(
-			'#type' => 'textfield',
-			'#title' => t('Width'),
-			'#size' => 5,
-			'#default_value' => variable_get('rsi_popup_width', '720'),
-	);
-	$form['rsi_popup']['rsi_popup_height'] = array(
-			'#type' => 'textfield',
-			'#title' => t('Height'),
-			'#size' => 5,
-			'#default_value' => variable_get('rsi_popup_height', '800'),
-	);
-	
+	// Credentials
 	$form['rsi_credentials'] = array(
 			'#type' => 'fieldset',
 			'#title' => t('RSI Webservices access credentials'),
@@ -78,6 +64,24 @@ function rsi_ws_settings_form() {
 			'#title' => t('Client number'),
 			'#size' => 25,
 			'#default_value' => variable_get('rsi_client', ''),
+	);
+	
+	// Colorbox dimensions
+	$form['rsi_popup'] = array(
+			'#type' => 'fieldset',
+			'#title' => t('Colorbox popup dimensions'),
+	);
+	$form['rsi_popup']['rsi_popup_width'] = array(
+			'#type' => 'textfield',
+			'#title' => t('Width'),
+			'#size' => 5,
+			'#default_value' => variable_get('rsi_popup_width', '720'),
+	);
+	$form['rsi_popup']['rsi_popup_height'] = array(
+			'#type' => 'textfield',
+			'#title' => t('Height'),
+			'#size' => 5,
+			'#default_value' => variable_get('rsi_popup_height', '800'),
 	);
 	
 	return system_settings_form($form);
