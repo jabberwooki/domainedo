@@ -1208,19 +1208,22 @@ h3.medium a{
   z-index: 5;
 }
 .page-node-415 .views-row-3 {
-  transform: rotate(2deg);
-  -moz-transform:rotate(2deg); /*firefox*/
-  -webkit-transform:rotate(2deg); /*Chrome, Safari*/
-  -o-transform:rotate(2deg); /*Opera*/
+  transform: rotate(-2deg);
+  -moz-transform:rotate(-2deg); /*firefox*/
+  -webkit-transform:rotate(-2deg); /*Chrome, Safari*/
+  -o-transform:rotate(-2deg); /*Opera*/
+  position: relative;
+  top: 20px;
+  left : -20px;
 }
 .page-node-415 .views-row-4 {
-  transform: rotate(-5deg);
-  -moz-transform:rotate(-5deg); /*firefox*/
-  -webkit-transform:rotate(-5deg); /*Chrome, Safari*/
-  -o-transform:rotate(-5deg); /*Opera*/
+  transform: rotate(12deg);
+  -moz-transform:rotate(12deg); /*firefox*/
+  -webkit-transform:rotate(12deg); /*Chrome, Safari*/
+  -o-transform:rotate(12deg); /*Opera*/
   position: relative;
-  left : -30px;
-  top: 20px;
+  left : 40px;
+  top: -10px;
   z-index: 5;
 }
 .page-node-415 .views-row-5 {
