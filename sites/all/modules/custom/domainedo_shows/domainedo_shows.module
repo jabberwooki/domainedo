@@ -29,7 +29,7 @@ function domainedo_shows_node_view_alter(&$build) {
   $now = date('Y-m-d');
   $now = new DateTime( $now );
   $now = $now->format('Ymd'); 
-  $show_is_past;
+  $show_is_past = false;
   
 	if ($build['#bundle'] == 'show') {		
 		// Processing of festival's name in List view mode.
