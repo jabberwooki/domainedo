@@ -115,6 +115,7 @@ function domainedo_shows_node_view_alter(&$build) {
 					'2' => 'field_boxoffice_url',
 					'3' => 'field_full',
 					'4' => 'field_reimbursement',
+					'6' => 'field_offline',
 			);
 			foreach ($dependent_fields as $key=>$field_name) {
 				if ($key != $field_reservation_value) {

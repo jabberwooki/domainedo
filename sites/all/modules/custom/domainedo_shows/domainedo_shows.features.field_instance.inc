@@ -1201,10 +1201,10 @@ function domainedo_shows_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'attributes' => array(
-        'class' => 'colorbox-load',
+        'class' => '',
         'configurable_title' => 0,
         'rel' => '',
-        'target' => 'default',
+        'target' => '_blank',
         'title' => '',
       ),
       'display' => array(
@@ -1224,7 +1224,7 @@ function domainedo_shows_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 28,
+      'weight' => 27,
     ),
   );
 
@@ -1551,7 +1551,7 @@ function domainedo_shows_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 26,
+      'weight' => 28,
     ),
   );
 
@@ -2237,7 +2237,7 @@ function domainedo_shows_field_default_field_instances() {
           'view_mode' => 'liste_aussi',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 30,
+        'weight' => 31,
       ),
       'list' => array(
         'label' => 'above',
@@ -2280,7 +2280,7 @@ function domainedo_shows_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete_tags',
-      'weight' => 38,
+      'weight' => 39,
     ),
   );
 
@@ -2443,6 +2443,93 @@ function domainedo_shows_field_default_field_instances() {
       'settings' => array(),
       'type' => 'number',
       'weight' => 20,
+    ),
+  );
+
+  // Exported field_instance: 'node-show-field_offline'
+  $field_instances['node-show-field_offline'] = array(
+    'bundle' => 'show',
+    'default_value' => array(
+      0 => array(
+        'value' => '<p>Billetterie momentanément indisponible. Veuillez recharger la page.</p>
+',
+        'format' => 'full_html',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 41,
+      ),
+      'frontpage_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'frontpage_block_mobile' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 28,
+      ),
+      'list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'liste_aussi' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'zoom' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_offline',
+    'label' => 'Billetterie indisponible',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'debug',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 31,
     ),
   );
 
@@ -2804,7 +2891,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 42,
+        'weight' => 44,
       ),
       'list' => array(
         'label' => 'hidden',
@@ -3203,7 +3290,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 40,
       ),
       'list' => array(
         'label' => 'above',
@@ -3242,7 +3329,7 @@ function domainedo_shows_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 27,
+      'weight' => 26,
     ),
   );
 
@@ -3330,7 +3417,7 @@ function domainedo_shows_field_default_field_instances() {
         'context' => 'sdl_editor_representation',
       ),
       'type' => 'atom_reference_textfield',
-      'weight' => 31,
+      'weight' => 32,
     ),
   );
 
@@ -3504,7 +3591,7 @@ function domainedo_shows_field_default_field_instances() {
         'context' => 'sdl_editor_representation',
       ),
       'type' => 'atom_reference_textfield',
-      'weight' => 33,
+      'weight' => 34,
     ),
   );
 
@@ -3590,7 +3677,7 @@ function domainedo_shows_field_default_field_instances() {
         'context' => 'sdl_editor_representation',
       ),
       'type' => 'atom_reference_textfield',
-      'weight' => 32,
+      'weight' => 33,
     ),
   );
 
@@ -3755,7 +3842,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 40,
+        'weight' => 42,
       ),
       'list' => array(
         'label' => 'hidden',
@@ -4002,7 +4089,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 41,
+        'weight' => 43,
       ),
       'list' => array(
         'label' => 'hidden',
@@ -4041,7 +4128,7 @@ function domainedo_shows_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_thumbnail',
     'label' => 'Vignette du spectacle',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'referencable_types' => array(
         'audio' => 0,
@@ -4182,7 +4269,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 43,
+        'weight' => 45,
       ),
       'list' => array(
         'label' => 'hidden',
@@ -5141,6 +5228,7 @@ function domainedo_shows_field_default_field_instances() {
   t('A partir de');
   t('Affiche du festival');
   t('Artiste associé');
+  t('Billetterie indisponible');
   t('Calendrier/Archive');
   t('Coproducteurs');
   t('Date(s)');
