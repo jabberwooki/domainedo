@@ -18,12 +18,9 @@
    border: none;
 }
 .past-event {
-  color: gray;
-  font-style: italic;
 }
 .on-sale-event {
 	
 }
 .sold-out-event {
-	text-decoration: line-through;
 }
