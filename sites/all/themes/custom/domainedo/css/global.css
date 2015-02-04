@@ -1215,6 +1215,7 @@ h3.medium a{
   position: relative;
   top: 20px;
   left : -20px;
+   z-index: 5;
 }
 .page-node-415 .views-row-4 {
   transform: rotate(12deg);
