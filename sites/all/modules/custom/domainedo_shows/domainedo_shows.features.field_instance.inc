@@ -1201,7 +1201,7 @@ function domainedo_shows_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'attributes' => array(
-        'class' => '',
+        'class' => 'colorbox-load',
         'configurable_title' => 0,
         'rel' => '',
         'target' => '_blank',
