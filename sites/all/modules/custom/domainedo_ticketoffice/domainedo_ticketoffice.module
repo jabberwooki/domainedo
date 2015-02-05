@@ -279,6 +279,8 @@ function domainedo_ticketoffice_node_view($node, $view_mode, $langcode) {
 function domainedo_ticketoffice_node_view_alter(&$build) {
 	if ($build['#bundle'] == 'show' && $build['#view_mode'] == 'full') {
 		if (isset($build['field_boxoffice_url'][0]['#element']['url'])) {
+			$onclick_action = "_gaq.push(['_trackEvent', 'reserver', 'click', '" . $build['field_festival'][0]['#markup'] . "']);";
+			$build['field_boxoffice_url'][0]['#element']['attributes']['onClick'] = $onclick_action;
 			$popup = rsi_popup_dimensions();
 			$build['field_boxoffice_url'][0]['#element']['url'] = $build['field_boxoffice_url'][0]['#element']['url'] 
 				. '&width=' . $popup['width'] 
