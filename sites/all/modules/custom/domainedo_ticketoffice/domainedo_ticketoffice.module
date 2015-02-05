@@ -114,9 +114,14 @@ function rsi_get_programmation() {
 
 function rsi_get_ws_data($type, $url) {
 	$response = drupal_http_request($url);
+	if (isset($response->error)) {
+		$msg = 'error=' . $response->error . ', code=' . $response->code 
+			. ', redirect_code=' . $response->redirect_code . ', redirect_url=' . $response->redirect_url;
+		throw new Exception($msg);
+	}
+	
 	$data = new SimpleXMLElement($response->data);
 	$data = drupal_json_decode(drupal_json_encode($data));
-	
 	if (isset($data['ERREUR'])) {
 		throw new Exception($data['ERREUR']['MESSAGE']);
 	}
