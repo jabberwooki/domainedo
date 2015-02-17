@@ -507,7 +507,7 @@ body.front #block-views-evenements-block-1 .view-footer a{
 #node_show_zoom_group_summary_dates,
 #node_news_zoom_group_event_summa_dates{
     position : absolute;
-    bottom: 0px;
+    bottom: 15px;
     left: 0;
     background-color: #DED9D6;
     width : 300px;
