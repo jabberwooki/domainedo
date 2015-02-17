@@ -192,6 +192,7 @@ h2.h2-event a{
 }
 #node_news_zoom_group_event_summa_dates a{
     color: black;
+    text-decoration: none;
 }
 /* zone de recherche **********************************************************/
 #block-search-form{
@@ -510,7 +511,7 @@ body.front #block-views-evenements-block-1 .view-footer a{
     left: 0;
     background-color: #DED9D6;
     width : 300px;
-    opacity: 0.8;
+    opacity: 0.95;
     padding:10px;
 }
 .field-name-field-show-dates .field-items{
