@@ -117,7 +117,18 @@ function news_strongarm() {
           'weight' => '15',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'sharethis' => array(
+          'full' => array(
+            'weight' => '21',
+            'visible' => FALSE,
+          ),
+          'zoom' => array(
+            'weight' => '15',
+            'visible' => FALSE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__news'] = $strongarm;

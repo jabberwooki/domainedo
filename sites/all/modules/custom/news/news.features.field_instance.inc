@@ -174,7 +174,7 @@ function news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -186,7 +186,7 @@ function news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 24,
       ),
     ),
     'entity_type' => 'node',
@@ -207,6 +207,63 @@ function news_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-news-field_news_only_video'
+  $field_instances['node-news-field_news_only_video'] = array(
+    'bundle' => 'news',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 27,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_key',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'zoom' => array(
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_news_only_video',
+    'label' => 'Vidéo seule',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 17,
+    ),
+  );
+
   // Exported field_instance: 'node-news-field_news_publication_date'
   $field_instances['node-news-field_news_publication_date'] = array(
     'bundle' => 'news',
@@ -223,7 +280,7 @@ function news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 24,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -235,7 +292,7 @@ function news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 16,
       ),
     ),
     'entity_type' => 'node',
@@ -282,7 +339,7 @@ function news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 23,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -294,7 +351,7 @@ function news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 23,
       ),
     ),
     'entity_type' => 'node',
@@ -302,6 +359,9 @@ function news_field_default_field_instances() {
     'label' => 'Url de destination',
     'required' => 0,
     'settings' => array(
+      'context' => '',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -337,7 +397,7 @@ function news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 26,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -349,7 +409,7 @@ function news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 18,
       ),
     ),
     'entity_type' => 'node',
@@ -387,7 +447,7 @@ function news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 22,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -399,7 +459,7 @@ function news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 22,
       ),
     ),
     'entity_type' => 'node',
@@ -460,7 +520,7 @@ function news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 20,
       ),
     ),
     'entity_type' => 'node',
@@ -585,7 +645,7 @@ function news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 21,
       ),
     ),
     'entity_type' => 'node',
@@ -646,7 +706,7 @@ function news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 19,
       ),
     ),
     'entity_type' => 'node',
@@ -697,7 +757,7 @@ function news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 19,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -709,7 +769,7 @@ function news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'node',
@@ -751,7 +811,7 @@ function news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 25,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -763,7 +823,7 @@ function news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 17,
       ),
     ),
     'entity_type' => 'node',
@@ -799,6 +859,7 @@ function news_field_default_field_instances() {
   t('Son');
   t('Url de destination');
   t('Vidéo');
+  t('Vidéo seule');
   t('Visible bas accueil');
   t('Zoom sur');
 
