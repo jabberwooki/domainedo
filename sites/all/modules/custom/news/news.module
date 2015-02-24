@@ -68,13 +68,17 @@ function news_node_view_alter(&$build) {
   }
   if ($build['#bundle'] == 'news' && $build['#view_mode'] == 'zoom') {
 
-    $path_alias = drupal_get_path_alias('node/'.$build['#node']->vid);
-    $build['field_scald_image'][0]['#markup'] = '<div style="position:relative">'.
-            '<a href="'.$path_alias.'">'.
-            '<img style="position:absolute; top: 25%; left:38%" src="sites/all/themes/custom/domainedo/images/icons/youtubeArrow3.png" alt="" />'.
-            '</a>'.
-            $build['field_scald_image'][0]['#markup'].
-            '</div>';
-    $build['field_news_only_video'][0]['#markup'] = "";
+    if(isset($build['field_news_only_video']['#items'][0]['value'])){
+      if($build['field_news_only_video']['#items'][0]['value'] ){
+        $path_alias = drupal_get_path_alias('node/'.$build['#node']->vid);
+        $build['field_scald_image'][0]['#markup'] = '<div style="position:relative">'.
+                '<a href="'.$path_alias.'">'.
+                '<img style="position:absolute; top: 25%; left:38%" src="sites/all/themes/custom/domainedo/images/icons/youtubeArrow3.png" alt="" />'.
+                '</a>'.
+                $build['field_scald_image'][0]['#markup'].
+                '</div>';
+      }
+      $build['field_news_only_video'][0]['#markup'] = "";
+    }
   }
 }
