@@ -221,6 +221,8 @@ ul#superfish-2 li.sf-depth-1 a{
 }
 .view-evenements.view-display-id-block_2 div.more-link{
   margin-bottom : 20px;
+  position: relative;
+  top: 280px;
 }
 body.front #block-views-evenements-block-1 div.view-content .views-field-body {
     width: 47%;
