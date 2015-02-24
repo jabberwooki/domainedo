@@ -34,6 +34,7 @@ function news_views_pre_render(&$view) {
 	}
   if ($view->name == 'evenements' && $view->current_display == 'block_2') {
             foreach ($view->result as &$value) {
+              
                 if (!empty($value->field_field_news_url_target)) {
                     $target = (empty($value->field_field_new_window) || !$value->field_field_new_window[0]['rendered']['#markup'])? '' : ' target="_blank" ';
                     
@@ -46,9 +47,20 @@ function news_views_pre_render(&$view) {
                     $value->field_field_news_url_target[0]['rendered']['#markup'] = '<h3 class="title-event-list"><a href="/node/'.$value->nid.'">'.$value->node_title.'</a></h3>';
                     $value->field_field_scald_image[0]['rendered']['#markup'] = '<a '.$href.'>'.$value->field_field_scald_image[0]['rendered']['#markup'].'</a>';
                 }
+                if(isset($value->field_field_news_only_video[0]['rendered']['#markup']) && $value->field_field_news_only_video[0]['rendered']['#markup']) {
+                  $path_alias = drupal_get_path_alias('node/'.$build['#node']->vid); 
+                  $value->field_field_scald_image[0]['rendered']['#markup'] =  
+                          '<div style="position:relative">'.
+                          '<a href="'.$path_alias.'">'.
+                          '<img style="position:absolute; top: 10%; left:40%" src="sites/all/themes/custom/domainedo/images/icons/youtubeArrow3.png" alt="" />'.
+                          '</a>'.
+                          $value->field_field_scald_image[0]['rendered']['#markup'].
+                          '</div>';
+                }
             }
 		
 	}
+  
 }
 /**
  * Implements hook_node_view_alter().
