@@ -48,7 +48,8 @@ function news_views_pre_render(&$view) {
                     $value->field_field_scald_image[0]['rendered']['#markup'] = '<a '.$href.'>'.$value->field_field_scald_image[0]['rendered']['#markup'].'</a>';
                 }
                 if(isset($value->field_field_news_only_video[0]['rendered']['#markup']) && $value->field_field_news_only_video[0]['rendered']['#markup']) {
-                  $path_alias = drupal_get_path_alias('node/'.$build['#node']->vid); 
+                 
+                  $path_alias = drupal_get_path_alias('node/'.$value->nid); 
                   $value->field_field_scald_image[0]['rendered']['#markup'] =  
                           '<div style="position:relative">'.
                           '<a href="'.$path_alias.'">'.
