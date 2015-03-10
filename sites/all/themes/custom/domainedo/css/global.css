@@ -1332,3 +1332,7 @@ body.not-front #region-content h2#h2-total{
   font-size: 1.6em;
   text-transform: uppercase;
 }
+fieldset > div > .webform-component-fieldset{
+  float: left;
+  margin-right:20px;
+}
