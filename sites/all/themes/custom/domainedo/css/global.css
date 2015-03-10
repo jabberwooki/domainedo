@@ -1323,3 +1323,6 @@ body.not-front #region-content h2#h2-total{
   padding: 0;
   border: 0;
 }
+#webform-component-total{
+  display: none;
+}
