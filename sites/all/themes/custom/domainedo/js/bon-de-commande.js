@@ -23,7 +23,7 @@ jQuery(function($) {
         console.log(res);
         console.log($( this ).val());
         total += ($( this ).val()*res);
-        $("#total").text(total);
+        $("#total").text(total+" €");
         $("#edit-submitted-total").val(total);
      
       }
