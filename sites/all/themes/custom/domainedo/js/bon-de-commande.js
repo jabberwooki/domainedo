@@ -17,7 +17,8 @@ jQuery(function($) {
         res = res.substring(4);
         total = ($( this ).val()*res)+"€";
         $("#total").text(total);
-        
+        $("#edit-submitted-total").val(total);
+     
       }
     }); //end each
   });
