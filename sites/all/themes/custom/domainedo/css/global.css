@@ -1326,3 +1326,9 @@ body.not-front #region-content h2#h2-total{
 #webform-component-total{
   display: none;
 }
+#webform-client-form-641 .fieldset-legend,
+#webform-client-form-610 .fieldset-legend{
+  font-weight: 700;
+  font-size: 1.6em;
+  text-transform: uppercase;
+}
