@@ -9,14 +9,20 @@ jQuery(function($) {
   var total = 0;
   $('<h2 id="h2-total">Total : <span id="total">0€</span></h2>').insertBefore('#edit-previous');//Insére le noeud #h2 avant le noeud # detail
   $( ".form-radio" ).change(function() {
+    total = 0;
     $( "input:checked" ).each(function( index ) {
+      
       var id = $(this).attr('id');
-      var res = (id.match(/eu-[^\.]/g));
-      console.log(res);
+      var res = (id.match(/euro[^\.]/g));
+      console.log(id);
       if(res){
+        console.log(res);
         res = res.toString();
-        res = res.substring(3);
-        total = ($( this ).val()*res)+"€";
+        console.log(res);
+        res = res.substring(4);
+        console.log(res);
+        console.log($( this ).val());
+        total += ($( this ).val()*res);
         $("#total").text(total);
         $("#edit-submitted-total").val(total);
      
