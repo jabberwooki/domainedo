@@ -6,7 +6,7 @@
 //alert("hello world !");
 jQuery(function($) {
   var total = 0;
-  $('<h2 id="h2-total" style="float:left">Total : <span id="total">0€</span></h2>').insertBefore('#edit-submit');//Insére le noeud #h2 avant le noeud # detail
+  $('<h2 id="h2-total">Total : <span id="total">0€</span></h2>').insertBefore('#edit-previous');//Insére le noeud #h2 avant le noeud # detail
   $( ".form-radio" ).change(function() {
     $( "input:checked" ).each(function( index ) {
       var id = $(this).attr('id');
