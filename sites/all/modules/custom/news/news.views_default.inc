@@ -519,6 +519,13 @@ function news_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '300',
   );
+  /* Field: Contenu: Vidéo seule */
+  $handler->display->display_options['fields']['field_news_only_video']['id'] = 'field_news_only_video';
+  $handler->display->display_options['fields']['field_news_only_video']['table'] = 'field_data_field_news_only_video';
+  $handler->display->display_options['fields']['field_news_only_video']['field'] = 'field_news_only_video';
+  $handler->display->display_options['fields']['field_news_only_video']['label'] = '';
+  $handler->display->display_options['fields']['field_news_only_video']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_news_only_video']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Contenu: Published */

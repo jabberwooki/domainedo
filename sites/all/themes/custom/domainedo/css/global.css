@@ -192,6 +192,7 @@ h2.h2-event a{
 }
 #node_news_zoom_group_event_summa_dates a{
     color: black;
+    text-decoration: none;
 }
 /* zone de recherche **********************************************************/
 #block-search-form{
@@ -506,11 +507,11 @@ body.front #block-views-evenements-block-1 .view-footer a{
 #node_show_zoom_group_summary_dates,
 #node_news_zoom_group_event_summa_dates{
     position : absolute;
-    bottom: 0px;
+    bottom: 15px;
     left: 0;
     background-color: #DED9D6;
     width : 300px;
-    opacity: 0.8;
+    opacity: 0.95;
     padding:10px;
 }
 .field-name-field-show-dates .field-items{
@@ -1308,4 +1309,30 @@ ul.group-ul-short-links > div.field-name-partage{
 }
 .pluginButton[title=like]{
   border: 3px solid blue;
+}
+/* Formulaire Réservation pro *************************************************/
+.form-type-radio{
+  float: left; 
+  margin-right: 10px;
+}
+.webform-component-radios label{
+  clear: both;
+}
+body.not-front #region-content h2#h2-total{
+  background-image: none;
+  padding: 0;
+  border: 0;
+}
+#webform-component-total{
+  display: none;
+}
+#webform-client-form-641 .fieldset-legend,
+#webform-client-form-610 .fieldset-legend{
+  font-weight: 700;
+  font-size: 1.6em;
+  text-transform: uppercase;
+}
+fieldset.webform-component-fieldset > div > .webform-component-fieldset{
+  float: left;
+  margin-left:20px;
 }

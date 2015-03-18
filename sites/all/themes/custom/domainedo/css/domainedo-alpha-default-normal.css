@@ -207,14 +207,22 @@ ul#superfish-2 li.sf-depth-1 a{
   position: absolute;
   bottom : 22px;
   background-color: #DED9D6;
-  opacity: 0.8;
+  opacity: 0.95;
   width: 301px;
+}
+.view-evenements.view-display-id-block_2  .views-row >.views-field-body > div{
+  padding: 0 5px 0 5px;
+}
+.view-evenements.view-display-id-block_2  .views-row >.views-field-body p{
+  margin-bottom: 10px;
 }
 .view-evenements.view-display-id-block_2  .views-row.views-row-1 >.views-field-body{
   width: 325px;
 }
 .view-evenements.view-display-id-block_2 div.more-link{
   margin-bottom : 20px;
+  position: relative;
+  top: 280px;
 }
 body.front #block-views-evenements-block-1 div.view-content .views-field-body {
     width: 47%;
