@@ -171,7 +171,13 @@ function domainedo_ticketoffice_form_show_node_form_alter(&$form, &$form_state, 
 		}
 	}
 	else {
-		$options = array('' => 'Billetterie indisponible');
+		// Important ! If the current show node was linked to a ticketoffice show, we must keep the corresponding id.
+		// Otherwise, saving node will make it unlinked.
+		$rsi_id = '';
+		if (!empty($form['#node']->field_rsi_id)) {//dpm($form['#node']->field_rsi_id);
+			$rsi_id = $form['#node']->field_rsi_id['und'][0]['value'];
+		}
+		$options = array($rsi_id => 'Billetterie indisponible...');
 	}
 	$form['field_rsi_id']['und']['#options'] = $options;
 	
