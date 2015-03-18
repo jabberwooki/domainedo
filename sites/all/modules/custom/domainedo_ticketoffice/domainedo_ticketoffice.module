@@ -1,0 +1,372 @@
+<?php
+/**
+ * @file
+ * Code for the Domaine d'O Ticket Office feature.
+ */
+
+include_once 'domainedo_ticketoffice.features.inc';
+
+/**
+ * Implements hook_permission().
+ */
+function domainedo_ticketoffice_permission() {
+	return array(
+			'administer rsi' => array(
+					'title' => t('Administer Ressource SI webservices'),
+					'description' => t('Administer webservices provided by RSI ticketing on-line platform.'),
+			),
+	);
+}
+
+/**
+ * Implements hook_menu().
+ */
+function domainedo_ticketoffice_menu() {
+	$items = array();
+
+	$items['admin/config/services/rsi'] = array(
+			'title' => 'RSI Webservices',
+			'description' => 'RSI webservices settings',
+			'page callback' => 'drupal_get_form',
+			'page arguments' => array('rsi_ws_settings_form'),
+			'access arguments' => array('administer rsi'),
+			'file' => 'domainedo_ticketoffice.admin.inc',
+			'type' => MENU_NORMAL_ITEM,
+	);
+
+	return $items;
+}
+
+/**
+ * Helper functions.
+ */
+
+/*
+ * Returns the list of all on sale shows
+ */
+function rsi_get_shows() {
+	$boxoffice_domain = rsi_get_domain();
+// 	if ($boxoffice_domain == '/') {
+// 		return t(
+// 				'RSI webservices are not set up yet. Go to <a href="@link">admin page</a> and set them up.',
+// 				array('@link' => url('admin/config/services/rsi')
+// 				)
+// 		);
+// 	}
+	$ws_list_name = variable_get('rsi_ws_show_list_name', '');
+	$credentials = rsi_ws_credentials();
+	$url = $boxoffice_domain . $ws_list_name . '?' . $credentials;
+	
+	try {
+		return rsi_get_ws_data('list', $url);
+	}
+	catch (Exception $e){
+		watchdog('rsi_ws', 'Webservice CATALOGUE SPECTACLES: %msg', array('%msg' => $e->getMessage()));
+		return FALSE;
+	}
+}
+
+function rsi_get_show($show_id) {
+	$boxoffice_domain = rsi_get_domain();
+	$ws_show_name = variable_get('rsi_ws_show_name', '');
+	$credentials = rsi_ws_credentials();
+	$url = $boxoffice_domain . $ws_show_name . '?' . $credentials . '&id_spectacle=' . $show_id;
+
+	try {
+		return rsi_get_ws_data('show', $url);
+	}
+	catch (Exception $e){
+		watchdog('rsi_ws', 'Webservice DÉTAIL D’UN SPECTACLE: %msg', array('%msg' => $e->getMessage()));
+		return FALSE;
+	}
+}
+
+function rsi_get_event($event_id) {
+	$boxoffice_domain = rsi_get_domain();
+	$ws_event_name = variable_get('rsi_ws_event_name', '');
+	$url = $boxoffice_domain . $ws_event_name . '?id_event=' . $event_id;
+
+	try {
+		return rsi_get_ws_data('event', $url);
+	}
+	catch (Exception $e){
+		watchdog('rsi_ws', 'Webservice DÉTAIL REPRÉSENTATION: %msg', array('%msg' => $e->getMessage()));
+		return FALSE;
+	}
+}
+
+function rsi_get_programmation() {
+	$boxoffice_domain = rsi_get_domain();
+	$ws_prog = variable_get('rsi_ws_prog', '');
+	$ws_login  = variable_get('rsi_login', '');
+	$ws_pass = variable_get('rsi_pass', '');
+	$ws_client = variable_get('rsi_client', '');
+	$url = $boxoffice_domain . $ws_prog . '?x_rsi_ws_login=' . $ws_login . '&x_rsi_ws_mdp=' . $ws_pass . '&x_rsi_client=' . $ws_client;
+
+	try {
+		return rsi_get_ws_data('prog', $url);
+	}
+	catch (Exception $e){
+		watchdog('rsi_ws', 'Webservice PROGRAMMATION: %msg', array('%msg' => $e->getMessage()));
+		return FALSE;
+	}
+}
+
+function rsi_get_ws_data($type, $url) {
+	$response = drupal_http_request($url);
+	if (isset($response->error)) {
+		$msg = 'error=' . $response->error . ', code=' . $response->code 
+			. ', redirect_code=' . $response->redirect_code . ', redirect_url=' . $response->redirect_url;
+		throw new Exception($msg);
+	}
+	
+	$data = new SimpleXMLElement($response->data);
+	$data = drupal_json_decode(drupal_json_encode($data));
+	if (isset($data['ERREUR'])) {
+		throw new Exception($data['ERREUR']['MESSAGE']);
+	}
+	
+	switch ($type) {
+		case 'list':
+			return $data['SPECTACLES']['SPECTACLE'];
+			break;
+		default:
+			return $data;
+	}
+}
+
+function rsi_ws_credentials () {
+	$ws_login  = variable_get('rsi_login', '');
+	$ws_pass = variable_get('rsi_pass', '');
+	$ws_client = variable_get('rsi_client', '');
+
+	return 'x_rsi_ws_login=' . $ws_login . '&x_rsi_ws_mdp=' . $ws_pass . '&x_rsi_client=' . $ws_client;
+}
+
+function rsi_get_domain() {
+	$domain = variable_get('rsi_ws_url', '');
+	if ($domain{strlen($domain) -1} != '/') {
+		return $domain . '/';
+	}
+	return $domain;
+}
+
+function rsi_popup_dimensions() {
+	$width = variable_get('rsi_popup_width', '');
+	$height = variable_get('rsi_popup_height', '');
+	return array('width' => $width, 'height' => $height);
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function domainedo_ticketoffice_form_show_node_form_alter(&$form, &$form_state, $form_id) {
+	// Prepares the Ticket Office shows select field.
+
+	if ($shows = rsi_get_shows()) {
+		$options = array('' => 'Sélectionner un spectacle');
+		foreach($shows as $show) {
+			$rsi_id = $show['@attributes']['IDENT']%10000000;
+			$options[$rsi_id] = $show['@attributes']['NOM'] . ' [' . $rsi_id . ']';
+		}
+	}
+	else {
+		// Important ! If the current show node was linked to a ticketoffice show, we must keep the corresponding id.
+		// Otherwise, saving node will make it unlinked.
+		$rsi_id = '';
+		if (!empty($form['#node']->field_rsi_id)) {//dpm($form['#node']->field_rsi_id);
+			$rsi_id = $form['#node']->field_rsi_id['und'][0]['value'];
+		}
+		$options = array($rsi_id => 'Billetterie indisponible...');
+	}
+	$form['field_rsi_id']['und']['#options'] = $options;
+	
+	if (isset($form['#node']->field_rsi_id) && !empty($form['#node']->field_rsi_id)) {
+		$form['field_rsi_id']['und']['#default_value'] = $form['#node']->field_rsi_id['und'][0]['value'];
+	}
+	drupal_add_js(drupal_get_path('module', 'domainedo_ticketoffice') . '/js/ticketoffice.js', 'file');
+}
+	
+/**
+ * Implements hook_node_presave().
+ */
+function domainedo_ticketoffice_node_presave($node) {
+	if ($node->type == 'show') {
+		if (isset($node->field_rsi_id['und'][0]['value'])) {
+			$id_spectacle = $node->field_rsi_id['und'][0]['value'];
+			//$popup = rsi_popup_dimensions();
+			$boxoffice_domain = rsi_get_domain();
+			//$url = $boxoffice_domain . 'spectacle?id_spectacle=' . $id_spectacle . '&width=' . $popup['width'] . '&height=' . $popup['height'] . '&iframe=true';
+			$url = $boxoffice_domain . 'spectacle?id_spectacle=' . $id_spectacle;
+			$node->field_boxoffice_url['und'][0]['url'] = $url;
+		}
+		else {
+			$node->field_boxoffice_url['und'][0]['url'] = '';
+		}
+	}
+}
+
+/**
+ * Implements hook_node_view().
+ */
+function domainedo_ticketoffice_node_view($node, $view_mode, $langcode) {
+	if ($node->type == 'show' && $view_mode == 'full') {
+		$resa = $node->content['field_reservation']['#items'][0]['value']; // prochainement=1, url billetterie=2, complet=3, annulé=4, passé=5 ... + indisponible=6
+		
+		if (isset($node->field_rsi_id['und'][0]['value'])) { // Si le spectacle Drupal a été associé au spectacle Billetterie
+			// Fetch show events
+			// Case 1 - Ticketoffice online
+			if ($show_details = rsi_get_show($node->field_rsi_id['und'][0]['value'])) {
+				$events = $show_details['SPECTACLES']['SPECTACLE']['REPRESENTATIONS']['REPRESENTATION'];
+					
+				// Wraps event dates with a span whose class depends on event avaibility.
+				$dates_number = sizeof($node->content['field_show_dates']['#items']);
+				$coming_dates = sizeof($events);
+				$full = TRUE;
+					
+				// Only one event. Obviously, it's a coming event otherwise it won't be displayed.
+				if ($coming_dates == 1) {
+					if ($events['@attributes']['REP_DISPO'] == 0) {
+						$class = 'sold-out-event';
+					}
+					else {
+						$class = 'on-sale-event';
+						$full = FALSE;
+					}
+					$node->content['field_show_dates'][0]['#markup'] = '<span class="' . $class . '">' . $node->content['field_show_dates'][0]['#markup'] . '</span>';
+				}
+				// Several events. Some might be coming events, some other in the past.
+				else {
+					$past_dates = $dates_number - $coming_dates;
+					// past events
+					for ($key=0; $key < $past_dates; $key++) {
+						$node->content['field_show_dates'][$key]['#markup'] = '<span class="past-event">' . $node->content['field_show_dates'][$key]['#markup'] . '</span>';
+					}
+				
+				
+					// coming events
+					for ($key=$past_dates; $key < $dates_number; $key++) {
+						//$events[$key]['@attributes']['REP_DISPO'] = 0; // Ligne à conserver pour tester le passage à 'complet'.
+						if ($events[$key-$past_dates]['@attributes']['REP_DISPO'] == 0) {
+							$class = 'sold-out-event';
+						}
+						else {
+							$class = 'on-sale-event';
+							$full = FALSE;
+						}
+						$node->content['field_show_dates'][$key]['#markup'] = '<span class="' . $class . '">' . $node->content['field_show_dates'][$key]['#markup'] . '</span>';
+					}
+				}
+					
+				// If $full=TRUE and show is neither cancelled (4) nor over (5), we must display it being full.
+				if ($resa == 2 && $full) {
+					$node->content['field_reservation']['#items'][0]['value'] = 3;
+				}
+			}
+			// Case 2 - Ticketoffice offline
+			else {
+				// If show is on sale (we dont mind the other reservation statuses)
+				if ($resa == 2) {
+					$node->content['field_reservation']['#items'][0]['value'] = 6; // offline status
+				}
+			}
+		}
+		else { // Si pas encore associé, on ne doit pas afficher le bouton "Réserver", donc on passe le statut resa à 1.
+			if ($resa == 2) {
+				$node->content['field_reservation']['#items'][0]['value'] = 1;
+			}
+		}
+	}
+}
+
+/**
+ * Implements hook_node_view_alter().
+ */
+function domainedo_ticketoffice_node_view_alter(&$build) {
+	if ($build['#bundle'] == 'show' && $build['#view_mode'] == 'full') {
+		if (isset($build['field_boxoffice_url'][0]['#element']['url'])) {
+			$onclick_action = "_gaq.push(['_trackEvent', 'reserver', 'click', '" . $build['field_festival'][0]['#markup'] . "']);";
+			$build['field_boxoffice_url'][0]['#element']['attributes']['onClick'] = $onclick_action;
+			$popup = rsi_popup_dimensions();
+			$build['field_boxoffice_url'][0]['#element']['url'] = $build['field_boxoffice_url'][0]['#element']['url'] 
+				. '&width=' . $popup['width'] 
+				. '&height=' . $popup['height']
+				. '&iframe=true';
+		}
+	}
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function domainedo_ticketoffice_block_info() {
+	$blocks = array();
+
+	$blocks['rsi_ws_user_links'] = array(
+			'info' => t('Ressources SI - User links'),
+			'cache' => DRUPAL_NO_CACHE,
+	);
+	$blocks['rsi_ws_ts'] = array(
+			'info' => t('Ressources SI - Terms of sale'),
+			'cache' => DRUPAL_NO_CACHE,
+	);
+	return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function domainedo_ticketoffice_block_view($delta = '') {
+	switch ($delta) {
+		case 'rsi_ws_user_links':
+			$block['subject'] = '';
+			$url = rsi_get_domain();
+			$credentials = rsi_ws_credentials();
+			$popup = rsi_popup_dimensions();
+			
+			// Account link
+			$account_url = $url . 'account_home?' . $credentials . '&lng=1&width=' . $popup['width'] . '&height=' . $popup['height']	. '&iframe=true';
+			$items[] = l(t('My account'), $account_url, array('attributes' => array('class' => array('colorbox-load'))));
+			
+			// Subscription link
+			if ($prog = rsi_get_programmation()) {
+				$ident = $prog['ABONNEMENTS']['ABONNEMENT']['@attributes']['IDENT'];
+				$subscription_url = $url . 'abonnement?' . $credentials . '&lng=1&id_abonnement=' . $ident . '&width=' . $popup['width'] . '&height=' . $popup['height']	. '&iframe=true';
+				$items[] = l(t('Subscription'), $subscription_url, array('attributes' => array('class' => array('colorbox-load'))));
+			}
+			
+			// Basket link
+			$basket_url = $url . 'basket?' . $credentials . '&lng=1&width=' . $popup['width'] . '&height=' . $popup['height']	. '&iframe=true';
+			$items[] = l(t('My basket'), $basket_url, array('attributes' => array('class' => array('colorbox-load'))));
+			
+			// CGU link
+			//$terms_url = $url . 'conditions_gene?' . $credentials . '&lng=1&width=' . $popup['width'] . '&height=' . $popup['height']	. '&iframe=true';
+			//$items[] = l(t('Terms of use'), $terms_url, array('attributes' => array('class' => array('colorbox-load'))));
+
+			$variables = array(
+					'items' => $items,
+					'type' => 'ul',
+					'attributes' => array('class' => 'user-links inline'),
+			);
+			
+			$block['content'] = theme('item_list', $variables);
+			return $block;
+			break;
+			
+		case 'rsi_ws_ts':
+			$block['subject'] = '';
+				
+			$url = variable_get('rsi_ws_url', '/');
+			$url .= 'conditions_gene?lng=1&width=1000&height=800&iframe=true';
+			$items[] = l(t('Terms of use'), $url, array('attributes' => array('class' => array('colorbox-load'))));
+			$variables = array(
+					'items' => $items,
+					'type' => 'ul',
+					'attributes' => array('class' => 'menu nav terms-of-sale'),
+			);
+			$block['content'] = theme('item_list', $variables);
+			return $block;
+	}
+}
+
+drupal_add_css(drupal_get_path('module', 'domainedo_ticketoffice') . '/css/ticketoffice.css', array('group' => CSS_DEFAULT, 'type' => 'file'));

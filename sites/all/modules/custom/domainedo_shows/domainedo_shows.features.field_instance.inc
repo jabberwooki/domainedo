@@ -969,7 +969,7 @@ function domainedo_shows_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 15,
+      'weight' => 14,
     ),
   );
 
@@ -1049,7 +1049,7 @@ function domainedo_shows_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 25,
+      'weight' => 24,
     ),
   );
 
@@ -1201,7 +1201,7 @@ function domainedo_shows_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'attributes' => array(
-        'class' => '',
+        'class' => 'colorbox-load',
         'configurable_title' => 0,
         'rel' => '',
         'target' => '_blank',
@@ -1224,7 +1224,7 @@ function domainedo_shows_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 28,
+      'weight' => 27,
     ),
   );
 
@@ -1306,7 +1306,7 @@ function domainedo_shows_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 9,
+      'weight' => 8,
     ),
   );
 
@@ -1386,7 +1386,7 @@ function domainedo_shows_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 16,
+      'weight' => 15,
     ),
   );
 
@@ -1551,7 +1551,7 @@ function domainedo_shows_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 27,
+      'weight' => 28,
     ),
   );
 
@@ -1716,7 +1716,7 @@ function domainedo_shows_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 18,
+      'weight' => 17,
     ),
   );
 
@@ -1796,7 +1796,7 @@ function domainedo_shows_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 20,
+      'weight' => 19,
     ),
   );
 
@@ -1870,7 +1870,7 @@ function domainedo_shows_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 23,
+      'weight' => 22,
     ),
   );
 
@@ -1953,7 +1953,7 @@ function domainedo_shows_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 7,
+      'weight' => 6,
     ),
   );
 
@@ -2033,7 +2033,7 @@ function domainedo_shows_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 8,
+      'weight' => 7,
     ),
   );
 
@@ -2197,7 +2197,7 @@ function domainedo_shows_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 5,
+      'weight' => 4,
     ),
   );
 
@@ -2237,7 +2237,7 @@ function domainedo_shows_field_default_field_instances() {
           'view_mode' => 'liste_aussi',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 30,
+        'weight' => 31,
       ),
       'list' => array(
         'label' => 'above',
@@ -2280,7 +2280,7 @@ function domainedo_shows_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete_tags',
-      'weight' => 38,
+      'weight' => 39,
     ),
   );
 
@@ -2354,7 +2354,7 @@ function domainedo_shows_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 6,
+      'weight' => 5,
     ),
   );
 
@@ -2442,7 +2442,94 @@ function domainedo_shows_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 21,
+      'weight' => 20,
+    ),
+  );
+
+  // Exported field_instance: 'node-show-field_offline'
+  $field_instances['node-show-field_offline'] = array(
+    'bundle' => 'show',
+    'default_value' => array(
+      0 => array(
+        'value' => '<p>Billetterie momentanément indisponible. Veuillez recharger la page.</p>
+',
+        'format' => 'full_html',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 41,
+      ),
+      'frontpage_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'frontpage_block_mobile' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 28,
+      ),
+      'list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'liste_aussi' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'zoom' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_offline',
+    'label' => 'Billetterie indisponible',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'debug',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 31,
     ),
   );
 
@@ -2522,7 +2609,7 @@ function domainedo_shows_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 19,
+      'weight' => 18,
     ),
   );
 
@@ -2686,7 +2773,7 @@ function domainedo_shows_field_default_field_instances() {
         'size' => 255,
       ),
       'type' => 'text_textfield',
-      'weight' => 22,
+      'weight' => 21,
     ),
   );
 
@@ -2766,7 +2853,7 @@ function domainedo_shows_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 17,
+      'weight' => 16,
     ),
   );
 
@@ -2804,7 +2891,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 42,
+        'weight' => 44,
       ),
       'list' => array(
         'label' => 'hidden',
@@ -2845,7 +2932,7 @@ function domainedo_shows_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 12,
+      'weight' => 11,
     ),
   );
 
@@ -3084,7 +3171,7 @@ function domainedo_shows_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 26,
+      'weight' => 25,
     ),
   );
 
@@ -3169,7 +3256,80 @@ function domainedo_shows_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 24,
+      'weight' => 23,
+    ),
+  );
+
+  // Exported field_instance: 'node-show-field_rsi_id'
+  $field_instances['node-show-field_rsi_id'] = array(
+    'bundle' => 'show',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 40,
+      ),
+      'frontpage_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'frontpage_block_mobile' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 40,
+      ),
+      'list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'liste_aussi' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'zoom' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_rsi_id',
+    'label' => 'Identifiant billetterie',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 26,
     ),
   );
 
@@ -3257,7 +3417,7 @@ function domainedo_shows_field_default_field_instances() {
         'context' => 'sdl_editor_representation',
       ),
       'type' => 'atom_reference_textfield',
-      'weight' => 31,
+      'weight' => 32,
     ),
   );
 
@@ -3343,7 +3503,7 @@ function domainedo_shows_field_default_field_instances() {
         'context' => 'petit_100',
       ),
       'type' => 'atom_reference_textfield',
-      'weight' => 11,
+      'weight' => 10,
     ),
   );
 
@@ -3431,7 +3591,7 @@ function domainedo_shows_field_default_field_instances() {
         'context' => 'sdl_editor_representation',
       ),
       'type' => 'atom_reference_textfield',
-      'weight' => 33,
+      'weight' => 34,
     ),
   );
 
@@ -3517,7 +3677,7 @@ function domainedo_shows_field_default_field_instances() {
         'context' => 'sdl_editor_representation',
       ),
       'type' => 'atom_reference_textfield',
-      'weight' => 32,
+      'weight' => 33,
     ),
   );
 
@@ -3648,7 +3808,7 @@ function domainedo_shows_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 14,
+      'weight' => 13,
     ),
   );
 
@@ -3682,7 +3842,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 40,
+        'weight' => 42,
       ),
       'list' => array(
         'label' => 'hidden',
@@ -3929,7 +4089,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 41,
+        'weight' => 43,
       ),
       'list' => array(
         'label' => 'hidden',
@@ -3987,7 +4147,7 @@ function domainedo_shows_field_default_field_instances() {
         'context' => 'petit_100',
       ),
       'type' => 'atom_reference_textfield',
-      'weight' => 10,
+      'weight' => 9,
     ),
   );
 
@@ -4109,7 +4269,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 43,
+        'weight' => 45,
       ),
       'list' => array(
         'label' => 'hidden',
@@ -4150,7 +4310,7 @@ function domainedo_shows_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 13,
+      'weight' => 12,
     ),
   );
 
@@ -5068,6 +5228,7 @@ function domainedo_shows_field_default_field_instances() {
   t('A partir de');
   t('Affiche du festival');
   t('Artiste associé');
+  t('Billetterie indisponible');
   t('Calendrier/Archive');
   t('Coproducteurs');
   t('Date(s)');
@@ -5079,6 +5240,7 @@ function domainedo_shows_field_default_field_instances() {
   t('Festival');
   t('Galerie');
   t('Géolocalisation');
+  t('Identifiant billetterie');
   t('Image');
   t('Image en surimpression');
   t('Image en surimpression.');
