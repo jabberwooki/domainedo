@@ -1,0 +1,26 @@
+@CHARSET "UTF-8";
+
+.region-inner {
+	padding-top: 10px;
+}
+#block-domainedo-ticketoffice-rsi-ws-user-links ul {
+	float: right;
+}
+#block-domainedo-ticketoffice-rsi-ws-user-links a,
+#block-domainedo-ticketoffice-rsi-ws-ts a {
+  text-decoration: none;
+  color: #272727;
+  font-family: lato,arial;
+}
+#edit-field-boxoffice-url-und-0-url {
+   color: eee;
+   font-style: italic;
+   border: none;
+}
+.past-event {
+}
+.on-sale-event {
+	
+}
+.sold-out-event {
+}

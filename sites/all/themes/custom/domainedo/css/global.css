@@ -1,0 +1,1338 @@
+/* This file will hold styles for the mobile version of your website (mobile first). */
+/* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
+#logos-top h1{
+    float : left;
+    font-size :0.8077em; /* 9/16 */
+    font-family:arial;
+    margin : 7px 2% 0 0;
+           
+}
+#logos-top h1 span{
+    padding-left:18px;
+}
+body.not-front #region-content .block-right-shows-infos h2{
+    display:none;
+}
+.link_calendar{
+    background: url("../images/icons/calendar-small.png") no-repeat 0 0;
+    padding-left: 25px;
+    margin-left:0px;
+    display : block;
+    color : #C20003;
+}
+.bg-white, .fond-blanc{
+  background-color: white;
+}
+.fond-rouge{
+  background-color : #C10000;
+}
+.fond-rouge:hover{
+  background-color : #ee3c3c;
+}
+.blanc{
+  color:white;
+}
+.blanc.fond-rouge a{
+  color: white;
+}
+.gras{
+  font-weight: bold;
+}
+.grand{
+  font-size: 1.3em;
+}
+.padding-5{
+  padding:5px;
+}
+.centrer, .center{
+  text-align: center;
+}
+blockquote{
+  border-left: 5px solid #CCCCCC;
+  margin-left: 5%;
+  padding-left:2.5%; 
+  padding-right:2.5%; 
+  font-family: "Times New Roman", serif;
+  font-style: italic;
+  color: #333333;
+  font-size: 1.2em;
+}
+h3.medium{
+  font-size:1.6em;
+}
+h1, h2, h3, h4,h5,h6,h7{
+  font-family : lato,arial;
+}
+/*liens ***********************************************************************/
+a.location{
+     background: url(../images/icons/location_wide.gif) no-repeat 0 4px;
+     display : block;
+     padding-left : 20px;
+}
+a.location:hover{
+     background: url(../images/icons/location_wide.gif) no-repeat 0 110%;
+     color : #c10000;
+}
+div.field-name-link-shows{
+  float: left;
+  margin-right: 20px;
+}
+a.localisation, a.video, a.tram{
+  display: block;
+  height: 40px;
+  padding-left: 50px;
+  margin-bottom: 10px;
+}
+a.localisation{
+  background: #F5F5F5 url("../images/icons/location-show-full-page.png") no-repeat scroll 5px 5px;
+}
+a.video{
+  background: #F5F5F5 url("../images/icons/video-location.png") no-repeat scroll 5px 5px;
+}
+a.tram{
+  background: #F5F5F5 url("../images/icons/montpellier-tramway.png") no-repeat scroll 5px 5px;
+}
+/* images *********************************************************************/
+img{
+  max-width: 100%;
+}
+.atom-align-right, .droite{
+  float:right;
+  margin : 0 0 0 20px;
+}
+.field-name-field-festival-poster img{
+  max-width:300px;
+}
+.atom-align-right img,.atom-align-left img, img.gauche, img.droite{
+  border-radius : 8px;
+}
+.atom-align-left, .gauche{
+  float:left;
+  margin : 0 20px 0 0;
+}
+/*tableaux ********************************************************************/
+td{
+  border-bottom: 1px solid #ccc;
+  padding-left: 10px;
+  border-left : 1px solid #ccc;
+}
+/* titres **********************************************************************/
+.block-menu a, h2 a, h3 a, h2, h3{
+    font-family: lato,arial;
+}
+h3{
+  margin-bottom : 10px;
+}
+h3.souligne{
+  border-bottom : 1px solid #C20000;
+}
+h3.gauche{
+  border : 0;
+}
+h3 a.ancre{
+  display :block;
+  background: url("../images/icons/bg_dates_show_home_SP.png") no-repeat 0 50%;
+  padding-left : 12px;
+  font-size: 0.8em;
+}
+h3.gauche.first{
+  margin : 0;
+}
+
+/* listes *********************************************************************/
+#region-content div.content ul li{
+  margin-left: 10px;
+  list-style-position: outside;
+}
+
+/* Eléments invisibles ********************************************************/
+#block-boxes-social-network h2,
+#block-search-form h2,
+.block-superfish h2,
+#block-menu-menu-top-courtesy-nav h2,
+#block-menu-menu-contact h2,
+#block-views-shows-block-1 h2,
+#block-menu-menu-shows-menu h2,
+#address-bottom h2,
+#block-menu-menu-practicle-menu h2,
+#block-menu-menu-bottom-courtesy h2,
+.block-domainedo-breadcrumb h2,
+#block-menu-block-domainedo-shows-tab-menu h2,
+div.reservation-status-1,div.reservation-status-2,div.reservation-status-3,div.reservation-status-5,
+.block-shows-block-2 .field-name-scald-authors{
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+}
+label br{
+    display:none;
+}
+/* Home page ******************************************************************/
+h2.h2-event{
+  float:left;
+  width:590px;
+  background-color : #EBE9EA; 
+  font-family: Lato, arial;
+  margin-left: 0;
+  margin-top: 20px;
+}
+h2.h2-event a{
+  text-decoration : none; 
+  color : black;
+  padding-left : 40px;
+  background : url(../images/icons/arrow-home-event.png) no-repeat 0 0;
+  display:block;
+  line-height: 40px;
+}
+/* Lien vers les événements ***************************************************/
+#block-boxes-event-home-title{
+  float: left;
+  clear: both;
+}
+#node_news_zoom_group_event_summa_dates a{
+    color: black;
+    text-decoration: none;
+}
+/* zone de recherche **********************************************************/
+#block-search-form{
+    float:right;
+    margin-top : 20px;
+}
+#block-search-form input{
+    border : 1px solid #ebe9ea;
+}
+#block-search-form div.container-inline{
+    background-color : #ebe9ea;
+}
+#block-search-form input.form-text{
+    width : 146px
+}
+
+#block-search-form .form-submit{
+    width : 28px;
+    text-indent: -6000px;
+    height : 25px;
+    background: url(../images/icons/search_submit.gif) no-repeat 0 0;
+    margin : 0;
+    border : 0;
+    border-radius : 0;
+}
+#block-search-form #edit-submit:hover{
+    background: url(../images/icons/search_submit.gif) no-repeat 0 100%;
+}
+/* menu contact ***************************************************************/
+#block-menu-menu-contact ul{
+    padding:0;
+    margin:0;
+}
+#block-menu-menu-contact ul li{
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+#block-menu-menu-contact ul li a{
+    color:black;
+    text-transform: uppercase;
+}
+h2{
+    font-family: lato,arial;
+}
+h2#page-title{
+    margin-top: 15px;
+    border-bottom : 1px solid black;
+}
+.field-name-field-show-dates .field-items{
+    max-height : 39px;
+    overflow-y: auto;
+    text-align: left;
+    padding-right : 5px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+#node_show_zoom_group_summary_dates .field-name-field-show-dates .field-items{
+    width:60%;
+}
+.group-left .field-name-field-show-dates .field-items{
+    display: inline-block;
+    min-width: 70%;
+}
+
+.group-left .field-name-field-show-dates .field-items::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.group-left .field-name-field-show-dates .field-items::-webkit-scrollbar:vertical {
+    width: 14px;
+}
+
+.group-left .field-name-field-show-dates .field-items::-webkit-scrollbar:horizontal {
+    height: 0;
+}
+
+.group-left .field-name-field-show-dates .field-items::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    border: 1px solid #FFFFFF; /* should match background, can't be transparent */
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.group-left .field-name-field-show-dates .field-items::-webkit-scrollbar-track { 
+    background-color: #FFFFFF; 
+    border-radius: 5px; 
+} 
+
+
+.field-name-field-show-dates .field-items .date-display-single{
+  white-space: nowrap;
+}
+.number_show_dates{
+    color: #C20000;
+    font-weight: bold;
+    text-transform:uppercase;
+    text-align: left;
+}
+.view-shows .group-left{
+    position : relative;
+}
+#node_show_full_group_psr,body.node-type-festival .ds-2col-stacked-fluid.node-show div.group-left{
+  position  : relative;
+}
+.view-shows .reservation-status-4,#node_show_frontpage_block_group_vsr .reservation-status-4,
+#node_show_full_group_psr .reservation-status-4,.ds-2col-stacked-fluid.node-show .reservation-status-4{
+    position: absolute;
+    top : 0;
+    left : 0;
+    width: 240px;
+    height : 57px;
+    background: url("../images/icons/canceled.png") no-repeat 0 0;
+    text-indent: -2000px;
+}
+.node-type-festival .field-name-field-festival-poster{
+  float: right;
+}
+#block-system-main ul.pager{
+    margin-bottom : 20px;
+}
+#block-system-main ul.pager li a{
+    display :block;
+    padding : 3px 10px;
+    width: auto;
+}
+#block-system-main ul.pager li.date-next a{
+    margin-top:-14px
+}
+.pager li.pager-next{
+    width: 90px;
+}
+.field-name-scald-authors .field-item, .type-image .meta, .dnd-legend-wrapper{
+  text-align: right;
+  font-size: 0.8em;
+}
+/* Sprite *********************************************************************/
+
+.region-header-second .sprite {
+    background-image: url(../images/wide/sprite-social.png);
+    background-repeat: no-repeat;
+    display: block;
+    float : left;
+    margin : 0 5px 0 0;
+}
+.region-header-second .sprite a{
+    display:block;
+    text-indent:-6000px;
+    width : 100%;
+    height: 100%;
+}
+
+.region-header-second .sprite-facebook {
+    width: 25px;
+    height: 25px;
+    background-position: -5px -5px;
+}
+.region-header-second .sprite-facebook:hover {
+    background-position: -5px -69px;
+}
+
+.region-header-second .sprite-tripadvisor {
+    width: 25px;
+    height: 25px;
+    background-position: -5px -38px;
+}
+.region-header-second .sprite-tripadvisor:hover {
+    background-position: -5px -102px;
+}
+
+.region-header-second .sprite-twitter {
+    width: 25px;
+    height: 25px;
+    background-position: -40px -5px;
+}
+.region-header-second .sprite-twitter:hover {
+    background-position: -40px -69px;
+}
+
+.region-header-second .sprite-youtube {
+    width: 25px;
+    height: 25px;
+    background-position: -40px -38px;
+}
+.region-header-second .sprite-youtube:hover {
+    background-position: -40px -102px;
+}
+/* info flash *****************************************************************/
+body.front #block-views-evenements-block-1{
+  height  : 76px;
+  margin-bottom: 5px;
+  /*overflow: hidden;*/
+  /*background : #F5F3F4 url(../images/icons/bg_flash.png) no-repeat 0 0;*/
+}
+body.front #block-views-evenements-block-1 div.view-content{
+  width:90%
+}
+body.front #block-views-evenements-block-1 div.view-content a{
+  color: #B20002;
+}
+body.front #block-views-evenements-block-1 div.view-content .views-field-title{
+  width:50%;
+  float: left;
+}
+body.front #block-views-evenements-block-1 div.view-content .views-field-title a{
+    text-decoration: none;
+}
+body.front #block-views-evenements-block-1 div.view-content .views-field-body{
+  width:45%;
+  float: left;
+  padding-left: 2%;
+}
+
+body.front #block-views-evenements-block-1 div.view-footer{
+  width:10%
+}
+body.front #block-views-evenements-block-1 h2{
+    height: 63px;
+  padding-left: 0;
+  margin: 7px 0 10px 0;
+  word-wrap: break-word;
+  color: #B20002;
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 1.2em;
+  text-decoration: none;
+  border-right: 1px solid black;
+  padding-right: 3%;
+}
+
+body.front #block-views-evenements-block-1 .field-content p{
+  padding: 0 ;
+  margin: 7px 0;
+  font-weight: bold;
+  font-size:0.8em;
+  height:63px;
+  border-right: 1px solid black;
+  text-align: center;
+}
+body.front #block-views-evenements-block-1 .view-footer{
+  float:right;
+}
+body.front #block-views-evenements-block-1 .view-footer a{
+  font-size: 0.8em;
+  display:block;
+  height: 63px;
+  color : black;
+  background : url(../images/icons/plus_black.png) no-repeat 50% 70%;
+  padding: 0 10px 0 0 ;
+  width: 22px;
+  text-indent: -6000px;
+
+}
+
+
+/*footer ******************************************************************/
+#footer-bottom{
+    background: #f5f3f4 url(../images/icons/background_footer.png) no-repeat 56% 0;
+    padding : 10px;
+    border-bottom : 1px solid black;
+    height: 56px;
+    margin:0;
+}
+#address-bottom{
+    float : left;
+    width: 62%;
+}
+#partner-text{
+    float : left;
+    width: 25%;
+}
+#partner-images{
+    float : right;
+    width: 11%;
+}
+#partner-images img{
+    margin-left:3px;
+}
+
+/* Page d'accueil *************************************************************/
+/* Zoom ***********************************************************************/
+#block-views-zoom-block{
+    width : 100%;
+    position : relative;
+    margin-bottom : 20px;
+}
+#block-views-zoom-block h2{
+    background: url(../images/icons/arrow_orange_yellow.png) no-repeat 0 0;
+    height:34px;
+    border-bottom : 1px solid black;
+    font-family: Lato,arial;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: right;
+    padding-top:13px;
+    font-weight: bold;
+    font-size :1.8em;
+}
+#block-views-zoom-block p{
+    margin:5px 0;
+}
+
+#block-views-zoom-block h3{
+    margin : 8px 0 9px 0;
+}
+#block-views-zoom-block h3 a{
+    font-family: lato, arial;
+    text-decoration: none;
+    color: #000000;
+    text-transform: uppercase;
+    display: block;
+}
+#node_show_zoom_group_summary_dates,
+#node_news_zoom_group_event_summa_dates{
+    position : absolute;
+    bottom: 15px;
+    left: 0;
+    background-color: #DED9D6;
+    width : 300px;
+    opacity: 0.95;
+    padding:10px;
+}
+.field-name-field-show-dates .field-items{
+    max-height : 40px;
+    padding-right : 5px;
+    margin-bottom: 0;
+    display: inline-block;
+}
+#node_show_zoom_group_summary_dates .field-name-field-show-dates .field-items{
+    width:90%;
+}
+.field-name-field-show-dates .field-items .field-item{
+    float : left;
+    padding: 0 10px;
+}
+.view-id-zoom .field-name-scald-authors{
+  display:none;
+}
+
+/* Menu de commodité haut *****************************************************/
+#region-header-second #block-menu-menu-top-courtesy-nav{
+    float:right;
+    margin : 6px 0 0 0;
+}
+#region-header-second #block-menu-menu-top-courtesy-nav ul li{
+    float:left;
+    list-style: none;
+}
+#region-header-second #block-menu-menu-top-courtesy-nav ul li a{
+    text-decoration: none;
+    color : #272727;
+    border-left: 1px solid #757575;
+    display : block;
+    padding : 0 7px;
+}
+#region-header-second #block-menu-menu-top-courtesy-nav ul li.last{
+    padding-right : 0;
+}
+
+#region-header-second #block-menu-menu-top-courtesy-nav ul li.last a{
+    padding : 0 0 0 7px;
+    
+}
+
+/* Menu en select *************************************************************/
+#superfish-1-select{
+  position : relative;
+  top :0px;
+  left  : -70px;
+  margin-top :10px;
+}
+#superfish-2-select{
+  position : relative;
+  top :-22px;
+  left  : 140px;
+}
+/* Liste tous les spectacles **************************************************/
+.view-display-id-list .field-name-field-festival {
+position: relative;
+top: -40px;
+text-align: center;
+background: white;
+opacity: 0.8;
+}
+.view-display-id-list div.odd .field-name-field-festival {
+top: -30px;
+}
+.search-show-on{
+  background: #F5F5F5 url(../images/icons/arrow_menu_bottom-right.png) no-repeat 80% 50%;
+}
+.search-show-off{
+  background: #F5F5F5 url(../images/icons/arrow_menu_bottom-right.png) no-repeat 80% 50%;
+}
+
+/* Liste des spectacles en page d'accueil du mobile ****************************/
+
+.block-shows-block-2 div.views-row-even div.node-show{/*première colonne*/
+  margin-left: 1%;
+  position : relative;
+}
+/*.block-shows-block-2 div.views-row-odd :after{/*deuxième colonne
+  content:"";
+  display:block;
+  clear:both;
+}*/
+.block-shows-block-2 div.views-row-odd div.node-show{
+  margin-right: 1%;
+  position : relative;
+}
+.block-shows-block-2 div div.node-show h3{
+  margin-bottom :5px;
+  padding : 0 5px;
+}
+.block-shows-block-2 div div.node-show h3 a{
+  text-decoration: none;
+  color: #323033;
+  font-size: 0.85em;
+}
+.block-shows-block-2 h2.block-title{
+  line-height : 22px;
+  background: url("../images/icons/bg_h2_show_home_SP.png") no-repeat 0 0;
+  border-bottom: 3px solid black;
+  padding-left: 45px;
+}
+.block-shows-block-2 .views-row{
+  max-width: 50%;
+  float:left;
+  margin: 10px 0 10px 0;
+}
+
+.block-shows-block-2 .views-row .field-name-title{
+  position:absolute;
+  bottom  :0;
+  background-color: #EBEAEA;
+  opacity: 0.8;
+  width: 100%;
+}
+.block-shows-block-2 .field-name-field-show-dates{
+  height  :15px;
+  overflow: hidden;
+  background: url("../images/icons/bg_dates_show_home_SP.png") no-repeat 0 0;
+  padding-left:12px;
+}
+
+ .block-shows-block-2 .field-name-field-show-dates .field-items .field-item{
+  float: left;
+  margin-right:10px;
+}
+.block-shows-block-2 .reservation-status-4{
+    position: absolute;
+    top : 15px;
+    left : 0;
+    width: 100%;
+    height : 57px;
+    background: url("../images/icons/canceled.png") no-repeat 0 0;
+    text-indent: -2000px;
+}
+/* Détail d'un spectacle ******************************************************/
+body.node-type-show #node_show_full_group_psr .field-name-field-scald-image img{
+  margin-bottom:20px;
+}
+.field-name-field-additional-infos h2,
+.field-name-field-additional-infos h3,
+.field-name-field-additional-infos h4{
+  margin-bottom: 0;
+}
+/* Page tous les spectacles ***************************************************/
+.page-spectacles-tous-les-spectacles .view-id-shows .view-header .block-left-shows-info{
+  display: none;
+}
+#block-boxes-left-shows-info{
+    width: 95%;
+    height: auto;
+    background: #F5F5F5 url(../images/icons/bg_next_festival.png) no-repeat 100% 0;
+    padding : 20px 5px 5px 12px;
+    margin : 0 20px 0 0;
+}
+#edit-field-festival-target-id{
+    width: 80%;
+}
+body.page-spectacles-tous-les-spectacles .form-checkboxes a.bef-toggle{
+  display: none;
+}
+label[for="edit-field-show-type-tid"]{
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+}
+div.bef-checkboxes div.form-type-bef-checkbox{
+    float : left;
+    width: 90px;
+}
+div.bef-checkboxes div.form-type-bef-checkbox.form-item-edit-field-show-type-tid-6{
+  clear:left;
+}
+#views-exposed-form-shows-list .views-submit-button{
+    float :right;
+}
+#views-exposed-form-shows-list .views-submit-button input{
+    padding : 5px 10px 5px 5px;
+    margin : -50px 27px 0 0;
+    width:100px;
+    color : white;
+    background: #C20000 url(../images/icons/arrow_white.png) no-repeat 95% 50%;
+}
+#views-exposed-form-shows-list div.form-item-edit-field-show-type-tid-6,
+#views-exposed-form-shows-list div.form-item-edit-field-show-type-tid-1{
+    margin-top : 10px;
+}
+#block-boxes-right-shows-infos{
+    width: 100%;
+    height: auto;
+    float: none;
+    padding : 0;
+    margin-bottom : 0;
+}
+
+/* festivals ******************************************************************/
+body.node-type-festival .field-name-link-shows a,
+body.node-type-festival .field-name-field-calendar-archive a{
+    padding-left: 25px;
+    background: url(../images/icons/all_shows.png) no-repeat 0 4px;
+    display: inline-block;
+    height:20px;
+}
+
+body.node-type-festival .field-name-field-calendar-archive a{
+    background: url(../images/icons/calendar-small.png) no-repeat 0 0;
+}
+.node-festival > .group-left {
+    width: 100%;
+}
+.ds-3col-stacked-fluid.group-two-sidebars > .group-middle {
+    width: 48%;
+    float :left;
+}
+.node-festival > .group-right {
+    float: left;
+    width: 50%;
+}
+.field-name-field-festival-shows > .field-items > .field-item h3,
+ div.view-display-id-list div.group6 > div > div .field-item h3,
+ .view-evenements h3.title-event-list{
+          padding : 5px 15px 5px 5px;
+          background-color: #F5F5F5;
+          margin-bottom :10px; 
+      }
+
+.field-name-field-festival-shows > .field-items > .field-item h3 a,
+div.view-display-id-list div.group6 > div > div .field-item h3 a,
+.view-evenements h3.title-event-list a {
+          color: #000000;
+          text-decoration : none;
+      }
+      
+/* page des fesitvals ***************************************************/
+.affiche-festival {
+  float: left;
+  width: 236px;
+  margin-left: 20px;
+}
+.affiche-festival img{
+  max-width: 100%;
+}
+.h3-festival {
+  font-size: 1.8em;
+  padding-left: 11px;
+  height: 35px;
+  overflow: hidden;
+}
+p.date-festival {
+  margin-bottom: -2px;
+  padding-left: 11px;
+}
+div#partner-bottom{
+        text-align: right;
+}
+body.node-type-show div.view-mode-full div.group-left .field-name-field-by .field-item.odd{
+  border-left:1px solid black; 
+  padding-left : 5px;
+}
+body.node-type-show div.view-mode-full div.group-left .field-name-field-by .field-item.even{
+  padding-right : 5px;
+}
+/* Gallery ********************************************************************
+.galleria-container {
+    background: none repeat scroll 0 0 #FFC929;
+    border-radius: 6px;
+}*/
+.block-evenements-block-2{
+        clear:both;
+}
+.field-name-scald-authors.field-label-hidden{
+  display: none;
+}
+.node-type-show .field-name-scald-authors.field-label-hidden{
+  display: block;
+  margin: -20px 0 0 0;
+}
+.node-type-news .field-name-scald-authors.field-label-hidden{
+  display: block;
+  margin: 0;
+}
+.view-display-id-block_2 h3 a{
+  font-size: 0.8em;
+}
+/* media queries **************************************************************/
+@media screen and (max-width:980px){
+  /* Fiche de spectacle ***************************************************/
+      .ds-2col-stacked-fluid.view-mode-full > .group-left {
+        width: 100%;
+      }
+      .ds-2col-stacked-fluid.view-mode-full > .group-right {
+        width: 90%;
+        border : 1px dotted black;
+        padding :10px;
+        margin: 5px 5px 5px 0;
+        border-radius : 5px;
+      }
+      .ds-2col-stacked-fluid.view-mode-full > .group-right .field-name-field-video-link,
+      .ds-2col-stacked-fluid.view-mode-full > .group-right .field-name-field-back-to-top-link{
+        display: none;
+      }
+      .ds-2col-stacked-fluid.view-mode-full > .group-right .field-name-field-boxoffice-url{
+        position : fixed;
+        bottom :0;
+        right:0;
+        margin:0;
+         padding:0;
+         z-index:999;
+      }
+      .ds-2col-stacked-fluid.view-mode-full > .group-right .field-name-field-boxoffice-url a{
+       color: white;
+       padding : 15px 35px 15px 15px;
+       background: #C10000 url(../images/icons/arrow_white.png) no-repeat 90% 50%;
+       font-size: 1.5em;
+       text-decoration: none;
+       display:block;
+      }
+      .ds-2col-stacked-fluid.view-mode-full > .group-right .field-name-field-comments-link {
+        position : fixed;
+        bottom :0;
+        right:30%;   
+        margin:0;
+        padding:0;
+        z-index:999;
+      }
+      .ds-2col-stacked-fluid.view-mode-full > .group-right .field-name-field-comments-link p {
+        margin:0;
+      }
+      .ds-2col-stacked-fluid.view-mode-full > .group-right .field-name-field-comments-link a{
+       color: white;
+       padding : 15px 45px 15px 15px;
+       background: #000000 url(../images/icons/comment-show-full-page-white.png) no-repeat 90% 50%;
+       font-size: 1.5em;
+       text-decoration: none;
+       display:block;
+      }
+      .ds-2col-stacked-fluid.view-mode-full > .group-right #practical_sm_button{
+        position : fixed;
+        bottom :0;
+        left:0;   
+        margin:0;
+        padding:0;
+        z-index:999;
+      }
+      .ds-2col-stacked-fluid.view-mode-full > .group-right #practical_sm_button a{
+       color: white;
+       padding : 15px 45px 15px 15px;
+       background: #000000 url(../images/icons/information.png) no-repeat 90% 50%;
+       font-size: 1.5em;
+       text-decoration: none;
+       display:block;
+      }
+      .ds-2col-stacked-fluid.view-mode-full > .group-right .field-name-field-show-dates .field-items{
+        max-height: none;
+        overflow-y: auto;
+        text-align: left;
+        padding-right : 5px;
+        margin-bottom: 15px;
+      }
+      
+}
+@media screen and (max-width:740px){
+  h3.medium.gauche{
+  font-size:1em;
+  margin:0;
+}
+h3.medium.no-link{
+  padding: 4px 5px 2px 0;
+  margin-bottom : 3px;
+}
+h3.medium a{
+  font-size:1.1em;
+  border : 1px solid black;
+  border-radius : 5px 5px 0 0;
+  display :block;
+  padding: 2px 5px 2px 5px;
+  margin-bottom : 3px;
+  text-decoration: none;
+}
+  #region-header-second #block-menu-menu-top-courtesy-nav{ //pas un smartphone mais un desktop redimensionné
+    position : absolulte;
+    z-index: 99;
+  }
+    #region-header-first,#region-header-second{
+        max-width: 50%;
+        float : left;
+    }
+    #boxes-box-logos_top{
+        margin-top:10px; 
+    }
+    #logos-top h1{
+        max-width : 70%;      
+    }
+    #logo-domainedo-top{
+        max-width : 100%;
+    }
+    #cg-top{
+        max-width : 16%;
+    }
+    #logos-top h1 span{
+        display:none;
+    }
+    #zone-header{
+        background: url(../images/sp/background_top_sp.gif) no-repeat 100% 0;
+    }
+    /* Menu contact***********************************************************/
+    #zone-header{
+        /*border : 1px solid red;*/
+        padding:0;
+    }
+    #region-header-second{
+        width: 43%;
+        margin:0;
+        float:right;
+    }
+    
+    #block-menu-menu-contact ul li a{
+        display:block;
+        height: 47px;
+        background: url(../images/sp/location.png) no-repeat 100% 50%;
+        text-decoration: none;
+        font-size : 1.2em;
+        text-align: right;
+        padding: 20px 45px 0 10px;
+        font-weight : bold;
+        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    }
+    #block-menu-menu-contact ul li.active-trail a{
+        background: url(../images/sp/location_over.png) no-repeat 100% 50%;
+    }
+    /* Menu accordeon *********************************************************/
+    #menu-accordion{
+        border-top : 1px solid #181818;
+        border-bottom : 1px solid #181818;
+        text-align : right;
+        padding-right : 50px;
+        height : 35px;
+        text-transform: uppercase;
+        color : #181818;
+        padding-top : 6px;
+        font-size : 1.5em;
+        font-family: lato,arial;
+    }
+    .menu-off{
+        background: #FFFFFF url(../images/sp/menu.png) no-repeat 100% 0%;
+    }
+    .menu-on{
+        background: #000000 url(../images/sp/menu.png) no-repeat 0 0;
+    }
+    #zone-menu{
+      position : absolute;
+      top: 74px;
+      right : -10px;
+      z-index : 9999;
+      width :90%;
+      
+    }
+    #region-menu div.block-menu ul li{
+       list-style: none; 
+    }
+    #region-menu div.block-menu ul li a,
+    #region-menu div.block-menu ul li a:visited,
+    #region-menu div.block-menu ul li a:active{
+       text-decoration: none;
+       color : white;
+       display:block;
+       padding :10px 0;
+       border-bottom : 1px solid white;
+    }
+    #region-menu div.block-menu ul li.expanded>a{
+        background: url(../images/sp/arrow_menu.png) no-repeat 100% 50%;
+    }
+    #region-menu .block-menu{
+        padding-left : 20px;
+    }
+    #block-system-main-menu{
+        background-color :black;
+    }
+    #region-menu #block-menu-menu-practicle-menu{
+        background-color :#2e2c2d;
+    }
+    #region-menu #block-menu-menu-top-courtesy-nav{
+        background-color :#3b3b3b;
+    }
+    #region-menu  #block-menu-menu-bottom-courtesy{
+        background-color :#4d4d4d;
+    }
+    /*footer ******************************************************************/
+    .zone-footer-wrapper{
+        background-color: #f5f4f4;
+    }
+    #footer-bottom{
+        background: url(../images/icons/background_footer.png) no-repeat -10px 0;
+        height:85px;
+    }
+    #address-bottom{
+        display:none;
+    }
+    
+    #partner-text{
+        font-size : 0.6em;
+        width: 60%;
+        float : left;
+        padding-top: 15px;
+
+    }
+    #partner-images{
+        width: 30%;
+        float : right;
+        margin: 5px 0 0 15px;
+        text-align: right;
+    }
+    #partner-images img{
+        max-width: 48%;
+        margin-left : 1px;
+    }
+   
+    
+    /* sprite *****************************************************************/
+      #region-footer-first .ul-sprite{
+        width: 100%;
+        border:1px solid black;
+        height : 48px;
+        margin:0;
+        padding:0;
+        background-color: #ebeaea;
+   }
+   #region-footer-first .sprite {
+        background: #ebeaea url(../images/sp/social_sp.png);
+        background-repeat: no-repeat;
+        display: block;
+        float : left;
+        margin : 0;
+        padding:0;
+        height : 48px;
+        width:24%;
+        border-right:1px solid black;
+    }
+    #region-footer-first .sprite a{
+        display:block;
+        text-indent:-6000px;
+        width : 100%;
+        height: 100%;
+    }
+    #region-footer-first .sprite-facebook {
+        background-position: 50% 0;
+      }
+      #region-footer-first .sprite-facebook:hover {
+        background-position: 50% -48px;
+      }
+      #region-footer-first .sprite-youtube {
+          background-position: 50% -96px;
+      }
+      #region-footer-first .sprite-youtube:hover {
+          background-position: 50% -144px;
+      }
+      #region-footer-first .sprite-twitter {
+          background-position: 50% -192px;
+      }
+      #region-footer-first .sprite-twitter:hover {
+          background-position: 50% -240px;
+      }
+      #region-footer-first .sprite-tripadvisor{
+          background-position: 50% -288px;
+          border-right:0;
+      }
+      #region-footer-first .sprite-tripadvisor:hover {
+          background-position: 50% -332px;
+      }
+      div.field-name-field-festival-poster{
+        display:none;
+      }
+      
+            
+}
+@media screen and (min-width:481px){
+  /* la liste des résultats ****************************************************/
+      
+    div.view-display-id-list .view-content{
+          margin-top :20px;
+          clear: both;
+      }
+
+      .field-name-field-festival-shows > .field-items > .field-item,
+      div.view-display-id-list div.group6 > div,
+      .view-evenements .views-row {
+          float : left;
+          width: 70%;
+          height: 225px;
+          overflow: hidden;
+          margin : 0 0 20px 0;
+          padding : 0;
+      }
+      body.page-evenements .view-evenements .views-row{ 
+          width: 50%;
+          
+      }
+      .field-name-field-festival-shows > .field-items > .field-item.even > div,
+      div.view-display-id-list div.group6 > div.views-row-odd > div,
+      .view-evenements .views-row-odd > div {
+          padding-right: 20px;
+      }
+      body.front .view-evenements .views-row-odd > div {
+          padding-right: 0;
+      }
+      .view-evenements .views-row > .views-field-field-scald-image{
+        float : left;
+        margin-right: 10px;
+      }
+      
+      
+      .ds-2col-stacked-fluid > .group-right {
+          width: 45%;  
+      }
+      .view-shows .field-name-field-show-dates .field-items {
+        width: 100%;
+      }   
+      div.view-display-id-list div.group6 > div .field-name-scald-authors{
+        display:none;
+      }
+}
+@media screen and (max-width:480px){ 
+    
+    #zone-header{
+        background: url(../images/sp/background_top_sp.gif) no-repeat 150% 0;
+    }
+    .ds-2col-stacked-fluid.view-mode-full > .group-right #practical_sm_button a,
+    .ds-2col-stacked-fluid.view-mode-full > .group-right .field-name-field-comments-link a,
+    .ds-2col-stacked-fluid.view-mode-full > .group-right .field-name-field-boxoffice-url a{
+       padding : 15px 33px 10px 10px;
+       font-size: 1em;
+    }
+    div.view-display-id-list div.group6 > div{
+          float : none;
+          width: 100%;
+          height: auto;
+          overflow: visible;
+          margin : 0 0 20px 0;
+          padding : 0;
+      }
+      div.view-display-id-list div.group6 > div .field-name-scald-authors{
+        display:none;
+      }
+      div.view-display-id-list div.group6 > div .ds-2col-stacked-fluid > .group-right,
+      .node-festival .ds-2col-stacked-fluid > .group-right {
+        width: 48%;
+      }    
+}
+/* Polaroïd *******************************************************************/
+.group-pola-imgs{
+  padding: 27px 28px 0 28px;
+}
+.group-pola-imgs:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.page-node-415 .field-type-atom-reference .field-item img{
+  float: left;
+}
+.field-name-field-person-img-1 img{
+  /*margin-right: 3px;*/
+}
+.page-node-415 .views-row {
+  float: left;
+  width: 300px;
+  background: url(../images/polaroid.jpg) no-repeat 0 0;
+  transform: rotate(7deg);
+  -moz-transform:rotate(7deg); /*firefox*/
+  -webkit-transform:rotate(7deg); /*Chrome, Safari*/
+  -o-transform:rotate(7deg); /*Opera*/
+
+}
+.page-node-415 .views-row-1 {
+  transform: rotate(-3deg);
+  -moz-transform:rotate(-3deg); /*firefox*/
+  -webkit-transform:rotate(-3deg); /*Chrome, Safari*/
+  -o-transform:rotate(-3deg); /*Opera*/
+  position: relative;
+  left : 30px;
+  top: -20px;
+}
+.page-node-415 .views-row-2 {
+  transform: rotate(7deg);
+  -moz-transform:rotate(7deg); /*firefox*/
+  -webkit-transform:rotate(7deg); /*Chrome, Safari*/
+  -o-transform:rotate(7deg); /*Opera*/
+  position: relative;
+  left : -10px;
+  top: 20px;
+  z-index: 5;
+}
+.page-node-415 .views-row-3 {
+  transform: rotate(-2deg);
+  -moz-transform:rotate(-2deg); /*firefox*/
+  -webkit-transform:rotate(-2deg); /*Chrome, Safari*/
+  -o-transform:rotate(-2deg); /*Opera*/
+  position: relative;
+  top: 20px;
+  left : -20px;
+   z-index: 5;
+}
+.page-node-415 .views-row-4 {
+  transform: rotate(12deg);
+  -moz-transform:rotate(12deg); /*firefox*/
+  -webkit-transform:rotate(12deg); /*Chrome, Safari*/
+  -o-transform:rotate(12deg); /*Opera*/
+  position: relative;
+  left : 40px;
+  top: -10px;
+  z-index: 5;
+}
+.page-node-415 .views-row-5 {
+  transform: rotate(-3deg);
+  -moz-transform:rotate(-3deg); /*firefox*/
+  -webkit-transform:rotate(-3deg); /*Chrome, Safari*/
+  -o-transform:rotate(-3deg); /*Opera*/
+  position: relative;
+  left : 28px;
+  top: 20px;
+  z-index: 5;
+}
+.page-node-415 .views-row-6 {
+  transform: rotate(6deg);
+  -moz-transform:rotate(6deg); /*firefox*/
+  -webkit-transform:rotate(6deg); /*Chrome, Safari*/
+  -o-transform:rotate(6deg); /*Opera*/
+}
+.page-node-415 .views-row-7 {
+  transform: rotate(4deg);
+  -moz-transform:rotate(4deg); /*firefox*/
+  -webkit-transform:rotate(4deg); /*Chrome, Safari*/
+  -o-transform:rotate(4deg); /*Opera*/
+}
+.page-node-415 .views-row-8 {
+  transform: rotate(-3deg);
+  -moz-transform:rotate(-3deg); /*firefox*/
+  -webkit-transform:rotate(-3deg); /*Chrome, Safari*/
+  -o-transform:rotate(-3deg); /*Opera*/
+}
+.group-person-legend{
+  height: 100px;
+  clear: both;
+  padding: 15px 20px 0 10px;
+}
+.field-name-field-person-img-1 img{
+  /*border: 1px solid black;
+  border-radius: 6px 0 0 6px;*/
+}
+.field-name-field-person-img-2 img{
+  /*border: 1px solid black;
+  border-radius: 0 6px 6px 0;*/
+}
+.page-node-415 h3{
+  margin: 0;
+  text-align: left;
+  padding-right: 64px;
+}
+
+.page-node-415 #region-content h2.block-title {
+    background-image: none;
+    display: block;
+    font-family:arial;
+    font-weight: 400;
+    line-height: 30px;
+    text-align : left;
+    padding: 5px;
+    margin-top: 10px;
+    font-size: 2em;
+}
+.view-personnes img{
+  width: 42%;
+}
+.page-node-415 .field-name-field-person-txt-1,
+.page-node-415 .field-name-field-person-txt-2,
+.page-node-415 .field-name-field-person-txt-3{
+  font-size: 10px;
+}
+.page-node-415 h2.block-title,
+.page-node-415 .view-header h3{
+  font-size: 1.4em;
+  margin-bottom : 20px;
+}
+.page-node-415 .view-header h3{
+  margin-top: 30px;
+  border-bottom: 1px solid black;
+}
+/* boutons réseaux sociaux ****************************************************/
+ul.group-ul-short-links > div.field-name-partage{
+  margin : 15px 0 -15px 0;
+}
+.pluginButton[title=like]{
+  border: 3px solid blue;
+}
+/* Formulaire Réservation pro *************************************************/
+.form-type-radio{
+  float: left; 
+  margin-right: 10px;
+}
+.webform-component-radios label{
+  clear: both;
+}
+body.not-front #region-content h2#h2-total{
+  background-image: none;
+  padding: 0;
+  border: 0;
+}
+#webform-component-total{
+  display: none;
+}
+#webform-client-form-641 .fieldset-legend,
+#webform-client-form-610 .fieldset-legend{
+  font-weight: 700;
+  font-size: 1.6em;
+  text-transform: uppercase;
+}
+fieldset.webform-component-fieldset > div > .webform-component-fieldset{
+  float: left;
+  margin-left:20px;
+}
