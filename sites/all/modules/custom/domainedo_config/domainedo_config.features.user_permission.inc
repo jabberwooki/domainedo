@@ -50,6 +50,8 @@ function domainedo_config_user_default_permissions() {
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
+      'redacteur' => 'redacteur',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'node',
   );
