@@ -23,12 +23,18 @@ function domainedo_documents_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'plus';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Appliquer';
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Réinitialiser';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Trier par';
   $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Éléments par page';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Tout -';
+  $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Décalage';
   $handler->display->display_options['pager']['options']['tags']['first'] = '« premier';
   $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ précédent';
   $handler->display->display_options['pager']['options']['tags']['next'] = 'suivant ›';
@@ -43,7 +49,7 @@ function domainedo_documents_views_default_views() {
   $handler->display->display_options['row_options']['delta_fieldset']['delta_fields'] = array();
   $handler->display->display_options['row_options']['grouping_fieldset']['group_field'] = 'node|created';
   $handler->display->display_options['row_options']['default_fieldset']['view_mode'] = 'list';
-  /* Entête: Global: Text area */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -54,7 +60,7 @@ function domainedo_documents_views_default_views() {
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = 'Pas de document disponible actuellement.';
   $handler->display->display_options['empty']['area']['format'] = 'full_html';
-  /* Champ: Contenu: Titre */
+  /* Field: Contenu: Titre */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -66,7 +72,7 @@ function domainedo_documents_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Contenu: Publié */
+  /* Filter criterion: Contenu: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -80,7 +86,9 @@ function domainedo_documents_views_default_views() {
   $handler->display->display_options['title'] = 'Documents techniques';
   $handler->display->display_options['defaults']['exposed_form'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Appliquer';
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Réinitialiser';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Trier par';
   $handler->display->display_options['exposed_form']['options']['autosubmit'] = TRUE;
   $handler->display->display_options['exposed_form']['options']['bef'] = array(
     'general' => array(
@@ -125,7 +133,7 @@ function domainedo_documents_views_default_views() {
   $handler->display->display_options['row_options']['default_fieldset']['view_mode'] = 'list';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Entête: Global: Text area */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -134,7 +142,7 @@ function domainedo_documents_views_default_views() {
   $handler->display->display_options['header']['area']['content'] = 'Texte d\'intro de la rubrique technique';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Champ: Contenu: Catégorie */
+  /* Field: Contenu: Catégorie */
   $handler->display->display_options['fields']['field_tech_document_type']['id'] = 'field_tech_document_type';
   $handler->display->display_options['fields']['field_tech_document_type']['table'] = 'field_data_field_tech_document_type';
   $handler->display->display_options['fields']['field_tech_document_type']['field'] = 'field_tech_document_type';
@@ -148,7 +156,7 @@ function domainedo_documents_views_default_views() {
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Contenu: Publié */
+  /* Filter criterion: Contenu: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -191,7 +199,9 @@ function domainedo_documents_views_default_views() {
   $handler->display->display_options['title'] = 'Documents Relations Publiques';
   $handler->display->display_options['defaults']['exposed_form'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Appliquer';
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Réinitialiser';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Trier par';
   $handler->display->display_options['exposed_form']['options']['autosubmit'] = TRUE;
   $handler->display->display_options['exposed_form']['options']['bef'] = array(
     'general' => array(
@@ -214,7 +224,7 @@ function domainedo_documents_views_default_views() {
     ),
   );
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Entête: Global: Text area */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -223,7 +233,7 @@ function domainedo_documents_views_default_views() {
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Contenu: Publié */
+  /* Filter criterion: Contenu: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -266,7 +276,9 @@ function domainedo_documents_views_default_views() {
   $handler->display->display_options['title'] = 'Documents presse';
   $handler->display->display_options['defaults']['exposed_form'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Appliquer';
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Réinitialiser';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Trier par';
   $handler->display->display_options['exposed_form']['options']['autosubmit'] = TRUE;
   $handler->display->display_options['exposed_form']['options']['bef'] = array(
     'general' => array(
@@ -289,7 +301,7 @@ function domainedo_documents_views_default_views() {
     ),
   );
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Entête: Global: Text area */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -298,7 +310,7 @@ function domainedo_documents_views_default_views() {
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Contenu: Publié */
+  /* Filter criterion: Contenu: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -316,15 +328,15 @@ function domainedo_documents_views_default_views() {
   $handler->display->display_options['path'] = 'espace-pro/documents-presse';
   $translatables['documents'] = array(
     t('Master'),
-    t('more'),
-    t('Apply'),
+    t('plus'),
+    t('Appliquer'),
     t('Réinitialiser'),
-    t('Sort by'),
+    t('Trier par'),
     t('Asc'),
     t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
+    t('Éléments par page'),
+    t('- Tout -'),
+    t('Décalage'),
     t('« premier'),
     t('‹ précédent'),
     t('suivant ›'),
@@ -358,11 +370,14 @@ function domainedo_documents_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'plus';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Appliquer';
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Réinitialiser';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Trier par';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
@@ -382,13 +397,13 @@ function domainedo_documents_views_default_views() {
   $handler->display->display_options['row_options']['alternating_fieldset']['item_7'] = 'full';
   $handler->display->display_options['row_options']['alternating_fieldset']['item_8'] = 'full';
   $handler->display->display_options['row_options']['alternating_fieldset']['item_9'] = 'full';
-  /* Entête: Global: Text area */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['label'] = 'Texte d\'intro';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
-  /* Champ: Terme de taxonomie: Nom */
+  /* Field: Terme de taxonomie: Nom */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['name']['field'] = 'name';
@@ -413,7 +428,7 @@ function domainedo_documents_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Espace Pro';
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Entête: Global: Text area */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -437,7 +452,7 @@ Morbi elementum augue eleifend, lacinia quam a, tincidunt mauris. Mauris consequ
   $handler->display->display_options['title'] = 'Espace Multimedia';
   $handler->display->display_options['enabled'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Entête: Global: Text area */
+  /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
@@ -465,10 +480,10 @@ Suspendisse dapibus nisl nec nibh mattis rhoncus. Proin mattis et lectus ac moll
   $handler->display->display_options['menu']['context_only_inline'] = 0;
   $translatables['spaces'] = array(
     t('Master'),
-    t('more'),
-    t('Apply'),
+    t('plus'),
+    t('Appliquer'),
     t('Réinitialiser'),
-    t('Sort by'),
+    t('Trier par'),
     t('Asc'),
     t('Desc'),
     t('Texte d\'intro'),
