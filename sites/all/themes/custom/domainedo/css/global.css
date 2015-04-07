@@ -1336,3 +1336,112 @@ fieldset.webform-component-fieldset > div > .webform-component-fieldset{
   float: left;
   margin-left:20px;
 }
+/* carte interactive **********************************************************/
+#map-stylise{
+  position: relative;
+}
+a.over-map{
+  position : absolute;
+  text-decoration: none;
+  display: block;
+  z-index: 1;
+}
+.over-map:hover{
+  text-decoration: none;
+}
+.map-small{
+  font-size: 0.9em;
+}
+#over-1{
+  left: 97px;
+  top: 42px;
+  padding-top: 2px;
+  width: 121px;
+  height: 20px;
+  padding-left: 105px; 
+  background: transparent url(../images/map/fond-un.png) no-repeat 0 0;
+}
+#over-2{
+  left: 62px;
+  top: 80px;
+  padding-top: 5px;
+  width: 185px;
+  height: 22px;
+  padding-left: 154px; 
+  background: transparent url(../images/map/fond-deux.png) no-repeat 0 0;
+}
+#over-3{
+  left: 72px;
+  top: 110px;
+  padding-top: 10px;
+  width: 125px;
+  height: 33px;
+  padding-left: 121px; 
+  background: transparent url(../images/map/fond-trois.png) no-repeat 0 0;
+}
+#over-4{
+  left: 93px;
+  top: 69px;
+  padding-top: 8px;
+  width: 187px;
+  height: 34px;
+  padding-left: 119px; 
+  background: transparent url(../images/map/fond-quatre.png) no-repeat 0 0;
+  line-height: 0.95em;
+}
+#over-5{
+  left: 130px;
+  top: 110px;
+  padding-top: 0;
+  width: 46px;
+  height: 20px;
+  padding-left: 112px; 
+  background: transparent url(../images/map/fond-cinq.png) no-repeat 0 0;
+}
+#over-6{
+  left: 122px;
+  top: 142px;
+  padding-top: 0;
+  width: 45px;
+  height: 19px;
+  padding-left: 107px; 
+  background: transparent url(../images/map/fond-six.png) no-repeat 0 0;
+}
+#over-7{
+  left: 118px;
+  top: 166px;
+  padding-top: 4px;
+  width: 128px;
+  height: 18px;
+  padding-left: 114px; 
+  background: transparent url(../images/map/fond-sept.png) no-repeat 0 0;
+}
+#over-8{
+  padding-left: 129px;
+  width: 83px;
+  height: 20px;
+  padding-top: 8px;
+  left: 95px;
+  top: 190px;
+  background: transparent url(../images/map/fond-huit.png) no-repeat 0 0;
+}
+#over-9{
+  padding-left: 165px;
+  width: 84px;
+  height: 25px;
+  padding-top: 24px;
+  left: 71px;
+  top: 226px;
+  background: transparent url(../images/map/fond-neuf.png) no-repeat 0 0;
+}
+/*area#jcc{
+  background-color: yellow;
+  border: 1px solid red;
+}
+area#jcc:hover{
+  background-color: yellow;
+  border: 1px solid yellow;
+  -moz-box-shadow: inset -2px -2px 2px 2px #CCC;
+    -webkit-box-shadow: inset -2px -2px 2px 2px #CCC;
+    box-shadow: inset -2px -2px 2px 2px #CCC;
+}*/
