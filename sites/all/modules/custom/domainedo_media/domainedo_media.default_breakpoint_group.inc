@@ -29,9 +29,9 @@ function domainedo_media_default_breakpoint_group() {
 
   // Breakpoints.
   $breakpoints = array();
-  $breakpoints[] = 'breakpoints.theme.domainedo.mobile';
-  $breakpoints[] = 'breakpoints.theme.domainedo.narrow';
   $breakpoints[] = 'breakpoints.theme.domainedo.wide';
+  $breakpoints[] = 'breakpoints.theme.domainedo.narrow';
+  $breakpoints[] = 'breakpoints.theme.domainedo.mobile';
 
   // Breakpoint group.
   $breakpoint_group = new stdClass();
