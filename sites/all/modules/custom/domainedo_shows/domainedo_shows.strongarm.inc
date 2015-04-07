@@ -462,16 +462,16 @@ function domainedo_shows_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '35',
+          'weight' => '34',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '36',
+          'weight' => '35',
         ),
         'redirect' => array(
-          'weight' => '37',
+          'weight' => '36',
         ),
       ),
       'display' => array(
