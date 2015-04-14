@@ -63,7 +63,15 @@ function omega_preprocess_html(&$variables) {
    if ((in_array('front', $variables['classes_array']))){
     drupal_add_js(drupal_get_path('theme', 'domainedo'). '/js/domainedo_slideshow.js');//Chargement du fichier js.
   }
+  
+  $path = drupal_get_path_alias();
+  $pattern = 'domaine-do/espaces/*';
+  if (drupal_match_path($path, $pattern)) {
+    drupal_add_js(drupal_get_path('theme', 'domainedo'). '/js/map.js');
+  }
 }
+
+
 /**
  * Theme function to allow any menu tree to be themed as a Superfish menu.
  */
@@ -163,4 +171,7 @@ function domainedo_preprocess_image(&$variables) {
    unset($variables[$key]);
    unset($variables[$key]);
  }
+}
+function domainedo_ds_field_expert($variables) {
+  dpm($variables);
 }

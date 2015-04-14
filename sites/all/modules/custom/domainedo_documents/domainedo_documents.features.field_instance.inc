@@ -70,7 +70,7 @@ function domainedo_documents_field_default_field_instances() {
     'bundle' => 'press_document',
     'default_value' => array(
       0 => array(
-        'tid' => 38,
+        'tid' => 18,
       ),
     ),
     'deleted' => 0,
@@ -209,7 +209,9 @@ function domainedo_documents_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'atom_reference',
-      'settings' => array(),
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
       'type' => 'atom_reference_textfield',
       'weight' => 4,
     ),
@@ -282,7 +284,7 @@ function domainedo_documents_field_default_field_instances() {
     'bundle' => 'relpub_document',
     'default_value' => array(
       0 => array(
-        'tid' => 37,
+        'tid' => 20,
       ),
     ),
     'deleted' => 0,
@@ -431,7 +433,9 @@ function domainedo_documents_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'atom_reference',
-      'settings' => array(),
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
       'type' => 'atom_reference_textfield',
       'weight' => 4,
     ),
@@ -543,7 +547,7 @@ function domainedo_documents_field_default_field_instances() {
     'bundle' => 'tech_document',
     'default_value' => array(
       0 => array(
-        'tid' => 39,
+        'tid' => 19,
       ),
     ),
     'deleted' => 0,
@@ -635,7 +639,9 @@ function domainedo_documents_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'atom_reference',
-      'settings' => array(),
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
       'type' => 'atom_reference_textfield',
       'weight' => 5,
     ),
@@ -737,7 +743,9 @@ function domainedo_documents_field_default_field_instances() {
     'widget' => array(
       'active' => 0,
       'module' => 'atom_reference',
-      'settings' => array(),
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
       'type' => 'atom_reference_textfield',
       'weight' => 1,
     ),

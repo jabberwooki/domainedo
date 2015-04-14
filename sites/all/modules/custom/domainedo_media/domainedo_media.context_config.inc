@@ -119,7 +119,7 @@ function domainedo_media_default_scald_context_config() {
       '*' => 'passthrough',
     ),
     'gallery' => array(
-      '*' => 'passthrough',
+      '*' => 'style-large-675',
     ),
     'image' => array(
       '*' => 'group-max',
@@ -144,9 +144,9 @@ function domainedo_media_default_scald_context_config() {
       'settings' => array(
         'width' => '100%',
         'height' => '450',
-        'thumb_style' => 'thumbnail',
-        'normal_style' => 'large',
-        'big_style' => 'original',
+        'thumb_style' => 'large-675',
+        'normal_style' => 'large-675',
+        'big_style' => 'large-675',
         'theme' => 'classic',
         'options' => '',
       ),
@@ -184,7 +184,7 @@ function domainedo_media_default_scald_context_config() {
       '*' => 'passthrough',
     ),
     'image' => array(
-      '*' => 'group-domainedo',
+      '*' => 'style-main_show__570_',
     ),
     'twitter' => array(
       '*' => 'passthrough',

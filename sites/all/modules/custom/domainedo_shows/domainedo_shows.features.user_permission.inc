@@ -63,14 +63,18 @@ function domainedo_shows_user_default_permissions() {
   // Exported permission: 'delete any show content'.
   $permissions['delete any show content'] = array(
     'name' => 'delete any show content',
-    'roles' => array(),
+    'roles' => array(
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'delete any structure content'.
   $permissions['delete any structure content'] = array(
     'name' => 'delete any structure content',
-    'roles' => array(),
+    'roles' => array(
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'node',
   );
 

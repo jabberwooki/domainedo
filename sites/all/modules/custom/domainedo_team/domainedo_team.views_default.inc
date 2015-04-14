@@ -131,6 +131,10 @@ function domainedo_team_views_default_views() {
 
   /* Display: Classement */
   $handler = $view->new_display('page', 'Classement', 'page_1');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '0';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
@@ -260,7 +264,7 @@ function domainedo_team_views_default_views() {
   $handler->display->display_options['filters']['field_person_dpt_tid']['table'] = 'field_data_field_person_dpt';
   $handler->display->display_options['filters']['field_person_dpt_tid']['field'] = 'field_person_dpt_tid';
   $handler->display->display_options['filters']['field_person_dpt_tid']['value'] = array(
-    351 => '351',
+    352 => '352',
   );
   $handler->display->display_options['filters']['field_person_dpt_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_person_dpt_tid']['vocabulary'] = 'poles';

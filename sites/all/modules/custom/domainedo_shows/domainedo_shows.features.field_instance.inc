@@ -4986,8 +4986,10 @@ function domainedo_shows_field_default_field_instances() {
       'full' => array(
         'label' => 'above',
         'module' => 'domainedo_media',
-        'settings' => array(),
-        'type' => 'title',
+        'settings' => array(
+          'link' => 0,
+        ),
+        'type' => 'full',
         'weight' => 4,
       ),
     ),

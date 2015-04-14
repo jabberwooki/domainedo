@@ -6,6 +6,7 @@ project = domainedo_team
 dependencies[] = domainedo_media
 dependencies[] = ds
 dependencies[] = field_group
+dependencies[] = node
 dependencies[] = text
 dependencies[] = uuid_features
 dependencies[] = views
