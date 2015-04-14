@@ -1,3 +1,8 @@
+Domaine d'O 1.0.2 - 2015-04-14
+----------------------------
+Feature multimedia modified
+
+
 Domaine d'O 1.0.1 - 2015-03-31
 ----------------------------
 Map js and images added
