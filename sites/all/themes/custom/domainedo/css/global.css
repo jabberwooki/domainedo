@@ -1445,3 +1445,31 @@ area#jcc:hover{
     -webkit-box-shadow: inset -2px -2px 2px 2px #CCC;
     box-shadow: inset -2px -2px 2px 2px #CCC;
 }*/
+body.page-espace-multimedia .form-type-bef-link{
+  display: block;
+  float: left;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  
+}
+body.page-espace-multimedia .form-type-bef-link > a {
+  display: block;
+  padding: 2px 15px 0 15px;
+  text-decoration: none;
+  color: #878787;
+  margin: 0;
+  border-right: 1px solid black;
+  min-height: 23px;
+}
+
+body.page-espace-multimedia .form-type-bef-link > a:first-letter {
+  text-transform: capitalize;
+}
+body.page-espace-multimedia .form-type-bef-link.selected > a {
+  background-color: #F5F5F5;
+  color: #C71D20;
+}
+body.page-espace-multimedia .view-multimedia-space .view-content .view-grouping{
+  float: left;
+  margin-right: 5px;
+}
