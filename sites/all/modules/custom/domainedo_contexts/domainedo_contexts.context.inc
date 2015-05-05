@@ -114,6 +114,12 @@ function domainedo_contexts_context_default_contexts() {
           'region' => 'header_second',
           'weight' => '-8',
         ),
+        'domainedo_ticketoffice-rsi_ws_user_links' => array(
+          'module' => 'domainedo_ticketoffice',
+          'delta' => 'rsi_ws_user_links',
+          'region' => 'header_second',
+          'weight' => '-7',
+        ),
         'menu-menu-bottom-courtesy' => array(
           'module' => 'menu',
           'delta' => 'menu-bottom-courtesy',
@@ -273,6 +279,12 @@ function domainedo_contexts_context_default_contexts() {
           'delta' => 'menu-bottom-courtesy',
           'region' => 'menu',
           'weight' => '-7',
+        ),
+        'domainedo_ticketoffice-rsi_ws_user_links' => array(
+          'module' => 'domainedo_ticketoffice',
+          'delta' => 'rsi_ws_user_links',
+          'region' => 'menu',
+          'weight' => '-6',
         ),
         'boxes-social_network' => array(
           'module' => 'boxes',
