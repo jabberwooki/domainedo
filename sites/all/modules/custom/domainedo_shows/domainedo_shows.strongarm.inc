@@ -357,7 +357,14 @@ function domainedo_shows_strongarm() {
           'weight' => '17',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'sharethis' => array(
+          'full' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__festival'] = $strongarm;
