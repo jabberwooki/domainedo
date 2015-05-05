@@ -9,6 +9,7 @@ dependencies[] = context
 dependencies[] = context_mobile_detect
 dependencies[] = ctools
 dependencies[] = domainedo_config
+dependencies[] = domainedo_ticketoffice
 dependencies[] = features
 dependencies[] = menu
 dependencies[] = search
