@@ -256,6 +256,12 @@ function domainedo_contexts_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'domainedo_ticketoffice-rsi_ws_user_links' => array(
+          'module' => 'domainedo_ticketoffice',
+          'delta' => 'rsi_ws_user_links',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
         'system-main-menu' => array(
           'module' => 'system',
           'delta' => 'main-menu',
@@ -279,12 +285,6 @@ function domainedo_contexts_context_default_contexts() {
           'delta' => 'menu-bottom-courtesy',
           'region' => 'menu',
           'weight' => '-7',
-        ),
-        'domainedo_ticketoffice-rsi_ws_user_links' => array(
-          'module' => 'domainedo_ticketoffice',
-          'delta' => 'rsi_ws_user_links',
-          'region' => 'menu',
-          'weight' => '-6',
         ),
         'boxes-social_network' => array(
           'module' => 'boxes',

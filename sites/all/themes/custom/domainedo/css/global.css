@@ -1476,3 +1476,10 @@ body.page-espace-multimedia .view-multimedia-space .view-content .view-grouping{
 body.node-type-news .field-name-field-news-only-video{
   display: none;
 }
+/* liens réservation **********************************************************/
+@media screen and (max-width:720px){
+  #block-domainedo-ticketoffice-rsi-ws-user-links{
+    clear: both;
+    margin: -15px 0 0 0;
+  }
+}
