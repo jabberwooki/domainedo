@@ -1477,6 +1477,7 @@ body.page-espace-multimedia .view-multimedia-space .view-content .view-grouping{
 @media screen and (max-width:720px){
   #block-domainedo-ticketoffice-rsi-ws-user-links{
     clear: both;
-    border: 1px solid red;
+    margin-top: -15px;
+    margin: 0;
   }
 }
