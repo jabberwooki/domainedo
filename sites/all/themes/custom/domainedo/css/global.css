@@ -1310,6 +1310,14 @@ ul.group-ul-short-links > div.field-name-partage{
 .pluginButton[title=like]{
   border: 3px solid blue;
 }
+/* Formulaires ****************************************************************/
+ .webform-client-form #edit-submit{
+  color: white;
+  background: #C20000;
+}
+.webform-client-form .group-right form{
+  margin-top: -12px;
+}
 /* Formulaire Réservation pro *************************************************/
 .form-type-radio{
   float: left; 
