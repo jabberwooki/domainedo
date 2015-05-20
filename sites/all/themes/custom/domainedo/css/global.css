@@ -1311,11 +1311,11 @@ ul.group-ul-short-links > div.field-name-partage{
   border: 3px solid blue;
 }
 /* Formulaires ****************************************************************/
- .webform-client-form #edit-submit{
+.webform-client-form #edit-submit{
   color: white;
   background: #C20000;
 }
-.webform-client-form .group-right form{
+.group-right .webform-client-form{
   margin-top: -12px;
 }
 /* Formulaire Réservation pro *************************************************/
