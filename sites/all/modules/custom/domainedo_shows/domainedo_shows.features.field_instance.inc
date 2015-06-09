@@ -29,7 +29,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -61,7 +61,7 @@ function domainedo_shows_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 7,
+      'weight' => 6,
     ),
   );
 
@@ -70,7 +70,7 @@ function domainedo_shows_field_default_field_instances() {
     'bundle' => 'festival',
     'default_value' => array(
       0 => array(
-        'value' => '<a href="/calendrier">Calendrier/archive</a>',
+        'value' => '<a href="/calendrier">Voir le calendrier</a>',
         'format' => 'full_html',
       ),
     ),
@@ -89,7 +89,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -100,10 +100,11 @@ function domainedo_shows_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_calendar_archive',
-    'label' => 'Calendrier/Archive',
+    'label' => 'Voir le calendrier',
     'required' => 0,
     'settings' => array(
-      'context' => '',
+      'context' => 'debug',
+      'context_default' => 'sdl_editor_representation',
       'dnd_enabled' => 0,
       'mee_enabled' => 0,
       'text_processing' => 1,
@@ -138,7 +139,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 23,
+        'weight' => 28,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -184,7 +185,7 @@ function domainedo_shows_field_default_field_instances() {
           'link' => 0,
         ),
         'type' => 'full',
-        'weight' => 5,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -243,7 +244,7 @@ function domainedo_shows_field_default_field_instances() {
           'view_mode' => 'list',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 10,
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -268,7 +269,68 @@ function domainedo_shows_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 14,
+      'weight' => 12,
+    ),
+  );
+
+  // Exported field_instance: 'node-festival-field_feuilleter_en_ligne'
+  $field_instances['node-festival-field_feuilleter_en_ligne'] = array(
+    'bundle' => 'festival',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 17,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_feuilleter_en_ligne',
+    'label' => 'Feuilleter en ligne',
+    'required' => 0,
+    'settings' => array(
+      'attributes' => array(
+        'class' => '',
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => '_blank',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'rel_remove' => 'default',
+      'title' => 'value',
+      'title_maxlength' => 128,
+      'title_value' => 'Feuilleter le programme',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 17,
     ),
   );
 
@@ -290,7 +352,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 24,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -353,7 +415,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 22,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -384,6 +446,60 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-festival-field_programme_pdf'
+  $field_instances['node-festival-field_programme_pdf'] = array(
+    'bundle' => 'festival',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'domainedo_media',
+        'settings' => array(),
+        'type' => 'title',
+        'weight' => 16,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'domainedo_media',
+        'settings' => array(),
+        'type' => 'sdl_editor_representation',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_programme_pdf',
+    'label' => 'Programme pdf',
+    'required' => 0,
+    'settings' => array(
+      'referencable_types' => array(
+        'audio' => 0,
+        'file' => 'file',
+        'gallery' => 0,
+        'image' => 0,
+        'twitter' => 0,
+        'video' => 0,
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'atom_reference',
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
+      'type' => 'atom_reference_textfield',
+      'weight' => 16,
+    ),
+  );
+
   // Exported field_instance: 'node-festival-field_scald_file'
   $field_instances['node-festival-field_scald_file'] = array(
     'bundle' => 'festival',
@@ -403,7 +519,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'domainedo_media',
         'settings' => array(),
         'type' => 'sdl_editor_representation',
-        'weight' => 3,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -434,7 +550,7 @@ function domainedo_shows_field_default_field_instances() {
         'context' => 'sdl_editor_representation',
       ),
       'type' => 'atom_reference_textfield',
-      'weight' => 10,
+      'weight' => 8,
     ),
   );
 
@@ -459,7 +575,7 @@ function domainedo_shows_field_default_field_instances() {
           'link' => 0,
         ),
         'type' => 'full',
-        'weight' => 7,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -490,7 +606,7 @@ function domainedo_shows_field_default_field_instances() {
         'context' => 'sdl_editor_representation',
       ),
       'type' => 'atom_reference_textfield',
-      'weight' => 11,
+      'weight' => 9,
     ),
   );
 
@@ -512,7 +628,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 20,
+        'weight' => 25,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -568,7 +684,7 @@ function domainedo_shows_field_default_field_instances() {
           'link' => 0,
         ),
         'type' => 'full',
-        'weight' => 8,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -599,7 +715,7 @@ function domainedo_shows_field_default_field_instances() {
         'context' => 'sdl_editor_representation',
       ),
       'type' => 'atom_reference_textfield',
-      'weight' => 13,
+      'weight' => 11,
     ),
   );
 
@@ -624,7 +740,7 @@ function domainedo_shows_field_default_field_instances() {
           'link' => 0,
         ),
         'type' => 'full',
-        'weight' => 6,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -655,7 +771,7 @@ function domainedo_shows_field_default_field_instances() {
         'context' => 'sdl_editor_representation',
       ),
       'type' => 'atom_reference_textfield',
-      'weight' => 12,
+      'weight' => 10,
     ),
   );
 
@@ -682,7 +798,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 27,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -729,7 +845,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 26,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -767,7 +883,7 @@ function domainedo_shows_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 9,
+      'weight' => 7,
     ),
   );
 
@@ -5231,7 +5347,6 @@ function domainedo_shows_field_default_field_instances() {
   t('Affiche du festival');
   t('Artiste associé');
   t('Billetterie indisponible');
-  t('Calendrier/Archive');
   t('Coproducteurs');
   t('Date(s)');
   t('De');
@@ -5240,6 +5355,7 @@ function domainedo_shows_field_default_field_instances() {
   t('Durée');
   t('Entrée');
   t('Festival');
+  t('Feuilleter en ligne');
   t('Galerie');
   t('Géolocalisation');
   t('Identifiant billetterie');
@@ -5267,6 +5383,7 @@ function domainedo_shows_field_default_field_instances() {
   t('Pratique');
   t('Prochainement en vente');
   t('Production');
+  t('Programme pdf');
   t('Promu en page d\'accueil');
   t('Remboursement');
   t('Restauration');
@@ -5288,6 +5405,7 @@ function domainedo_shows_field_default_field_instances() {
   t('Url billetterie');
   t('Vidéo');
   t('Vignette du spectacle');
+  t('Voir le calendrier');
   t('Vous aimerez aussi');
   t('Zoom sur');
 

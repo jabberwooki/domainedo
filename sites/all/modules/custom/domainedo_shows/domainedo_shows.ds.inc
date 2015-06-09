@@ -17,13 +17,13 @@ function domainedo_shows_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'festival';
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
-    'anchor_shows' => array(
-      'weight' => '9',
+    'link_shows' => array(
+      'weight' => '1',
       'label' => 'hidden',
       'format' => 'default',
     ),
-    'link_shows' => array(
-      'weight' => '1',
+    'anchor_shows' => array(
+      'weight' => '11',
       'label' => 'hidden',
       'format' => 'default',
     ),
@@ -175,7 +175,7 @@ function domainedo_shows_ds_custom_fields_info() {
   $ds_field->ui_limit = '';
   $ds_field->properties = array(
     'code' => array(
-      'value' => '<p><a href="#listshows">Voir tous les spectacles</a></p>
+      'value' => '<p><a href="#listshows">Voir les spectacles et réserver</a></p>
 ',
       'format' => 'full_html',
     ),
@@ -225,27 +225,31 @@ function domainedo_shows_ds_layout_settings_info() {
       ),
       'left' => array(
         1 => 'link_shows',
-        2 => 'field_calendar_archive',
-        3 => 'field_scald_file',
-        4 => 'body',
+        2 => 'field_programme_pdf',
+        3 => 'field_feuilleter_en_ligne',
+        4 => 'field_calendar_archive',
+        5 => 'body',
+        6 => 'field_scald_file',
       ),
       'right' => array(
-        5 => 'field_festival_poster',
+        7 => 'field_festival_poster',
       ),
       'footer' => array(
-        6 => 'field_scald_video',
-        7 => 'field_scald_gallery',
-        8 => 'field_scald_sound',
-        9 => 'anchor_shows',
-        10 => 'field_festival_shows',
+        8 => 'field_scald_video',
+        9 => 'field_scald_gallery',
+        10 => 'field_scald_sound',
+        11 => 'anchor_shows',
+        12 => 'field_festival_shows',
       ),
     ),
     'fields' => array(
       'title' => 'header',
       'link_shows' => 'left',
+      'field_programme_pdf' => 'left',
+      'field_feuilleter_en_ligne' => 'left',
       'field_calendar_archive' => 'left',
-      'field_scald_file' => 'left',
       'body' => 'left',
+      'field_scald_file' => 'left',
       'field_festival_poster' => 'right',
       'field_scald_video' => 'footer',
       'field_scald_gallery' => 'footer',

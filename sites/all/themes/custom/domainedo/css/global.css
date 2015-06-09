@@ -73,10 +73,7 @@ a.location:hover{
      background: url(../images/icons/location_wide.gif) no-repeat 0 110%;
      color : #c10000;
 }
-div.field-name-link-shows{
-  float: left;
-  margin-right: 20px;
-}
+
 a.localisation, a.video, a.tram{
   display: block;
   height: 40px;
@@ -378,6 +375,14 @@ h2#page-title{
 }
 .region-header-second .sprite-youtube:hover {
     background-position: -40px -102px;
+}
+.region-header-second .sprite-gplus {
+    width: 25px;
+    height: 25px;
+    background-position: -5px -134px;
+}
+.region-header-second .sprite-gplus:hover {
+    background-position: -40px -134px;
 }
 /* info flash *****************************************************************/
 body.front #block-views-evenements-block-1{
@@ -711,16 +716,48 @@ div.bef-checkboxes div.form-type-bef-checkbox.form-item-edit-field-show-type-tid
 }
 
 /* festivals ******************************************************************/
-body.node-type-festival .field-name-link-shows a,
-body.node-type-festival .field-name-field-calendar-archive a{
-    padding-left: 25px;
-    background: url(../images/icons/all_shows.png) no-repeat 0 4px;
+body.node-type-festival .field-name-link-shows,
+body.node-type-festival .field-name-field-programme-pdf,
+body.node-type-festival .field-name-field-calendar-archive,
+body.node-type-festival .field-name-field-feuilleter-en-ligne{
     display: inline-block;
-    height:20px;
 }
-
+body.node-type-festival .field-name-link-shows a,
+body.node-type-festival .field-name-field-programme-pdf a,
+body.node-type-festival .field-name-field-calendar-archive a,
+body.node-type-festival .field-name-field-feuilleter-en-ligne a{
+    padding-top: 50px;  
+    background: url(../images/icons/panier.png) no-repeat 50% 0;
+    display: block;
+    text-align: center;
+    margin-right: 15px;
+    width: 130px;
+}
+body.node-type-festival .field-name-link-shows a:hover{
+    background: url(../images/icons/panier.png) no-repeat 50% -302px;
+}
+body.node-type-festival .field-name-field-programme-pdf img{
+  display:none;
+}
+body.node-type-festival .field-name-field-programme-pdf a{
+    background: url(../images/icons/pdf.png) no-repeat 50% 0;
+}
+body.node-type-festival .field-name-field-programme-pdf a:hover{
+    background: url(../images/icons/pdf.png) no-repeat 50% -302px;
+}
+body.node-type-festival .field-name-field-feuilleter-en-ligne a{
+    background: url(../images/icons/sheet.png) no-repeat 50% 0;
+}
+body.node-type-festival .field-name-field-feuilleter-en-ligne a:hover{
+    background: url(../images/icons/sheet.png) no-repeat 50% -302px;
+}
 body.node-type-festival .field-name-field-calendar-archive a{
-    background: url(../images/icons/calendar-small.png) no-repeat 0 0;
+    background: url(../images/icons/calendar-big.png) no-repeat 50% 0;
+        margin-right: 0;
+        width: 80px;
+}
+body.node-type-festival .field-name-field-calendar-archive a:hover{
+    background: url(../images/icons/calendar-big.png) no-repeat 50% -302px;
 }
 .node-festival > .group-left {
     width: 100%;
@@ -1309,6 +1346,14 @@ ul.group-ul-short-links > div.field-name-partage{
 }
 .pluginButton[title=like]{
   border: 3px solid blue;
+}
+/* Formulaires ****************************************************************/
+.webform-client-form #edit-submit{
+  color: white;
+  background: #C20000;
+}
+.group-right .webform-client-form{
+  margin-top: -12px;
 }
 /* Formulaire Réservation pro *************************************************/
 .form-type-radio{

@@ -345,22 +345,22 @@ function domainedo_shows_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '15',
+          'weight' => '13',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '16',
+          'weight' => '14',
         ),
         'redirect' => array(
-          'weight' => '17',
+          'weight' => '15',
         ),
       ),
       'display' => array(
         'sharethis' => array(
           'full' => array(
-            'weight' => '10',
+            'weight' => '23',
             'visible' => FALSE,
           ),
         ),
