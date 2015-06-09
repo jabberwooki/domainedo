@@ -1,3 +1,7 @@
+Domaine d'O 1.0.6 - 2015-06-09
+----------------------------
+Features shows modified to add link to pdf and calameo
+
 Domaine d'O 1.0.5 - 2015-05-12
 ----------------------------
 Features contexts modified
