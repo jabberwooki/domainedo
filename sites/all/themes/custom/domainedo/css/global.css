@@ -1525,3 +1525,11 @@ body.page-espace-multimedia .view-multimedia-space .view-content .view-grouping{
     margin: -15px 0 0 0;
   }
 }
+/*slideshow *******************************************************************/
+#block-views-shows-block-1 .field-name-field-festival{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: -1000em;
+  overflow: hidden;
+}
