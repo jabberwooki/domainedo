@@ -559,11 +559,11 @@ div.group6{
     background: url(../images/icons/on-off-home-ss.png) no-repeat 0 0;
 }
 /* slideshow festivals ********************************************************/
-.front #block-views-shows-block-1 .views-row.festival-hiver{
+.front #block-views-shows-block-1 .views-row.festival-d-hiver{
   border-top: 2px solid #888;
   padding-top: 2px;
 }
-#link-top-ss-festival-hiver{
+#link-top-ss-festival-d-hiver{
   border-bottom: 2px solid #888;
 }
 .front #block-views-shows-block-1 .views-row.saperlipopette{
@@ -580,38 +580,38 @@ div.group6{
 #link-top-ss-arabesques{
   border-bottom: 2px solid #C97845;
 }
-.front #block-views-shows-block-1 .views-row.printemps-des-comediens{
-  border-top: 2px solid #C97845;
+.front #block-views-shows-block-1 .views-row.printemps-des-com-diens{
+  border-top: 2px solid #1A4F81;
   padding-top: 2px;
 }
-#link-top-ss-printemps-des-comediens{
-  border-bottom: 2px solid #C97845;
+#link-top-ss-printemps-des-com-diens{
+  border-bottom: 2px solid #1A4F81;
 }
 .front #block-views-shows-block-1 .views-row.folies-d-o{
-  border-top: 2px solid blue;
+  border-top: 2px solid #EC008C;
   padding-top: 2px;
 }
 #link-top-ss-folies-d-o{
-  border-bottom: 2px solid blue;
+  border-bottom: 2px solid #EC008C;
 }
 .front #block-views-shows-block-1 .views-row.radio-france{
-  border-top: 2px solid blue;
+  border-top: 2px solid #289728;
   padding-top: 2px;
 }
 #link-top-ss-radio-france{
-  border-bottom: 2px solid blue;
+  border-bottom: 2px solid #289728;
 }
 .front #block-views-shows-block-1 .views-row.nuits-d-o{
-  border-top: 2px solid blue;
+  border-top: 2px solid #003344;
   padding-top: 2px;
 }
 #link-top-ss-nuits-d-o{
-  border-bottom: 2px solid blue;
+  border-bottom: 2px solid #003344;
 }
 #linkFestivalsSS{
   position: absolute;
-  top: -5px;
-  left: 40px;
+  top: -2px;
+  left: 25px;
 }
 #linkFestivalsSS span{
   margin-right: 10px;

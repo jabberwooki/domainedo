@@ -53,7 +53,7 @@ var base_url="";
                 $('#controler_'+j).click(function() {
                     thediapo.selected_diapo(j,thediapo);
                 });
-               })(i);     
+               })("i");     
           }
           
           $("#next_diapo").click(function() {
@@ -255,7 +255,6 @@ var base_url="";
    link_shows_visible = true;
  }
  function manageLinksFestivals(thediapo) {
-    
    /* récupération des intitulés des festivals */
     var festivals = {};// l'objet qui stocke les noms de festivals dans ses propriétés
     var spectacles = [];
@@ -268,13 +267,27 @@ var base_url="";
 
     var liensFestivals = []; // le tableau qui stocke les objets lienFestival
     var lienFestival = {};
+    var regex_hiver = new RegExp('.*hiver.*',"i");
+    var regex_printemps = new RegExp('.*printemps.*',"i");
+    var regex_arabesques = new RegExp('.*arabesques.*',"i");
+    var regex_saper = new RegExp('.*saper.*',"i");
+    var regex_folies = new RegExp('.*folies.*',"i");
+    var regex_radio = new RegExp('.*radio.*',"i");
+    var regex_nuit = new RegExp('.*nuit.*',"i");
 
     $('.field-name-field-festival .field-item', '#block-views-shows-block-1').each(function(index) {
-      //festival = $(this).text().slice(0, -5);//on enlève l'année
-      festival = $(this).text().replace(/[0-9]+/g, "");
+
+      festival = $(this).text();   
+      if(regex_hiver.test(festival)) festival = "Festival d'hiver";
+      else if(regex_printemps.test(festival)) festival = "Printemps des Comédiens";
+      else if(regex_arabesques.test(festival)) festival = "Arabesques";
+      else if(regex_saper.test(festival)) festival = "Saperlipopette";
+      else if(regex_folies.test(festival)) festival = "Folies d'O";
+      else if(regex_radio.test(festival)) festival = "Radio France";
+      else if(regex_nuit.test(festival)) festival = "Nuits d'O";
+      
       console.log(festival);
       festivalShortcut = festival.replace(/[_\W]+/g, "-").toLowerCase();
-      festivalShortcut = festivalShortcut.replace(/[^a-z]$/g, "");
    
       console.log(festivalShortcut);
       spectacles[index] = festivalShortcut;
@@ -282,7 +295,6 @@ var base_url="";
       // la première fois, l'index est forcément de 0
       if (!index) {
         festivals[festival] = Math.floor(index / 6);
-        console.log(festival);
         lienFestival = {name: festival, shortcut: festivalShortcut, page: 0};
         liensFestivals[0] = lienFestival;
         cpt ++;
@@ -290,7 +302,6 @@ var base_url="";
 
       // ensuite on teste si la propriété existe déjà
       else if (!festivals.hasOwnProperty(festival)) {
-        console.log(festival);
         indexFestival = Math.floor(index / 6);
         festivals[festival] = indexFestival;
         lienFestival = {name: festival, shortcut: festivalShortcut, page: indexFestival};
@@ -309,12 +320,13 @@ var base_url="";
       for (var i = 0; i < liensFestivals.length; i++) {
         linkFestivals += '<span id="link-top-ss-' + liensFestivals[i]['shortcut'] + '">' + liensFestivals[i]['name'] + '</span>';
       }
-      linkFestivals = '<div id="linkFestivalsSS">A l\'Affiche :  '+ linkFestivals + '</div>';
+      linkFestivals = '<div id="linkFestivalsSS"><!-- A l\'Affiche :  -->'+ linkFestivals + '</div>';
 
       // afichage des liens 
       $("#block-views-shows-block-1").prepend(linkFestivals);
 
       // écoute des événements sur les liens
+      console.log(liensFestivals);
       for (var i = 0; i < liensFestivals.length; i++) {
        (function(j){
          $('#link-top-ss-' + liensFestivals[j]['shortcut']).click(function() {
