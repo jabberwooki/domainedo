@@ -30,8 +30,10 @@ var base_url="";
       this.next_diapo = next_diapo;
       this.previous_diapo = previous_diapo;
       this.selected_diapo = selected_diapo;
+      this.manageLinksFestivals = manageLinksFestivals;
       
       var thediapo = this;
+      
       
       // création des boutons précédents et suivants et des boutons de contrôle
       (function(){
@@ -51,7 +53,7 @@ var base_url="";
                 $('#controler_'+j).click(function() {
                     thediapo.selected_diapo(j,thediapo);
                 });
-               })(i);     
+               })("i");     
           }
           
           $("#next_diapo").click(function() {
@@ -86,8 +88,7 @@ var base_url="";
               $(groupe_6).css({'margin-left':'34px'});
             }
       })();
-      
-      
+      thediapo.manageLinksFestivals(thediapo);
   }
   
   function next_diapo(thediapo){
@@ -179,6 +180,7 @@ var base_url="";
   }
 
     var diapo = new Diaporama();
+
     
  /*
   * Manage date display
@@ -252,4 +254,94 @@ var base_url="";
    ss_visible = false;
    link_shows_visible = true;
  }
+ function manageLinksFestivals(thediapo) {
+   /* récupération des intitulés des festivals */
+    var festivals = {};// l'objet qui stocke les noms de festivals dans ses propriétés
+    var spectacles = [];
+
+    var festival = '';
+    var festivalShortcut = '';
+    var indexFestival = 0;
+    var cpt = 0;
+    var linkFestivals = '';
+
+    var liensFestivals = []; // le tableau qui stocke les objets lienFestival
+    var lienFestival = {};
+    var regex_hiver = new RegExp('.*hiver.*',"i");
+    var regex_printemps = new RegExp('.*printemps.*',"i");
+    var regex_arabesques = new RegExp('.*arabesques.*',"i");
+    var regex_saper = new RegExp('.*saper.*',"i");
+    var regex_folies = new RegExp('.*folies.*',"i");
+    var regex_radio = new RegExp('.*radio.*',"i");
+    var regex_nuit = new RegExp('.*nuit.*',"i");
+
+    $('.field-name-field-festival .field-item', '#block-views-shows-block-1').each(function(index) {
+
+      festival = $(this).text();   
+      if(regex_hiver.test(festival)) festival = "Festival d'hiver";
+      else if(regex_printemps.test(festival)) festival = "Printemps des Comédiens";
+      else if(regex_arabesques.test(festival)) festival = "Arabesques";
+      else if(regex_saper.test(festival)) festival = "Saperlipopette";
+      else if(regex_folies.test(festival)) festival = "Folies d'O";
+      else if(regex_radio.test(festival)) festival = "Radio France";
+      else if(regex_nuit.test(festival)) festival = "Nuits d'O";
+      
+      console.log(festival);
+      festivalShortcut = festival.replace(/[_\W]+/g, "-").toLowerCase();
+   
+      console.log(festivalShortcut);
+      spectacles[index] = festivalShortcut;
+
+      // la première fois, l'index est forcément de 0
+      if (!index) {
+        festivals[festival] = Math.floor(index / 6);
+        lienFestival = {name: festival, shortcut: festivalShortcut, page: 0};
+        liensFestivals[0] = lienFestival;
+        cpt ++;
+      }
+
+      // ensuite on teste si la propriété existe déjà
+      else if (!festivals.hasOwnProperty(festival)) {
+        indexFestival = Math.floor(index / 6);
+        festivals[festival] = indexFestival;
+        lienFestival = {name: festival, shortcut: festivalShortcut, page: indexFestival};
+        liensFestivals[cpt] = lienFestival; // Couille dans le paté : il peuvent avoir le même index !
+        cpt ++;
+      }
+    });
+
+    /* S'il y a bien des festivals, mise en place des class et création des liens */
+    if (!jQuery.isEmptyObject(festivals)) {
+      $('.views-row', '#block-views-shows-block-1').each(function(index) {
+        $(this).addClass(spectacles[index]+' vignette-ss-show');
+      });
+
+      //création de la légende
+      for (var i = 0; i < liensFestivals.length; i++) {
+        linkFestivals += '<span id="link-top-ss-' + liensFestivals[i]['shortcut'] + '">' + liensFestivals[i]['name'] + '</span>';
+      }
+      linkFestivals = '<div id="linkFestivalsSS"><!-- A l\'Affiche :  -->'+ linkFestivals + '</div>';
+
+      // afichage des liens 
+      $("#block-views-shows-block-1").prepend(linkFestivals);
+
+      // écoute des événements sur les liens
+      console.log(liensFestivals);
+      for (var i = 0; i < liensFestivals.length; i++) {
+       (function(j){
+         $('#link-top-ss-' + liensFestivals[j]['shortcut']).click(function() {
+          thediapo.selected_diapo(liensFestivals[j]['page'], thediapo);
+          $('.vignette-ss-show:not(.'+liensFestivals[j]['shortcut']+')').fadeTo( "slow", 0.3 );
+          $('.vignette-ss-show.'+liensFestivals[j]['shortcut']).fadeTo( "slow", 1 );
+          $('#linkFestivalsSS span:not(#link-top-ss-'+liensFestivals[j]['shortcut']+')').fadeTo( "slow", 0.3 );
+          $('#linkFestivalsSS span#link-top-ss-'+liensFestivals[j]['shortcut']).fadeTo( "slow", 1 );
+        });
+       })(i);
+        
+        
+      }
+      //console.log(linkFestivals);
+      //console.log(liensFestivals);
+    }
+  }
 });

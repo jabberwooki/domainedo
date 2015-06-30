@@ -558,6 +558,68 @@ div.group6{
 #buttons_controlers div.selected_controler{
     background: url(../images/icons/on-off-home-ss.png) no-repeat 0 0;
 }
+/* slideshow festivals ********************************************************/
+.front #block-views-shows-block-1 .views-row.festival-d-hiver{
+  border-top: 2px solid #888;
+  padding-top: 2px;
+}
+#link-top-ss-festival-d-hiver{
+  border-bottom: 2px solid #888;
+}
+.front #block-views-shows-block-1 .views-row.saperlipopette{
+  border-top: 2px solid #c50000;
+  padding-top: 2px;
+}
+#link-top-ss-saperlipopette{
+  border-bottom: 2px solid #c50000;
+}
+.front #block-views-shows-block-1 .views-row.arabesques{
+  border-top: 2px solid #C97845;
+  padding-top: 2px;
+}
+#link-top-ss-arabesques{
+  border-bottom: 2px solid #C97845;
+}
+.front #block-views-shows-block-1 .views-row.printemps-des-com-diens{
+  border-top: 2px solid #1A4F81;
+  padding-top: 2px;
+}
+#link-top-ss-printemps-des-com-diens{
+  border-bottom: 2px solid #1A4F81;
+}
+.front #block-views-shows-block-1 .views-row.folies-d-o{
+  border-top: 2px solid #EC008C;
+  padding-top: 2px;
+}
+#link-top-ss-folies-d-o{
+  border-bottom: 2px solid #EC008C;
+}
+.front #block-views-shows-block-1 .views-row.radio-france{
+  border-top: 2px solid #289728;
+  padding-top: 2px;
+}
+#link-top-ss-radio-france{
+  border-bottom: 2px solid #289728;
+}
+.front #block-views-shows-block-1 .views-row.nuits-d-o{
+  border-top: 2px solid #003344;
+  padding-top: 2px;
+}
+#link-top-ss-nuits-d-o{
+  border-bottom: 2px solid #003344;
+}
+#linkFestivalsSS{
+  position: absolute;
+  top: -2px;
+  left: 25px;
+}
+#linkFestivalsSS span{
+  margin-right: 10px;
+}
+#linkFestivalsSS span{
+  cursor: pointer;
+}
+
 /* Menus spectacles ***********************************************************/
 div.menu-block-domainedo-shows-tab-menu > ul,.block-menu-block-1 ul{
     height : 25px;
