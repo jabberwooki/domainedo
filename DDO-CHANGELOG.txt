@@ -1,3 +1,7 @@
+Domaine d'O 1.0.9 - 2015-06-09
+----------------------------
+Add festival in home slideshow with feature shows
+
 Domaine d'O 1.0.8 - 2015-06-09
 ----------------------------
 JS and CSS modified to improve home slideshow (festivals links added).

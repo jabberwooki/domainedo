@@ -49,7 +49,7 @@ function domainedo_shows_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'frontpage_block';
   $ds_fieldsetting->settings = array(
     'title' => array(
-      'weight' => '1',
+      'weight' => '4',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -317,15 +317,17 @@ function domainedo_shows_ds_layout_settings_info() {
       'ds_content' => array(
         0 => 'group_td',
         1 => 'group_vsr',
-        2 => 'title',
-        3 => 'field_show_dates',
-        4 => 'field_thumbnail',
-        5 => 'field_reservation',
+        2 => 'field_festival',
+        3 => 'title',
+        4 => 'field_show_dates',
+        5 => 'field_thumbnail',
+        6 => 'field_reservation',
       ),
     ),
     'fields' => array(
       'group_td' => 'ds_content',
       'group_vsr' => 'ds_content',
+      'field_festival' => 'ds_content',
       'title' => 'ds_content',
       'field_show_dates' => 'ds_content',
       'field_thumbnail' => 'ds_content',
