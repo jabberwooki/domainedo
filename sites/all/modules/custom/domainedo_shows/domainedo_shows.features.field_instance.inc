@@ -2007,10 +2007,13 @@ function domainedo_shows_field_default_field_instances() {
         'weight' => 7,
       ),
       'frontpage_block' => array(
-        'label' => 'inline',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 22,
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 3,
       ),
       'frontpage_block_mobile' => array(
         'label' => 'inline',
@@ -3827,7 +3830,7 @@ function domainedo_shows_field_default_field_instances() {
           'multiple_to' => '',
         ),
         'type' => 'date_default',
-        'weight' => 2,
+        'weight' => 5,
       ),
       'frontpage_block_mobile' => array(
         'label' => 'hidden',

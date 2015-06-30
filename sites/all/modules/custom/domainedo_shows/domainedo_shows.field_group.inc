@@ -183,8 +183,9 @@ function domainedo_shows_field_group_info() {
     'label' => 'Titre et dates',
     'weight' => '0',
     'children' => array(
-      0 => 'field_show_dates',
-      1 => 'title',
+      0 => 'field_festival',
+      1 => 'field_show_dates',
+      2 => 'title',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -308,8 +309,8 @@ function domainedo_shows_field_group_info() {
     'label' => 'Vignette et statut réservation',
     'weight' => '1',
     'children' => array(
-      0 => 'field_thumbnail',
-      1 => 'field_reservation',
+      0 => 'field_reservation',
+      1 => 'field_thumbnail',
     ),
     'format_type' => 'div',
     'format_settings' => array(
