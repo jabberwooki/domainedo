@@ -1,3 +1,7 @@
+Domaine d'O 1.0.8 - 2015-06-09
+----------------------------
+JS and CSS modified to improve home slideshow (festivals links added).
+
 Domaine d'O 1.0.7 - 2015-06-09
 ----------------------------
 .htaccess modified to enlarge upload capacity to 10Mo
