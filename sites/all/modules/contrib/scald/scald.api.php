@@ -40,6 +40,42 @@
  */
 
 /**
+ * Define information about display contexts provided by a module.
+ *
+ * A Scald display context provider has full control and is also responsible for
+ * the display of fields in the atom. If you don't want very optimized context,
+ * then you can create custom context using Scald UI (in this case Scald core is
+ * the context provider of those custom contexts).
+ *
+ * Custom contexts are stored in the 'scald_custom_contexts' variable.
+ *
+ * @return array
+ *   An array of display contexts. This array is keyed by the machine-readable
+ *   context name. Each context is defined as an associative array
+ *   containing the following item:
+ *   - "title": the human-readable name of the context.
+ *   - "description": the longer description of the context.
+ *   - "render_language": atom source language. Required for SAS conversion.
+ *   - "parseable": whether the atom can be wrapped in HTML comments
+ *     to be identified inside markup.
+ *   - "hidden": whether the atom is invisible. Defaults to FALSE.
+ *   - "formats": array of supported formats for each atom type. Currently
+ *     unused.
+ */
+function hook_scald_contexts() {
+  return array(
+    'custom_context' => array(
+      'title'           => t('Custom context'),
+      'description'     => t('A context to provide customized rendering.'),
+      'render_language' => 'XHTML',
+      'parseable'       => TRUE,
+      'hidden'          => FALSE,
+      'formats'         => array(),
+    ),
+  );
+}
+
+/**
  * Define information about atom providers provided by a module.
  *
  * @return
@@ -55,6 +91,39 @@ function hook_scald_atom_providers() {
   // This code will never be hit, but is necessary to mark the string
   // for translation on localize.d.o
   t('Image hosted on Flickr');
+}
+
+/**
+ * Define additional information about atom providers provided by a module.
+ *
+ * @return
+ *   An array of options per provider. This array is keyed by the unified atom type.
+ *   Each provider can define any number of additional options to be used elsewhere.
+ */
+function hook_scald_atom_providers_opt() {
+  // The starting_step can be used to skip the add step
+  // when the provider does not need it.
+  return array(
+    'gallery' => array(
+      'starting_step' => 'options',
+    ),
+  );
+}
+
+/**
+ * Alters the list of providers and their labels.
+ */
+function hook_scald_atom_providers_alter(&$types) {
+  $types['image']['scald_image'] = 'Renamed Image Provider';
+}
+
+/**
+ * Alters the additional options of the providers.
+ * Do not alter the label in this hook. It is only there for simplicity.
+ */
+function hook_scald_atom_providers_opt_alter(&$types) {
+  // In case the provider changed the starting step, It can be changed back.
+  $types['gallery']['scald_gallery']['starting_step'] = 'add';
 }
 
 /**
@@ -168,7 +237,7 @@ function hook_scald_register_atom($atom, $mode) {
 /**
  * Respond to atom update.
  *
- /* Similar to hook_scald_register_atom(), but this hook is invoked for existing
+ * Similar to hook_scald_register_atom(), but this hook is invoked for existing
  * atoms.
  *
  * @param $atom

@@ -63,6 +63,7 @@ CKEDITOR.dialog.add('atomProperties', function(editor) {
       Drupal.dnd.fetchAtom(context, atom.sid, function() {
         var html = Drupal.theme('scaldEmbed', Drupal.dnd.Atoms[atom.sid], context, atom.options);
         CKEDITOR.dom.element.createFromHtml(html).replace(Drupal.dnd.atomCurrent);
+        Drupal.dnd.protectAtom($(editor.document.$).find('.dnd-atom-wrapper'));
       });
     },
     contents: [
@@ -109,10 +110,11 @@ CKEDITOR.dialog.add('atomProperties', function(editor) {
               if (Drupal.dnd.Atoms[atom.sid].meta.type === 'image') {
                 this.setValue(atom.options.link);
                 this.enable();
+                this.getElement().show();
               }
               else {
-                this.setValue(editor.lang.dnd.link_image_only);
                 this.disable();
+                this.getElement().hide();
               }
             }
           }
