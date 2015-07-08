@@ -59,6 +59,7 @@ function domainedo_media_default_scald_context_config() {
       'settings' => array(),
     ),
   );
+  $context_config->data = array();
   $export['block'] = $context_config;
 
   $context_config = new stdClass();
@@ -108,6 +109,7 @@ function domainedo_media_default_scald_context_config() {
       '*' => 'default',
     ),
   );
+  $context_config->data = array();
   $export['event_home'] = $context_config;
 
   $context_config = new stdClass();
@@ -149,6 +151,7 @@ function domainedo_media_default_scald_context_config() {
         'big_style' => 'large-675',
         'theme' => 'classic',
         'options' => '',
+        'fullscreen_link' => 1,
       ),
     ),
     'image' => array(
@@ -167,6 +170,7 @@ function domainedo_media_default_scald_context_config() {
       'settings' => array(),
     ),
   );
+  $context_config->data = array();
   $export['full'] = $context_config;
 
   $context_config = new stdClass();
@@ -216,6 +220,7 @@ function domainedo_media_default_scald_context_config() {
       '*' => 'default',
     ),
   );
+  $context_config->data = array();
   $export['full_show'] = $context_config;
 
   $context_config = new stdClass();
@@ -275,6 +280,7 @@ function domainedo_media_default_scald_context_config() {
       'settings' => array(),
     ),
   );
+  $context_config->data = array();
   $export['list'] = $context_config;
 
   $context_config = new stdClass();
@@ -324,6 +330,7 @@ function domainedo_media_default_scald_context_config() {
       '*' => 'default',
     ),
   );
+  $context_config->data = array();
   $export['petit_100'] = $context_config;
 
   $context_config = new stdClass();
@@ -383,6 +390,7 @@ function domainedo_media_default_scald_context_config() {
       'settings' => array(),
     ),
   );
+  $context_config->data = array();
   $export['sdl_editor_representation'] = $context_config;
 
   $context_config = new stdClass();
@@ -434,6 +442,7 @@ function domainedo_media_default_scald_context_config() {
       'settings' => array(),
     ),
   );
+  $context_config->data = array();
   $export['sdl_library_item'] = $context_config;
 
   $context_config = new stdClass();
@@ -485,6 +494,7 @@ function domainedo_media_default_scald_context_config() {
       'settings' => array(),
     ),
   );
+  $context_config->data = array();
   $export['sdl_preview'] = $context_config;
 
   $context_config = new stdClass();
@@ -535,6 +545,7 @@ function domainedo_media_default_scald_context_config() {
       'settings' => array(),
     ),
   );
+  $context_config->data = array();
   $export['slideshow_home'] = $context_config;
 
   $context_config = new stdClass();
@@ -586,6 +597,7 @@ function domainedo_media_default_scald_context_config() {
       'settings' => array(),
     ),
   );
+  $context_config->data = array();
   $export['title'] = $context_config;
 
   $context_config = new stdClass();
@@ -635,6 +647,7 @@ function domainedo_media_default_scald_context_config() {
       '*' => 'default',
     ),
   );
+  $context_config->data = array();
   $export['zoom'] = $context_config;
 
   return $export;
