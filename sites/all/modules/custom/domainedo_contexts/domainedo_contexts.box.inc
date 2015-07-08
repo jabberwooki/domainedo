@@ -85,11 +85,13 @@ Tél. : 0800 200 165 - appel gratuit depuis un poste fixe</p>
   $box->options = array(
     'body' => array(
       'value' => '<ul class="ul-sprite">
-            <li class="sprite sprite-facebook"><a target="_blank" onclick="_gaq.push([\'_trackEvent\', \'socialmedia\', \'click\', \'facebook\',1,true]);" href="http://www.facebook.com/domaine.do">facebook</a></li>
-            <li class="sprite sprite-twitter"><a target="_blank" onclick="_gaq.push([\'_trackEvent\', \'socialmedia\', \'click\', \'twitter\',1,true]);"href="https://twitter.com/domainedo">Twitter</a></li>
-            <li class="sprite sprite-youtube"><a target="_blank" onclick="_gaq.push([\'_trackEvent\', \'socialmedia\', \'click\', \'youtube\',1,true]);" href="https://www.youtube.com/user/domainedO">youtube</a></li>
-            <li class="sprite sprite-tripadvisor"><a target="_blank" onclick="_gaq.push([\'_trackEvent\', \'socialmedia\', \'click\', \'tripadvisor\',1,true]);" href="http://www.tripadvisor.fr/Attraction_Review-g187153-d2480803-Reviews-Domaine_d_O-Montpellier_Herault_Languedoc_Roussillon.html">tripadvisor</a></li>
-        </ul>',
+	<li class="sprite sprite-facebook"><a href="http://www.facebook.com/domaine.do" onclick="_gaq.push([\'_trackEvent\', \'socialmedia\', \'click\', \'facebook\',1,true]);" target="_blank">facebook</a></li>
+	<li class="sprite sprite-twitter"><a href="https://twitter.com/domainedo" onclick="_gaq.push([\'_trackEvent\', \'socialmedia\', \'click\', \'twitter\',1,true]);" target="_blank">Twitter</a></li>
+	<li class="sprite sprite-youtube"><a href="https://www.youtube.com/user/domainedO" onclick="_gaq.push([\'_trackEvent\', \'socialmedia\', \'click\', \'youtube\',1,true]);" target="_blank">youtube</a></li>
+	<li class="sprite sprite-tripadvisor"><a href="http://www.tripadvisor.fr/Attraction_Review-g187153-d2480803-Reviews-Domaine_d_O-Montpellier_Herault_Languedoc_Roussillon.html" onclick="_gaq.push([\'_trackEvent\', \'socialmedia\', \'click\', \'tripadvisor\',1,true]);" target="_blank">tripadvisor</a></li>
+<li class="sprite sprite-gplus"><a href="https://plus.google.com/100786072395186657061/about" onclick="_gaq.push([\'_trackEvent\', \'socialmedia\', \'click\', \'gplus\',1,true]);" target="_blank">google +</a></li>
+
+</ul>',
       'format' => 'full_html',
     ),
     'additional_classes' => '',

@@ -56,6 +56,7 @@ function domainedo_team_default_scald_context_config() {
       '*' => 'default',
     ),
   );
+  $context_config->data = array();
   $export['polaroid'] = $context_config;
 
   return $export;

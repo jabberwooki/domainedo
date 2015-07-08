@@ -15,6 +15,7 @@ function domainedo_media_user_default_permissions() {
     'name' => 'access scald dnd library',
     'roles' => array(
       'administrator' => 'administrator',
+      'redacteur' => 'redacteur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'scald_dnd_library',
@@ -43,6 +44,8 @@ function domainedo_media_user_default_permissions() {
     'name' => 'administer scald',
     'roles' => array(
       'administrator' => 'administrator',
+      'redacteur' => 'redacteur',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'scald',
   );
@@ -52,6 +55,7 @@ function domainedo_media_user_default_permissions() {
     'name' => 'administer scald atoms',
     'roles' => array(
       'administrator' => 'administrator',
+      'redacteur' => 'redacteur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'scald',
@@ -62,6 +66,8 @@ function domainedo_media_user_default_permissions() {
     'name' => 'bypass atom access restrictions',
     'roles' => array(
       'administrator' => 'administrator',
+      'redacteur' => 'redacteur',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'scald',
   );
@@ -80,42 +86,65 @@ function domainedo_media_user_default_permissions() {
   // Exported permission: 'create atom of audio type'.
   $permissions['create atom of audio type'] = array(
     'name' => 'create atom of audio type',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'redacteur' => 'redacteur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'scald',
   );
 
   // Exported permission: 'create atom of file type'.
   $permissions['create atom of file type'] = array(
     'name' => 'create atom of file type',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'redacteur' => 'redacteur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'scald',
   );
 
   // Exported permission: 'create atom of gallery type'.
   $permissions['create atom of gallery type'] = array(
     'name' => 'create atom of gallery type',
-    'roles' => array(),
+    'roles' => array(
+      'redacteur' => 'redacteur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'scald',
   );
 
   // Exported permission: 'create atom of image type'.
   $permissions['create atom of image type'] = array(
     'name' => 'create atom of image type',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'redacteur' => 'redacteur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'scald',
   );
 
   // Exported permission: 'create atom of twitter type'.
   $permissions['create atom of twitter type'] = array(
     'name' => 'create atom of twitter type',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'redacteur' => 'redacteur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'scald',
   );
 
   // Exported permission: 'create atom of video type'.
   $permissions['create atom of video type'] = array(
     'name' => 'create atom of video type',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'redacteur' => 'redacteur',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'scald',
   );
 
@@ -179,6 +208,8 @@ function domainedo_media_user_default_permissions() {
     'name' => 'fetch own atom',
     'roles' => array(
       'administrator' => 'administrator',
+      'redacteur' => 'redacteur',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'scald',
   );
@@ -188,6 +219,8 @@ function domainedo_media_user_default_permissions() {
     'name' => 'restrict atom access',
     'roles' => array(
       'administrator' => 'administrator',
+      'redacteur' => 'redacteur',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'scald',
   );
