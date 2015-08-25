@@ -835,6 +835,7 @@ body.node-type-show div.view-mode-full div.group-left .field-name-field-by .fiel
   width: 0px;
   height: 22px;
   overflow: hidden;
+  display: none;
 }
 .galleria-fullscreen-link:hover{
   cursor: pointer;
