@@ -814,11 +814,36 @@ body.node-type-show div.view-mode-full div.group-left .field-name-field-by .fiel
 body.node-type-show div.view-mode-full div.group-left .field-name-field-by .field-item.even{
   padding-right : 5px;
 }
-/* Gallery ********************************************************************
-.galleria-container {
-    background: none repeat scroll 0 0 #FFC929;
-    border-radius: 6px;
-}*/
+/* Gallery ********************************************************************/
+#scald-gallery{
+  position: relative;
+  margin-top: 30px;
+}
+.galleria-theme-classic{
+  background-color: #CDD1DC;
+  border-radius: 6px;
+}
+.galleria-fullscreen-link{
+  position: absolute;
+  top: 14px;
+  left: 50px;
+  color : black;
+  z-index: 10;
+  padding-left: 22px;
+  background: white url(../images/icons/fullscreen.png) no-repeat 1px 50%;
+  text-indent: -4000px;
+  width: 0px;
+  height: 22px;
+  overflow: hidden;
+  display: none;
+}
+.galleria-fullscreen-link:hover{
+  cursor: pointer;
+  
+}
+.galleria-theme-classic .galleria-info-text{
+  padding-top: 30px;
+}
 .block-evenements-block-2{
         clear:both;
 }

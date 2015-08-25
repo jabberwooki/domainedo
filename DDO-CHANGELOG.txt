@@ -1,3 +1,7 @@
+Domaine d'O 1.0.10 - 2015-08-25
+----------------------------
+Gallery updated with new parameters {"lightbox": true,"showInfo": true,"idleMode": false}
+
 Domaine d'O 1.0.9 - 2015-06-09
 ----------------------------
 Add festival in home slideshow with feature shows
