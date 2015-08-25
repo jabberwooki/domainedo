@@ -150,7 +150,7 @@ function domainedo_media_default_scald_context_config() {
         'normal_style' => 'large-675',
         'big_style' => 'large-675',
         'theme' => 'classic',
-        'options' => '',
+        'options' => '{"lightbox": true,"showInfo": true,"idleMode": false}',
         'fullscreen_link' => 1,
       ),
     ),
