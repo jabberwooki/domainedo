@@ -573,6 +573,58 @@ body.front #block-views-evenements-block-1 .view-footer a{
   top :-22px;
   left  : 140px;
 }
+/* Menus déroulant superfish avec ajout de date ******************************/
+/*#superfish-1>li>ul>li.sf-depth-2>a{
+    position: relative;
+}
+#superfish-1>li>ul>li.sf-depth-2>a>span{
+    position: absolute;
+    display: table;
+    right: 0;
+    top: 10px;
+    font-size: 0.7em;
+    text-transform: none;
+    text-align: right;
+    padding: 3px 5px 3px 3px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 3px;
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+#superfish-1>li>ul>li.sf-depth-2>a>span>span{
+    color: #C20000    ;
+    opacity: 1;
+}*/
+/*#superfish-1>li>ul>li.sf-depth-2>a>span{
+    position: absolute;
+    display: table;
+    right: 0;
+    top: 10px;
+    font-size: 0.7em;
+    text-transform: none;
+    text-align: right;
+    padding: 3px 5px 3px 3px;
+
+}
+#superfish-1>li>ul>li.sf-depth-2>a>span>span{
+    color: #FFFFFF    ;
+}*/
+
+#superfish-1>li>ul>li.sf-depth-2>a.li-date{
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+#superfish-1>li>ul>li.sf-depth-2>a>span{
+    display: block;
+    font-size: 0.7em;
+    text-transform: none;
+    padding: 3px 5px 3px 0;
+}
+
+
 /* Liste tous les spectacles **************************************************/
 .view-display-id-list .field-name-field-festival {
 position: relative;

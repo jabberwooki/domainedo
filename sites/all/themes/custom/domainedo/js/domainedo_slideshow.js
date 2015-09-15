@@ -97,7 +97,7 @@ var base_url="";
           
           if(!thediapo.selected_controler) {
             $(conteneur_long).animate({"left": "-="+(thediapo.largeur-100)+"px"}, "slow");
-            console.log("deplacement : "+(thediapo.largeur-100));
+            //console.log("deplacement : "+(thediapo.largeur-100));
           } else $(conteneur_long).animate({"left": "-="+(thediapo.largeur-69)+"px"}, "slow");
           
           thediapo.position_left += thediapo.largeur;
@@ -129,15 +129,15 @@ var base_url="";
   }
 
   function selected_diapo(num_controler,thediapo){
-      console.log("num_controler : "+num_controler);
+      //console.log("num_controler : "+num_controler);
       var mvt = (thediapo.selected_controler-num_controler);
-      console.log("mvt : "+mvt);
+      //console.log("mvt : "+mvt);
       var long_mvt = Math.abs(mvt)*(thediapo.largeur-69);
       if (mvt == -num_controler || !num_controler){
         long_mvt -= 31;
       }
       
-      console.log("deplacement : "+long_mvt);
+      //console.log("deplacement : "+long_mvt);
       //var id_new_selected = "#controler"+num_controler;
       //alert("controler cliqué : "+num_controler+" diapo affichée : "+thediapo.selected_controler+" long_mvt : "+long_mvt+" px");
       if (!mvt || ($(document).width() < 600)) {           
@@ -234,7 +234,7 @@ var base_url="";
       else if (!ss_visible && ($(window).width() > 740)) {
         $('#block-views-shows-block-1').show();
         ss_visible = true;
-        console.log('lien créé : '+link_shows_created+' lien visible : '+link_shows_visible);
+        //console.log('lien créé : '+link_shows_created+' lien visible : '+link_shows_visible);
         if(link_shows_created && link_shows_visible){
           $('#h2-js-shows').hide();
           link_shows_visible = false;
@@ -286,10 +286,10 @@ var base_url="";
       else if(regex_radio.test(festival)) festival = "Radio France";
       else if(regex_nuit.test(festival)) festival = "Nuits d'O";
       
-      console.log(festival);
+      //console.log(festival);
       festivalShortcut = festival.replace(/[_\W]+/g, "-").toLowerCase();
    
-      console.log(festivalShortcut);
+      //console.log(festivalShortcut);
       spectacles[index] = festivalShortcut;
 
       // la première fois, l'index est forcément de 0
@@ -326,7 +326,7 @@ var base_url="";
       $("#block-views-shows-block-1").prepend(linkFestivals);
 
       // écoute des événements sur les liens
-      console.log(liensFestivals);
+      //console.log(liensFestivals);
       for (var i = 0; i < liensFestivals.length; i++) {
        (function(j){
          $('#link-top-ss-' + liensFestivals[j]['shortcut']).click(function() {
@@ -340,8 +340,7 @@ var base_url="";
         
         
       }
-      //console.log(linkFestivals);
-      //console.log(liensFestivals);
+
     }
   }
 });
