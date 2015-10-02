@@ -1613,3 +1613,10 @@ body.node-type-news .field-name-field-news-only-video{
   top: -1000em;
   overflow: hidden;
 }
+/* Galleria ********************************************************************/
+h2.h2-lightbox{
+    z-index: 9999;
+}
+.galleria-theme-classic .galleria-info {
+    width: 200px;
+}

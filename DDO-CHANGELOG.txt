@@ -1,3 +1,7 @@
+Domaine d'O 1.0.12 - 2015-10-02
+----------------------------
+Galleria modified and smartphone bug menu fixed
+
 Domaine d'O 1.0.11 - 2015-09-15
 ----------------------------
 Add title on main menu 
