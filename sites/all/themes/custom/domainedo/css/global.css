@@ -1832,7 +1832,7 @@ body.page-espace-multimedia .form-type-bef-link {
 
 body.page-espace-multimedia .form-type-bef-link > a {
   display: block;
-  padding: 2px 15px 0 15px;
+  padding: 2px 11px 0 11px;
   text-decoration: none;
   color: #878787;
   margin: 0;
@@ -1853,6 +1853,11 @@ body.page-espace-multimedia .view-multimedia-space .view-content .view-grouping 
   float: left;
   margin-right: 5px;
 }
+
+body.node-type-news .field-name-field-news-only-video{
+  display: none;
+}
+
 
 /* liens réservation **********************************************************/
 @media screen and (max-width: 720px) {

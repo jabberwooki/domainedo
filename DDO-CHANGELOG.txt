@@ -1,3 +1,7 @@
+Domaine d'O 1.0.13 - 2015-11-10
+----------------------------
+Content type and view lettre info added
+
 Domaine d'O 1.0.12 - 2015-10-02
 ----------------------------
 Galleria modified and smartphone bug menu fixed
