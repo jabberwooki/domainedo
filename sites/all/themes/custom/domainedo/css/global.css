@@ -1895,6 +1895,7 @@ h2.h2-lightbox {
 .img-lettre-info{
   float: left;
   margin-right: 20px;
+  margin-bottom: 20px;
 }
 .h3-lettre-info{
   background-color: #F5F5F5;
