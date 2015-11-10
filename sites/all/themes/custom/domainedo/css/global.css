@@ -1897,3 +1897,7 @@ h2.h2-lightbox {
   margin-right: 5px;
   border-right: 5px solid white;
 }
+.send-info-letter{
+  font-size: 0.8em;
+  font-style: italic;
+}
