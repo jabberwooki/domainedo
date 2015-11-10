@@ -12,6 +12,7 @@ features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
 features[features_date_format][] = date_format_43
+features[features_date_type][] = date_type_court_sans_heure
 features[field_base][] = field_date_envoi
 features[field_base][] = field_url_mailchimp
 features[field_instance][] = node-lettre_info-body

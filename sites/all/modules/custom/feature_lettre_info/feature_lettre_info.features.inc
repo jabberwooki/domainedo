@@ -36,6 +36,22 @@ function feature_lettre_info_features_date_format_default() {
 }
 
 /**
+ * Implements hook_features_date_type_default().
+ */
+function feature_lettre_info_features_date_type_default() {
+  $fdt_config = array();
+
+  $fdt_config[] = array(
+    'is_new' => FALSE,
+    'module' => '',
+    'type' => 'court_sans_heure',
+    'title' => 'Court sans heure',
+    'locked' => 0,
+  );
+  return $fdt_config;
+}
+
+/**
  * Implements hook_node_info().
  */
 function feature_lettre_info_node_info() {

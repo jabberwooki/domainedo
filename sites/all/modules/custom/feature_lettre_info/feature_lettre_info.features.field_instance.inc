@@ -202,7 +202,7 @@ function feature_lettre_info_field_default_field_instances() {
       'rel_remove' => 'default',
       'title' => 'required',
       'title_maxlength' => 128,
-      'title_value' => '',
+      'title_value' => 'Voir la lettre d\'info en ligne',
       'url' => 0,
       'user_register_form' => FALSE,
       'validate_url' => 1,
