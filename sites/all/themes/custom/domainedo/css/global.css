@@ -1894,4 +1894,6 @@ h2.h2-lightbox {
 .h3-lettre-info{
   background-color: #F5F5F5;
   padding: 5px;
+  margin-right: 5px;
+  border-right: 5px solid white;
 }
