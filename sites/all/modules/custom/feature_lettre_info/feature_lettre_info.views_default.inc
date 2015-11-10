@@ -100,7 +100,7 @@ function feature_lettre_info_views_default_views() {
     </div>
     <p class="p-lettre-info">
       [body]
-      <br/>Envoyée le : [field_date_envoi]
+      <br/><span class="send-info-letter">Envoyée le : [field_date_envoi]</span>
     </p>
 </div>';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
@@ -153,7 +153,7 @@ function feature_lettre_info_views_default_views() {
     </div>
     <p class="p-lettre-info">
       [body]
-      <br/>Envoyée le : [field_date_envoi]
+      <br/><span class="send-info-letter">Envoyée le : [field_date_envoi]</span>
     </p>
 </div>'),
     t('Page'),
