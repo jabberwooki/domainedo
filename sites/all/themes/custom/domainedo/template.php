@@ -69,6 +69,7 @@ function omega_preprocess_html(&$variables) {
   if (drupal_match_path($path, $pattern)) {
     drupal_add_js(drupal_get_path('theme', 'domainedo'). '/js/map.js');
   }
+  drupal_add_js(drupal_get_path('theme', 'domainedo'). '/js/open-close.js');
 }
 
 
