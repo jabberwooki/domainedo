@@ -22,7 +22,7 @@ jQuery(function($) {
   var p_with_link_read_more_text = p_with_link_read_more.html();
 
   // récupération du texte avant et après le lien lire la suite ainsi que de l'intitulé du lien
-  var text_before_link = p_with_link_read_more_text.replace(/<a .*class="read-more".*>(.*)<\/a>(.*)/g, "");
+  var text_before_link = p_with_link_read_more_text.replace(/<a [^>]*class="read-more".*>(.*)<\/a>(.*)/g, "");
   var label_link= RegExp.$1;
   var text_after_link = $('<span id="span-after">' + RegExp.$2 + '</span>');
   text_before_link = $('<span id="span-before">' + text_before_link + '</span>');
