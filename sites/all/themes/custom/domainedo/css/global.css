@@ -7,6 +7,11 @@
   margin: 7px 2% 0 0;
 
 }
+/* Attentats Paris ****************************************************************************************************/
+#logos-top h1{
+  padding-left: 40px;
+  background: url(../images/logos/barre_deuil.png) no-repeat 0 0;
+}
 
 #logos-top h1 span {
   padding-left: 18px;
@@ -1895,6 +1900,7 @@ h2.h2-lightbox {
 .img-lettre-info{
   float: left;
   margin-right: 20px;
+  margin-bottom: 20px;
 }
 .h3-lettre-info{
   background-color: #F5F5F5;
@@ -1906,3 +1912,4 @@ h2.h2-lightbox {
   font-size: 0.8em;
   font-style: italic;
 }
+

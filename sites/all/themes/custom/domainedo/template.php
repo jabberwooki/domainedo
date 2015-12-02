@@ -55,7 +55,7 @@ function domainedo_date_nav_title($params) {
 	}
 }
 /**
- * Add a google font and load slideshow on frontpage
+ * Add a google font, load slideshow on frontpage and js files
  */
 function omega_preprocess_html(&$variables) {
   drupal_add_css('http://fonts.googleapis.com/css?family=Lato',array('type' => 'external'));
@@ -69,6 +69,7 @@ function omega_preprocess_html(&$variables) {
   if (drupal_match_path($path, $pattern)) {
     drupal_add_js(drupal_get_path('theme', 'domainedo'). '/js/map.js');
   }
+  drupal_add_js(drupal_get_path('theme', 'domainedo'). '/js/open-close.js');
 }
 
 

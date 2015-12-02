@@ -1,3 +1,7 @@
+Domaine d'O 1.0.14 - 2015-12-2
+----------------------------
+open-close.js added
+
 Domaine d'O 1.0.13 - 2015-11-10
 ----------------------------
 Content type and view lettre info added
