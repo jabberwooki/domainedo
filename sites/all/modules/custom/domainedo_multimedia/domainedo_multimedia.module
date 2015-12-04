@@ -10,6 +10,7 @@ include_once 'domainedo_multimedia.features.inc';
  * Implements hook_views_pre_render().
  */
 function domainedo_multimedia_views_pre_render(&$view) {
+
 	if ($view->name == 'multimedia') {
 		// Breadcrumb building.
 		$current_display = $view->current_display;
@@ -34,7 +35,6 @@ function domainedo_multimedia_views_pre_render(&$view) {
 				}
 				$i++;
 			}
-				
 			drupal_set_breadcrumb($breadcrumb);
 		}
 	}
@@ -52,3 +52,19 @@ function domainedo_multimedia_form_views_exposed_form_alter(&$form, &$form_state
 		$form['type']['#options'] = $options;
 	}
 }
+
+/**
+ * Implements hook_scald_atom_view().
+ * create the correct breadcrum for atoms in espace-multimedia menu
+ */
+function domainedo_multimedia_scald_atom_view() {
+  //Test if path alias begins with espace-multimedia
+  $path_alias = drupal_get_path_alias(current_path());
+  $pattern = "#espace-multimedia/[a-z]+#";
+  if(preg_match($pattern,$path_alias)){
+	$breadcrumb = array(l(t('Home'), '<front>'),l('Espace multimédia','espace-multimedia/'));
+	drupal_set_breadcrumb($breadcrumb);
+  }
+
+}
+
