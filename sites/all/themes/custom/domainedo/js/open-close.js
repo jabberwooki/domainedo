@@ -6,7 +6,9 @@ jQuery(function($) {
    * link with class "read-more" will hide next text and
    * paragraphes
    */
-if($('read-more').length){
+
+if($('.read-more').length){
+
   // lien pour fermer le paragraphe
   var link_close = $( '<a id="link-close-txt" href=".">Cacher le texte</a>' );
 
