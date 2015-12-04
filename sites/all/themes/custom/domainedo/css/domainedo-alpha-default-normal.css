@@ -196,7 +196,7 @@ ul#superfish-2 li.sf-depth-1 a{
 }
 .view-evenements.view-display-id-block_2  .views-row h3.title-event-list{
   padding-left : 30px;
-  background : transparent url(../images/icons/bg-h3-home-event.gif) no-repeat 0 50%;
+  background : transparent url(../images/icons/bg-h3-home-event.gif) no-repeat 0 15px;
 }
 
 .view-evenements.view-display-id-block_2  .views-row > .views-field-field-scald-image{
