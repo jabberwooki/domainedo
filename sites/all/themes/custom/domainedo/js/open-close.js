@@ -10,11 +10,14 @@ jQuery(function($) {
     cpt = 0,
     array_read_more = [];
 
-  // toutes les variables sont traitées comme des propriétés d'un objet. On crée
-  // un objet par lien ".read-more" et on stocke chaque objet dans le tableau
-  // array_read_more
+  /* toutes les variables sont traitées comme des propriétés d'un objet. On crée
+  un objet par lien ".read-more" et on stocke chaque objet dans le tableau
+  array_read_more */
+
   $('.read-more').each(function(){
+    // instanciation d'un objet littéral vide
     array_read_more[cpt] = {};
+
     // lien pour fermer les paragraphes
     array_read_more[cpt].link_close = $( '<a id="link-close-txt-' + cpt + '" href="." class="link-close-txt">Cacher le texte</a>' );
 
