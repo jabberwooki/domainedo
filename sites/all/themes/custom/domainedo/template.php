@@ -61,7 +61,8 @@ function omega_preprocess_html(&$variables) {
   drupal_add_css('http://fonts.googleapis.com/css?family=Lato',array('type' => 'external'));
   
    if ((in_array('front', $variables['classes_array']))){
-    drupal_add_js(drupal_get_path('theme', 'domainedo'). '/js/domainedo_slideshow.js');//Chargement du fichier js.
+     drupal_add_js(drupal_get_path('theme', 'domainedo'). '/js/domainedo_slideshow.js');//Chargement du fichier js.
+     drupal_add_js(drupal_get_path('theme', 'domainedo'). '/js/match-home-height.js');
   }
   
   $path = drupal_get_path_alias();

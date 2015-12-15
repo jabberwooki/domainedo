@@ -114,6 +114,10 @@ a.video {
 a.tram {
   background: #F5F5F5 url("../images/icons/montpellier-tramway.png") no-repeat scroll 5px 5px;
 }
+a.link-close-txt{
+  position: relative;
+  top: -20px;
+}
 
 /* images *********************************************************************/
 img {
