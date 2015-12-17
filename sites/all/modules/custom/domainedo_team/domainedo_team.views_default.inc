@@ -308,6 +308,7 @@ function domainedo_team_views_default_views() {
   $handler->display->display_options['filters']['field_person_dpt_tid']['table'] = 'field_data_field_person_dpt';
   $handler->display->display_options['filters']['field_person_dpt_tid']['field'] = 'field_person_dpt_tid';
   $handler->display->display_options['filters']['field_person_dpt_tid']['value'] = array(
+    553 => '553',
     511 => '511',
   );
   $handler->display->display_options['filters']['field_person_dpt_tid']['type'] = 'select';
