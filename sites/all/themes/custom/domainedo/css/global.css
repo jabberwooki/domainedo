@@ -1970,6 +1970,7 @@ body.node-type-festival .field-name-field-view-archives a:before{/*field-name-fi
 body.node-type-festival .field-name-field-programme-pdf a:hover:before,
 body.node-type-festival .field-name-link-shows a:hover:before,
 body.node-type-festival .field-name-field-feuilleter-en-ligne a:hover:before,
-body.node-type-festival .field-name-field-calendar-archive a:hover:before{
+body.node-type-festival .field-name-field-calendar-archive a:hover:before,
+body.node-type-festival .field-name-field-view-archives a:hover:before{
   color: #C10000;
 }
