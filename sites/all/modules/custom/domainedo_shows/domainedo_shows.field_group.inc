@@ -213,20 +213,24 @@ function domainedo_shows_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Champs domaine d\'O',
+    'label' => 'Liens et résultats',
     'weight' => '18',
     'children' => array(
       0 => 'field_calendar_archive',
       1 => 'field_no_result',
+      2 => 'field_feuilleter_en_ligne',
+      3 => 'field_programme_pdf',
+      4 => 'field_view_archives',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Liens et résultats',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-technical-fiels field-group-tab',
         'required_fields' => 1,
+        'classes' => 'group-technical-fiels field-group-tab',
+        'description' => '',
       ),
+      'formatter' => 'closed',
     ),
   );
   $export['group_technical_fiels|node|festival|form'] = $field_group;

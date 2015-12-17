@@ -360,7 +360,7 @@ function domainedo_shows_strongarm() {
       'display' => array(
         'sharethis' => array(
           'full' => array(
-            'weight' => '23',
+            'weight' => '24',
             'visible' => FALSE,
           ),
         ),

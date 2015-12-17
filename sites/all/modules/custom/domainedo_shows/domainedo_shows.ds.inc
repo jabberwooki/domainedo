@@ -17,13 +17,13 @@ function domainedo_shows_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'festival';
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
-    'link_shows' => array(
-      'weight' => '1',
+    'anchor_shows' => array(
+      'weight' => '12',
       'label' => 'hidden',
       'format' => 'default',
     ),
-    'anchor_shows' => array(
-      'weight' => '11',
+    'link_shows' => array(
+      'weight' => '1',
       'label' => 'hidden',
       'format' => 'default',
     ),
@@ -228,18 +228,19 @@ function domainedo_shows_ds_layout_settings_info() {
         2 => 'field_programme_pdf',
         3 => 'field_feuilleter_en_ligne',
         4 => 'field_calendar_archive',
-        5 => 'body',
-        6 => 'field_scald_file',
+        5 => 'field_view_archives',
+        6 => 'body',
+        7 => 'field_scald_file',
       ),
       'right' => array(
-        7 => 'field_festival_poster',
+        8 => 'field_festival_poster',
       ),
       'footer' => array(
-        8 => 'field_scald_video',
-        9 => 'field_scald_gallery',
-        10 => 'field_scald_sound',
-        11 => 'anchor_shows',
-        12 => 'field_festival_shows',
+        9 => 'field_scald_video',
+        10 => 'field_scald_gallery',
+        11 => 'field_scald_sound',
+        12 => 'anchor_shows',
+        13 => 'field_festival_shows',
       ),
     ),
     'fields' => array(
@@ -248,6 +249,7 @@ function domainedo_shows_ds_layout_settings_info() {
       'field_programme_pdf' => 'left',
       'field_feuilleter_en_ligne' => 'left',
       'field_calendar_archive' => 'left',
+      'field_view_archives' => 'left',
       'body' => 'left',
       'field_scald_file' => 'left',
       'field_festival_poster' => 'right',
