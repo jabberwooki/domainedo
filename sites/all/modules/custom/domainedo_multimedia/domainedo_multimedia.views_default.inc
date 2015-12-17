@@ -212,7 +212,7 @@ Morbi elementum augue eleifend, lacinia quam a, tincidunt mauris. Mauris consequ
   $handler->display->display_options['fields']['scald_thumbnail']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['scald_thumbnail']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['scald_thumbnail']['settings'] = array(
-    'image_style' => 'list_image_shows__240x180_',
+    'image_style' => 'polaroid',
     'image_link' => 'content',
   );
   $handler->display->display_options['defaults']['sorts'] = FALSE;
@@ -221,6 +221,7 @@ Morbi elementum augue eleifend, lacinia quam a, tincidunt mauris. Mauris consequ
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'multimedia_space:page_with_page_title_1';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_arguments'] = 'none';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -265,7 +266,7 @@ Morbi elementum augue eleifend, lacinia quam a, tincidunt mauris. Mauris consequ
   $handler->display->display_options['filters']['scald_tags_tid_1']['table'] = 'field_data_scald_tags';
   $handler->display->display_options['filters']['scald_tags_tid_1']['field'] = 'scald_tags_tid';
   $handler->display->display_options['filters']['scald_tags_tid_1']['value'] = array(
-    430 => '430',
+    508 => '508',
   );
   $handler->display->display_options['filters']['scald_tags_tid_1']['group'] = 1;
   $handler->display->display_options['filters']['scald_tags_tid_1']['type'] = 'select';
@@ -351,11 +352,10 @@ Morbi elementum augue eleifend, lacinia quam a, tincidunt mauris. Mauris consequ
   $handler->display->display_options['fields']['draggableviews']['table'] = 'scald_atoms';
   $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
   $handler->display->display_options['fields']['draggableviews']['label'] = '';
-  $handler->display->display_options['fields']['draggableviews']['exclude'] = TRUE;
   $handler->display->display_options['fields']['draggableviews']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['draggableviews']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['draggableviews']['hide_alter_empty'] = FALSE;
-  $handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 0;
+  $handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 1;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Draggableviews: Poids */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
@@ -374,39 +374,11 @@ Morbi elementum augue eleifend, lacinia quam a, tincidunt mauris. Mauris consequ
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
   /* Filter criterion: Atoms: Tags (scald_tags) */
-  $handler->display->display_options['filters']['scald_tags_tid']['id'] = 'scald_tags_tid';
-  $handler->display->display_options['filters']['scald_tags_tid']['table'] = 'field_data_scald_tags';
-  $handler->display->display_options['filters']['scald_tags_tid']['field'] = 'scald_tags_tid';
-  $handler->display->display_options['filters']['scald_tags_tid']['value'] = array(
-    62 => '62',
-    345 => '345',
-    80 => '80',
-    243 => '243',
-    132 => '132',
-    78 => '78',
-    32 => '32',
-  );
-  $handler->display->display_options['filters']['scald_tags_tid']['group'] = 1;
-  $handler->display->display_options['filters']['scald_tags_tid']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['scald_tags_tid']['expose']['operator_id'] = 'scald_tags_tid_op';
-  $handler->display->display_options['filters']['scald_tags_tid']['expose']['operator'] = 'scald_tags_tid_op';
-  $handler->display->display_options['filters']['scald_tags_tid']['expose']['identifier'] = 'scald_tags_tid';
-  $handler->display->display_options['filters']['scald_tags_tid']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-    4 => 0,
-    5 => 0,
-  );
-  $handler->display->display_options['filters']['scald_tags_tid']['expose']['reduce'] = TRUE;
-  $handler->display->display_options['filters']['scald_tags_tid']['type'] = 'select';
-  $handler->display->display_options['filters']['scald_tags_tid']['vocabulary'] = 'scald_tags';
-  /* Filter criterion: Atoms: Tags (scald_tags) */
   $handler->display->display_options['filters']['scald_tags_tid_1']['id'] = 'scald_tags_tid_1';
   $handler->display->display_options['filters']['scald_tags_tid_1']['table'] = 'field_data_scald_tags';
   $handler->display->display_options['filters']['scald_tags_tid_1']['field'] = 'scald_tags_tid';
   $handler->display->display_options['filters']['scald_tags_tid_1']['value'] = array(
-    430 => '430',
+    508 => '508',
   );
   $handler->display->display_options['filters']['scald_tags_tid_1']['group'] = 1;
   $handler->display->display_options['filters']['scald_tags_tid_1']['type'] = 'select';

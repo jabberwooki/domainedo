@@ -901,54 +901,17 @@ div.bef-checkboxes div.form-type-bef-checkbox.form-item-edit-field-show-type-tid
 body.node-type-festival .field-name-link-shows,
 body.node-type-festival .field-name-field-programme-pdf,
 body.node-type-festival .field-name-field-calendar-archive,
-body.node-type-festival .field-name-field-feuilleter-en-ligne {
+body.node-type-festival .field-name-field-feuilleter-en-ligne,
+body.node-type-festival .field-name-field-view-archives{
   display: inline-block;
+  vertical-align: top;
+  margin-right: 8px;
 }
 
-body.node-type-festival .field-name-link-shows a,
-body.node-type-festival .field-name-field-programme-pdf a,
-body.node-type-festival .field-name-field-calendar-archive a,
-body.node-type-festival .field-name-field-feuilleter-en-ligne a {
-  padding-top: 50px;
-  background: url(../images/icons/panier.png) no-repeat 50% 0;
-  display: block;
-  text-align: center;
-  margin-right: 15px;
-  width: 130px;
-}
 
-body.node-type-festival .field-name-link-shows a:hover {
-  background: url(../images/icons/panier.png) no-repeat 50% -302px;
-}
 
 body.node-type-festival .field-name-field-programme-pdf img {
   display: none;
-}
-
-body.node-type-festival .field-name-field-programme-pdf a {
-  background: url(../images/icons/pdf.png) no-repeat 50% 0;
-}
-
-body.node-type-festival .field-name-field-programme-pdf a:hover {
-  background: url(../images/icons/pdf.png) no-repeat 50% -302px;
-}
-
-body.node-type-festival .field-name-field-feuilleter-en-ligne a {
-  background: url(../images/icons/sheet.png) no-repeat 50% 0;
-}
-
-body.node-type-festival .field-name-field-feuilleter-en-ligne a:hover {
-  background: url(../images/icons/sheet.png) no-repeat 50% -302px;
-}
-
-body.node-type-festival .field-name-field-calendar-archive a {
-  background: url(../images/icons/calendar-big.png) no-repeat 50% 0;
-  margin-right: 0;
-  width: 80px;
-}
-
-body.node-type-festival .field-name-field-calendar-archive a:hover {
-  background: url(../images/icons/calendar-big.png) no-repeat 50% -302px;
 }
 
 .node-festival > .group-left {
@@ -1917,3 +1880,97 @@ h2.h2-lightbox {
   font-style: italic;
 }
 
+/* fontello icons *************************************************************/
+@font-face {
+  font-family: 'fontello';
+  src: url('../fontello/font/fontello.eot?90885294');
+  src: url('../fontello/font/fontello.eot?90885294#iefix') format('embedded-opentype'),
+  url('../fontello/font/fontello.woff?90885294') format('woff'),
+  url('../fontello/font/fontello.ttf?90885294') format('truetype'),
+  url('../fontello/font/fontello.svg?90885294#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon:before,
+body.node-type-festival .field-name-field-programme-pdf a:before,
+body.node-type-festival .field-name-link-shows a:before,
+body.node-type-festival .field-name-field-feuilleter-en-ligne a:before,
+body.node-type-festival .field-name-field-calendar-archive a:before,
+body.node-type-festival .field-name-field-view-archives a:before{
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1em;
+  speak: none;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 10px;
+  text-align: center;
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  color: lightslategray;
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* pdf **********************************************************/
+body.node-type-festival .field-name-field-programme-pdf a:before{
+  content: "\e823";
+}
+/* caddy **********************************************************/
+body.node-type-festival .field-name-link-shows a:before{
+  content: "\e863";
+}
+/* doc **********************************************************/
+body.node-type-festival .field-name-field-feuilleter-en-ligne a:before,
+ .doc:before{content: "\e804";
+ }
+ /* calendrier ***************************************************/
+body.node-type-festival .field-name-field-calendar-archive a:before{
+  content: "\e807";
+}
+/* archives ***************************************************/
+body.node-type-festival .field-name-field-view-archives a:before{
+  content: "\e862";
+}
+/* liens des festivals ********************************************************/
+body.node-type-festival .field-name-link-shows a,
+body.node-type-festival .field-name-field-programme-pdf a,
+body.node-type-festival .field-name-field-feuilleter-en-ligne a,
+body.node-type-festival .field-name-field-calendar-archive a,
+body.node-type-festival .field-name-field-view-archives a{
+  display: block;
+  max-width: 100px;
+  text-align: center;
+  text-decoration: none;
+}
+body.node-type-festival .field-name-link-shows a{
+  max-width: 130px;
+}
+body.node-type-festival .field-name-field-programme-pdf a:before,
+body.node-type-festival .field-name-link-shows a:before,
+body.node-type-festival .field-name-field-feuilleter-en-ligne a:before,
+body.node-type-festival .field-name-field-calendar-archive a:before,
+body.node-type-festival .field-name-field-view-archives a:before{/*field-name-field-view-archives*/
+  display: table;
+  font-size: 3em;
+  margin: 0 auto;
+  color: #ff6701;
+}
+body.node-type-festival .field-name-field-programme-pdf a:hover:before,
+body.node-type-festival .field-name-link-shows a:hover:before,
+body.node-type-festival .field-name-field-feuilleter-en-ligne a:hover:before,
+body.node-type-festival .field-name-field-calendar-archive a:hover:before,
+body.node-type-festival .field-name-field-view-archives a:hover:before{
+  color: #C10000;
+}
