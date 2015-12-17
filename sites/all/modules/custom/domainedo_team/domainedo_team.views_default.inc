@@ -270,6 +270,49 @@ function domainedo_team_views_default_views() {
   $handler->display->display_options['filters']['field_person_dpt_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_person_dpt_tid']['vocabulary'] = 'poles';
   $handler->display->display_options['block_description'] = 'Pôle technique';
+
+  /* Display: artistique */
+  $handler = $view->new_display('block', 'artistique', 'block_artistique');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Pôle artistique';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Draggableviews: Poids */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'personnes:page_1';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
+  /* Sort criterion: Contenu: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Contenu: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Contenu: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'personne' => 'personne',
+  );
+  /* Filter criterion: Contenu: Service (field_person_dpt) */
+  $handler->display->display_options['filters']['field_person_dpt_tid']['id'] = 'field_person_dpt_tid';
+  $handler->display->display_options['filters']['field_person_dpt_tid']['table'] = 'field_data_field_person_dpt';
+  $handler->display->display_options['filters']['field_person_dpt_tid']['field'] = 'field_person_dpt_tid';
+  $handler->display->display_options['filters']['field_person_dpt_tid']['value'] = array(
+    511 => '511',
+  );
+  $handler->display->display_options['filters']['field_person_dpt_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_person_dpt_tid']['vocabulary'] = 'poles';
+  $handler->display->display_options['block_description'] = 'Pôle artistique';
   $translatables['personnes'] = array(
     t('Master'),
     t('Personnes'),
@@ -291,6 +334,8 @@ function domainedo_team_views_default_views() {
     t('équipe administration'),
     t('technique'),
     t('Pôle technique'),
+    t('artistique'),
+    t('Pôle artistique'),
   );
   $export['personnes'] = $view;
 
