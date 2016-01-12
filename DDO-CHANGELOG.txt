@@ -1,3 +1,7 @@
+Domaine d'O 1.0.18 - 2016-01-12
+----------------------------
+Drupal core 7.34 updated to 7.41
+
 Domaine d'O 1.0.17 - 2015-12-17
 ----------------------------
 Feature teamp up : pole artistique added
