@@ -227,3 +227,25 @@ ul#superfish-2 li.sf-depth-1 a{
 body.front #block-views-evenements-block-1 div.view-content .views-field-body {
     width: 47%;
 }
+/* Page de liste microdata ******************************************/
+.microdata .group-left{
+  float: left;
+  width: 50%;
+}
+.microdata .group-right{
+  float: left;
+  width: 45%;
+  margin-left: 3%;
+}
+.microdata .date-display-single{
+  display: block;
+}
+.microdata .h3-microdata{
+  padding: 5px 15px 5px 5px;
+  background-color: #F5F5F5;
+  margin-bottom: 10px;
+}
+.microdata .link-title-microdata{
+  color: #000000;
+  text-decoration: none;
+}

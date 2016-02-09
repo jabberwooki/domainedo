@@ -160,7 +160,7 @@ function domainedo_superfish($variables) {
 }
 
 /*
- * Don't use this function. It dumps <nav> makup inside menus and so the accordion 
+ * Don't use this function. It dumps <nav> makup inside menus and so the accordion
  * menu doesn't work any more on smartphones - Yvan Douënel
  * 
  * function domainedo_menu_tree($variables) {
@@ -176,4 +176,21 @@ function domainedo_preprocess_image(&$variables) {
 }
 function domainedo_ds_field_expert($variables) {
   dpm($variables);
+}
+/**
+ * Returns HTML for a date element formatted as a single date.
+ */
+function domainedo_date_display_single($variables) {
+  $date = $variables['date'];
+  $timezone = $variables['timezone'];
+  $attributes = $variables['attributes'];
+
+  // Wrap the result with the attributes.
+  $output = '<span itemprop="startDate" class="date-display-single"' . drupal_attributes($attributes) . '>' . $date . $timezone . '</span>';
+
+  if ($variables['add_microdata']) {
+    $output .= '<meta' . drupal_attributes($variables['microdata']['value']['#attributes']) . '/>';
+  }
+
+  return $output;
 }

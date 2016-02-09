@@ -8,10 +8,10 @@
 
 }
 /* Attentats Paris ****************************************************************************************************/
-#logos-top h1{
+/*#logos-top h1{
   padding-left: 40px;
   background: url(../images/logos/barre_deuil.png) no-repeat 0 0;
-}
+}*/
 
 #logos-top h1 span {
   padding-left: 18px;
@@ -839,6 +839,12 @@ body.node-type-show #node_show_full_group_psr .field-name-field-scald-image img 
 .page-spectacles-tous-les-spectacles .view-id-shows .view-header .block-left-shows-info {
   display: none;
 }
+.page-spectacles-tous-les-spectacles .views-row{
+  position: relative;
+}
+.page-spectacles-tous-les-spectacles .views-row .reservation-status-4{
+  top: 51px;
+}
 
 #block-boxes-left-shows-info {
   width: 95%;
@@ -1019,9 +1025,11 @@ body.node-type-show div.view-mode-full div.group-left .field-name-field-by .fiel
 }
 
 .field-name-scald-authors.field-label-hidden {
+  display: block;
+}
+.front .field-name-scald-authors.field-label-hidden {
   display: none;
 }
-
 .node-type-show .field-name-scald-authors.field-label-hidden {
   display: block;
   margin: -20px 0 0 0;
@@ -1973,4 +1981,12 @@ body.node-type-festival .field-name-field-feuilleter-en-ligne a:hover:before,
 body.node-type-festival .field-name-field-calendar-archive a:hover:before,
 body.node-type-festival .field-name-field-view-archives a:hover:before{
   color: #C10000;
+}
+/* Microdata *************************************************************/
+.microdata-under-image{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: -1000em;
+  overflow: hidden;
 }

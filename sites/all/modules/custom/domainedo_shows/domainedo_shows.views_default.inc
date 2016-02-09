@@ -637,6 +637,9 @@ else {
   $handler = $view->new_display('page_with_page_title', 'Tous les spectacles', 'list');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Tous les spectacles au domaine d\'O';
+  $handler->display->display_options['defaults']['query'] = FALSE;
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['distinct'] = TRUE;
   $handler->display->display_options['defaults']['exposed_form'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
   $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Appliquer';
@@ -662,6 +665,13 @@ else {
       ),
     ),
   );
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['defaults']['header'] = FALSE;
   /* Header: Global: Block area */
@@ -694,6 +704,102 @@ else {
   $handler->display->display_options['empty']['view']['empty'] = TRUE;
   $handler->display->display_options['empty']['view']['view_to_insert'] = 'festivals:block';
   $handler->display->display_options['empty']['view']['inherit_arguments'] = TRUE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Contenu: Titre */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Contenu: Chemin */
+  $handler->display->display_options['fields']['path']['id'] = 'path';
+  $handler->display->display_options['fields']['path']['table'] = 'node';
+  $handler->display->display_options['fields']['path']['field'] = 'path';
+  $handler->display->display_options['fields']['path']['label'] = '';
+  $handler->display->display_options['fields']['path']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
+  /* Field: Contenu: Date(s) */
+  $handler->display->display_options['fields']['field_show_dates_1']['id'] = 'field_show_dates_1';
+  $handler->display->display_options['fields']['field_show_dates_1']['table'] = 'field_data_field_show_dates';
+  $handler->display->display_options['fields']['field_show_dates_1']['field'] = 'field_show_dates';
+  $handler->display->display_options['fields']['field_show_dates_1']['label'] = '';
+  $handler->display->display_options['fields']['field_show_dates_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_show_dates_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_show_dates_1']['settings'] = array(
+    'format_type' => 'medium',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  $handler->display->display_options['fields']['field_show_dates_1']['group_column'] = 'entity_id';
+  $handler->display->display_options['fields']['field_show_dates_1']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_show_dates_1']['separator'] = '';
+  /* Field: Contenu: Vignette du spectacle */
+  $handler->display->display_options['fields']['field_thumbnail']['id'] = 'field_thumbnail';
+  $handler->display->display_options['fields']['field_thumbnail']['table'] = 'field_data_field_thumbnail';
+  $handler->display->display_options['fields']['field_thumbnail']['field'] = 'field_thumbnail';
+  $handler->display->display_options['fields']['field_thumbnail']['label'] = '';
+  $handler->display->display_options['fields']['field_thumbnail']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_thumbnail']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_thumbnail']['click_sort_column'] = 'sid';
+  $handler->display->display_options['fields']['field_thumbnail']['type'] = 'list';
+  $handler->display->display_options['fields']['field_thumbnail']['settings'] = array(
+    'link' => '1',
+  );
+  $handler->display->display_options['fields']['field_thumbnail']['group_column'] = 'entity_id';
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div itemscope="" itemtype="http://schema.org/TheaterEvent" class="microdata">
+  <a class="link-title-microdata" href="http://www.domaine-do-34.eu[path]"><h3 class="h3-microdata"
+                                                    itemprop="name">[title]</h3>
+  </a>
+
+  <div class="group-left" style="position:relative;">
+    [field_thumbnail]
+    <div class="microdata-under-image">
+    <div itemprop="location" itemscope=""
+         itemtype="http://schema.org/PerformingArtsTheater">
+      <meta itemprop="name" content="Domaine d\'O"/>
+      <div itemprop="name">Domaine d\'O</div>
+      <link itemprop="sameAs" href="http://www.domaine-do-34.eu/"/>
+      <a itemprop="url" href="http://www.domaine-do-34.eu/contact">
+        Domaine d\'O
+      </a>
+       <span itemprop="address" itemscope
+             itemtype="http://schema.org/PostalAddress">
+            <span itemprop="streetAddress">178 Rue de la Carriérasse,</span>
+            <span itemprop="postalCode">34090 </span>
+            <span itemprop="addressLocality"> Montpellier</span>,
+            <meta itemprop="addressCountry" content="FR"/>France
+        </span>
+      <span itemprop="telephone">0 800 20 01 65</span>
+    </div>
+    <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+      <a itemprop="url" href="http://www.domaine-do-34.eu[path]">Voir la fiche complète de [title]</a>
+    </div>
+   </div>
+  </div>
+  <div class="group-right">
+    <span>[field_show_dates_1]</span>
+    <div class="microdata-body"></div>
+  </div>
+
+</div>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  /* Field: Contenu: Réservation */
+  $handler->display->display_options['fields']['field_reservation']['id'] = 'field_reservation';
+  $handler->display->display_options['fields']['field_reservation']['table'] = 'field_data_field_reservation';
+  $handler->display->display_options['fields']['field_reservation']['field'] = 'field_reservation';
+  $handler->display->display_options['fields']['field_reservation']['label'] = '';
+  $handler->display->display_options['fields']['field_reservation']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Contenu: Published */
@@ -875,6 +981,42 @@ else {
     t('Shows list filter'),
     t('Right info'),
     t('No result info'),
+    t('<div itemscope="" itemtype="http://schema.org/TheaterEvent" class="microdata">
+  <a class="link-title-microdata" href="http://www.domaine-do-34.eu[path]"><h3 class="h3-microdata"
+                                                    itemprop="name">[title]</h3>
+  </a>
+
+  <div class="group-left" style="position:relative;">
+    [field_thumbnail]
+    <div class="microdata-under-image">
+    <div itemprop="location" itemscope=""
+         itemtype="http://schema.org/PerformingArtsTheater">
+      <meta itemprop="name" content="Domaine d\'O"/>
+      <div itemprop="name">Domaine d\'O</div>
+      <link itemprop="sameAs" href="http://www.domaine-do-34.eu/"/>
+      <a itemprop="url" href="http://www.domaine-do-34.eu/contact">
+        Domaine d\'O
+      </a>
+       <span itemprop="address" itemscope
+             itemtype="http://schema.org/PostalAddress">
+            <span itemprop="streetAddress">178 Rue de la Carriérasse,</span>
+            <span itemprop="postalCode">34090 </span>
+            <span itemprop="addressLocality"> Montpellier</span>,
+            <meta itemprop="addressCountry" content="FR"/>France
+        </span>
+      <span itemprop="telephone">0 800 20 01 65</span>
+    </div>
+    <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+      <a itemprop="url" href="http://www.domaine-do-34.eu[path]">Voir la fiche complète de [title]</a>
+    </div>
+   </div>
+  </div>
+  <div class="group-right">
+    <span>[field_show_dates_1]</span>
+    <div class="microdata-body"></div>
+  </div>
+
+</div>'),
     t('Festival'),
     t('Type de spectacle'),
     t('Accueil'),
