@@ -1383,6 +1383,9 @@ body.node-type-show div.view-mode-full div.group-left .field-name-field-by .fiel
   div.field-name-field-festival-poster {
     display: none;
   }
+  img[alt=anonyme]{
+    display: none;
+  }
 
 }
 
@@ -1488,92 +1491,6 @@ body.node-type-show div.view-mode-full div.group-left .field-name-field-by .fiel
   /*margin-right: 3px;*/
 }
 
-.page-node-415 .views-row {
-  float: left;
-  width: 300px;
-  background: url(../images/polaroid.jpg) no-repeat 0 0;
-  transform: rotate(7deg);
-  -moz-transform: rotate(7deg); /*firefox*/
-  -webkit-transform: rotate(7deg); /*Chrome, Safari*/
-  -o-transform: rotate(7deg); /*Opera*/
-
-}
-
-.page-node-415 .views-row-1 {
-  transform: rotate(-3deg);
-  -moz-transform: rotate(-3deg); /*firefox*/
-  -webkit-transform: rotate(-3deg); /*Chrome, Safari*/
-  -o-transform: rotate(-3deg); /*Opera*/
-  position: relative;
-  left: 30px;
-  top: -20px;
-}
-
-.page-node-415 .views-row-2 {
-  transform: rotate(7deg);
-  -moz-transform: rotate(7deg); /*firefox*/
-  -webkit-transform: rotate(7deg); /*Chrome, Safari*/
-  -o-transform: rotate(7deg); /*Opera*/
-  position: relative;
-  left: -10px;
-  top: 20px;
-  z-index: 5;
-}
-
-.page-node-415 .views-row-3 {
-  transform: rotate(-2deg);
-  -moz-transform: rotate(-2deg); /*firefox*/
-  -webkit-transform: rotate(-2deg); /*Chrome, Safari*/
-  -o-transform: rotate(-2deg); /*Opera*/
-  position: relative;
-  top: 20px;
-  left: -20px;
-  z-index: 5;
-}
-
-.page-node-415 .views-row-4 {
-  transform: rotate(12deg);
-  -moz-transform: rotate(12deg); /*firefox*/
-  -webkit-transform: rotate(12deg); /*Chrome, Safari*/
-  -o-transform: rotate(12deg); /*Opera*/
-  position: relative;
-  left: 40px;
-  top: -10px;
-  z-index: 5;
-}
-
-.page-node-415 .views-row-5 {
-  transform: rotate(-3deg);
-  -moz-transform: rotate(-3deg); /*firefox*/
-  -webkit-transform: rotate(-3deg); /*Chrome, Safari*/
-  -o-transform: rotate(-3deg); /*Opera*/
-  position: relative;
-  left: 28px;
-  top: 20px;
-  z-index: 5;
-}
-
-.page-node-415 .views-row-6 {
-  transform: rotate(6deg);
-  -moz-transform: rotate(6deg); /*firefox*/
-  -webkit-transform: rotate(6deg); /*Chrome, Safari*/
-  -o-transform: rotate(6deg); /*Opera*/
-}
-
-.page-node-415 .views-row-7 {
-  transform: rotate(4deg);
-  -moz-transform: rotate(4deg); /*firefox*/
-  -webkit-transform: rotate(4deg); /*Chrome, Safari*/
-  -o-transform: rotate(4deg); /*Opera*/
-}
-
-.page-node-415 .views-row-8 {
-  transform: rotate(-3deg);
-  -moz-transform: rotate(-3deg); /*firefox*/
-  -webkit-transform: rotate(-3deg); /*Chrome, Safari*/
-  -o-transform: rotate(-3deg); /*Opera*/
-}
-
 .group-person-legend {
   height: 100px;
   clear: both;
@@ -1590,11 +1507,7 @@ body.node-type-show div.view-mode-full div.group-left .field-name-field-by .fiel
   border-radius: 0 6px 6px 0;*/
 }
 
-.page-node-415 h3 {
-  margin: 0;
-  text-align: left;
-  padding-right: 64px;
-}
+
 
 .page-node-415 #region-content h2.block-title {
   background-image: none;
@@ -1611,7 +1524,9 @@ body.node-type-show div.view-mode-full div.group-left .field-name-field-by .fiel
 .view-personnes img {
   width: 42%;
 }
-
+.view-personnes .field-name-scald-authors {
+  display: none;
+}
 .page-node-415 .field-name-field-person-txt-1,
 .page-node-415 .field-name-field-person-txt-2,
 .page-node-415 .field-name-field-person-txt-3 {
@@ -1628,6 +1543,7 @@ body.node-type-show div.view-mode-full div.group-left .field-name-field-by .fiel
   margin-top: 30px;
   border-bottom: 1px solid black;
 }
+
 
 /* boutons réseaux sociaux ****************************************************/
 ul.group-ul-short-links > div.field-name-partage {
@@ -1989,4 +1905,7 @@ body.node-type-festival .field-name-field-view-archives a:hover:before{
   height: 1px;
   top: -1000em;
   overflow: hidden;
+}
+.not-logged-in .block-configure {
+  display: none;
 }

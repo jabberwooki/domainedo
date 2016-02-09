@@ -348,7 +348,7 @@ ul.sf-horizontal li.sf-depth-1 ul li:hover> a > .sf-sub-indicator {
 #block-menu-menu-contact{
     width : 75px;
     float : left;
-    margin : 8px 0 10px 290px
+    margin : 8px 0 10px 160px
 }
 #block-menu-menu-contact ul li a{
      background: url(../images/icons/location_wide.gif) no-repeat 0 4px;
@@ -950,3 +950,92 @@ div.pratique div.button_subscribe a{
   margin : 0 0 10px 0;
   border-top: 15px solid white;
 }
+/* Polaroïd ***********************************************************************************************************/
+.page-node-415 .views-row {
+  float: left;
+  width: 300px;
+  background: url(../images/polaroid.jpg) no-repeat 0 0;
+  transform: rotate(7deg);
+  -moz-transform: rotate(7deg); /*firefox*/
+  -webkit-transform: rotate(7deg); /*Chrome, Safari*/
+  -o-transform: rotate(7deg); /*Opera*/
+
+}
+.page-node-415 .views-row-1 {
+  transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg); /*firefox*/
+  -webkit-transform: rotate(-3deg); /*Chrome, Safari*/
+  -o-transform: rotate(-3deg); /*Opera*/
+  position: relative;
+  left: 30px;
+  top: -20px;
+}
+
+.page-node-415 .views-row-2 {
+  transform: rotate(7deg);
+  -moz-transform: rotate(7deg); /*firefox*/
+  -webkit-transform: rotate(7deg); /*Chrome, Safari*/
+  -o-transform: rotate(7deg); /*Opera*/
+  position: relative;
+  left: -10px;
+  top: 20px;
+  z-index: 5;
+}
+
+.page-node-415 .views-row-3 {
+  transform: rotate(-2deg);
+  -moz-transform: rotate(-2deg); /*firefox*/
+  -webkit-transform: rotate(-2deg); /*Chrome, Safari*/
+  -o-transform: rotate(-2deg); /*Opera*/
+  position: relative;
+  top: 20px;
+  left: -20px;
+  z-index: 5;
+}
+
+.page-node-415 .views-row-4 {
+  transform: rotate(12deg);
+  -moz-transform: rotate(12deg); /*firefox*/
+  -webkit-transform: rotate(12deg); /*Chrome, Safari*/
+  -o-transform: rotate(12deg); /*Opera*/
+  position: relative;
+  left: 40px;
+  top: -10px;
+  z-index: 5;
+}
+
+.page-node-415 .views-row-5 {
+  transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg); /*firefox*/
+  -webkit-transform: rotate(-3deg); /*Chrome, Safari*/
+  -o-transform: rotate(-3deg); /*Opera*/
+  position: relative;
+  left: 28px;
+  top: 20px;
+  z-index: 5;
+}
+
+.page-node-415 .views-row-6 {
+  transform: rotate(6deg);
+  -moz-transform: rotate(6deg); /*firefox*/
+  -webkit-transform: rotate(6deg); /*Chrome, Safari*/
+  -o-transform: rotate(6deg); /*Opera*/
+}
+
+.page-node-415 .views-row-7 {
+  transform: rotate(4deg);
+  -moz-transform: rotate(4deg); /*firefox*/
+  -webkit-transform: rotate(4deg); /*Chrome, Safari*/
+  -o-transform: rotate(4deg); /*Opera*/
+}
+
+.page-node-415 .views-row-8 {
+  transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg); /*firefox*/
+  -webkit-transform: rotate(-3deg); /*Chrome, Safari*/
+  -o-transform: rotate(-3deg); /*Opera*/
+}
+img[alt=anonyme]{
+  display: none;
+}
+

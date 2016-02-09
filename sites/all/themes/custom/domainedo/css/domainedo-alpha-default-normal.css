@@ -249,3 +249,7 @@ body.front #block-views-evenements-block-1 div.view-content .views-field-body {
   color: #000000;
   text-decoration: none;
 }
+/* Polaroïd **********************************************************/
+img[alt=anonyme]{
+  display: block;
+}
