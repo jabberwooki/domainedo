@@ -1527,6 +1527,9 @@ body.node-type-show div.view-mode-full div.group-left .field-name-field-by .fiel
 .view-personnes .field-name-scald-authors {
   display: none;
 }
+.view-personnes h3 {
+  margin-bottom: -5px;
+}
 .page-node-415 .field-name-field-person-txt-1,
 .page-node-415 .field-name-field-person-txt-2,
 .page-node-415 .field-name-field-person-txt-3 {
