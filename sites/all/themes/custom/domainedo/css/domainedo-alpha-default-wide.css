@@ -1,0 +1,42 @@
+/* Zoom de la page d'accueil ******************************************************************************************/
+#block-views-zoom-block {
+  width: 540px;
+}
+#block-views-zoom-block h2 {
+  width: 85%;
+  text-align: left;
+  padding-left: 15%;
+}
+#node_show_zoom_group_summary_dates, #node_news_zoom_group_event_summa_dates {
+  position: static;
+  float: right;
+  width: 180px;
+  height: 265px;
+}
+#node_show_zoom_group_summary_dates, #node_news_zoom_group_event_summa_dates a{
+  color: #0062a0;
+}
+#node_show_zoom_group_summary_dates, #node_news_zoom_group_event_summa_dates a:hover{
+  color: #000;
+}
+.field-name-field-scald-image > div > div >div{
+  float: left;
+}
+.field-name-field-texte-zoom{
+  display: block;
+}
+/* Actus de bas de page ***********************************************************************************************/
+body.front .view-id-evenements .views-field-field-scald-image{
+  text-align: center;
+}
+body.front .view-evenements.view-display-id-block_2 .views-field-body {
+  width: 325px;
+  margin: 0 auto;
+  position: static;
+}
+body.front .view-evenements.view-display-id-block_2 .views-row {
+  background: transparent url(../images/icons/bg_bottom_home_events.jpg) no-repeat 50% 93%;
+}
+body.front .view-evenements.view-display-id-block_2 .views-row.views-row-first {
+  background: transparent url(../images/icons/bg_bottom_home_events.jpg) no-repeat 50% 95%;
+}
