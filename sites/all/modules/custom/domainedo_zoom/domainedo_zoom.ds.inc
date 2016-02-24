@@ -77,6 +77,7 @@ function domainedo_zoom_ds_layout_settings_info() {
         3 => 'group_event_summa_dates',
         4 => 'field_news_only_video',
         5 => 'body',
+        6 => 'field_texte_zoom',
       ),
     ),
     'fields' => array(
@@ -86,6 +87,7 @@ function domainedo_zoom_ds_layout_settings_info() {
       'group_event_summa_dates' => 'ds_content',
       'field_news_only_video' => 'ds_content',
       'body' => 'ds_content',
+      'field_texte_zoom' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
