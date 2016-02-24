@@ -25,6 +25,7 @@ function news_field_group_info() {
     'children' => array(
       0 => 'body',
       1 => 'field_date',
+      2 => 'field_texte_zoom',
     ),
     'format_type' => 'div',
     'format_settings' => array(
