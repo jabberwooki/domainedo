@@ -608,8 +608,7 @@ body.front #block-views-evenements-block-1 .view-footer a {
   display: block;
 }
 
-#node_show_zoom_group_summary_dates,
-#node_news_zoom_group_event_summa_dates {
+#node-news-zoom-group-event-summa-dates{
   position: absolute;
   bottom: 15px;
   left: 0;
