@@ -40,3 +40,28 @@ body.front .view-evenements.view-display-id-block_2 .views-row {
 body.front .view-evenements.view-display-id-block_2 .views-row.views-row-first {
   background: transparent url(../images/icons/bg_bottom_home_events.jpg) no-repeat 50% 95%;
 }
+/* page de spectacle **************************************************************************************************/
+.node-show.view-mode-full > .group-right {
+  width: 448px;
+  background: url(../images/wide/bottom-right-wide-page-show.png) no-repeat 0 100%;
+}
+.ds-2col-stacked-fluid.view-mode-full > .group-right > div.field-name-field-show-dates{
+  background: url(../images/wide/top-right-wide-page-show.png) no-repeat 0 0;
+  padding: 16px 10px 0 10px;
+}
+.node-show #node_show_full_group_psr .field-name-field-scald-image .field-item{
+  text-align: center;
+}
+.node-show.view-mode-full > .group-right .field-name-field-show-dates .field-items {
+  width: 87%;
+}
+.ds-2col-stacked-fluid.view-mode-full > .group-right .field-name-field-boxoffice-url {
+  margin-left: 30px;
+}
+/* Page de festival ***************************************************************************************************/
+.node-festival > .group-left {
+  width: 75%;
+}
+.node-festival > .group-right {
+  width: 20%;
+}
