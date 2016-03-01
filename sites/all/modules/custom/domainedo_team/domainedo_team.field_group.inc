@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function domainedo_team_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -38,11 +38,12 @@ function domainedo_team_field_group_info() {
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'none',
+        'id' => 'node_personne_teaser_group_person_legend',
       ),
       'formatter' => 'open',
     ),
   );
-  $export['group_person_legend|node|personne|teaser'] = $field_group;
+  $field_groups['group_person_legend|node|personne|teaser'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -70,11 +71,12 @@ function domainedo_team_field_group_info() {
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'none',
+        'id' => 'node_personne_teaser_group_pola_01',
       ),
       'formatter' => 'open',
     ),
   );
-  $export['group_pola_01|node|personne|teaser'] = $field_group;
+  $field_groups['group_pola_01|node|personne|teaser'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -102,11 +104,18 @@ function domainedo_team_field_group_info() {
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'none',
+        'id' => 'node_personne_teaser_group_pola_imgs',
       ),
       'formatter' => 'open',
     ),
   );
-  $export['group_pola_imgs|node|personne|teaser'] = $field_group;
+  $field_groups['group_pola_imgs|node|personne|teaser'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Images');
+  t('Légende');
+  t('polaroid 1');
+
+  return $field_groups;
 }
