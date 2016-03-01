@@ -1,0 +1,77 @@
+/* Zoom de la page d'accueil ******************************************************************************************/
+#block-views-zoom-block {
+  width: 540px;
+}
+#block-views-zoom-block h2 {
+  width: 85%;
+  text-align: left;
+  padding-left: 15%;
+}
+#node-news-zoom-group-event-summa-dates {
+  position: static;
+  float: right;
+  width: 180px;
+  height: 265px;
+  background-color: #E0DBD8;
+  padding: 10px;
+}
+#node_show_zoom_group_summary_dates, #node_news_zoom_group_event_summa_dates a{
+  color: #0062a0;
+}
+#node_show_zoom_group_summary_dates, #node_news_zoom_group_event_summa_dates a:hover{
+  color: #000;
+}
+.field-name-field-scald-image > div > div >div{
+  float: left;
+}
+.field-name-field-texte-zoom{
+  display: block;
+}
+/* Actus de bas de page d'accueil *************************************************************************************/
+body.front .view-id-evenements .views-field-field-scald-image{
+  text-align: center;
+}
+body.front .view-evenements.view-display-id-block_2 .views-field-body {
+  width: 325px;
+  margin: 0 auto;
+  position: static;
+}
+body.front .view-evenements.view-display-id-block_2 .views-row {
+  background: transparent url(../images/icons/bg_bottom_home_events.jpg) no-repeat 50% 93%;
+}
+body.front .view-evenements.view-display-id-block_2 .views-row.views-row-first {
+  background: transparent url(../images/icons/bg_bottom_home_events.jpg) no-repeat 50% 95%;
+}
+.view-evenements.view-display-id-block_2 .views-row >.views-field-body p {
+  text-align: center;
+}
+/* page de spectacle **************************************************************************************************/
+.node-show.view-mode-full > .group-right {
+  width: 448px;
+  background: url(../images/wide/bottom-right-wide-page-show.png) no-repeat 0 100%;
+}
+.ds-2col-stacked-fluid.view-mode-full > .group-right > div.field-name-field-show-dates{
+  background: url(../images/wide/top-right-wide-page-show.png) no-repeat 0 0;
+  padding: 16px 10px 0 10px;
+}
+.node-show #node-show-full-group-psr .field-name-field-scald-image .field-item{
+  text-align: center;
+  margin-bottom: 15px;
+}
+.node-show.view-mode-full > .group-right .field-name-field-show-dates .field-items {
+  width: 87%;
+}
+.ds-2col-stacked-fluid.view-mode-full > .group-right .field-name-field-boxoffice-url {
+  margin-left: 30px;
+}
+/* Page de festival ***************************************************************************************************/
+.node-festival > .group-left {
+  width: 75%;
+}
+.node-festival > .group-right {
+  width: 20%;
+}
+/* Page "tous les spectacles" *****************************************************************************************/
+.page-spectacles-tous-les-spectacles .form-type-select .description{
+  display: none;
+}

@@ -67,13 +67,8 @@ function domainedo_editors_ckeditor_profile_defaults() {
           'dnd' => array(
             'name' => 'dnd',
             'desc' => 'Scald Drag and Drop integration',
-            'path' => '%base_path%sites/all/modules/contrib/scald/modules/library/dnd/plugins/ckeditor/',
-            'buttons' => array(
-              'ScaldAtom' => array(
-                'label' => 'ScaldAtom',
-                'icon' => 'icons/atom.png',
-              ),
-            ),
+            'path' => '%base_path%sites/all/modules/contrib/scald/modules/fields/mee/plugins/ckeditor/',
+            'buttons' => array(),
           ),
           'drupalbreaks' => array(
             'name' => 'drupalbreaks',
@@ -97,6 +92,7 @@ function domainedo_editors_ckeditor_profile_defaults() {
       'name' => 'CKEditor Global Profile',
       'settings' => array(
         'ckeditor_path' => '%l/ckeditor',
+        'loadPlugins' => array(),
       ),
       'input_formats' => array(),
     ),
@@ -161,13 +157,8 @@ function domainedo_editors_ckeditor_profile_defaults() {
           'dnd' => array(
             'name' => 'dnd',
             'desc' => 'Scald Drag and Drop integration',
-            'path' => '%base_path%sites/all/modules/contrib/scald/modules/library/dnd/plugins/ckeditor/',
-            'buttons' => array(
-              'ScaldAtom' => array(
-                'label' => 'ScaldAtom',
-                'icon' => 'icons/atom.png',
-              ),
-            ),
+            'path' => '%base_path%sites/all/modules/contrib/scald/modules/fields/mee/plugins/ckeditor/',
+            'buttons' => array(),
           ),
           'drupalbreaks' => array(
             'name' => 'drupalbreaks',

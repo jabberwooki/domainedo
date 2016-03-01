@@ -14,7 +14,7 @@ function domainedo_config_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'admin_theme';
-  $strongarm->value = 'rubik';
+  $strongarm->value = 'seven';
   $export['admin_theme'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -219,9 +219,13 @@ function domainedo_config_strongarm() {
     'festival' => 0,
     'programmer' => 0,
     'structure' => 0,
+    'personne' => 0,
+    'entree' => 0,
+    'lettre_info' => 0,
     'article' => 0,
-    'media_tester' => 0,
+    'disqus_list' => 0,
     'page' => 0,
+    'webform' => 0,
   );
   $export['disqus_nodetypes'] = $strongarm;
 
