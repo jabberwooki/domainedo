@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function news_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -37,11 +37,16 @@ function news_field_group_info() {
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'fast',
+        'id' => 'node_news_zoom_group_event_summa_dates',
       ),
       'formatter' => 'open',
     ),
   );
-  $export['group_event_summa_dates|node|news|zoom'] = $field_group;
+  $field_groups['group_event_summa_dates|node|news|zoom'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Group event summary and dates');
+
+  return $field_groups;
 }
