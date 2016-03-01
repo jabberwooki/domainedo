@@ -54,7 +54,7 @@ body.front .view-evenements.view-display-id-block_2 .views-row.views-row-first {
   background: url(../images/wide/top-right-wide-page-show.png) no-repeat 0 0;
   padding: 16px 10px 0 10px;
 }
-.node-show #node_show_full_group_psr .field-name-field-scald-image .field-item{
+.node-show #node-show-full-group-psr .field-name-field-scald-image .field-item{
   text-align: center;
 }
 .node-show.view-mode-full > .group-right .field-name-field-show-dates .field-items {
