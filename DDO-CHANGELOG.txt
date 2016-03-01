@@ -1,4 +1,8 @@
-Domaine d'O 1.0.18 - 2016-02-09
+Domaine d'O 1.0.20 - 2016-03-01
+----------------------------
+Wide theme installed + drupal core up to 7.43
+
+Domaine d'O 1.0.19 - 2016-02-09
 ----------------------------
 Microdata added on page "tous les spectacles"
 
