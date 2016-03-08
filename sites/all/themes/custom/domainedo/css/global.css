@@ -1034,7 +1034,9 @@ body.node-type-show div.view-mode-full div.group-left .field-name-field-by .fiel
 }
 .node-type-show .field-name-scald-authors.field-label-hidden {
   display: block;
-  margin: -20px 0 0 0;
+  position: absolute;
+  bottom: -30px;
+  left: 500px;
 }
 
 .node-type-news .field-name-scald-authors.field-label-hidden {
