@@ -55,8 +55,8 @@ body.front .view-evenements.view-display-id-block_2 .views-row.views-row-first {
   padding: 16px 10px 0 10px;
 }
 .node-show #node-show-full-group-psr .field-name-field-scald-image .field-item{
-  text-align: center;
   margin-bottom: 15px;
+  position: relative;
 }
 .node-show.view-mode-full > .group-right .field-name-field-show-dates .field-items {
   width: 87%;
