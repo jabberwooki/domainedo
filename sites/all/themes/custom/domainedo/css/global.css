@@ -459,6 +459,7 @@ h2#page-title {
   width: 25px;
   height: 25px;
   background-position: -5px -134px;
+  display: none;
 }
 
 .region-header-second .sprite-gplus:hover {

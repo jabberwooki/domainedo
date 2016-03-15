@@ -1193,4 +1193,6 @@ div.pratique div.button_subscribe a {
 img[alt=anonyme] {
   display: none;
 }
-
+.region-header-second .sprite-gplus {
+ display: block;
+}
