@@ -1175,6 +1175,7 @@ body.not-front #region-content h2#h2-total {
 fieldset.webform-component-fieldset > div > .webform-component-fieldset {
   float: left;
   margin-left: 20px;
+  clear: both;
 }
 
 /* carte interactive **********************************************************/
