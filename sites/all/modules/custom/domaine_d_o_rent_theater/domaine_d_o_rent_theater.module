@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Domaine d'O rent theater feature.
+ */
+
+include_once 'domaine_d_o_rent_theater.features.inc';
