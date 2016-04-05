@@ -5,3 +5,18 @@
  */
 
 include_once 'domaine_d_o_rent_theater.features.inc';
+
+/**
+ * Implements hook_field_collection_item_view().
+ */
+function domaine_d_o_rent_theater_field_collection_item_view($field_collection_item, $view_mode, $langcode) {
+  $url = '';
+  if ($field_collection_item->field_name == 'field_vente_references' &&
+    isset($field_collection_item->content['field_vente_reference_url']['#items'][0]['value'])) {
+    $url = $field_collection_item->content['field_vente_reference_url']['#items'][0]['value'];
+    unset($field_collection_item->content['field_vente_reference_url']);
+    $field_collection_item->content['field_vente_references_image'][0]['#prefix']= '<a href="' .$url. '">';
+    $field_collection_item->content['field_vente_references_image'][0]['#suffix']= '</a>';
+    //dpm($field_collection_item->content);
+  }
+}

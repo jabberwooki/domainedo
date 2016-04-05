@@ -61,14 +61,20 @@ function domaine_d_o_rent_theater_ds_custom_fields_info() {
   $ds_field->properties = array(
     'code' => array(
       'value' => '<div class="encart-contact-vente">
+<nav>
+<ul>
+<li><a href="#lieux-location">Présentation des lieux</a></li>
+<li><a href="#lieux-services">Services rendus</a></li>
+<li><a href="#lieux-references">Références clients</a></li>
+</ul>
+</nav>
 <h3 class="titre-contact-vente">Contact</h3>
 
 <p>Aurélien Arnaud<br />
 04 67 67 31 24<br />
 06 74 83 66 92<br />
 <a href="mailto:aarnaud@domaine-do-34.eu">aarnaud@domaine-do-34.eu</a></p>
-</div>
-',
+</div>',
       'format' => 'full_html',
     ),
     'use_token' => 0,
@@ -168,10 +174,14 @@ function domaine_d_o_rent_theater_ds_layout_settings_info() {
         2 => 'group_lieux',
         3 => 'field_vente_salle',
         4 => 'sharethis',
+        5 => 'group_services_location',
+        6 => 'group_references_location',
+        7 => 'field_vente_services',
+        9 => 'field_vente_references',
       ),
       'right' => array(
-        5 => 'group_contact_fixed',
-        6 => 'contact_location',
+        8 => 'contact_location',
+        10 => 'group_contact_fixed',
       ),
     ),
     'fields' => array(
@@ -180,8 +190,12 @@ function domaine_d_o_rent_theater_ds_layout_settings_info() {
       'group_lieux' => 'left',
       'field_vente_salle' => 'left',
       'sharethis' => 'left',
-      'group_contact_fixed' => 'right',
+      'group_services_location' => 'left',
+      'group_references_location' => 'left',
+      'field_vente_services' => 'left',
       'contact_location' => 'right',
+      'field_vente_references' => 'left',
+      'group_contact_fixed' => 'right',
     ),
     'classes' => array(),
     'wrappers' => array(
