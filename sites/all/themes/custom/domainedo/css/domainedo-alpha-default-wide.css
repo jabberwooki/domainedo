@@ -98,3 +98,11 @@ body.front .view-evenements.view-display-id-block_2 .views-row.views-row-first {
 .node-type-lieu-location .ds-2col-fluid .group-right .group-contact-fixed{
   position: fixed;
 }
+.field-name-field-vente-salle > .field-items > .field-item{
+  max-width: 30%;
+  margin-right: 3%;
+}
+.node-type-presentation-location-salles .group-left .field-collection-view{
+  max-width: 30%;
+  margin-right: 3%;
+}

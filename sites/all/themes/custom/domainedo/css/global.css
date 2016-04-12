@@ -1936,15 +1936,27 @@ body.node-type-festival .field-name-field-view-archives a:hover:before{
   clear: left;
 }
 .node-type-presentation-location-salles .group-left .field-collection-view {
-  padding: 0;
-  margin: 0;
+
 }
 .node-type-presentation-location-salles .group-left .field-collection-view{
   width: 240px;
   float: left;
-  margin-right: 20px;
+  padding: 0;
+  margin: 0 20px 0 0;
 }
 .node-type-presentation-location-salles .group-left .field-collection-view .field-name-field-vente-services-titre{
   text-align: center;
   font-size: 1.5em;
+}
+.encart-contact-vente ul, .encart-contact-vente ul li{
+  list-style: none;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.encart-contact-vente ul li a{
+  display: block;
+  padding: 5px 0 !important;
+  margin: 0 !important;
+  text-decoration: none;
+  border-bottom: 1px dashed #FFC929;
 }
