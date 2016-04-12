@@ -295,3 +295,45 @@ body.front #block-views-evenements-block-1 div.view-content .views-field-body {
 img[alt=anonyme] {
   display: block;
 }
+/* location de salle **************************************************/
+.node-type-presentation-location-salles .group-left > .field-name-body{
+  width: 48%;
+  float: left;
+  margin-right: 2%;
+}
+.node-type-presentation-location-salles .group-left .field-name-field-vente-video{
+  width: 50%;
+  float: left;
+}
+.node-type-presentation-location-salles .group-left .group-lieux{
+  clear: left;
+}
+.node-type-presentation-location-salles .group-left .group-title-img-location{
+  position: relative;
+}
+.node-type-presentation-location-salles .group-left .group-title-img-location .field-name-field-vente-services-summary{
+  position: absolute;
+  max-width: 198px;
+  height: 128px;
+  padding: 10px;
+  top: 180px;
+  visibility: hidden;
+  color: #FFF;
+}
+.node-type-presentation-location-salles .group-left .group-title-img-location:hover .field-name-field-vente-services-summary{
+  top: 0px;
+  visibility: visible;
+  background: rgba(54, 25, 25, .85);
+  -webkit-transition: background 1s ease-out;
+  -moz-transition: background 1s ease-out;
+  -o-transition: background 1s ease-out;
+  transition: background 1s ease-out;
+}
+.field-name-field-vente-salle > .field-items > .field-item{
+  max-width: 48%;
+  margin-right: 1%;
+}
+.node-type-presentation-location-salles .group-left .field-collection-view{
+  max-width: 48%;
+  margin-right: 1%;
+}
