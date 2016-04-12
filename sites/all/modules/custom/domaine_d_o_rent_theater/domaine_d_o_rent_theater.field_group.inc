@@ -56,6 +56,7 @@ function domaine_d_o_rent_theater_field_group_info() {
     'weight' => '6',
     'children' => array(
       0 => 'contact_location',
+      1 => 'menu_location',
     ),
     'format_type' => 'div',
     'format_settings' => array(

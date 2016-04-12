@@ -17,6 +17,11 @@ function domaine_d_o_rent_theater_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'lieu_location';
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
+    'back_rent' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
     'contact_location' => array(
       'weight' => '3',
       'label' => 'hidden',
@@ -33,7 +38,12 @@ function domaine_d_o_rent_theater_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
     'contact_location' => array(
-      'weight' => '5',
+      'weight' => '1',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+    'menu_location' => array(
+      'weight' => '0',
       'label' => 'hidden',
       'format' => 'default',
     ),
@@ -61,25 +71,46 @@ function domaine_d_o_rent_theater_ds_custom_fields_info() {
   $ds_field->properties = array(
     'code' => array(
       'value' => '<div class="encart-contact-vente">
-<nav>
-<ul>
-<li><a href="#lieux-location">Présentation des lieux</a></li>
-<li><a href="#lieux-services">Services rendus</a></li>
-<li><a href="#lieux-references">Références clients</a></li>
-</ul>
-</nav>
 <h3 class="titre-contact-vente">Contact</h3>
 
 <p>Aurélien Arnaud<br />
 04 67 67 31 24<br />
 06 74 83 66 92<br />
 <a href="mailto:aarnaud@domaine-do-34.eu">aarnaud@domaine-do-34.eu</a></p>
-</div>',
+</div>
+',
       'format' => 'full_html',
     ),
     'use_token' => 0,
   );
   $export['contact_location'] = $ds_field;
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
+  $ds_field->field = 'menu_location';
+  $ds_field->label = 'menu location';
+  $ds_field->field_type = 5;
+  $ds_field->entities = array(
+    'node' => 'node',
+  );
+  $ds_field->ui_limit = 'presentation_location_salles|*';
+  $ds_field->properties = array(
+    'code' => array(
+      'value' => '<div class="encart-contact-vente">
+<nav>
+<ul>
+	<li><a href="#lieux-location">Présentation des espaces</a></li>
+	<li><a href="#lieux-services">Les services</a></li>
+	<li><a href="#lieux-references">Ils nous ont fait confiance</a></li>
+</ul>
+</nav>
+</div>
+',
+      'format' => 'full_html',
+    ),
+    'use_token' => 0,
+  );
+  $export['menu_location'] = $ds_field;
 
   return $export;
 }
@@ -101,15 +132,17 @@ function domaine_d_o_rent_theater_ds_layout_settings_info() {
     'regions' => array(
       'left' => array(
         0 => 'body',
-        1 => 'field_loc_gallerie',
+        2 => 'field_loc_gallerie',
       ),
       'right' => array(
-        2 => 'group_contact_fixed',
-        3 => 'contact_location',
+        1 => 'back_rent',
+        3 => 'group_contact_fixed',
+        4 => 'contact_location',
       ),
     ),
     'fields' => array(
       'body' => 'left',
+      'back_rent' => 'right',
       'field_loc_gallerie' => 'left',
       'group_contact_fixed' => 'right',
       'contact_location' => 'right',
@@ -170,32 +203,34 @@ function domaine_d_o_rent_theater_ds_layout_settings_info() {
     'regions' => array(
       'left' => array(
         0 => 'body',
-        1 => 'field_vente_video',
-        2 => 'group_lieux',
-        3 => 'field_vente_salle',
-        4 => 'sharethis',
-        5 => 'group_services_location',
-        6 => 'group_references_location',
-        7 => 'field_vente_services',
-        9 => 'field_vente_references',
+        2 => 'field_vente_video',
+        4 => 'group_lieux',
+        5 => 'field_vente_salle',
+        6 => 'sharethis',
+        7 => 'group_services_location',
+        8 => 'group_references_location',
+        9 => 'field_vente_services',
+        11 => 'field_vente_references',
       ),
       'right' => array(
-        8 => 'contact_location',
+        1 => 'menu_location',
+        3 => 'contact_location',
         10 => 'group_contact_fixed',
       ),
     ),
     'fields' => array(
       'body' => 'left',
+      'menu_location' => 'right',
       'field_vente_video' => 'left',
+      'contact_location' => 'right',
       'group_lieux' => 'left',
       'field_vente_salle' => 'left',
       'sharethis' => 'left',
       'group_services_location' => 'left',
       'group_references_location' => 'left',
       'field_vente_services' => 'left',
-      'contact_location' => 'right',
-      'field_vente_references' => 'left',
       'group_contact_fixed' => 'right',
+      'field_vente_references' => 'left',
     ),
     'classes' => array(),
     'wrappers' => array(
