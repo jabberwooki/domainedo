@@ -66,10 +66,10 @@ body.front .view-evenements.view-display-id-block_2 .views-row.views-row-first {
 }
 /* Page de festival ***************************************************************************************************/
 .node-festival > .group-left {
-  width: 75%;
+  width: 69%;
 }
 .node-festival > .group-right {
-  width: 20%;
+  width: 30%;
 }
 /* Page "tous les spectacles" *****************************************************************************************/
 .page-spectacles-tous-les-spectacles .form-type-select .description{
