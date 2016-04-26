@@ -1794,6 +1794,9 @@ body.node-type-festival .field-name-field-view-archives a:hover:before{
     width: 24%;
     border-right: 1px solid black;
   }
+  #region-footer-first .sprite.sprite-gplus{
+    display:none;
+  }
 
   #region-footer-first .sprite a {
     display: block;
