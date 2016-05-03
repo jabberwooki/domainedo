@@ -313,8 +313,8 @@ img[alt=anonyme] {
 }
 .node-type-presentation-location-salles .group-left .group-title-img-location .field-name-field-vente-services-summary{
   position: absolute;
-  max-width: 198px;
-  height: 128px;
+  /*max-width: 198px;*/
+  height: 160px;
   padding: 10px;
   top: 180px;
   visibility: hidden;
