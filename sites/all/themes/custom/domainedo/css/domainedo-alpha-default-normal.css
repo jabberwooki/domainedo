@@ -126,6 +126,12 @@ h2.h2-event {
 .ds-2col-stacked-fluid.view-mode-full > .group-left {
   width: 61%;
 }
+.node-type-retour-sur .ds-2col-stacked-fluid.view-mode-full > .group-left {
+  width: 50%;
+}
+.node-type-retour-sur .ds-2col-stacked-fluid.view-mode-full > .group-right #scald-gallery {
+  margin-top: 0;
+}
 
 div#node_show_full_group_shorts_links {
   width: 348px;

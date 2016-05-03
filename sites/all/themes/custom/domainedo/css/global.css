@@ -1963,3 +1963,98 @@ body.node-type-festival .field-name-field-view-archives a:hover:before{
   text-decoration: none;
   border-bottom: 1px dashed #FFC929;
 }
+/* Retour sur ... *****************************************************************************************************/
+.node-type-retour-sur .field-name-body .field-label,
+.node-type-retour-sur .field-name-field-critiques .field-label{
+  font-family: Lato, arial;
+  font-size: 1.6em;
+}
+.read-more-critique:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+.field-name-field-critiques > .field-items > .field-item{
+  width: 44%;
+  margin-right: 2%;
+  float: left;
+  height: 150px;
+  overflow: hidden;
+  border: 1px solid #CDD1DC;
+  border-radius: 6px;
+  padding: 2%;
+}
+.field-name-field-critiques > .field-items > .field-item.odd{
+  margin-right: 0;
+}
+.field-name-field-prenom-critique{
+  font-family: Lato, arial;
+  font-size: 2em;
+}
+.field-name-field-summary-critique{
+  margin-left: 5%;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  font-family: "Times New Roman", serif;
+  font-style: italic;
+  color: #333333;
+  font-size: 1.4em;
+}
+.field-name-field-summary-critique .field-item p:before{
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1em;
+  speak: none;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 10px;
+  text-align: center;
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  color: lightslategray;
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e81d";
+  position: relative;
+  top: 20px;
+  left: -30px;
+}
+.field-name-field-summary-critique .field-item p:after{
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1em;
+  speak: none;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 10px;
+  text-align: center;
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  color: lightslategray;
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e81d";
+  position: relative;
+
+}
