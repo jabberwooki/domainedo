@@ -124,6 +124,120 @@ function domaine_d_o_retours_sur_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'field_collection_item-field_retour_comments-field_prenom_comments'
+  $field_instances['field_collection_item-field_retour_comments-field_prenom_comments'] = array(
+    'bundle' => 'field_retour_comments',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_prenom_comments',
+    'label' => 'Prénom',
+    'required' => 1,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 31,
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_retour_comments-field_summary_comment'
+  $field_instances['field_collection_item-field_retour_comments-field_summary_comment'] = array(
+    'bundle' => 'field_retour_comments',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_summary_comment',
+    'label' => 'Résumé',
+    'required' => 1,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 1,
+      'mee_enabled' => 1,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 32,
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_retour_comments-field_text_comment'
+  $field_instances['field_collection_item-field_retour_comments-field_text_comment'] = array(
+    'bundle' => 'field_retour_comments',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_text_comment',
+    'label' => 'Commentaire complet',
+    'required' => 1,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 1,
+      'mee_enabled' => 1,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 33,
+    ),
+  );
+
   // Exported field_instance: 'node-retour_sur-body'
   $field_instances['node-retour_sur-body'] = array(
     'bundle' => 'retour_sur',
@@ -176,7 +290,7 @@ function domaine_d_o_retours_sur_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 31,
+      'weight' => 3,
     ),
   );
 
@@ -211,7 +325,7 @@ function domaine_d_o_retours_sur_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_view',
-        'weight' => 2,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -222,7 +336,7 @@ function domaine_d_o_retours_sur_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_critiques',
-    'label' => 'Critiques',
+    'label' => 'Critiques des élèves',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -232,7 +346,129 @@ function domaine_d_o_retours_sur_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 45,
+      'weight' => 8,
+    ),
+  );
+
+  // Exported field_instance: 'node-retour_sur-field_edu_contact'
+  $field_instances['node-retour_sur-field_edu_contact'] = array(
+    'bundle' => 'retour_sur',
+    'default_value' => array(
+      0 => array(
+        'mee' => array(
+          'resource_manager' => array(
+            0 => array(
+              'weight' => 0,
+            ),
+          ),
+        ),
+        'value' => '<h3>Contact</h3>
+
+<p>Service éducatif Marion Blanchaud mblanchaud@domaine-do-34.eu Jessica Ramassamy jramassamy@domaine-do-34.eu</p>
+',
+        'format' => 'full_html',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 4,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_edu_contact',
+    'label' => 'Contact - Service éducatif',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'full',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 1,
+      'mee_enabled' => 1,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'node-retour_sur-field_retour_comments'
+  $field_instances['node-retour_sur-field_retour_comments'] = array(
+    'bundle' => 'retour_sur',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => 'Ajouter',
+          'delete' => 'Supprimer',
+          'description' => TRUE,
+          'edit' => 'Modifier',
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_view',
+        'weight' => 5,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => 'Ajouter',
+          'delete' => 'Supprimer',
+          'description' => TRUE,
+          'edit' => 'Modifier',
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_view',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_retour_comments',
+    'label' => 'Commentaires des élèves',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
+      'weight' => 9,
     ),
   );
 
@@ -251,13 +487,13 @@ function domaine_d_o_retours_sur_field_default_field_instances() {
         'weight' => 2,
       ),
       'full' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'domainedo_media',
         'settings' => array(
           'link' => 0,
         ),
         'type' => 'full',
-        'weight' => 1,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -289,7 +525,7 @@ function domaine_d_o_retours_sur_field_default_field_instances() {
         'context' => 'sdl_editor_representation',
       ),
       'type' => 'atom_reference_textfield',
-      'weight' => 44,
+      'weight' => 6,
     ),
   );
 
@@ -311,7 +547,7 @@ function domaine_d_o_retours_sur_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 19,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -343,15 +579,18 @@ function domaine_d_o_retours_sur_field_default_field_instances() {
         'context' => 'sdl_editor_representation',
       ),
       'type' => 'atom_reference_textfield',
-      'weight' => 42,
+      'weight' => 7,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Commentaire complet');
+  t('Commentaires des élèves');
+  t('Contact - Service éducatif');
   t('Contexte');
   t('Critique complète');
-  t('Critiques');
+  t('Critiques des élèves');
   t('Galerie multimédia');
   t('Prénom');
   t('Résumé');

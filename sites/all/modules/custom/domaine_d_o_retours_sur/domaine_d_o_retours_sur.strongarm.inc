@@ -108,16 +108,16 @@ function domaine_d_o_retours_sur_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '40',
+          'weight' => '5',
         ),
         'title' => array(
-          'weight' => '-5',
+          'weight' => '0',
         ),
         'path' => array(
-          'weight' => '30',
+          'weight' => '1',
         ),
         'redirect' => array(
-          'weight' => '30',
+          'weight' => '2',
         ),
       ),
       'display' => array(
@@ -127,7 +127,7 @@ function domaine_d_o_retours_sur_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '17',
+            'weight' => '20',
             'visible' => FALSE,
           ),
         ),
