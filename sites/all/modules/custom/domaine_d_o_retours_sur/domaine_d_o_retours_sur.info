@@ -21,6 +21,7 @@ features[ctools][] = field_group:field_group:1
 features[ctools][] = strongarm:strongarm:1
 features[ds_layout_settings][] = field_collection_item|field_critiques|default
 features[ds_layout_settings][] = field_collection_item|field_retour_comments|default
+features[ds_layout_settings][] = node|retour_sur|full
 features[features_api][] = api:2
 features[field_base][] = field_critiques
 features[field_base][] = field_edu_contact
