@@ -48,7 +48,6 @@ features[field_instance][] = node-retour_sur-field_retour_comments
 features[field_instance][] = node-retour_sur-field_scald_gallery
 features[field_instance][] = node-retour_sur-field_scald_image
 features[node][] = retour_sur
-features[uuid_node][] = 18cbb0df-d33a-44ef-907c-3d1fbf2fd6e7
 features[variable][] = comment_anonymous_retour_sur
 features[variable][] = comment_default_mode_retour_sur
 features[variable][] = comment_default_per_page_retour_sur
