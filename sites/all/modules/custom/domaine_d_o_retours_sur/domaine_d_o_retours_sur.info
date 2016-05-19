@@ -55,6 +55,7 @@ features[variable][] = comment_form_location_retour_sur
 features[variable][] = comment_preview_retour_sur
 features[variable][] = comment_retour_sur
 features[variable][] = comment_subject_field_retour_sur
+features[variable][] = field_bundle_settings_field_collection_item__field_critiques
 features[variable][] = field_bundle_settings_node__retour_sur
 features[variable][] = language_content_type_retour_sur
 features[variable][] = menu_options_retour_sur
