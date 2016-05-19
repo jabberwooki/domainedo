@@ -6,7 +6,7 @@
 
   Drupal.behaviors.domain_d_o_retours_sur = {
     attach: function (context, settings) {
-      if (!$('body.page-node-edit').length) {
+      if (!$('body.page-node-edit').length && !$('body.page-node-add').length) {
         // gère les critiques
         if ($('.field-name-field-critiques').length) {
           $('.field-name-field-text-critique').hide();
