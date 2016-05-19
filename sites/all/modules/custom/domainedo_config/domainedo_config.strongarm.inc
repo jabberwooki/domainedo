@@ -212,6 +212,7 @@ function domainedo_config_strongarm() {
   $strongarm->name = 'disqus_nodetypes';
   $strongarm->value = array(
     'show' => 'show',
+    'retour_sur' => 'retour_sur',
     'news' => 'news',
     'press_document' => 0,
     'relpub_document' => 0,
@@ -221,6 +222,8 @@ function domainedo_config_strongarm() {
     'structure' => 0,
     'personne' => 0,
     'entree' => 0,
+    'lieu_location' => 0,
+    'presentation_location_salles' => 0,
     'lettre_info' => 0,
     'article' => 0,
     'disqus_list' => 0,
