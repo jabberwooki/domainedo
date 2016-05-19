@@ -60,7 +60,6 @@ features[field_instance][] = node-presentation_location_salles-field_vente_servi
 features[field_instance][] = node-presentation_location_salles-field_vente_video
 features[node][] = lieu_location
 features[node][] = presentation_location_salles
-features[uuid_node][] = 187ba8c7-60ea-40b5-a84a-0846cba47832
 features[variable][] = comment_anonymous_lieu_location
 features[variable][] = comment_anonymous_presentation_location_salles
 features[variable][] = comment_default_mode_lieu_location
