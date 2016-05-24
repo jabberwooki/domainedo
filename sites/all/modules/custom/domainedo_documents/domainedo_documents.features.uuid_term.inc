@@ -22,6 +22,7 @@ function domainedo_documents_uuid_features_default_terms() {
       'und' => array(
         0 => array(
           'sid' => 17,
+          'options' => 'a:0:{}',
         ),
       ),
     ),
@@ -39,6 +40,7 @@ function domainedo_documents_uuid_features_default_terms() {
       'und' => array(
         0 => array(
           'sid' => 17,
+          'options' => 'a:0:{}',
         ),
       ),
     ),
@@ -56,6 +58,7 @@ function domainedo_documents_uuid_features_default_terms() {
       'und' => array(
         0 => array(
           'sid' => 17,
+          'options' => 'a:0:{}',
         ),
       ),
     ),

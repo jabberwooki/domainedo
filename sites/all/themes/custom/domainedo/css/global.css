@@ -1794,6 +1794,9 @@ body.node-type-festival .field-name-field-view-archives a:hover:before{
     width: 24%;
     border-right: 1px solid black;
   }
+  #region-footer-first .sprite.sprite-gplus{
+    display:none;
+  }
 
   #region-footer-first .sprite a {
     display: block;
@@ -1959,4 +1962,158 @@ body.node-type-festival .field-name-field-view-archives a:hover:before{
   margin: 0 !important;
   text-decoration: none;
   border-bottom: 1px dashed #FFC929;
+}
+/* Retour sur ... *****************************************************************************************************/
+.node-type-retour-sur .field-name-body .field-label,
+.node-type-retour-sur .field-name-field-critiques .field-label,
+.node-type-retour-sur .field-name-field-retour-comments .field-label{
+  font-family: Lato, arial;
+  font-size: 1.6em;
+}
+.read-more-critique, .read-less-critique,
+.read-more-comment, .read-less-comment{
+  position: absolute;
+  bottom: 0px;
+  margin-left: 20px;
+  display: block;
+  background-color: white;
+  height: 28px;
+  width: 350px;
+}
+.read-more-critique:hover, .read-less-critique:hover,
+.read-more-comment:hover, .read-less-comment:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+.field-name-field-critiques > .field-items > .field-item,
+.field-name-field-retour-comments > .field-items > .field-item{
+  width: 44%;
+  margin-right: 2%;
+  float: left;
+  height: 150px;
+  overflow: hidden;
+  border: 1px solid #CDD1DC;
+  border-radius: 6px;
+  padding: 2% 2% 15px 2%  ;
+  position: relative;
+}
+.field-name-field-critiques > .field-items > .field-item.odd,
+.field-name-field-comments > .field-items > .field-item.odd{
+  margin-right: 0;
+}
+.field-name-field-prenom-critique, .field-name-field-prenom-comments{
+  font-family: Lato, arial;
+  font-size: 2em;
+}
+.field-name-field-summary-critique,
+.field-name-field-summary-comment{
+  margin-left: 5%;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  font-family: "Times New Roman", serif;
+  font-style: italic;
+  color: #333333;
+  font-size: 1.4em;
+}
+.field-name-field-summary-critique .field-item p:before,
+.field-name-field-summary-comment .field-item p:before,
+.read-more-critique:before, .read-more-comment:before,
+.read-less-critique:before, .read-less-comment:before{
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1em;
+  speak: none;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 10px;
+  text-align: center;
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  color: lightslategray;
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e857";
+  position: relative;
+  top: 0px;
+  left: -20px;
+}
+.read-more-critique:before, .read-more-comment:before{
+  content: "\e835";
+  position: static;
+  color: #FFC929;
+}
+.read-less-critique:before, .read-less-comment:before{
+  content: "\e836";
+  position: static;
+  color: #FFC929;
+}
+.field-name-field-summary-critique .field-item p:after,
+.field-name-field-summary-comment .field-item p:after{
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1em;
+  speak: none;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 10px;
+  text-align: center;
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  color: lightslategray;
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e856";
+  position: relative;
+  left: 20px;
+}
+.group-contact-retour a.field-group-format-title{
+  background-color: #C20000;
+  display: block;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px;
+  font-family: verdana,helvetica,arial,sans-serif;
+  font-size: 0.8em;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  font-weight: 400;
+}
+.field-collection-view{
+  border: 0;
+}
+.node-type-retour-sur #block-menu-block-2{
+  position: fixed;
+  width: 270px;
+}
+.anchor-retour-sur{
+  background-color: #FFC929;
+  padding: 5px 5px 5px 50px;
+}
+.anchor-retour-sur:hover{
+  cursor: pointer;
+  text-decoration: underline;
 }

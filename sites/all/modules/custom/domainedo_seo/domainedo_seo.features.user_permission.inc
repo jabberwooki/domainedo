@@ -42,6 +42,7 @@ function domainedo_seo_user_default_permissions() {
     'name' => 'administer redirects',
     'roles' => array(
       'administrator' => 'administrator',
+      'location' => 'location',
     ),
     'module' => 'redirect',
   );
@@ -51,6 +52,7 @@ function domainedo_seo_user_default_permissions() {
     'name' => 'administer url aliases',
     'roles' => array(
       'administrator' => 'administrator',
+      'location' => 'location',
       'webmaster' => 'webmaster',
     ),
     'module' => 'path',

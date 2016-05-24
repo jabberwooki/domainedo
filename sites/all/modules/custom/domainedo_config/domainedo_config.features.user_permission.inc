@@ -15,6 +15,7 @@ function domainedo_config_user_default_permissions() {
     'name' => 'access administration menu',
     'roles' => array(
       'administrator' => 'administrator',
+      'location' => 'location',
       'redacteur' => 'redacteur',
       'webmaster' => 'webmaster',
     ),
@@ -26,6 +27,7 @@ function domainedo_config_user_default_permissions() {
     'name' => 'access administration pages',
     'roles' => array(
       'administrator' => 'administrator',
+      'location' => 'location',
       'redacteur' => 'redacteur',
       'webmaster' => 'webmaster',
     ),
@@ -61,6 +63,7 @@ function domainedo_config_user_default_permissions() {
     'name' => 'access content overview',
     'roles' => array(
       'administrator' => 'administrator',
+      'location' => 'location',
       'redacteur' => 'redacteur',
       'webmaster' => 'webmaster',
     ),
@@ -83,6 +86,7 @@ function domainedo_config_user_default_permissions() {
     'name' => 'access site in maintenance mode',
     'roles' => array(
       'administrator' => 'administrator',
+      'location' => 'location',
       'webmaster' => 'webmaster',
     ),
     'module' => 'system',
@@ -131,6 +135,7 @@ function domainedo_config_user_default_permissions() {
     'name' => 'administer menu',
     'roles' => array(
       'administrator' => 'administrator',
+      'location' => 'location',
       'webmaster' => 'webmaster',
     ),
     'module' => 'menu',
@@ -195,6 +200,7 @@ function domainedo_config_user_default_permissions() {
     'name' => 'create url aliases',
     'roles' => array(
       'administrator' => 'administrator',
+      'location' => 'location',
       'redacteur' => 'redacteur',
       'webmaster' => 'webmaster',
     ),
@@ -318,6 +324,7 @@ function domainedo_config_user_default_permissions() {
     'name' => 'set page title',
     'roles' => array(
       'administrator' => 'administrator',
+      'location' => 'location',
       'redacteur' => 'redacteur',
       'webmaster' => 'webmaster',
     ),
@@ -381,6 +388,7 @@ function domainedo_config_user_default_permissions() {
     'name' => 'use text format full_html',
     'roles' => array(
       'administrator' => 'administrator',
+      'location' => 'location',
       'redacteur' => 'redacteur',
       'webmaster' => 'webmaster',
     ),

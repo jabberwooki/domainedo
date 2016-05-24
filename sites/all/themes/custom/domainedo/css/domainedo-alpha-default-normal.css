@@ -126,6 +126,12 @@ h2.h2-event {
 .ds-2col-stacked-fluid.view-mode-full > .group-left {
   width: 61%;
 }
+.node-type-retour-sur .ds-2col-stacked-fluid.view-mode-full > .group-left {
+  width: 50%;
+}
+.node-type-retour-sur .ds-2col-stacked-fluid.view-mode-full > .group-right #scald-gallery {
+  margin-top: 0;
+}
 
 div#node_show_full_group_shorts_links {
   width: 348px;
@@ -313,8 +319,8 @@ img[alt=anonyme] {
 }
 .node-type-presentation-location-salles .group-left .group-title-img-location .field-name-field-vente-services-summary{
   position: absolute;
-  max-width: 198px;
-  height: 128px;
+  /*max-width: 198px;*/
+  height: 160px;
   padding: 10px;
   top: 180px;
   visibility: hidden;

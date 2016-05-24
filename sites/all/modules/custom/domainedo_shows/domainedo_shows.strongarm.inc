@@ -484,7 +484,7 @@ function domainedo_shows_strongarm() {
       'display' => array(
         'sharethis' => array(
           'full' => array(
-            'weight' => '39',
+            'weight' => '55',
             'visible' => TRUE,
           ),
           'default' => array(

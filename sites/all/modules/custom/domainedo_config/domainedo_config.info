@@ -122,6 +122,7 @@ features[user_permission][] = use text format full_html
 features[user_permission][] = view disqus comments
 features[user_permission][] = view own unpublished content
 features[user_permission][] = view the administration theme
+features[user_role][] = location
 features[user_role][] = redacteur
 features[user_role][] = webmaster
 features[variable][] = admin_theme
