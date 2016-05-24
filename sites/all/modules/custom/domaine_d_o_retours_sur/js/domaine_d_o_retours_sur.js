@@ -89,25 +89,28 @@
         }
 
         //gère les menus "fixed"
-        var link_context = $('<div id="student-context" class="anchor-retour-sur">Contexte</div>');
-        $('li.active-trail.active').append(link_context);
-        link_context.click(function () {
-          $('html, body').animate({scrollTop: 0}, 500);
-        });
-        if ($(".field-name-field-critiques").length) {
-          var link_critiques = $('<div id="student-critique" class="anchor-retour-sur">Critiques</div>');
-          $('li.active-trail.active').append(link_critiques);
-          link_critiques.click(function () {
-            $('html, body').animate({scrollTop: $('.field-name-field-critiques').offset().top}, 500);
+        if ($('body.node-type-retour-sur').length) {
+          var link_context = $('<div id="student-context" class="anchor-retour-sur">Les élèves ont participé</div>');
+          $('li.active-trail.active').append(link_context);
+          link_context.click(function () {
+            $('html, body').animate({scrollTop: 0}, 500);
           });
+          if ($(".field-name-field-critiques").length) {
+            var link_critiques = $('<div id="student-critique" class="anchor-retour-sur">Les élèves ont écrit</div>');
+            $('li.active-trail.active').append(link_critiques);
+            link_critiques.click(function () {
+              $('html, body').animate({scrollTop: $('.field-name-field-critiques').offset().top}, 500);
+            });
+          }
+          if ($(".field-name-field-retour-comments").length) {
+            var link_comments = $('<div id="student-comment" class="anchor-retour-sur">Les élèves ont commenté</div>');
+            $('li.active-trail.active').append(link_comments);
+            link_comments.click(function () {
+              $('html, body').animate({scrollTop: $('.field-name-field-retour-comments').offset().top}, 500);
+            });
+          }
         }
-        if ($(".field-name-field-retour-comments").length) {
-          var link_comments = $('<div id="student-comment" class="anchor-retour-sur">Commentaires</div>');
-          $('li.active-trail.active').append(link_comments);
-          link_comments.click(function () {
-            $('html, body').animate({scrollTop: $('.field-name-field-retour-comments').offset().top}, 500);
-          });
-        }
+
       }
 
     }
