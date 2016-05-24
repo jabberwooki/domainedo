@@ -62,7 +62,7 @@ function feature_lettre_info_views_default_views() {
     'link' => '0',
   );
   $handler->display->display_options['fields']['field_scald_image']['delta_offset'] = '0';
-  /* Field: Contenu: Description */
+  /* Field: Contenu: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -130,6 +130,9 @@ function feature_lettre_info_views_default_views() {
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['path'] = 'lettres-infos';
+
+  /* Display: Bloc */
+  $handler = $view->new_display('block', 'Bloc', 'block_lettres_infos');
   $translatables['lettres_infos'] = array(
     t('Master'),
     t('lettres infos'),
@@ -157,6 +160,7 @@ function feature_lettre_info_views_default_views() {
     </p>
 </div>'),
     t('Page'),
+    t('Bloc'),
   );
   $export['lettres_infos'] = $view;
 

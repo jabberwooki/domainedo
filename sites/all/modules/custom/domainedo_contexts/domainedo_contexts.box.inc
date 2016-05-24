@@ -45,7 +45,7 @@ Tél. : 0800 200 165 - appel gratuit depuis un poste fixe</p>
 </div>
 
 <div id="partner-bottom">
-<p><a href="http://www.herault.fr" style="font-size: 13px; line-height: 1.6;" target="_blank"><img alt="Pour la culture, le département de l\'Hérault est là" id="img-logo-34-bottom" src="/sites/all/themes/custom/domainedo/images/logos/cg-culture.gif" style="height:62px; width:222px" /></a><span style="font-size:13px">&nbsp;</span></p>
+<p><a href="http://www.herault.fr" style="font-size: 13px; line-height: 1.6;" target="_blank"><img alt="Pour la culture, le département de l\'Hérault est là" id="img-logo-34-bottom" src="/sites/default/files/images/partenaires/logo_cd34.png" style="height: 62px; width: 131px;margin-top:-7px" /></a><span style="font-size:13px">&nbsp;</span></p>
 </div>
 </div>
 ',
