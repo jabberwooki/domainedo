@@ -152,6 +152,9 @@ ul.group-ul-short-links > div.group-show-icons-bottom{
   display: table;
   margin: 0 auto;
 }
+ul.group-ul-short-links > div.group-show-icons-bottom > div.field{
+  float: left;
+}
 
 ul.group-ul-short-links > div {
   display: list-item;

@@ -945,7 +945,7 @@ div.menu-block-domainedo-shows-tab-menu > ul > li > a.active-trail,
 }
 .ds-2col-stacked-fluid.view-mode-full > .group-right > div#node-show-full-group-shorts-links{
   position: absolute;
-  bottom: -140px;
+  bottom: -100px;
 }
 
 .field-name-field-video-link a {
@@ -960,7 +960,7 @@ div.menu-block-domainedo-shows-tab-menu > ul > li > a.active-trail,
   background: url(../images/icons/camera-show-full-page.png) no-repeat 50% 50%;
 }
 
-ul.group-ul-short-links > div.field-name-field-back-to-top-link a {
+div.field-name-field-back-to-top-link a {
   background: url(../images/icons/arrow-top-show-full-page.png) no-repeat 50% 50%;
   border: 0;
 }
