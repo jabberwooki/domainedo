@@ -10,6 +10,7 @@ dependencies[] = dnd
 dependencies[] = domainedo_editors
 dependencies[] = features
 dependencies[] = image
+dependencies[] = manualcrop
 dependencies[] = mee
 dependencies[] = news
 dependencies[] = picture
