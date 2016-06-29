@@ -271,7 +271,7 @@ function domaine_d_o_retours_sur_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'body',
-    'label' => 'Contexte',
+    'label' => 'Les élèves ont participé',
     'required' => 0,
     'settings' => array(
       'context' => 'title',
@@ -336,7 +336,7 @@ function domaine_d_o_retours_sur_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_critiques',
-    'label' => 'Critiques des élèves',
+    'label' => 'Les élèves ont écrit',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -458,7 +458,7 @@ function domaine_d_o_retours_sur_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_retour_comments',
-    'label' => 'Commentaires des élèves',
+    'label' => 'les élèves ont commenté',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -586,15 +586,15 @@ function domaine_d_o_retours_sur_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Commentaire complet');
-  t('Commentaires des élèves');
   t('Contact - Service éducatif');
-  t('Contexte');
   t('Critique complète');
-  t('Critiques des élèves');
   t('Galerie multimédia');
+  t('Les élèves ont participé');
+  t('Les élèves ont écrit');
   t('Prénom');
   t('Résumé');
   t('Vignette');
+  t('les élèves ont commenté');
 
   return $field_instances;
 }
