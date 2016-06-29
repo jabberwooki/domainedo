@@ -98,7 +98,7 @@ function domainedo_media_image_default_styles() {
   // Exported image style: list_image_shows__240x180_.
   $styles['list_image_shows__240x180_'] = array(
     'name' => 'list_image_shows__240x180_',
-    'label' => 'List Image shows (240X180)',
+    'label' => 'List Image shows (240X180) manual crop',
     'effects' => array(
       22 => array(
         'label' => 'Manual Crop: Crop and scale',
