@@ -58,7 +58,7 @@ function domainedo_media_image_default_styles() {
   // Exported image style: image_325x136.
   $styles['image_325x136'] = array(
     'name' => 'image_325x136',
-    'label' => 'image_325x136',
+    'label' => 'image_325x136_manual_crop',
     'effects' => array(
       19 => array(
         'label' => 'Manual Crop: Custom crop',
