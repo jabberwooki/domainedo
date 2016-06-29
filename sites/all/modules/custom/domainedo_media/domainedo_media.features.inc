@@ -58,9 +58,26 @@ function domainedo_media_image_default_styles() {
   // Exported image style: image_325x136.
   $styles['image_325x136'] = array(
     'name' => 'image_325x136',
-    'label' => 'image_325x136',
+    'label' => 'image_325x136_manual_crop',
     'effects' => array(
-      17 => array(
+      19 => array(
+        'label' => 'Manual Crop: Custom crop',
+        'help' => 'Crop a freely user-selected area.',
+        'effect callback' => 'manualcrop_crop_effect',
+        'form callback' => 'manualcrop_crop_form',
+        'summary theme' => 'manualcrop_crop_summary',
+        'module' => 'manualcrop',
+        'name' => 'manualcrop_crop',
+        'data' => array(
+          'width' => 325,
+          'height' => 136,
+          'keepproportions' => 1,
+          'reuse_crop_style' => '',
+          'style_name' => 'image_325x136',
+        ),
+        'weight' => 0,
+      ),
+      18 => array(
         'label' => 'Scale and crop',
         'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
         'effect callback' => 'image_scale_and_crop_effect',
@@ -81,9 +98,27 @@ function domainedo_media_image_default_styles() {
   // Exported image style: list_image_shows__240x180_.
   $styles['list_image_shows__240x180_'] = array(
     'name' => 'list_image_shows__240x180_',
-    'label' => 'List Image shows (240X180)',
+    'label' => 'List Image shows (240X180) manual crop',
     'effects' => array(
-      2 => array(
+      22 => array(
+        'label' => 'Manual Crop: Crop and scale',
+        'help' => 'Crop and scale a user-selected area, respecting the ratio of the destination width and height.',
+        'effect callback' => 'manualcrop_crop_and_scale_effect',
+        'form callback' => 'manualcrop_crop_and_scale_form',
+        'summary theme' => 'manualcrop_crop_and_scale_summary',
+        'module' => 'manualcrop',
+        'name' => 'manualcrop_crop_and_scale',
+        'data' => array(
+          'width' => 240,
+          'height' => 180,
+          'upscale' => 0,
+          'respectminimum' => 1,
+          'onlyscaleifcrop' => 0,
+          'style_name' => 'list_image_shows__240x180_',
+        ),
+        'weight' => 0,
+      ),
+      21 => array(
         'label' => 'Scale and crop',
         'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
         'effect callback' => 'image_scale_and_crop_effect',
@@ -273,6 +308,24 @@ function domainedo_media_image_default_styles() {
     'name' => 'small_150',
     'label' => 'small (150 x 150)',
     'effects' => array(
+      23 => array(
+        'label' => 'Manual Crop: Crop and scale',
+        'help' => 'Crop and scale a user-selected area, respecting the ratio of the destination width and height.',
+        'effect callback' => 'manualcrop_crop_and_scale_effect',
+        'form callback' => 'manualcrop_crop_and_scale_form',
+        'summary theme' => 'manualcrop_crop_and_scale_summary',
+        'module' => 'manualcrop',
+        'name' => 'manualcrop_crop_and_scale',
+        'data' => array(
+          'width' => 150,
+          'height' => 150,
+          'upscale' => 0,
+          'respectminimum' => 1,
+          'onlyscaleifcrop' => 0,
+          'style_name' => 'small_150',
+        ),
+        'weight' => 0,
+      ),
       1 => array(
         'label' => 'Scale and crop',
         'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
