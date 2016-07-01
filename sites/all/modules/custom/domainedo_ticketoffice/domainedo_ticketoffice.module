@@ -331,8 +331,7 @@ function domainedo_ticketoffice_block_view($delta = '') {
 			// Subscription link
 			if ($prog = rsi_get_programmation()) {
 				$ident = $prog['ABONNEMENTS']['ABONNEMENT']['@attributes']['IDENT'];
-				//$subscription_url = $url . 'abonnement?' . $credentials . '&lng=1&id_abonnement=' . $ident . '&width=' . $popup['width'] . '&height=' . $popup['height']	. '&iframe=true';
-				$subscription_url = $url . 'catalogue_abonnement?&lng=1&width=' . $popup['width'] . '&height=' . $popup['height']	. '&iframe=true';
+				$subscription_url = $url . 'abonnement?' . $credentials . '&lng=1&id_abonnement=' . $ident . '&width=' . $popup['width'] . '&height=' . $popup['height']	. '&iframe=true';
 				$items[] = l(t('Subscription'), $subscription_url, array('attributes' => array('class' => array('colorbox-load'))));
 			}
 			
