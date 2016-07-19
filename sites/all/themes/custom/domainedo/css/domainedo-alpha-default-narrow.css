@@ -213,9 +213,9 @@ body.logged-in .under-header{
 }
 
 #section-content, body.front #section-content{
-  margin-top: 156px;
+  margin-top: 216px;
 }
-body.not-logged-in #section-content {
+body.logged-in #section-content, body.logged-in.front #section-content {
   margin-top: 196px;
 }
 
