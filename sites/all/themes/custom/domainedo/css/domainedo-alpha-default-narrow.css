@@ -202,11 +202,21 @@ body.front #block-views-evenements-block-1 div.view-footer {
 }
 
 body.front #section-content {
-  margin-top: 36px;
+  margin-top: 156px;
 }
 
 #section-content {
-  margin-top: 15px;
+  margin-top: 156px;
+}
+body.logged-in .under-header{
+  top: 30px;
+}
+
+#section-content, body.front #section-content{
+  margin-top: 156px;
+}
+body.not-logged-in #section-content {
+  margin-top: 196px;
 }
 
 /* This file will hold styles that are loaded using the same media query as the wide grid. */
