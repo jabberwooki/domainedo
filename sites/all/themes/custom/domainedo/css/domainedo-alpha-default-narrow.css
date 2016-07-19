@@ -208,9 +208,13 @@ body.front #section-content {
 #section-content {
   margin-top: 156px;
 }
+.under-header{
+  height: 181px;
+}
 body.logged-in .under-header{
   top: 30px;
 }
+
 
 #section-content, body.front #section-content{
   margin-top: 216px;
