@@ -89,22 +89,23 @@
         }
 
         //gère les menus "fixed"
-        if ($('body.node-type-retour-sur').length) {
+        if ($('body.node-type-retour-sur').length && cpt == 0) {
           var link_context = $('<div id="student-context" class="anchor-retour-sur">Les élèves ont participé</div>');
-          $('li.active-trail.active').append(link_context);
+          $('.expanded > ul.menu > li.active-trail.active').append(link_context);
+          console.log('ici');
           link_context.click(function () {
             $('html, body').animate({scrollTop: 0}, 500);
           });
           if ($(".field-name-field-critiques").length) {
             var link_critiques = $('<div id="student-critique" class="anchor-retour-sur">Les élèves ont écrit</div>');
-            $('li.active-trail.active').append(link_critiques);
+            $('.expanded > ul.menu > li.active-trail.active').append(link_critiques);
             link_critiques.click(function () {
               $('html, body').animate({scrollTop: $('.field-name-field-critiques').offset().top}, 500);
             });
           }
           if ($(".field-name-field-retour-comments").length) {
             var link_comments = $('<div id="student-comment" class="anchor-retour-sur">Les élèves ont commenté</div>');
-            $('li.active-trail.active').append(link_comments);
+            $('.expanded > ul.menu > li.active-trail.active').append(link_comments);
             link_comments.click(function () {
               $('html, body').animate({scrollTop: $('.field-name-field-retour-comments').offset().top}, 500);
             });
