@@ -253,6 +253,7 @@ ul#superfish-2 li.sf-depth-1 a {
 
 .view-evenements.view-display-id-block_2 .views-row > .views-field-body > div {
   padding: 0 5px 0 5px;
+  min-height: 55px;
 }
 
 .view-evenements.view-display-id-block_2 .views-row > .views-field-body p {
