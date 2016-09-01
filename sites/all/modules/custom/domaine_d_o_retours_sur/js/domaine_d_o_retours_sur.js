@@ -89,7 +89,7 @@
         }
 
         //gère les menus "fixed"
-        if ($('body.node-type-retour-sur').length && cpt == 0) {
+        if ($('body.node-type-retour-sur').length) {
           var link_context = $('<div id="student-context" class="anchor-retour-sur">Les élèves ont participé</div>');
           $('.expanded > ul.menu > li.active-trail.active').append(link_context);
           console.log('ici');
