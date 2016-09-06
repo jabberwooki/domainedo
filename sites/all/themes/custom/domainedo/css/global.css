@@ -2117,3 +2117,23 @@ body.node-type-festival .field-name-field-view-archives a:hover:before{
   cursor: pointer;
   text-decoration: underline;
 }
+/* header fixed *******************************************************************************************************/
+.under-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 141px;
+  z-index: 100;
+  background-color: #FFF;
+}
+body.logged-in .under-header{
+  top: 30px;
+}
+
+#section-content {
+  margin-top: 116px;
+}
+body.logged-in #section-content {
+  margin-top: 146px;
+}
