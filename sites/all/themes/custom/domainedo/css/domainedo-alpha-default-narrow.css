@@ -211,6 +211,9 @@ body.front #section-content {
 .under-header{
   height: 181px;
 }
+.under-header.header-remove-headband{
+  height: 80px;
+}
 body.logged-in .under-header{
   top: 30px;
 }
@@ -221,6 +224,20 @@ body.logged-in .under-header{
 }
 body.logged-in #section-content, body.logged-in.front #section-content {
   margin-top: 196px;
+}
+body.not-logged-in.body-remove-headband #section-content,
+body.logged-in.body-remove-headband #section-content{
+  margin-top: 140px;
+}
+body.not-logged-in.front.body-remove-headband #section-content{
+  margin-top: 160px;
+}
+body.logged-in.front.body-remove-headband #section-content{
+  margin-top: 260px;
+}
+
+body.logged-in.front.body-remove-headband #section-content {
+  margin-top: 120px;
 }
 
 /* This file will hold styles that are loaded using the same media query as the wide grid. */
