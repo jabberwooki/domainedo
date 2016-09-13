@@ -175,7 +175,7 @@ function domainedo_shows_ds_custom_fields_info() {
   $ds_field->ui_limit = '';
   $ds_field->properties = array(
     'code' => array(
-      'value' => '<p><a href="#listshows">Voir les spectacles et réserver</a></p>
+      'value' => '<p><a href="#listshows" id="link-listshows">Voir les spectacles et réserver</a></p>
 ',
       'format' => 'full_html',
     ),
