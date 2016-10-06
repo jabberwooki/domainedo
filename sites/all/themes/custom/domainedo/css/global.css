@@ -1332,6 +1332,12 @@ body.page-espace-multimedia .view-multimedia-space .view-content .view-grouping 
 body.node-type-news .field-name-field-news-only-video{
   display: none;
 }
+.galleria-info-title a{
+  color: #D7EAF1;
+}
+.galleria-info-title a:hover{
+  color: #FFFFFF;
+}
 
 /*slideshow *******************************************************************/
 #block-views-shows-block-1 .field-name-field-festival {
