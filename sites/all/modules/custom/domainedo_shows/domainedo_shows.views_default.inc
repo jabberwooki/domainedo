@@ -960,6 +960,74 @@ else {
   $handler->display->display_options['row_options']['grouping_fieldset']['group_field'] = 'field_data_field_show_dates|field_show_dates_value';
   $handler->display->display_options['row_options']['default_fieldset']['view_mode'] = 'frontpage_block_mobile';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+
+  /* Display: Data export */
+  $handler = $view->new_display('views_data_export', 'Data export', 'views_data_export_1');
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '100';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'views_data_export_xml';
+  $handler->display->display_options['style_options']['provide_file'] = 0;
+  $handler->display->display_options['style_options']['parent_sort'] = 0;
+  $handler->display->display_options['style_options']['transform'] = 1;
+  $handler->display->display_options['style_options']['root_node'] = 'shows';
+  $handler->display->display_options['style_options']['item_node'] = 'show';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Contenu: Titre */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = 'title';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Contenu: Date(s) */
+  $handler->display->display_options['fields']['field_show_dates']['id'] = 'field_show_dates';
+  $handler->display->display_options['fields']['field_show_dates']['table'] = 'field_data_field_show_dates';
+  $handler->display->display_options['fields']['field_show_dates']['field'] = 'field_show_dates';
+  $handler->display->display_options['fields']['field_show_dates']['label'] = 'dates';
+  $handler->display->display_options['fields']['field_show_dates']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_show_dates']['alter']['text'] = '<span class="date">[field_show_dates-value]</span>';
+  $handler->display->display_options['fields']['field_show_dates']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['field_show_dates']['alter']['preserve_tags'] = '<date>';
+  $handler->display->display_options['fields']['field_show_dates']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_show_dates']['settings'] = array(
+    'format_type' => 'short',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
+  );
+  $handler->display->display_options['fields']['field_show_dates']['group_column'] = 'entity_id';
+  $handler->display->display_options['fields']['field_show_dates']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_show_dates']['delta_offset'] = '0';
+  /* Field: Contenu: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = 'contenu';
+  $handler->display->display_options['fields']['body']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_plain';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '600',
+  );
+  /* Field: Field: Image */
+  $handler->display->display_options['fields']['field_scald_image']['id'] = 'field_scald_image';
+  $handler->display->display_options['fields']['field_scald_image']['table'] = 'field_data_field_scald_image';
+  $handler->display->display_options['fields']['field_scald_image']['field'] = 'field_scald_image';
+  $handler->display->display_options['fields']['field_scald_image']['label'] = 'image';
+  $handler->display->display_options['fields']['field_scald_image']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_scald_image']['alter']['text'] = 'http://www.domaine-do-34;EU/sites/default/files/styles/small_150/public/thumbnails/image/[field_scald_image]';
+  $handler->display->display_options['fields']['field_scald_image']['click_sort_column'] = 'sid';
+  $handler->display->display_options['fields']['field_scald_image']['settings'] = array(
+    'link' => '0',
+  );
+  $handler->display->display_options['fields']['field_scald_image']['group_column'] = 'entity_id';
+  $handler->display->display_options['fields']['field_scald_image']['delta_offset'] = '0';
+  $handler->display->display_options['path'] = 'shows-xml';
   $translatables['shows'] = array(
     t('Master'),
     t('plus'),
@@ -1029,6 +1097,13 @@ else {
 </ul>    </nav>
   </div>'),
     t('Accueil mobile'),
+    t('Data export'),
+    t('title'),
+    t('dates'),
+    t('<span class="date">[field_show_dates-value]</span>'),
+    t('contenu'),
+    t('image'),
+    t('http://www.domaine-do-34;EU/sites/default/files/styles/small_150/public/thumbnails/image/[field_scald_image]'),
   );
   $export['shows'] = $view;
 

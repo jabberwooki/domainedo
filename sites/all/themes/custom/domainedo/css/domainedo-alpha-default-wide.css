@@ -100,9 +100,14 @@ body.front .view-evenements.view-display-id-block_2 .views-row.views-row-first {
 }
 .field-name-field-vente-salle > .field-items > .field-item{
   max-width: 30%;
-  margin-right: 3%;
+  margin-right: 82px;
+}
+.field-name-field-vente-salle > .field-items > .field-item.item_1{
+  margin-right: 0;
 }
 .node-type-presentation-location-salles .group-left .field-collection-view{
   max-width: 30%;
-  margin-right: 3%;
-}
+  margin-right: 82px;
+}.node-type-presentation-location-salles .group-left .item_3 .field-collection-view {
+   margin-right: 0;
+ }

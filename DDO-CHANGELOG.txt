@@ -1,3 +1,7 @@
+Domaine d'O 1.0.30 - 2016-10-27
+----------------------------
+XML shows export added.
+
 Domaine d'O 1.0.29 - 2016-09-13
 ----------------------------
 Manage cases where there is no show attached to a festival and where date is not filled.

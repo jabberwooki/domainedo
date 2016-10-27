@@ -352,3 +352,10 @@ img[alt=anonyme] {
 .remove-headband{
   display: none;
 }
+/* Calendrier *********************************************************************************************************/
+#block-system-main ul.pager li.date-next a {
+  margin-top: 0;
+}
+.view .date-nav-wrapper .date-next{
+  top: 0;
+}
