@@ -34,6 +34,7 @@ dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = text
 dependencies[] = views_block_area
+dependencies[] = views_data_export
 features[box][] = right_shows_infos
 features[cer][] = node*show*field_by*node*structure*field_structure_shows
 features[cer][] = node*show*field_festival*node*festival*field_festival_shows
