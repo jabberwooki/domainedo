@@ -1,3 +1,7 @@
+Domaine d'O 1.0.30 - 2016-11-08
+----------------------------
+XML shows export up to give a correct image path.
+
 Domaine d'O 1.0.30 - 2016-10-27
 ----------------------------
 XML shows export added.
