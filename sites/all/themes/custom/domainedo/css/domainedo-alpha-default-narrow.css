@@ -1013,6 +1013,10 @@ div.field-name-field-back-to-top-link a {
   height: 80px;
   overflow: hidden;
 }
+.page-node-542 #region-footer-first {
+  height: auto;
+  overflow: visible;
+}
 #region-footer-first .sprite.sprite-gplus{
   display:block;
 }
