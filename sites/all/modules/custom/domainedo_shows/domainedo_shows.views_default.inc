@@ -1019,9 +1019,9 @@ else {
   $handler->display->display_options['fields']['field_scald_image']['table'] = 'field_data_field_scald_image';
   $handler->display->display_options['fields']['field_scald_image']['field'] = 'field_scald_image';
   $handler->display->display_options['fields']['field_scald_image']['label'] = 'image';
-  $handler->display->display_options['fields']['field_scald_image']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_scald_image']['alter']['text'] = 'http://www.domaine-do-34;EU/sites/default/files/styles/small_150/public/thumbnails/image/[field_scald_image]';
+  $handler->display->display_options['fields']['field_scald_image']['alter']['text'] = '[field_scald_image]--[field_scald_image-sid]';
   $handler->display->display_options['fields']['field_scald_image']['click_sort_column'] = 'sid';
+  $handler->display->display_options['fields']['field_scald_image']['type'] = 'list';
   $handler->display->display_options['fields']['field_scald_image']['settings'] = array(
     'link' => '0',
   );
@@ -1103,7 +1103,7 @@ else {
     t('<span class="date">[field_show_dates-value]</span>'),
     t('contenu'),
     t('image'),
-    t('http://www.domaine-do-34;EU/sites/default/files/styles/small_150/public/thumbnails/image/[field_scald_image]'),
+    t('[field_scald_image]--[field_scald_image-sid]'),
   );
   $export['shows'] = $view;
 
