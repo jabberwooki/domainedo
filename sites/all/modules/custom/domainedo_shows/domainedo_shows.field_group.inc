@@ -262,6 +262,7 @@ function domainedo_shows_field_group_info() {
       2 => 'field_feuilleter_en_ligne',
       3 => 'field_programme_pdf',
       4 => 'field_view_archives',
+      5 => 'field_facebook',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

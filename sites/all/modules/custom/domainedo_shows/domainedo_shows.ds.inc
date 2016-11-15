@@ -18,7 +18,7 @@ function domainedo_shows_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
     'anchor_shows' => array(
-      'weight' => '12',
+      'weight' => '13',
       'label' => 'hidden',
       'format' => 'default',
     ),
@@ -229,18 +229,19 @@ function domainedo_shows_ds_layout_settings_info() {
         3 => 'field_feuilleter_en_ligne',
         4 => 'field_calendar_archive',
         5 => 'field_view_archives',
-        6 => 'body',
-        7 => 'field_scald_file',
+        6 => 'field_facebook',
+        7 => 'body',
+        8 => 'field_scald_file',
       ),
       'right' => array(
-        8 => 'field_festival_poster',
+        9 => 'field_festival_poster',
       ),
       'footer' => array(
-        9 => 'field_scald_video',
-        10 => 'field_scald_gallery',
-        11 => 'field_scald_sound',
-        12 => 'anchor_shows',
-        13 => 'field_festival_shows',
+        10 => 'field_scald_video',
+        11 => 'field_scald_gallery',
+        12 => 'field_scald_sound',
+        13 => 'anchor_shows',
+        14 => 'field_festival_shows',
       ),
     ),
     'fields' => array(
@@ -250,6 +251,7 @@ function domainedo_shows_ds_layout_settings_info() {
       'field_feuilleter_en_ligne' => 'left',
       'field_calendar_archive' => 'left',
       'field_view_archives' => 'left',
+      'field_facebook' => 'left',
       'body' => 'left',
       'field_scald_file' => 'left',
       'field_festival_poster' => 'right',
@@ -272,6 +274,7 @@ function domainedo_shows_ds_layout_settings_info() {
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
+    'layout_disable_css' => 0,
   );
   $export['node|festival|full'] = $ds_layout;
 
