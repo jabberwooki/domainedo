@@ -413,6 +413,24 @@
       "css": "quote-circled",
       "code": 59444,
       "src": "elusive"
+    },
+    {
+      "uid": "d6fcb9886485b0bdb41b94521e7a3311",
+      "css": "ticket",
+      "code": 61765,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "17bddf8c9ea5dc5b8e1f33c936d08c1a",
+      "css": "ticket-1",
+      "code": 59445,
+      "src": "typicons"
+    },
+    {
+      "uid": "333bae7aaf7395d1004875be5a075661",
+      "css": "ticket-2",
+      "code": 59446,
+      "src": "entypo"
     }
   ]
 }

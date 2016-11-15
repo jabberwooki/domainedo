@@ -52,6 +52,8 @@
 .icon-quote-right-1:before { content: '\e832'; } /* '' */
 .icon-quote-1:before { content: '\e833'; } /* '' */
 .icon-quote-circled:before { content: '\e834'; } /* '' */
+.icon-ticket-1:before { content: '\e835'; } /* '' */
+.icon-ticket-2:before { content: '\e836'; } /* '' */
 .icon-ccw-1:before { content: '\f025'; } /* '' */
 .icon-list-bullet:before { content: '\f0ca'; } /* '' */
 .icon-gplus-squared:before { content: '\f0d4'; } /* '' */
@@ -60,6 +62,7 @@
 .icon-food:before { content: '\f0f5'; } /* '' */
 .icon-quote-left:before { content: '\f10d'; } /* '' */
 .icon-quote-right:before { content: '\f10e'; } /* '' */
+.icon-ticket:before { content: '\f145'; } /* '' */
 .icon-youtube-squared:before { content: '\f166'; } /* '' */
 .icon-file-pdf:before { content: '\f1c1'; } /* '' */
 .icon-user-secret:before { content: '\f21b'; } /* '' */
