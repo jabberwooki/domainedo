@@ -1399,7 +1399,9 @@ body.node-type-festival .field-name-link-shows a:before,
 body.node-type-festival .field-name-field-feuilleter-en-ligne a:before,
 body.node-type-festival .field-name-field-calendar-archive a:before,
 body.node-type-festival .field-name-field-view-archives a:before,
-body.node-type-festival .field-name-field-facebook a:before{
+body.node-type-festival .field-name-field-facebook a:before,
+ul#superfish-2 li.sf-depth-1.last > a:after,
+#block-menu-menu-contact ul li a:before{
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -1445,7 +1447,29 @@ body.node-type-festival .field-name-field-calendar-archive a:before{
 body.node-type-festival .field-name-field-view-archives a:before{
   content: "\e813";
 }
-/* facebook ***************************************************/
+/* Menu billetterie *******************************************/
+ul#superfish-2 li.sf-depth-1.last > a:after{
+  content: "\e835";
+  font-size: 1.6em;
+  position: absolute;
+  top: 9px;
+  right: -4px;
+  color: #C71D20;
+}
+ul#superfish-2 li.sf-depth-1.last > a:hover:after{
+  color: white;
+}
+/* Menu contact ***********************************************/
+#block-menu-menu-contact ul li a:before{
+  content: "\e809";
+  color: #000000;
+  float: left;
+  margin-right: 5px;
+}
+#block-menu-menu-contact ul li a:hover:before{
+  color: #C71D20;
+}
+  /* facebook ***************************************************/
 body.node-type-festival .field-name-field-facebook a:before{
   content: "\f30e";
 }

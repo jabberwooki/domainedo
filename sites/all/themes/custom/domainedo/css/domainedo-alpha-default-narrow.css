@@ -371,6 +371,7 @@ ul#superfish-2 li.sf-depth-1 a {
   text-align: center;
   height: 32px;
   padding-top: 15px;
+  padding-right: 10px;
   display: block;
 }
 
@@ -378,8 +379,8 @@ ul#superfish-2 li.sf-depth-1.first > a {
   border-right: 1px solid #000000;
 }
 
-ul#superfish-2 li.sf-depth-1.last > a {
-  background: url(../images/icons/ticket_menu.png) no-repeat 95% 18px;
+ul#superfish-2 li.sf-depth-1.last > a:after {
+  /*background: url(../images/icons/ticket_menu.png) no-repeat 95% 18px;*/
 }
 
 ul#superfish-2 li.sf-depth-1 > a:hover,
@@ -440,16 +441,15 @@ ul.sf-horizontal li.sf-depth-1 ul li:hover > a > .sf-sub-indicator {
 }
 
 #block-menu-menu-contact ul li a {
-  background: url(../images/icons/location_wide.gif) no-repeat 0 4px;
+  /*background: url(../images/icons/location_wide.gif) no-repeat 0 4px;*/
   display: block;
-  padding-left: 20px;
   text-transform: capitalize;
   text-decoration: none;
   color: #272727;
 }
 
 #block-menu-menu-contact ul li a:hover {
-  background: url(../images/icons/location_wide.gif) no-repeat 0 110%;
+  /*background: url(../images/icons/location_wide.gif) no-repeat 0 110%;*/
   color: #c10000;
 }
 
