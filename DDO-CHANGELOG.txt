@@ -1,4 +1,8 @@
-Domaine d'O 1.0.30 - 2016-11-08
+Domaine d'O 1.0.32 - 2016-11-15
+----------------------------
+Fontello up to fix windows os bug and to add facebook icon on festival
+
+Domaine d'O 1.0.31 - 2016-11-08
 ----------------------------
 XML shows export up to give a correct image path.
 
