@@ -10,6 +10,44 @@
 function domaine_d_o_rent_theater_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'field_collection_item-field_vente_references-field_vente_commentaires'
+  $field_instances['field_collection_item-field_vente_references-field_vente_commentaires'] = array(
+    'bundle' => 'field_vente_references',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_vente_commentaires',
+    'label' => 'Commentaires',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 1,
+      'mee_enabled' => 1,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 31,
+    ),
+  );
+
   // Exported field_instance: 'field_collection_item-field_vente_references-field_vente_reference_url'
   $field_instances['field_collection_item-field_vente_references-field_vente_reference_url'] = array(
     'bundle' => 'field_vente_references',
@@ -594,6 +632,7 @@ function domaine_d_o_rent_theater_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
+  t('Commentaires');
   t('Galerie');
   t('Image');
   t('Références');

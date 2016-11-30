@@ -1999,6 +1999,10 @@ body.node-type-festival .field-name-field-facebook a:hover:before{
   text-decoration: none;
   border-bottom: 1px dashed #FFC929;
 }
+.node-type-presentation-location-salles .field-name-scald-authors{
+  display: none;
+}
+
 /* Retour sur ... *****************************************************************************************************/
 .node-type-retour-sur .field-name-body .field-label,
 .node-type-retour-sur .field-name-field-critiques .field-label,
@@ -2094,8 +2098,10 @@ body.node-type-festival .field-name-field-facebook a:hover:before{
   position: static;
   color: #FFC929;
 }
+
 .field-name-field-summary-critique .field-item p:after,
-.field-name-field-summary-comment .field-item p:after{
+.field-name-field-summary-comment .field-item p:after,
+.node-type-presentation-location-salles .field-name-field-vente-commentaires:before{
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -2123,6 +2129,13 @@ body.node-type-festival .field-name-field-facebook a:hover:before{
   content: "\f10e";
   position: relative;
   left: 20px;
+}
+.node-type-presentation-location-salles .field-name-field-vente-commentaires:before{
+  content: "\e831";
+  color: #000;
+  float: left;
+  margin-right: 5px;
+  left: 0;
 }
 .group-contact-retour a.field-group-format-title{
   background-color: #C20000;
