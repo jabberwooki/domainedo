@@ -1,13 +1,13 @@
 (function ($) {
-  Drupal.behaviors.scaldFile= {
+  Drupal.behaviors.scaldFile = {
     attach: function (context, settings) {
-      if (typeof CKEDITOR !== 'undefined') {
-        CKEDITOR.on('instanceReady', function(ev) {
-          for(var i in CKEDITOR.instances) {
-            CKEDITOR.instances[i].document.appendStyleSheet(Drupal.settings.basePath + settings.scaldFile.path);
-          }
-        });
-      }
+      $('body').once('scald-file', function() {
+        if (typeof CKEDITOR !== 'undefined') {
+          CKEDITOR.on('instanceReady', function(ev) {
+            CKEDITOR.instances[ev.editor.name].document.appendStyleSheet(Drupal.settings.basePath + settings.scaldFile.path);
+          });
+        }
+      });
     }
   };
 })(jQuery);
