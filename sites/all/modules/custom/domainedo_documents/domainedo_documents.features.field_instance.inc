@@ -10,7 +10,7 @@
 function domainedo_documents_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-press_document-body'
+  // Exported field_instance: 'node-press_document-body'.
   $field_instances['node-press_document-body'] = array(
     'bundle' => 'press_document',
     'default_value' => NULL,
@@ -65,7 +65,7 @@ function domainedo_documents_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-press_document-field_doc_section'
+  // Exported field_instance: 'node-press_document-field_doc_section'.
   $field_instances['node-press_document-field_doc_section'] = array(
     'bundle' => 'press_document',
     'default_value' => array(
@@ -112,7 +112,7 @@ function domainedo_documents_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-press_document-field_press_document_type'
+  // Exported field_instance: 'node-press_document-field_press_document_type'.
   $field_instances['node-press_document-field_press_document_type'] = array(
     'bundle' => 'press_document',
     'default_value' => array(
@@ -159,7 +159,7 @@ function domainedo_documents_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-press_document-field_scald_file'
+  // Exported field_instance: 'node-press_document-field_scald_file'.
   $field_instances['node-press_document-field_scald_file'] = array(
     'bundle' => 'press_document',
     'default_value' => NULL,
@@ -217,7 +217,7 @@ function domainedo_documents_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-relpub_document-body'
+  // Exported field_instance: 'node-relpub_document-body'.
   $field_instances['node-relpub_document-body'] = array(
     'bundle' => 'relpub_document',
     'default_value' => NULL,
@@ -279,7 +279,7 @@ function domainedo_documents_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-relpub_document-field_doc_section'
+  // Exported field_instance: 'node-relpub_document-field_doc_section'.
   $field_instances['node-relpub_document-field_doc_section'] = array(
     'bundle' => 'relpub_document',
     'default_value' => array(
@@ -333,7 +333,7 @@ function domainedo_documents_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-relpub_document-field_relpub_document_type'
+  // Exported field_instance: 'node-relpub_document-field_relpub_document_type'.
   $field_instances['node-relpub_document-field_relpub_document_type'] = array(
     'bundle' => 'relpub_document',
     'default_value' => NULL,
@@ -376,7 +376,7 @@ function domainedo_documents_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-relpub_document-field_scald_file'
+  // Exported field_instance: 'node-relpub_document-field_scald_file'.
   $field_instances['node-relpub_document-field_scald_file'] = array(
     'bundle' => 'relpub_document',
     'default_value' => NULL,
@@ -441,7 +441,7 @@ function domainedo_documents_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-tech_document-body'
+  // Exported field_instance: 'node-tech_document-body'.
   $field_instances['node-tech_document-body'] = array(
     'bundle' => 'tech_document',
     'default_value' => NULL,
@@ -496,7 +496,7 @@ function domainedo_documents_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-tech_document-field_described_location'
+  // Exported field_instance: 'node-tech_document-field_described_location'.
   $field_instances['node-tech_document-field_described_location'] = array(
     'bundle' => 'tech_document',
     'default_value' => NULL,
@@ -542,7 +542,7 @@ function domainedo_documents_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-tech_document-field_doc_section'
+  // Exported field_instance: 'node-tech_document-field_doc_section'.
   $field_instances['node-tech_document-field_doc_section'] = array(
     'bundle' => 'tech_document',
     'default_value' => array(
@@ -589,7 +589,7 @@ function domainedo_documents_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-tech_document-field_scald_file'
+  // Exported field_instance: 'node-tech_document-field_scald_file'.
   $field_instances['node-tech_document-field_scald_file'] = array(
     'bundle' => 'tech_document',
     'default_value' => NULL,
@@ -647,7 +647,7 @@ function domainedo_documents_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-tech_document-field_tech_document_type'
+  // Exported field_instance: 'node-tech_document-field_tech_document_type'.
   $field_instances['node-tech_document-field_tech_document_type'] = array(
     'bundle' => 'tech_document',
     'default_value' => NULL,
@@ -690,7 +690,7 @@ function domainedo_documents_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-espace_pro-field_section_image'
+  // Exported field_instance: 'taxonomy_term-espace_pro-field_section_image'.
   $field_instances['taxonomy_term-espace_pro-field_section_image'] = array(
     'bundle' => 'espace_pro',
     'default_value' => NULL,

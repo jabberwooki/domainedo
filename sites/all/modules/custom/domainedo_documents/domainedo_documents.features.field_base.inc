@@ -10,21 +10,13 @@
 function domainedo_documents_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_described_location'
+  // Exported field_base: 'field_described_location'.
   $field_bases['field_described_location'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_described_location',
-    'foreign keys' => array(
-      'tid' => array(
-        'columns' => array(
-          'tid' => 'tid',
-        ),
-        'table' => 'taxonomy_term_data',
-      ),
-    ),
     'indexes' => array(
       'tid' => array(
         0 => 'tid',
@@ -44,21 +36,13 @@ function domainedo_documents_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_doc_section'
+  // Exported field_base: 'field_doc_section'.
   $field_bases['field_doc_section'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_doc_section',
-    'foreign keys' => array(
-      'tid' => array(
-        'columns' => array(
-          'tid' => 'tid',
-        ),
-        'table' => 'taxonomy_term_data',
-      ),
-    ),
     'indexes' => array(
       'tid' => array(
         0 => 'tid',
@@ -78,14 +62,13 @@ function domainedo_documents_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_press_document_type'
+  // Exported field_base: 'field_press_document_type'.
   $field_bases['field_press_document_type'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_press_document_type',
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -103,14 +86,13 @@ function domainedo_documents_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_relpub_document_type'
+  // Exported field_base: 'field_relpub_document_type'.
   $field_bases['field_relpub_document_type'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_relpub_document_type',
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -129,14 +111,13 @@ function domainedo_documents_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_section_image'
+  // Exported field_base: 'field_section_image'.
   $field_bases['field_section_image'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_section_image',
-    'foreign keys' => array(),
     'indexes' => array(
       'sid' => array(
         0 => 'sid',
@@ -149,14 +130,13 @@ function domainedo_documents_field_default_field_bases() {
     'type' => 'atom_reference',
   );
 
-  // Exported field_base: 'field_tech_document_type'
+  // Exported field_base: 'field_tech_document_type'.
   $field_bases['field_tech_document_type'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_tech_document_type',
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
