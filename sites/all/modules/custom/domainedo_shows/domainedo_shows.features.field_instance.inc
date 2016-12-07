@@ -10,7 +10,7 @@
 function domainedo_shows_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-festival-body'
+  // Exported field_instance: 'node-festival-body'.
   $field_instances['node-festival-body'] = array(
     'bundle' => 'festival',
     'default_value' => NULL,
@@ -65,7 +65,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-festival-field_calendar_archive'
+  // Exported field_instance: 'node-festival-field_calendar_archive'.
   $field_instances['node-festival-field_calendar_archive'] = array(
     'bundle' => 'festival',
     'default_value' => array(
@@ -121,7 +121,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-festival-field_facebook'
+  // Exported field_instance: 'node-festival-field_facebook'.
   $field_instances['node-festival-field_facebook'] = array(
     'bundle' => 'festival',
     'default_value' => NULL,
@@ -182,7 +182,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-festival-field_festival_name'
+  // Exported field_instance: 'node-festival-field_festival_name'.
   $field_instances['node-festival-field_festival_name'] = array(
     'bundle' => 'festival',
     'default_value' => NULL,
@@ -225,7 +225,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-festival-field_festival_poster'
+  // Exported field_instance: 'node-festival-field_festival_poster'.
   $field_instances['node-festival-field_festival_poster'] = array(
     'bundle' => 'festival',
     'default_value' => NULL,
@@ -281,7 +281,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-festival-field_festival_shows'
+  // Exported field_instance: 'node-festival-field_festival_shows'.
   $field_instances['node-festival-field_festival_shows'] = array(
     'bundle' => 'festival',
     'default_value' => NULL,
@@ -334,7 +334,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-festival-field_feuilleter_en_ligne'
+  // Exported field_instance: 'node-festival-field_feuilleter_en_ligne'.
   $field_instances['node-festival-field_feuilleter_en_ligne'] = array(
     'bundle' => 'festival',
     'default_value' => NULL,
@@ -395,7 +395,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-festival-field_logo'
+  // Exported field_instance: 'node-festival-field_logo'.
   $field_instances['node-festival-field_logo'] = array(
     'bundle' => 'festival',
     'default_value' => NULL,
@@ -448,7 +448,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-festival-field_no_result'
+  // Exported field_instance: 'node-festival-field_no_result'.
   $field_instances['node-festival-field_no_result'] = array(
     'bundle' => 'festival',
     'default_value' => array(
@@ -507,7 +507,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-festival-field_programme_pdf'
+  // Exported field_instance: 'node-festival-field_programme_pdf'.
   $field_instances['node-festival-field_programme_pdf'] = array(
     'bundle' => 'festival',
     'default_value' => NULL,
@@ -561,7 +561,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-festival-field_scald_file'
+  // Exported field_instance: 'node-festival-field_scald_file'.
   $field_instances['node-festival-field_scald_file'] = array(
     'bundle' => 'festival',
     'default_value' => NULL,
@@ -615,7 +615,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-festival-field_scald_gallery'
+  // Exported field_instance: 'node-festival-field_scald_gallery'.
   $field_instances['node-festival-field_scald_gallery'] = array(
     'bundle' => 'festival',
     'default_value' => NULL,
@@ -671,7 +671,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-festival-field_scald_image'
+  // Exported field_instance: 'node-festival-field_scald_image'.
   $field_instances['node-festival-field_scald_image'] = array(
     'bundle' => 'festival',
     'default_value' => NULL,
@@ -724,7 +724,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-festival-field_scald_sound'
+  // Exported field_instance: 'node-festival-field_scald_sound'.
   $field_instances['node-festival-field_scald_sound'] = array(
     'bundle' => 'festival',
     'default_value' => NULL,
@@ -780,7 +780,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-festival-field_scald_video'
+  // Exported field_instance: 'node-festival-field_scald_video'.
   $field_instances['node-festival-field_scald_video'] = array(
     'bundle' => 'festival',
     'default_value' => NULL,
@@ -836,7 +836,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-festival-field_season'
+  // Exported field_instance: 'node-festival-field_season'.
   $field_instances['node-festival-field_season'] = array(
     'bundle' => 'festival',
     'default_value' => NULL,
@@ -888,7 +888,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-festival-field_useful_links'
+  // Exported field_instance: 'node-festival-field_useful_links'.
   $field_instances['node-festival-field_useful_links'] = array(
     'bundle' => 'festival',
     'default_value' => NULL,
@@ -948,7 +948,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-festival-field_view_archives'
+  // Exported field_instance: 'node-festival-field_view_archives'.
   $field_instances['node-festival-field_view_archives'] = array(
     'bundle' => 'festival',
     'default_value' => NULL,
@@ -1009,7 +1009,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-programmer-body'
+  // Exported field_instance: 'node-programmer-body'.
   $field_instances['node-programmer-body'] = array(
     'bundle' => 'programmer',
     'default_value' => NULL,
@@ -1061,7 +1061,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-programmer-field_logo'
+  // Exported field_instance: 'node-programmer-field_logo'.
   $field_instances['node-programmer-field_logo'] = array(
     'bundle' => 'programmer',
     'default_value' => NULL,
@@ -1120,7 +1120,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-body'
+  // Exported field_instance: 'node-show-body'.
   $field_instances['node-show-body'] = array(
     'bundle' => 'show',
     'default_value' => NULL,
@@ -1211,7 +1211,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_additional_infos'
+  // Exported field_instance: 'node-show-field_additional_infos'.
   $field_instances['node-show-field_additional_infos'] = array(
     'bundle' => 'show',
     'default_value' => NULL,
@@ -1291,7 +1291,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_back_to_top_link'
+  // Exported field_instance: 'node-show-field_back_to_top_link'.
   $field_instances['node-show-field_back_to_top_link'] = array(
     'bundle' => 'show',
     'default_value' => array(
@@ -1375,7 +1375,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_boxoffice_url'
+  // Exported field_instance: 'node-show-field_boxoffice_url'.
   $field_instances['node-show-field_boxoffice_url'] = array(
     'bundle' => 'show',
     'default_value' => NULL,
@@ -1466,7 +1466,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_by'
+  // Exported field_instance: 'node-show-field_by'.
   $field_instances['node-show-field_by'] = array(
     'bundle' => 'show',
     'default_value' => NULL,
@@ -1548,7 +1548,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_casting'
+  // Exported field_instance: 'node-show-field_casting'.
   $field_instances['node-show-field_casting'] = array(
     'bundle' => 'show',
     'default_value' => NULL,
@@ -1628,7 +1628,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_casting_link'
+  // Exported field_instance: 'node-show-field_casting_link'.
   $field_instances['node-show-field_casting_link'] = array(
     'bundle' => 'show',
     'default_value' => array(
@@ -1713,7 +1713,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_coming_soon'
+  // Exported field_instance: 'node-show-field_coming_soon'.
   $field_instances['node-show-field_coming_soon'] = array(
     'bundle' => 'show',
     'default_value' => NULL,
@@ -1793,7 +1793,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_comments_link'
+  // Exported field_instance: 'node-show-field_comments_link'.
   $field_instances['node-show-field_comments_link'] = array(
     'bundle' => 'show',
     'default_value' => array(
@@ -1878,7 +1878,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_coproduction'
+  // Exported field_instance: 'node-show-field_coproduction'.
   $field_instances['node-show-field_coproduction'] = array(
     'bundle' => 'show',
     'default_value' => NULL,
@@ -1958,7 +1958,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_duration'
+  // Exported field_instance: 'node-show-field_duration'.
   $field_instances['node-show-field_duration'] = array(
     'bundle' => 'show',
     'default_value' => NULL,
@@ -2038,7 +2038,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_entrance'
+  // Exported field_instance: 'node-show-field_entrance'.
   $field_instances['node-show-field_entrance'] = array(
     'bundle' => 'show',
     'default_value' => NULL,
@@ -2112,7 +2112,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_festival'
+  // Exported field_instance: 'node-show-field_festival'.
   $field_instances['node-show-field_festival'] = array(
     'bundle' => 'show',
     'default_value' => NULL,
@@ -2198,7 +2198,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_from'
+  // Exported field_instance: 'node-show-field_from'.
   $field_instances['node-show-field_from'] = array(
     'bundle' => 'show',
     'default_value' => NULL,
@@ -2278,7 +2278,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_full'
+  // Exported field_instance: 'node-show-field_full'.
   $field_instances['node-show-field_full'] = array(
     'bundle' => 'show',
     'default_value' => NULL,
@@ -2358,7 +2358,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_lieu_generique'
+  // Exported field_instance: 'node-show-field_lieu_generique'.
   $field_instances['node-show-field_lieu_generique'] = array(
     'bundle' => 'show',
     'default_value' => array(
@@ -2442,7 +2442,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_linked_shows'
+  // Exported field_instance: 'node-show-field_linked_shows'.
   $field_instances['node-show-field_linked_shows'] = array(
     'bundle' => 'show',
     'default_value' => NULL,
@@ -2525,7 +2525,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_location'
+  // Exported field_instance: 'node-show-field_location'.
   $field_instances['node-show-field_location'] = array(
     'bundle' => 'show',
     'default_value' => NULL,
@@ -2599,7 +2599,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_minimum_age'
+  // Exported field_instance: 'node-show-field_minimum_age'.
   $field_instances['node-show-field_minimum_age'] = array(
     'bundle' => 'show',
     'default_value' => NULL,
@@ -2687,7 +2687,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_offline'
+  // Exported field_instance: 'node-show-field_offline'.
   $field_instances['node-show-field_offline'] = array(
     'bundle' => 'show',
     'default_value' => array(
@@ -2774,7 +2774,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_partenariats'
+  // Exported field_instance: 'node-show-field_partenariats'.
   $field_instances['node-show-field_partenariats'] = array(
     'bundle' => 'show',
     'default_value' => NULL,
@@ -2854,7 +2854,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_photos_link'
+  // Exported field_instance: 'node-show-field_photos_link'.
   $field_instances['node-show-field_photos_link'] = array(
     'bundle' => 'show',
     'default_value' => array(
@@ -2938,7 +2938,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_price'
+  // Exported field_instance: 'node-show-field_price'.
   $field_instances['node-show-field_price'] = array(
     'bundle' => 'show',
     'default_value' => NULL,
@@ -3018,7 +3018,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_production'
+  // Exported field_instance: 'node-show-field_production'.
   $field_instances['node-show-field_production'] = array(
     'bundle' => 'show',
     'default_value' => NULL,
@@ -3098,7 +3098,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_promoted'
+  // Exported field_instance: 'node-show-field_promoted'.
   $field_instances['node-show-field_promoted'] = array(
     'bundle' => 'show',
     'default_value' => array(
@@ -3177,7 +3177,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_proposed_by'
+  // Exported field_instance: 'node-show-field_proposed_by'.
   $field_instances['node-show-field_proposed_by'] = array(
     'bundle' => 'show',
     'default_value' => NULL,
@@ -3259,7 +3259,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_reimbursement'
+  // Exported field_instance: 'node-show-field_reimbursement'.
   $field_instances['node-show-field_reimbursement'] = array(
     'bundle' => 'show',
     'default_value' => NULL,
@@ -3339,7 +3339,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_reservation'
+  // Exported field_instance: 'node-show-field_reservation'.
   $field_instances['node-show-field_reservation'] = array(
     'bundle' => 'show',
     'default_value' => NULL,
@@ -3416,7 +3416,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_restauration'
+  // Exported field_instance: 'node-show-field_restauration'.
   $field_instances['node-show-field_restauration'] = array(
     'bundle' => 'show',
     'default_value' => array(
@@ -3501,7 +3501,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_rsi_id'
+  // Exported field_instance: 'node-show-field_rsi_id'.
   $field_instances['node-show-field_rsi_id'] = array(
     'bundle' => 'show',
     'default_value' => NULL,
@@ -3574,7 +3574,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_scald_gallery'
+  // Exported field_instance: 'node-show-field_scald_gallery'.
   $field_instances['node-show-field_scald_gallery'] = array(
     'bundle' => 'show',
     'default_value' => NULL,
@@ -3662,7 +3662,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_scald_image'
+  // Exported field_instance: 'node-show-field_scald_image'.
   $field_instances['node-show-field_scald_image'] = array(
     'bundle' => 'show',
     'default_value' => NULL,
@@ -3748,7 +3748,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_scald_sound'
+  // Exported field_instance: 'node-show-field_scald_sound'.
   $field_instances['node-show-field_scald_sound'] = array(
     'bundle' => 'show',
     'default_value' => NULL,
@@ -3836,7 +3836,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_scald_video'
+  // Exported field_instance: 'node-show-field_scald_video'.
   $field_instances['node-show-field_scald_video'] = array(
     'bundle' => 'show',
     'default_value' => NULL,
@@ -3922,7 +3922,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_show_dates'
+  // Exported field_instance: 'node-show-field_show_dates'.
   $field_instances['node-show-field_show_dates'] = array(
     'bundle' => 'show',
     'deleted' => 0,
@@ -4060,7 +4060,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_show_type'
+  // Exported field_instance: 'node-show-field_show_type'.
   $field_instances['node-show-field_show_type'] = array(
     'bundle' => 'show',
     'default_value' => NULL,
@@ -4133,7 +4133,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_sound_link'
+  // Exported field_instance: 'node-show-field_sound_link'.
   $field_instances['node-show-field_sound_link'] = array(
     'bundle' => 'show',
     'default_value' => array(
@@ -4218,7 +4218,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_subtitle'
+  // Exported field_instance: 'node-show-field_subtitle'.
   $field_instances['node-show-field_subtitle'] = array(
     'bundle' => 'show',
     'default_value' => NULL,
@@ -4299,7 +4299,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_thumbnail'
+  // Exported field_instance: 'node-show-field_thumbnail'.
   $field_instances['node-show-field_thumbnail'] = array(
     'bundle' => 'show',
     'default_value' => NULL,
@@ -4399,7 +4399,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_video_link'
+  // Exported field_instance: 'node-show-field_video_link'.
   $field_instances['node-show-field_video_link'] = array(
     'bundle' => 'show',
     'default_value' => array(
@@ -4483,7 +4483,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-show-field_zoom'
+  // Exported field_instance: 'node-show-field_zoom'.
   $field_instances['node-show-field_zoom'] = array(
     'bundle' => 'show',
     'default_value' => array(
@@ -4562,7 +4562,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-structure-body'
+  // Exported field_instance: 'node-structure-body'.
   $field_instances['node-structure-body'] = array(
     'bundle' => 'structure',
     'default_value' => NULL,
@@ -4617,7 +4617,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-structure-field_associate_artist'
+  // Exported field_instance: 'node-structure-field_associate_artist'.
   $field_instances['node-structure-field_associate_artist'] = array(
     'bundle' => 'structure',
     'default_value' => array(
@@ -4666,7 +4666,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-structure-field_logo'
+  // Exported field_instance: 'node-structure-field_logo'.
   $field_instances['node-structure-field_logo'] = array(
     'bundle' => 'structure',
     'default_value' => NULL,
@@ -4720,7 +4720,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-structure-field_scald_gallery'
+  // Exported field_instance: 'node-structure-field_scald_gallery'.
   $field_instances['node-structure-field_scald_gallery'] = array(
     'bundle' => 'structure',
     'default_value' => NULL,
@@ -4776,7 +4776,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-structure-field_scald_image'
+  // Exported field_instance: 'node-structure-field_scald_image'.
   $field_instances['node-structure-field_scald_image'] = array(
     'bundle' => 'structure',
     'default_value' => NULL,
@@ -4830,7 +4830,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-structure-field_scald_sound'
+  // Exported field_instance: 'node-structure-field_scald_sound'.
   $field_instances['node-structure-field_scald_sound'] = array(
     'bundle' => 'structure',
     'default_value' => NULL,
@@ -4886,7 +4886,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-structure-field_scald_video'
+  // Exported field_instance: 'node-structure-field_scald_video'.
   $field_instances['node-structure-field_scald_video'] = array(
     'bundle' => 'structure',
     'default_value' => NULL,
@@ -4942,7 +4942,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-structure-field_site_web'
+  // Exported field_instance: 'node-structure-field_site_web'.
   $field_instances['node-structure-field_site_web'] = array(
     'bundle' => 'structure',
     'default_value' => NULL,
@@ -5003,7 +5003,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-structure-field_structure_shows'
+  // Exported field_instance: 'node-structure-field_structure_shows'.
   $field_instances['node-structure-field_structure_shows'] = array(
     'bundle' => 'structure',
     'default_value' => NULL,
@@ -5052,7 +5052,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-structure-field_structure_type'
+  // Exported field_instance: 'node-structure-field_structure_type'.
   $field_instances['node-structure-field_structure_type'] = array(
     'bundle' => 'structure',
     'default_value' => NULL,
@@ -5095,7 +5095,8 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-show_locations-field_geolocalisation'
+  // Exported field_instance:
+  // 'taxonomy_term-show_locations-field_geolocalisation'.
   $field_instances['taxonomy_term-show_locations-field_geolocalisation'] = array(
     'bundle' => 'show_locations',
     'default_value' => NULL,
@@ -5162,7 +5163,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-show_locations-field_ls_practical'
+  // Exported field_instance: 'taxonomy_term-show_locations-field_ls_practical'.
   $field_instances['taxonomy_term-show_locations-field_ls_practical'] = array(
     'bundle' => 'show_locations',
     'default_value' => array(
@@ -5215,7 +5216,8 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-show_locations-field_scald_gallery'
+  // Exported field_instance:
+  // 'taxonomy_term-show_locations-field_scald_gallery'.
   $field_instances['taxonomy_term-show_locations-field_scald_gallery'] = array(
     'bundle' => 'show_locations',
     'default_value' => NULL,
@@ -5267,7 +5269,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-show_locations-field_scald_image'
+  // Exported field_instance: 'taxonomy_term-show_locations-field_scald_image'.
   $field_instances['taxonomy_term-show_locations-field_scald_image'] = array(
     'bundle' => 'show_locations',
     'default_value' => NULL,
@@ -5319,7 +5321,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-show_locations-field_scald_sound'
+  // Exported field_instance: 'taxonomy_term-show_locations-field_scald_sound'.
   $field_instances['taxonomy_term-show_locations-field_scald_sound'] = array(
     'bundle' => 'show_locations',
     'default_value' => NULL,
@@ -5369,7 +5371,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-show_locations-field_scald_video'
+  // Exported field_instance: 'taxonomy_term-show_locations-field_scald_video'.
   $field_instances['taxonomy_term-show_locations-field_scald_video'] = array(
     'bundle' => 'show_locations',
     'default_value' => NULL,
@@ -5421,7 +5423,7 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-show_locations-field_seating'
+  // Exported field_instance: 'taxonomy_term-show_locations-field_seating'.
   $field_instances['taxonomy_term-show_locations-field_seating'] = array(
     'bundle' => 'show_locations',
     'default_value' => NULL,
