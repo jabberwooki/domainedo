@@ -10,7 +10,8 @@
 function domaine_d_o_retours_sur_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'field_collection_item-field_critiques-field_prenom_critique'
+  // Exported field_instance:
+  // 'field_collection_item-field_critiques-field_prenom_critique'.
   $field_instances['field_collection_item-field_critiques-field_prenom_critique'] = array(
     'bundle' => 'field_critiques',
     'default_value' => NULL,
@@ -48,7 +49,8 @@ function domaine_d_o_retours_sur_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_critiques-field_summary_critique'
+  // Exported field_instance:
+  // 'field_collection_item-field_critiques-field_summary_critique'.
   $field_instances['field_collection_item-field_critiques-field_summary_critique'] = array(
     'bundle' => 'field_critiques',
     'default_value' => NULL,
@@ -86,7 +88,8 @@ function domaine_d_o_retours_sur_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_critiques-field_text_critique'
+  // Exported field_instance:
+  // 'field_collection_item-field_critiques-field_text_critique'.
   $field_instances['field_collection_item-field_critiques-field_text_critique'] = array(
     'bundle' => 'field_critiques',
     'default_value' => NULL,
@@ -124,7 +127,8 @@ function domaine_d_o_retours_sur_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_retour_comments-field_prenom_comments'
+  // Exported field_instance:
+  // 'field_collection_item-field_retour_comments-field_prenom_comments'.
   $field_instances['field_collection_item-field_retour_comments-field_prenom_comments'] = array(
     'bundle' => 'field_retour_comments',
     'default_value' => NULL,
@@ -162,7 +166,8 @@ function domaine_d_o_retours_sur_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_retour_comments-field_summary_comment'
+  // Exported field_instance:
+  // 'field_collection_item-field_retour_comments-field_summary_comment'.
   $field_instances['field_collection_item-field_retour_comments-field_summary_comment'] = array(
     'bundle' => 'field_retour_comments',
     'default_value' => NULL,
@@ -200,7 +205,8 @@ function domaine_d_o_retours_sur_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_retour_comments-field_text_comment'
+  // Exported field_instance:
+  // 'field_collection_item-field_retour_comments-field_text_comment'.
   $field_instances['field_collection_item-field_retour_comments-field_text_comment'] = array(
     'bundle' => 'field_retour_comments',
     'default_value' => NULL,
@@ -238,7 +244,7 @@ function domaine_d_o_retours_sur_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-retour_sur-body'
+  // Exported field_instance: 'node-retour_sur-body'.
   $field_instances['node-retour_sur-body'] = array(
     'bundle' => 'retour_sur',
     'default_value' => NULL,
@@ -294,7 +300,7 @@ function domaine_d_o_retours_sur_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-retour_sur-field_critiques'
+  // Exported field_instance: 'node-retour_sur-field_critiques'.
   $field_instances['node-retour_sur-field_critiques'] = array(
     'bundle' => 'retour_sur',
     'default_value' => NULL,
@@ -350,7 +356,7 @@ function domaine_d_o_retours_sur_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-retour_sur-field_edu_contact'
+  // Exported field_instance: 'node-retour_sur-field_edu_contact'.
   $field_instances['node-retour_sur-field_edu_contact'] = array(
     'bundle' => 'retour_sur',
     'default_value' => array(
@@ -416,7 +422,7 @@ function domaine_d_o_retours_sur_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-retour_sur-field_retour_comments'
+  // Exported field_instance: 'node-retour_sur-field_retour_comments'.
   $field_instances['node-retour_sur-field_retour_comments'] = array(
     'bundle' => 'retour_sur',
     'default_value' => NULL,
@@ -472,7 +478,7 @@ function domaine_d_o_retours_sur_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-retour_sur-field_scald_gallery'
+  // Exported field_instance: 'node-retour_sur-field_scald_gallery'.
   $field_instances['node-retour_sur-field_scald_gallery'] = array(
     'bundle' => 'retour_sur',
     'default_value' => NULL,
@@ -529,7 +535,7 @@ function domaine_d_o_retours_sur_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-retour_sur-field_scald_image'
+  // Exported field_instance: 'node-retour_sur-field_scald_image'.
   $field_instances['node-retour_sur-field_scald_image'] = array(
     'bundle' => 'retour_sur',
     'default_value' => NULL,
