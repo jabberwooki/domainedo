@@ -47,14 +47,14 @@ function domaine_d_o_entrees_views_default_views() {
     'lon' => '',
     'geocode' => 'Find my location',
   );
-  /* Field: Contenu: Titre */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Contenu: Geolocalisation */
+  /* Field: Nœud: Geolocalisation */
   $handler->display->display_options['fields']['field_geoloc_entry']['id'] = 'field_geoloc_entry';
   $handler->display->display_options['fields']['field_geoloc_entry']['table'] = 'field_data_field_geoloc_entry';
   $handler->display->display_options['fields']['field_geoloc_entry']['field'] = 'field_geoloc_entry';
@@ -86,19 +86,19 @@ function domaine_d_o_entrees_views_default_views() {
     'geofield_map_draggable' => 0,
     'geofield_map_streetview_show' => 1,
   );
-  /* Sort criterion: Contenu: Post date */
+  /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Contenu: Published */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Contenu: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';

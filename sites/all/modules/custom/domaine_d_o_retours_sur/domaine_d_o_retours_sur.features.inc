@@ -29,9 +29,10 @@ function domaine_d_o_retours_sur_node_info() {
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Titre'),
       'help' => '',
     ),
   );
+  drupal_alter('node_info', $items);
   return $items;
 }

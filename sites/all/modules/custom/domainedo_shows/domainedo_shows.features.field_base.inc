@@ -10,21 +10,13 @@
 function domainedo_shows_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_additional_infos'
+  // Exported field_base: 'field_additional_infos'.
   $field_bases['field_additional_infos'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_additional_infos',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -37,14 +29,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_associate_artist'
+  // Exported field_base: 'field_associate_artist'.
   $field_bases['field_associate_artist'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_associate_artist',
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -63,21 +54,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_back_to_top_link'
+  // Exported field_base: 'field_back_to_top_link'.
   $field_bases['field_back_to_top_link'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_back_to_top_link',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -92,14 +75,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_boxoffice_url'
+  // Exported field_base: 'field_boxoffice_url'.
   $field_bases['field_boxoffice_url'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_boxoffice_url',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',
@@ -122,21 +104,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_by'
+  // Exported field_base: 'field_by'.
   $field_bases['field_by'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_by',
-    'foreign keys' => array(
-      'node' => array(
-        'columns' => array(
-          'target_id' => 'nid',
-        ),
-        'table' => 'node',
-      ),
-    ),
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',
@@ -167,21 +141,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_calendar_archive'
+  // Exported field_base: 'field_calendar_archive'.
   $field_bases['field_calendar_archive'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_calendar_archive',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -196,21 +162,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_casting'
+  // Exported field_base: 'field_casting'.
   $field_bases['field_casting'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_casting',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -223,21 +181,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_casting_link'
+  // Exported field_base: 'field_casting_link'.
   $field_bases['field_casting_link'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_casting_link',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -252,21 +202,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_coming_soon'
+  // Exported field_base: 'field_coming_soon'.
   $field_bases['field_coming_soon'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_coming_soon',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -279,21 +221,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_comments_link'
+  // Exported field_base: 'field_comments_link'.
   $field_bases['field_comments_link'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_comments_link',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -308,21 +242,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_coproduction'
+  // Exported field_base: 'field_coproduction'.
   $field_bases['field_coproduction'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_coproduction',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -335,21 +261,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_duration'
+  // Exported field_base: 'field_duration'.
   $field_bases['field_duration'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_duration',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -364,14 +282,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_entrance'
+  // Exported field_base: 'field_entrance'.
   $field_bases['field_entrance'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_entrance',
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -390,14 +307,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_facebook'
+  // Exported field_base: 'field_facebook'.
   $field_bases['field_facebook'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_facebook',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',
@@ -420,21 +336,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_festival'
+  // Exported field_base: 'field_festival'.
   $field_bases['field_festival'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_festival',
-    'foreign keys' => array(
-      'node' => array(
-        'columns' => array(
-          'target_id' => 'nid',
-        ),
-        'table' => 'node',
-      ),
-    ),
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',
@@ -465,14 +373,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_festival_name'
+  // Exported field_base: 'field_festival_name'.
   $field_bases['field_festival_name'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_festival_name',
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -497,14 +404,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_festival_poster'
+  // Exported field_base: 'field_festival_poster'.
   $field_bases['field_festival_poster'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_festival_poster',
-    'foreign keys' => array(),
     'indexes' => array(
       'sid' => array(
         0 => 'sid',
@@ -517,21 +423,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'atom_reference',
   );
 
-  // Exported field_base: 'field_festival_shows'
+  // Exported field_base: 'field_festival_shows'.
   $field_bases['field_festival_shows'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_festival_shows',
-    'foreign keys' => array(
-      'node' => array(
-        'columns' => array(
-          'target_id' => 'nid',
-        ),
-        'table' => 'node',
-      ),
-    ),
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',
@@ -562,14 +460,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_feuilleter_en_ligne'
+  // Exported field_base: 'field_feuilleter_en_ligne'.
   $field_bases['field_feuilleter_en_ligne'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_feuilleter_en_ligne',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',
@@ -592,21 +489,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_from'
+  // Exported field_base: 'field_from'.
   $field_bases['field_from'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_from',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -621,21 +510,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_full'
+  // Exported field_base: 'field_full'.
   $field_bases['field_full'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_full',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -648,14 +529,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_geolocalisation'
+  // Exported field_base: 'field_geolocalisation'.
   $field_bases['field_geolocalisation'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_geolocalisation',
-    'foreign keys' => array(),
     'indexes' => array(
       'bbox' => array(
         0 => 'top',
@@ -699,21 +579,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'geofield',
   );
 
-  // Exported field_base: 'field_lieu_generique'
+  // Exported field_base: 'field_lieu_generique'.
   $field_bases['field_lieu_generique'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_lieu_generique',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -728,21 +600,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_linked_shows'
+  // Exported field_base: 'field_linked_shows'.
   $field_bases['field_linked_shows'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_linked_shows',
-    'foreign keys' => array(
-      'node' => array(
-        'columns' => array(
-          'target_id' => 'nid',
-        ),
-        'table' => 'node',
-      ),
-    ),
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',
@@ -773,21 +637,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_location'
+  // Exported field_base: 'field_location'.
   $field_bases['field_location'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_location',
-    'foreign keys' => array(
-      'tid' => array(
-        'columns' => array(
-          'tid' => 'tid',
-        ),
-        'table' => 'taxonomy_term_data',
-      ),
-    ),
     'indexes' => array(
       'tid' => array(
         0 => 'tid',
@@ -807,14 +663,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_logo'
+  // Exported field_base: 'field_logo'.
   $field_bases['field_logo'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_logo',
-    'foreign keys' => array(),
     'indexes' => array(
       'sid' => array(
         0 => 'sid',
@@ -827,21 +682,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'atom_reference',
   );
 
-  // Exported field_base: 'field_ls_practical'
+  // Exported field_base: 'field_ls_practical'.
   $field_bases['field_ls_practical'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_ls_practical',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -854,14 +701,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_minimum_age'
+  // Exported field_base: 'field_minimum_age'.
   $field_bases['field_minimum_age'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_minimum_age',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'number',
@@ -870,21 +716,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
-  // Exported field_base: 'field_no_result'
+  // Exported field_base: 'field_no_result'.
   $field_bases['field_no_result'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_no_result',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -897,21 +735,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_offline'
+  // Exported field_base: 'field_offline'.
   $field_bases['field_offline'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_offline',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -924,21 +754,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_partenariats'
+  // Exported field_base: 'field_partenariats'.
   $field_bases['field_partenariats'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_partenariats',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -951,21 +773,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_photos_link'
+  // Exported field_base: 'field_photos_link'.
   $field_bases['field_photos_link'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_photos_link',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -980,21 +794,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_price'
+  // Exported field_base: 'field_price'.
   $field_bases['field_price'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_price',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -1009,21 +815,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_production'
+  // Exported field_base: 'field_production'.
   $field_bases['field_production'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_production',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -1036,14 +834,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_programme_pdf'
+  // Exported field_base: 'field_programme_pdf'.
   $field_bases['field_programme_pdf'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_programme_pdf',
-    'foreign keys' => array(),
     'indexes' => array(
       'sid' => array(
         0 => 'sid',
@@ -1056,21 +853,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'atom_reference',
   );
 
-  // Exported field_base: 'field_proposed_by'
+  // Exported field_base: 'field_proposed_by'.
   $field_bases['field_proposed_by'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_proposed_by',
-    'foreign keys' => array(
-      'node' => array(
-        'columns' => array(
-          'target_id' => 'nid',
-        ),
-        'table' => 'node',
-      ),
-    ),
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',
@@ -1098,21 +887,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_reimbursement'
+  // Exported field_base: 'field_reimbursement'.
   $field_bases['field_reimbursement'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_reimbursement',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -1125,14 +906,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_reservation'
+  // Exported field_base: 'field_reservation'.
   $field_bases['field_reservation'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_reservation',
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -1154,21 +934,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_restauration'
+  // Exported field_base: 'field_restauration'.
   $field_bases['field_restauration'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_restauration',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -1181,14 +953,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_rsi_id'
+  // Exported field_base: 'field_rsi_id'.
   $field_bases['field_rsi_id'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_rsi_id',
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -1204,14 +975,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_season'
+  // Exported field_base: 'field_season'.
   $field_bases['field_season'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_season',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'number',
@@ -1220,14 +990,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
-  // Exported field_base: 'field_seating'
+  // Exported field_base: 'field_seating'.
   $field_bases['field_seating'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_seating',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'number',
@@ -1236,14 +1005,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
-  // Exported field_base: 'field_show_dates'
+  // Exported field_base: 'field_show_dates'.
   $field_bases['field_show_dates'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_show_dates',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'date',
@@ -1266,21 +1034,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'date',
   );
 
-  // Exported field_base: 'field_show_type'
+  // Exported field_base: 'field_show_type'.
   $field_bases['field_show_type'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_show_type',
-    'foreign keys' => array(
-      'tid' => array(
-        'columns' => array(
-          'tid' => 'tid',
-        ),
-        'table' => 'taxonomy_term_data',
-      ),
-    ),
     'indexes' => array(
       'tid' => array(
         0 => 'tid',
@@ -1300,14 +1060,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_site_web'
+  // Exported field_base: 'field_site_web'.
   $field_bases['field_site_web'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_site_web',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',
@@ -1330,21 +1089,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_sound_link'
+  // Exported field_base: 'field_sound_link'.
   $field_bases['field_sound_link'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_sound_link',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -1359,21 +1110,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_structure_shows'
+  // Exported field_base: 'field_structure_shows'.
   $field_bases['field_structure_shows'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_structure_shows',
-    'foreign keys' => array(
-      'node' => array(
-        'columns' => array(
-          'target_id' => 'nid',
-        ),
-        'table' => 'node',
-      ),
-    ),
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',
@@ -1404,21 +1147,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_structure_type'
+  // Exported field_base: 'field_structure_type'.
   $field_bases['field_structure_type'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_structure_type',
-    'foreign keys' => array(
-      'tid' => array(
-        'columns' => array(
-          'tid' => 'tid',
-        ),
-        'table' => 'taxonomy_term_data',
-      ),
-    ),
     'indexes' => array(
       'tid' => array(
         0 => 'tid',
@@ -1438,21 +1173,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_subtitle'
+  // Exported field_base: 'field_subtitle'.
   $field_bases['field_subtitle'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_subtitle',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -1467,14 +1194,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_thumbnail'
+  // Exported field_base: 'field_thumbnail'.
   $field_bases['field_thumbnail'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_thumbnail',
-    'foreign keys' => array(),
     'indexes' => array(
       'sid' => array(
         0 => 'sid',
@@ -1487,14 +1213,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'atom_reference',
   );
 
-  // Exported field_base: 'field_useful_links'
+  // Exported field_base: 'field_useful_links'.
   $field_bases['field_useful_links'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_useful_links',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',
@@ -1517,21 +1242,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_video_link'
+  // Exported field_base: 'field_video_link'.
   $field_bases['field_video_link'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_video_link',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -1546,14 +1263,13 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_view_archives'
+  // Exported field_base: 'field_view_archives'.
   $field_bases['field_view_archives'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_view_archives',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',

@@ -10,7 +10,7 @@
 function domaine_d_o_entrees_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-entree-body'
+  // Exported field_instance: 'node-entree-body'.
   $field_instances['node-entree-body'] = array(
     'bundle' => 'entree',
     'default_value' => NULL,
@@ -57,7 +57,7 @@ function domaine_d_o_entrees_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-entree-field_geoloc_entry'
+  // Exported field_instance: 'node-entree-field_geoloc_entry'.
   $field_instances['node-entree-field_geoloc_entry'] = array(
     'bundle' => 'entree',
     'default_value' => NULL,

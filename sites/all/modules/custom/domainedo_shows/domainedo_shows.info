@@ -10,6 +10,7 @@ dependencies[] = calendar
 dependencies[] = cer
 dependencies[] = context
 dependencies[] = ctools
+dependencies[] = custom_breadcrumbs
 dependencies[] = date
 dependencies[] = date_views
 dependencies[] = domainedo_media

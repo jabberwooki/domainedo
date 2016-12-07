@@ -10,7 +10,8 @@
 function domaine_d_o_rent_theater_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'field_collection_item-field_vente_references-field_vente_commentaires'
+  // Exported field_instance:
+  // 'field_collection_item-field_vente_references-field_vente_commentaires'.
   $field_instances['field_collection_item-field_vente_references-field_vente_commentaires'] = array(
     'bundle' => 'field_vente_references',
     'default_value' => NULL,
@@ -48,7 +49,8 @@ function domaine_d_o_rent_theater_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_vente_references-field_vente_reference_url'
+  // Exported field_instance:
+  // 'field_collection_item-field_vente_references-field_vente_reference_url'.
   $field_instances['field_collection_item-field_vente_references-field_vente_reference_url'] = array(
     'bundle' => 'field_vente_references',
     'default_value' => NULL,
@@ -86,7 +88,8 @@ function domaine_d_o_rent_theater_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_vente_references-field_vente_references_image'
+  // Exported field_instance:
+  // 'field_collection_item-field_vente_references-field_vente_references_image'.
   $field_instances['field_collection_item-field_vente_references-field_vente_references_image'] = array(
     'bundle' => 'field_vente_references',
     'default_value' => NULL,
@@ -130,7 +133,8 @@ function domaine_d_o_rent_theater_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_vente_services-field_vente_services_image'
+  // Exported field_instance:
+  // 'field_collection_item-field_vente_services-field_vente_services_image'.
   $field_instances['field_collection_item-field_vente_services-field_vente_services_image'] = array(
     'bundle' => 'field_vente_services',
     'default_value' => NULL,
@@ -174,7 +178,8 @@ function domaine_d_o_rent_theater_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_vente_services-field_vente_services_summary'
+  // Exported field_instance:
+  // 'field_collection_item-field_vente_services-field_vente_services_summary'.
   $field_instances['field_collection_item-field_vente_services-field_vente_services_summary'] = array(
     'bundle' => 'field_vente_services',
     'default_value' => NULL,
@@ -212,7 +217,8 @@ function domaine_d_o_rent_theater_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_vente_services-field_vente_services_titre'
+  // Exported field_instance:
+  // 'field_collection_item-field_vente_services-field_vente_services_titre'.
   $field_instances['field_collection_item-field_vente_services-field_vente_services_titre'] = array(
     'bundle' => 'field_vente_services',
     'default_value' => NULL,
@@ -250,7 +256,7 @@ function domaine_d_o_rent_theater_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-lieu_location-body'
+  // Exported field_instance: 'node-lieu_location-body'.
   $field_instances['node-lieu_location-body'] = array(
     'bundle' => 'lieu_location',
     'default_value' => NULL,
@@ -297,7 +303,7 @@ function domaine_d_o_rent_theater_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-lieu_location-field_loc_gallerie'
+  // Exported field_instance: 'node-lieu_location-field_loc_gallerie'.
   $field_instances['node-lieu_location-field_loc_gallerie'] = array(
     'bundle' => 'lieu_location',
     'default_value' => NULL,
@@ -347,7 +353,7 @@ function domaine_d_o_rent_theater_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-lieu_location-field_loc_vignette'
+  // Exported field_instance: 'node-lieu_location-field_loc_vignette'.
   $field_instances['node-lieu_location-field_loc_vignette'] = array(
     'bundle' => 'lieu_location',
     'default_value' => NULL,
@@ -397,7 +403,7 @@ function domaine_d_o_rent_theater_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-presentation_location_salles-body'
+  // Exported field_instance: 'node-presentation_location_salles-body'.
   $field_instances['node-presentation_location_salles-body'] = array(
     'bundle' => 'presentation_location_salles',
     'default_value' => NULL,
@@ -444,7 +450,8 @@ function domaine_d_o_rent_theater_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-presentation_location_salles-field_vente_references'
+  // Exported field_instance:
+  // 'node-presentation_location_salles-field_vente_references'.
   $field_instances['node-presentation_location_salles-field_vente_references'] = array(
     'bundle' => 'presentation_location_salles',
     'default_value' => NULL,
@@ -487,7 +494,8 @@ function domaine_d_o_rent_theater_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-presentation_location_salles-field_vente_salle'
+  // Exported field_instance:
+  // 'node-presentation_location_salles-field_vente_salle'.
   $field_instances['node-presentation_location_salles-field_vente_salle'] = array(
     'bundle' => 'presentation_location_salles',
     'default_value' => NULL,
@@ -536,7 +544,8 @@ function domaine_d_o_rent_theater_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-presentation_location_salles-field_vente_services'
+  // Exported field_instance:
+  // 'node-presentation_location_salles-field_vente_services'.
   $field_instances['node-presentation_location_salles-field_vente_services'] = array(
     'bundle' => 'presentation_location_salles',
     'default_value' => NULL,
@@ -579,7 +588,8 @@ function domaine_d_o_rent_theater_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-presentation_location_salles-field_vente_video'
+  // Exported field_instance:
+  // 'node-presentation_location_salles-field_vente_video'.
   $field_instances['node-presentation_location_salles-field_vente_video'] = array(
     'bundle' => 'presentation_location_salles',
     'default_value' => NULL,

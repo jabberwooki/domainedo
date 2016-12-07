@@ -41,5 +41,6 @@ function domaine_d_o_rent_theater_node_info() {
       'help' => '',
     ),
   );
+  drupal_alter('node_info', $items);
   return $items;
 }

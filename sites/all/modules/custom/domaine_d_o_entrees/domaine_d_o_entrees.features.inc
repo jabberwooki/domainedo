@@ -34,5 +34,6 @@ function domaine_d_o_entrees_node_info() {
       'help' => '',
     ),
   );
+  drupal_alter('node_info', $items);
   return $items;
 }

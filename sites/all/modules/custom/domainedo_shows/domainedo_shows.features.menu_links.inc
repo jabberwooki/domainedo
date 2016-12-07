@@ -10,7 +10,7 @@
 function domainedo_shows_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: main-menu_spectacles:spectacles/tous-les-spectacles
+  // Exported menu link: main-menu_spectacles:spectacles/tous-les-spectacles.
   $menu_links['main-menu_spectacles:spectacles/tous-les-spectacles'] = array(
     'menu_name' => 'main-menu',
     'link_path' => 'spectacles/tous-les-spectacles',
@@ -30,10 +30,10 @@ function domainedo_shows_menu_default_menu_links() {
     'weight' => -49,
     'customized' => 1,
   );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Spectacles');
-
 
   return $menu_links;
 }

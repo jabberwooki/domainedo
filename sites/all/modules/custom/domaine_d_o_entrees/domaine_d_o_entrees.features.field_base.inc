@@ -10,14 +10,13 @@
 function domaine_d_o_entrees_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_geoloc_entry'
+  // Exported field_base: 'field_geoloc_entry'.
   $field_bases['field_geoloc_entry'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_geoloc_entry',
-    'foreign keys' => array(),
     'indexes' => array(
       'bbox' => array(
         0 => 'top',
