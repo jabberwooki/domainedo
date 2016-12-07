@@ -421,7 +421,6 @@ function news_views_default_views() {
   $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
   $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
   $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
-  $handler->display->display_options['fields']['draggableviews']['label'] = 'Contenu';
   $handler->display->display_options['fields']['draggableviews']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['draggableviews']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['draggableviews']['draggableviews']['save_button_label'] = 'Enregistrer l\'ordre';
@@ -599,7 +598,7 @@ function news_views_default_views() {
     t('Classement des événements'),
     t('Page-Flash-draggable'),
     t('FLASH INFO'),
-    t('Contenu'),
+    t('Content'),
     t('Block home events'),
     t('Voir tous les événements'),
     t('<h2 class="h2-event" id="h2-event-home"><a href="evenements">Autres événements</a></h2>'),
