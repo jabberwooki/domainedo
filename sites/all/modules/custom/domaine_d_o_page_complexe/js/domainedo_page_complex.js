@@ -13,6 +13,10 @@ jQuery(function($){
                         $('.field-name-field-texte-page-complexe', $(c)).toggle(0);
                         $('.field-name-field-summary-page-complexe', $(c)).toggleClass("open-paragraph").toggleClass("close-paragraph");
                     });
+                    $('div.left img', $(context)).click(function(event) {
+                        $('.field-name-field-texte-page-complexe', $(c)).toggle(0);
+                        $('.field-name-field-summary-page-complexe', $(c)).toggleClass("open-paragraph").toggleClass("close-paragraph");
+                    });
                 })(context);
 
             }
