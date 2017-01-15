@@ -33,6 +33,44 @@ function domaine_d_o_page_complexe_ds_field_settings_info() {
   );
   $export['paragraphs_item|titre3_txt_summary_option|default'] = $ds_fieldsetting;
 
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'paragraphs_item|titre4_txt_summary_option|default';
+  $ds_fieldsetting->entity_type = 'paragraphs_item';
+  $ds_fieldsetting->bundle = 'titre4_txt_summary_option';
+  $ds_fieldsetting->view_mode = 'default';
+  $ds_fieldsetting->settings = array(
+    'field_titre_niveau_4' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'h4',
+          'fi-cl' => 'title-open-close',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
+        ),
+      ),
+    ),
+    'field_image_page_complexe_4' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'left gauche',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
+        ),
+      ),
+    ),
+  );
+  $export['paragraphs_item|titre4_txt_summary_option|default'] = $ds_fieldsetting;
+
   return $export;
 }
 
