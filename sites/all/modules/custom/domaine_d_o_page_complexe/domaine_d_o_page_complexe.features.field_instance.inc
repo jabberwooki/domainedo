@@ -314,6 +314,15 @@ function domaine_d_o_page_complexe_field_default_field_instances() {
         'type' => 'list',
         'weight' => 1,
       ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'domainedo_media',
+        'settings' => array(
+          'link' => 0,
+        ),
+        'type' => 'list',
+        'weight' => 1,
+      ),
       'paragraphs_editor_preview' => array(
         'label' => 'above',
         'settings' => array(),
@@ -357,6 +366,13 @@ function domaine_d_o_page_complexe_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'full' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
@@ -409,6 +425,13 @@ function domaine_d_o_page_complexe_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 3,
       ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
       'paragraphs_editor_preview' => array(
         'label' => 'above',
         'settings' => array(),
@@ -449,6 +472,13 @@ function domaine_d_o_page_complexe_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'full' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
