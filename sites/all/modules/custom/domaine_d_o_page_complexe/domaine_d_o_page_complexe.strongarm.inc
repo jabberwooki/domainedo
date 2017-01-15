@@ -62,6 +62,16 @@ function domaine_d_o_page_complexe_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'ds_extras_view_modes_page_complexe';
+  $strongarm->value = array(
+    0 => 'default',
+    1 => 'teaser',
+  );
+  $export['ds_extras_view_modes_page_complexe'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__page_complexe';
   $strongarm->value = array(
     'view_modes' => array(
@@ -178,6 +188,20 @@ function domaine_d_o_page_complexe_strongarm() {
   $strongarm->name = 'node_submitted_page_complexe';
   $strongarm->value = 0;
   $export['node_submitted_page_complexe'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_type_page_complexe';
+  $strongarm->value = '';
+  $export['page_title_type_page_complexe'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_type_page_complexe_showfield';
+  $strongarm->value = 0;
+  $export['page_title_type_page_complexe_showfield'] = $strongarm;
 
   return $export;
 }
