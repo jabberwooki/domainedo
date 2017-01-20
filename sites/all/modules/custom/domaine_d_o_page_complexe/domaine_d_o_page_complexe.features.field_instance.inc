@@ -238,7 +238,7 @@ function domaine_d_o_page_complexe_field_default_field_instances() {
       'context_default' => 'sdl_editor_representation',
       'dnd_enabled' => 1,
       'mee_enabled' => 1,
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
