@@ -17,6 +17,34 @@ function domaine_d_o_page_complexe_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'titre3_txt_summary_option';
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
+    'field_summary_page_complexe' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'field-name-field-summary-page-complexe',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
+        ),
+      ),
+    ),
+    'field_texte_page_complexe' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'field-name-field-texte-page-complexe',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
+        ),
+      ),
+    ),
     'field_titre_niveau_3' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -40,20 +68,6 @@ function domaine_d_o_page_complexe_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'titre4_txt_summary_option';
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
-    'field_titre_niveau_4' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'fi' => TRUE,
-          'fi-el' => 'h4',
-          'fi-cl' => 'title-open-close',
-          'fi-at' => '',
-          'fi-def-at' => FALSE,
-          'fi-odd-even' => FALSE,
-          'fi-first-last' => FALSE,
-        ),
-      ),
-    ),
     'field_image_page_complexe_4' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -61,6 +75,20 @@ function domaine_d_o_page_complexe_ds_field_settings_info() {
           'fi' => TRUE,
           'fi-el' => 'div',
           'fi-cl' => 'left gauche',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
+        ),
+      ),
+    ),
+    'field_titre_niveau_4' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'h4',
+          'fi-cl' => 'title-open-close',
           'fi-at' => '',
           'fi-def-at' => FALSE,
           'fi-odd-even' => FALSE,

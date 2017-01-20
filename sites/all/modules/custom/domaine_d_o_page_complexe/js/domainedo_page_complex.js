@@ -1,7 +1,7 @@
 jQuery(function($){
-    // ne s'exécute pas en mode édition
+
     var context;
-    if(!$('body.page-node-edit').length) {
+    if(!$('body.page-node-edit').length) {// ne s'exécute pas en mode édition
         $('.field-name-field-paragraphe-complexe .field-item').each(function (index) {
             if ($('.field-name-field-summary-page-complexe', $(this)).length
                 && $('.field-name-field-texte-page-complexe', $(this)).length) {
