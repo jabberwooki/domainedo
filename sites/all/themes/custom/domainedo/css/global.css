@@ -1401,7 +1401,7 @@ body.node-type-festival .field-name-field-calendar-archive a:before,
 body.node-type-festival .field-name-field-view-archives a:before,
 body.node-type-festival .field-name-field-facebook a:before,
 ul#superfish-2 li.sf-depth-1.last > a:after,
-#block-menu-menu-contact ul li a:before{
+#block-menu-menu-contact ul li a:before {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -2185,4 +2185,16 @@ body.logged-in .under-header{
 }
 body.logged-in #section-content {
   margin-top: 146px;
+}
+/* page complexe ******************************************************************************************************/
+.close-paragraph:after{
+  content: ">> Lire la suite";
+  font-size: 1.2em;
+  color: #0062a0;
+  text-decoration: underline;
+  cursor: pointer;
+  display: block;
+}
+.open-paragraph:after{
+
 }
