@@ -56,13 +56,13 @@ function news_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Nœud: Url de destination */
+  /* Field: Content: Url de destination */
   $handler->display->display_options['fields']['field_news_url_target']['id'] = 'field_news_url_target';
   $handler->display->display_options['fields']['field_news_url_target']['table'] = 'field_data_field_news_url_target';
   $handler->display->display_options['fields']['field_news_url_target']['field'] = 'field_news_url_target';
   $handler->display->display_options['fields']['field_news_url_target']['label'] = '';
   $handler->display->display_options['fields']['field_news_url_target']['element_label_colon'] = FALSE;
-  /* Field: Nœud: Lien vers nouvelle fenêtre */
+  /* Field: Content: Lien vers nouvelle fenêtre */
   $handler->display->display_options['fields']['field_new_window']['id'] = 'field_new_window';
   $handler->display->display_options['fields']['field_new_window']['table'] = 'field_data_field_new_window';
   $handler->display->display_options['fields']['field_new_window']['field'] = 'field_new_window';
@@ -80,7 +80,7 @@ function news_views_default_views() {
     'link' => '0',
   );
   $handler->display->display_options['fields']['field_scald_image']['delta_offset'] = '0';
-  /* Field: Nœud: Body */
+  /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -104,13 +104,13 @@ function news_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'news' => 'news',
   );
-  /* Filter criterion: Nœud: Date de parution -  start date (field_news_publication_date) */
+  /* Filter criterion: Content: Date de parution -  start date (field_news_publication_date) */
   $handler->display->display_options['filters']['field_news_publication_date_value']['id'] = 'field_news_publication_date_value';
   $handler->display->display_options['filters']['field_news_publication_date_value']['table'] = 'field_data_field_news_publication_date';
   $handler->display->display_options['filters']['field_news_publication_date_value']['field'] = 'field_news_publication_date_value';
   $handler->display->display_options['filters']['field_news_publication_date_value']['operator'] = '<';
   $handler->display->display_options['filters']['field_news_publication_date_value']['default_date'] = 'now';
-  /* Filter criterion: Nœud: Date de parution - end date (field_news_publication_date:value2) */
+  /* Filter criterion: Content: Date de parution - end date (field_news_publication_date:value2) */
   $handler->display->display_options['filters']['field_news_publication_date_value2']['id'] = 'field_news_publication_date_value2';
   $handler->display->display_options['filters']['field_news_publication_date_value2']['table'] = 'field_data_field_news_publication_date';
   $handler->display->display_options['filters']['field_news_publication_date_value2']['field'] = 'field_news_publication_date_value2';
@@ -130,13 +130,13 @@ function news_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Nœud: Url de destination */
+  /* Field: Content: Url de destination */
   $handler->display->display_options['fields']['field_news_url_target']['id'] = 'field_news_url_target';
   $handler->display->display_options['fields']['field_news_url_target']['table'] = 'field_data_field_news_url_target';
   $handler->display->display_options['fields']['field_news_url_target']['field'] = 'field_news_url_target';
   $handler->display->display_options['fields']['field_news_url_target']['label'] = '';
   $handler->display->display_options['fields']['field_news_url_target']['element_label_colon'] = FALSE;
-  /* Field: Nœud: Lien vers nouvelle fenêtre */
+  /* Field: Content: Lien vers nouvelle fenêtre */
   $handler->display->display_options['fields']['field_new_window']['id'] = 'field_new_window';
   $handler->display->display_options['fields']['field_new_window']['table'] = 'field_data_field_new_window';
   $handler->display->display_options['fields']['field_new_window']['field'] = 'field_new_window';
@@ -154,7 +154,7 @@ function news_views_default_views() {
     'link' => '0',
   );
   $handler->display->display_options['fields']['field_scald_image']['delta_offset'] = '0';
-  /* Field: Nœud: Body */
+  /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -199,7 +199,7 @@ function news_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Nœud: Body */
+  /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -232,20 +232,20 @@ function news_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'news' => 'news',
   );
-  /* Filter criterion: Nœud: Promu en page d&#039;accueil (field_promoted) */
+  /* Filter criterion: Content: Promu en page d&#039;accueil (field_promoted) */
   $handler->display->display_options['filters']['field_promoted_value']['id'] = 'field_promoted_value';
   $handler->display->display_options['filters']['field_promoted_value']['table'] = 'field_data_field_promoted';
   $handler->display->display_options['filters']['field_promoted_value']['field'] = 'field_promoted_value';
   $handler->display->display_options['filters']['field_promoted_value']['value'] = array(
     1 => '1',
   );
-  /* Filter criterion: Nœud: Date de parution -  start date (field_news_publication_date) */
+  /* Filter criterion: Content: Date de parution -  start date (field_news_publication_date) */
   $handler->display->display_options['filters']['field_news_publication_date_value']['id'] = 'field_news_publication_date_value';
   $handler->display->display_options['filters']['field_news_publication_date_value']['table'] = 'field_data_field_news_publication_date';
   $handler->display->display_options['filters']['field_news_publication_date_value']['field'] = 'field_news_publication_date_value';
   $handler->display->display_options['filters']['field_news_publication_date_value']['operator'] = '<';
   $handler->display->display_options['filters']['field_news_publication_date_value']['default_date'] = 'now';
-  /* Filter criterion: Nœud: Date de parution - end date (field_news_publication_date:value2) */
+  /* Filter criterion: Content: Date de parution - end date (field_news_publication_date:value2) */
   $handler->display->display_options['filters']['field_news_publication_date_value2']['id'] = 'field_news_publication_date_value2';
   $handler->display->display_options['filters']['field_news_publication_date_value2']['table'] = 'field_data_field_news_publication_date';
   $handler->display->display_options['filters']['field_news_publication_date_value2']['field'] = 'field_news_publication_date_value2';
@@ -314,13 +314,13 @@ function news_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Nœud: Url de destination */
+  /* Field: Content: Url de destination */
   $handler->display->display_options['fields']['field_news_url_target']['id'] = 'field_news_url_target';
   $handler->display->display_options['fields']['field_news_url_target']['table'] = 'field_data_field_news_url_target';
   $handler->display->display_options['fields']['field_news_url_target']['field'] = 'field_news_url_target';
   $handler->display->display_options['fields']['field_news_url_target']['label'] = '';
   $handler->display->display_options['fields']['field_news_url_target']['element_label_colon'] = FALSE;
-  /* Field: Nœud: Lien vers nouvelle fenêtre */
+  /* Field: Content: Lien vers nouvelle fenêtre */
   $handler->display->display_options['fields']['field_new_window']['id'] = 'field_new_window';
   $handler->display->display_options['fields']['field_new_window']['table'] = 'field_data_field_new_window';
   $handler->display->display_options['fields']['field_new_window']['field'] = 'field_new_window';
@@ -338,7 +338,7 @@ function news_views_default_views() {
     'link' => '0',
   );
   $handler->display->display_options['fields']['field_scald_image']['delta_offset'] = '0';
-  /* Field: Nœud: Body */
+  /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -407,7 +407,7 @@ function news_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Nœud: Body */
+  /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -421,6 +421,7 @@ function news_views_default_views() {
   $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
   $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
   $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
+  $handler->display->display_options['fields']['draggableviews']['label'] = 'Contenu';
   $handler->display->display_options['fields']['draggableviews']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['draggableviews']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['draggableviews']['draggableviews']['save_button_label'] = 'Enregistrer l\'ordre';
@@ -448,7 +449,7 @@ function news_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'news' => 'news',
   );
-  /* Filter criterion: Nœud: Promu en page d&#039;accueil (field_promoted) */
+  /* Filter criterion: Content: Promu en page d&#039;accueil (field_promoted) */
   $handler->display->display_options['filters']['field_promoted_value']['id'] = 'field_promoted_value';
   $handler->display->display_options['filters']['field_promoted_value']['table'] = 'field_data_field_promoted';
   $handler->display->display_options['filters']['field_promoted_value']['field'] = 'field_promoted_value';
@@ -488,14 +489,14 @@ function news_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Nœud: Lien vers nouvelle fenêtre */
+  /* Field: Content: Lien vers nouvelle fenêtre */
   $handler->display->display_options['fields']['field_new_window']['id'] = 'field_new_window';
   $handler->display->display_options['fields']['field_new_window']['table'] = 'field_data_field_new_window';
   $handler->display->display_options['fields']['field_new_window']['field'] = 'field_new_window';
   $handler->display->display_options['fields']['field_new_window']['label'] = '';
   $handler->display->display_options['fields']['field_new_window']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_new_window']['element_label_colon'] = FALSE;
-  /* Field: Nœud: Url de destination */
+  /* Field: Content: Url de destination */
   $handler->display->display_options['fields']['field_news_url_target']['id'] = 'field_news_url_target';
   $handler->display->display_options['fields']['field_news_url_target']['table'] = 'field_data_field_news_url_target';
   $handler->display->display_options['fields']['field_news_url_target']['field'] = 'field_news_url_target';
@@ -512,7 +513,7 @@ function news_views_default_views() {
     'link' => '0',
   );
   $handler->display->display_options['fields']['field_scald_image']['delta_offset'] = '0';
-  /* Field: Nœud: Body */
+  /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -522,7 +523,7 @@ function news_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '300',
   );
-  /* Field: Nœud: Vidéo seule */
+  /* Field: Content: Vidéo seule */
   $handler->display->display_options['fields']['field_news_only_video']['id'] = 'field_news_only_video';
   $handler->display->display_options['fields']['field_news_only_video']['table'] = 'field_data_field_news_only_video';
   $handler->display->display_options['fields']['field_news_only_video']['field'] = 'field_news_only_video';
@@ -552,19 +553,19 @@ function news_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'news' => 'news',
   );
-  /* Filter criterion: Nœud: Date de parution -  start date (field_news_publication_date) */
+  /* Filter criterion: Content: Date de parution -  start date (field_news_publication_date) */
   $handler->display->display_options['filters']['field_news_publication_date_value']['id'] = 'field_news_publication_date_value';
   $handler->display->display_options['filters']['field_news_publication_date_value']['table'] = 'field_data_field_news_publication_date';
   $handler->display->display_options['filters']['field_news_publication_date_value']['field'] = 'field_news_publication_date_value';
   $handler->display->display_options['filters']['field_news_publication_date_value']['operator'] = '<';
   $handler->display->display_options['filters']['field_news_publication_date_value']['default_date'] = 'now';
-  /* Filter criterion: Nœud: Date de parution - end date (field_news_publication_date:value2) */
+  /* Filter criterion: Content: Date de parution - end date (field_news_publication_date:value2) */
   $handler->display->display_options['filters']['field_news_publication_date_value2']['id'] = 'field_news_publication_date_value2';
   $handler->display->display_options['filters']['field_news_publication_date_value2']['table'] = 'field_data_field_news_publication_date';
   $handler->display->display_options['filters']['field_news_publication_date_value2']['field'] = 'field_news_publication_date_value2';
   $handler->display->display_options['filters']['field_news_publication_date_value2']['operator'] = '>=';
   $handler->display->display_options['filters']['field_news_publication_date_value2']['default_date'] = 'now';
-  /* Filter criterion: Nœud: Visible bas accueil (field_visible_bas_accueil) */
+  /* Filter criterion: Content: Visible bas accueil (field_visible_bas_accueil) */
   $handler->display->display_options['filters']['field_visible_bas_accueil_value']['id'] = 'field_visible_bas_accueil_value';
   $handler->display->display_options['filters']['field_visible_bas_accueil_value']['table'] = 'field_data_field_visible_bas_accueil';
   $handler->display->display_options['filters']['field_visible_bas_accueil_value']['field'] = 'field_visible_bas_accueil_value';
@@ -589,6 +590,7 @@ function news_views_default_views() {
     t('suivant ›'),
     t('dernier »'),
     t('Page-evenement'),
+    t('more'),
     t('Block Flash Info'),
     t('Info Flash'),
     t('Tous les événements'),
@@ -603,6 +605,7 @@ function news_views_default_views() {
     t('Voir tous les événements'),
     t('<h2 class="h2-event" id="h2-event-home"><a href="evenements">Autres événements</a></h2>'),
     t('block home events'),
+    t('Contenu'),
   );
   $export['evenements'] = $view;
 

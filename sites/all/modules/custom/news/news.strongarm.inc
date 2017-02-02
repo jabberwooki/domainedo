@@ -62,6 +62,13 @@ function news_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'ds_extras_fields_extra_list';
+  $strongarm->value = '';
+  $export['ds_extras_fields_extra_list'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__news';
   $strongarm->value = array(
     'view_modes' => array(
@@ -120,7 +127,7 @@ function news_strongarm() {
       'display' => array(
         'sharethis' => array(
           'full' => array(
-            'weight' => '21',
+            'weight' => '23',
             'visible' => FALSE,
           ),
           'zoom' => array(
