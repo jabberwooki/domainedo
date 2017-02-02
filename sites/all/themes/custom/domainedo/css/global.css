@@ -20,6 +20,10 @@
 body.not-front #region-content .block-right-shows-infos h2 {
   display: none;
 }
+.right, .droite {
+  float: right;
+  margin: 0 0 0 20px;
+}
 
 .link_calendar {
   background: url("../images/icons/calendar-small.png") no-repeat 0 0;
