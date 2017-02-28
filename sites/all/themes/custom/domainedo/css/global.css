@@ -1405,7 +1405,9 @@ body.node-type-festival .field-name-field-calendar-archive a:before,
 body.node-type-festival .field-name-field-view-archives a:before,
 body.node-type-festival .field-name-field-facebook a:before,
 ul#superfish-2 li.sf-depth-1.last > a:after,
-#block-menu-menu-contact ul li a:before {
+#block-menu-menu-contact ul li a:before,
+.node-type-page-complexe h4.title-open-close:before,
+.close-paragraph:after{
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -2192,13 +2194,36 @@ body.logged-in #section-content {
 }
 /* page complexe ******************************************************************************************************/
 .close-paragraph:after{
-  content: ">> Lire la suite";
+  content: "\e810  Lire la suite";
   font-size: 1.2em;
   color: #0062a0;
-  text-decoration: underline;
   cursor: pointer;
-  display: block;
+  width: 100px;
 }
 .open-paragraph:after{
 
+}
+.node-type-page-complexe h3.title-open-close{
+  font-family: lato,arial;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ff6701;
+  margin-top: 30px;
+}
+.node-type-page-complexe h4.title-open-close{
+  font-family: lato,arial;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+.node-type-page-complexe h4.title-open-close:before{
+  content: "\e804";
+  color: #ff6701;
+
+}
+.node-type-page-complexe .field-name-field-texte-page-complexe ul{
+   overflow:hidden;
+}
+.node-type-page-complexe div.left img{
+  border-radius: 8px;
 }

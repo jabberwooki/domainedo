@@ -505,7 +505,9 @@ ul.sf-horizontal li.sf-depth-1 ul li:hover > a > .sf-sub-indicator {
 
 div.group6 {
   float: left;
-
+}
+body.page-spectacles div.group6 {
+  float: none;
 }
 
 #block-views-shows-block-1 .views-row {
