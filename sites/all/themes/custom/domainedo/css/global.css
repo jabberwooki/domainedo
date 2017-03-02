@@ -225,7 +225,7 @@ h2.h2-event {
 h2.h2-event a {
   text-decoration: none;
   color: black;
-  padding-left: 40px;
+  padding-left: 50px;
   background: url(../images/icons/arrow-home-event.png) no-repeat 0 0;
   display: block;
   line-height: 40px;
@@ -1023,10 +1023,6 @@ body.node-type-show div.view-mode-full div.group-left .field-name-field-by .fiel
 
 .galleria-theme-classic .galleria-info-text {
   padding-top: 30px;
-}
-
-.block-evenements-block-2 {
-  clear: both;
 }
 
 .field-name-scald-authors.field-label-hidden {
@@ -2226,4 +2222,53 @@ body.logged-in #section-content {
 }
 .node-type-page-complexe div.left img{
   border-radius: 8px;
+}
+/* articles ***********************************************************************************************************/
+.page-blog .views-row-odd, .page-blog .views-row-even{
+  float: left;
+  width:49%;
+  height: 255px;
+  overflow: hidden;
+}
+.page-blog .views-row-odd{
+  margin-right: 2%;
+}
+.page-blog .img-article-list{
+  float: left;
+  margin-right: 20px;
+}
+.page-blog .views-row h3 > a{
+  color: #00a0b5;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px dotted #e8e8e8;
+  font-size: 1.6em;
+}
+.page-blog .views-row h3 > a:hover{
+  color: #000;
+  text-decoration: underline;
+}.
+/* articles en page d'accueil *****************************************************************************************/
+.view-display-id-block_article_home{
+   clear: left;
+   margin-top: 40px;
+ }
+.block-articles-block-article-home h2.h2-event {
+  clear: both;
+  width: 320px;
+  float: none;
+ }
+.block-articles-block-article-home h3>a {
+  padding-left: 30px;
+  background: transparent url(../images/icons/bg-h3-home-event.gif) no-repeat 0 5px;
+  display: block;
+  color: #000000;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 0.8em;
+}
+.view-display-id-block_article_home .views-row .group-article-home{
+  position: relative;
+  padding-bottom: 30px;
 }

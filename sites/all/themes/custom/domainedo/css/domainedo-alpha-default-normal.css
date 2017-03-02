@@ -225,7 +225,7 @@ ul#superfish-2 li.sf-depth-1 a {
 
 .view-evenements.view-display-id-block_2 .views-row.views-row-1 {
   clear: both;
-  width: 35%;
+  width: 100%;
   padding: 0 0 22px 0;
 }
 
@@ -262,13 +262,14 @@ ul#superfish-2 li.sf-depth-1 a {
 
 .view-evenements.view-display-id-block_2 .views-row.views-row-1 > .views-field-body {
   width: 325px;
+  padding: 5px 0 0 0;
 }
 
 .view-evenements.view-display-id-block_2 div.more-link {
-  margin-bottom: 20px;
+  clear: both;
   position: relative;
-  top: 330px;
-  margin-right: 25px;
+  top: -20px;
+  margin-right: 30px;
 }
 
 body.front #block-views-evenements-block-1 div.view-content .views-field-body {
