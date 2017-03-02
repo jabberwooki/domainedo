@@ -49,6 +49,5 @@ function domainedo_contexts_menu_default_menu_custom() {
   t('contact');
   t('top courtesy nav');
 
-
   return $menus;
 }
