@@ -91,5 +91,33 @@ function domaine_d_o_articles_strongarm() {
   );
   $export['field_bundle_settings_node__article'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_article_pattern';
+  $strongarm->value = 'blog/[node:title]';
+  $export['pathauto_node_article_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'sharethis_article_options';
+  $strongarm->value = array(
+    'full' => 0,
+    'teaser' => 0,
+    'rss' => 0,
+    'search_index' => 0,
+    'search_result' => 0,
+    'diff_standard' => 0,
+    'token' => 0,
+    'frontpage_block' => 0,
+    'frontpage_block_mobile' => 0,
+    'list' => 0,
+    'liste_aussi' => 0,
+    'zoom' => 0,
+    'revision' => 0,
+  );
+  $export['sharethis_article_options'] = $strongarm;
+
   return $export;
 }
