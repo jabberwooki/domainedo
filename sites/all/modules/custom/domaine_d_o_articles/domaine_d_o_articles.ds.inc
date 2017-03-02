@@ -52,6 +52,11 @@ function domaine_d_o_articles_ds_field_settings_info() {
         'ft' => array(),
       ),
     ),
+    'field_scald_image' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
   );
   $export['node|article|frontpage_block'] = $ds_fieldsetting;
 
