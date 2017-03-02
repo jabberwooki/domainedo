@@ -38,7 +38,7 @@ function domaine_d_o_articles_strongarm() {
         'custom_settings' => FALSE,
       ),
       'frontpage_block' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'frontpage_block_mobile' => array(
         'custom_settings' => FALSE,
@@ -76,6 +76,14 @@ function domaine_d_o_articles_strongarm() {
           'default' => array(
             'weight' => '4',
             'visible' => TRUE,
+          ),
+          'teaser' => array(
+            'weight' => '16',
+            'visible' => FALSE,
+          ),
+          'frontpage_block' => array(
+            'weight' => '16',
+            'visible' => FALSE,
           ),
         ),
       ),

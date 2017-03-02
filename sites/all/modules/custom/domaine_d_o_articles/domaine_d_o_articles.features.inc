@@ -17,6 +17,13 @@ function domaine_d_o_articles_ctools_plugin_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_views_api().
+ */
+function domaine_d_o_articles_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
+}
+
+/**
  * Implements hook_features_date_format_default().
  */
 function domaine_d_o_articles_features_date_format_default() {

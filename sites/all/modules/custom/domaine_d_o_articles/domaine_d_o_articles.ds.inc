@@ -30,11 +30,6 @@ function domaine_d_o_articles_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_date_de_modification' => array(
-      'formatter_settings' => array(
-        'ft' => array(),
-      ),
-    ),
   );
   $export['node|article|default'] = $ds_fieldsetting;
 
