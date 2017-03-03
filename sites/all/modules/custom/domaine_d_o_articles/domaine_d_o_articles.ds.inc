@@ -52,11 +52,6 @@ function domaine_d_o_articles_ds_field_settings_info() {
         'ft' => array(),
       ),
     ),
-    'field_scald_image' => array(
-      'formatter_settings' => array(
-        'ft' => array(),
-      ),
-    ),
   );
   $export['node|article|frontpage_block'] = $ds_fieldsetting;
 
@@ -184,15 +179,15 @@ function domaine_d_o_articles_ds_layout_settings_info() {
       'ds_content' => array(
         0 => 'title',
         1 => 'field_scald_image',
-        2 => 'body',
-        3 => 'group_article_home',
+        2 => 'group_article_home',
+        3 => 'body',
       ),
     ),
     'fields' => array(
       'title' => 'ds_content',
       'field_scald_image' => 'ds_content',
-      'body' => 'ds_content',
       'group_article_home' => 'ds_content',
+      'body' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(

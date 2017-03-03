@@ -82,7 +82,7 @@ function domaine_d_o_articles_strongarm() {
             'visible' => FALSE,
           ),
           'frontpage_block' => array(
-            'weight' => '16',
+            'weight' => '15',
             'visible' => FALSE,
           ),
         ),

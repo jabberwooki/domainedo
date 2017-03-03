@@ -21,11 +21,10 @@ function domaine_d_o_articles_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'group article home',
-    'weight' => '21',
+    'weight' => '1',
     'children' => array(
       0 => 'body',
       1 => 'field_scald_image',
-      2 => 'title',
     ),
     'format_type' => 'div',
     'format_settings' => array(
