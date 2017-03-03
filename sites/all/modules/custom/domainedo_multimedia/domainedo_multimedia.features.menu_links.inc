@@ -10,7 +10,7 @@
 function domainedo_multimedia_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: menu-top-courtesy-nav_espace-multimedia:espace-multimedia
+  // Exported menu link: menu-top-courtesy-nav_espace-multimedia:espace-multimedia.
   $menu_links['menu-top-courtesy-nav_espace-multimedia:espace-multimedia'] = array(
     'menu_name' => 'menu-top-courtesy-nav',
     'link_path' => 'espace-multimedia',
@@ -27,13 +27,13 @@ function domainedo_multimedia_menu_default_menu_links() {
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => 0,
+    'weight' => -49,
     'customized' => 1,
   );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Espace Multimedia');
-
 
   return $menu_links;
 }

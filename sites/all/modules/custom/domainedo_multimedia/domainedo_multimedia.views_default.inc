@@ -89,7 +89,7 @@ Morbi elementum augue eleifend, lacinia quam a, tincidunt mauris. Mauris consequ
   $handler->display->display_options['relationships']['nid']['table'] = 'scald_index';
   $handler->display->display_options['relationships']['nid']['field'] = 'nid';
   $handler->display->display_options['relationships']['nid']['label'] = 'Visible dans';
-  /* Field: Atom: Titre */
+  /* Field: Atom: Title */
   $handler->display->display_options['fields']['title_1']['id'] = 'title_1';
   $handler->display->display_options['fields']['title_1']['table'] = 'scald_atoms';
   $handler->display->display_options['fields']['title_1']['field'] = 'title';
@@ -104,7 +104,7 @@ Morbi elementum augue eleifend, lacinia quam a, tincidunt mauris. Mauris consequ
   $handler->display->display_options['fields']['representation']['exclude'] = TRUE;
   $handler->display->display_options['fields']['representation']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['representation']['context'] = 'list';
-  /* Field: Contenu: Titre */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -147,7 +147,7 @@ Morbi elementum augue eleifend, lacinia quam a, tincidunt mauris. Mauris consequ
   /* Display: Liste old */
   $handler = $view->new_display('page_with_page_title', 'Liste old', 'page_with_page_title_2');
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Contenu: Updated date */
+  /* Sort criterion: Content: Updated date */
   $handler->display->display_options['sorts']['changed']['id'] = 'changed';
   $handler->display->display_options['sorts']['changed']['table'] = 'node';
   $handler->display->display_options['sorts']['changed']['field'] = 'changed';
@@ -197,7 +197,7 @@ Morbi elementum augue eleifend, lacinia quam a, tincidunt mauris. Mauris consequ
   $handler->display->display_options['pager']['options']['tags']['next'] = 'suivant ›';
   $handler->display->display_options['pager']['options']['tags']['last'] = 'dernier »';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Atom: Titre */
+  /* Field: Atom: Title */
   $handler->display->display_options['fields']['title_1']['id'] = 'title_1';
   $handler->display->display_options['fields']['title_1']['table'] = 'scald_atoms';
   $handler->display->display_options['fields']['title_1']['field'] = 'title';
@@ -216,7 +216,7 @@ Morbi elementum augue eleifend, lacinia quam a, tincidunt mauris. Mauris consequ
     'image_link' => 'content',
   );
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Draggableviews: Poids */
+  /* Sort criterion: Draggableviews: Weight */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
@@ -341,7 +341,7 @@ Morbi elementum augue eleifend, lacinia quam a, tincidunt mauris. Mauris consequ
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Atom: Titre */
+  /* Field: Atom: Title */
   $handler->display->display_options['fields']['title_1']['id'] = 'title_1';
   $handler->display->display_options['fields']['title_1']['table'] = 'scald_atoms';
   $handler->display->display_options['fields']['title_1']['field'] = 'title';
@@ -357,7 +357,7 @@ Morbi elementum augue eleifend, lacinia quam a, tincidunt mauris. Mauris consequ
   $handler->display->display_options['fields']['draggableviews']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 1;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Draggableviews: Poids */
+  /* Sort criterion: Draggableviews: Weight */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
@@ -406,6 +406,7 @@ Morbi elementum augue eleifend, lacinia quam a, tincidunt mauris. Mauris consequ
 Morbi elementum augue eleifend, lacinia quam a, tincidunt mauris. Mauris consequat tristique risus ut interdum. Pellentesque vitae elit quis orci facilisis hendrerit at eu arcu. Nulla ultricies, massa vel aliquam feugiat, eros dui malesuada massa, et tincidunt ligula leo ac tellus. Nunc eu sollicitudin velit. Vivamus et fringilla nibh, ac rutrum ante nullam.'),
     t('Visible dans'),
     t('Liste old'),
+    t('more'),
     t('Liste'),
     t('Classement'),
   );
