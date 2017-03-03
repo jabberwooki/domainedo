@@ -1,3 +1,7 @@
+Domaine d'O 1.0.40 - 2017-03-03
+----------------------------
+Feature domaine_d_o_article up for titles home and list pb
+
 Domaine d'O 1.0.39 - 2017-03-03
 ----------------------------
 Feature domaine_d_o_article up
