@@ -211,7 +211,7 @@ function domaine_d_o_articles_field_default_field_instances() {
         'settings' => array(
           'link' => 0,
         ),
-        'type' => 'full',
+        'type' => 'list',
         'weight' => 3,
       ),
       'frontpage_block' => array(

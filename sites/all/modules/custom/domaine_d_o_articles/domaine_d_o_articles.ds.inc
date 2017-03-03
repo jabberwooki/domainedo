@@ -30,6 +30,19 @@ function domaine_d_o_articles_ds_field_settings_info() {
         ),
       ),
     ),
+    'field_scald_video' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'right right-video',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
   );
   $export['node|article|default'] = $ds_fieldsetting;
 
