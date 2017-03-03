@@ -59,7 +59,10 @@ function domainedo_media_default_scald_context_config() {
       'settings' => array(),
     ),
   );
-  $context_config->data = array();
+  $context_config->data = array(
+    'width' => '',
+    'height' => '',
+  );
   $export['block'] = $context_config;
 
   $context_config = new stdClass();
@@ -107,9 +110,13 @@ function domainedo_media_default_scald_context_config() {
     ),
     'video' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
   );
-  $context_config->data = array();
+  $context_config->data = array(
+    'width' => '',
+    'height' => '',
+  );
   $export['event_home'] = $context_config;
 
   $context_config = new stdClass();
@@ -170,7 +177,10 @@ function domainedo_media_default_scald_context_config() {
       'settings' => array(),
     ),
   );
-  $context_config->data = array();
+  $context_config->data = array(
+    'width' => '',
+    'height' => '',
+  );
   $export['full'] = $context_config;
 
   $context_config = new stdClass();
@@ -218,9 +228,13 @@ function domainedo_media_default_scald_context_config() {
     ),
     'video' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
   );
-  $context_config->data = array();
+  $context_config->data = array(
+    'width' => '',
+    'height' => '',
+  );
   $export['full_show'] = $context_config;
 
   $context_config = new stdClass();
@@ -280,7 +294,10 @@ function domainedo_media_default_scald_context_config() {
       'settings' => array(),
     ),
   );
-  $context_config->data = array();
+  $context_config->data = array(
+    'width' => '570px',
+    'height' => '378px',
+  );
   $export['list'] = $context_config;
 
   $context_config = new stdClass();
@@ -328,9 +345,13 @@ function domainedo_media_default_scald_context_config() {
     ),
     'video' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
   );
-  $context_config->data = array();
+  $context_config->data = array(
+    'width' => '',
+    'height' => '',
+  );
   $export['petit_100'] = $context_config;
 
   $context_config = new stdClass();
@@ -390,7 +411,10 @@ function domainedo_media_default_scald_context_config() {
       'settings' => array(),
     ),
   );
-  $context_config->data = array();
+  $context_config->data = array(
+    'width' => '',
+    'height' => '',
+  );
   $export['sdl_editor_representation'] = $context_config;
 
   $context_config = new stdClass();
@@ -442,7 +466,10 @@ function domainedo_media_default_scald_context_config() {
       'settings' => array(),
     ),
   );
-  $context_config->data = array();
+  $context_config->data = array(
+    'width' => '',
+    'height' => '',
+  );
   $export['sdl_library_item'] = $context_config;
 
   $context_config = new stdClass();
@@ -494,7 +521,10 @@ function domainedo_media_default_scald_context_config() {
       'settings' => array(),
     ),
   );
-  $context_config->data = array();
+  $context_config->data = array(
+    'width' => '',
+    'height' => '',
+  );
   $export['sdl_preview'] = $context_config;
 
   $context_config = new stdClass();
@@ -545,7 +575,10 @@ function domainedo_media_default_scald_context_config() {
       'settings' => array(),
     ),
   );
-  $context_config->data = array();
+  $context_config->data = array(
+    'width' => '',
+    'height' => '',
+  );
   $export['slideshow_home'] = $context_config;
 
   $context_config = new stdClass();
@@ -597,7 +630,10 @@ function domainedo_media_default_scald_context_config() {
       'settings' => array(),
     ),
   );
-  $context_config->data = array();
+  $context_config->data = array(
+    'width' => '',
+    'height' => '',
+  );
   $export['title'] = $context_config;
 
   $context_config = new stdClass();
@@ -645,9 +681,13 @@ function domainedo_media_default_scald_context_config() {
     ),
     'video' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
   );
-  $context_config->data = array();
+  $context_config->data = array(
+    'width' => '',
+    'height' => '',
+  );
   $export['zoom'] = $context_config;
 
   return $export;
