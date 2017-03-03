@@ -1254,11 +1254,12 @@ img[alt=anonyme] {
 }
 .view-display-id-block_article_home .views-row .group-article-home{
   position: relative;
-  height: 238px;
+  height: 183px;
   overflow: hidden;
   padding-bottom: 30px;
   background: transparent url(../images/icons/bg_bottom_home_events.jpg) no-repeat 50% 100%;
   width: 325px;
+  margin-left: 30px;
 }
 .view-display-id-block_article_home .views-row .field-name-body{
   position: absolute;
