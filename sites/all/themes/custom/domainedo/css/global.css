@@ -2258,7 +2258,10 @@ body.logged-in #section-content {
   width: 320px;
   float: none;
  }
-.block-articles-block-article-home h3>a {
+.block-articles-block-article-home h3{
+  margin-bottom: 1px;
+}
+.block-articles-block-article-home h3 > a {
   padding-left: 30px;
   background: transparent url(../images/icons/bg-h3-home-event.gif) no-repeat 0 5px;
   display: block;

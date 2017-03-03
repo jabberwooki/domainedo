@@ -60,7 +60,7 @@ function domaine_d_o_articles_ds_field_settings_info() {
       'formatter_settings' => array(
         'link' => '1',
         'wrapper' => 'h3',
-        'class' => '',
+        'class' => 'title-event-list',
         'exclude node title settings' => '1',
         'ft' => array(),
       ),

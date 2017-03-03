@@ -68,6 +68,8 @@ function domaine_d_o_articles_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Coulisses';
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['path'] = 'blog';
 
@@ -123,6 +125,7 @@ function domaine_d_o_articles_views_default_views() {
     t('next ›'),
     t('last »'),
     t('Page'),
+    t('Coulisses'),
     t('Bloc'),
     t('Articles accueil'),
     t('Voir tous les articles'),
