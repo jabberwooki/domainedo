@@ -476,7 +476,7 @@ function news_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<h2 class="h2-event" id="h2-event-home"><a href="evenements">Autres événements</a></h2>';
+  $handler->display->display_options['header']['area']['content'] = '<h2 class="h2-event" id="h2-event-home"><a href="evenements">Evénements</a></h2>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
@@ -602,7 +602,7 @@ function news_views_default_views() {
     t('Contenu'),
     t('Block home events'),
     t('Voir tous les événements'),
-    t('<h2 class="h2-event" id="h2-event-home"><a href="evenements">Autres événements</a></h2>'),
+    t('<h2 class="h2-event" id="h2-event-home"><a href="evenements">Evénements</a></h2>'),
     t('block home events'),
   );
   $export['evenements'] = $view;
