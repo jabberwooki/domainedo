@@ -46,7 +46,7 @@ function domaine_d_o_articles_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Sort criterion: Nœud: Date de modification (field_date_de_modification) */
+  /* Sort criterion: Content: Date de modification (field_date_de_modification) */
   $handler->display->display_options['sorts']['field_date_de_modification_value']['id'] = 'field_date_de_modification_value';
   $handler->display->display_options['sorts']['field_date_de_modification_value']['table'] = 'field_data_field_date_de_modification';
   $handler->display->display_options['sorts']['field_date_de_modification_value']['field'] = 'field_date_de_modification_value';
@@ -105,7 +105,7 @@ function domaine_d_o_articles_views_default_views() {
   $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
-  $handler->display->display_options['header']['area_text_custom']['content'] = '<h2 class="h2-event" id="h2-event-home"><a href="/blog">Blog</a></h2>';
+  $handler->display->display_options['header']['area_text_custom']['content'] = '<h2 class="h2-event" id="h2-event-home"><a href="/blog">Coulisses</a></h2>';
   $translatables['articles'] = array(
     t('Master'),
     t('Articles'),
@@ -126,7 +126,7 @@ function domaine_d_o_articles_views_default_views() {
     t('Bloc'),
     t('Articles accueil'),
     t('Voir tous les articles'),
-    t('<h2 class="h2-event" id="h2-event-home"><a href="/blog">Blog</a></h2>'),
+    t('<h2 class="h2-event" id="h2-event-home"><a href="/blog">Coulisses</a></h2>'),
   );
   $export['articles'] = $view;
 

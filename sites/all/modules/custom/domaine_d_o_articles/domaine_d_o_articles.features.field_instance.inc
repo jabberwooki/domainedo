@@ -22,7 +22,7 @@ function domaine_d_o_articles_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'frontpage_block' => array(
         'label' => 'hidden',
@@ -87,7 +87,7 @@ function domaine_d_o_articles_field_default_field_instances() {
           'show_remaining_days' => 0,
         ),
         'type' => 'date_default',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'frontpage_block' => array(
         'label' => 'hidden',
@@ -212,7 +212,7 @@ function domaine_d_o_articles_field_default_field_instances() {
           'link' => 0,
         ),
         'type' => 'list',
-        'weight' => 3,
+        'weight' => 1,
       ),
       'frontpage_block' => array(
         'label' => 'hidden',
@@ -266,7 +266,7 @@ function domaine_d_o_articles_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 19,
       ),
       'frontpage_block' => array(
         'label' => 'above',
@@ -310,7 +310,7 @@ function domaine_d_o_articles_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 18,
       ),
       'frontpage_block' => array(
         'label' => 'above',

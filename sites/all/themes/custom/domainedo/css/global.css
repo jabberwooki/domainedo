@@ -2242,7 +2242,7 @@ body.logged-in #section-content {
   text-decoration: none;
   display: block;
   border-bottom: 1px dotted #e8e8e8;
-  font-size: 1.6em;
+  font-size: 1em;
 }
 .page-blog .views-row h3 > a:hover{
   color: #000;
