@@ -1,0 +1,17 @@
+<?php
+/**
+ * @file
+ * Code for the Domaine d'O articles feature.
+ */
+
+include_once 'domaine_d_o_articles.features.inc';
+/**
+ * Implements hook_node_view().
+ */
+function domaine_d_o_articles_node_view($node, $view_mode, $langcode) {
+
+  if ($view_mode == 'frontpage_block') {
+    $node->content['field_scald_image'][0]['#markup'] =
+      '<a href="/node/' . $node->nid. '">' . $node->content['field_scald_image'][0]['#markup'] . '</a>';
+  }
+}

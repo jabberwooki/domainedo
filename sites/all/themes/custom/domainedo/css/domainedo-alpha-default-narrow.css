@@ -63,6 +63,10 @@ body.front .views-row {
 body.front .view-id-evenements {
   width: 100%;
 }
+body.front .block-views-evenements-block-2 {
+  float: left;
+  width: 33%;
+}
 
 body.front #block-views-evenements-block-1 .view-content {
   float: left;
@@ -505,7 +509,9 @@ ul.sf-horizontal li.sf-depth-1 ul li:hover > a > .sf-sub-indicator {
 
 div.group6 {
   float: left;
-
+}
+body.page-spectacles div.group6 {
+  float: none;
 }
 
 #block-views-shows-block-1 .views-row {
@@ -1232,4 +1238,36 @@ img[alt=anonyme] {
 }
 .region-header-second .sprite-gplus {
  display: block;
+}
+/* Articles accueil ***************************************************************************************************/
+.block-articles-block-article-home{
+  width: 65%;
+  float: left;
+  clear: left;
+}
+.view-display-id-block_article_home .more-link{
+  margin-right: 50px;
+}
+.view-display-id-block_article_home .views-row{
+  float: left;
+  width: 49% !important;
+}
+.view-display-id-block_article_home .views-row .group-article-home{
+  position: relative;
+  height: 183px;
+  overflow: hidden;
+  padding-bottom: 30px;
+  background: transparent url(../images/icons/bg_bottom_home_events.jpg) no-repeat 50% 100%;
+  width: 325px;
+  margin-left: 30px;
+}
+.view-display-id-block_article_home .views-row .field-name-body{
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  background-color: #DFDAD8;
+  height: 48px;
+  overflow: hidden;
+  padding: 5px;
+  min-width: 320px;
 }

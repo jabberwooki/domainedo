@@ -469,7 +469,7 @@ function news_views_default_views() {
   $handler->display->display_options['use_more_text'] = 'Voir tous les événements';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['header'] = FALSE;
   /* Header: Global: Text area */
@@ -590,7 +590,6 @@ function news_views_default_views() {
     t('suivant ›'),
     t('dernier »'),
     t('Page-evenement'),
-    t('more'),
     t('Block Flash Info'),
     t('Info Flash'),
     t('Tous les événements'),
@@ -600,12 +599,11 @@ function news_views_default_views() {
     t('Classement des événements'),
     t('Page-Flash-draggable'),
     t('FLASH INFO'),
-    t('Content'),
+    t('Contenu'),
     t('Block home events'),
     t('Voir tous les événements'),
     t('<h2 class="h2-event" id="h2-event-home"><a href="evenements">Autres événements</a></h2>'),
     t('block home events'),
-    t('Contenu'),
   );
   $export['evenements'] = $view;
 
