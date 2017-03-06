@@ -837,6 +837,7 @@ div.menu-block-domainedo-shows-tab-menu > ul > li > a.active-trail,
 
 .menu-block-2 > ul.menu li.active > a, .menu-block-2 > ul.menu > li.active > a {
   background-color: #FFC929;
+  border-radius: 8px;
 }
 
 .menu-block-2 > ul > li > ul > li > a {
