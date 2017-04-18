@@ -1024,6 +1024,7 @@ body.node-type-show div.view-mode-full div.group-left .field-name-field-by .fiel
 .galleria-theme-classic .galleria-info-text {
   padding-top: 30px;
 }
+/**********************************************************************************************************************/
 
 .field-name-scald-authors.field-label-hidden {
   display: block;
@@ -1403,7 +1404,8 @@ body.node-type-festival .field-name-field-facebook a:before,
 ul#superfish-2 li.sf-depth-1.last > a:after,
 #block-menu-menu-contact ul li a:before,
 .node-type-page-complexe h4.title-open-close:before,
-.close-paragraph:after{
+.close-paragraph:after,
+.galleria-theme-classic  img[src*="video"]:before{
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -1475,6 +1477,18 @@ ul#superfish-2 li.sf-depth-1.last > a:hover:after{
 body.node-type-festival .field-name-field-facebook a:before{
   content: "\f30e";
 }
+/* image vidéo dans galleria slideshow gallerie galery ************************/
+.video-youtube{
+  /*border: 5px solid green;*/
+}
+.arrow-youtube-galleria{
+  margin: 40px auto 0 auto;
+  z-index: 9;
+}
+.galleria-image.active .arrow-youtube-galleria{
+  display: none;
+}
+
 /* liens des festivals ********************************************************/
 body.node-type-festival .field-name-link-shows a,
 body.node-type-festival .field-name-field-programme-pdf a,
