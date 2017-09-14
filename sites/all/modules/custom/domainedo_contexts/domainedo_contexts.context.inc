@@ -235,6 +235,18 @@ function domainedo_contexts_context_default_contexts() {
           'region' => 'content',
           'weight' => '-6',
         ),
+        'bean-bloc-social' => array(
+          'module' => 'bean',
+          'delta' => 'bloc-social',
+          'region' => 'postscript_first',
+          'weight' => '-10',
+        ),
+        'entityform_block-ajout_commentaire' => array(
+          'module' => 'entityform_block',
+          'delta' => 'ajout_commentaire',
+          'region' => 'postscript_second',
+          'weight' => '-10',
+        ),
       ),
     ),
   );

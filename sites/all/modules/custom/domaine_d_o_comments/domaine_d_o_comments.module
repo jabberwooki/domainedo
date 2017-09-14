@@ -1,0 +1,46 @@
+<?php
+/**
+ * @file
+ * Code for the domaine_d_o_comments feature.
+ */
+
+include_once 'domaine_d_o_comments.features.inc';
+
+/**
+ * Implements hook_entityform_confirm_page_alter().
+ */
+function domaine_d_o_comments_entityform_confirm_page_alter(&$render_array, $entityform_type, $entityform_id) {
+  // Récupération d'un tableau d'entités avec une seule valeur : attention, on voit que le deuxième$
+  $entity_array = entity_load('entityform', array($entityform_id));
+  if (empty($entity_array)) {
+    dpm("vide");
+  }
+  else {
+    dpm('non vide');
+  }
+  // Récupération de l'entité
+  $entity = $entity_array[$entityform_id];
+  $target_id = isset($entity->field_concernant_un_spectacle['und'][0]['target_id']) ?
+    $entity->field_concernant_un_spectacle['und'][0]['target_id'] :
+    false;
+
+  if ($target_id) {
+    drupal_goto("node/" . $target_id, array('fragment' => 'block-disqus-disqus-comments') );
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function domaine_d_o_comments_form_alter(&$form, &$form_state, $form_id) {
+
+  if ($form_id == "ajout_commentaire_entityform_edit_form") {
+    // appel du js
+    drupal_add_js(drupal_get_path('module', 'domaine_d_o_comments') . '/js/domaine_d_o_comments.js');
+
+    /*$form['some_text'] = array(
+      '#markup' => '<p>Some text</p>',
+      '#weight' => 100
+    );*/
+  }
+}
