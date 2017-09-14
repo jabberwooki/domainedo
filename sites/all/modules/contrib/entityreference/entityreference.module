@@ -8,6 +8,16 @@ define('ENTITYREFERENCE_DENIED', '- Restricted access -');
  */
 
 /**
+ * Regex to match referenced entity's id.
+ */
+define('ENTITYREFERENCE_FIND_ID_REGEX', '/^(")?((?:.(?!(?<![\\\])\1))*\(\s*(\d+)\s*\).?)\1?$/');
+
+/**
+ * Index of capturing group containing matched entity id.
+ */
+define('ENTITYREFERENCE_ID_MATCH_INDEX', 3);
+
+/**
  * Implements hook_ctools_plugin_directory().
  */
 function entityreference_ctools_plugin_directory($module, $plugin) {
@@ -736,6 +746,7 @@ function entityreference_field_widget_info() {
     'settings' => array(
       'match_operator' => 'CONTAINS',
       'size' => 60,
+      'hide_ids' => FALSE,
       // We don't have a default here, because it's not the same between
       // the two widgets, and the Field API doesn't update default
       // settings when the widget changes.
@@ -750,6 +761,7 @@ function entityreference_field_widget_info() {
     'settings' => array(
       'match_operator' => 'CONTAINS',
       'size' => 60,
+      'hide_ids' => FALSE,
       // We don't have a default here, because it's not the same between
       // the two widgets, and the Field API doesn't update default
       // settings when the widget changes.
@@ -799,6 +811,12 @@ function entityreference_field_widget_settings_form($field, $instance) {
       '#default_value' => $settings['size'],
       '#element_validate' => array('_element_validate_integer_positive'),
       '#required' => TRUE,
+    );
+    $form['hide_ids'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Hide ids'),
+      '#description' => t('If your target entities have unique labels you may choose not to have the ids shown to the user. Note that this setting will make it impossible to reference entities with non-unique labels!'),
+      '#default_value' => $settings['hide_ids'],
     );
   }
 
@@ -875,7 +893,7 @@ function entityreference_field_widget_form(&$form, &$form_state, $field, $instan
 
     foreach ($entities as $entity_id => $entity_item) {
       $label = $handler->getLabel($entity_item);
-      $key = "$label ($entity_id)";
+      $key = $instance['widget']['settings']['hide_ids'] ? $label : "$label ($entity_id)";
       // Labels containing commas or quotes must be wrapped in quotes.
       if (strpos($key, ',') !== FALSE || strpos($key, '"') !== FALSE) {
         $key = '"' . str_replace('"', '""', $key) . '"';
@@ -936,8 +954,8 @@ function _entityreference_autocomplete_validate($element, &$form_state, $form) {
   $value = '';
   if (!empty($element['#value'])) {
     // Take "label (entity id)', match the id from parenthesis.
-    if (preg_match("/.+\((\d+)\)/", $element['#value'], $matches)) {
-      $value = $matches[1];
+    if (preg_match(ENTITYREFERENCE_FIND_ID_REGEX, rtrim($element['#value']), $matches)) {
+      $value = !empty($matches[ENTITYREFERENCE_ID_MATCH_INDEX]) ? $matches[ENTITYREFERENCE_ID_MATCH_INDEX] : '';
     }
     else {
       // Try to get a match from the input string when the user didn't use the
@@ -966,9 +984,9 @@ function _entityreference_autocomplete_tags_validate($element, &$form_state, $fo
     $value = array();
     foreach ($entities as $entity) {
       // Take "label (entity id)', match the id from parenthesis.
-      if (preg_match("/.+\((\d+)\)/", $entity, $matches)) {
+      if (preg_match(ENTITYREFERENCE_FIND_ID_REGEX, rtrim($element['#value']), $matches)) {
         $value[] = array(
-          'target_id' => $matches[1],
+          'target_id' => !empty($matches[ENTITYREFERENCE_ID_MATCH_INDEX]) ? $matches[ENTITYREFERENCE_ID_MATCH_INDEX] : '',
         );
       }
       else {
@@ -1116,14 +1134,14 @@ function entityreference_autocomplete_callback_get_matches($type, $field, $insta
         if ($label == $denied_label) {
           continue;
         }
-        $key = "$label ($entity_id)";
+        $key = $instance['widget']['settings']['hide_ids'] ? $label : "$label ($entity_id)";
         // Strip starting/trailing white spaces, line breaks and tags.
         $key = preg_replace('/\s\s+/', ' ', str_replace("\n", '', trim(decode_entities(strip_tags($key)))));
         // Names containing commas or quotes must be wrapped in quotes.
         if (strpos($key, ',') !== FALSE || strpos($key, '"') !== FALSE) {
           $key = '"' . str_replace('"', '""', $key) . '"';
         }
-        $matches[$prefix . $key] = '<div class="reference-autocomplete">' . $label . '</div>';
+        $matches[$prefix . $key] = '<div class="reference-autocomplete">' . $key . '</div>';
       }
     }
   }
