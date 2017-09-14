@@ -1060,7 +1060,7 @@ div.pratique div.button_subscribe a {
 
 /* commentaires ***************************************************************/
 #disqus_thread {
-  width: 61%;
+  width: 96%;
 }
 
 /* pratique lieux de spectacle ************************************************/
@@ -1247,7 +1247,9 @@ img[alt=anonyme] {
   clear: left;
 }
 .view-display-id-block_article_home .more-link{
-  margin-right: 50px;
+  position: absolute;
+  top: 35px;
+  left: 200px;
 }
 .view-display-id-block_article_home .views-row{
   float: left;

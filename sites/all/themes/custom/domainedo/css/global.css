@@ -1405,7 +1405,9 @@ ul#superfish-2 li.sf-depth-1.last > a:after,
 #block-menu-menu-contact ul li a:before,
 .node-type-page-complexe h4.title-open-close:before,
 .close-paragraph:after,
-.galleria-theme-classic  img[src*="video"]:before{
+.galleria-theme-classic  img[src*="video"]:before,
+#edit-field-concernant-un-spectacle .facebook a:before,
+#edit-field-concernant-un-spectacle .tripadvisor a:before{
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -1474,8 +1476,31 @@ ul#superfish-2 li.sf-depth-1.last > a:hover:after{
   color: #C71D20;
 }
   /* facebook ***************************************************/
-body.node-type-festival .field-name-field-facebook a:before{
+body.node-type-festival .field-name-field-facebook a:before,
+#edit-field-concernant-un-spectacle .facebook a:before{
   content: "\f30e";
+}
+#edit-field-concernant-un-spectacle .facebook a:before{
+  content: "\f30e";
+  color: #005ca5;
+  font-size: 3em;
+}
+#edit-field-concernant-un-spectacle .facebook a{
+  font-size: 2em;
+  text-decoration: none;
+}
+/* Tripadvisor ****************************************************************/
+#edit-field-concernant-un-spectacle .tripadvisor a{
+  font-size: 2em;
+  text-decoration: none;
+}
+#edit-field-concernant-un-spectacle .tripadvisor a:before{
+  content: "\f262";
+  color: #589642;
+  font-size: 2.2em;
+  margin-right: 28px;
+  position: relative;
+  top: 10px;
 }
 /* image vidéo dans galleria slideshow gallerie galery ************************/
 .video-youtube{
@@ -2117,7 +2142,9 @@ body.node-type-festival .field-name-field-facebook a:hover:before{
 
 .field-name-field-summary-critique .field-item p:after,
 .field-name-field-summary-comment .field-item p:after,
-.node-type-presentation-location-salles .field-name-field-vente-commentaires:before{
+.node-type-presentation-location-salles .field-name-field-vente-commentaires:before,
+.block-bloc-social .field-item p:before,
+.block-bloc-social .field-item p:after{
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -2288,4 +2315,57 @@ body.logged-in #section-content {
 .view-display-id-block_article_home .views-row .group-article-home{
   position: relative;
   padding-bottom: 30px;
+}
+/* Commentaires isssus des réseaux sociaux ****************************************************************************/
+body.front #edit-submit--2 {
+  margin-top: -540px;
+}
+body.front .add-comments-social {
+  margin-top: 50px;
+}
+#block-bean-bloc-social .field-name-field-commentaire .field-item{
+  clear: both;
+  margin-top: 20px;
+  min-height: 100px;
+}
+#block-entityform-block-ajout-commentaire .add-comments-social{
+  color: #000;
+  font-size: 1.6em;
+}
+#block-disqus-disqus-comments:target {
+  background-color: #FFC929;
+  width: 59%;
+  padding-left: 20px;
+}
+.block-bloc-social .field-item img{
+  max-width: 66px;
+}
+.block-bloc-social h2,
+.block-ajout-commentaire h2 {
+  text-decoration: none;
+  color: black;
+  padding-left: 50px;
+  background: #EBE9EA url(../images/icons/arrow-home-event.png) no-repeat 0 0;
+  display: block;
+  line-height: 40px;
+}
+.block-bloc-social .field-item p{
+  font-size: 1.2em;
+  color: #334455;
+}
+.block-bloc-social .field-item p:before{
+  content: "\e831";
+  font-size: 1.6em;
+  position: relative;
+  left: -5px;
+  margin-right: 5px;
+  background-color: transparent;
+}
+.block-bloc-social .field-item p:after{
+  content: "\e832";
+  font-size: 1.6em;
+  position: relative;
+  left: 5px;
+  margin-right: 5px;
+  background-color: transparent;
 }
