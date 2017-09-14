@@ -2348,6 +2348,7 @@ body.front .add-comments-social {
   background: #EBE9EA url(../images/icons/arrow-home-event.png) no-repeat 0 0;
   display: block;
   line-height: 40px;
+  font-size: 26px;
 }
 .block-bloc-social .field-item p{
   font-size: 1.2em;
