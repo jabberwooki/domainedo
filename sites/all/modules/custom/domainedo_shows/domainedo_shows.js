@@ -1,5 +1,16 @@
 jQuery(function($) {
-    
+    console.log("Hash");
+  if (window.location.hash == "#block-disqus-disqus-comments") {
+    console.log("Attention");
+    for(i=0;i<3;i++) {
+      $("#block-disqus-disqus-comments").fadeTo(1000, 0.2).fadeTo('slow', 1.0);
+    }
+    setTimeout(function(){
+      console.log("qsdf");
+      $("html, body").animate({ scrollTop: $(document).height() }, 1000);
+    },2000);
+
+  }
     /*
      * resize frame for video for example
      */ 
