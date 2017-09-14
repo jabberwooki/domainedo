@@ -12,12 +12,7 @@ include_once 'domaine_d_o_comments.features.inc';
 function domaine_d_o_comments_entityform_confirm_page_alter(&$render_array, $entityform_type, $entityform_id) {
   // Récupération d'un tableau d'entités avec une seule valeur : attention, on voit que le deuxième$
   $entity_array = entity_load('entityform', array($entityform_id));
-  if (empty($entity_array)) {
-    dpm("vide");
-  }
-  else {
-    dpm('non vide');
-  }
+  
   // Récupération de l'entité
   $entity = $entity_array[$entityform_id];
   $target_id = isset($entity->field_concernant_un_spectacle['und'][0]['target_id']) ?
