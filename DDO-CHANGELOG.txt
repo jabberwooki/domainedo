@@ -1,3 +1,8 @@
+Domaine d'O 1.0.42 - 2017-09-14
+----------------------------
+New feature for social comments
+
+
 Domaine d'O 1.0.41 - 2017-04-18
 ----------------------------
 Arrow yellow in galleria images for video
