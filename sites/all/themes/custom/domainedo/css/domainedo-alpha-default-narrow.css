@@ -1246,9 +1246,12 @@ img[alt=anonyme] {
   float: left;
   clear: left;
 }
+.view-display-id-block_article_home{
+  position: relative;
+}
 .view-display-id-block_article_home .more-link{
   position: absolute;
-  top: 35px;
+  top: 15px;
   left: 200px;
 }
 .view-display-id-block_article_home .views-row{
