@@ -1029,6 +1029,9 @@ body.node-type-show div.view-mode-full div.group-left .field-name-field-by .fiel
 .field-name-scald-authors.field-label-hidden {
   display: block;
 }
+body.page-node-542 .field-name-scald-authors{
+  display: none;
+}
 .front .field-name-scald-authors.field-label-hidden {
   display: none;
 }
