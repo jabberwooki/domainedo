@@ -1010,7 +1010,7 @@ else {
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
-  $handler->display->display_options['fields']['body']['label'] = 'content';
+  $handler->display->display_options['fields']['body']['label'] = 'contenu';
   $handler->display->display_options['fields']['body']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body']['type'] = 'text_plain';
@@ -1048,6 +1048,7 @@ else {
     t('dernier »'),
     t('Tous les spectacles'),
     t('Tous les spectacles au domaine d\'O'),
+    t('more'),
     t('Left info'),
     t('Shows list filter'),
     t('Right info'),
@@ -1107,6 +1108,7 @@ else {
     t('content'),
     t('image'),
     t('[field_scald_image]--[field_scald_image-sid]'),
+    t('contenu'),
   );
   $export['shows'] = $view;
 
