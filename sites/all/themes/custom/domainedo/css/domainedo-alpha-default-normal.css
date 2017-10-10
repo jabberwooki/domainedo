@@ -383,3 +383,8 @@ img[alt=anonyme] {
 .view .date-nav-wrapper .date-next{
   top: 0;
 }
+/* lettre d'info ******************************************************************************************************/
+.view-lettres-infos .views-field-title{
+  height: 250px;
+  overflow: hidden;
+}

@@ -1029,6 +1029,9 @@ body.node-type-show div.view-mode-full div.group-left .field-name-field-by .fiel
 .field-name-scald-authors.field-label-hidden {
   display: block;
 }
+body.page-node-542 .field-name-scald-authors{
+  display: none;
+}
 .front .field-name-scald-authors.field-label-hidden {
   display: none;
 }
@@ -2348,6 +2351,7 @@ body.front .add-comments-social {
   background: #EBE9EA url(../images/icons/arrow-home-event.png) no-repeat 0 0;
   display: block;
   line-height: 40px;
+  font-size: 26px;
 }
 .block-bloc-social .field-item p{
   font-size: 1.2em;

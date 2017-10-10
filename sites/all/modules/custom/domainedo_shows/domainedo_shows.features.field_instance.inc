@@ -292,6 +292,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
+          'bypass_access' => FALSE,
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
@@ -302,6 +303,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'entityreference',
         'settings' => array(
           'links' => 1,
+          'use_content_language' => TRUE,
           'view_mode' => 'list',
         ),
         'type' => 'entityreference_entity_view',
@@ -325,6 +327,7 @@ function domainedo_shows_field_default_field_instances() {
       'active' => 1,
       'module' => 'entityreference',
       'settings' => array(
+        'hide_ids' => FALSE,
         'match_operator' => 'CONTAINS',
         'path' => '',
         'size' => 60,
@@ -1477,6 +1480,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'inline',
         'module' => 'entityreference',
         'settings' => array(
+          'bypass_access' => FALSE,
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
@@ -1498,6 +1502,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'inline',
         'module' => 'entityreference',
         'settings' => array(
+          'bypass_access' => FALSE,
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
@@ -1539,6 +1544,7 @@ function domainedo_shows_field_default_field_instances() {
       'active' => 1,
       'module' => 'entityreference',
       'settings' => array(
+        'hide_ids' => FALSE,
         'match_operator' => 'CONTAINS',
         'path' => '',
         'size' => 60,
@@ -2123,6 +2129,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'inline',
         'module' => 'entityreference',
         'settings' => array(
+          'bypass_access' => FALSE,
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
@@ -2132,6 +2139,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
+          'bypass_access' => FALSE,
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
@@ -2147,6 +2155,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
+          'bypass_access' => FALSE,
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
@@ -2189,6 +2198,7 @@ function domainedo_shows_field_default_field_instances() {
       'active' => 1,
       'module' => 'entityreference',
       'settings' => array(
+        'hide_ids' => FALSE,
         'match_operator' => 'CONTAINS',
         'path' => '',
         'size' => 60,
@@ -2453,6 +2463,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
+          'bypass_access' => FALSE,
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
@@ -2475,6 +2486,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'entityreference',
         'settings' => array(
           'links' => 1,
+          'use_content_language' => TRUE,
           'view_mode' => 'liste_aussi',
         ),
         'type' => 'entityreference_entity_view',
@@ -2516,6 +2528,7 @@ function domainedo_shows_field_default_field_instances() {
       'active' => 1,
       'module' => 'entityreference',
       'settings' => array(
+        'hide_ids' => FALSE,
         'match_operator' => 'CONTAINS',
         'path' => '',
         'size' => 60,
@@ -3188,6 +3201,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'inline',
         'module' => 'entityreference',
         'settings' => array(
+          'bypass_access' => FALSE,
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
@@ -3209,6 +3223,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'inline',
         'module' => 'entityreference',
         'settings' => array(
+          'bypass_access' => FALSE,
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
@@ -3250,6 +3265,7 @@ function domainedo_shows_field_default_field_instances() {
       'active' => 1,
       'module' => 'entityreference',
       'settings' => array(
+        'hide_ids' => FALSE,
         'match_operator' => 'CONTAINS',
         'path' => '',
         'size' => 60,
@@ -4033,6 +4049,7 @@ function domainedo_shows_field_default_field_instances() {
         'weight' => 3,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_show_dates',
     'label' => 'Date(s)',
@@ -4052,6 +4069,7 @@ function domainedo_shows_field_default_field_instances() {
         'input_format' => 'd/m/Y - H:i:s',
         'input_format_custom' => '',
         'label_position' => 'above',
+        'no_fieldset' => 0,
         'text_parts' => array(),
         'year_range' => '-3:+3',
       ),
@@ -5014,6 +5032,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
+          'bypass_access' => FALSE,
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
@@ -5043,6 +5062,7 @@ function domainedo_shows_field_default_field_instances() {
       'active' => 1,
       'module' => 'entityreference',
       'settings' => array(
+        'hide_ids' => FALSE,
         'match_operator' => 'CONTAINS',
         'path' => '',
         'size' => 60,
