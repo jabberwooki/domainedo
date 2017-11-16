@@ -126,6 +126,10 @@ h2.h2-event {
 .ds-2col-stacked-fluid.view-mode-full > .group-left {
   width: 61%;
 }
+.node-type-tech-document .ds-2col-stacked-fluid.view-mode-full > .group-left {
+  width: 50%;
+}
+
 .node-type-retour-sur .ds-2col-stacked-fluid.view-mode-full > .group-left {
   width: 50%;
 }
@@ -372,6 +376,18 @@ img[alt=anonyme] {
   transition: background 1s ease-out;
 }
 
+/* Zone technique *****************************************************************************************************/
+.node-type-tech-document .field-name-field-references-techniques > .field-items > .field-item {
+  float: left;
+  margin-right: 5%;
+  width: 30%;
+}
+.node-type-tech-document .field-name-field-references-techniques > .field-items > .field-item:nth-child(3n) {
+  margin-right: 0;
+}
+.node-type-tech-document .field-name-field-references-techniques > .field-items > .field-item .field-name-scald-authors{
+  display: none;
+}
 /* Bandeau ************************************************************************************************************/
 .remove-headband{
   display: none;
@@ -387,4 +403,9 @@ img[alt=anonyme] {
 .view-lettres-infos .views-field-title{
   height: 250px;
   overflow: hidden;
+}
+/* commentaires *******************************************************************************************************/
+#block-disqus-disqus-comments{
+  width: 59%;
+  padding-left: 20px;
 }
