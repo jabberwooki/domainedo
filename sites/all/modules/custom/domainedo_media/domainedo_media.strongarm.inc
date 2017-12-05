@@ -199,6 +199,14 @@ function domainedo_media_strongarm() {
       'parseable' => TRUE,
       'formats' => array(),
     ),
+    'large_480x296_crop' => array(
+      'name' => 'large_480x296_crop',
+      'title' => 'large 480x296 crop',
+      'description' => '',
+      'render_language' => 'XHTML',
+      'parseable' => TRUE,
+      'formats' => array(),
+    ),
   );
   $export['scald_custom_contexts'] = $strongarm;
 

@@ -30,7 +30,11 @@ function domainedo_documents_uuid_features_default_terms() {
   );
   $terms[] = array(
     'name' => 'La technique',
-    'description' => '<p>Duis vulputate nunc sed elit aliquam ultricies? Phasellus sit amet pharetra erat. Etiam venenatis metus diam, mattis dignissim magna placerat eu. Sed tincidunt sapien felis, vitae auctor tortor varius nec.</p>
+    'description' => '<p>Duis vulputate nunc sed elit aliquam ultricies? Phasellus sit amet pharetra erat. Etiam venenatis metus diam, mattis dignissim magna placerat eu. Sed tincidunt sapien felis, vitae auctor tortor varius nec.&nbsp;</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique ligula quis eros iaculis, sed mollis tortor scelerisque. Donec tempus at nisl vitae pharetra. Vestibulum et tincidunt dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in nibh ligula. Nam viverra eros vitae odio maximus, quis commodo nulla imperdiet. Etiam quis quam ac diam facilisis ultricies vitae non quam. Suspendisse potenti. Praesent et sem sit amet augue vehicula tristique. Nunc condimentum dignissim leo, a pretium nisi tincidunt non. Quisque id orci lorem.</p>
+
+<p>In scelerisque dictum gravida. Donec sodales nisl at nisi lacinia imperdiet quis ac dui. Donec sed ultricies leo. Pellentesque non justo sollicitudin, ornare eros quis, elementum nunc. Sed orci leo, bibendum at arcu non, elementum finibus justo. Praesent hendrerit dignissim justo, vel gravida ipsum. In dolor neque, aliquet sed leo in, lacinia imperdiet ligula. Curabitur nec ex eros. Quisque sapien nibh, venenatis et pulvinar ac, fermentum quis nisi. Vivamus sit amet sapien velit. Aenean viverra, elit ut varius lacinia, sem nibh semper dolor, ac tincidunt magna nunc at ante. Nulla malesuada egestas tortor non molestie. Cras eget fermentum leo.</p>
 ',
     'format' => 'full_html',
     'weight' => 0,
@@ -39,7 +43,7 @@ function domainedo_documents_uuid_features_default_terms() {
     'field_section_image' => array(
       'und' => array(
         0 => array(
-          'sid' => 17,
+          'sid' => 1328,
           'options' => 'a:0:{}',
         ),
       ),

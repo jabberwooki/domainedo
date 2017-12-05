@@ -73,6 +73,25 @@ function domainedo_media_image_default_styles() {
     ),
   );
 
+  // Exported image style: large_480x296.
+  $styles['large_480x296'] = array(
+    'label' => 'large 480x296',
+    'effects' => array(
+      18 => array(
+        'name' => 'manualcrop_crop_and_scale',
+        'data' => array(
+          'width' => 480,
+          'height' => 296,
+          'upscale' => 0,
+          'respectminimum' => 1,
+          'onlyscaleifcrop' => 0,
+          'style_name' => 'large_480x296',
+        ),
+        'weight' => 0,
+      ),
+    ),
+  );
+
   // Exported image style: list_image_shows__240x180_.
   $styles['list_image_shows__240x180_'] = array(
     'label' => 'List Image shows (240X180) manual crop',
