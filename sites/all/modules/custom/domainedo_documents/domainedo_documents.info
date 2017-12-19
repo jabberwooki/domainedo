@@ -28,6 +28,7 @@ features[custom_breadcrumbs_views][] = espace_pro_documents_techniques
 features[custom_breadcrumbs_views][] = espace_pro_relations_publiques
 features[custom_breadcrumbs_views][] = pro_space_view
 features[ds_field_settings][] = taxonomy_term|espace_pro|section
+features[ds_layout_settings][] = node|tech_document|default
 features[ds_layout_settings][] = taxonomy_term|espace_pro|section
 features[ds_view_modes][] = section
 features[features_api][] = api:2

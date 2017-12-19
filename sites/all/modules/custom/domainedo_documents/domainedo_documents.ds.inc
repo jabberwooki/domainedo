@@ -41,6 +41,54 @@ function domainedo_documents_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|tech_document|default';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'tech_document';
+  $ds_layout->view_mode = 'default';
+  $ds_layout->layout = 'ds_2col_stacked_fluid';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'left' => array(
+        0 => 'body',
+      ),
+      'right' => array(
+        1 => 'field_scald_gallery',
+      ),
+      'footer' => array(
+        2 => 'group_zone_download',
+        3 => 'field_download_col_1',
+        4 => 'field_download_col_2',
+        5 => 'field_download_col_3',
+        6 => 'field_references_techniques',
+      ),
+    ),
+    'fields' => array(
+      'body' => 'left',
+      'field_scald_gallery' => 'right',
+      'group_zone_download' => 'footer',
+      'field_download_col_1' => 'footer',
+      'field_download_col_2' => 'footer',
+      'field_download_col_3' => 'footer',
+      'field_references_techniques' => 'footer',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'header' => 'div',
+      'left' => 'div',
+      'right' => 'div',
+      'footer' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_disable_css' => 0,
+  );
+  $export['node|tech_document|default'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'taxonomy_term|espace_pro|section';
   $ds_layout->entity_type = 'taxonomy_term';
   $ds_layout->bundle = 'espace_pro';
