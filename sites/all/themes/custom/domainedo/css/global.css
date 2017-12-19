@@ -2387,8 +2387,12 @@ body.context-espace-pro .taxonomy-term-description:after{
   clear: both;
   margin-bottom: 20px;
 }
-body.context-espace-pro .field-name-scald-authors{
-  display: none;
+body.context-espace-pro .field-name-scald-authors,
+.node-type-tech-document .field-name-field-references-techniques > .field-items > .field-item .field-name-scald-authors{
+  position: relative;
+  top: -20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding:3px 5px 3px 3px;
 }
 body.context-espace-pro .node-tech-document{
   float: left;
@@ -2490,4 +2494,8 @@ body.context-espace-pro  #region-content h2 a{
   top: 6px;
   color: #FEC92B;
   font-size: 0.8em;
+}
+.node-type-tech-document .action-links-field-collection-add,
+.node-type-tech-document .field-collection-view-links {
+  display: none;
 }

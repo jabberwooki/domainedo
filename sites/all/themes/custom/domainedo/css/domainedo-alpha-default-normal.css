@@ -385,9 +385,7 @@ img[alt=anonyme] {
 .node-type-tech-document .field-name-field-references-techniques > .field-items > .field-item:nth-child(3n) {
   margin-right: 0;
 }
-.node-type-tech-document .field-name-field-references-techniques > .field-items > .field-item .field-name-scald-authors{
-  display: none;
-}
+
 /* Bandeau ************************************************************************************************************/
 .remove-headband{
   display: none;
