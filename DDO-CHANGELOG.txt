@@ -1,3 +1,7 @@
+Domaine d'O 1.0.48 - 2017-12-19
+----------------------------
+Feature domainedo_documents up to disconnect taxonomy term uuid
+
 Domaine d'O 1.0.47 - 2017-12-19
 ----------------------------
 Feature domainedo_documents up
