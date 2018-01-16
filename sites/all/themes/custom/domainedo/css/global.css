@@ -2394,6 +2394,9 @@ body.context-espace-pro .field-name-scald-authors,
   background-color: rgba(255, 255, 255, 0.5);
   padding:3px 5px 3px 3px;
 }
+body.context-espace-pro .term-listing-heading .field-name-scald-authors{
+  background-color: transparent;
+}
 body.context-espace-pro .node-tech-document{
   float: left;
   width: 32%;
@@ -2498,4 +2501,9 @@ body.context-espace-pro  #region-content h2 a{
 .node-type-tech-document .action-links-field-collection-add,
 .node-type-tech-document .field-collection-view-links {
   display: none;
+}
+/* logo bas mmm */
+.logo-mmm-bottom {
+  border: 10px solid #FFF;
+  margin-top: -20px;
 }

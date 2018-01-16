@@ -441,7 +441,7 @@ ul.sf-horizontal li.sf-depth-1 ul li:hover > a > .sf-sub-indicator {
 #block-menu-menu-contact {
   width: 75px;
   float: left;
-  margin: 8px 0 10px 160px
+  margin: 8px 0 10px 155px
 }
 
 #block-menu-menu-contact ul li a {
@@ -1018,7 +1018,7 @@ div.field-name-field-back-to-top-link a {
 /* Footer *********************************************************************/
 #region-footer-first {
   height: 80px;
-  overflow: hidden;
+  margin-top: 30px;
 }
 .page-node-542 #region-footer-first {
   height: auto;
@@ -1276,4 +1276,11 @@ img[alt=anonyme] {
   overflow: hidden;
   padding: 5px;
   min-width: 320px;
+}
+/* logo bas de page mmm */
+.logo-mmm-bottom {
+  position: absolute;
+  top: -75px;
+  right: 0;
+  border-left: 10px solid #FFFFFF;
 }
