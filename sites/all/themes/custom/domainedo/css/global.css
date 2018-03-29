@@ -2504,6 +2504,9 @@ body.context-espace-pro  #region-content h2 a{
 }
 /* logo bas mmm */
 .logo-mmm-bottom {
-  border: 10px solid #FFF;
-  margin-top: -20px;
+  border: 5px solid #FFF;
+  margin-top: -8px;
+  width: 67px;
+  height: 67px;
+  margin-right: -15px;
 }
