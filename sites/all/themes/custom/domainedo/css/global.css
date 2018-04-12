@@ -1396,7 +1396,11 @@ h2.h2-lightbox {
   font-weight: normal;
   font-style: normal;
 }
-
+#ajout-commentaire-entityform-edit-form label,
+#ajout-commentaire-entityform-edit-form input,
+#ajout-commentaire-entityform-edit-form div.description p:first-of-type {
+  display: none;
+}
 .icon:before,
 body.node-type-festival .field-name-field-programme-pdf a:before,
 body.node-type-festival .field-name-link-shows a:before,
