@@ -35,7 +35,7 @@ function domainedo_contexts_default_box() {
   $box->description = 'logos et adresse de bas de page';
   $box->options = array(
     'body' => array(
-      'value' => '<div id="footer-bottom">
+      'value' => '<div id="footer-bottom" style="position:relative;">
 <div id="address-bottom">
 <h2>Adresse</h2>
 
@@ -45,10 +45,9 @@ Tél. : 0800 200 165 - appel gratuit depuis un poste fixe</p>
 </div>
 
 <div id="partner-bottom">
-<p><a href="http://www.herault.fr" style="font-size: 13px; line-height: 1.6;" target="_blank"><img alt="Pour la culture, le département de l\'Hérault est là" id="img-logo-34-bottom" src="/sites/default/files/images/partenaires/logo_cd34.png" style="height: 62px; width: 131px;margin-top:-7px" /></a><span style="font-size:13px">&nbsp;</span></p>
+<p><a href="http://www.montpellier3m.fr" style="font-size: 13px; line-height: 1.6;" target="_blank"><img alt="Montpellier 3M" id="img-logo-mmm-bottom" src="/sites/default/files/images/partenaires/logo-mmm.jpg" class="logo-mmm-bottom" /></a><span style="font-size:13px">&nbsp;</span></p>
 </div>
-</div>
-',
+</div>',
       'format' => 'full_html',
     ),
     'additional_classes' => '',
