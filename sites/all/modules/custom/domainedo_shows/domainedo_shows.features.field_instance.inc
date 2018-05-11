@@ -3437,7 +3437,16 @@ function domainedo_shows_field_default_field_instances() {
     'bundle' => 'show',
     'default_value' => array(
       0 => array(
-        'value' => 'Une restauration légère est proposée tous les soirs de spectacle une heure avant la représentation et une heure après la représentation.',
+        'mee' => array(
+          'resource_manager' => array(
+            0 => array(
+              'weight' => 0,
+            ),
+          ),
+        ),
+        'value' => '/*<p>Une restauration légère est proposée tous les soirs de spectacle une heure avant la représentation et une heure après la représentation.</p>*/
+',
+        'format' => 'full_html',
       ),
     ),
     'deleted' => 0,
@@ -3494,12 +3503,13 @@ function domainedo_shows_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_restauration',
     'label' => 'Restauration',
     'required' => 0,
     'settings' => array(
-      'context' => 'debug',
+      'context' => 'title',
       'context_default' => 'sdl_editor_representation',
       'dnd_enabled' => 1,
       'mee_enabled' => 1,
