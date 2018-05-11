@@ -1,3 +1,7 @@
+Domaine d'O 1.0.56 - 2018-05-11
+----------------------------
+Feature shows up to set unlimited dates and delete default restauration's message.
+
 Domaine d'O 1.0.55 - 2018-05-03
 ----------------------------
 Drupal core up to 7.59 for security reasons
