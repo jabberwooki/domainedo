@@ -397,6 +397,8 @@ function domainedo_shows_field_default_field_bases() {
         'arabesques' => 'Arabesques',
         'festival-hiver' => 'Festival d\'hiver',
         'nuit-gitane' => 'Nuit Gitane',
+        'nuit-gitane' => 'Nuit Gitane',
+        'cine-metropole' => 'Ciné Métropole',
       ),
       'allowed_values_function' => '',
     ),
