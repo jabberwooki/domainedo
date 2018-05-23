@@ -934,7 +934,7 @@ else {
   $handler->display->display_options['filters']['field_show_dates_value']['field'] = 'field_show_dates_value';
   $handler->display->display_options['filters']['field_show_dates_value']['operator'] = '>=';
   $handler->display->display_options['filters']['field_show_dates_value']['default_date'] = 'now';
-  /* Filter criterion: Contenu: Promu en info flash (field_promoted) */
+  /* Filter criterion: Contenu: Promu en page d&#039;accueil (field_promoted) */
   $handler->display->display_options['filters']['field_promoted_value']['id'] = 'field_promoted_value';
   $handler->display->display_options['filters']['field_promoted_value']['table'] = 'field_data_field_promoted';
   $handler->display->display_options['filters']['field_promoted_value']['field'] = 'field_promoted_value';
@@ -1028,6 +1028,195 @@ else {
   $handler->display->display_options['fields']['field_scald_image']['group_column'] = 'entity_id';
   $handler->display->display_options['fields']['field_scald_image']['delta_offset'] = '0';
   $handler->display->display_options['path'] = 'shows-xml';
+
+  /* Display: Metropole Agenda */
+  $handler = $view->new_display('views_data_export', 'Metropole Agenda', 'views_data_export_metropole_agenda');
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '100';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'views_data_export_csv';
+  $handler->display->display_options['style_options']['provide_file'] = 0;
+  $handler->display->display_options['style_options']['parent_sort'] = 0;
+  $handler->display->display_options['style_options']['separator'] = ';';
+  $handler->display->display_options['style_options']['quote'] = 0;
+  $handler->display->display_options['style_options']['trim'] = 1;
+  $handler->display->display_options['style_options']['replace_newlines'] = 1;
+  $handler->display->display_options['style_options']['newline_replacement'] = '';
+  $handler->display->display_options['style_options']['newline_token'] = '1';
+  $handler->display->display_options['style_options']['header'] = 1;
+  $handler->display->display_options['style_options']['keep_html'] = 1;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Contenu: Lieu (field_location) */
+  $handler->display->display_options['relationships']['field_location_tid']['id'] = 'field_location_tid';
+  $handler->display->display_options['relationships']['field_location_tid']['table'] = 'field_data_field_location';
+  $handler->display->display_options['relationships']['field_location_tid']['field'] = 'field_location_tid';
+  $handler->display->display_options['relationships']['field_location_tid']['required'] = TRUE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Contenu: Titre */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = 'Titre (Obligatoire)';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Contenu: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = 'Description (Obligatoire - Descriptif complet de l\'activité qui peut gèrer les balises HTML)';
+  $handler->display->display_options['fields']['body']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['nl2br'] = TRUE;
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '600',
+  );
+  /* Field: Field: Image */
+  $handler->display->display_options['fields']['field_scald_image']['id'] = 'field_scald_image';
+  $handler->display->display_options['fields']['field_scald_image']['table'] = 'field_data_field_scald_image';
+  $handler->display->display_options['fields']['field_scald_image']['field'] = 'field_scald_image';
+  $handler->display->display_options['fields']['field_scald_image']['label'] = 'Url de l’image (Facultatif - illustration de l\'activité hébergée sur internet - résolution 320x128 PNG)';
+  $handler->display->display_options['fields']['field_scald_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_scald_image']['click_sort_column'] = 'sid';
+  $handler->display->display_options['fields']['field_scald_image']['type'] = 'original';
+  $handler->display->display_options['fields']['field_scald_image']['settings'] = array(
+    'link' => '0',
+  );
+  $handler->display->display_options['fields']['field_scald_image']['group_column'] = 'entity_id';
+  /* Field: Terme de taxonomie: Géolocalisation */
+  $handler->display->display_options['fields']['field_geolocalisation']['id'] = 'field_geolocalisation';
+  $handler->display->display_options['fields']['field_geolocalisation']['table'] = 'field_data_field_geolocalisation';
+  $handler->display->display_options['fields']['field_geolocalisation']['field'] = 'field_geolocalisation';
+  $handler->display->display_options['fields']['field_geolocalisation']['relationship'] = 'field_location_tid';
+  $handler->display->display_options['fields']['field_geolocalisation']['label'] = 'Longitude (Facultatif et inutile si la colonne G est complétée)';
+  $handler->display->display_options['fields']['field_geolocalisation']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_geolocalisation']['click_sort_column'] = 'geom';
+  $handler->display->display_options['fields']['field_geolocalisation']['type'] = 'geofield_lon';
+  $handler->display->display_options['fields']['field_geolocalisation']['settings'] = array(
+    'data' => 'full',
+    'format' => 'decimal_degrees',
+  );
+  $handler->display->display_options['fields']['field_geolocalisation']['group_column'] = 'entity_id';
+  /* Field: Terme de taxonomie: Géolocalisation */
+  $handler->display->display_options['fields']['field_geolocalisation_1']['id'] = 'field_geolocalisation_1';
+  $handler->display->display_options['fields']['field_geolocalisation_1']['table'] = 'field_data_field_geolocalisation';
+  $handler->display->display_options['fields']['field_geolocalisation_1']['field'] = 'field_geolocalisation';
+  $handler->display->display_options['fields']['field_geolocalisation_1']['relationship'] = 'field_location_tid';
+  $handler->display->display_options['fields']['field_geolocalisation_1']['label'] = 'Latitude (Facultatif et inutile si la colonne G est complétée)';
+  $handler->display->display_options['fields']['field_geolocalisation_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_geolocalisation_1']['click_sort_column'] = 'geom';
+  $handler->display->display_options['fields']['field_geolocalisation_1']['type'] = 'geofield_lat';
+  $handler->display->display_options['fields']['field_geolocalisation_1']['settings'] = array(
+    'data' => 'full',
+    'format' => 'decimal_degrees',
+  );
+  $handler->display->display_options['fields']['field_geolocalisation_1']['group_column'] = 'entity_id';
+  /* Field: Terme de taxonomie: Adresse pour le public */
+  $handler->display->display_options['fields']['field_adrress_public']['id'] = 'field_adrress_public';
+  $handler->display->display_options['fields']['field_adrress_public']['table'] = 'field_data_field_adrress_public';
+  $handler->display->display_options['fields']['field_adrress_public']['field'] = 'field_adrress_public';
+  $handler->display->display_options['fields']['field_adrress_public']['relationship'] = 'field_location_tid';
+  $handler->display->display_options['fields']['field_adrress_public']['label'] = 'Adresse (Facultatif)';
+  $handler->display->display_options['fields']['field_adrress_public']['element_label_colon'] = FALSE;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = 'Tel fixe (Facultatif)';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
+  $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing_1']['label'] = 'Tel mobile (Facultatif)';
+  $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing_2']['id'] = 'nothing_2';
+  $handler->display->display_options['fields']['nothing_2']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing_2']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing_2']['label'] = 'Email (Facultatif)';
+  $handler->display->display_options['fields']['nothing_2']['element_label_colon'] = FALSE;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing_3']['id'] = 'nothing_3';
+  $handler->display->display_options['fields']['nothing_3']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing_3']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing_3']['label'] = 'Web (Facultatif)';
+  $handler->display->display_options['fields']['nothing_3']['element_label_colon'] = FALSE;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing_4']['id'] = 'nothing_4';
+  $handler->display->display_options['fields']['nothing_4']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing_4']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing_4']['label'] = 'Mots clés (Facultatif - Doivent être séparés par des virgules)';
+  $handler->display->display_options['fields']['nothing_4']['element_label_colon'] = FALSE;
+  /* Field: Contenu: Date(s) */
+  $handler->display->display_options['fields']['field_show_dates']['id'] = 'field_show_dates';
+  $handler->display->display_options['fields']['field_show_dates']['table'] = 'field_data_field_show_dates';
+  $handler->display->display_options['fields']['field_show_dates']['field'] = 'field_show_dates';
+  $handler->display->display_options['fields']['field_show_dates']['label'] = 'Date de début (JJ/MM/AAAA) (Obligatoire)';
+  $handler->display->display_options['fields']['field_show_dates']['alter']['text'] = '<span class="date">[field_show_dates-value]</span>';
+  $handler->display->display_options['fields']['field_show_dates']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['field_show_dates']['alter']['preserve_tags'] = '<date>';
+  $handler->display->display_options['fields']['field_show_dates']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_show_dates']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_show_dates']['settings'] = array(
+    'format_type' => 'court_sans_heure',
+    'fromto' => 'both',
+    'multiple_number' => '1',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
+  );
+  $handler->display->display_options['fields']['field_show_dates']['group_column'] = 'entity_id';
+  $handler->display->display_options['fields']['field_show_dates']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_show_dates']['delta_offset'] = '0';
+  /* Field: Contenu: Date(s) */
+  $handler->display->display_options['fields']['field_show_dates_1']['id'] = 'field_show_dates_1';
+  $handler->display->display_options['fields']['field_show_dates_1']['table'] = 'field_data_field_show_dates';
+  $handler->display->display_options['fields']['field_show_dates_1']['field'] = 'field_show_dates';
+  $handler->display->display_options['fields']['field_show_dates_1']['label'] = 'Heure de départ (HH:MM) (Obligatoire)';
+  $handler->display->display_options['fields']['field_show_dates_1']['alter']['trim_whitespace'] = TRUE;
+  $handler->display->display_options['fields']['field_show_dates_1']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['field_show_dates_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_show_dates_1']['settings'] = array(
+    'format_type' => 'short',
+    'fromto' => 'both',
+    'multiple_number' => '1',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
+  );
+  $handler->display->display_options['fields']['field_show_dates_1']['delta_offset'] = '0';
+  /* Field: Contenu: Durée */
+  $handler->display->display_options['fields']['field_duration']['id'] = 'field_duration';
+  $handler->display->display_options['fields']['field_duration']['table'] = 'field_data_field_duration';
+  $handler->display->display_options['fields']['field_duration']['field'] = 'field_duration';
+  $handler->display->display_options['fields']['field_duration']['label'] = 'Durée (nombre de minutes) (Obligatoire)';
+  $handler->display->display_options['fields']['field_duration']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Contenu: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Contenu: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'show' => 'show',
+  );
+  /* Filter criterion: Contenu: Festival (field_festival) */
+  $handler->display->display_options['filters']['field_festival_target_id']['id'] = 'field_festival_target_id';
+  $handler->display->display_options['filters']['field_festival_target_id']['table'] = 'field_data_field_festival';
+  $handler->display->display_options['filters']['field_festival_target_id']['field'] = 'field_festival_target_id';
+  $handler->display->display_options['filters']['field_festival_target_id']['value'] = array(
+    1183 => '1183',
+  );
+  $handler->display->display_options['path'] = 'shows-metropole-agenda.csv';
   $translatables['shows'] = array(
     t('Master'),
     t('plus'),
@@ -1104,6 +1293,22 @@ else {
     t('contenu'),
     t('image'),
     t('[field_scald_image]--[field_scald_image-sid]'),
+    t('Metropole Agenda'),
+    t('term from field_location'),
+    t('Titre (Obligatoire)'),
+    t('Description (Obligatoire - Descriptif complet de l\'activité qui peut gèrer les balises HTML)'),
+    t('Url de l’image (Facultatif - illustration de l\'activité hébergée sur internet - résolution 320x128 PNG)'),
+    t('Longitude (Facultatif et inutile si la colonne G est complétée)'),
+    t('Latitude (Facultatif et inutile si la colonne G est complétée)'),
+    t('Adresse (Facultatif)'),
+    t('Tel fixe (Facultatif)'),
+    t('Tel mobile (Facultatif)'),
+    t('Email (Facultatif)'),
+    t('Web (Facultatif)'),
+    t('Mots clés (Facultatif - Doivent être séparés par des virgules)'),
+    t('Date de début (JJ/MM/AAAA) (Obligatoire)'),
+    t('Heure de départ (HH:MM) (Obligatoire)'),
+    t('Durée (nombre de minutes) (Obligatoire)'),
   );
   $export['shows'] = $view;
 

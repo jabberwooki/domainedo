@@ -3444,7 +3444,11 @@ function domainedo_shows_field_default_field_instances() {
             ),
           ),
         ),
-        'value' => '/*<p>Une restauration légère est proposée tous les soirs de spectacle une heure avant la représentation et une heure après la représentation.</p>*/
+        'value' => '<!--
+
+<p>Une restauration légère est proposée tous les soirs de spectacle une heure avant la représentation et une heure après la représentation.</p>
+
+-->
 ',
         'format' => 'full_html',
       ),
@@ -5126,6 +5130,52 @@ function domainedo_shows_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'taxonomy_term-show_locations-field_adrress_public'.
+  $field_instances['taxonomy_term-show_locations-field_adrress_public'] = array(
+    'bundle' => 'show_locations',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 7,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_adrress_public',
+    'label' => 'Adresse pour le public',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 10,
+    ),
+  );
+
+  // Exported field_instance:
   // 'taxonomy_term-show_locations-field_geolocalisation'.
   $field_instances['taxonomy_term-show_locations-field_geolocalisation'] = array(
     'bundle' => 'show_locations',
@@ -5189,7 +5239,7 @@ function domainedo_shows_field_default_field_instances() {
         'map_type' => 'ROADMAP',
       ),
       'type' => 'geofield_gmap',
-      'weight' => 43,
+      'weight' => 11,
     ),
   );
 
@@ -5242,7 +5292,7 @@ function domainedo_shows_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 44,
+      'weight' => 12,
     ),
   );
 
@@ -5347,7 +5397,7 @@ function domainedo_shows_field_default_field_instances() {
         'context' => 'sdl_editor_representation',
       ),
       'type' => 'atom_reference_textfield',
-      'weight' => 42,
+      'weight' => 9,
     ),
   );
 
@@ -5501,13 +5551,14 @@ function domainedo_shows_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
   t('A partir de');
+  t('Adresse pour le public');
   t('Affiche du festival');
   t('Artiste associé');
   t('Billetterie indisponible');

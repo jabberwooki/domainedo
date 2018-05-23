@@ -397,6 +397,9 @@ function domainedo_shows_node_presave($node) {
 			}
 		}
 	}
+  if ($node->type == 'show') {
+    $node->body['und'][0]['value'] = str_replace("&nbsp;", " ", $node->body['und'][0]['value']);
+  }
 }
 
 /**
