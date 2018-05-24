@@ -23,7 +23,7 @@
  */
 ?>
 <?php
-$urls = preg_match('/src=([^\s]+)/', $output, $matches, PREG_OFFSET_CAPTURE);
+$urls = preg_match('/src=([^\s\?]+)/', $output, $matches, PREG_OFFSET_CAPTURE);
 print($matches[1][0]);
 //print $output;
 
