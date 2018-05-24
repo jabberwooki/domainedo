@@ -934,7 +934,7 @@ else {
   $handler->display->display_options['filters']['field_show_dates_value']['field'] = 'field_show_dates_value';
   $handler->display->display_options['filters']['field_show_dates_value']['operator'] = '>=';
   $handler->display->display_options['filters']['field_show_dates_value']['default_date'] = 'now';
-  /* Filter criterion: Contenu: Promu en page d&#039;accueil (field_promoted) */
+  /* Filter criterion: Contenu: Promu en info flash (field_promoted) */
   $handler->display->display_options['filters']['field_promoted_value']['id'] = 'field_promoted_value';
   $handler->display->display_options['filters']['field_promoted_value']['table'] = 'field_data_field_promoted';
   $handler->display->display_options['filters']['field_promoted_value']['field'] = 'field_promoted_value';
@@ -1084,6 +1084,14 @@ else {
     'link' => '0',
   );
   $handler->display->display_options['fields']['field_scald_image']['group_column'] = 'entity_id';
+  /* Field: Contenu: Lieu */
+  $handler->display->display_options['fields']['field_location']['id'] = 'field_location';
+  $handler->display->display_options['fields']['field_location']['table'] = 'field_data_field_location';
+  $handler->display->display_options['fields']['field_location']['field'] = 'field_location';
+  $handler->display->display_options['fields']['field_location']['label'] = 'Nom du Lieu (Facultatif mais doit être renseigné si une localisation est fournie - Peut aussi être le titre de l\'activité)';
+  $handler->display->display_options['fields']['field_location']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_location']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_location']['delta_offset'] = '0';
   /* Field: Terme de taxonomie: Géolocalisation */
   $handler->display->display_options['fields']['field_geolocalisation']['id'] = 'field_geolocalisation';
   $handler->display->display_options['fields']['field_geolocalisation']['table'] = 'field_data_field_geolocalisation';
@@ -1298,6 +1306,7 @@ else {
     t('Titre (Obligatoire)'),
     t('Description (Obligatoire - Descriptif complet de l\'activité qui peut gèrer les balises HTML)'),
     t('Url de l’image (Facultatif - illustration de l\'activité hébergée sur internet - résolution 320x128 PNG)'),
+    t('Nom du Lieu (Facultatif mais doit être renseigné si une localisation est fournie - Peut aussi être le titre de l\'activité)'),
     t('Longitude (Facultatif et inutile si la colonne G est complétée)'),
     t('Latitude (Facultatif et inutile si la colonne G est complétée)'),
     t('Adresse (Facultatif)'),
