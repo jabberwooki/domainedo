@@ -10,6 +10,7 @@ php = 5.3.0
 ;;;;;;;;;;;;;;;;;;;;;
 
 regions[navigation]     = 'Navigation'
+regions[megamenu]       = 'Mega menu'
 regions[header]         = 'Top Bar'
 regions[highlighted]    = 'Highlighted'
 regions[help]           = 'Help'
@@ -31,6 +32,7 @@ stylesheets[all][] = css/style.min.css
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Scripts
 ;;;;;;;;;;;;;;;;;;;;;
+scripts[] = 'js/move_menu.js'
 
 scripts[] = 'bootstrap/js/affix.js'
 scripts[] = 'bootstrap/js/alert.js'
@@ -44,6 +46,8 @@ scripts[] = 'bootstrap/js/popover.js'
 scripts[] = 'bootstrap/js/scrollspy.js'
 scripts[] = 'bootstrap/js/tab.js'
 scripts[] = 'bootstrap/js/transition.js'
+
+
 
 ; Disable the CDN provider so compiled source files can be used.
 settings[bootstrap_cdn] = ''
