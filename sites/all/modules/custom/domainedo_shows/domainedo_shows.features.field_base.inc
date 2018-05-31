@@ -29,6 +29,27 @@ function domainedo_shows_field_default_field_bases() {
     'type' => 'text_long',
   );
 
+  // Exported field_base: 'field_adrress_public'.
+  $field_bases['field_adrress_public'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_adrress_public',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
   // Exported field_base: 'field_associate_artist'.
   $field_bases['field_associate_artist'] = array(
     'active' => 1,
@@ -397,6 +418,7 @@ function domainedo_shows_field_default_field_bases() {
         'arabesques' => 'Arabesques',
         'festival-hiver' => 'Festival d\'hiver',
         'nuit-gitane' => 'Nuit Gitane',
+        'cine-metropole' => 'Ciné Métropole',
       ),
       'allowed_values_function' => '',
     ),

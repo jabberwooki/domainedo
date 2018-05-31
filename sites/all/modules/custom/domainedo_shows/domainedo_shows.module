@@ -172,6 +172,7 @@ function domainedo_shows_get_festivals() {
 			'arabesques' => array('title' => 'Arabesques', 'weight' => 16, 'url' => 'spectacles/arabesques'),
 			'festival-hiver' => array('title' => 'Festival d\'hiver', 'weight' => 17, 'url' => 'spectacles/festival-dhiver'),
       'nuit-gitane' => array('title' => 'Nuit Gitane', 'weight' => 18, 'url' => 'spectacles/nuit-gitane'),
+      'cine-metropole' => array('title' => 'Ciné Métropole', 'weight' => 19, 'url' => 'spectacles/cine-metropole'),
 	);
 	
 	return $festivals;
@@ -276,14 +277,14 @@ function domainedo_shows_node_presave($node) {
 				$node->menu['parent'] = 'parent:' . $mlid;;
 				$node->menu['enabled'] = 1;
 				$node->menu['description'] = '';
-				
+
 				// If a previous festival exists,
 				if(!is_bool($previous_festival_values)) {
 					list($previous_festival_nid, $previous_festival_season) = $previous_festival_values;
 					// its menu link is deleted
 					$mlid = db_query("SELECT mlid FROM {menu_links} WHERE link_path = :path", array(  ':path' => 'node/' . $previous_festival_nid,))->fetchField();
 					menu_link_delete($mlid);
-					
+
 					// and its path alias is changed from "spectacles/festival-name" to "spectacles/festival-name/season-value".
 					$festival_data = array_merge($previous_festival_values, array($node->field_festival_name['und'][0]['value']));
 					domainedo_shows_festival_pathalias_update($festival_data);
@@ -293,7 +294,7 @@ function domainedo_shows_node_presave($node) {
 			else {
 				// No menu link to build, but its path alias must be "spectacles/festival-name/season-value".
 				$node->path['alias'] = 'spectacles/' . $node->field_festival_name['und'][0]['value'] . '/' . $node->field_season['und'][0]['value'];
-				// and we must deactivate the pathauto mechanism, 
+				// and we must deactivate the pathauto mechanism,
 				// otherwise it will replace the $node->path['alias'] we've just built
 				// by its own value, that is with no trailing season value.
 				$node->path['pathauto'] = 0;
@@ -307,17 +308,17 @@ function domainedo_shows_node_presave($node) {
 			// We must act only if festival name and/or season value have been altered, so let's test it first.
 			$is_festival_name_modified = FALSE;
 			$is_season_modified = FALSE;
-			
+
 			if ($node->field_season['und'][0]['value'] != $node->original->field_season['und'][0]['value']) {
 				$is_season_modified = TRUE;
 			}
 			if ($node->field_festival_name['und'][0]['value'] != $node->original->field_festival_name['und'][0]['value']) {
 				$is_festival_name_modified = TRUE;
 			}
-			
+
 			// If festival name and/or season value have been altered, we must act !
 			if ($is_festival_name_modified || $is_season_modified) {
-				// If the festival being updated IS THE LATEST ONE, 
+				// If the festival being updated IS THE LATEST ONE,
 				if ($previous_festival_values = is_latest_festival($node, FALSE)) {
 					// its menu link must be built (or rebuilt).
 					// So, the existing menu link, if any, is deleted
@@ -337,23 +338,23 @@ function domainedo_shows_node_presave($node) {
 					$node->menu['parent'] = 'parent:' . $mlid;;
 					$node->menu['enabled'] = 1;
 					$node->menu['description'] = '';
-					
+
 					// and its path alias must be updated to "spectacles/festival-name".
 					$node->path['pathauto'] = 0;
 					$node->path['alias'] = 'spectacles/' . $node->field_festival_name['und'][0]['value'];
-					
+
 					// If season value has changed, that means that the previous festival was the latest one before current update.
-					// Note : if there is only one festival in the current category (festival name), 
-					// the function is_latest_festival() returns the boolean TRUE instead of an array of values. 
+					// Note : if there is only one festival in the current category (festival name),
+					// the function is_latest_festival() returns the boolean TRUE instead of an array of values.
 					// In that case, nothing to do. So we must test it as well.
 					if ($is_season_modified && !is_bool($previous_festival_values)) {
 						list($previous_festival_id, $previous_festival_season) = $previous_festival_values;
 						// The previous festival's menu link must be deleted
 						$mlid = db_query("SELECT mlid FROM {menu_links} WHERE link_path = :path", array(  ':path' => 'node/' . $previous_festival_id,))->fetchField();
-						
+
 						// and its path alias must be "spectacles/festival-name/season-value".
 						$previous_festival_values = array_merge($previous_festival_values, array($node->field_festival_name['und'][0]['value']));
-						domainedo_shows_festival_pathalias_update($previous_festival_values);				
+						domainedo_shows_festival_pathalias_update($previous_festival_values);
 					}
 				}
 				// If it's NOT THE LATEST ONE
@@ -368,8 +369,8 @@ function domainedo_shows_node_presave($node) {
 					}
 					// and the path alias must be "spectacles/festival-name/season-value".
 					$node->path['pathauto'] = 0;
-					$node->path['alias'] = 'spectacles/' . $node->field_festival_name['und'][0]['value'] . '/' . $node->field_season['und'][0]['value'];				
-					
+					$node->path['alias'] = 'spectacles/' . $node->field_festival_name['und'][0]['value'] . '/' . $node->field_season['und'][0]['value'];
+
 					// If season value of the festival being updated has changed
 					if ($is_season_modified) {
 						// and if this festival was the latest one before current update,
@@ -386,7 +387,7 @@ function domainedo_shows_node_presave($node) {
 								'weight' => $festivals[$node->field_festival_name['und'][0]['value']]['weight'],
 							);
 							menu_link_save($item);
-							
+
 							// and we alter its path alias to "spectacles/festival-name".
 							$original_previous_festival_values = array_merge($original_previous_festival_values, array($node->field_festival_name['und'][0]['value']));
 							domainedo_shows_festival_pathalias_update($original_previous_festival_values, TRUE);
@@ -396,6 +397,9 @@ function domainedo_shows_node_presave($node) {
 			}
 		}
 	}
+  if ($node->type == 'show') {
+    $node->body['und'][0]['value'] = str_replace("&nbsp;", " ", $node->body['und'][0]['value']);
+  }
 }
 
 /**
