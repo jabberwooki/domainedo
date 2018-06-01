@@ -1,3 +1,7 @@
+Domaine d'O 1.0.58 - 2018-06-01
+----------------------------
+Feature shows up to add view export of places for new festival ciné metropole
+
 Domaine d'O 1.0.57 - 2018-05-31
 ----------------------------
 Feature shows up to add view export for new festival ciné metropole
