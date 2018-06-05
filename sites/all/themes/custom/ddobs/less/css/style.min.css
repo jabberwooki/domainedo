@@ -23,7 +23,6 @@ hr{box-sizing:content-box;height:0}
 pre,textarea{overflow:auto}
 code,kbd,pre,samp{font-size:1em}
 button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}
-.glyphicon,.popover,.tooltip,address{font-style:normal}
 button{overflow:visible}
 button,select{text-transform:none}
 button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}
@@ -56,7 +55,7 @@ h2,h3{page-break-after:avoid}
 .btn,.btn-danger.active,.btn-danger:active,.btn-default.active,.btn-default:active,.btn-info.active,.btn-info:active,.btn-primary.active,.btn-primary:active,.btn-warning.active,.btn-warning:active,.btn.active,.btn:active,.dropdown-menu>.disabled>a:focus,.dropdown-menu>.disabled>a:hover,.form-control,.navbar-toggle,.open>.dropdown-toggle.btn-danger,.open>.dropdown-toggle.btn-default,.open>.dropdown-toggle.btn-info,.open>.dropdown-toggle.btn-primary,.open>.dropdown-toggle.btn-warning{background-image:none}
 .img-thumbnail,body{background-color:#fff}
 @font-face{font-family:'Glyphicons Halflings';src:url(../bootstrap/fonts/glyphicons-halflings-regular.eot);src:url(../bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'),url(../bootstrap/fonts/glyphicons-halflings-regular.woff2) format('woff2'),url(../bootstrap/fonts/glyphicons-halflings-regular.woff) format('woff'),url(../bootstrap/fonts/glyphicons-halflings-regular.ttf) format('truetype'),url(../bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')}
-.glyphicon{position:relative;top:1px;display:inline-block;font-family:'Glyphicons Halflings';font-weight:400;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.glyphicon{position:relative;top:1px}
 .glyphicon-asterisk:before{content:"\002a"}
 .glyphicon-plus:before{content:"\002b"}
 .glyphicon-eur:before,.glyphicon-euro:before{content:"\20ac"}
@@ -75,7 +74,6 @@ h2,h3{page-break-after:avoid}
 .glyphicon-th-large:before{content:"\e010"}
 .glyphicon-th:before{content:"\e011"}
 .glyphicon-th-list:before{content:"\e012"}
-.glyphicon-ok:before{content:"\e013"}
 .glyphicon-remove:before{content:"\e014"}
 .glyphicon-zoom-in:before{content:"\e015"}
 .glyphicon-zoom-out:before{content:"\e016"}
@@ -405,6 +403,7 @@ code,kbd{padding:2px 4px;font-size:90%}
 caption,th{text-align:left}
 .blockquote-reverse .small:before,.blockquote-reverse footer:before,.blockquote-reverse small:before,blockquote.pull-right .small:before,blockquote.pull-right footer:before,blockquote.pull-right small:before{content:''}
 .blockquote-reverse .small:after,.blockquote-reverse footer:after,.blockquote-reverse small:after,blockquote.pull-right .small:after,blockquote.pull-right footer:after,blockquote.pull-right small:after{content:'\00A0 \2014'}
+address{font-style:normal}
 code,kbd,pre,samp{font-family:Menlo,Monaco,Consolas,"Courier New",monospace}
 code{color:#c7254e;background-color:#f9f2f4;border-radius:4px}
 kbd{color:#fff;background-color:#333;border-radius:3px;box-shadow:inset 0 -1px 0 rgba(0,0,0,.25)}
@@ -1076,8 +1075,8 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 .pager .next>a,.pager .next>span{float:right}
 .pager .previous>a,.pager .previous>span{float:left}
 .pager .disabled>a,.pager .disabled>a:focus,.pager .disabled>a:hover,.pager .disabled>span{color:#777;background-color:#fff;cursor:not-allowed}
-a.badge:focus,a.badge:hover,a.label:focus,a.label:hover{color:#fff;cursor:pointer;text-decoration:none}
 .label{display:inline;padding:.2em .6em .3em;font-size:75%;color:#fff;border-radius:.25em}
+a.label:focus,a.label:hover{color:#fff;text-decoration:none;cursor:pointer}
 .label:empty{display:none}
 .label-default{background-color:#777}
 .label-default[href]:focus,.label-default[href]:hover{background-color:#5e5e5e}
@@ -1095,6 +1094,7 @@ a.badge:focus,a.badge:hover,a.label:focus,a.label:hover{color:#fff;cursor:pointe
 .badge:empty{display:none}
 .media-object,.thumbnail{display:block}
 .btn-group-xs>.btn .badge,.btn-xs .badge{top:0;padding:1px 5px}
+a.badge:focus,a.badge:hover{color:#fff;text-decoration:none;cursor:pointer}
 .list-group-item.active>.badge,.nav-pills>.active>a>.badge{color:#337ab7;background-color:#fff}
 .jumbotron,.jumbotron .h1,.jumbotron h1{color:inherit}
 .list-group-item>.badge{float:right}
@@ -1271,7 +1271,7 @@ a.list-group-item-danger.active,a.list-group-item-danger.active:focus,a.list-gro
 .well-lg{padding:24px;border-radius:6px}
 .well-sm{padding:9px;border-radius:3px}
 .close{float:right;font-size:21px;line-height:1;color:#000;text-shadow:0 1px 0 #fff;opacity:.2;filter:alpha(opacity=20)}
-.popover,.tooltip{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:400;letter-spacing:normal;line-break:auto;line-height:1.42857143;text-shadow:none;text-transform:none;word-break:normal;word-spacing:normal;word-wrap:normal;white-space:normal;text-decoration:none}
+.popover,.tooltip{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-style:normal;font-weight:400;letter-spacing:normal;line-break:auto;line-height:1.42857143;text-shadow:none;text-transform:none;word-break:normal;word-spacing:normal;word-wrap:normal;white-space:normal;text-decoration:none}
 .close:focus,.close:hover{color:#000;text-decoration:none;cursor:pointer;opacity:.5;filter:alpha(opacity=50)}
 button.close{padding:0;cursor:pointer;background:0 0;border:0;-webkit-appearance:none}
 .modal-content,.popover{background-clip:padding-box}
@@ -1367,6 +1367,7 @@ button.close{padding:0;cursor:pointer;background:0 0;border:0;-webkit-appearance
 .carousel-indicators{position:absolute;bottom:10px;left:50%;z-index:15;width:60%;margin-left:-30%;padding-left:0;list-style:none;text-align:center}
 .carousel-indicators li{display:inline-block;width:10px;height:10px;margin:1px;text-indent:-999px;border:1px solid #fff;border-radius:10px;cursor:pointer;background-color:#000\9;background-color:rgba(0,0,0,0)}
 .carousel-indicators .active{margin:0;width:12px;height:12px;background-color:#fff}
+.social-links .icon,.social-links .service-facebook .icon,.social-links .service-googleplus .icon,.social-links .service-linkedin .icon,.social-links .service-twitter .icon,.social-links .service-youtube .icon,.text-hide{background-color:transparent}
 .carousel-caption{position:absolute;left:15%;right:15%;bottom:20px;z-index:10;padding-top:20px;padding-bottom:20px}
 .carousel-caption .btn,.text-hide{text-shadow:none}
 @media screen and (min-width:768px){.carousel-control .glyphicon-chevron-left,.carousel-control .glyphicon-chevron-right,.carousel-control .icon-next,.carousel-control .icon-prev{width:30px;height:30px;margin-top:-10px;font-size:30px}
@@ -1384,7 +1385,7 @@ button.close{padding:0;cursor:pointer;background:0 0;border:0;-webkit-appearance
 .show{display:block!important}
 .hidden,.visible-lg,.visible-lg-block,.visible-lg-inline,.visible-lg-inline-block,.visible-md,.visible-md-block,.visible-md-inline,.visible-md-inline-block,.visible-sm,.visible-sm-block,.visible-sm-inline,.visible-sm-inline-block,.visible-xs,.visible-xs-block,.visible-xs-inline,.visible-xs-inline-block{display:none!important}
 .invisible{visibility:hidden}
-.text-hide{font:0/0 a;color:transparent;background-color:transparent;border:0}
+.text-hide{font:0/0 a;color:transparent;border:0}
 .affix{position:fixed}
 @-ms-viewport{width:device-width}
 @media (max-width:767px){.visible-xs{display:block!important}
@@ -1474,7 +1475,7 @@ body #admin-menu .dropdown li{line-height:normal}
 .modal{z-index:1620}
 .modal-dialog{z-index:1630}
 .ctools-modal-dialog .modal-body{width:100%!important;overflow:auto}
-.book-toc>.dropdown-menu,.region-help .block,div.image-widget-data{overflow:hidden}
+.book-toc>.dropdown-menu,.region-help .block,.social-links ul,div.image-widget-data{overflow:hidden}
 .modal-backdrop{z-index:1610}
 .footer{margin-top:45px;padding-top:35px;padding-bottom:36px;border-top:1px solid #E5E5E5}
 .element-invisible{margin:0;padding:0;width:1px}
@@ -1632,4 +1633,159 @@ a .glyphicon.icon-after,a.icon-after .glyphicon{margin-left:.25em}
 .btn .glyphicon.icon-before,.btn.icon-before .glyphicon{margin-left:-.25em;margin-right:.25em}
 .btn .glyphicon.icon-after,.btn.icon-after .glyphicon{margin-left:.25em;margin-right:-.25em}
 #logo-ddobs{text-align:center}
+@media (max-width:768px){.not-logged-in .navbar.container{margin-top:0}
+}
+#mmenu_left{margin-top:80px;padding-top:0!important}
+#mmenu_left .mm-header{display:none}
+.mmenu-nav.mm-fresh{z-index:9998!important}
 .navbar-toggle{float:left;margin-top:-50px;margin-left:10px}
+@media (min-width:768px){#menu-close,#mmenu-custom-buttom{display:none}
+}
+@media (max-width:768px){#mmenu-custom-buttom{position:absolute;top:25px;left:15px;width:30px;height:40px;border:0;background-color:transparent;padding:0}
+#mmenu-custom-buttom:before{position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;speak:none;display:inline-block;text-decoration:inherit;width:1em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;color:#777;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"\e869";font-size:2em;margin:0;padding:0}
+#mmenu-custom-buttom span{font-size:.5em;text-transform:uppercase;margin-top:-5px;display:block}
+#menu-close{width:20%;height:100%;overflow:hidden;position:absolute;top:0;right:0;z-index:9999;background-color:transparent;text-align:right;padding-top:80px;padding-right:10px}
+#menu-close:before{position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"\e832";color:#fff;font-size:2em}
+}
+#main-megamenu{border:2px solid red}
+@font-face{font-family:fontello;src:url(../fontello/font/fontello.eot?90885294);src:url(../fontello/font/fontello.eot?90885294#iefix) format('embedded-opentype'),url(../fontello/font/fontello.woff?90885294) format('woff'),url(../fontello/font/fontello.ttf?90885294) format('truetype'),url(../fontello/font/fontello.svg?90885294#fontello) format('svg');font-weight:400;font-style:normal}
+[class*=" icon-"]:hover{text-decoration:none}
+.glyphicon,.glyphicon-h3-a-after>h3>span>a:after,.glyphicon-h3-a>h3>span>a:before,[class*=" icon-"]:before,[class^=icon-]:before{font-family:fontello;font-style:normal;font-weight:400;font-size:1em;speak:none;display:inline-block;text-decoration:inherit;width:1em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;margin-right:10px;color:#777}
+.glyphicon-h3-a-after>h3>span>a:after,.glyphicon-h3-a>h3>span>a:before,[class*=" icon-"]:before,[class^=icon-]:before{position:relative;top:1px}
+.glyphicon-h3-a>h3>span>a:hover:before{text-decoration:none}
+.private-file a:before,[class*=" iconafter-"]:after{position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;font-size:1em;speak:none;display:inline-block;text-decoration:inherit;width:1em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+[class*=" iconafter-"]:after{margin-right:10px;color:#777}
+.icon-facebook:before{color:#154EA8}
+.icon-twitter:before{color:#0C93FC}
+.icon-youtube:before{color:#CD0000}
+.icon-gplus:before{color:#FA000D}
+.social-links ul li{margin:0!important}
+.icon-doc:before{content:"\e804"}
+.icon-question:before{content:"\e805"}
+.icon-people:before{content:"\e806"}
+.icon-calendar:before{content:"\e807"}
+.icon-radio:before{content:"\e808"}
+.icon-mail:before{content:"\e809"}
+.icon-person:before{content:"\e80A"}
+.icon-close:before{content:"\e832"}
+.icon-right-open-h3-a>h3>span>a:before,.icon-right-open:before{content:"\e834"}
+.plus-open-h3-a>h3>span>a:after{content:"\e83e";margin-left:10px}
+.icon-linkedin:before{content:"\e85d";color:#1884BB}
+.icon-viadeo:before{content:"\e85e";color:#F4982B}
+.glyphicon-ok:before{content:"\e850";color:#fff}
+.icon-twitter:before{content:'\e800'}
+.icon-facebook:before{content:'\e801'}
+.icon-youtube:before{content:'\e802'}
+.icon-gplus:before{content:'\e803'}
+.icon-doc-text-inv:before{content:'\e804'}
+.icon-help-circled:before{content:'\e805'}
+.icon-users:before{content:'\e806'}
+.icon-mic:before{content:'\e808'}
+.icon-mail-alt:before{content:'\e809'}
+.icon-user:before{content:'\e80a'}
+.icon-link-ext:before{content:'\e80c'}
+.icon-stethoscope:before{content:'\e80d'}
+.icon-vimeo-squared:before{content:'\e80e'}
+.icon-soundcloud:before{content:'\e80f'}
+.icon-linux:before{content:'\e810'}
+.icon-html5:before{content:'\e811'}
+.icon-git-squared:before{content:'\e812'}
+.icon-drupal:before{content:'\e813'}
+.icon-trello:before{content:'\e814'}
+.icon-flag:before{content:'\e815'}
+.icon-flag-empty:before{content:'\e816'}
+.icon-flag-checkered:before{content:'\e817'}
+.icon-info-circled:before{content:'\e818'}
+.icon-home:before{content:'\e819'}
+.icon-lock-open:before{content:'\e81a'}
+.icon-lock-open-alt:before{content:'\e81b'}
+.icon-lock:before{content:'\e81c'}
+.icon-quote-right:before{content:'\e81d'}
+.icon-print:before{content:'\e81e'}
+.icon-comment:before{content:'\e81f'}
+.icon-chat:before{content:'\e820'}
+.icon-comment-empty:before{content:'\e821'}
+.icon-chat-empty:before{content:'\e822'}
+.icon-file-pdf:before{content:'\e823'}
+.icon-file-word:before{content:'\e824'}
+.icon-file-excel:before{content:'\e825'}
+.icon-file-powerpoint:before{content:'\e826'}
+.icon-file-video:before{content:'\e827'}
+.icon-phone:before{content:'\e828'}
+.icon-volume-up:before{content:'\e829'}
+.icon-tags:before{content:'\e82a'}
+.icon-mic-1:before{content:'\e82b'}
+.icon-newspaper:before{content:'\e82c'}
+.icon-right-dir:before{content:'\e82d'}
+.icon-videocam:before{content:'\e82e'}
+.icon-book:before{content:'\e82f'}
+.icon-network:before{content:'\e830'}
+.icon-search:before{content:'\e831'}
+.icon-cancel:before{content:'\e832'}
+.icon-left-open:before{content:'\e833'}
+.icon-down-open:before{content:'\e835'}
+.icon-up-open:before{content:'\e836'}
+.icon-down-big:before{content:'\e837'}
+.icon-left-big:before{content:'\e838'}
+.icon-right-big:before{content:'\e839'}
+.icon-up-big:before{content:'\e83a'}
+.icon-download:before{content:'\e83b'}
+.icon-plus-circle:before{content:'\e83c'}
+.icon-plus-circled:before{content:'\e83d'}
+.icon-plus-circled-1:before{content:'\e83e'}
+.icon-calc:before{content:'\e83f'}
+.icon-arbre:before{content:'\e846'}
+.icon-homme:before{content:'\e847'}
+.icon-engrenages:before{content:'\e848'}
+.icon-fauteuil:before{content:'\e849'}
+.icon-haut-parleur:before{content:'\e84a'}
+.icon-marteau:before{content:'\e84b'}
+.icon-ordi-portable:before{content:'\e84c'}
+.icon-trophee:before{content:'\e84e'}
+.icon-search-1:before{content:'\e84f'}
+.icon-ok:before{content:'\e850'}
+.icon-twitter-squared:before{content:'\e851'}
+.icon-facebook-squared:before{content:'\e852'}
+.icon-gplus-squared:before{content:'\e853'}
+.icon-trois-noeuds:before{content:'\e854'}
+.icon-quote:before{content:'\e855'}
+.icon-quote-second:before{content:'\e856'}
+.icon-quote-first:before{content:'\e857'}
+.icon-fleche-droite-diapo-selecter:before{content:'\e858'}
+.icon-right-dir-1:before{content:'\e859'}
+.icon-left-dir:before{content:'\e85a'}
+.icon-fleche-gauche-diapo-selecter:before{content:'\e85b'}
+.icon-linkedin-squared:before{content:'\e85c'}
+.icon-facebook-circled:before{content:'\e85f'}
+.icon-twitter-circled:before{content:'\e860'}
+.icon-gplus-circled:before{content:'\e861'}
+.icon-edit:before{content:'\e862'}
+.icon-edit-1:before{content:'\e863'}
+.icon-th-large:before{content:'\e864'}
+.icon-th:before{content:'\e865'}
+.icon-th-list:before{content:'\e866'}
+.icon-list:before{content:'\e867'}
+.icon-layout:before{content:'\e868'}
+.icon-menu:before{content:'\e869'}
+.icon-menu-outline:before{content:'\e86a'}
+.icon-menu-1:before{content:'\e86b'}
+.icon-th-1:before{content:'\e86c'}
+.icon-th-outline:before{content:'\e86d'}
+.icon-th-2:before{content:'\e86e'}
+.icon-th-large-outline:before{content:'\e86f'}
+.icon-th-large-1:before{content:'\e870'}
+.icon-th-3:before{content:'\e871'}
+.icon-th-list-1:before{content:'\e872'}
+.icon-list-1:before{content:'\e873'}
+.icon-clipboard:before{content:'\e874'}
+.icon-location:before{content:'\e875'}
+.icon-location-1:before{content:'\e876'}
+.icon-location-outline:before{content:'\e877'}
+.icon-location-2:before{content:'\e878'}
+.icon-location-3:before{content:'\e879'}
+.icon-location-4:before{content:'\f031'}
+.icon-blank:before{content:'\f0c8'}
+.icon-list-bullet:before{content:'\f0ca'}
+.icon-list-numbered:before{content:'\f0cb'}
+.private-file{float:left;margin-right:20px}
+.private-file a:before{color:#777;content:"\e83b";margin-right:5px}
