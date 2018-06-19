@@ -274,6 +274,7 @@ var base_url="";
     var regex_folies = new RegExp('.*folies.*',"i");
     var regex_radio = new RegExp('.*radio.*',"i");
     var regex_nuit = new RegExp('.*nuit.*',"i");
+    var regex_cine3m = new RegExp('.*métropole.*',"i");
 
     $('.field-name-field-festival .field-item', '#block-views-shows-block-1').each(function(index) {
 
@@ -285,7 +286,8 @@ var base_url="";
       else if(regex_folies.test(festival)) festival = "Folies d'O";
       else if(regex_radio.test(festival)) festival = "Radio France";
       else if(regex_nuit.test(festival)) festival = "Nuits d'O";
-      
+      else if(regex_cine3m.test(festival)) festival = "Ciné3m";
+
       //console.log(festival);
       festivalShortcut = festival.replace(/[_\W]+/g, "-").toLowerCase();
    
