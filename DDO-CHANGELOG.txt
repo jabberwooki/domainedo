@@ -1,3 +1,7 @@
+Domaine d'O 1.0.60 - 2018-06-21
+----------------------------
+domainedo_slideshow.js and css up to add cine3m and modify PDC
+
 Domaine d'O 1.0.59 - 2018-06-19
 ----------------------------
 domainedo_slideshow.js up to add cine3m

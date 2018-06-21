@@ -280,7 +280,7 @@ var base_url="";
 
       festival = $(this).text();   
       if(regex_hiver.test(festival)) festival = "Festival d'hiver";
-      else if(regex_printemps.test(festival)) festival = "Printemps des Comédiens";
+      else if(regex_printemps.test(festival)) festival = "PDC";
       else if(regex_arabesques.test(festival)) festival = "Arabesques";
       else if(regex_saper.test(festival)) festival = "Saperlipopette";
       else if(regex_folies.test(festival)) festival = "Folies d'O";
