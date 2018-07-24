@@ -41,7 +41,7 @@
         $$ = $('li > ul', $$);
       }
       // cache all ul elements 
-      $ULs = $$.find('ul:not(.sf-megamenu)');
+      var $ULs = $$.find('ul:not(.sf-megamenu)');
       // loop through each ul in menu
       $ULs.each(function(i) {
         // cache this ul
