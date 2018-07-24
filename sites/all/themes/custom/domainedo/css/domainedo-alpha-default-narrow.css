@@ -735,6 +735,20 @@ body.page-spectacles div.group6 {
 #link-top-ss-radio-france {
   border-bottom: 2px solid #289728;
 }
+.front #block-views-shows-block-1 .views-row.cin-3m {
+  border-top: 2px solid #EBB826;
+  padding-top: 2px;
+}
+#link-top-ss-cin-3m {
+  border-bottom: 2px solid #EBB826;
+}
+.front #block-views-shows-block-1 .views-row.saison-18-19 {
+  border-top: 2px solid #000000;
+  padding-top: 2px;
+}
+#link-top-ss-saison-18-19 {
+  border-bottom: 2px solid #000000;
+}
 
 .front #block-views-shows-block-1 .views-row.nuits-d-o {
   border-top: 2px solid #003344;
