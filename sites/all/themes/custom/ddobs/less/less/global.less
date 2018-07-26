@@ -1,3 +1,7 @@
+
+body {
+  font-family: Gotham, Arial, sans-serif;
+}
 #logo-ddobs{
   text-align: center;
 }
@@ -8,7 +12,87 @@
     }
   }
 }
+/* First row **********************************************************************************************************/
+.tpl-first-row{
+  margin-top: 10px !important;
+}
+/* Icônes sociales ****************************************************************************************************/
+#ul-social {
+  li {
+    float: left;
+    a {
+      &:before {
+        color: @noir-ddo;
+        font-size: 14px;
+        margin-right: 10px;
+      }
+      &.icon-tripadvisor {
+        &:before {
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+}
+#social-bottom {
+  #ul-social {
+    display: table;
+    margin: 0 auto;
+    li {
+      a {
+        &:before {
+          font-size: 34px;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
 
+/* abonnement *********************************************************************************************************/
+#div-subscritpion {
+  #link-subscritpion {
+    font-size: 0.75em;/*12/16*/
+    display: block;
+    float: right;
+    color: @grenadine-ddo;
+    border: 1px solid @grenadine-ddo;
+    padding: 6px;
+    text-transform: uppercase;
+    &:before {
+      .glyphicon();
+      content: "\e840";
+      color: @grenadine-ddo;
+    }
+  }
+  @media (max-width: @screen-md) {
+    display: none;
+  }
+}
+
+/* Menu principal *****************************************************************************************************/
+.navbar-default {
+  background-color: transparent;
+  border: 0;
+  nav {
+    display: table;
+    margin: 0 auto;
+    ul.navbar-nav{
+      margin-left: -30px;
+      text-transform: uppercase;
+      font-size: 0.875em; /*14/16*/
+      font-weight: bold;
+      > li > a{
+        padding-left: 36px;
+        padding-right: 36px;
+        color: @noir-ddo
+      }
+    }
+  }
+}
+.navbar-collapse {
+  padding: 0;
+}
 /* Menus mobiles ******************************************************************************************************/
 #mmenu_left {
   margin-top: 80px;
@@ -82,7 +166,134 @@
   }
 }
 /* Mega Menu **********************************************************************************************************/
+#custom-mega-menu-button {
+
+  &:hover{
+    cursor: pointer;
+  }
+  float: left;
+  &.close-menu-button{
+    &:before {
+      .glyphicon();
+      content: "\e832";
+      color: red;
+      font-size: 2em;
+    }
+  }
+  &.open-menu-button{
+    color: @grenadine-ddo;
+    font-size: 0.53125em; /* 8.5/16 */
+    &:before {
+      .glyphicon();
+      content: "\e869";
+      color: @grenadine-ddo;
+      font-size: 3.529411765em; /* 30/8.5 */
+      display: block;
+      margin: 0 0 -5px -3px;
+    }
+   /* &:after {
+      content: "Menu";
+      color: black;
+      font-size: 0.5em;
+    }*/
+  }
+}
+#megamenu {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
 #main-megamenu {
-  border: 2px solid red;
+  float: left;
+  padding-right: 20px;
+}
+#block-menu-menu-top-courtesy-nav {
+  float: left;
+  padding-right: 20px; right: ;
 }
 
+/* Moteur de recherche ************************************************************************************************/
+// Search form.
+#top-search-icon{
+  position: absolute;
+  right: 0;
+  top: 10px;
+  &:before {
+    .glyphicon();
+    content: "\e84f";
+    color: @noir-ddo;
+    font-size: 1.875em; /*30/16*/
+    width: 30px;
+    height: 30px;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+form#search-block-form {
+  margin: 0;
+}
+.region-search-region {
+  background-color: @gris-clair-ddo;
+  padding-top: 20px;
+  #block-search-form {
+    position: relative;
+    @media (min-width: @screen-md) {
+      width: 25%;
+    }
+    width: 80%;
+    margin: 0 auto;
+    .input-group .form-control {
+      width: 98%;
+      border: 0;
+      border-bottom: 1px solid @grenadine-ddo;
+      background-color: transparent;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      border-radius: 0;
+    }
+    .btn-primary{
+      border: 1px solid @grenadine-ddo;
+      background-color: white;
+      width: 150px;
+      .glyphicon-search:before{
+        content: "RECHERCHER";
+        color: @grenadine-ddo;
+        font-family: Gotham, Arial, sans-serif;
+        margin-left: -35px;
+        font-size: 1em;
+        font-weight: bold;
+      }
+    }
+  }
+  #close-custom-search {
+    &:hover {
+      cursor: pointer;
+    }
+    &:before{
+      .glyphicon();
+      content: "\e832";
+      color: @grenadine-ddo;
+      font-size: 1.875em; /*30/16*/
+      position: absolute;
+      top: 0;
+      right: -50px;
+    }
+  }
+}
+/* Page de rercherche *************************************************************************************************/
+.input-group-btn{
+  .btn-primary{
+    background-color: @grenadine-ddo;
+    .glyphicon-search{
+      &:before{
+        content: "\e84f";
+        color: @blanc-ddo;
+        font-size: 1.4em;
+      }
+    }
+  }
+
+}
