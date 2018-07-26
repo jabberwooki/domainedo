@@ -37,12 +37,12 @@ jQuery(function($){
 
   $("<div></div>",{
     "id": "custom-mega-menu-button",
-    "text": "MENU",
+    "html": "<span>MENU</span>",
     "class": "open-menu-button",
   }).prependTo("#navbar-collapse")
     .click(function(){
-      $("#megamenu").toggle();
       $(this).toggleClass("open-menu-button close-menu-button");
+      $("#megamenu").slideToggle(400);
     });
 
 });
