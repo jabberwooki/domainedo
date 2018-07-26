@@ -126,7 +126,7 @@
     </div> <!-- Fin de la première ligne -->
 
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12" id="row-menu-nav-search">
             <button type="button" id="mmenu-custom-buttom">
                 <span class="mmenu-custom-text">Menu</span>
             </button>
@@ -149,16 +149,7 @@
                   </nav>
               </div>
           <?php endif; ?>
-            <!-- MEGA MENU -------------------------------------------------------->
-            <div id="megamenu">
-                <div id="main-megamenu">
-                  <?php print render($primary_nav); ?>
-                </div>
-              <?php if (!empty($page['megamenu'])): ?>
-                <?php print render($page['megamenu']); ?>
-              <?php endif; ?>
-            </div>
-            <!-- FIN MEGA MENU ---------------------------------------------------->
+
             <div id="top-search-icon"></div>
         </div>
     </div>
@@ -166,16 +157,26 @@
 <!-- Search Region ---------------------------------------------------->
 <?php if (!empty($page['search_region'])): ?>
     <div class="container-fluid" id="search-region">
-        <div class="row">
-            <div class="col-md-12">
-              <?php print render($page['search_region']); ?>
-            </div>
-        </div>
-
+      <?php print render($page['search_region']); ?>
     </div>
 <?php endif; ?>
-
-
+<!-- End of Search Region ------------------------------------------------------->
+<!-- MEGA MENU -------------------------------------------------------->
+<div id="megamenu">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="main-megamenu">
+                  <?php print render($primary_nav); ?>
+                  <?php if (!empty($page['megamenu'])): ?>
+                    <?php print render($page['megamenu']); ?>
+                  <?php endif; ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FIN MEGA MENU ---------------------------------------------------->
 <div class="main-container <?php print $container_class; ?>">
 
     <header role="banner" id="page-header">
