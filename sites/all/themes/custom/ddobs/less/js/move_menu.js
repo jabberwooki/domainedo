@@ -1,4 +1,20 @@
 jQuery(function($){
+  // Ajout d'un comportement au bouton custom close
+  $("#menu-close").click(function( ev ) {
+    ev.preventDefault();
+    if ($("html").hasClass( "mm-opened" )) {
+      $('#mmenu_left').mmenu().trigger( "close.mm" );
+      $("#menu-close").hide();
+    } else {
+      $('#mmenu_left').mmenu().trigger( "open.mm" );
+    }
+  });
+  $("#menu-close").hide();
+
+  $("#mmenu-custom-buttom").click(function() {
+    $("#menu-close").show();
+  });
+
   // move menus
   var windowsize = $(window).width();
   mvMenus();
@@ -9,14 +25,24 @@ jQuery(function($){
   });
   function mvMenus() {
     if (windowsize < 769) {
-      $("#others-menu-megamenu").appendTo(".navbar-collapse nav");
-      $('#main-megamenu').hide();
+      $('#megamenu').hide();
     } else {
-      $('#main-megamenu').show();
-      $("#others-menu-megamenu").appendTo("#megamenu");
+     $('megamenu').show();
     }
   }
-
-  //hide classes of menu
+  // hide megamenu
+  $("#megamenu").hide();
+  // hide classes of menu
   $('#main-megamenu').find('*').removeAttr('class');
+
+  $("<div></div>",{
+    "id": "custom-mega-menu-button",
+    "text": "MENU",
+    "class": "open-menu-button",
+  }).prependTo("#navbar-collapse")
+    .click(function(){
+      $("#megamenu").toggle();
+      $(this).toggleClass("open-menu-button close-menu-button");
+    });
+
 });
