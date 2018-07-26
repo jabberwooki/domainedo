@@ -63,6 +63,10 @@
 .icon-plus-circled:before { content: '\e83d'; } /* '' */
 .icon-plus-circled-1:before { content: '\e83e'; } /* '' */
 .icon-calc:before { content: '\e83f'; } /* '' */
+.icon-bookmark:before { content: '\e840'; } /* '' */
+.icon-thumbs-up:before { content: '\e841'; } /* '' */
+.icon-thumbs-down:before { content: '\e842'; } /* '' */
+.icon-basket:before { content: '\e843'; } /* '' */
 .icon-search-1:before { content: '\e84f'; } /* '' */
 .icon-ok:before { content: '\e850'; } /* '' */
 .icon-twitter-squared:before { content: '\e851'; } /* '' */
@@ -102,6 +106,15 @@
 .icon-location-2:before { content: '\e878'; } /* '' */
 .icon-location-3:before { content: '\e879'; } /* '' */
 .icon-location-4:before { content: '\f031'; } /* '' */
+.icon-bookmark-empty:before { content: '\f097'; } /* '' */
+.icon-tasks:before { content: '\f0ae'; } /* '' */
 .icon-blank:before { content: '\f0c8'; } /* '' */
+.icon-menu-2:before { content: '\f0c9'; } /* '' */
 .icon-list-bullet:before { content: '\f0ca'; } /* '' */
 .icon-list-numbered:before { content: '\f0cb'; } /* '' */
+.icon-thumbs-up-alt:before { content: '\f164'; } /* '' */
+.icon-thumbs-down-alt:before { content: '\f165'; } /* '' */
+.icon-cart-plus:before { content: '\f217'; } /* '' */
+.icon-cart-arrow-down:before { content: '\f218'; } /* '' */
+.icon-tripadvisor:before { content: '\f262'; } /* '' */
+.icon-shopping-basket:before { content: '\f291'; } /* '' */
