@@ -74,65 +74,107 @@
  * @ingroup templates
  */
 ?>
-<header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
-    <div class="<?php print $container_class; ?>">
-      <?php if ($logo): ?>
-          <h1 id="logo-ddobs">
-              <a class="logo navbar-btn"
-                 href="<?php print $front_page; ?>"
-                 title="<?php print t("Domaine d'O - Retour accueil"); ?>">
-                  <img src="<?php print $logo; ?>"
-                       alt="<?php print t("Domaine d'O - Retour accueil"); ?>"/>
-              </a>
-          </h1>
-      <?php endif; ?>
-    </div>
-    <div class="<?php print $container_class; ?>">
-
-        <div class="navbar-header">
-          <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
-              <button type="button" class="navbar-toggle" data-toggle="collapse"
-                      data-target="#navbar-collapse">
-                  <span class="sr-only"><?php print t('Toggle navigation'); ?></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-              </button>
+<a id="menu-close" href="#body-ddonew" style="">
+    <span class="sr-only">Fermer le menu</span>
+</a>
+<header id="navbar" role="banner"
+        class="<?php print $navbar_classes; ?> tpl-first-row">
+    <div class="row">
+        <div class="col-md-2">
+            <ul id="ul-social">
+                <li><a class="icon-facebook"
+                       href="http://www.facebook.com/domaine.do"
+                       onclick="_gaq.push(['_trackEvent', 'socialmedia', 'click', 'facebook',1,true]);"
+                       target="_blank"><span class="sr-only">facebook</span></a>
+                </li>
+                <li><a class="icon-twitter" href="https://twitter.com/domainedo"
+                       onclick="_gaq.push(['_trackEvent', 'socialmedia', 'click', 'twitter',1,true]);"
+                       target="_blank"><span class="sr-only">Twitter</span></a>
+                </li>
+                <li><a class="icon-youtube"
+                       href="https://www.youtube.com/user/domainedO"
+                       onclick="_gaq.push(['_trackEvent', 'socialmedia', 'click', 'youtube',1,true]);"
+                       target="_blank"><span class="sr-only">youtube</span></a>
+                </li>
+                <li><a class="icon-tripadvisor"
+                       href="http://www.tripadvisor.fr/Attraction_Review-g187153-d2480803-Reviews-Domaine_d_O-Montpellier_Herault_Languedoc_Roussillon.html"
+                       onclick="_gaq.push(['_trackEvent', 'socialmedia', 'click', 'tripadvisor',1,true]);"
+                       target="_blank"><span class="sr-only">tripadvisor</span></a>
+                </li>
+                <li><a class="icon-gplus"
+                       href="https://plus.google.com/100786072395186657061/about"
+                       onclick="_gaq.push(['_trackEvent', 'socialmedia', 'click', 'gplus',1,true]);"
+                       target="_blank"><span class="sr-only">google +</span></a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-8">
+          <?php if ($logo): ?>
+              <h1 id="logo-ddobs">
+                  <a class="logo navbar-btn"
+                     href="<?php print $front_page; ?>"
+                     title="<?php print t("Domaine d'O - Retour accueil"); ?>">
+                      <img src="<?php print $logo; ?>"
+                           alt="<?php print t("Domaine d'O - Retour accueil"); ?>"/>
+                  </a>
+              </h1>
           <?php endif; ?>
         </div>
-        <!-- MEGA MENU -------------------------------------------------------->
-        <div id="megamenu">
-            <div id="main-megamenu">
-              <?php print render($primary_nav); ?>
-            </div>
-            <div id="others-menu-megamenu">
+        <div class="col-md-2" id="div-subscritpion">
+            <a id="link-subscritpion" href=".">Abonnement</a>
+        </div>
+    </div> <!-- Fin de la première ligne -->
+
+    <div class="row">
+        <div class="col-md-12">
+            <button type="button" id="mmenu-custom-buttom">
+                <span class="mmenu-custom-text">Menu</span>
+            </button>
+
+            <!-- Menu principal -->
+          <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
+              <div class="navbar-collapse collapse" id="navbar-collapse">
+                  <nav role="navigation">
+                      <div id="initial-main-nav">
+                        <?php if (!empty($page['navigation'])): ?>
+                          <?php print render($page['navigation']); ?>
+                        <?php endif; ?>
+                        <?php if (!empty($primary_nav)): ?>
+                          <?php print render($primary_nav); ?>
+                        <?php endif; ?>
+                        <?php if (!empty($secondary_nav)): ?>
+                          <?php print render($secondary_nav); ?>
+                        <?php endif; ?>
+                      </div>
+                  </nav>
+              </div>
+          <?php endif; ?>
+            <!-- MEGA MENU -------------------------------------------------------->
+            <div id="megamenu">
+                <div id="main-megamenu">
+                  <?php print render($primary_nav); ?>
+                </div>
               <?php if (!empty($page['megamenu'])): ?>
                 <?php print render($page['megamenu']); ?>
               <?php endif; ?>
             </div>
+            <!-- FIN MEGA MENU ---------------------------------------------------->
+            <div id="top-search-icon"></div>
         </div>
-        <!-- FIN MEGA MENU ---------------------------------------------------->
-
-        <!-- Menu principal -->
-      <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
-          <div class="navbar-collapse collapse" id="navbar-collapse">
-              <nav role="navigation">
-                  <div id="initial-main-nav">
-                    <?php if (!empty($page['navigation'])): ?>
-                      <?php print render($page['navigation']); ?>
-                    <?php endif; ?>
-                    <?php if (!empty($primary_nav)): ?>
-                      <?php print render($primary_nav); ?>
-                    <?php endif; ?>
-                    <?php if (!empty($secondary_nav)): ?>
-                      <?php print render($secondary_nav); ?>
-                    <?php endif; ?>
-                  </div>
-              </nav>
-          </div>
-      <?php endif; ?>
     </div>
 </header>
+<!-- Search Region ---------------------------------------------------->
+<?php if (!empty($page['search_region'])): ?>
+    <div class="container-fluid" id="search-region">
+        <div class="row">
+            <div class="col-md-12">
+              <?php print render($page['search_region']); ?>
+            </div>
+        </div>
+
+    </div>
+<?php endif; ?>
+
 
 <div class="main-container <?php print $container_class; ?>">
 
@@ -184,8 +226,10 @@
     </div>
 </div>
 
-<?php if (!empty($page['footer'])): ?>
-    <footer class="footer <?php print $container_class; ?>">
-      <?php print render($page['footer']); ?>
-    </footer>
-<?php endif; ?>
+<footer class="footer <?php print $container_class; ?>">
+    <section id="social-bottom"></section>
+  <?php if (!empty($page['footer'])): ?>
+    <?php print render($page['footer']); ?>
+  <?php endif; ?>
+</footer>
+
