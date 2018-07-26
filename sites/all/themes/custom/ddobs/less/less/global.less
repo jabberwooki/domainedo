@@ -2,20 +2,24 @@
 body {
   font-family: Gotham, Arial, sans-serif;
 }
-#logo-ddobs{
+
+#logo-ddobs {
   text-align: center;
 }
-.not-logged-in{
-  @media (max-width: @screen-sm){
-    .navbar.container{
-      margin-top:0;
+
+.not-logged-in {
+  @media (max-width: @screen-sm) {
+    .navbar.container {
+      margin-top: 0;
     }
   }
 }
+
 /* First row **********************************************************************************************************/
-.tpl-first-row{
+.tpl-first-row {
   margin-top: 10px !important;
 }
+
 /* Icônes sociales ****************************************************************************************************/
 #ul-social {
   li {
@@ -34,6 +38,7 @@ body {
     }
   }
 }
+
 #social-bottom {
   #ul-social {
     display: table;
@@ -52,7 +57,7 @@ body {
 /* abonnement *********************************************************************************************************/
 #div-subscritpion {
   #link-subscritpion {
-    font-size: 0.75em;/*12/16*/
+    font-size: 0.75em; /*12/16*/
     display: block;
     float: right;
     color: @grenadine-ddo;
@@ -71,18 +76,56 @@ body {
 }
 
 /* Menu principal *****************************************************************************************************/
+header#navbar {
+  @media (max-width: @screen-sm) {
+    #row-menu-nav-search {
+      position: static;
+    }
+    position: relative;
+    #mmenu-custom-buttom {
+      position: absolute;
+      top: 0;
+      left: 15px;
+      width: 30px;
+      height: 40px;
+      border: 0;
+      background-color: transparent;
+      padding: 0;
+      &:before {
+        .glyphicon();
+        content: "\e869";
+        font-size: 2em;
+        margin: 0;
+        padding: 0;
+        color: @grenadine-ddo;
+      }
+      span {
+        font-size: 0.5em;
+        text-transform: uppercase;
+        margin-top: -5px;
+        display: block;
+      }
+    }
+  }
+  @media (min-width: @screen-sm) {
+    #mmenu-custom-buttom {
+      display: none;
+    }
+  }
+}
+
 .navbar-default {
   background-color: transparent;
   border: 0;
   nav {
     display: table;
     margin: 0 auto;
-    ul.navbar-nav{
+    ul.navbar-nav {
       margin-left: -30px;
       text-transform: uppercase;
       font-size: 0.875em; /*14/16*/
       font-weight: bold;
-      > li > a{
+      > li > a {
         padding-left: 36px;
         padding-right: 36px;
         color: @noir-ddo
@@ -90,9 +133,11 @@ body {
     }
   }
 }
+
 .navbar-collapse {
   padding: 0;
 }
+
 /* Menus mobiles ******************************************************************************************************/
 #mmenu_left {
   margin-top: 80px;
@@ -101,51 +146,25 @@ body {
     display: none;
   }
 }
-.mmenu-nav.mm-fresh{
+
+.mmenu-nav.mm-fresh {
   z-index: 9998 !important;
-  > ul a{
+  > ul a {
     //width: 80%;
   }
 }
-.navbar-toggle{
+
+.navbar-toggle {
   float: left;
   margin-top: -50px;
   margin-left: 10px;
 }
-#mmenu-custom-buttom {
-  @media (min-width: @screen-sm){
-    display: none;
-  }
-  @media (max-width: @screen-sm){
-    position: absolute;
-    top: 25px;
-    left: 15px;
-    width: 30px;
-    height: 40px;
-    border: 0;
-    background-color: transparent;
-    padding:  0;
-    &:before {
-      .glyphicon();
-      content: "\e869";
-      font-size: 2em;
-      margin:0;
-      padding:0;
-    }
-    span {
-      font-size: 0.5em;
-      text-transform: uppercase;
-      margin-top: -5px;
-      display: block;
-    }
-  }
-}
 
-#menu-close{
-  @media (min-width: @screen-sm){
+#menu-close {
+  @media (min-width: @screen-sm) {
     display: none;
   }
-  @media (max-width: @screen-sm){
+  @media (max-width: @screen-sm) {
     width: 20%;
     height: 100%;
     overflow: hidden;
@@ -165,22 +184,26 @@ body {
     }
   }
 }
+
 /* Mega Menu **********************************************************************************************************/
 #custom-mega-menu-button {
 
-  &:hover{
+  &:hover {
     cursor: pointer;
   }
   float: left;
-  &.close-menu-button{
+  &.close-menu-button {
     &:before {
       .glyphicon();
       content: "\e832";
       color: red;
       font-size: 2em;
     }
+    span {
+      display: none;
+    }
   }
-  &.open-menu-button{
+  &.open-menu-button {
     color: @grenadine-ddo;
     font-size: 0.53125em; /* 8.5/16 */
     &:before {
@@ -191,32 +214,90 @@ body {
       display: block;
       margin: 0 0 -5px -3px;
     }
-   /* &:after {
-      content: "Menu";
-      color: black;
-      font-size: 0.5em;
-    }*/
+    /* &:after {
+       content: "Menu";
+       color: black;
+       font-size: 0.5em;
+     }*/
   }
 }
+
 #megamenu {
+  background-color: @gris-clair-ddo;
   &:after {
     content: "";
     display: block;
     clear: both;
   }
 }
+
 #main-megamenu {
-  float: left;
-  padding-right: 20px;
+  padding-top: 10px;
+  > ul {
+    .manage-ul-megamenu();
+    > div {
+      .manage-ul-megamenu();
+      float: left;
+      padding-right: 20px;
+    }
+  }
+  #block-menu-menu-top-courtesy-nav {
+    .manage-ul-megamenu();
+  }
+  &:after {
+    content: "";
+    display: block;
+    margin-bottom: 30px;
+    clear: both;
+  }
 }
-#block-menu-menu-top-courtesy-nav {
-  float: left;
-  padding-right: 20px; right: ;
+.manage-ul-megamenu {
+  > ul {
+    float: left;
+    padding-right: 20px;
+    > li {
+      > a{
+        margin-top: 20px;
+        display: block;
+        color: @grenadine-ddo;
+        text-transform: uppercase;
+        /*font-family: Gotham Bold;*/
+        font-size: 1em;
+      }
+      > ul li {
+        > a {
+          color: @noir-ddo;
+          margin: 15px 0;
+          display: block;
+          font-weight: bold;
+          font-size: 0.875em;/* 14 / 16 */
+          /*font-family: Gotham Medium;*/
+        }
+        ul li a {
+          font-weight: 400;
+          color: @noir-ddo;
+          margin: 15px 0;
+          display: block;
+          padding-left: 20px;
+          /*font-family: Gotham Book;*/
+          font-size: 0.875em;/* 14 / 16 */
+        }
+      }
+    }
+  }
 }
+/*#block-menu-menu-top-courtesy-nav {
+
+}*/
 
 /* Moteur de recherche ************************************************************************************************/
 // Search form.
-#top-search-icon{
+#search-region {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#top-search-icon {
   position: absolute;
   right: 0;
   top: 10px;
@@ -227,38 +308,65 @@ body {
     font-size: 1.875em; /*30/16*/
     width: 30px;
     height: 30px;
+    @media (max-width: @screen-sm) {
+      font-size: 1.2em;
+    }
   }
   &:hover {
     cursor: pointer;
   }
 }
+
 form#search-block-form {
   margin: 0;
 }
+
 .region-search-region {
   background-color: @gris-clair-ddo;
   padding-top: 20px;
   #block-search-form {
     position: relative;
-    @media (min-width: @screen-md) {
+    @media (min-width: @screen-sm) {
       width: 25%;
+    }
+    @media (max-width: @screen-sm) {
+      #close-custom-search {
+        position: absolute;
+        top: -10px;
+        right: 10px;
+      }
     }
     width: 80%;
     margin: 0 auto;
-    .input-group .form-control {
-      width: 98%;
-      border: 0;
-      border-bottom: 1px solid @grenadine-ddo;
-      background-color: transparent;
-      -webkit-box-shadow: none;
-      box-shadow: none;
-      border-radius: 0;
+    .input-group {
+      .form-control {
+        width: 98%;
+        border: 0;
+        border-bottom: 1px solid @grenadine-ddo;
+        background-color: transparent;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border-radius: 0;
+      }
+      @media (max-width: @screen-sm) {
+        width: 100%;
+        display: block;
+        .form-control {
+          display: block;
+          margin-bottom: 15px;
+        }
+
+        .btn-primary {
+          display: block;
+          float: right;
+        }
+      }
     }
-    .btn-primary{
+    .btn-primary {
       border: 1px solid @grenadine-ddo;
       background-color: white;
       width: 150px;
-      .glyphicon-search:before{
+      .glyphicon-search:before {
         content: "RECHERCHER";
         color: @grenadine-ddo;
         font-family: Gotham, Arial, sans-serif;
@@ -272,7 +380,7 @@ form#search-block-form {
     &:hover {
       cursor: pointer;
     }
-    &:before{
+    &:before {
       .glyphicon();
       content: "\e832";
       color: @grenadine-ddo;
@@ -283,12 +391,13 @@ form#search-block-form {
     }
   }
 }
+
 /* Page de rercherche *************************************************************************************************/
-.input-group-btn{
-  .btn-primary{
+.input-group-btn {
+  .btn-primary {
     background-color: @grenadine-ddo;
-    .glyphicon-search{
-      &:before{
+    .glyphicon-search {
+      &:before {
         content: "\e84f";
         color: @blanc-ddo;
         font-size: 1.4em;
