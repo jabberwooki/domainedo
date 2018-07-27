@@ -94,13 +94,13 @@ function domainedo_media_image_default_styles() {
 
   // Exported image style: list_image_shows__240x180_.
   $styles['list_image_shows__240x180_'] = array(
-    'label' => 'List Image shows (240X180) manual crop',
+    'label' => 'List Image shows (500x694)  manual crop',
     'effects' => array(
-      22 => array(
+      19 => array(
         'name' => 'manualcrop_crop_and_scale',
         'data' => array(
-          'width' => 240,
-          'height' => 180,
+          'width' => 500,
+          'height' => 694,
           'upscale' => 0,
           'respectminimum' => 1,
           'onlyscaleifcrop' => 0,
@@ -108,11 +108,11 @@ function domainedo_media_image_default_styles() {
         ),
         'weight' => 0,
       ),
-      21 => array(
+      20 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 240,
-          'height' => 180,
+          'width' => 500,
+          'height' => 694,
         ),
         'weight' => 1,
       ),
