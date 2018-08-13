@@ -1,12 +1,9 @@
 jQuery(function($) {
-    console.log("Hash");
   if (window.location.hash == "#block-disqus-disqus-comments") {
-    console.log("Attention");
     for(i=0;i<3;i++) {
       $("#block-disqus-disqus-comments").fadeTo(1000, 0.2).fadeTo('slow', 1.0);
     }
     setTimeout(function(){
-      console.log("qsdf");
       $("html, body").animate({ scrollTop: $(document).height() }, 1000);
     },2000);
 
@@ -70,7 +67,6 @@ jQuery(function($) {
     function managePracticalButton() {
        
       if(!$('#practical_sm_button').length) {
-        console.log("ajout du bouton Pratique");
         $('<div id="practical_sm_button"><a href="#practical_div">Pratique</a></div>').insertAfter(".field-name-field-price");
       }
       if($('#practical_div').length) $('.group-right',".node-show").attr('id', 'practical_div');
