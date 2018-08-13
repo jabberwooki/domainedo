@@ -544,8 +544,11 @@ function domainedo_shows_views_pre_render(&$view) {
 			if (isset($array[1])) $value->field_field_scald_image[0]['rendered']['#markup'] = $array[1];
 		}
 	}
-	/*dpm($view->name);
-	dpm($view->current_display);*/
+	if ($view->name == 'shows' && ($view->current_display == 'block_1' || $view->current_display == 'list')) {
+    drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_date_show_list.js');
+	}
+
+  /*dpm($view->current_display);*/
 }
 
 /**
