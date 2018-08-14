@@ -7,12 +7,7 @@
     left: 10px;
     display: table;
     a {
-      display: block;
-      color: @blanc-ddo;
-      background-color: @noir-ddo;
-      text-decoration: none;
-      padding: 5px 10px;
-      font-size: 0.6875em;/*11/16*/
+      .cartouche-noir();
     }
   }
   .group-tranparent-gradient {
@@ -30,25 +25,7 @@
       position: absolute;
       left: 0;
       bottom: 0;
-      .field-name-field-show-dates {
-        display: table;
-        font-weight: bold;
-        margin-bottom: 20px;
-        /*overflow: hidden;*/
-        > div {
-          padding-left: 10px;
-          &:after {
-            display: block;
-            border: 4px solid @grenadine-ddo;
-            margin-top: -5px;
-            content:"";
-          }
-          &.js-div-date{
-            position: relative;
-            top: 20px;
-          }
-        }
-      }
+      .date-orange();
       .field-name-title  {
         display: table;
         > div {
@@ -105,17 +82,182 @@
       display: table;
       border: 1px solid @grenadine-ddo;
       a {
-        padding-left: 20px;
-        display: block;
-        background-color: @grenadine-ddo;
-        padding: 10px;
-        color: @blanc-ddo;
-        text-align: center;
-        text-transform: uppercase;
+        .button-book()
       }
     }
   }
   .field-name-scald-authors{
     display: none;
+  }
+}
+.node-type-show{
+  .breadcrumb{
+    margin-bottom: 0;
+    li.active{
+      display: none;
+    }
+  }
+  #imgfullshow{
+    .field-name-scald-authors {
+      display: none;
+    }
+    #block-ds-extras-image-full-show{
+      position: relative;
+      .field-name-field-scald-image {
+        .field-item {
+          display: table;
+          margin: 0 auto;
+          border-bottom: 56px solid @gris-clair-ddo;
+          &:after {
+            content: "";
+            display: block;
+            height: 200px;
+            z-index: 1;
+            position: absolute;
+            bottom: 50px;
+            background: linear-gradient(to bottom,rgba(0,0,0,0),#000);
+            visibility: visible;
+            @media (min-width: @screen-lg) {
+              width: 1366px;
+            }
+            width: 100%;
+
+          }
+        }
+      }
+      .group-text-over-img {
+        position: relative;
+        .group-text-over-img-abs{
+          position: absolute;
+          z-index: 2;
+          bottom: 50px;
+          .field-name-field-festival{
+            a {
+              .cartouche-noir();
+              width: auto;
+              display: table;
+              text-transform: uppercase;
+              font-size: 1.125em; /* 18/16 */
+              @media (max-width: @screen-sm) {
+                font-size: 1em;
+              }
+              font-weight: bold;
+            }
+            margin-bottom: 20px;
+          }
+
+          .date-orange();
+          .field-name-field-show-dates {
+            color: #FFF;
+            margin-left: -5px;
+
+            > div {
+              &:after {
+                display: block;
+                border: 4px solid @grenadine-off-ddo;
+              }
+              &.js-div-date{
+                position: static;
+              }
+            }
+
+          }
+
+          .field-name-title {
+            text-transform: uppercase;
+            font-size: 2.25em; /* 36/16 */
+            @media (max-width: @screen-sm) {
+              font-size: 1.6em;
+            }
+            color: white;
+            margin-bottom: 20px;
+            font-weight: bold;
+          }
+          .field-name-field-subtitle {
+            font-size: 1.5em; /* 24/16 */
+            @media (max-width: @screen-sm) {
+              font-size: 1em;
+            }
+            color: white;
+            margin-bottom: 30px;
+          }
+        }
+      }
+
+    }
+  }
+  section > ul.action-links{
+    position: absolute;
+    top: 200px;
+    left: -200px;
+  }
+  .tabs--primary{
+    position: absolute;
+    top: 0px;
+    left: -200px;
+    border-left: 1px solid red;
+    li {
+      float: none;
+    }
+  }
+  .node-show.view-mode-full{
+    position: relative;
+    top: -38px;
+    .col-sm-8 {
+      > div {
+        width: 90%;
+      }
+    }
+    .field-name-field-casting-link,
+    .field-name-field-boxoffice-url {
+      margin-bottom: 50px;
+    }
+    .field-name-field-boxoffice-url {
+      a {
+        .button-book();
+        padding: 8px 20px;
+        font-weight: bold;
+        display: table;
+        margin-top: -4px;
+      }
+    }
+    .field-name-field-reservation {
+      display: none;
+    }
+    .field-name-field-casting-link {
+      a {
+        text-transform: uppercase;
+        color: #000;
+        text-decoration: none;
+      }
+    }
+    .field-name-field-from {
+      border-top: 1px solid black;
+      padding-top: 20px;
+    }
+    .field-name-field-by {
+      border-bottom: 1px solid black;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+    .field-name-body {
+      margin-bottom: 20px;
+    }
+    .distribution{
+      margin-top: 20px;
+      .label-above {
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+    }
+    .field-name-field-production,
+    .field-name-field-coproduction,
+    .field-name-field-partenariats {
+      margin-top: 20px;
+      .field-label {
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+    }
   }
 }

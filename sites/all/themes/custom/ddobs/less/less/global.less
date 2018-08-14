@@ -407,5 +407,43 @@ form#search-block-form {
       }
     }
   }
-
+}
+/* Divers *************************************************************************************************************/
+.cartouche-noir {
+  display: block;
+  color: @blanc-ddo;
+  background-color: @noir-ddo;
+  text-decoration: none;
+  padding: 5px 10px;
+  font-size: 0.6875em;/*11/16*/
+}
+.button-book {
+  padding-left: 20px;
+  display: block;
+  background-color: @grenadine-ddo;
+  padding: 10px;
+  color: @blanc-ddo;
+  text-align: center;
+  text-transform: uppercase;
+}
+.date-orange {
+  .field-name-field-show-dates {
+    display: table;
+    font-weight: bold;
+    margin-bottom: 20px;
+    /*overflow: hidden;*/
+    > div {
+      padding-left: 10px;
+      &:after {
+        display: block;
+        border: 4px solid @grenadine-ddo;
+        margin-top: -5px;
+        content:"";
+      }
+      &.js-div-date{
+        position: relative;
+        top: 20px;
+      }
+    }
+  }
 }
