@@ -32,8 +32,8 @@
       bottom: 0;
       .field-name-field-show-dates {
         display: table;
-        height: 24px;
         font-weight: bold;
+        margin-bottom: 20px;
         /*overflow: hidden;*/
         > div {
           padding-left: 10px;
@@ -44,7 +44,8 @@
             content:"";
           }
           &.js-div-date{
-            padding: 0;
+            position: relative;
+            top: 20px;
           }
         }
       }
@@ -114,5 +115,7 @@
       }
     }
   }
-
+  .field-name-scald-authors{
+    display: none;
+  }
 }
