@@ -499,6 +499,10 @@ function domainedo_shows_strongarm() {
             'weight' => '10',
             'visible' => FALSE,
           ),
+          'teaser' => array(
+            'weight' => '13',
+            'visible' => FALSE,
+          ),
         ),
       ),
     ),

@@ -886,18 +886,24 @@ else {
   $handler->display->display_options['pager']['options']['tags']['next'] = 'suivant ›';
   $handler->display->display_options['pager']['options']['tags']['last'] = 'dernier »';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_plugin'] = 'views_bootstrap_grid_plugin_style';
+  $handler->display->display_options['style_options']['columns_horizontal'] = '-1';
+  $handler->display->display_options['style_options']['columns_vertical'] = '3';
+  $handler->display->display_options['style_options']['columns_xs'] = '12';
+  $handler->display->display_options['style_options']['columns_sm'] = '12';
+  $handler->display->display_options['style_options']['columns_md'] = '4';
+  $handler->display->display_options['style_options']['columns_lg'] = '4';
+  $handler->display->display_options['style_options']['column_class'] = 'ddo-show-list';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'ds';
-  $handler->display->display_options['row_options']['view_mode'] = 'frontpage_block';
   $handler->display->display_options['row_options']['load_comments'] = 0;
   $handler->display->display_options['row_options']['alternating'] = 0;
   $handler->display->display_options['row_options']['grouping'] = 0;
   $handler->display->display_options['row_options']['advanced'] = 0;
   $handler->display->display_options['row_options']['delta_fieldset']['delta_fields'] = array();
   $handler->display->display_options['row_options']['grouping_fieldset']['group_field'] = 'field_data_field_show_dates|field_show_dates_value';
-  $handler->display->display_options['row_options']['default_fieldset']['view_mode'] = 'frontpage_block';
+  $handler->display->display_options['row_options']['default_fieldset']['view_mode'] = 'teaser';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
   /* Footer: Global: Text area */
@@ -1120,13 +1126,6 @@ else {
     'format' => 'decimal_degrees',
   );
   $handler->display->display_options['fields']['field_geolocalisation_1']['group_column'] = 'entity_id';
-  /* Field: Terme de taxonomie: Adresse pour le public */
-  $handler->display->display_options['fields']['field_adrress_public']['id'] = 'field_adrress_public';
-  $handler->display->display_options['fields']['field_adrress_public']['table'] = 'field_data_field_adrress_public';
-  $handler->display->display_options['fields']['field_adrress_public']['field'] = 'field_adrress_public';
-  $handler->display->display_options['fields']['field_adrress_public']['relationship'] = 'field_location_tid';
-  $handler->display->display_options['fields']['field_adrress_public']['label'] = 'Adresse (Facultatif)';
-  $handler->display->display_options['fields']['field_adrress_public']['element_label_colon'] = FALSE;
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
@@ -1222,7 +1221,7 @@ else {
   $handler->display->display_options['filters']['field_festival_target_id']['table'] = 'field_data_field_festival';
   $handler->display->display_options['filters']['field_festival_target_id']['field'] = 'field_festival_target_id';
   $handler->display->display_options['filters']['field_festival_target_id']['value'] = array(
-    1183 => '1183',
+    705 => '705',
   );
   $handler->display->display_options['path'] = 'shows-metropole-agenda.csv';
   $translatables['shows'] = array(
@@ -1309,7 +1308,6 @@ else {
     t('Nom du Lieu (Facultatif mais doit être renseigné si une localisation est fournie - Peut aussi être le titre de l\'activité)'),
     t('Longitude (Facultatif et inutile si la colonne G est complétée)'),
     t('Latitude (Facultatif et inutile si la colonne G est complétée)'),
-    t('Adresse (Facultatif)'),
     t('Tel fixe (Facultatif)'),
     t('Tel mobile (Facultatif)'),
     t('Email (Facultatif)'),

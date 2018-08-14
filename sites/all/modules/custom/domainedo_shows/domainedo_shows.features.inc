@@ -8,6 +8,9 @@
  * Implements hook_ctools_plugin_api().
  */
 function domainedo_shows_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "bean_admin_ui" && $api == "bean") {
+    return array("version" => "5");
+  }
   if ($module == "boxes" && $api == "box") {
     return array("version" => "1");
   }
@@ -21,6 +24,9 @@ function domainedo_shows_ctools_plugin_api($module = NULL, $api = NULL) {
     return array("version" => "1");
   }
   if ($module == "field_group" && $api == "field_group") {
+    return array("version" => "1");
+  }
+  if ($module == "scald" && $api == "context_config") {
     return array("version" => "1");
   }
   if ($module == "strongarm" && $api == "strongarm") {
@@ -180,6 +186,42 @@ function domainedo_shows_features_date_type_default() {
     'locked' => 0,
   );
   return $fdt_config;
+}
+
+/**
+ * Implements hook_image_default_styles().
+ */
+function domainedo_shows_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: large-675.
+  $styles['large-675'] = array(
+    'label' => 'large-1366',
+    'effects' => array(
+      21 => array(
+        'name' => 'manualcrop_crop_and_scale',
+        'data' => array(
+          'width' => 1366,
+          'height' => 489,
+          'upscale' => 0,
+          'respectminimum' => 1,
+          'onlyscaleifcrop' => 0,
+          'style_name' => 'large-675',
+        ),
+        'weight' => 0,
+      ),
+      22 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 1366,
+          'height' => 489,
+        ),
+        'weight' => 2,
+      ),
+    ),
+  );
+
+  return $styles;
 }
 
 /**
