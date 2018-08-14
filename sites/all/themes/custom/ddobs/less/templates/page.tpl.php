@@ -177,6 +177,19 @@
     </div>
 </div>
 <!-- FIN MEGA MENU ---------------------------------------------------->
+<!-- IMAGE FULL SHOW -------------------------------------------------------->
+<div id="imgfullshow">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+              <?php if (!empty($page['imagefullshow'])): ?>
+                <?php print render($page['imagefullshow']); ?>
+              <?php endif; ?>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FIN IMAGE FULL SHOW   ---------------------------------------------------->
 <div class="main-container <?php print $container_class; ?>">
 
     <header role="banner" id="page-header">
