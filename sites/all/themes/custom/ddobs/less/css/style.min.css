@@ -1653,15 +1653,15 @@ header#navbar #mmenu-custom-buttom span{font-size:.5em;text-transform:uppercase;
 @media (max-width:768px){#menu-close{width:20%;height:100%;overflow:hidden;position:absolute;top:0;right:0;z-index:9999;background-color:transparent;text-align:right;padding-top:80px;padding-right:10px}
 #menu-close:before{position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"\e832";color:#fff;font-size:2em}
 }
-#megamenu,.region-search-region{background-color:#efefef}
 #custom-mega-menu-button{float:left}
 #custom-mega-menu-button.close-menu-button{width:27px}
-#custom-mega-menu-button.close-menu-button:before,#custom-mega-menu-button.open-menu-button:before{position:relative;font-style:normal;font-weight:400;speak:none;text-decoration:inherit;width:1em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;top:1px;font-family:fontello}
+#custom-mega-menu-button.close-menu-button:before,#custom-mega-menu-button.open-menu-button:before{position:relative;font-style:normal;font-weight:400;speak:none;text-decoration:inherit;width:1em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:fontello;top:1px}
 #custom-mega-menu-button.close-menu-button:before{display:inline-block;margin-right:10px;content:"\e832";color:red;font-size:2em}
 #custom-mega-menu-button.close-menu-button span{display:none}
 #custom-mega-menu-button.open-menu-button{color:#f74e2d;font-size:.53125em}
 #custom-mega-menu-button.open-menu-button:before{content:"\e869";color:#f74e2d;font-size:3.529411765em;display:block;margin:0 0 -5px -3px}
 #main-megamenu:after,#megamenu:after{content:"";clear:both;display:block}
+#megamenu{background-color:#efefef}
 #main-megamenu #block-menu-menu-top-courtesy-nav>ul,#main-megamenu>ul>div>ul,#main-megamenu>ul>ul,.manage-ul-megamenu>ul{float:left;margin-left:7%;width:26%}
 #main-megamenu #block-menu-menu-top-courtesy-nav>ul>li>a,#main-megamenu>ul>div>ul>li>a,#main-megamenu>ul>ul>li>a{margin-top:20px;display:block;color:#f74e2d;text-transform:uppercase;font-size:1em}
 #main-megamenu #block-menu-menu-top-courtesy-nav>ul>li>ul li>a,#main-megamenu>ul>div>ul>li>ul li>a,#main-megamenu>ul>ul>li>ul li>a{color:#000;margin:15px 0;display:block;font-weight:700;font-size:.875em}
@@ -1676,7 +1676,7 @@ header#navbar #mmenu-custom-buttom span{font-size:.5em;text-transform:uppercase;
 #top-search-icon{position:absolute;right:0;top:10px}
 #top-search-icon:before{position:relative;top:1px;font-family:fontello;font-weight:400;display:inline-block;margin-right:10px;content:"\e84f";color:#000;font-size:1.875em;width:30px;height:30px}
 form#search-block-form{margin:0}
-.region-search-region{padding-top:20px}
+.region-search-region{background-color:#efefef;padding-top:20px}
 .region-search-region #block-search-form{position:relative;width:80%;margin:0 auto}
 @media (min-width:768px){.region-search-region #block-search-form{width:25%}
 }
@@ -1702,7 +1702,7 @@ form#search-block-form{margin:0}
 @font-face{font-family:fontello;src:url(../fontello/font/fontello.eot?90885294);src:url(../fontello/font/fontello.eot?90885294#iefix) format('embedded-opentype'),url(../fontello/font/fontello.woff?90885294) format('woff'),url(../fontello/font/fontello.ttf?90885294) format('truetype'),url(../fontello/font/fontello.svg?90885294#fontello) format('svg');font-weight:400;font-style:normal}
 .glyphicon,.glyphicon-h3-a-after>h3>span>a:after,.glyphicon-h3-a>h3>span>a:before,[class*=" icon-"]:before,[class^=icon-]:before{font-family:fontello;font-style:normal;font-weight:400;font-size:1em;speak:none;display:inline-block;text-decoration:inherit;width:1em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;margin-right:10px;color:#777}
 .glyphicon-h3-a-after>h3>span>a:after,.glyphicon-h3-a>h3>span>a:before,[class*=" icon-"]:before,[class^=icon-]:before{position:relative;top:1px}
-.private-file a:before,[class*=" iconafter-"]:after{top:1px;font-family:fontello;font-style:normal;font-weight:400;font-size:1em;speak:none;display:inline-block;text-decoration:inherit;width:1em;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;position:relative;text-align:center}
+.private-file a:before,[class*=" iconafter-"]:after{top:1px;font-weight:400;font-size:1em;display:inline-block;text-decoration:inherit;width:1em;text-transform:none;position:relative;font-family:fontello;font-style:normal;speak:none;text-align:center;font-variant:normal;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 [class*=" iconafter-"]:after{margin-right:10px;color:#777}
 .icon-tripadvisor:before{content:"\f262"}
 .icon-doc:before{content:"\e804"}
@@ -1880,14 +1880,36 @@ form#search-block-form{margin:0}
 .node-type-show .tabs--primary{position:absolute;top:0;left:-200px;border-left:1px solid red}
 .node-type-show .tabs--primary li{float:none}
 .node-type-show .node-show.view-mode-full{position:relative;top:-38px}
-.node-type-show .node-show.view-mode-full .col-sm-8>div{width:90%}
-.node-type-show .node-show.view-mode-full .field-name-field-boxoffice-url,.node-type-show .node-show.view-mode-full .field-name-field-casting-link{margin-bottom:50px}
-.node-type-show .node-show.view-mode-full .field-name-field-boxoffice-url a{background-color:#f74e2d;color:#fff;text-align:center;text-transform:uppercase;padding:8px 20px;font-weight:700;display:table;margin-top:-4px}
-.node-type-show .node-show.view-mode-full .distribution,.node-type-show .node-show.view-mode-full .field-name-field-coproduction,.node-type-show .node-show.view-mode-full .field-name-field-partenariats,.node-type-show .node-show.view-mode-full .field-name-field-production{margin-top:20px}
 .node-type-show .node-show.view-mode-full .field-name-field-reservation{display:none}
-.node-type-show .node-show.view-mode-full .field-name-field-casting-link a{text-transform:uppercase;color:#000;text-decoration:none}
+.node-type-show .node-show.view-mode-full #group-wrapper-distribution{min-height:16px;margin-top:5px;margin-right:30px;margin-bottom:50px}
+.node-type-show .node-show.view-mode-full .distribution,.node-type-show .node-show.view-mode-full .field-name-field-coproduction,.node-type-show .node-show.view-mode-full .field-name-field-partenariats,.node-type-show .node-show.view-mode-full .field-name-field-production{margin-top:20px}
+.node-type-show .node-show.view-mode-full #group-wrapper-distribution .field-name-field-casting-link{float:left}
+.node-type-show .node-show.view-mode-full #group-wrapper-distribution .field-name-field-casting-link a{text-transform:uppercase;color:#000;text-decoration:none;display:block;padding-right:30px}
+.node-type-show .node-show.view-mode-full #group-wrapper-distribution a.show-anchor-link{float:left;text-transform:uppercase;color:#000;text-decoration:none;display:block;padding:0 24px}
+.node-type-show .node-show.view-mode-full #group-wrapper-distribution a.show-anchor-link:last-child{padding-right:0}
 .node-type-show .node-show.view-mode-full .field-name-field-from{border-top:1px solid #000;padding-top:20px}
 .node-type-show .node-show.view-mode-full .field-name-field-by{border-bottom:1px solid #000;padding-bottom:20px;margin-bottom:20px}
 .node-type-show .node-show.view-mode-full .field-name-body{margin-bottom:20px}
 .node-type-show .node-show.view-mode-full .distribution .label-above{text-transform:uppercase;font-weight:700}
-.node-type-show .node-show.view-mode-full .field-name-field-coproduction .field-label,.node-type-show .node-show.view-mode-full .field-name-field-partenariats .field-label,.node-type-show .node-show.view-mode-full .field-name-field-production .field-label{text-transform:uppercase;font-weight:700}
+.node-type-show .node-show.view-mode-full .field-name-field-coproduction .field-label,.node-type-show .node-show.view-mode-full .field-name-field-coproduction .label-above,.node-type-show .node-show.view-mode-full .field-name-field-partenariats .field-label,.node-type-show .node-show.view-mode-full .field-name-field-partenariats .label-above,.node-type-show .node-show.view-mode-full .field-name-field-production .field-label,.node-type-show .node-show.view-mode-full .field-name-field-production .label-above{text-transform:uppercase;font-weight:700}
+.node-type-show .node-show.view-mode-full #group-wrap-book{margin-bottom:50px;min-height:32px}
+.node-type-show .node-show.view-mode-full #group-wrap-book .field-name-field-boxoffice-url a{background-color:#f74e2d;color:#fff;text-align:center;text-transform:uppercase;padding:8px 20px;font-weight:700;display:table;margin-top:-4px}
+.node-type-show .node-show.view-mode-full .all-dates{padding-left:15px;margin-bottom:30px}
+.node-type-show .node-show.view-mode-full .all-dates .label-above{margin-bottom:15px;text-transform:uppercase;font-weight:700;font-size:1.125em}
+.node-type-show .node-show.view-mode-full .all-dates .label-above:before{position:relative;font-family:fontello;font-style:normal;font-weight:400;font-size:1em;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"\e807";color:#f74e2d;top:-1px}
+.node-type-show .node-show.view-mode-full .all-dates .date-display-single{display:block;margin-bottom:10px;font-size:1em}
+.node-type-show .node-show.view-mode-full #node-show-full-group-lieu{font-size:.876em;background-color:#f74e2d;padding:15px;margin-bottom:20px;color:#fff}
+.node-type-show .node-show.view-mode-full #node-show-full-group-lieu .field-label{text-transform:uppercase}
+.node-type-show .node-show.view-mode-full #node-show-full-group-lieu a{color:#fff;text-decoration:underline}
+.node-type-show .node-show.view-mode-full #node-show-full-group-lieu .field:after{margin-bottom:15px}
+.node-type-show .node-show.view-mode-full #node-show-full-group-lieu .field-name-field-lieu-generique:after{margin-bottom:0}
+.node-type-show .node-show.view-mode-full #node-show-full-group-lieu .field-name-field-location:after{display:block;margin-bottom:20px;content:""}
+.node-type-show .node-show.view-mode-full .field-name-field-additional-infos,.node-type-show .node-show.view-mode-full .field-name-field-coming-soon,.node-type-show .node-show.view-mode-full .field-name-field-full,.node-type-show .node-show.view-mode-full .field-name-field-reimbursement,.node-type-show .node-show.view-mode-full .field_offline{margin-top:30px;border:2px solid #f74e2d;padding:15px}
+.node-type-show .node-show.view-mode-full .field-name-field-additional-infos .field-label,.node-type-show .node-show.view-mode-full .field-name-field-coming-soon .field-label,.node-type-show .node-show.view-mode-full .field-name-field-full .field-label,.node-type-show .node-show.view-mode-full .field-name-field-reimbursement .field-label,.node-type-show .node-show.view-mode-full .field_offline .field-label{text-transform:uppercase;color:#f74e2d}
+.node-type-show .node-show.view-mode-full .field-name-field-coming-soon,.node-type-show .node-show.view-mode-full .field-name-field-full,.node-type-show .node-show.view-mode-full .field-name-field-reimbursement,.node-type-show .node-show.view-mode-full .field_offline{margin-bottom:30px}
+.node-type-show .node-show.view-mode-full .like-to-label{margin-top:25px;margin-bottom:15px;padding-left:15px;font-size:1.5em}
+.node-type-show .node-show.view-mode-full .like-to-item .field-name-field-boxoffice-url a,.node-type-show .node-show.view-mode-full .like-to-item .field-name-field-show-dates span,.node-type-show .node-show.view-mode-full .like-to-item .field-name-node-link a,.node-type-show .node-show.view-mode-full .like-to-item .field-name-title a{font-size:.8em}
+.node-type-show .node-show.view-mode-full .like-to-item .field-name-field-festival{display:none}
+.node-type-show .node-show.view-mode-full .like-to-item .field-name-field-show-dates>div:after{border-color:#772d2e}
+.node-type-show .node-show.view-mode-full .like-to-item .field-name-node-link{top:-5px;left:4%}
+.node-type-show .node-show.view-mode-full .like-to-item .field-name-field-boxoffice-url{top:-5px;right:10%}
