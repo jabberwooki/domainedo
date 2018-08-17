@@ -26,7 +26,6 @@ function domainedo_shows_form_show_node_form_alter(&$form, &$form_state, $form_i
  */
 function domainedo_shows_node_view_alter(&$build) {
 	// If show node
-  drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_date_show.js');
   $now = date('Y-m-d');
   $now = new DateTime( $now );
   $now = $now->format('Ymd'); 
@@ -62,7 +61,8 @@ function domainedo_shows_node_view_alter(&$build) {
       
     }
 		if ($build['#view_mode'] == 'full') {
-			// Breadcrumb processing : if the show node is requested from a festival page,
+      drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_date_show.js');
+      // Breadcrumb processing : if the show node is requested from a festival page,
 			// the breadcrumb link 'Tous les spectacles' must send user to the shows list
 			// filtered on the latest edition of the same festival.
 			$url_elements = explode('/', $_SERVER['HTTP_REFERER']);
