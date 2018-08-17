@@ -121,10 +121,15 @@ function domainedo_shows_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '15',
+    'weight' => '19',
     'children' => array(
-      0 => 'field_location',
-      1 => 'field_lieu_generique',
+      0 => 'field_duration',
+      1 => 'field_entrance',
+      2 => 'field_location',
+      3 => 'field_minimum_age',
+      4 => 'field_price',
+      5 => 'field_restauration',
+      6 => 'field_lieu_generique',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -154,7 +159,7 @@ function domainedo_shows_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Photo et statut réservation',
-    'weight' => '41',
+    'weight' => '36',
     'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
@@ -184,7 +189,7 @@ function domainedo_shows_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Groupe short links',
-    'weight' => '26',
+    'weight' => '34',
     'children' => array(
       0 => 'group_ul_short_links',
     ),
@@ -421,7 +426,7 @@ function domainedo_shows_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Textes sur image fixe',
-    'weight' => '28',
+    'weight' => '22',
     'children' => array(
       0 => 'group_text_over_img_abs',
     ),
@@ -487,9 +492,8 @@ function domainedo_shows_field_group_info() {
     'label' => 'Group UL short links',
     'weight' => '27',
     'children' => array(
-      0 => 'sharethis',
-      1 => 'partage',
-      2 => 'group_show_icons_bottom',
+      0 => 'partage',
+      1 => 'group_show_icons_bottom',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -570,8 +574,75 @@ function domainedo_shows_field_group_info() {
   );
   $field_groups['group_vsr|node|show|frontpage_block'] = $field_group;
 
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_wrap_book|node|show|full';
+  $field_group->group_name = 'group_wrap_book';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'show';
+  $field_group->mode = 'full';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Contour réserver',
+    'weight' => '13',
+    'children' => array(
+      0 => 'field_boxoffice_url',
+      1 => 'field_reservation',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Contour réserver',
+      'instance_settings' => array(
+        'id' => 'group-wrap-book',
+        'classes' => 'group-wrap-book field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_wrap_book|node|show|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_wrapper_distribution|node|show|full';
+  $field_group->group_name = 'group_wrapper_distribution';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'show';
+  $field_group->mode = 'full';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Contour distribution',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_casting_link',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Contour distribution',
+      'instance_settings' => array(
+        'id' => 'group-wrapper-distribution',
+        'classes' => 'group-wrapper-distribution field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_wrapper_distribution|node|show|full'] = $field_group;
+
   // Translatables
   // Included for use with string extractors like potx.
+  t('Contour distribution');
+  t('Contour réserver');
   t('Date titre description');
   t('Degradé transparent');
   t('Distribution');

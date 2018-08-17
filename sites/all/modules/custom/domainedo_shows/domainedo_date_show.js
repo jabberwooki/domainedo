@@ -52,7 +52,7 @@ jQuery(function($) {
             "class": "field-name-field-show-dates",
             "html": '<div class="js-div-date">' + msg_date + '</span></div>',
           });
-        $(".field-name-field-festival").after(elt_date);
+        $("#block-ds-extras-image-full-show .field-name-field-festival").after(elt_date);
       }
       else if ($(".date-display-single",$(this)).length == 1) {
         from_date = $(".date-display-single:first",$(this)).text();
@@ -61,7 +61,7 @@ jQuery(function($) {
             "class": "field-name-field-show-dates",
             "html": '<div class="js-div-date"><span class="date-display-single">' + from_date + '</div>',
           });
-        $(".field-name-field-festival").after(elt_date);
+        $("#block-ds-extras-image-full-show .field-name-field-festival").after(elt_date);
       }
 
     });
@@ -69,46 +69,44 @@ jQuery(function($) {
 
   function manageShowLikeToDates() {
     $(".col-md-3.like-to-item").each(function(index){
-      console.log("je passe dans la boucle : " + index + "----------------------------------------------");
+      from_date_like_to = $(".date-display-single:first", $(this)).attr("content");
+      to_date_like_to = $(".date-display-single:last",$(this)).attr("content");
 
       if($(".date-display-single", $(this)).length > 2) {
-        from_date_like_to = $(".date-display-single:first", $(this)).attr("content");
-        to_date_like_to = $(".date-display-single:last",$(this)).attr("content");
+        if ($(".date-display-single:first", $(this)).attr("content") && $(".date-display-single:last",$(this)).attr("content") ) {
+          from_date_like_to = $(".date-display-single:first", $(this)).attr("content");
+          to_date_like_to = $(".date-display-single:last",$(this)).attr("content");
 
-        console.log("from_date_like_to : " + from_date_like_to);
+          from_year_date = from_date_like_to.substring(0, 4);
+          to_year_date = to_date_like_to.substring(0, 4);
 
-        from_year_date = from_date_like_to.substring(0, 4);
-        to_year_date = to_date_like_to.substring(0, 4);
-        console.log("from_year_date : " + from_year_date);
+          from_date_like_to = new Date(from_date_like_to);
+          to_date_like_to = new Date(to_date_like_to);
 
+          msg_date =
+            customGetDate(from_date_like_to) + "/" + customGetMonth(from_date_like_to) + "/" + from_year_date +
+            " > " + customGetDate(to_date_like_to) + "/" + customGetMonth(to_date_like_to) + "/" + to_year_date;
 
-        from_date_like_to = new Date(from_date_like_to);
-        to_date_like_to = new Date(to_date_like_to);
+          $(".field-name-field-show-dates", $(this)).html("");
 
-        msg_date =
-          customGetDate(from_date_like_to) + "/" + customGetMonth(from_date_like_to) + "/" + from_year_date +
-          " > " + customGetDate(to_date_like_to) + "/" + customGetMonth(to_date_like_to) + "/" + to_year_date;
-        console.log(msg_date);
+          elt_date_like_to[index] = $("<div></div>",
+            {
+              "class": "field-name-field-show-dates",
+              "html": '<div class="js-div-date"><span class="">' + msg_date + '</span></div>',
+            });
 
-        $(".field-name-field-show-dates", $(this)).html("");
+          $(".group-date-title-desc",$(this)).prepend(elt_date_like_to[index]);
+        }
 
-        elt_date_like_to[index] = $("<div></div>",
-          {
-            "class": "field-name-field-show-dates",
-            "html": '<div class="js-div-date"><span class="">' + msg_date + '</span></div>',
-          });
-
-        //elt_date_like_to[index].prependTo(".group-date-title-desc",$(this));
-        $(".group-date-title-desc",$(this)).prepend(elt_date_like_to[index]);
       }
 
     });
   }
 
   function customGetMonth(d) {
-    if( d.getMonth() < 10) {
-      return "0" + d.getMonth();
-    } else return d.getMonth();
+    if( d.getMonth() < 9) {
+      return "0" + (d.getMonth() + 1);
+    } else return (d.getMonth() + 1);
   }
   function customGetDate(d) {
     if( d.getDate() < 10 ) {
