@@ -6,8 +6,10 @@ jQuery(function($) {
     to_year_date,
     msg_date,
     elt_date,
-    anchors_link,
-    current_url;
+    current_url,
+    from_date_like_to,
+    to_date_like_to;
+  var elt_date_like_to = [];
 
   manageShowDates();
   manageShowLikeToDates();
@@ -36,7 +38,7 @@ jQuery(function($) {
             "class": "field-name-field-show-dates",
             "html": '<div class="js-div-date"><span class="date-display-single">' + msg_date + '</span></div>',
           });
-        $(".field-name-field-festival").after(elt_date);
+        $("#block-ds-extras-image-full-show .field-name-field-festival").after(elt_date);
       }
       else if ($(".date-display-single",$(this)).length == 2) {
         from_date = $(".date-display-single:first",$(this)).text();
@@ -66,46 +68,50 @@ jQuery(function($) {
   }
 
   function manageShowLikeToDates() {
-    $(".col-md-3.like-to-item").each(function(){
+    $(".col-md-3.like-to-item").each(function(index){
+      console.log("je passe dans la boucle : " + index + "----------------------------------------------");
 
       if($(".date-display-single", $(this)).length > 2) {
-        //from_date = $(".date-display-single:first",$(this)).attr("content");
-        console.log($(this).attr("class"));
-        from_date = $(".date-display-single", $(this)).text();
-        to_date = $(".date-display-single:last",$(this)).attr("content");
-        console.log("from date : " + from_date)
-        console.log("to date : " + to_date)
-        /*from_year_date = from_date.substring(0, 4);
-        to_year_date = to_date.substring(0, 4);
+        from_date_like_to = $(".date-display-single:first", $(this)).attr("content");
+        to_date_like_to = $(".date-display-single:last",$(this)).attr("content");
 
-        from_date = new Date(from_date);
-        to_date = new Date(to_date);
+        console.log("from_date_like_to : " + from_date_like_to);
+
+        from_year_date = from_date_like_to.substring(0, 4);
+        to_year_date = to_date_like_to.substring(0, 4);
+        console.log("from_year_date : " + from_year_date);
+
+
+        from_date_like_to = new Date(from_date_like_to);
+        to_date_like_to = new Date(to_date_like_to);
 
         msg_date =
-          customGetDate(from_date) + "/" + customGetMonth(from_date) + "/" + from_year_date +
-          " > " + customGetDate(to_date) + "/" + customGetMonth(to_date) + "/" + to_year_date;
+          customGetDate(from_date_like_to) + "/" + customGetMonth(from_date_like_to) + "/" + from_year_date +
+          " > " + customGetDate(to_date_like_to) + "/" + customGetMonth(to_date_like_to) + "/" + to_year_date;
+        console.log(msg_date);
 
         $(".field-name-field-show-dates", $(this)).html("");
 
-        elt_date = $("<div></div>",
+        elt_date_like_to[index] = $("<div></div>",
           {
             "class": "field-name-field-show-dates",
-            "html": '<div class="js-div-date"><span class="date-display-single">' + msg_date + '</span></div>',
+            "html": '<div class="js-div-date"><span class="">' + msg_date + '</span></div>',
           });
-        elt_date.prependTo(".group-date-title-desc",$(this));*/
-        //$(".field-name-field-festival").after(elt_date);
+
+        //elt_date_like_to[index].prependTo(".group-date-title-desc",$(this));
+        $(".group-date-title-desc",$(this)).prepend(elt_date_like_to[index]);
       }
 
     });
   }
 
   function customGetMonth(d) {
-    if( d.getMonth() < 11) {
+    if( d.getMonth() < 10) {
       return "0" + d.getMonth();
     } else return d.getMonth();
   }
   function customGetDate(d) {
-    if( d.getDate() < 11 ) {
+    if( d.getDate() < 10 ) {
       return "0" + d.getDate();
     } else return d.getDate();
   }
