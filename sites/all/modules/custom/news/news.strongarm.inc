@@ -108,6 +108,12 @@ function news_strongarm() {
       'list' => array(
         'custom_settings' => FALSE,
       ),
+      'right_now' => array(
+        'custom_settings' => TRUE,
+      ),
+      'liste_aussi' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -134,6 +140,7 @@ function news_strongarm() {
             'weight' => '15',
             'visible' => FALSE,
           ),
+          'right_now' => NULL,
         ),
       ),
     ),

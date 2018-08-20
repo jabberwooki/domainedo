@@ -23,11 +23,11 @@ function news_menu_default_menu_links() {
       'identifier' => 'menu-top-courtesy-nav_evenements:evenements',
     ),
     'module' => 'menu',
-    'hidden' => 0,
+    'hidden' => 1,
     'external' => 0,
     'has_children' => 0,
     'expanded' => 0,
-    'weight' => -50,
+    'weight' => -49,
     'customized' => 1,
   );
 

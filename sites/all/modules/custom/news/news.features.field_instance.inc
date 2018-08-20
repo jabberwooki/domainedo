@@ -31,6 +31,12 @@ function news_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 1,
       ),
+      'right_now' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -108,6 +114,12 @@ function news_field_default_field_instances() {
         'type' => 'date_default',
         'weight' => 2,
       ),
+      'right_now' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -156,6 +168,69 @@ function news_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-news-field_link_more_infos'.
+  $field_instances['node-news-field_link_more_infos'] = array(
+    'bundle' => 'news',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 29,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'right_now' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'zoom' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_link_more_infos',
+    'label' => 'Lien plus d\'infos',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 19,
+    ),
+  );
+
   // Exported field_instance: 'node-news-field_new_window'.
   $field_instances['node-news-field_new_window'] = array(
     'bundle' => 'news',
@@ -178,6 +253,12 @@ function news_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 21,
+      ),
+      'right_now' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 23,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -223,9 +304,8 @@ function news_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'hidden',
         'weight' => 27,
       ),
       'full' => array(
@@ -234,6 +314,12 @@ function news_field_default_field_instances() {
         'settings' => array(),
         'type' => 'list_key',
         'weight' => 6,
+      ),
+      'right_now' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 25,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -284,6 +370,12 @@ function news_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 26,
+      ),
+      'right_now' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -344,6 +436,12 @@ function news_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 25,
       ),
+      'right_now' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 22,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -402,6 +500,12 @@ function news_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 28,
       ),
+      'right_now' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -451,6 +555,12 @@ function news_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 24,
+      ),
+      'right_now' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 21,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -513,6 +623,12 @@ function news_field_default_field_instances() {
         'type' => 'full',
         'weight' => 4,
       ),
+      'right_now' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 19,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -572,6 +688,13 @@ function news_field_default_field_instances() {
           'link' => 0,
         ),
         'type' => 'full',
+        'weight' => 0,
+      ),
+      'right_now' => array(
+        'label' => 'hidden',
+        'module' => 'domainedo_media',
+        'settings' => array(),
+        'type' => 'encemoment',
         'weight' => 0,
       ),
       'teaser' => array(
@@ -638,6 +761,12 @@ function news_field_default_field_instances() {
         'type' => 'full',
         'weight' => 5,
       ),
+      'right_now' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 20,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -699,6 +828,12 @@ function news_field_default_field_instances() {
         'type' => 'full',
         'weight' => 3,
       ),
+      'right_now' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 18,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -747,9 +882,8 @@ function news_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'hidden',
         'weight' => 28,
       ),
       'full' => array(
@@ -757,6 +891,12 @@ function news_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 20,
+      ),
+      'right_now' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 26,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -808,9 +948,8 @@ function news_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'hidden',
         'weight' => 26,
       ),
       'full' => array(
@@ -818,6 +957,12 @@ function news_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 22,
+      ),
+      'right_now' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 24,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -832,9 +977,10 @@ function news_field_default_field_instances() {
         'weight' => 6,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_visible_bas_accueil',
-    'label' => 'Visible bas accueil',
+    'label' => 'Visible zoom diaporama',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -859,7 +1005,7 @@ function news_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => 'Evénement visible sur la partie zoom de la page d\'accueil ?',
+    'description' => 'Evénement visible sur la zone "En ce moment" de la page d\'accueil ?',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -872,6 +1018,12 @@ function news_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 27,
+      ),
+      'right_now' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -886,9 +1038,10 @@ function news_field_default_field_instances() {
         'weight' => 17,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_zoom',
-    'label' => 'Zoom sur',
+    'label' => 'En ce moment',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -909,10 +1062,12 @@ function news_field_default_field_instances() {
   t('Body');
   t('Date d\'événement');
   t('Date de parution');
-  t('Evénement visible sur la partie zoom de la page d\'accueil ?');
+  t('En ce moment');
+  t('Evénement visible sur la zone "En ce moment" de la page d\'accueil ?');
   t('Fichiers attachés');
   t('Galerie');
   t('Image');
+  t('Lien plus d\'infos');
   t('Lien vers nouvelle fenêtre');
   t('Placer ici l\'url où doit emmener l\'actualité sous la forme : http://www.siteweb.com');
   t('Promu en info flash');
@@ -921,8 +1076,7 @@ function news_field_default_field_instances() {
   t('Url de destination');
   t('Vidéo');
   t('Vidéo seule');
-  t('Visible bas accueil');
-  t('Zoom sur');
+  t('Visible zoom diaporama');
 
   return $field_instances;
 }
