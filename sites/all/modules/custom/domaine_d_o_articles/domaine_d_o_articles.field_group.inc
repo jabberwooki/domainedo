@@ -43,8 +43,36 @@ function domaine_d_o_articles_field_group_info() {
   );
   $field_groups['group_article_home|node|article|frontpage_block'] = $field_group;
 
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_custom_ddo|node|article|form';
+  $field_group->group_name = 'group_custom_ddo';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'article';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Custom domaine d\'o',
+    'weight' => '49',
+    'children' => array(
+      0 => 'field_link_more_infos',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-custom-ddo field-group-tab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups['group_custom_ddo|node|article|form'] = $field_group;
+
   // Translatables
   // Included for use with string extractors like potx.
+  t('Custom domaine d\'o');
   t('group article home');
 
   return $field_groups;
