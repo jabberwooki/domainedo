@@ -184,6 +184,24 @@
     <?php if (!empty($breadcrumb)): print $breadcrumb;
     endif; ?>
 </div>
+<!-- Home headband ----------------------------------------------------------->
+<div id="homeheadband">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-5 col-md-offset-1">
+              <?php if (!empty($page['homenow'])): ?>
+                <?php print render($page['homenow']); ?>
+              <?php endif; ?>
+            </div>
+            <div class="col-md-4">
+              <?php if (!empty($page['homeslideshow'])): ?>
+                <?php print render($page['homeslideshow']); ?>
+              <?php endif; ?>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FIN HOME HEADBAND   ---------------------------------------------------->
 <!-- IMAGE FULL SHOW -------------------------------------------------------->
 <div id="imgfullshow">
     <div class="container-fluid">
