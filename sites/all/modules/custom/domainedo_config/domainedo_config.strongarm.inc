@@ -211,21 +211,22 @@ function domainedo_config_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'disqus_nodetypes';
   $strongarm->value = array(
-    'show' => 'show',
-    'news' => 'news',
-    'article' => 'article',
     'press_document' => 0,
     'relpub_document' => 0,
     'tech_document' => 0,
     'festival' => 0,
     'programmer' => 0,
+    'show' => 0,
     'structure' => 0,
     'personne' => 0,
+    'article' => 0,
     'entree' => 0,
     'page_complexe' => 0,
     'lieu_location' => 0,
     'presentation_location_salles' => 0,
+    'retour_sur' => 0,
     'lettre_info' => 0,
+    'news' => 0,
     'page' => 0,
     'webform' => 0,
   );
@@ -277,14 +278,14 @@ function domainedo_config_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_slogan';
-  $strongarm->value = 'domaine départemental d\'art et de culture';
+  $strongarm->value = 'domaine d\'art et de culture';
   $export['site_slogan'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'theme_default';
-  $strongarm->value = 'domainedo';
+  $strongarm->value = 'ddobs';
   $export['theme_default'] = $strongarm;
 
   $strongarm = new stdClass();
