@@ -16,13 +16,24 @@ function domainedo_contexts_default_fe_block_settings() {
     'cache' => -1,
     'custom' => 0,
     'delta' => 1,
-    'disabled' => FALSE,
     'module' => 'menu_block',
     'node_types' => array(),
     'pages' => '<front>
 spectacle*',
     'roles' => array(),
     'themes' => array(
+      'bootstrap' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bootstrap',
+        'weight' => -27,
+      ),
+      'ddobs' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'ddobs',
+        'weight' => -27,
+      ),
       'domainedo' => array(
         'region' => '',
         'status' => 0,
@@ -44,12 +55,23 @@ spectacle*',
     'cache' => -1,
     'custom' => 0,
     'delta' => 2,
-    'disabled' => FALSE,
     'module' => 'menu_block',
     'node_types' => array(),
     'pages' => '',
     'roles' => array(),
     'themes' => array(
+      'bootstrap' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bootstrap',
+        'weight' => 0,
+      ),
+      'ddobs' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'ddobs',
+        'weight' => 0,
+      ),
       'domainedo' => array(
         'region' => '',
         'status' => 0,
