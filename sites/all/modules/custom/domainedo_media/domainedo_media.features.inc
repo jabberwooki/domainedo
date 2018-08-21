@@ -261,11 +261,11 @@ function domainedo_media_image_default_styles() {
   $styles['zoom-desktop'] = array(
     'label' => 'zoom-desktop',
     'effects' => array(
-      1 => array(
+      23 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 320,
-          'height' => 283,
+          'width' => 634,
+          'height' => 440,
         ),
         'weight' => 1,
       ),

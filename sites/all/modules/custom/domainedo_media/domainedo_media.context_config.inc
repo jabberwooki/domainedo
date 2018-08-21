@@ -198,7 +198,7 @@ function domainedo_media_default_scald_context_config() {
       '*' => 'passthrough',
     ),
     'image' => array(
-      '*' => 'style-main_show__570_',
+      '*' => 'style-large-675',
     ),
     'twitter' => array(
       '*' => 'passthrough',
@@ -702,7 +702,7 @@ function domainedo_media_default_scald_context_config() {
       '*' => 'passthrough',
     ),
     'image' => array(
-      '*' => 'group-zoom',
+      '*' => 'style-zoom_ss_634x440',
     ),
     'twitter' => array(
       '*' => 'passthrough',

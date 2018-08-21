@@ -167,14 +167,6 @@ function domainedo_media_strongarm() {
       'parseable' => TRUE,
       'formats' => array(),
     ),
-    'event_home' => array(
-      'name' => 'event_home',
-      'title' => 'event_home',
-      'description' => '',
-      'render_language' => 'XHTML',
-      'parseable' => TRUE,
-      'formats' => array(),
-    ),
     'petit_100' => array(
       'name' => 'petit_100',
       'title' => 'petit-100',
@@ -210,6 +202,22 @@ function domainedo_media_strongarm() {
     'new_list_images' => array(
       'name' => 'new_list_images',
       'title' => 'new list images',
+      'description' => '',
+      'render_language' => 'XHTML',
+      'parseable' => TRUE,
+      'formats' => array(),
+    ),
+    'encemoment' => array(
+      'name' => 'encemoment',
+      'title' => 'EnCeMoment',
+      'description' => '',
+      'render_language' => 'XHTML',
+      'parseable' => TRUE,
+      'formats' => array(),
+    ),
+    'festival' => array(
+      'name' => 'festival',
+      'title' => 'Festival',
       'description' => '',
       'render_language' => 'XHTML',
       'parseable' => TRUE,
