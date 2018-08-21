@@ -31,7 +31,10 @@ function domainedo_shows_node_view_alter(&$build) {
   $now = $now->format('Ymd'); 
   $show_is_past = false;
   
-	if ($build['#bundle'] == 'show') {		
+	if ($build['#bundle'] == 'show') {
+    if ($build['#view_mode'] == 'teaser') {
+      drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_date_show_list_festival.js');
+    }
 		// Processing of festival's name in List view mode.
 		if ($build['#view_mode'] == 'list' && isset($build['field_festival'][0]['#markup'])) {
 			$festival_infos = domainedo_shows_get_festival_infos($build['field_festival'][0]['#markup'], array('title'));
