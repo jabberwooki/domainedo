@@ -33,6 +33,8 @@ function news_views_pre_render(&$view) {
     }
 
   }
+
+  // cas du slideshow d'accueil
   if ($view->name == 'evenements' && $view->current_display == 'block_2') {
 
     foreach ($view->result as &$value) {
