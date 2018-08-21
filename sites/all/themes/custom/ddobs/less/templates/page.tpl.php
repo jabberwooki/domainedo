@@ -179,11 +179,13 @@
         </div>
     </div>
 </div>
-<!-- FIN MEGA MENU ---------------------------------------------------->
+<!-- FIN MEGA MENU ------------------------------------------------------------>
+<!-- breadcrumb --------------------------------------------------------------->
 <div class="container">
-    <?php if (!empty($breadcrumb)): print $breadcrumb;
-    endif; ?>
+  <?php if (!empty($breadcrumb)): print $breadcrumb;
+  endif; ?>
 </div>
+<!-- Fin breadcrumb ----------------------------------------------------------->
 <!-- Home headband ----------------------------------------------------------->
 <div id="homeheadband">
     <div class="container-fluid">
@@ -196,6 +198,17 @@
             <div class="col-md-4">
               <?php if (!empty($page['homeslideshow'])): ?>
                 <?php print render($page['homeslideshow']); ?>
+              <?php endif; ?>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="quick-acces">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+              <?php if (!empty($page['quickaccess'])): ?>
+                <?php print render($page['quickaccess']); ?>
               <?php endif; ?>
             </div>
         </div>
@@ -215,6 +228,15 @@
     </div>
 </div>
 <!-- FIN IMAGE FULL SHOW   ---------------------------------------------------->
+<!-- HEADBAND FESTIVAL -------------------------------------------------------->
+<div id="headband-festival">
+    <div class="container">
+      <?php if (!empty($page['headbandfestival'])): ?>
+        <?php print render($page['headbandfestival']); ?>
+      <?php endif; ?>
+    </div>
+</div>
+<!-- FIN HEADBAND FESTIVAL ---------------------------------------------------->
 <div class="main-container <?php print $container_class; ?>">
 
     <header role="banner" id="page-header">
