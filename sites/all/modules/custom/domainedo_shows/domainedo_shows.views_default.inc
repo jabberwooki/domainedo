@@ -669,11 +669,23 @@ else {
     ),
   );
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_plugin'] = 'views_bootstrap_grid_plugin_style';
+  $handler->display->display_options['style_options']['columns_horizontal'] = '-1';
+  $handler->display->display_options['style_options']['columns_vertical'] = '4';
+  $handler->display->display_options['style_options']['columns_xs'] = '12';
+  $handler->display->display_options['style_options']['columns_sm'] = '6';
+  $handler->display->display_options['style_options']['columns_md'] = '4';
+  $handler->display->display_options['style_options']['columns_lg'] = '4';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'ds';
+  $handler->display->display_options['row_options']['load_comments'] = 0;
+  $handler->display->display_options['row_options']['alternating'] = 0;
+  $handler->display->display_options['row_options']['grouping'] = 0;
+  $handler->display->display_options['row_options']['advanced'] = 0;
+  $handler->display->display_options['row_options']['delta_fieldset']['delta_fields'] = array();
+  $handler->display->display_options['row_options']['grouping_fieldset']['group_field'] = 'field_data_field_show_dates|field_show_dates_value';
+  $handler->display->display_options['row_options']['default_fieldset']['view_mode'] = 'teaser';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['defaults']['header'] = FALSE;
@@ -874,20 +886,18 @@ else {
   /* Display: Accueil */
   $handler = $view->new_display('block', 'Accueil', 'block_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Spectacles à l\'affiche';
+  $handler->display->display_options['title'] = 'Spectacles à venir';
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'Voir tous les spectacles';
   $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '0';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '9';
   $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['pager']['options']['id'] = '0';
-  $handler->display->display_options['pager']['options']['quantity'] = '9';
-  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Éléments par page';
-  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Tout -';
-  $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Décalage';
-  $handler->display->display_options['pager']['options']['tags']['first'] = '« premier';
-  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ précédent';
-  $handler->display->display_options['pager']['options']['tags']['next'] = 'suivant ›';
-  $handler->display->display_options['pager']['options']['tags']['last'] = 'dernier »';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'views_bootstrap_grid_plugin_style';
   $handler->display->display_options['style_options']['columns_horizontal'] = '-1';
@@ -1227,6 +1237,77 @@ else {
     705 => '705',
   );
   $handler->display->display_options['path'] = 'shows-metropole-agenda.csv';
+
+  /* Display: Accès rapide */
+  $handler = $view->new_display('block', 'Accès rapide', 'block_quick_acces');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Accès rapide';
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'Voir tous les spectacles';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '0';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  /* Footer: Global: Text area */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['empty'] = TRUE;
+  $handler->display->display_options['footer']['area']['content'] = '<a id="home-calendar-link" href="calendar">Le Calendrier</a>';
+  $handler->display->display_options['footer']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Nœud: Festival */
+  $handler->display->display_options['fields']['field_festival']['id'] = 'field_festival';
+  $handler->display->display_options['fields']['field_festival']['table'] = 'field_data_field_festival';
+  $handler->display->display_options['fields']['field_festival']['field'] = 'field_festival';
+  $handler->display->display_options['fields']['field_festival']['label'] = '';
+  $handler->display->display_options['fields']['field_festival']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_festival']['settings'] = array(
+    'bypass_access' => 0,
+    'link' => 1,
+  );
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'show' => 'show',
+  );
+  /* Filter criterion: Nœud: Date(s) (field_show_dates) */
+  $handler->display->display_options['filters']['field_show_dates_value']['id'] = 'field_show_dates_value';
+  $handler->display->display_options['filters']['field_show_dates_value']['table'] = 'field_data_field_show_dates';
+  $handler->display->display_options['filters']['field_show_dates_value']['field'] = 'field_show_dates_value';
+  $handler->display->display_options['filters']['field_show_dates_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_show_dates_value']['default_date'] = 'now';
+  /* Filter criterion: Nœud: Promu en info flash (field_promoted) */
+  $handler->display->display_options['filters']['field_promoted_value']['id'] = 'field_promoted_value';
+  $handler->display->display_options['filters']['field_promoted_value']['table'] = 'field_data_field_promoted';
+  $handler->display->display_options['filters']['field_promoted_value']['field'] = 'field_promoted_value';
+  $handler->display->display_options['filters']['field_promoted_value']['value'] = array(
+    1 => '1',
+  );
   $translatables['shows'] = array(
     t('Master'),
     t('plus'),
@@ -1287,7 +1368,8 @@ else {
     t('Festival'),
     t('Type de spectacle'),
     t('Accueil'),
-    t('Spectacles à l\'affiche'),
+    t('Spectacles à venir'),
+    t('Voir tous les spectacles'),
     t('    <div id="nav-home-slider"><h2 class="block-title">Menu Spectacles</h2>
       
     <nav>
@@ -1296,6 +1378,7 @@ else {
 </ul>    </nav>
   </div>'),
     t('Accueil mobile'),
+    t('Spectacles à l\'affiche'),
     t('Data export'),
     t('title'),
     t('dates'),
@@ -1319,6 +1402,8 @@ else {
     t('Date de début (JJ/MM/AAAA) (Obligatoire)'),
     t('Heure de départ (HH:MM) (Obligatoire)'),
     t('Durée (nombre de minutes) (Obligatoire)'),
+    t('Accès rapide'),
+    t('<a id="home-calendar-link" href="calendar">Le Calendrier</a>'),
   );
   $export['shows'] = $view;
 

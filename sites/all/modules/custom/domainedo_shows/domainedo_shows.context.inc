@@ -29,24 +29,7 @@ function domainedo_shows_context_default_contexts() {
       ),
     ),
   );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'disqus-disqus_comments' => array(
-          'module' => 'disqus',
-          'delta' => 'disqus_comments',
-          'region' => 'content',
-          'weight' => '10',
-        ),
-        'menu_block-domainedo-shows-tab-menu' => array(
-          'module' => 'menu_block',
-          'delta' => 'domainedo-shows-tab-menu',
-          'region' => 'preface_first',
-          'weight' => '3',
-        ),
-      ),
-    ),
-  );
+  $context->reactions = array();
   $context->condition_mode = 1;
 
   // Translatables
