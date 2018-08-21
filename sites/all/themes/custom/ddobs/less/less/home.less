@@ -173,4 +173,49 @@
     }
   }
   /* Fin carrousel ****************************************************************************************************/
+  #quick-acces {
+    background-color: @gris-clair-ddo;
+    margin: 20px 0;
+    padding-bottom: 35px;
+    .view {
+      h2.block-title {
+        font-size: 1em;
+      }
+      ul {
+        li {
+          float: left;
+          display: table;
+          a {
+            padding: 10px;
+            color: #FFF;
+            display: block;
+            font-size: 0.875em;/* 14/16 */
+            background-color: black;
+            text-transform: uppercase;
+            margin: 0 25px 0 0;
+            font-weight: bold;
+           
+          }
+        }
+      }
+      #home-calendar-link {
+        float: right;
+        color: #000;
+        padding: 8px 10px;
+        display: block;
+        font-size: 1em;
+        background-color: white;
+        text-transform: uppercase;
+        border: 1px solid black;
+        &:before {
+          content: "\e807";
+          .glyphicon();
+          color: #000;
+          top: -2px;
+        }
+      }
+    }
+
+  }
+
 }
