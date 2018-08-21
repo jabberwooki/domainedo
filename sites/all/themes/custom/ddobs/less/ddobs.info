@@ -9,21 +9,23 @@ php = 5.3.0
 ;; Regions
 ;;;;;;;;;;;;;;;;;;;;;
 
-regions[navigation]     = 'Navigation'
-regions[megamenu]       = 'Mega menu'
-regions[header]         = 'Top Bar'
-regions[search_region]  = 'Search Region'
-regions[highlighted]    = 'Highlighted'
-regions[homenow]        = 'Home Now'
-regions[homeslideshow]  = 'Home Zoom Slide Show'
-regions[imagefullshow]  = 'Image Full Show'
-regions[help]           = 'Help'
-regions[content]        = 'Content'
-regions[sidebar_first]  = 'Primary'
-regions[sidebar_second] = 'Secondary'
-regions[footer]         = 'Footer'
-regions[page_top]       = 'Page top'
-regions[page_bottom]    = 'Page bottom'
+regions[navigation]         = 'Navigation'
+regions[megamenu]           = 'Mega menu'
+regions[header]             = 'Top Bar'
+regions[search_region]      = 'Search Region'
+regions[highlighted]        = 'Highlighted'
+regions[homenow]            = 'Home Now'
+regions[quickaccess]        = 'Quick Acces'
+regions[homeslideshow]      = 'Home Zoom Slide Show'
+regions[imagefullshow]      = 'Image Full Show'
+regions[headbandfestival]   = 'Headband Festival'
+regions[help]               = 'Help'
+regions[content]            = 'Content'
+regions[sidebar_first]      = 'Primary'
+regions[sidebar_second]     = 'Secondary'
+regions[footer]             = 'Footer'
+regions[page_top]           = 'Page top'
+regions[page_bottom]        = 'Page bottom'
 
 
 ;;;;;;;;;;;;;;;;;;;;;
