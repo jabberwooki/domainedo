@@ -1962,6 +1962,11 @@ form#search-block-form{margin:0}
 .front #quick-acces .view ul li a{padding:10px;color:#FFF;display:block;font-size:.875em;background-color:#000;text-transform:uppercase;margin:0 25px 0 0;font-weight:700}
 .front #quick-acces .view #home-calendar-link{float:right;color:#000;padding:8px 10px;display:block;font-size:1em;background-color:#fff;text-transform:uppercase;border:1px solid #000}
 .front #quick-acces .view #home-calendar-link:before{content:"\e807";position:relative;font-weight:400;font-size:1em;display:inline-block;width:1em;margin-right:10px;text-transform:none;color:#000;top:-2px}
+.front #block-bean-reseaux-sociaux-bas{border-top:1.5px solid #000;border-bottom:1.5px solid #000;padding:20px 0;margin:30px 0 20px}
+.front #block-bean-reseaux-sociaux-bas .field-name-field-block-body{display:table;width:80%;margin:0 auto}
+.front #block-bean-reseaux-sociaux-bas .field-name-field-block-body #social-title-bottom{text-transform:uppercase;margin-top:10px;color:#000;font-size:1.25em;float:left;margin-right:50px}
+.front #block-bean-reseaux-sociaux-bas .field-name-field-block-body #social-title-bottom #tag-social{text-transform:lowercase;color:#f74e2d}
+.front #block-bean-reseaux-sociaux-bas .field-name-field-block-body ul#ul-social a:before{font-size:2.125em;margin-right:30px}
 .node-type-festival #headband-festival{background:url(../images/bg_gray.gif) 0 55% repeat-x}
 .node-type-festival #headband-festival .group-affiche-festival img{margin-bottom:50px}
 .node-type-festival #headband-festival .group-affiche-festival .field-name-scald-authors{display:none}
