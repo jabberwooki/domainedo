@@ -188,6 +188,17 @@
 <!-- Fin breadcrumb ----------------------------------------------------------->
 <!-- Home headband ----------------------------------------------------------->
 <div id="homeheadband">
+    <div id="info-flash">
+        <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+              <?php if (!empty($page['infoflash'])): ?>
+                <?php print render($page['infoflash']); ?>
+              <?php endif; ?>
+            </div>
+        </div>
+    </div>
+    </div>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-5 col-md-offset-1">
