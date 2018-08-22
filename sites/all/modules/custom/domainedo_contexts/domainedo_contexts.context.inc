@@ -151,10 +151,16 @@ function domainedo_contexts_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-zoom-block' => array(
+        'views-zoom-block_right_now' => array(
           'module' => 'views',
-          'delta' => 'zoom-block',
+          'delta' => 'zoom-block_right_now',
           'region' => 'homenow',
+          'weight' => '-10',
+        ),
+        'views-shows-block_quick_acces' => array(
+          'module' => 'views',
+          'delta' => 'shows-block_quick_acces',
+          'region' => 'quickaccess',
           'weight' => '-10',
         ),
         'views-evenements-block_2' => array(
@@ -175,9 +181,9 @@ function domainedo_contexts_context_default_contexts() {
           'region' => 'content',
           'weight' => '-8',
         ),
-        'views-articles-block_article_home' => array(
-          'module' => 'views',
-          'delta' => 'articles-block_article_home',
+        'bean-reseaux-sociaux-bas' => array(
+          'module' => 'bean',
+          'delta' => 'reseaux-sociaux-bas',
           'region' => 'content',
           'weight' => '-7',
         ),
