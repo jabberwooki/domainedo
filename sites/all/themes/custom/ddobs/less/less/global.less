@@ -454,6 +454,40 @@ footer.container {
   padding-top: 0;
   padding-bottom: 0;
   border-top: 0;
+  /* Réseaux sociaux bas **********************************************************************************************/
+  #block-bean-reseaux-sociaux-bas {
+    border-top: 1.5px solid black;
+    border-bottom: 1.5px solid black;
+    padding: 20px 0;
+    margin : 30px 0 20px 0;
+    .field-name-field-block-body{
+      display: table;
+      width: 90%;
+      margin: 0 auto;
+      #social-title-bottom {
+        text-transform: uppercase;
+        margin-top: 10px;
+        color: #000;
+        font-size: 1.25em; /* 20/16 */
+        float: left;
+        margin-right: 16%;
+        padding-left: 20px;
+        #tag-social {
+          text-transform: lowercase;
+          color: @grenadine-ddo;
+        }
+      }
+      ul#ul-social {
+        a:before {
+          font-size: 2.125em; /* 34/16 */
+          margin-right: 30px;
+        }
+        a.icon-gplus:before {
+          margin-right: 0px;
+        }
+      }
+    }
+  }
   #mmm {
     max-height: 150px;
     float: right;
@@ -465,4 +499,10 @@ footer.container {
   p {
     margin: 10px 0;
   }
+  /* Menu bas *************************************/
+  .nav > li > a {
+    color: #000;
+    padding: 8.5px 0;
+  }
+  /* Fin menu bas *********************************/
 }
