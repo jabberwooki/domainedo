@@ -38,6 +38,12 @@ function domainedo_contexts_context_default_contexts() {
           'region' => 'content',
           'weight' => '0',
         ),
+        'bean-reseaux-sociaux-bas' => array(
+          'module' => 'bean',
+          'delta' => 'reseaux-sociaux-bas',
+          'region' => 'footer',
+          'weight' => '-10',
+        ),
       ),
     ),
   );
@@ -138,6 +144,41 @@ function domainedo_contexts_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'festival';
+  $context->description = '';
+  $context->tag = 'festival';
+  $context->conditions = array(
+    'node' => array(
+      'values' => array(
+        'festival' => 'festival',
+      ),
+      'options' => array(
+        'node_form' => '0',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'ds_extras-headband_festival' => array(
+          'module' => 'ds_extras',
+          'delta' => 'headband_festival',
+          'region' => 'headbandfestival',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('festival');
+  $export['festival'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'front';
   $context->description = 'Page d\'accueil';
   $context->tag = 'desktop layout ';
@@ -186,12 +227,6 @@ function domainedo_contexts_context_default_contexts() {
           'delta' => 'shows-block_1',
           'region' => 'content',
           'weight' => '-8',
-        ),
-        'bean-reseaux-sociaux-bas' => array(
-          'module' => 'bean',
-          'delta' => 'reseaux-sociaux-bas',
-          'region' => 'content',
-          'weight' => '-7',
         ),
       ),
     ),
