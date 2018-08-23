@@ -1,12 +1,24 @@
 .node-type-festival {
   #headband-festival {
     background: url(../images/bg_gray.gif);
+    padding-bottom: 20px;
     .group-affiche-festival {
+      position: relative;
       img {
         margin-bottom: 50px;
       }
       .field-name-scald-authors{
         display: none;
+      }
+      .field-name-field-date-en-clair {
+        position: absolute;
+        bottom: 85px;
+        left: 35px;
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 2.375em;/* 38/16 */
+        .underline-grenadine-off();
       }
     }
     .group-essential-festival {
@@ -69,11 +81,24 @@
       }
     }
   }
-
+  .group-text-video {
+    iframe {
+      width: 100%;
+      height: 320px;
+    }
+  }
+  h3.show-festival-title {
+    font-size: 1.5em;/* 24/16 */
+    margin: 20px 0;
+  }
   .node-show {
     .group-show-list {
+      .field-name-field-festival {
+        display: none;
+      }
       .group-black-bg {
         height: 13%;
+
         .field-name-node-link a {
           font-size: 0.825em;
         }
