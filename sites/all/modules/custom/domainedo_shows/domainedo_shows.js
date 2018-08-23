@@ -96,7 +96,7 @@ jQuery(function($) {
     /*
      * Hide link "link-listshows" if there is no result
      */
-    if(!$(".field-name-field-festival-shows.field-type-entityreference").length &&
+    if(!$("#block-system-main .node-show).length &&
         $("#link-listshows").length){
         $("#link-listshows").hide();
     }
