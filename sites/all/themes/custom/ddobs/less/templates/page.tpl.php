@@ -168,14 +168,23 @@
 <div id="megamenu">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <div id="main-megamenu">
-                  <?php print render($primary_nav); ?>
-                  <?php if (!empty($page['megamenu'])): ?>
-                    <?php print render($page['megamenu']); ?>
-                  <?php endif; ?>
+                <div class="col-md-4">
+                    <div class="megamenu-code">
+                        <div id="megamenu-col1"></div>
+                    </div>
                 </div>
-            </div>
+                <div class="col-md-4">
+                    <div class="megamenu-code">
+                        <div id="megamenu-col2">
+                            <ul></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="megamenu-code">
+                        <div id="megamenu-col3"></div>
+                    </div>
+                </div>
         </div>
     </div>
 </div>
@@ -190,14 +199,14 @@
 <div id="homeheadband">
     <div id="info-flash">
         <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-              <?php if (!empty($page['infoflash'])): ?>
-                <?php print render($page['infoflash']); ?>
-              <?php endif; ?>
+            <div class="row">
+                <div class="col-md-12">
+                  <?php if (!empty($page['infoflash'])): ?>
+                    <?php print render($page['infoflash']); ?>
+                  <?php endif; ?>
+                </div>
             </div>
         </div>
-    </div>
     </div>
     <div class="container-fluid">
         <div class="row">
@@ -301,5 +310,27 @@
   <?php if (!empty($page['footer'])): ?>
     <?php print render($page['footer']); ?>
   <?php endif; ?>
+    <div class="row" id="footer-menus">
+        <div class="col-md-3">
+          <?php if (!empty($page['commodity_bottom_one'])): ?>
+            <?php print render($page['commodity_bottom_one']); ?>
+          <?php endif; ?>
+        </div>
+        <div class="col-md-3">
+          <?php if (!empty($page['commodity_bottom_two'])): ?>
+            <?php print render($page['commodity_bottom_two']); ?>
+          <?php endif; ?>
+        </div>
+        <div class="col-md-3">
+            <p><strong>Domaine d'O</strong></p>
+            <p>178, rue de la Carriérasse<br> 34090 Montpellier</p>
+            <p>Tél. : 0800 200 165<br> appel gratuit depuis un poste fixe</p>
+        </div>
+        <div class="col-md-3">
+            <a href="http://www.montpellier3m.fr/"><img id="mmm"
+                                                        src="/sites/all/themes/custom/ddobs/less/images/mmm.gif"
+                                                        alt="Montpellier Métropole Méditerranée"></a>
+        </div>
+    </div>
 </footer>
 
