@@ -1,6 +1,6 @@
 .node-type-festival {
   #headband-festival {
-    background: url(../images/bg_gray.gif) 0px 55% repeat-x;
+    background: url(../images/bg_gray.gif);
     .group-affiche-festival {
       img {
         margin-bottom: 50px;
@@ -22,6 +22,50 @@
       }
       a {
         color: white;
+        font-size: 0.6875em;/* 11/16 */
+        text-transform: uppercase;
+        display: block;
+        border-bottom: 1px solid white;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+        &:before{
+          .glyphicon();
+          color: white;
+          font-size: 1.25em;/* 20/16 */
+        }
+      }
+      .field-name-link-shows{
+        a:before{
+          content: "\f291";
+        }
+      }
+      .field-name-field-programme-pdf{
+        a:before{
+          content: "\e823";
+        }
+      }
+      .field-name-field-feuilleter-en-ligne {
+        a:before{
+          content: "\e82f";
+        }
+      }
+       .field-name-field-calendar-archive {
+        a:before{
+          content: "\e807";
+        }
+      }
+      .field-name-field-view-archives{
+        a:before{
+          content: "\f0ae";
+        }
+      }
+       .field-name-field-facebook{
+        a:before{
+          content: "\e801";
+        }
+      }
+      img {
+        display: none;
       }
     }
   }
