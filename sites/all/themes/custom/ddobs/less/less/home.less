@@ -77,6 +77,9 @@
 
   /* Carrousel ********************************************************************************************************/
   .carousel {
+    @media (max-width: @screen-sm) {
+      display: none;
+    }
     .carousel-inner {
       position: relative;
       img {
@@ -207,7 +210,7 @@
             font-size: 0.875em;/* 14/16 */
             background-color: black;
             text-transform: uppercase;
-            margin: 0 25px 0 0;
+            margin: 0 25px 10px 0;
             font-weight: bold;
            
           }
@@ -222,6 +225,12 @@
         background-color: white;
         text-transform: uppercase;
         border: 1px solid black;
+        @media (max-width: @screen-sm) {
+          float: none;
+          clear: both;
+          display: table;
+          margin-top: 15px;
+        }
         &:before {
           content: "\e807";
           .glyphicon();

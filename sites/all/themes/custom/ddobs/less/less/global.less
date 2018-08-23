@@ -37,6 +37,9 @@ body {
       }
     }
   }
+  @media (max-width: @screen-md) {
+    display: none;
+  }
 }
 
 #social-bottom {
@@ -81,6 +84,7 @@ header#navbar {
     #row-menu-nav-search {
       position: static;
     }
+
     position: relative;
     #mmenu-custom-buttom {
       position: absolute;
@@ -231,6 +235,7 @@ header#navbar {
     clear: both;
   }
 }
+
 #megamenu {
   padding-bottom: 100px;
   .megamenu-code > div {
@@ -391,6 +396,7 @@ form#search-block-form {
     }
   }
 }
+
 /* Divers *************************************************************************************************************/
 .cartouche-noir {
   display: block;
@@ -398,16 +404,18 @@ form#search-block-form {
   background-color: @noir-ddo;
   text-decoration: none;
   padding: 5px 10px;
-  font-size: 0.6875em;/*11/16*/
+  font-size: 0.6875em; /*11/16*/
 }
+
 .underline-grenadine {
   &:after {
     display: block;
     border: 4px solid @grenadine-ddo;
     margin-top: -5px;
-    content:"";
+    content: "";
   }
 }
+
 .button-book {
   padding-left: 20px;
   display: block;
@@ -417,6 +425,7 @@ form#search-block-form {
   text-align: center;
   text-transform: uppercase;
 }
+
 .date-orange {
   .field-name-field-show-dates {
     display: table;
@@ -426,13 +435,14 @@ form#search-block-form {
     > div {
       padding-left: 10px;
       .underline-grenadine();
-      &.js-div-date{
+      &.js-div-date {
         position: relative;
         top: 20px;
       }
     }
   }
 }
+
 .button-link-more {
   display: block;
   float: right;
@@ -449,6 +459,7 @@ form#search-block-form {
     content: "";
   }
 }
+
 footer.container {
   margin-top: 0;
   padding-top: 0;
@@ -459,8 +470,8 @@ footer.container {
     border-top: 1.5px solid black;
     border-bottom: 1.5px solid black;
     padding: 20px 0;
-    margin : 30px 0 20px 0;
-    .field-name-field-block-body{
+    margin: 30px 0 20px 0;
+    .field-name-field-block-body {
       display: table;
       width: 90%;
       margin: 0 auto;
@@ -476,14 +487,28 @@ footer.container {
           text-transform: lowercase;
           color: @grenadine-ddo;
         }
+        @media (max-width: @screen-sm) {
+          display: table;
+          margin: 0 auto;
+          padding-left: 0;
+          float: none;
+          #tag-social {
+            display: table;
+            margin: 0 auto
+          }
+        }
       }
       ul#ul-social {
         a:before {
           font-size: 2.125em; /* 34/16 */
-          margin-right: 30px;
+          margin-right: 26px;
         }
         a.icon-gplus:before {
           margin-right: 0px;
+        }
+        @media (max-width: @screen-sm) {
+          display: table;
+          margin: 20px auto 0 auto;
         }
       }
     }
@@ -500,9 +525,28 @@ footer.container {
     margin: 10px 0;
   }
   /* Menu bas *************************************/
+  @media (max-width: @screen-md) {
+    ul {
+      min-height: 120px;
+    }
+    #mmm {
+      float: none;
+      margin-right: 0;
+    }
+  }
   .nav > li > a {
     color: #000;
     padding: 8.5px 0;
   }
   /* Fin menu bas *********************************/
 }
+
+/* Texte **************************************************************************************************************/
+#block-system-main {
+  p {
+    line-height: 1.5em;
+    margin: 10px 0;
+  }
+}
+
+/* Fin texte **********************************************************************************************************/
