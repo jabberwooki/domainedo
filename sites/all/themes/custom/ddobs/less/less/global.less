@@ -231,64 +231,47 @@ header#navbar {
     clear: both;
   }
 }
-
-#main-megamenu {
-  padding-top: 10px;
-  > ul {
-    .manage-ul-megamenu();
-    > div {
-      .manage-ul-megamenu();
-      float: left;
-      padding-right: 20px;
-    }
-  }
-  #block-menu-menu-top-courtesy-nav {
-    .manage-ul-megamenu();
-  }
-  &:after {
-    content: "";
-    display: block;
-    margin-bottom: 30px;
-    clear: both;
-  }
-}
-.manage-ul-megamenu {
-  > ul {
-    float: left;
-    margin-left: 7%;
-    width: 26%;
-
-    > li {
-      > a{
-        margin-top: 20px;
-        display: block;
-        color: @grenadine-ddo;
-        text-transform: uppercase;
-        /*font-family: Gotham Bold;*/
-        font-size: 1em;
-      }
-      > ul li {
+#megamenu {
+  padding-bottom: 100px;
+  .megamenu-code > div {
+    padding-top: 10px;
+    > ul {
+      > li {
         > a {
-          color: @noir-ddo;
-          margin: 15px 0;
+          margin-top: 20px;
           display: block;
-          font-weight: bold;
-          font-size: 0.875em;/* 14 / 16 */
-          /*font-family: Gotham Medium;*/
+          color: @grenadine-ddo;
+          text-transform: uppercase;
+          /*font-family: Gotham Bold;*/
+          font-size: 1em;
         }
-        ul li a {
-          font-weight: 400;
-          color: @noir-ddo;
-          margin: 15px 0;
-          display: block;
-          padding-left: 20px;
-          /*font-family: Gotham Book;*/
-          font-size: 0.875em;/* 14 / 16 */
+        > ul > li {
+          > a {
+            color: @noir-ddo;
+            margin: 15px 0;
+            display: block;
+            font-weight: bold;
+            font-size: 0.875em; /* 14 / 16 */
+            /*font-family: Gotham Medium;*/
+          }
+          > ul > li {
+            > a {
+              font-weight: 400;
+              color: @noir-ddo;
+              margin: 15px 0;
+              display: block;
+              padding-left: 20px;
+              /*font-family: Gotham Book;*/
+              font-size: 0.875em; /* 14 / 16 */
+              display: block;
+            }
+          }
         }
       }
     }
   }
 }
+
 /*#block-menu-menu-top-courtesy-nav {
 
 }*/
@@ -464,5 +447,22 @@ form#search-block-form {
     clear: both;
     display: block;
     content: "";
+  }
+}
+footer.container {
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-top: 0;
+  #mmm {
+    max-height: 150px;
+    float: right;
+    margin-right: -5px;
+  }
+  strong {
+    font-weight: bold;
+  }
+  p {
+    margin: 10px 0;
   }
 }

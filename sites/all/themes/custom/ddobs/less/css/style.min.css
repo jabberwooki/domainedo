@@ -1660,19 +1660,13 @@ header#navbar #mmenu-custom-buttom span{font-size:.5em;text-transform:uppercase;
 #custom-mega-menu-button.close-menu-button span{display:none}
 #custom-mega-menu-button.open-menu-button{color:#f74e2d;font-size:.53125em}
 #custom-mega-menu-button.open-menu-button:before{content:"\e869";color:#f74e2d;font-size:3.529411765em;display:block;margin:0 0 -5px -3px}
-#main-megamenu:after,#megamenu:after{content:"";display:block;clear:both}
-#megamenu{background-color:#efefef}
-#main-megamenu{padding-top:10px}
-#main-megamenu #block-menu-menu-top-courtesy-nav>ul,#main-megamenu>ul>div>ul,#main-megamenu>ul>ul,.manage-ul-megamenu>ul{float:left;margin-left:7%;width:26%}
-#main-megamenu #block-menu-menu-top-courtesy-nav>ul>li>a,#main-megamenu>ul>div>ul>li>a,#main-megamenu>ul>ul>li>a{margin-top:20px;display:block;color:#f74e2d;text-transform:uppercase;font-size:1em}
-#main-megamenu #block-menu-menu-top-courtesy-nav>ul>li>ul li>a,#main-megamenu>ul>div>ul>li>ul li>a,#main-megamenu>ul>ul>li>ul li>a{color:#000;margin:15px 0;display:block;font-weight:700;font-size:.875em}
-#main-megamenu #block-menu-menu-top-courtesy-nav>ul>li>ul li ul li a,#main-megamenu>ul>div>ul>li>ul li ul li a,#main-megamenu>ul>ul>li>ul li ul li a{font-weight:400;color:#000;margin:15px 0;display:block;padding-left:20px;font-size:.875em}
-#main-megamenu>ul>div{float:left;padding-right:20px}
-#main-megamenu:after{margin-bottom:30px}
-.manage-ul-megamenu>ul>li>a{margin-top:20px;display:block;color:#f74e2d;text-transform:uppercase;font-size:1em}
+#megamenu{background-color:#efefef;padding-bottom:100px}
+#megamenu:after{content:"";display:block;clear:both}
+#megamenu .megamenu-code>div{padding-top:10px}
+#megamenu .megamenu-code>div>ul>li>a{margin-top:20px;display:block;color:#f74e2d;text-transform:uppercase;font-size:1em}
 #top-search-icon:before,.region-search-region #close-custom-search:before{font-style:normal;speak:none;text-decoration:inherit;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-align:center}
-.manage-ul-megamenu>ul>li>ul li>a{color:#000;margin:15px 0;display:block;font-weight:700;font-size:.875em}
-.manage-ul-megamenu>ul>li>ul li ul li a{font-weight:400;color:#000;margin:15px 0;display:block;padding-left:20px;font-size:.875em}
+#megamenu .megamenu-code>div>ul>li>ul>li>a{color:#000;margin:15px 0;display:block;font-weight:700;font-size:.875em}
+#megamenu .megamenu-code>div>ul>li>ul>li>ul>li>a{font-weight:400;color:#000;margin:15px 0;padding-left:20px;font-size:.875em;display:block}
 #search-region{padding-left:0;padding-right:0}
 #top-search-icon{position:absolute;right:0;top:10px}
 #top-search-icon:before{position:relative;top:1px;font-family:fontello;font-weight:400;display:inline-block;margin-right:10px;content:"\e84f";color:#000;font-size:1.875em;width:30px;height:30px}
@@ -1704,6 +1698,10 @@ form#search-block-form{margin:0}
 .date-orange .field-name-field-show-dates>div.js-div-date{position:relative;top:20px}
 .button-link-more{display:block;float:right;border:1.5px solid #f74e2d;text-transform:uppercase;font-size:.8125em;padding:15px 17px;background-color:#fff;margin:0 20px 20px 0;color:#f74e2d}
 .button-link-more:after{clear:both;display:block;content:""}
+footer.container{margin-top:0;padding-top:0;padding-bottom:0;border-top:0}
+footer.container #mmm{max-height:150px;float:right;margin-right:-5px}
+footer.container strong{font-weight:700}
+footer.container p{margin:10px 0}
 @font-face{font-family:fontello;src:url(../fontello/font/fontello.eot?90885294);src:url(../fontello/font/fontello.eot?90885294#iefix) format('embedded-opentype'),url(../fontello/font/fontello.woff?90885294) format('woff'),url(../fontello/font/fontello.ttf?90885294) format('truetype'),url(../fontello/font/fontello.svg?90885294#fontello) format('svg');font-weight:400;font-style:normal}
 .glyphicon,.glyphicon-h3-a-after>h3>span>a:after,.glyphicon-h3-a>h3>span>a:before,[class*=" icon-"]:before,[class^=icon-]:before{font-family:fontello;font-style:normal;font-weight:400;font-size:1em;speak:none;display:inline-block;text-decoration:inherit;width:1em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;margin-right:10px;color:#777}
 .glyphicon-h3-a-after>h3>span>a:after,.glyphicon-h3-a>h3>span>a:before,[class*=" icon-"]:before,[class^=icon-]:before{position:relative;top:1px}
