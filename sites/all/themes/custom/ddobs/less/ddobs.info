@@ -42,7 +42,6 @@ stylesheets[all][] = css/style.min.css
 ;; Scripts
 ;;;;;;;;;;;;;;;;;;;;;
 scripts[] = 'js/move_menu.js'
-scripts[] = 'js/social_position.js'
 scripts[] = 'js/manage_search_region.js'
 scripts[] = 'smartmenus/jquery.smartmenus.js'
 scripts[] = 'smartmenus/addons/bootstrap/jquery.smartmenus.bootstrap.js'
