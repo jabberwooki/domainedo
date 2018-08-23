@@ -69,8 +69,14 @@ function domainedo_contexts_context_default_contexts() {
         'menu-menu-top-courtesy-nav' => array(
           'module' => 'menu',
           'delta' => 'menu-top-courtesy-nav',
-          'region' => 'megamenu',
-          'weight' => '-38',
+          'region' => 'commodity_bottom_one',
+          'weight' => '-10',
+        ),
+        'menu-menu-bottom-courtesy' => array(
+          'module' => 'menu',
+          'delta' => 'menu-bottom-courtesy',
+          'region' => 'commodity_bottom_two',
+          'weight' => '-10',
         ),
       ),
     ),
@@ -169,10 +175,10 @@ function domainedo_contexts_context_default_contexts() {
           'region' => 'homeslideshow',
           'weight' => '-10',
         ),
-        'views-evenements-block_1' => array(
+        'views-evenements-block_info_flash' => array(
           'module' => 'views',
-          'delta' => 'evenements-block_1',
-          'region' => 'content',
+          'delta' => 'evenements-block_info_flash',
+          'region' => 'infoflash',
           'weight' => '-10',
         ),
         'views-shows-block_1' => array(
