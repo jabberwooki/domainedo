@@ -15,15 +15,18 @@ jQuery(function($){
     $("#menu-close").show();
   });
 
-  // move menus
+  // show hide menus
   var windowsize = $(window).width();
+  showHideMenus();
+
+  // Mv menus
   mvMenus();
 
   $(window).resize(function() {
     windowsize = $(window).width();
-    mvMenus();
+    showHideMenus();
   });
-  function mvMenus() {
+  function showHideMenus() {
     if (windowsize < 769) {
       $('#megamenu').hide();
     } else {
@@ -33,7 +36,7 @@ jQuery(function($){
   // hide megamenu
   $("#megamenu").hide();
   // hide classes of menu
-  $('#main-megamenu').find('*').removeAttr('class');
+  $('.megamenu-code').find('*').removeAttr('class');
 
   $("<div></div>",{
     "id": "custom-mega-menu-button",
@@ -44,5 +47,16 @@ jQuery(function($){
       $(this).toggleClass("open-menu-button close-menu-button");
       $("#megamenu").slideToggle(400);
     });
-
+  /**
+   * mv last li of main menu to put it on the second meganmenu's columns
+   * clone the remmain of main menu and put it in the first meganmenu's columns
+   * clone top courtesy nav and put it in the third meganmenu's columns
+   * clone bottom courtesy nav and put it in the third meganmenu's columns
+   */
+  function mvMenus() {
+    $( "#initial-main-nav > ul > li.last" ).appendTo( "#megamenu-col2 ul" );
+    $( "#initial-main-nav > ul" ).clone().appendTo( "#megamenu-col1" );
+    $( "#block-menu-menu-top-courtesy-nav > ul.menu" ).clone().appendTo( "#megamenu-col3" );
+    $( "#block-menu-menu-bottom-courtesy > ul.menu" ).clone().appendTo( "#megamenu-col3" );
+  }
 });
