@@ -197,17 +197,17 @@
 <!-- Fin breadcrumb ----------------------------------------------------------->
 <!-- Home headband ----------------------------------------------------------->
 <div id="homeheadband">
+  <?php if (!empty($page['infoflash'])): ?>
     <div id="info-flash">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                  <?php if (!empty($page['infoflash'])): ?>
                     <?php print render($page['infoflash']); ?>
-                  <?php endif; ?>
                 </div>
             </div>
         </div>
     </div>
+    <?php endif; ?>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-5 col-md-offset-1">
@@ -311,25 +311,25 @@
     <?php print render($page['footer']); ?>
   <?php endif; ?>
     <div class="row" id="footer-menus">
-        <div class="col-md-3">
+        <div class="col-md-3 col-sm-6 col-xs-6">
           <?php if (!empty($page['commodity_bottom_one'])): ?>
             <?php print render($page['commodity_bottom_one']); ?>
           <?php endif; ?>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-sm-6 col-xs-6">
           <?php if (!empty($page['commodity_bottom_two'])): ?>
             <?php print render($page['commodity_bottom_two']); ?>
           <?php endif; ?>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-sm-6 col-xs-6">
             <p><strong>Domaine d'O</strong></p>
             <p>178, rue de la Carriérasse<br> 34090 Montpellier</p>
             <p>Tél. : 0800 200 165<br> appel gratuit depuis un poste fixe</p>
         </div>
-        <div class="col-md-3">
-            <a href="http://www.montpellier3m.fr/"><img id="mmm"
-                                                        src="/sites/all/themes/custom/ddobs/less/images/mmm.gif"
-                                                        alt="Montpellier Métropole Méditerranée"></a>
+        <div class="col-md-3 col-sm-6 col-xs-6">
+            <a href="http://www.montpellier3m.fr/">
+                <img id="mmm" src="/sites/all/themes/custom/ddobs/less/images/mmm.gif" alt="Montpellier Métropole Méditerranée">
+            </a>
         </div>
     </div>
 </footer>
