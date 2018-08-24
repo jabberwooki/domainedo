@@ -15,7 +15,9 @@ function news_views_pre_render(&$view) {
   /*if ($view->name == 'zoom' && $view->current_display == 'block') {
    dpm($view);
   }*/
-  if ($view->name == 'evenements' && $view->current_display == 'page') {
+  // Cas de la page des zoom sur
+  if (($view->name == 'evenements' && $view->current_display == 'page_zoom')
+  || ($view->name == 'evenements' && $view->current_display == 'attachment_top_zoom')) {
     foreach ($view->result as &$value) {
       if (!empty($value->field_field_news_url_target)) {
         $target = (empty($value->field_field_new_window) || !$value->field_field_new_window[0]['rendered']['#markup']) ? '' : ' target="_blank" ';
@@ -28,7 +30,7 @@ function news_views_pre_render(&$view) {
       else {
         $href = ' href="' . drupal_get_path_alias("node/" . $value->nid) . '" ';
         $value->field_field_news_url_target[0]['rendered']['#markup'] = '<h3 class="title-event-list"><a href="/node/' . $value->nid . '">' . $value->node_title . '</a></h3>';
-        $value->field_field_scald_image[0]['rendered']['#markup'] = '<a ' . $href . '>' . $value->field_field_scald_image[0]['rendered']['#markup'] . '</a>';
+        $value->field_field_scald_image[0]['rendered']['#markup'] = '<a href="/node/' . $value->nid . '">' . $value->field_field_scald_image[0]['rendered']['#markup'] . '</a>';
       }
     }
 
@@ -59,8 +61,8 @@ function news_views_pre_render(&$view) {
       else {
         $href = ' href="' . drupal_get_path_alias("node/" . $value->nid) . '" ';
         $value->field_field_news_url_target[0]['rendered']['#markup'] = '<h3 class="title-event-list"><a href="/node/' . $value->nid . '">' . $value->node_title . '</a></h3>';
-        $value->field_field_scald_image[0]['rendered']['#markup'] = '<a ' . $href . '>' . $value->field_field_scald_image[0]['rendered']['#markup'] . '</a>';
-        $value->field_field_link_more_infos[0]['rendered']['#markup'] = '<a ' . $href . '>Plus d\'infos</a>';
+        $value->field_field_scald_image[0]['rendered']['#markup'] = '<a href="/node/' . $value->nid . '">' . $value->field_field_scald_image[0]['rendered']['#markup'] . '</a>';
+        $value->field_field_link_more_infos[0]['rendered']['#markup'] = '<a href="/node/' . $value->nid . '">Plus d\'infos</a>';
       }
       if (isset($value->field_field_news_only_video[0]['rendered']['#markup']) && $value->field_field_news_only_video[0]['rendered']['#markup']) {
 
