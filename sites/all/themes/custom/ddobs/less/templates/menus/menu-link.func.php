@@ -8,6 +8,7 @@
  * Overrides theme_menu_link().
  */
 function ddobs_menu_link(array $variables) {
+
   $element = $variables['element'];
   $sub_menu = '';
 
@@ -17,11 +18,18 @@ function ddobs_menu_link(array $variables) {
     if (($element['#original_link']['menu_name'] == 'management') && (module_exists('navbar'))) {
       $sub_menu = drupal_render($element['#below']);
     }
+
     //Here we need to change from ==1 to >=1 to allow for multilevel submenus
     elseif ((!empty($element['#original_link']['depth'])) && ($element['#original_link']['depth'] >= 1)) {
       // Add our own wrapper.
       unset($element['#below']['#theme_wrappers']);
-      $sub_menu = '<ul class="dropdown-menu">' . drupal_render($element['#below']) . '</ul>';
+
+      //dpm($element['#original_link']['depth'] );
+      if($element['#original_link']['depth']  > 1) {
+        $sub_menu = '<ul class="left-menu">' . drupal_render($element['#below']) . '</ul>';
+      }
+      else $sub_menu = '<ul class="dropdown-menu">' . drupal_render($element['#below']) . '</ul>';
+
       // Generate as standard dropdown.
       $element['#title'] .= ' <span class="caret"></span>'; //Smartmenus plugin add's caret
       $element['#attributes']['class'][] = 'dropdown';

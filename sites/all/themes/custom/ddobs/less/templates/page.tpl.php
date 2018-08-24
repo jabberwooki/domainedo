@@ -248,6 +248,19 @@
     </div>
 </div>
 <!-- FIN IMAGE FULL SHOW   ---------------------------------------------------->
+<!-- TOP CLASSIC PAGE --------------------------------------------------------->
+<?php if (!empty($page['topclassicpage'])): ?>
+<div id="topclassicpage">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <?php print render($page['topclassicpage']); ?>
+            </div>
+        </div>
+    </div>
+</div>
+<?php endif; ?>
+<!-- FIN TOP CLASSIC PAGE  ---------------------------------------------------->
 <!-- HEADBAND FESTIVAL -------------------------------------------------------->
 <div id="headband-festival">
     <div class="container">

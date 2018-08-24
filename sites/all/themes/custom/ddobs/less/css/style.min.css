@@ -1686,6 +1686,7 @@ form#search-block-form{margin:0}
 .region-search-region #block-search-form .btn-primary{border:1px solid #f74e2d;background-color:#fff;width:150px}
 .region-search-region #block-search-form .btn-primary .glyphicon-search:before{content:"RECHERCHER";color:#f74e2d;font-family:Gotham,Arial,sans-serif;margin-left:-35px;font-size:1em;font-weight:700}
 .region-search-region #close-custom-search:before{font-family:fontello;font-weight:400;display:inline-block;width:1em;margin-right:10px;content:"\e832";color:#f74e2d;font-size:1.875em;position:absolute;top:0;right:-50px}
+.big-off-orange-title,.big-orange-title-link,.pagination>li a,.pagination>li.active>span,.region-sidebar-first ul.menu>li>a,footer.container strong,strong{font-weight:700}
 .cartouche-noir,[class*=" icon-"]:hover{text-decoration:none}
 .input-group-btn .btn-primary{background-color:#f74e2d}
 .input-group-btn .btn-primary .glyphicon-search:before{content:"\e84f";color:#fff;font-size:1.4em}
@@ -1703,14 +1704,19 @@ footer.container #block-bean-reseaux-sociaux-bas .field-name-field-block-body ul
 @media (max-width:768px){footer.container #block-bean-reseaux-sociaux-bas .field-name-field-block-body ul#ul-social{display:table;margin:20px auto 0}
 }
 footer.container #mmm{max-height:150px;float:right;margin-right:-5px}
-footer.container strong{font-weight:700}
 footer.container p{margin:10px 0}
 @media (max-width:992px){footer.container #footer-menus ul{min-height:120px}
 footer.container #footer-menus #mmm{float:none;margin-right:0}
 }
-footer.container .nav>li>a{color:#000;padding:8.5px 0}
+footer.container #footer-menus .menu{margin-top:5px}
+footer.container #footer-menus .menu>li>a{color:#000;padding:5px 0;display:block;margin:0}
 #block-system-main p,.region-headbandfestival p{line-height:1.25em;font-size:.875em;margin:10px 0}
+.region-sidebar-first{background-color:#fff;border:0}
+.region-sidebar-first a{font-size:1.125em;display:block;padding:10px 0;color:#000}
+.region-sidebar-first ul.menu{margin-top:20px}
 .date-orange .field-name-field-show-dates>div:after,.underline-grenadine-off:after,.underline-grenadine:after{margin-top:-5px;content:""}
+.region-sidebar-first ul.menu li.active>a{color:#f74e2d}
+.region-sidebar-first ul.menu>li>ul>li>a{padding-left:20px}
 .cartouche-noir{display:block;color:#fff;background-color:#000;padding:5px 10px;font-size:.6875em}
 .underline-grenadine:after{display:block;border:4px solid #f74e2d}
 .underline-grenadine-off:after{display:block;border:4px solid #772d2e}
@@ -1721,13 +1727,16 @@ footer.container .nav>li>a{color:#000;padding:8.5px 0}
 .date-orange .field-name-field-show-dates>div.js-div-date{position:relative;top:20px}
 .button-link-more{display:block;float:right;border:1.5px solid #f74e2d;text-transform:uppercase;font-size:.8125em;padding:15px 17px;background-color:#fff;margin:0 20px 20px 0;color:#f74e2d}
 .button-link-more:after{clear:both;display:block;content:""}
-.big-orange-title-link{color:#f74e2d;text-transform:uppercase;font-size:1.5em;font-weight:700}
-strong{font-weight:700}
+.big-orange-title-link{color:#f74e2d;text-transform:uppercase;font-size:1.5em}
+.big-off-orange-title{color:#fff;text-transform:uppercase;font-size:2.375em}
+.big-off-orange-title:after{display:block;border:4px solid #772d2e;margin-top:-5px;content:""}
 .pagination .next,.pagination .pager-first,.pagination .pager-last,.pagination .prev{display:none}
-.pagination>li a{color:#000;background-color:#efefef;border:0;border-radius:0;margin-right:2px;font-weight:700}
+.pagination>li a{color:#000;background-color:#efefef;border:0;border-radius:0;margin-right:2px}
 .pagination>li a:hover,.pagination>li.active>span:hover{background-color:#f74e2d}
 .pagination>li a:hover{color:#FFF}
-.pagination>li.active>span{background-color:#f74e2d;border:0;border-radius:0;margin-right:6px;font-weight:700}
+.pagination>li.active>span{background-color:#f74e2d;border:0;border-radius:0;margin-right:6px}
+.atom-align-left{margin:0 20px 0 0}
+.atom-align-right{margin:0 0 0 20px}
 @font-face{font-family:fontello;src:url(../fontello/font/fontello.eot?90885294);src:url(../fontello/font/fontello.eot?90885294#iefix) format('embedded-opentype'),url(../fontello/font/fontello.woff?90885294) format('woff'),url(../fontello/font/fontello.ttf?90885294) format('truetype'),url(../fontello/font/fontello.svg?90885294#fontello) format('svg');font-weight:400;font-style:normal}
 .glyphicon,.glyphicon-h3-a-after>h3>span>a:after,.glyphicon-h3-a>h3>span>a:before,[class*=" icon-"]:before,[class^=icon-]:before{font-family:fontello;font-style:normal;font-weight:400;font-size:1em;speak:none;display:inline-block;text-decoration:inherit;width:1em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;margin-right:10px;color:#777}
 .glyphicon-h3-a-after>h3>span>a:after,.glyphicon-h3-a>h3>span>a:before,[class*=" icon-"]:before,[class^=icon-]:before{position:relative;top:1px}
@@ -2005,7 +2014,7 @@ strong{font-weight:700}
 .node-type-festival #headband-festival .group-essential-festival h2{font-size:1.875em;text-transform:uppercase;margin:0 25px 30px 0;font-weight:700}
 .node-type-festival #headband-festival .group-essential-festival a{color:#fff;font-size:.6875em;text-transform:uppercase;display:block;border-bottom:1px solid #fff;padding-bottom:10px;margin-bottom:15px}
 .node-type-festival #headband-festival .group-essential-festival a:before{position:relative;top:1px;font-weight:400;display:inline-block;width:1em;margin-right:10px;text-transform:none;color:#fff;font-size:1.25em}
-.node-type-festival #headband-festival .group-essential-festival img,.node-type-festival .node-show .group-show-list .field-name-field-festival,.page-zoom-sur .field-name-scald-authors,.page-zoom-sur h2.page-header{display:none}
+.node-type-festival #headband-festival .group-essential-festival img,.node-type-festival .node-show .group-show-list .field-name-field-festival,.node-type-page .field-name-scald-authors,.page-zoom-sur .field-name-scald-authors,.page-zoom-sur h2.page-header{display:none}
 .node-type-festival #headband-festival .group-essential-festival .field-name-link-shows a:before{content:"\f291"}
 .node-type-festival #headband-festival .group-essential-festival .field-name-field-programme-pdf a:before{content:"\e823"}
 .node-type-festival #headband-festival .group-essential-festival .field-name-field-feuilleter-en-ligne a:before{content:"\e82f"}
@@ -2022,3 +2031,8 @@ strong{font-weight:700}
 .page-zoom-sur .views-field-field-scald-image{margin-bottom:20px;margin-top:35px}
 .page-zoom-sur .title-event-list a{color:#f74e2d;text-transform:uppercase;font-size:1.5em;font-weight:700}
 .page-zoom-sur .views-field-body p{font-size:1em;line-height:1.25em}
+.node-type-page .field-name-field-image-page-complexe:after{content:"";width:98%;height:85px;position:absolute;bottom:0;left:1%;background:linear-gradient(to bottom,rgba(0,0,0,0),#000)}
+.node-type-page .main-container{position:relative}
+.node-type-page .main-container h2.page-header{position:absolute;top:-60px;border:0;color:#fff;text-transform:uppercase;font-size:2.375em;font-weight:700}
+.node-type-page .main-container h2.page-header:after{display:block;border:4px solid #772d2e;margin-top:-5px;content:""}
+.node-type-page .main-container .field-name-body{margin-top:45px}
