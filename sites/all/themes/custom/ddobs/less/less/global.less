@@ -397,78 +397,8 @@ form#search-block-form {
   }
 }
 
-/* Divers *************************************************************************************************************/
-.cartouche-noir {
-  display: block;
-  color: @blanc-ddo;
-  background-color: @noir-ddo;
-  text-decoration: none;
-  padding: 5px 10px;
-  font-size: 0.6875em; /*11/16*/
-}
 
-.underline-grenadine {
-  &:after {
-    display: block;
-    border: 4px solid @grenadine-ddo;
-    margin-top: -5px;
-    content: "";
-  }
-}
-
-.underline-grenadine-off {
-  &:after {
-    display: block;
-    border: 4px solid @grenadine-off-ddo;
-    margin-top: -5px;
-    content: "";
-  }
-}
-
-.button-book {
-  padding-left: 20px;
-  display: block;
-  background-color: @grenadine-ddo;
-  padding: 10px;
-  color: @blanc-ddo;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.date-orange {
-  .field-name-field-show-dates {
-    display: table;
-    font-weight: bold;
-    margin-bottom: 20px;
-    /*overflow: hidden;*/
-    > div {
-      padding-left: 10px;
-      .underline-grenadine();
-      &.js-div-date {
-        position: relative;
-        top: 20px;
-      }
-    }
-  }
-}
-
-.button-link-more {
-  display: block;
-  float: right;
-  border: solid @grenadine-ddo 1.5px;
-  text-transform: uppercase;
-  font-size: 0.8125em; /* 13/16 */
-  padding: 15px 17px;
-  background-color: white;
-  margin: 0 20px 20px 0;
-  color: @grenadine-ddo;
-  &:after {
-    clear: both;
-    display: block;
-    content: "";
-  }
-}
-
+/* Footer *************************************************************************************************************/
 footer.container {
   margin-top: 0;
   padding-top: 0;
@@ -478,7 +408,7 @@ footer.container {
   #block-bean-reseaux-sociaux-bas {
     border-top: 1.5px solid black;
     border-bottom: 1.5px solid black;
-    padding: 20px 0;
+    padding: 10px 0 20px 0;
     margin: 30px 0 20px 0;
     .field-name-field-block-body {
       display: table;
@@ -571,3 +501,83 @@ footer.container {
 }
 
 /* Fin texte **********************************************************************************************************/
+/* Divers *************************************************************************************************************/
+.cartouche-noir {
+  display: block;
+  color: @blanc-ddo;
+  background-color: @noir-ddo;
+  text-decoration: none;
+  padding: 5px 10px;
+  font-size: 0.6875em; /*11/16*/
+}
+
+.underline-grenadine {
+  &:after {
+    display: block;
+    border: 4px solid @grenadine-ddo;
+    margin-top: -5px;
+    content: "";
+  }
+}
+
+.underline-grenadine-off {
+  &:after {
+    display: block;
+    border: 4px solid @grenadine-off-ddo;
+    margin-top: -5px;
+    content: "";
+  }
+}
+
+.button-book {
+  padding-left: 20px;
+  display: block;
+  background-color: @grenadine-ddo;
+  padding: 10px;
+  color: @blanc-ddo;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.date-orange {
+  .field-name-field-show-dates {
+    display: table;
+    font-weight: bold;
+    margin-bottom: 20px;
+    /*overflow: hidden;*/
+    > div {
+      padding-left: 10px;
+      .underline-grenadine();
+      &.js-div-date {
+        position: relative;
+        top: 20px;
+      }
+    }
+  }
+}
+
+.button-link-more {
+  display: block;
+  float: right;
+  border: solid @grenadine-ddo 1.5px;
+  text-transform: uppercase;
+  font-size: 0.8125em; /* 13/16 */
+  padding: 15px 17px;
+  background-color: white;
+  margin: 0 20px 20px 0;
+  color: @grenadine-ddo;
+  &:after {
+    clear: both;
+    display: block;
+    content: "";
+  }
+}
+.big-orange-title-link {
+  color: @grenadine-ddo;
+  text-transform: uppercase;
+  font-size: 1.5em; /* 24/16 */
+  font-weight: bold;
+}
+strong {
+  font-weight: bold;
+}
