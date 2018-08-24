@@ -58,6 +58,41 @@ function domainedo_contexts_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'classic_page';
+  $context->description = '';
+  $context->tag = 'Classic page';
+  $context->conditions = array(
+    'node' => array(
+      'values' => array(
+        'page' => 'page',
+      ),
+      'options' => array(
+        'node_form' => '1',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'ds_extras-top_classic_page' => array(
+          'module' => 'ds_extras',
+          'delta' => 'top_classic_page',
+          'region' => 'topclassicpage',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Classic page');
+  $export['classic_page'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'desktop-all';
   $context->description = 'Partout sur le site version "bureau"';
   $context->tag = 'desktop layout ';
@@ -72,6 +107,12 @@ function domainedo_contexts_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'menu_block-2' => array(
+          'module' => 'menu_block',
+          'delta' => '2',
+          'region' => 'sidebar_first',
+          'weight' => '-10',
+        ),
         'menu-menu-top-courtesy-nav' => array(
           'module' => 'menu',
           'delta' => 'menu-top-courtesy-nav',
