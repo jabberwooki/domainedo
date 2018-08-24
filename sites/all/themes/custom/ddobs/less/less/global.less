@@ -581,3 +581,38 @@ footer.container {
 strong {
   font-weight: bold;
 }
+/* pagination ****/
+.pagination {
+  .next,
+  .prev,
+  .pager-first,
+  .pager-last {
+    display: none;
+  }
+  > li {
+    a {
+      color: #000;
+      background-color: @gris-clair-ddo;
+      border: 0;
+      border-radius: 0;
+      margin-right: 2px;
+      font-weight: bold;
+      &:hover {
+        background-color: @grenadine-ddo;
+        color: #FFF;
+      }
+    }
+    &.active {
+      > span {
+        background-color: @grenadine-ddo;
+        border: 0;
+        border-radius: 0;
+        margin-right: 6px;
+        font-weight: bold;
+        &:hover {
+          background-color: @grenadine-ddo;
+        }
+      }
+    }
+  }
+}
