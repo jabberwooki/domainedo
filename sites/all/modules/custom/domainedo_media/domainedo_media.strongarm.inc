@@ -223,6 +223,22 @@ function domainedo_media_strongarm() {
       'parseable' => TRUE,
       'formats' => array(),
     ),
+    'square' => array(
+      'name' => 'square',
+      'title' => 'Carré',
+      'description' => '',
+      'render_language' => 'XHTML',
+      'parseable' => TRUE,
+      'formats' => array(),
+    ),
+    'haut_classique' => array(
+      'name' => 'haut_classique',
+      'title' => 'Haut classique',
+      'description' => '',
+      'render_language' => 'XHTML',
+      'parseable' => TRUE,
+      'formats' => array(),
+    ),
   );
   $export['scald_custom_contexts'] = $strongarm;
 
