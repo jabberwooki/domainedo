@@ -281,12 +281,16 @@
     <div class="row">
 
       <?php if (!empty($page['sidebar_first'])): ?>
-          <aside class="col-sm-3" role="complementary">
+          <aside class="col-sm-4" role="complementary">
             <?php print render($page['sidebar_first']); ?>
           </aside>  <!-- /#sidebar-first -->
       <?php endif; ?>
 
-        <section<?php print $content_column_class; ?>>
+        <section class="<?php
+        if (empty($page['topclassicpage'])) print'no-img-top ';
+        if (empty($page['sidebar_first']) && empty($page['sidebar_second']))
+        { print 'col-sm-12'; } else if (!empty($page['sidebar_first']) || !empty($page['sidebar_second']))
+        { print 'col-sm-8'; } else { print 'col-sm-4'; } ?>">
           <?php if (!empty($page['highlighted'])): ?>
               <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
           <?php endif; ?>
@@ -310,7 +314,7 @@
         </section>
 
       <?php if (!empty($page['sidebar_second'])): ?>
-          <aside class="col-sm-3" role="complementary">
+          <aside class="col-sm-4" role="complementary">
             <?php print render($page['sidebar_second']); ?>
           </aside>  <!-- /#sidebar-second -->
       <?php endif; ?>
