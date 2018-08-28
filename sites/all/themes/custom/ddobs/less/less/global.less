@@ -629,12 +629,6 @@ strong {
 }
 /* pagination ****/
 .pagination {
-  .next,
-  .prev,
-  .pager-first,
-  .pager-last {
-    display: none;
-  }
   > li {
     a {
       color: #000;
@@ -660,6 +654,12 @@ strong {
         }
       }
     }
+  }
+  .glyphicon-menu-left:before {
+    content: "\e833" !important;
+  }
+  .glyphicon-menu-right:before {
+    content: "\e834" !important;
   }
 }
 .atom-align-left {
