@@ -43,7 +43,7 @@ function domainedo_shows_context_default_contexts() {
   $context->api_version = 3;
   $context->name = 'fullshow';
   $context->description = '';
-  $context->tag = 'Full Show';
+  $context->tag = 'all layout';
   $context->conditions = array(
     'node' => array(
       'values' => array(
@@ -70,8 +70,46 @@ function domainedo_shows_context_default_contexts() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Full Show');
+  t('all layout');
   $export['fullshow'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'page-all-shows';
+  $context->description = '';
+  $context->tag = 'all layout';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'spectacles/tous-les-spectacles' => 'spectacles/tous-les-spectacles',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views--exp-shows-list' => array(
+          'module' => 'views',
+          'delta' => '-exp-shows-list',
+          'region' => 'headbandfestival',
+          'weight' => '-10',
+        ),
+        'boxes-left_shows_info' => array(
+          'module' => 'boxes',
+          'delta' => 'left_shows_info',
+          'region' => 'headbandfestival',
+          'weight' => '-9',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('all layout');
+  $export['page-all-shows'] = $context;
 
   return $export;
 }

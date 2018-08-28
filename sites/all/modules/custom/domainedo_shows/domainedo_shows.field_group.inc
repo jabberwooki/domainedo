@@ -57,6 +57,7 @@ function domainedo_shows_field_group_info() {
     'weight' => '9',
     'children' => array(
       0 => 'field_festival_poster',
+      1 => 'field_date_en_clair',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -191,10 +192,11 @@ function domainedo_shows_field_group_info() {
       0 => 'field_calendar_archive',
       1 => 'field_scald_file',
       2 => 'field_feuilleter_en_ligne',
-      3 => 'field_view_archives',
-      4 => 'field_facebook',
-      5 => 'link_shows',
-      6 => 'title',
+      3 => 'field_programme_pdf',
+      4 => 'field_view_archives',
+      5 => 'field_facebook',
+      6 => 'link_shows',
+      7 => 'title',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -462,7 +464,7 @@ function domainedo_shows_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Liens et résultats',
-    'weight' => '18',
+    'weight' => '17',
     'children' => array(
       0 => 'field_calendar_archive',
       1 => 'field_no_result',
