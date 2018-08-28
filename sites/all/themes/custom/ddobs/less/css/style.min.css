@@ -43,7 +43,7 @@ h2,h3{page-break-after:avoid}
 .table td,.table th{background-color:#fff!important}
 .table-bordered td,.table-bordered th{border:1px solid #ddd!important}
 }
-.btn,.btn-danger.active,.btn-danger:active,.btn-default.active,.btn-default:active,.btn-info.active,.btn-info:active,.btn-primary.active,.btn-primary:active,.btn-warning.active,.btn-warning:active,.btn.active,.btn:active,.dropdown-menu>.disabled>a:focus,.dropdown-menu>.disabled>a:hover,.form-control,.navbar-toggle,.open>.dropdown-toggle.btn-danger,.open>.dropdown-toggle.btn-default,.open>.dropdown-toggle.btn-info,.open>.dropdown-toggle.btn-primary,.open>.dropdown-toggle.btn-warning{background-image:none}
+.btn,.btn-danger.active,.btn-danger:active,.btn-default.active,.btn-default:active,.btn-info.active,.btn-info:active,.btn-primary.active,.btn-primary:active,.btn-warning.active,.btn-warning:active,.btn.active,.btn:active,.dropdown-menu>.disabled>a:focus,.dropdown-menu>.disabled>a:hover,.form-control,.navbar-toggle,.open>.dropdown-toggle.btn-danger,.open>.dropdown-toggle.btn-default,.open>.dropdown-toggle.btn-info,.open>.dropdown-toggle.btn-primary,.open>.dropdown-toggle.btn-warning,html.js input.form-autocomplete{background-image:none}
 .img-thumbnail,body{background-color:#fff}
 @font-face{font-family:'Glyphicons Halflings';src:url(../bootstrap/fonts/glyphicons-halflings-regular.eot);src:url(../bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'),url(../bootstrap/fonts/glyphicons-halflings-regular.woff2) format('woff2'),url(../bootstrap/fonts/glyphicons-halflings-regular.woff) format('woff'),url(../bootstrap/fonts/glyphicons-halflings-regular.ttf) format('truetype'),url(../bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')}
 .glyphicon{position:relative;top:1px}
@@ -1106,7 +1106,7 @@ a.thumbnail.active,a.thumbnail:focus,a.thumbnail:hover{border-color:#337ab7}
 .alert>p+p{margin-top:5px}
 .alert-dismissable,.alert-dismissible{padding-right:35px}
 .alert-dismissable .close,.alert-dismissible .close{position:relative;top:-2px;right:-21px;color:inherit}
-.modal,.modal-backdrop{right:0;bottom:0;left:0}
+.modal,.modal-backdrop{top:0;right:0;bottom:0;left:0}
 .alert-success{background-color:#dff0d8;border-color:#d6e9c6;color:#3c763d}
 .alert-success hr{border-top-color:#c9e2b3}
 .alert-success .alert-link{color:#2b542c}
@@ -1262,13 +1262,13 @@ a.list-group-item-danger.active,a.list-group-item-danger.active:focus,a.list-gro
 .close:focus,.close:hover{color:#000;text-decoration:none;cursor:pointer;opacity:.5;filter:alpha(opacity=50)}
 button.close{padding:0;background:0 0;border:0;-webkit-appearance:none}
 .modal-content,.popover{background-clip:padding-box}
-.modal{display:none;position:fixed;top:0;-webkit-overflow-scrolling:touch;outline:0}
+.modal{display:none;position:fixed;-webkit-overflow-scrolling:touch;outline:0}
 .modal.fade .modal-dialog{-webkit-transform:translate(0,-25%);-ms-transform:translate(0,-25%);-o-transform:translate(0,-25%);transform:translate(0,-25%);-webkit-transition:-webkit-transform .3s ease-out;-moz-transition:-moz-transform .3s ease-out;-o-transition:-o-transform .3s ease-out;transition:transform .3s ease-out}
 .modal.in .modal-dialog{-webkit-transform:translate(0,0);-ms-transform:translate(0,0);-o-transform:translate(0,0);transform:translate(0,0)}
 .modal-open .modal{overflow-x:hidden;overflow-y:auto}
 .modal-dialog{position:relative;width:auto;margin:10px}
 .modal-content{position:relative;background-color:#fff;border:1px solid #999;border:1px solid rgba(0,0,0,.2);border-radius:6px;-webkit-box-shadow:0 3px 9px rgba(0,0,0,.5);-moz-box-shadow:0 3px 9px rgba(0,0,0,.5);box-shadow:0 3px 9px rgba(0,0,0,.5);outline:0}
-.modal-backdrop{position:fixed;top:0;background-color:#000}
+.modal-backdrop{position:fixed;background-color:#000}
 .modal-backdrop.fade{opacity:0;filter:alpha(opacity=0)}
 .modal-backdrop.in{opacity:.5;filter:alpha(opacity=50)}
 .modal-header{padding:15px;border-bottom:1px solid #e5e5e5}
@@ -1437,7 +1437,6 @@ blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}
 table{border-collapse:collapse;border-spacing:0}
 html.overlay-open .navbar-fixed-top{z-index:400}
 html.js fieldset.collapsed{border-left-width:1px;border-right-width:1px;height:auto}
-html.js input.form-autocomplete{background-image:none}
 html.js .autocomplete-throbber{background-position:100% 2px;background-repeat:no-repeat;display:inline-block;height:15px;margin:2px 0 0 2px;width:15px}
 html.js .autocomplete-throbber.throbbing{background-position:100% -18px}
 body.admin-expanded.admin-vertical.admin-nw .navbar,body.admin-expanded.admin-vertical.admin-sw .navbar{margin-left:260px}
@@ -1656,7 +1655,7 @@ header#navbar #mmenu-custom-buttom span{font-size:.5em;text-transform:uppercase;
 }
 #custom-mega-menu-button{margin-top:5px;float:left}
 #custom-mega-menu-button.close-menu-button{width:27px}
-#custom-mega-menu-button.close-menu-button:before,#custom-mega-menu-button.open-menu-button:before{position:relative;font-style:normal;font-weight:400;speak:none;text-decoration:inherit;width:1em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:fontello;top:1px}
+#custom-mega-menu-button.close-menu-button:before,#custom-mega-menu-button.open-menu-button:before{position:relative;font-style:normal;font-weight:400;speak:none;text-decoration:inherit;width:1em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;top:1px;font-family:fontello}
 #custom-mega-menu-button.close-menu-button:before{display:inline-block;margin-right:10px;content:"\e832";color:red;font-size:2em}
 #custom-mega-menu-button.close-menu-button span{display:none}
 #custom-mega-menu-button.open-menu-button{color:#f74e2d;font-size:.53125em}
@@ -1879,6 +1878,7 @@ footer.container #footer-menus .menu>li>a{color:#000;padding:5px 0;display:block
 .group-show-list .group-tranparent-gradient .group-date-title-desc .field-name-field-show-dates>div,.group-show-list .group-tranparent-gradient .group-date-title-desc .field-name-title>div{padding-left:10px}
 .group-show-list .group-tranparent-gradient{position:absolute;top:60%;height:30%;width:100%;left:0;background:#000;background:linear-gradient(to bottom,rgba(0,0,0,0),#000)}
 .group-show-list .group-tranparent-gradient a,.group-show-list .group-tranparent-gradient div{color:#fff}
+.group-show-list .group-tranparent-gradient a p,.group-show-list .group-tranparent-gradient div p{margin:0!important}
 .group-show-list .group-tranparent-gradient .group-date-title-desc{position:absolute;left:0;bottom:0}
 .group-show-list .group-tranparent-gradient .group-date-title-desc .field-name-field-show-dates{display:table;font-weight:700;margin-bottom:20px}
 .group-show-list .group-tranparent-gradient .group-date-title-desc .field-name-field-show-dates>div:after{display:block;border:4px solid #f74e2d;margin-top:-5px;content:""}
@@ -1940,20 +1940,38 @@ footer.container #footer-menus .menu>li>a{color:#000;padding:5px 0;display:block
 .node-type-show .node-show.view-mode-full #node-show-full-group-lieu{font-size:.876em;background-color:#f74e2d;padding:15px;margin-bottom:20px;color:#fff}
 .node-type-show .node-show.view-mode-full #node-show-full-group-lieu .field-label{text-transform:uppercase}
 .node-type-show .node-show.view-mode-full #node-show-full-group-lieu a{color:#fff;text-decoration:underline}
-.front #quick-acces .view #home-calendar-link:before,.front .more-link a:after,.node-type-festival #headband-festival .group-essential-festival a:before{font-family:fontello;font-style:normal;speak:none;text-decoration:inherit;text-align:center;font-variant:normal;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.front #quick-acces .view #home-calendar-link:before,.front .more-link a:after,.node-type-festival #headband-festival .group-essential-festival a:before,.page-spectacles #headband-festival #block-boxes-left-shows-info #div-link-calendar a:before{font-family:fontello;font-style:normal;speak:none;text-decoration:inherit;text-align:center;font-variant:normal;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .node-type-show .node-show.view-mode-full #node-show-full-group-lieu .field:after{margin-bottom:15px}
 .node-type-show .node-show.view-mode-full #node-show-full-group-lieu .field-name-field-lieu-generique:after{margin-bottom:0}
 .node-type-show .node-show.view-mode-full #node-show-full-group-lieu .field-name-field-location:after{display:block;margin-bottom:20px;content:""}
+.node-type-show .node-show.view-mode-full .like-to-item .field-name-field-festival,.page-spectacles #headband-festival #block-views-exp-shows-list #edit-field-festival-target-id-wrapper .bef-select-as-links>.form-item .form-type-bef-link:first-child{display:none}
 .node-type-show .node-show.view-mode-full .field-name-field-additional-infos,.node-type-show .node-show.view-mode-full .field-name-field-coming-soon,.node-type-show .node-show.view-mode-full .field-name-field-full,.node-type-show .node-show.view-mode-full .field-name-field-reimbursement,.node-type-show .node-show.view-mode-full .field_offline{margin-top:30px;border:2px solid #f74e2d;padding:15px}
 .node-type-show .node-show.view-mode-full .field-name-field-additional-infos .field-label,.node-type-show .node-show.view-mode-full .field-name-field-coming-soon .field-label,.node-type-show .node-show.view-mode-full .field-name-field-full .field-label,.node-type-show .node-show.view-mode-full .field-name-field-reimbursement .field-label,.node-type-show .node-show.view-mode-full .field_offline .field-label{text-transform:uppercase;color:#f74e2d}
 .node-type-show .node-show.view-mode-full .field-name-field-coming-soon,.node-type-show .node-show.view-mode-full .field-name-field-full,.node-type-show .node-show.view-mode-full .field-name-field-reimbursement,.node-type-show .node-show.view-mode-full .field_offline{margin-bottom:30px}
 .node-type-show .node-show.view-mode-full .like-to-label{margin-top:25px;margin-bottom:15px;padding-left:15px;font-size:1.5em}
 .node-type-show .node-show.view-mode-full .like-to-item .field-name-field-boxoffice-url a,.node-type-show .node-show.view-mode-full .like-to-item .field-name-field-show-dates span,.node-type-show .node-show.view-mode-full .like-to-item .field-name-node-link a,.node-type-show .node-show.view-mode-full .like-to-item .field-name-title a{font-size:.8em}
-.node-type-show .node-show.view-mode-full .like-to-item .field-name-field-festival{display:none}
 .node-type-show .node-show.view-mode-full .like-to-item .field-name-field-show-dates>div:after{border-color:#772d2e}
 .node-type-show .node-show.view-mode-full .like-to-item .field-name-node-link{top:-5px;left:4%}
 .node-type-show .node-show.view-mode-full .like-to-item .field-name-field-boxoffice-url{top:-5px;right:10%}
 .node-type-show iframe{width:100%;min-height:350px}
+.page-spectacles h2.page-header{text-indent:-6000px}
+@media (min-width:1200px){.page-spectacles #headband-festival{background:url(../images/bg_all_shows.gif) 50% 0;width:74%;margin:0 auto;min-height:330px}
+}
+.page-spectacles #headband-festival #block-views-exp-shows-list{float:left;width:66.66%;background-color:#efefef;min-height:330px}
+.page-spectacles #headband-festival #block-views-exp-shows-list #edit-field-festival-target-id-wrapper label{color:#000;font-size:1.5em;text-transform:uppercase;margin:40px 0 30px}
+.page-spectacles #headband-festival #block-views-exp-shows-list #edit-field-festival-target-id-wrapper .bef-select-as-links .form-item{float:left}
+.page-spectacles #headband-festival #block-views-exp-shows-list #edit-field-festival-target-id-wrapper .bef-select-as-links .form-item a{color:#FFF;font-size:.875em;text-transform:uppercase;display:block;background-color:#000;padding:15px 20px;margin:0 20px 16px 0}
+.page-spectacles #headband-festival #block-views-exp-shows-list .views-widget-filter-field_show_type_tid .views-widget .form-control a.bef-toggle,.page-spectacles #headband-festival #block-views-exp-shows-list .views-widget-filter-field_show_type_tid>label{display:none}
+.page-spectacles #headband-festival #block-views-exp-shows-list .views-widget-filter-field_show_type_tid .views-widget .form-control{height:auto;padding:0;background-color:transparent;border:0}
+.page-spectacles #headband-festival #block-views-exp-shows-list .views-widget-filter-field_show_type_tid .views-widget .form-control .bef-checkboxes>.form-type-bef-checkbox{float:left}
+.page-spectacles #headband-festival #block-views-exp-shows-list .views-widget-filter-field_show_type_tid .views-widget .form-control .bef-checkboxes>.form-type-bef-checkbox>input{width:10px;float:left;margin-right:3px;border-radius:0!important;background-color:green}
+.page-spectacles #headband-festival #block-views-exp-shows-list .views-widget-filter-field_show_type_tid .views-widget .form-control .bef-checkboxes>.form-type-bef-checkbox>label{margin-right:20px;font-size:1em}
+.page-spectacles #headband-festival #block-views-exp-shows-list button#edit-submit-shows{color:#FFF;font-size:1.125em;text-transform:uppercase;display:block;background-color:#f74e2d;padding:5px 10px;font-weight:700;margin:30px 0 20px}
+.page-spectacles #headband-festival #block-boxes-left-shows-info{min-height:330px;float:left;width:33.34%;background-color:#f74e2d}
+.page-spectacles #headband-festival #block-boxes-left-shows-info:after{display:block;content:"";clear:both;border:2px solid red}
+.page-spectacles #headband-festival #block-boxes-left-shows-info p{color:#FFF;font-size:1.5em;text-transform:uppercase;margin:96px 0 20px 24px;font-weight:700}
+.page-spectacles #headband-festival #block-boxes-left-shows-info #div-link-calendar a{background-color:#fff;color:#000;font-size:1.125em;text-transform:uppercase;margin:10px 0 20px 24px;font-weight:700;padding:12px;border:1.5px solid #000}
+.page-spectacles #headband-festival #block-boxes-left-shows-info #div-link-calendar a:before{position:relative;font-weight:400;display:inline-block;width:1em;margin-right:10px;text-transform:none;content:"\e807";color:#000;font-size:.875em;top:-2px}
 .front #info-flash{background-color:#f74e2d;color:#FFF;font-weight:700;margin:0 0 10px;padding:30px 0}
 .front #info-flash a{color:#FFF;text-transform:uppercase}
 .front #info-flash a.more{display:block;float:right;border:1.5px solid #f74e2d;text-transform:uppercase;font-size:.8125em;padding:15px 17px;background-color:#fff;margin:0 20px 0 0;color:#f74e2d}
@@ -2033,6 +2051,8 @@ footer.container #footer-menus .menu>li>a{color:#000;padding:5px 0;display:block
 .page-zoom-sur .views-field-body p{font-size:1em;line-height:1.25em}
 .node-type-page .field-name-field-image-page-complexe:after{content:"";width:98%;height:85px;position:absolute;bottom:0;left:1%;background:linear-gradient(to bottom,rgba(0,0,0,0),#000)}
 .node-type-page .main-container{position:relative}
-.node-type-page .main-container h2.page-header{position:absolute;top:-60px;border:0;color:#fff;text-transform:uppercase;font-size:2.375em;font-weight:700}
-.node-type-page .main-container h2.page-header:after{display:block;border:4px solid #772d2e;margin-top:-5px;content:""}
+.node-type-page .main-container h2.page-header{position:absolute;top:-60px;border:0;color:#fff;text-transform:uppercase;font-size:2.375em;font-weight:700;border-top:150px}
+.node-type-page .main-container h2.page-header:after{display:block;border:4px solid #772d2e;content:"";margin-top:-7px!important}
 .node-type-page .main-container .field-name-body{margin-top:45px}
+.node-type-page section.no-img-top h2.page-header{position:static;top:0;border:0;text-transform:uppercase;font-size:2.375em;font-weight:700;margin-top:10px;color:#000;display:table}
+.node-type-page section.no-img-top h2.page-header:after{display:block;border:4px solid #772d2e;margin-top:-5px;content:""}
