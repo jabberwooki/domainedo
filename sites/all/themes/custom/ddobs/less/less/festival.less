@@ -1,24 +1,41 @@
 .node-type-festival {
   #headband-festival {
+    .container {
+      @media (max-width: @screen-sm) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
     background: url(../images/bg_gray.gif);
     padding-bottom: 20px;
     .group-affiche-festival {
+      @media (max-width: @screen-sm) {
+        border-bottom: 1px solid @grenadine-ddo;
+      }
+
       position: relative;
       img {
         margin-bottom: 50px;
       }
       .field-name-field-festival-poster {
-        &:after{
+        &:after {
           content: "";
           width: 96%;
           height: 150px;
           position: absolute;
           bottom: 50px;
           left: 16px;
-          background: linear-gradient(to bottom,rgba(0,0,0,0),#000);
+          background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000);
+          @media (max-width: @screen-sm) {
+            width: 92%;
+            height: 150px;
+            position: absolute;
+            bottom: 0px;
+            left: 16px;
+          }
         }
       }
-      .field-name-scald-authors{
+      .field-name-scald-authors {
         display: none;
       }
       .field-name-field-date-en-clair {
@@ -28,8 +45,12 @@
         color: white;
         text-transform: uppercase;
         font-weight: bold;
-        font-size: 2.375em;/* 38/16 */
+        font-size: 2.375em; /* 38/16 */
         .underline-grenadine-off();
+        @media (max-width: @screen-sm) {
+          bottom: 20px;
+          font-size: 1.8em;
+        }
       }
     }
     .group-essential-festival {
@@ -37,7 +58,7 @@
       color: white;
       padding: 25px 30px;
       h2 {
-        font-size: 1.875em;/* 30/16 */
+        font-size: 1.875em; /* 30/16 */
         text-transform: uppercase;
         margin: 0 25px 0 0;
         font-weight: bold;
@@ -45,45 +66,45 @@
       }
       a {
         color: white;
-        font-size: 0.6875em;/* 11/16 */
+        font-size: 0.6875em; /* 11/16 */
         text-transform: uppercase;
         display: block;
         border-bottom: 1px solid white;
         padding-bottom: 10px;
         margin-bottom: 15px;
-        &:before{
+        &:before {
           .glyphicon();
           color: white;
-          font-size: 1.25em;/* 20/16 */
+          font-size: 1.25em; /* 20/16 */
         }
       }
-      .field-name-link-shows{
-        a:before{
+      .field-name-link-shows {
+        a:before {
           content: "\f291";
         }
       }
-      .field-name-field-programme-pdf{
-        a:before{
+      .field-name-field-programme-pdf {
+        a:before {
           content: "\e823";
         }
       }
       .field-name-field-feuilleter-en-ligne {
-        a:before{
+        a:before {
           content: "\e82f";
         }
       }
-       .field-name-field-calendar-archive {
-        a:before{
+      .field-name-field-calendar-archive {
+        a:before {
           content: "\e807";
         }
       }
-      .field-name-field-view-archives{
-        a:before{
+      .field-name-field-view-archives {
+        a:before {
           content: "\f0ae";
         }
       }
-       .field-name-field-facebook{
-        a:before{
+      .field-name-field-facebook {
+        a:before {
           content: "\e801";
         }
       }
@@ -91,15 +112,23 @@
         display: none;
       }
     }
+
   }
   .group-text-video {
     iframe {
       width: 100%;
       height: 320px;
     }
+    @media (max-width: @screen-sm) {
+      > div > p,
+      > div > div,
+      iframe {
+        padding: 0 15px;
+      }
+    }
   }
   h3.show-festival-title {
-    font-size: 1.5em;/* 24/16 */
+    font-size: 1.5em; /* 24/16 */
     margin: 20px 0;
   }
   .node-show {

@@ -154,7 +154,7 @@
         </div>
     </div>
 </header>
-<div class="container">
+<div class="container" id="custom-msg">
   <?php print $messages; ?>
 </div>
 <!-- Search Region ---------------------------------------------------->
@@ -190,7 +190,7 @@
 </div>
 <!-- FIN MEGA MENU ------------------------------------------------------------>
 <!-- breadcrumb --------------------------------------------------------------->
-<div class="container">
+<div class="container" id="custom-breadcrump">
   <?php if (!empty($breadcrumb)): print $breadcrumb;
   endif; ?>
 </div>

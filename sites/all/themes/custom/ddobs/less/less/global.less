@@ -1,6 +1,11 @@
 
 body {
   font-family: Gotham, Arial, sans-serif;
+  #custom-msg {
+    @media (max-width: @screen-sm) {
+      height: 70px;
+    }
+  }
 }
 
 #logo-ddobs {
@@ -81,11 +86,19 @@ body {
 /* Menu principal *****************************************************************************************************/
 header#navbar {
   @media (max-width: @screen-sm) {
+    padding-top: 15px;
+    position: fixed !important;
+    margin-top: 0 !important;
+    z-index: 2;
+    width: 99%;
+    background-color: white;
+    #logo-ddobs {
+      position: relative;
+      top: -10px;
+    }
     #row-menu-nav-search {
       position: static;
     }
-
-    position: relative;
     #mmenu-custom-buttom {
       position: absolute;
       top: 0;
@@ -197,6 +210,9 @@ header#navbar {
         padding-left: 15px;
         li {
           border: 0 !important;
+          a {
+            color: #000;
+          }
         }
       }
 
@@ -209,12 +225,14 @@ header#navbar {
           text-transform: uppercase;
         }
         &.active-trail {
-          background-color: #E4E4E4;
           > a{
-            color: @grenadine-ddo;
+            color: @grenadine-ddo !important;
           }
           a {
             color: #000;
+          }
+          ul {
+            background-color: #E4E4E4;
           }
         }
       }
@@ -241,9 +259,11 @@ header#navbar {
               }
             }
             &.active-trail {
-              background-color: #E4E4E4;
               > a {
                 color: @grenadine-ddo;
+              }
+              ul {
+                background-color: #E4E4E4;
               }
             }
           }
