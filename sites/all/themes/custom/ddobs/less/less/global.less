@@ -163,32 +163,130 @@ header#navbar {
   margin-top: -50px;
   margin-left: 10px;
 }
+#mm-blocker {
+  @media (max-width: @screen-md) {
+    background: none !important;
+  }
+}
+.mmenu-nav.mm-fresh.mm-hasheader {
+  padding-right: 0;
+  > .mm-panel {
+    margin-top: 15px;
+    padding-top: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    [class^="icon-"]:before{
+      display: none;
+    }
+    .mm-list {
+      > li {
+        > ul {
+          > li {
+            > a {
+              padding-left: 0 !important;
+              i {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    > .mm-list {
+      ul {
+        padding-left: 15px;
+        li {
+          border: 0 !important;
+        }
+      }
 
+      > li {
+        border: 0;
+        > a{
+          color: black;
+          font-weight: bold;
+          padding-left: 0 !important;
+          text-transform: uppercase;
+        }
+        &.active-trail {
+          background-color: #E4E4E4;
+          > a{
+            color: @grenadine-ddo;
+          }
+          a {
+            color: #000;
+          }
+        }
+      }
+      > li > span { /* les menus autres que le principal */
+        padding: 0;
+        > ul.mm-list {
+          padding: 0;
+          i {
+            display: none;
+          }
+          > li {
+            padding-left: 0 !important;
+            > a {
+              color: black;
+              font-weight: bold;
+              padding-left: 15px !important;
+              text-transform: uppercase;
+            }
+            ul.mm-list {
+              padding-left: 0px;
+              a {
+                color: #000;
+                padding-left: 15px !important;
+              }
+            }
+            &.active-trail {
+              background-color: #E4E4E4;
+              > a {
+                color: @grenadine-ddo;
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
+#mmenu_left {
+  @media (max-width: @screen-md) {
+    width: 100% !important;
+    background-color: @gris-clair-ddo;
+  }
+}
 #menu-close {
   @media (min-width: @screen-sm) {
     display: none;
   }
   @media (max-width: @screen-sm) {
     width: 20%;
-    height: 100%;
+    height:70px;
     overflow: hidden;
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     z-index: 9999;
-    background-color: transparent;
+    background-color: white;
     text-align: right;
-    padding-top: 80px;
     padding-right: 10px;
     &:before {
       .glyphicon();
       content: "\e832";
-      color: white;
+      color: @grenadine-ddo;
       font-size: 2em;
+      background-color: white;
+      text-decoration: none;
+      top: 10px;
+      left: -12px;
+      border: 5px solid white;
     }
   }
 }
-
 /* Mega Menu **********************************************************************************************************/
 #custom-mega-menu-button {
   margin-top: 5px;
