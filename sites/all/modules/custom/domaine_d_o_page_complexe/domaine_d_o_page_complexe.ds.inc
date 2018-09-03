@@ -31,20 +31,6 @@ function domaine_d_o_page_complexe_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_texte_page_complexe' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'fi' => TRUE,
-          'fi-el' => 'div',
-          'fi-cl' => 'field-name-field-texte-page-complexe',
-          'fi-at' => '',
-          'fi-def-at' => FALSE,
-          'fi-odd-even' => FALSE,
-          'fi-first-last' => FALSE,
-        ),
-      ),
-    ),
     'field_titre_niveau_3' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -118,17 +104,19 @@ function domaine_d_o_page_complexe_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_titre_niveau_3',
+        0 => 'group_img_txt',
         1 => 'field_image_page_complexe',
         2 => 'field_summary_page_complexe',
-        3 => 'field_texte_page_complexe',
+        3 => 'field_titre_niveau_3',
+        4 => 'field_link_more_info',
       ),
     ),
     'fields' => array(
-      'field_titre_niveau_3' => 'ds_content',
+      'group_img_txt' => 'ds_content',
       'field_image_page_complexe' => 'ds_content',
       'field_summary_page_complexe' => 'ds_content',
-      'field_texte_page_complexe' => 'ds_content',
+      'field_titre_niveau_3' => 'ds_content',
+      'field_link_more_info' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(

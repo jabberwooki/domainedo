@@ -8,6 +8,9 @@
  * Implements hook_ctools_plugin_api().
  */
 function domaine_d_o_page_complexe_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "context" && $api == "context") {
+    return array("version" => "3");
+  }
   if ($module == "ds" && $api == "ds") {
     return array("version" => "1");
   }
@@ -26,7 +29,7 @@ function domaine_d_o_page_complexe_node_info() {
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Titre'),
       'help' => '',
     ),
   );
