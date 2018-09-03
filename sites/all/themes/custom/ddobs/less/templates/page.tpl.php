@@ -189,12 +189,7 @@
     </div>
 </div>
 <!-- FIN MEGA MENU ------------------------------------------------------------>
-<!-- breadcrumb --------------------------------------------------------------->
-<div class="container" id="custom-breadcrump">
-  <?php if (!empty($breadcrumb)): print $breadcrumb;
-  endif; ?>
-</div>
-<!-- Fin breadcrumb ----------------------------------------------------------->
+
 <!-- Home headband ----------------------------------------------------------->
 <div id="homeheadband">
   <?php if (!empty($page['infoflash'])): ?>
