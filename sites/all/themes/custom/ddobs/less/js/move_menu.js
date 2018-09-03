@@ -44,8 +44,10 @@ jQuery(function($){
     "class": "open-menu-button",
   }).prependTo("#navbar-collapse")
     .click(function(){
+      var h = window.innerHeight;
       $(this).toggleClass("open-menu-button close-menu-button");
-      $("#megamenu").slideToggle(400);
+      $("#megamenu").height(h)
+      $("#megamenu").fadeToggle(400);
     });
   /**
    * mv last li of main menu to put it on the second meganmenu's columns
