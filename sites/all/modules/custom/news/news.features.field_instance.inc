@@ -29,7 +29,7 @@ function news_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'right_now' => array(
         'label' => 'hidden',
@@ -112,7 +112,7 @@ function news_field_default_field_instances() {
           'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'right_now' => array(
         'label' => 'above',
@@ -186,7 +186,7 @@ function news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 18,
       ),
       'right_now' => array(
         'label' => 'above',
@@ -252,7 +252,7 @@ function news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 22,
       ),
       'right_now' => array(
         'label' => 'above',
@@ -683,12 +683,9 @@ function news_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'domainedo_media',
-        'settings' => array(
-          'link' => 0,
-        ),
-        'type' => 'full',
-        'weight' => 0,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
       ),
       'right_now' => array(
         'label' => 'hidden',
@@ -826,7 +823,7 @@ function news_field_default_field_instances() {
           'link' => 0,
         ),
         'type' => 'full',
-        'weight' => 3,
+        'weight' => 0,
       ),
       'right_now' => array(
         'label' => 'above',
@@ -890,7 +887,7 @@ function news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 20,
+        'weight' => 21,
       ),
       'right_now' => array(
         'label' => 'above',
@@ -956,7 +953,7 @@ function news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 23,
       ),
       'right_now' => array(
         'label' => 'above',
