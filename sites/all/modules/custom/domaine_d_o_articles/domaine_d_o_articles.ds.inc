@@ -17,19 +17,6 @@ function domaine_d_o_articles_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'article';
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
-    'field_scald_image' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => 'right',
-          'ow-def-cl' => FALSE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
-        ),
-      ),
-    ),
     'field_scald_video' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -246,19 +233,15 @@ function domaine_d_o_articles_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_scald_image',
+        0 => 'body',
         1 => 'field_scald_video',
-        2 => 'body',
-        3 => 'field_date_de_modification',
-        4 => 'sharethis',
+        2 => 'field_date_de_modification',
       ),
     ),
     'fields' => array(
-      'field_scald_image' => 'ds_content',
-      'field_scald_video' => 'ds_content',
       'body' => 'ds_content',
+      'field_scald_video' => 'ds_content',
       'field_date_de_modification' => 'ds_content',
-      'sharethis' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(

@@ -22,7 +22,7 @@ function domaine_d_o_articles_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 0,
       ),
       'frontpage_block' => array(
         'label' => 'hidden',
@@ -87,7 +87,7 @@ function domaine_d_o_articles_field_default_field_instances() {
           'show_remaining_days' => 0,
         ),
         'type' => 'date_default',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'frontpage_block' => array(
         'label' => 'hidden',
@@ -148,10 +148,9 @@ function domaine_d_o_articles_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 25,
+        'type' => 'hidden',
+        'weight' => 23,
       ),
       'frontpage_block' => array(
         'label' => 'above',
@@ -203,10 +202,9 @@ function domaine_d_o_articles_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 21,
+        'type' => 'hidden',
+        'weight' => 19,
       ),
       'frontpage_block' => array(
         'label' => 'above',
@@ -248,17 +246,9 @@ function domaine_d_o_articles_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'date',
-        'settings' => array(
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-          'show_remaining_days' => FALSE,
-        ),
-        'type' => 'date_default',
-        'weight' => 24,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 22,
       ),
       'frontpage_block' => array(
         'label' => 'above',
@@ -311,10 +301,9 @@ function domaine_d_o_articles_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 22,
+        'type' => 'hidden',
+        'weight' => 20,
       ),
       'frontpage_block' => array(
         'label' => 'above',
@@ -362,10 +351,9 @@ function domaine_d_o_articles_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'domainedo_media',
         'settings' => array(),
-        'type' => 'full_show',
-        'weight' => 0,
+        'type' => 'hidden',
+        'weight' => 3,
       ),
       'frontpage_block' => array(
         'label' => 'hidden',
@@ -480,7 +468,7 @@ function domaine_d_o_articles_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 18,
       ),
       'frontpage_block' => array(
         'label' => 'above',
@@ -524,7 +512,7 @@ function domaine_d_o_articles_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 17,
       ),
       'frontpage_block' => array(
         'label' => 'above',
@@ -569,10 +557,9 @@ function domaine_d_o_articles_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 23,
+        'type' => 'hidden',
+        'weight' => 21,
       ),
       'frontpage_block' => array(
         'label' => 'above',

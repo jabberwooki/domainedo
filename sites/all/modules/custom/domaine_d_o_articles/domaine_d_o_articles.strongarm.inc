@@ -55,6 +55,9 @@ function domaine_d_o_articles_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'right_now' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

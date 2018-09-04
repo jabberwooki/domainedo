@@ -55,7 +55,6 @@ features[field_instance][] = node-article-field_scald_video
 features[field_instance][] = node-article-field_tags
 features[field_instance][] = node-article-field_thematique_article
 features[field_instance][] = node-article-field_visible_bas_accueil
-features[menu_links][] = main-menu_coulisses:blog
 features[node][] = article
 features[taxonomy][] = tags
 features[taxonomy][] = thematique_article
