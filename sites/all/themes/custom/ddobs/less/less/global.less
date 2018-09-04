@@ -154,11 +154,45 @@ header#navbar {
 .navbar-collapse {
   padding: 0;
 }
+/* Menu principal classique desktop ***********************************************************************************/
+#initial-main-nav {
+  ul.navbar-nav {
+    > li {
+      &.active,
+      &.active-trail {
+        a {
+          color: @grenadine-ddo;
+          background-color: transparent;
+        }
+      }
+      a:hover {
+        color: @grenadine-ddo;
+      }
+      span.caret {
+        display: none;
+      }
+      > ul {
+        display: none;
+        height: 0 !important;
+        background-color: transparent !important;
+        border: 0;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        width: 1px !important;
+         li {
+           display: none;
+         }
+      }
+    }
+  }
+}
 
 /* Menus mobiles ******************************************************************************************************/
 #mmenu_left {
   margin-top: 80px;
   padding-top: 0 !important;
+  max-width: 100%;
   .mm-header {
     display: none;
   }
@@ -225,12 +259,20 @@ header#navbar {
           text-transform: uppercase;
         }
         &.active-trail {
-          > a{
+          > a {
             color: @grenadine-ddo !important;
+            &:hover {
+              color: #000 !important;
+            }
           }
           a {
             color: #000;
           }
+          ul {
+            background-color: #E4E4E4;
+          }
+        }
+        &.mm-opened {
           ul {
             background-color: #E4E4E4;
           }
@@ -671,6 +713,13 @@ footer.container {
 }
 
 /* Fin Menu secondaire de la zone de gauche ***************************************************************************/
+/* Grille grid ********************************************************************************************************/
+.no-gutter {
+  [class*="col-"] {
+    padding: 0;
+  }
+}
+/* Fin de la grille ***************************************************************************************************/
 /* Divers *************************************************************************************************************/
 .cartouche-noir {
   display: block;
@@ -782,6 +831,15 @@ strong {
     -moz-transition: all .25s ease-in-out;
     -webkit-transition: all .25s ease-in-out;
   }
+}
+.h2-header-simple {
+  position: static;
+  top: 0;
+  border: 0;
+  .big-off-orange-title();
+  margin-top: 10px;
+  color: #000;
+  display: table;
 }
 /* pagination ****/
 .pagination {

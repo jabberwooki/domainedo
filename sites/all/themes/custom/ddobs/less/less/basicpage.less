@@ -4,15 +4,17 @@
     display: none;
   }
   .group-img-wrapper {
-    .field-name-field-image-page-complexe {
-      &:after{
-        content: "";
-        width: 98%;
-        height: 85px;
-        position: absolute;
-        bottom: 0;
-        left: 1%;
-        background: linear-gradient(to bottom,rgba(0,0,0,0),#000);
+    @media (min-width: @screen-sm) {
+      .field-name-field-image-page-complexe {
+        &:after {
+          content: "";
+          width: 100%;
+          height: 85px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000);
+        }
       }
     }
   }
@@ -20,26 +22,24 @@
   .main-container {
     position: relative;
     h2.page-header {
-      position: absolute;
-      top: -60px;
-      border: 0;
+      @media (min-width: @screen-sm) {
+        position: absolute;
+        top: -60px;
+        border: 0;
+        border-top: 150px;
+        color: #FFF;
+      }
+
       .big-off-orange-title();
       &:after {
         margin-top: -7px !important;
       }
-      border-top: 150px;
+      color: #000;
     }
-
   }
   section.no-img-top {
     h2.page-header {
-      position: static;
-      top: 0;
-      border: 0;
-      .big-off-orange-title();
-      margin-top: 10px;
-      color: #000;
-      display: table;
+      .h2-header-simple();
     }
   }
   .field-name-field-red-frame-left,
@@ -110,11 +110,12 @@
   }
   .paragraphs-items-field-paragraphe-complexe {
     > div {
-      
       > div > .field-item {
-        float: left;
-        width: 30%;
-        margin-right: 2%;
+        @media (min-width: @screen-sm) {
+          float: left;
+          width: 30%;
+          margin-right: 2%;
+        }
         .group-img-txt {
           &:after {
             display: block;
@@ -141,6 +142,7 @@
         .field-name-field-link-more-info {
           a {
             .button-red-link();
+            margin-bottom: 20px;
             text-transform: uppercase;
             font-size: 0.71875em; /* 11.5/16 */
             &:after {
