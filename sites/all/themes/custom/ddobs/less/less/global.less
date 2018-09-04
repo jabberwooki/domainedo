@@ -661,6 +661,24 @@ footer.container {
     font-size: 0.875em; /* 14/16 */
     margin: 10px 0;
   }
+  ul {
+    margin: 10px 0 20px 0;
+    li {
+      &:before {
+        .glyphicon();
+        content: "\e834";
+        color: #000;;
+        margin-right: 5px;
+        font-size: 0.8em;
+      }
+      h2,
+      h3,
+      h4,
+      h5 {
+        display: inline;
+      }
+    }
+  }
 }
 .node-page {
   h3 {
