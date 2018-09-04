@@ -302,7 +302,7 @@ function domainedo_media_default_scald_context_config() {
       '*' => 'passthrough',
     ),
     'image' => array(
-      '*' => 'style-top-show-1366x489',
+      '*' => 'style-top-show-1935x693',
     ),
     'twitter' => array(
       '*' => 'passthrough',
@@ -356,7 +356,7 @@ function domainedo_media_default_scald_context_config() {
       '*' => 'passthrough',
     ),
     'image' => array(
-      '*' => 'style-large-1366x266',
+      '*' => 'style-large-1935x377',
     ),
     'twitter' => array(
       '*' => 'passthrough',
@@ -506,60 +506,6 @@ function domainedo_media_default_scald_context_config() {
     'height' => '378px',
   );
   $export['list'] = $context_config;
-
-  $context_config = new stdClass();
-  $context_config->disabled = FALSE; /* Edit this to true to make a default context_config disabled initially */
-  $context_config->api_version = 1;
-  $context_config->context = 'petit_100';
-  $context_config->transcoder = array(
-    'audio' => array(
-      '*' => 'passthrough',
-    ),
-    'file' => array(
-      '*' => 'passthrough',
-    ),
-    'gallery' => array(
-      '*' => 'passthrough',
-    ),
-    'image' => array(
-      '*' => 'style-100px-large',
-    ),
-    'twitter' => array(
-      '*' => 'passthrough',
-    ),
-    'video' => array(
-      '*' => 'passthrough',
-    ),
-  );
-  $context_config->player = array(
-    'audio' => array(
-      '*' => 'default',
-      'settings' => array(),
-    ),
-    'file' => array(
-      '*' => 'default',
-    ),
-    'gallery' => array(
-      '*' => 'default',
-      'settings' => array(),
-    ),
-    'image' => array(
-      '*' => 'default',
-      'settings' => array(),
-    ),
-    'twitter' => array(
-      '*' => 'default',
-    ),
-    'video' => array(
-      '*' => 'default',
-      'settings' => array(),
-    ),
-  );
-  $context_config->data = array(
-    'width' => '',
-    'height' => '',
-  );
-  $export['petit_100'] = $context_config;
 
   $context_config = new stdClass();
   $context_config->disabled = FALSE; /* Edit this to true to make a default context_config disabled initially */
@@ -749,7 +695,7 @@ function domainedo_media_default_scald_context_config() {
       '*' => 'passthrough',
     ),
     'image' => array(
-      '*' => 'style-small_150',
+      '*' => 'passthrough',
     ),
     'twitter' => array(
       '*' => 'passthrough',
