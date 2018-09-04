@@ -232,7 +232,7 @@
 <!-- FIN HOME HEADBAND   ---------------------------------------------------->
 <!-- IMAGE FULL SHOW -------------------------------------------------------->
 <div id="imgfullshow">
-    <div class="container-fluid">
+    <div class="container-fluid no-gutter">
         <div class="row">
             <div class="col-md-12">
               <?php if (!empty($page['imagefullshow'])): ?>
@@ -246,9 +246,9 @@
 <!-- TOP CLASSIC PAGE --------------------------------------------------------->
 <?php if (!empty($page['topclassicpage'])): ?>
 <div id="topclassicpage">
-    <div class="container-fluid">
+    <div class="container-fluid no-gutter">
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-12">
                 <?php print render($page['topclassicpage']); ?>
             </div>
         </div>
