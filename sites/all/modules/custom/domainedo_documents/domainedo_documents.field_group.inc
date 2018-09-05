@@ -102,6 +102,70 @@ function domainedo_documents_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_img_wrapper|node|tech_document|full';
+  $field_group->group_name = 'group_img_wrapper';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'tech_document';
+  $field_group->mode = 'full';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Entoure image',
+    'weight' => '24',
+    'children' => array(
+      0 => 'field_scald_image',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Entoure image',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-img-wrapper field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_img_wrapper|node|tech_document|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_img_wrapper|taxonomy_term|espace_pro|full';
+  $field_group->group_name = 'group_img_wrapper';
+  $field_group->entity_type = 'taxonomy_term';
+  $field_group->bundle = 'espace_pro';
+  $field_group->mode = 'full';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Entoure image',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_section_image',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Entoure image',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-img-wrapper field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_img_wrapper|taxonomy_term|espace_pro|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_onglets|node|tech_document|form';
   $field_group->group_name = 'group_onglets';
   $field_group->entity_type = 'node';
@@ -227,6 +291,7 @@ function domainedo_documents_field_group_info() {
   // Included for use with string extractors like potx.
   t('Autres');
   t('Description et galerie');
+  t('Entoure image');
   t('Fichiers en téléchargement');
   t('Groupe Titre image');
   t('Onglets');

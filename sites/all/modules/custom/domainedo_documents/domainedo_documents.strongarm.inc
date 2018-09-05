@@ -28,7 +28,7 @@ function domainedo_documents_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_tech_document';
-  $strongarm->value = 'edit-page-title';
+  $strongarm->value = 'edit-comment';
   $export['additional_settings__active_tab_tech_document'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -196,7 +196,7 @@ function domainedo_documents_strongarm() {
         'custom_settings' => TRUE,
       ),
       'full' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'rss' => array(
         'custom_settings' => FALSE,
@@ -231,6 +231,9 @@ function domainedo_documents_strongarm() {
       'liste_aussi' => array(
         'custom_settings' => FALSE,
       ),
+      'right_now' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -255,6 +258,10 @@ function domainedo_documents_strongarm() {
           ),
           'teaser' => array(
             'weight' => '2',
+            'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '23',
             'visible' => FALSE,
           ),
         ),
@@ -307,7 +314,7 @@ function domainedo_documents_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '2',
+            'weight' => '0',
             'visible' => TRUE,
           ),
           'section' => array(

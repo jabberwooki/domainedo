@@ -58,8 +58,8 @@ function domainedo_documents_ds_layout_settings_info() {
         2 => 'group_zone_download',
         3 => 'field_download_col_1',
         4 => 'field_download_col_2',
-        5 => 'field_download_col_3',
-        6 => 'field_references_techniques',
+        5 => 'field_references_techniques',
+        6 => 'field_download_col_3',
       ),
     ),
     'fields' => array(
@@ -68,8 +68,8 @@ function domainedo_documents_ds_layout_settings_info() {
       'group_zone_download' => 'footer',
       'field_download_col_1' => 'footer',
       'field_download_col_2' => 'footer',
-      'field_download_col_3' => 'footer',
       'field_references_techniques' => 'footer',
+      'field_download_col_3' => 'footer',
     ),
     'classes' => array(),
     'wrappers' => array(
