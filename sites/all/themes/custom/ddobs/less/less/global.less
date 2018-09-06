@@ -652,38 +652,42 @@ footer.container {
   }
   /* Fin menu bas *********************************/
 }
-
 /* Textes *************************************************************************************************************/
 #block-system-main,
 .region-headbandfestival {
+
   p {
     line-height: 1.25em; /* 20/16 */
     font-size: 0.875em; /* 14/16 */
     margin: 10px 0;
   }
-  ul {
-    margin: 10px 0 20px 0;
-    li {
-      &:before {
-        .glyphicon();
-        content: "\e834";
-        color: #000;;
-        margin-right: 5px;
-        font-size: 0.8em;
-      }
-      h2,
-      h3,
-      h4,
-      h5 {
-        display: inline;
+  div:not(.contextual-links-wrapper) {
+    ul {
+      margin: 10px 0 20px 0;
+      li {
+        &:before {
+          .glyphicon();
+          content: "\e834";
+          color: #000;;
+          margin-right: 5px;
+          font-size: 0.8em;
+        }
+        h2,
+        h3,
+        h4,
+        h5 {
+          display: inline;
+        }
       }
     }
   }
+
 }
 .node-page {
   h3 {
     font-size: 1.75em;/*28/16*/
     color: @grenadine-ddo;
+    margin: 20px 0 10px 0;
   }
   h4 {
     font-size: 1.5em;/*24/16*/
@@ -699,7 +703,14 @@ footer.container {
 
 /* Fin texte **********************************************************************************************************/
 /* Menu secondaire de la zone de gauche *******************************************************************************/
+
 .region-sidebar-first {
+  @media (max-width: @screen-sm) {
+    display: none;
+  }
+  &.well {
+    padding: 0;
+  }
     background-color: white;
     border: 0;
   a {
@@ -718,6 +729,13 @@ footer.container {
     li.active {
       > a {
         color: @grenadine-ddo;
+      }
+      > ul {
+        > li {
+          > a {
+            background-color: transparent;
+          }
+        }
       }
     }
     > li {
