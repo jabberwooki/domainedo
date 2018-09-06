@@ -276,7 +276,7 @@
     <div class="row">
 
       <?php if (!empty($page['sidebar_first'])): ?>
-          <aside class="col-sm-4" role="complementary">
+          <aside class="col-sm-3" role="complementary">
             <?php print render($page['sidebar_first']); ?>
           </aside>  <!-- /#sidebar-first -->
       <?php endif; ?>
@@ -285,7 +285,7 @@
         if (empty($page['topclassicpage'])) print'no-img-top ';
         if (empty($page['sidebar_first']) && empty($page['sidebar_second']))
         { print 'col-sm-12'; } else if (!empty($page['sidebar_first']) || !empty($page['sidebar_second']))
-        { print 'col-sm-8'; } else { print 'col-sm-4'; } ?>">
+        { print 'col-sm-8 col-sm-offset-1'; } else { print 'col-sm-4'; } ?>">
           <?php if (!empty($page['highlighted'])): ?>
               <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
           <?php endif; ?>
