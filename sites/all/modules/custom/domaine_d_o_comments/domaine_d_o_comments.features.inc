@@ -29,7 +29,7 @@ function domaine_d_o_comments_default_entityform_type() {
       "draft_redirect_path" : "",
       "draft_button_text" : "",
       "draft_save_text" : { "value" : "", "format" : "full_html" },
-      "submit_button_text" : "Commenter",
+      "submit_button_text" : "Commentez",
       "submit_confirm_msg" : "",
       "your_submissions" : "",
       "disallow_resubmit_msg" : "",
