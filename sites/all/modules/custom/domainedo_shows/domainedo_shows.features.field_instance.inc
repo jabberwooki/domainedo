@@ -121,6 +121,58 @@ function domainedo_shows_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-festival-field_date_en_clair'.
+  $field_instances['node-festival-field_date_en_clair'] = array(
+    'bundle' => 'festival',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Date à écrire en suivant la forme de l\'exemple suivant : "Du 12 au 13 mai 2018". Elle s\'affichera sur l\'image de présentation du festival. ',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 20,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 9,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_date_en_clair',
+    'label' => 'Date en clair',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 2,
+    ),
+  );
+
   // Exported field_instance: 'node-festival-field_facebook'.
   $field_instances['node-festival-field_facebook'] = array(
     'bundle' => 'festival',
@@ -5525,6 +5577,8 @@ function domainedo_shows_field_default_field_instances() {
   t('Artiste associé');
   t('Billetterie indisponible');
   t('Coproducteurs');
+  t('Date en clair');
+  t('Date à écrire en suivant la forme de l\'exemple suivant : "Du 12 au 13 mai 2018". Elle s\'affichera sur l\'image de présentation du festival. ');
   t('Date(s)');
   t('De');
   t('Description');

@@ -25,7 +25,7 @@ function domainedo_shows_default_scald_context_config() {
       '*' => 'passthrough',
     ),
     'image' => array(
-      '*' => 'style-small_150',
+      '*' => 'passthrough',
     ),
     'twitter' => array(
       '*' => 'passthrough',

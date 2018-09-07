@@ -175,6 +175,7 @@ features[field_group][] = group_wrap_book|node|show|full
 features[field_group][] = group_wrapper_distribution|node|show|full
 features[field_instance][] = node-festival-body
 features[field_instance][] = node-festival-field_calendar_archive
+features[field_instance][] = node-festival-field_date_en_clair
 features[field_instance][] = node-festival-field_facebook
 features[field_instance][] = node-festival-field_festival_name
 features[field_instance][] = node-festival-field_festival_poster
