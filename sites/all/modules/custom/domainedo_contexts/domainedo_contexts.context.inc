@@ -60,7 +60,7 @@ function domainedo_contexts_context_default_contexts() {
   $context->api_version = 3;
   $context->name = 'classic_page';
   $context->description = '';
-  $context->tag = 'Classic page';
+  $context->tag = 'all layout';
   $context->conditions = array(
     'node' => array(
       'values' => array(
@@ -87,7 +87,7 @@ function domainedo_contexts_context_default_contexts() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Classic page');
+  t('all layout');
   $export['classic_page'] = $context;
 
   $context = new stdClass();
@@ -107,12 +107,6 @@ function domainedo_contexts_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'menu_block-2' => array(
-          'module' => 'menu_block',
-          'delta' => '2',
-          'region' => 'sidebar_first',
-          'weight' => '-10',
-        ),
         'menu-menu-top-courtesy-nav' => array(
           'module' => 'menu',
           'delta' => 'menu-top-courtesy-nav',
@@ -181,41 +175,6 @@ function domainedo_contexts_context_default_contexts() {
   t('Partout sur le site desktop sauf en page d\'accueil et sur les pages de spectacles');
   t('desktop layout ');
   $export['desktop-no-show'] = $context;
-
-  $context = new stdClass();
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
-  $context->api_version = 3;
-  $context->name = 'festival';
-  $context->description = '';
-  $context->tag = 'festival';
-  $context->conditions = array(
-    'node' => array(
-      'values' => array(
-        'festival' => 'festival',
-      ),
-      'options' => array(
-        'node_form' => '0',
-      ),
-    ),
-  );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'ds_extras-headband_festival' => array(
-          'module' => 'ds_extras',
-          'delta' => 'headband_festival',
-          'region' => 'headbandfestival',
-          'weight' => '-10',
-        ),
-      ),
-    ),
-  );
-  $context->condition_mode = 0;
-
-  // Translatables
-  // Included for use with string extractors like potx.
-  t('festival');
-  $export['festival'] = $context;
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
