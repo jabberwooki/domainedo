@@ -61,5 +61,4 @@ features[taxonomy][] = thematique_article
 features[variable][] = field_bundle_settings_node__article
 features[variable][] = pathauto_node_article_pattern
 features[variable][] = sharethis_article_options
-features[views_view][] = articles
 project path = sites/all/modules/custom

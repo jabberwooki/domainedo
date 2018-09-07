@@ -56,7 +56,7 @@ function domaine_d_o_articles_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Sort criterion: Nœud: Date de modification (field_date_de_modification) */
+  /* Sort criterion: Content: Date de modification (field_date_de_modification) */
   $handler->display->display_options['sorts']['field_date_de_modification_value']['id'] = 'field_date_de_modification_value';
   $handler->display->display_options['sorts']['field_date_de_modification_value']['table'] = 'field_data_field_date_de_modification';
   $handler->display->display_options['sorts']['field_date_de_modification_value']['field'] = 'field_date_de_modification_value';
