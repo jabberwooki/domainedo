@@ -68,6 +68,58 @@ function domainedo_media_default_scald_context_config() {
   $context_config = new stdClass();
   $context_config->disabled = FALSE; /* Edit this to true to make a default context_config disabled initially */
   $context_config->api_version = 1;
+  $context_config->context = 'encemoment';
+  $context_config->transcoder = array(
+    'audio' => array(
+      '*' => 'passthrough',
+    ),
+    'file' => array(
+      '*' => 'passthrough',
+    ),
+    'gallery' => array(
+      '*' => 'passthrough',
+    ),
+    'image' => array(
+      '*' => 'style-image_763x550',
+    ),
+    'twitter' => array(
+      '*' => 'passthrough',
+    ),
+    'video' => array(
+      '*' => 'passthrough',
+    ),
+  );
+  $context_config->player = array(
+    'audio' => array(
+      '*' => 'default',
+    ),
+    'file' => array(
+      '*' => 'default',
+    ),
+    'gallery' => array(
+      '*' => 'default',
+    ),
+    'image' => array(
+      '*' => 'default',
+      'settings' => array(),
+    ),
+    'twitter' => array(
+      '*' => 'default',
+    ),
+    'video' => array(
+      '*' => 'default',
+      'settings' => array(),
+    ),
+  );
+  $context_config->data = array(
+    'width' => '',
+    'height' => '',
+  );
+  $export['encemoment'] = $context_config;
+
+  $context_config = new stdClass();
+  $context_config->disabled = FALSE; /* Edit this to true to make a default context_config disabled initially */
+  $context_config->api_version = 1;
   $context_config->context = 'event_home';
   $context_config->transcoder = array(
     'audio' => array(
@@ -122,6 +174,58 @@ function domainedo_media_default_scald_context_config() {
   $context_config = new stdClass();
   $context_config->disabled = FALSE; /* Edit this to true to make a default context_config disabled initially */
   $context_config->api_version = 1;
+  $context_config->context = 'festival';
+  $context_config->transcoder = array(
+    'audio' => array(
+      '*' => 'passthrough',
+    ),
+    'file' => array(
+      '*' => 'passthrough',
+    ),
+    'gallery' => array(
+      '*' => 'passthrough',
+    ),
+    'image' => array(
+      '*' => 'style-festival780x517',
+    ),
+    'twitter' => array(
+      '*' => 'passthrough',
+    ),
+    'video' => array(
+      '*' => 'passthrough',
+    ),
+  );
+  $context_config->player = array(
+    'audio' => array(
+      '*' => 'default',
+    ),
+    'file' => array(
+      '*' => 'default',
+    ),
+    'gallery' => array(
+      '*' => 'default',
+    ),
+    'image' => array(
+      '*' => 'default',
+      'settings' => array(),
+    ),
+    'twitter' => array(
+      '*' => 'default',
+    ),
+    'video' => array(
+      '*' => 'default',
+      'settings' => array(),
+    ),
+  );
+  $context_config->data = array(
+    'width' => '',
+    'height' => '',
+  );
+  $export['festival'] = $context_config;
+
+  $context_config = new stdClass();
+  $context_config->disabled = FALSE; /* Edit this to true to make a default context_config disabled initially */
+  $context_config->api_version = 1;
   $context_config->context = 'full';
   $context_config->transcoder = array(
     'audio' => array(
@@ -137,7 +241,7 @@ function domainedo_media_default_scald_context_config() {
       '*' => 'passthrough',
     ),
     'video' => array(
-      '*' => 'style-main_show__570_',
+      '*' => 'passthrough',
     ),
     'file' => array(
       '*' => 'passthrough',
@@ -153,9 +257,9 @@ function domainedo_media_default_scald_context_config() {
       'settings' => array(
         'width' => '100%',
         'height' => '450',
-        'thumb_style' => 'large-675',
-        'normal_style' => 'large-675',
-        'big_style' => 'large-675',
+        'thumb_style' => 'carre600x600',
+        'normal_style' => 'carre600x600',
+        'big_style' => 'carre600x600',
         'theme' => 'classic',
         'options' => '{"lightbox": true,"showInfo": true}',
         'fullscreen_link' => 1,
@@ -198,7 +302,7 @@ function domainedo_media_default_scald_context_config() {
       '*' => 'passthrough',
     ),
     'image' => array(
-      '*' => 'style-main_show__570_',
+      '*' => 'style-top-show-1935x693',
     ),
     'twitter' => array(
       '*' => 'passthrough',
@@ -236,6 +340,57 @@ function domainedo_media_default_scald_context_config() {
     'height' => '',
   );
   $export['full_show'] = $context_config;
+
+  $context_config = new stdClass();
+  $context_config->disabled = FALSE; /* Edit this to true to make a default context_config disabled initially */
+  $context_config->api_version = 1;
+  $context_config->context = 'haut_classique';
+  $context_config->transcoder = array(
+    'audio' => array(
+      '*' => 'passthrough',
+    ),
+    'file' => array(
+      '*' => 'passthrough',
+    ),
+    'gallery' => array(
+      '*' => 'passthrough',
+    ),
+    'image' => array(
+      '*' => 'style-large-1935x377',
+    ),
+    'twitter' => array(
+      '*' => 'passthrough',
+    ),
+    'video' => array(
+      '*' => 'passthrough',
+    ),
+  );
+  $context_config->player = array(
+    'audio' => array(
+      '*' => 'default',
+    ),
+    'file' => array(
+      '*' => 'default',
+    ),
+    'gallery' => array(
+      '*' => 'default',
+    ),
+    'image' => array(
+      '*' => 'default',
+      'settings' => array(),
+    ),
+    'twitter' => array(
+      '*' => 'default',
+    ),
+    'video' => array(
+      '*' => 'default',
+    ),
+  );
+  $context_config->data = array(
+    'width' => '',
+    'height' => '',
+  );
+  $export['haut_classique'] = $context_config;
 
   $context_config = new stdClass();
   $context_config->disabled = FALSE; /* Edit this to true to make a default context_config disabled initially */
@@ -280,6 +435,7 @@ function domainedo_media_default_scald_context_config() {
     ),
     'video' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
   );
   $context_config->data = array(
@@ -350,60 +506,6 @@ function domainedo_media_default_scald_context_config() {
     'height' => '378px',
   );
   $export['list'] = $context_config;
-
-  $context_config = new stdClass();
-  $context_config->disabled = FALSE; /* Edit this to true to make a default context_config disabled initially */
-  $context_config->api_version = 1;
-  $context_config->context = 'petit_100';
-  $context_config->transcoder = array(
-    'audio' => array(
-      '*' => 'passthrough',
-    ),
-    'file' => array(
-      '*' => 'passthrough',
-    ),
-    'gallery' => array(
-      '*' => 'passthrough',
-    ),
-    'image' => array(
-      '*' => 'style-100px-large',
-    ),
-    'twitter' => array(
-      '*' => 'passthrough',
-    ),
-    'video' => array(
-      '*' => 'passthrough',
-    ),
-  );
-  $context_config->player = array(
-    'audio' => array(
-      '*' => 'default',
-      'settings' => array(),
-    ),
-    'file' => array(
-      '*' => 'default',
-    ),
-    'gallery' => array(
-      '*' => 'default',
-      'settings' => array(),
-    ),
-    'image' => array(
-      '*' => 'default',
-      'settings' => array(),
-    ),
-    'twitter' => array(
-      '*' => 'default',
-    ),
-    'video' => array(
-      '*' => 'default',
-      'settings' => array(),
-    ),
-  );
-  $context_config->data = array(
-    'width' => '',
-    'height' => '',
-  );
-  $export['petit_100'] = $context_config;
 
   $context_config = new stdClass();
   $context_config->disabled = FALSE; /* Edit this to true to make a default context_config disabled initially */
@@ -593,7 +695,7 @@ function domainedo_media_default_scald_context_config() {
       '*' => 'passthrough',
     ),
     'image' => array(
-      '*' => 'style-small_150',
+      '*' => 'passthrough',
     ),
     'twitter' => array(
       '*' => 'passthrough',
@@ -631,6 +733,57 @@ function domainedo_media_default_scald_context_config() {
     'height' => '',
   );
   $export['slideshow_home'] = $context_config;
+
+  $context_config = new stdClass();
+  $context_config->disabled = FALSE; /* Edit this to true to make a default context_config disabled initially */
+  $context_config->api_version = 1;
+  $context_config->context = 'square';
+  $context_config->transcoder = array(
+    'audio' => array(
+      '*' => 'passthrough',
+    ),
+    'file' => array(
+      '*' => 'passthrough',
+    ),
+    'gallery' => array(
+      '*' => 'passthrough',
+    ),
+    'image' => array(
+      '*' => 'style-carre600x600',
+    ),
+    'twitter' => array(
+      '*' => 'passthrough',
+    ),
+    'video' => array(
+      '*' => 'passthrough',
+    ),
+  );
+  $context_config->player = array(
+    'audio' => array(
+      '*' => 'default',
+    ),
+    'file' => array(
+      '*' => 'default',
+    ),
+    'gallery' => array(
+      '*' => 'default',
+    ),
+    'image' => array(
+      '*' => 'default',
+      'settings' => array(),
+    ),
+    'twitter' => array(
+      '*' => 'default',
+    ),
+    'video' => array(
+      '*' => 'default',
+    ),
+  );
+  $context_config->data = array(
+    'width' => '',
+    'height' => '',
+  );
+  $export['square'] = $context_config;
 
   $context_config = new stdClass();
   $context_config->disabled = FALSE; /* Edit this to true to make a default context_config disabled initially */
@@ -702,7 +855,7 @@ function domainedo_media_default_scald_context_config() {
       '*' => 'passthrough',
     ),
     'image' => array(
-      '*' => 'group-zoom',
+      '*' => 'style-zoom_ss_634x440',
     ),
     'twitter' => array(
       '*' => 'passthrough',

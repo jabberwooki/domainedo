@@ -326,7 +326,7 @@ function domaine_d_o_retours_sur_field_default_field_instances() {
         'settings' => array(
           'add' => 'Ajouter',
           'delete' => 'Supprimer',
-          'description' => TRUE,
+          'description' => 1,
           'edit' => 'Modifier',
           'view_mode' => 'full',
         ),
@@ -448,7 +448,7 @@ function domaine_d_o_retours_sur_field_default_field_instances() {
         'settings' => array(
           'add' => 'Ajouter',
           'delete' => 'Supprimer',
-          'description' => TRUE,
+          'description' => 1,
           'edit' => 'Modifier',
           'view_mode' => 'full',
         ),

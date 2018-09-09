@@ -24,6 +24,13 @@ function domaine_d_o_page_complexe_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 0,
       ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -56,7 +63,63 @@ function domaine_d_o_page_complexe_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 31,
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'node-page_complexe-field_image_page_complexe'.
+  $field_instances['node-page_complexe-field_image_page_complexe'] = array(
+    'bundle' => 'page_complexe',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'domainedo_media',
+        'settings' => array(),
+        'type' => 'title',
+        'weight' => 2,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'domainedo_media',
+        'settings' => array(),
+        'type' => 'haut_classique',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_image_page_complexe',
+    'label' => 'Image',
+    'required' => 0,
+    'settings' => array(
+      'allow_override' => 0,
+      'referencable_types' => array(
+        'audio' => 0,
+        'file' => 0,
+        'gallery' => 0,
+        'image' => 'image',
+        'twitter' => 0,
+        'video' => 0,
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'atom_reference',
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
+      'type' => 'atom_reference_textfield',
+      'weight' => 1,
     ),
   );
 
@@ -75,6 +138,15 @@ function domaine_d_o_page_complexe_field_default_field_instances() {
         ),
         'type' => 'paragraphs_view',
         'weight' => 1,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'paragraphs',
+        'settings' => array(
+          'view_mode' => 'full',
+        ),
+        'type' => 'paragraphs_view',
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -108,7 +180,111 @@ function domaine_d_o_page_complexe_field_default_field_instances() {
       'module' => 'paragraphs',
       'settings' => array(),
       'type' => 'paragraphs_embed',
-      'weight' => 41,
+      'weight' => 8,
+    ),
+  );
+
+  // Exported field_instance: 'node-page_complexe-field_red_frame_left'.
+  $field_instances['node-page_complexe-field_red_frame_left'] = array(
+    'bundle' => 'page_complexe',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_red_frame_left',
+    'label' => 'Encart rouge gauche',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 1,
+      'mee_enabled' => 1,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-page_complexe-field_white_frame_left'.
+  $field_instances['node-page_complexe-field_white_frame_left'] = array(
+    'bundle' => 'page_complexe',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 4,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_white_frame_left',
+    'label' => 'Encart blanc gauche',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 1,
+      'mee_enabled' => 1,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 3,
     ),
   );
 
@@ -123,11 +299,9 @@ function domaine_d_o_page_complexe_field_default_field_instances() {
       'default' => array(
         'label' => 'hidden',
         'module' => 'domainedo_media',
-        'settings' => array(
-          'link' => 0,
-        ),
-        'type' => 'list',
-        'weight' => 1,
+        'settings' => array(),
+        'type' => 'large_480x296_crop',
+        'weight' => 2,
       ),
       'paragraphs_editor_preview' => array(
         'label' => 'above',
@@ -136,10 +310,11 @@ function domaine_d_o_page_complexe_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'paragraphs_item',
     'field_name' => 'field_image_page_complexe',
     'label' => 'Image',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'allow_override' => 0,
       'referencable_types' => array(
@@ -160,6 +335,62 @@ function domaine_d_o_page_complexe_field_default_field_instances() {
       ),
       'type' => 'atom_reference_textfield',
       'weight' => 32,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-titre3_txt_summary_option-field_link_more_info'.
+  $field_instances['paragraphs_item-titre3_txt_summary_option-field_link_more_info'] = array(
+    'bundle' => 'titre3_txt_summary_option',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 3,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_link_more_info',
+    'label' => 'Lien plus d\'info',
+    'required' => 1,
+    'settings' => array(
+      'attributes' => array(
+        'class' => '',
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'default',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'rel_remove' => 'default',
+      'title' => 'optional',
+      'title_maxlength' => 128,
+      'title_value' => 'Plus d\'infos',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 35,
     ),
   );
 
@@ -210,52 +441,6 @@ function domaine_d_o_page_complexe_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-titre3_txt_summary_option-field_texte_page_complexe'.
-  $field_instances['paragraphs_item-titre3_txt_summary_option-field_texte_page_complexe'] = array(
-    'bundle' => 'titre3_txt_summary_option',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 3,
-      ),
-      'paragraphs_editor_preview' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'paragraphs_item',
-    'field_name' => 'field_texte_page_complexe',
-    'label' => 'Texte',
-    'required' => 0,
-    'settings' => array(
-      'context' => 'title',
-      'context_default' => 'sdl_editor_representation',
-      'dnd_enabled' => 1,
-      'mee_enabled' => 1,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 36,
-    ),
-  );
-
-  // Exported field_instance:
   // 'paragraphs_item-titre3_txt_summary_option-field_titre_niveau_3'.
   $field_instances['paragraphs_item-titre3_txt_summary_option-field_titre_niveau_3'] = array(
     'bundle' => 'titre3_txt_summary_option',
@@ -268,7 +453,7 @@ function domaine_d_o_page_complexe_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 3,
       ),
       'paragraphs_editor_preview' => array(
         'label' => 'above',
@@ -521,7 +706,10 @@ function domaine_d_o_page_complexe_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
+  t('Encart blanc gauche');
+  t('Encart rouge gauche');
   t('Image');
+  t('Lien plus d\'info');
   t('Paragraphe complexe');
   t('Résumé');
   t('Texte');

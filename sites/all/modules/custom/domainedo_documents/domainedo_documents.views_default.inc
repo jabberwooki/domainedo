@@ -60,19 +60,19 @@ function domainedo_documents_views_default_views() {
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = 'Pas de document disponible actuellement.';
   $handler->display->display_options['empty']['area']['format'] = 'full_html';
-  /* Field: Content: Title */
+  /* Field: Contenu: Titre */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Sort criterion: Content: Post date */
+  /* Sort criterion: Contenu: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Published */
+  /* Filter criterion: Contenu: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -142,35 +142,35 @@ function domainedo_documents_views_default_views() {
   $handler->display->display_options['header']['area']['content'] = 'Texte d\'intro de la rubrique technique';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Nœud: Catégorie */
+  /* Field: Contenu: Catégorie */
   $handler->display->display_options['fields']['field_tech_document_type']['id'] = 'field_tech_document_type';
   $handler->display->display_options['fields']['field_tech_document_type']['table'] = 'field_data_field_tech_document_type';
   $handler->display->display_options['fields']['field_tech_document_type']['field'] = 'field_tech_document_type';
   $handler->display->display_options['fields']['field_tech_document_type']['label'] = '';
   $handler->display->display_options['fields']['field_tech_document_type']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Post date */
+  /* Sort criterion: Contenu: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Filter criterion: Contenu: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Filter criterion: Contenu: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'tech_document' => 'tech_document',
   );
-  /* Filter criterion: Nœud: Lieu concerné (field_described_location) */
+  /* Filter criterion: Contenu: Lieu concerné (field_described_location) */
   $handler->display->display_options['filters']['field_described_location_tid']['id'] = 'field_described_location_tid';
   $handler->display->display_options['filters']['field_described_location_tid']['table'] = 'field_data_field_described_location';
   $handler->display->display_options['filters']['field_described_location_tid']['field'] = 'field_described_location_tid';
@@ -233,14 +233,14 @@ function domainedo_documents_views_default_views() {
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Filter criterion: Contenu: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Filter criterion: Contenu: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -248,7 +248,7 @@ function domainedo_documents_views_default_views() {
     'relpub_document' => 'relpub_document',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Nœud: Catégorie (field_relpub_document_type) */
+  /* Filter criterion: Contenu: Catégorie (field_relpub_document_type) */
   $handler->display->display_options['filters']['field_relpub_document_type_value']['id'] = 'field_relpub_document_type_value';
   $handler->display->display_options['filters']['field_relpub_document_type_value']['table'] = 'field_data_field_relpub_document_type';
   $handler->display->display_options['filters']['field_relpub_document_type_value']['field'] = 'field_relpub_document_type_value';
@@ -310,14 +310,14 @@ function domainedo_documents_views_default_views() {
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Filter criterion: Contenu: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Filter criterion: Contenu: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -343,7 +343,6 @@ function domainedo_documents_views_default_views() {
     t('dernier »'),
     t('Pas de document disponible actuellement.'),
     t('Documents techniques'),
-    t('more'),
     t('Intro rubrique Technique'),
     t('Texte d\'intro de la rubrique technique'),
     t('Lieu concerné'),
@@ -404,7 +403,7 @@ function domainedo_documents_views_default_views() {
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['label'] = 'Texte d\'intro';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
-  /* Field: Taxonomy term: Name */
+  /* Field: Terme de taxonomie: Nom */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['name']['field'] = 'name';
@@ -412,11 +411,11 @@ function domainedo_documents_views_default_views() {
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
-  /* Sort criterion: Taxonomy vocabulary: Weight */
+  /* Sort criterion: Vocabulaire de taxonomie: Poids */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_vocabulary';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
-  /* Filter criterion: Taxonomy vocabulary: Machine name */
+  /* Filter criterion: Vocabulaire de taxonomie: Nom système */
   $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
   $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
   $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
@@ -465,7 +464,7 @@ Suspendisse dapibus nisl nec nibh mattis rhoncus. Proin mattis et lectus ac moll
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Taxonomy vocabulary: Machine name */
+  /* Filter criterion: Vocabulaire de taxonomie: Nom système */
   $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
   $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
   $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
@@ -490,7 +489,6 @@ Suspendisse dapibus nisl nec nibh mattis rhoncus. Proin mattis et lectus ac moll
     t('Texte d\'intro'),
     t('Rubriques Pro'),
     t('Espace Pro'),
-    t('more'),
     t('Texte d\'introduction de l\'espace Pro.
 
 Morbi elementum augue eleifend, lacinia quam a, tincidunt mauris. Mauris consequat tristique risus ut interdum. Pellentesque vitae elit quis orci facilisis hendrerit at eu arcu. Nulla ultricies, massa vel aliquam feugiat, eros dui malesuada massa, et tincidunt ligula leo ac tellus. Nunc eu sollicitudin velit. Vivamus et fringilla nibh, ac rutrum ante nullam.

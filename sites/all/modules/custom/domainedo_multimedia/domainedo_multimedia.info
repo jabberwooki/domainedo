@@ -7,6 +7,7 @@ dependencies[] = better_exposed_filters
 dependencies[] = domainedo_contexts
 dependencies[] = ds
 dependencies[] = scald_index
+dependencies[] = views_bootstrap
 features[ctools][] = ds:ds:1
 features[ctools][] = views:views_default:3.0
 features[ds_layout_settings][] = scald_atom|audio|list

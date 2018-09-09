@@ -345,16 +345,16 @@ function domainedo_shows_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '13',
+          'weight' => '14',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '14',
+          'weight' => '15',
         ),
         'redirect' => array(
-          'weight' => '15',
+          'weight' => '16',
         ),
       ),
       'display' => array(
@@ -484,8 +484,8 @@ function domainedo_shows_strongarm() {
       'display' => array(
         'sharethis' => array(
           'full' => array(
-            'weight' => '55',
-            'visible' => TRUE,
+            'weight' => '48',
+            'visible' => FALSE,
           ),
           'default' => array(
             'weight' => '10',
@@ -497,6 +497,10 @@ function domainedo_shows_strongarm() {
           ),
           'frontpage_block' => array(
             'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'teaser' => array(
+            'weight' => '13',
             'visible' => FALSE,
           ),
         ),

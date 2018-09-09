@@ -17,19 +17,6 @@ function domaine_d_o_articles_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'article';
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
-    'field_scald_image' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => 'right',
-          'ow-def-cl' => FALSE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
-        ),
-      ),
-    ),
     'field_scald_video' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -110,13 +97,8 @@ function domaine_d_o_articles_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'show';
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
-    'partage' => array(
-      'weight' => '49',
-      'label' => 'hidden',
-      'format' => 'default',
-    ),
     'title' => array(
-      'weight' => '0',
+      'weight' => '4',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -126,10 +108,108 @@ function domaine_d_o_articles_ds_field_settings_info() {
         'exclude node title settings' => '0',
       ),
     ),
-    'comments' => array(
-      'weight' => '28',
-      'label' => 'hidden',
-      'format' => 'default',
+    'field_casting' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lbw-el' => 'div',
+          'prefix' => '<a name="casting" id="casting"></a>',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'distribution',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_coproduction' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb' => 'Coproduction',
+          'lb-col' => TRUE,
+          'prefix' => '<a name="coproduction" id="coproduction"></a>',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'field-name-field-coproduction',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_production' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb-col' => TRUE,
+          'prefix' => '<a name="production" id="production"></a>',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'field-name-field-production',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_show_dates' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb' => 'Toutes les dates',
+          'lb-col' => TRUE,
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'all-dates',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_partenariats' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb' => 'Partenariats',
+          'lb-el' => 'div',
+          'lb-col' => TRUE,
+          'prefix' => '<a name="partenariats" id="partenariats"></a>',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'field-name-field-partenariats',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_linked_shows' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb' => 'Vous aimerez aussi',
+          'lb-el' => 'div',
+          'lb-cl' => 'like-to-label',
+          'lb-def-at' => TRUE,
+          'lb-col' => TRUE,
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'row',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'col-md-3 like-to-item',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
+        ),
+      ),
     ),
   );
   $export['node|show|full'] = $ds_fieldsetting;
@@ -153,19 +233,15 @@ function domaine_d_o_articles_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_scald_image',
+        0 => 'body',
         1 => 'field_scald_video',
-        2 => 'body',
-        3 => 'field_date_de_modification',
-        4 => 'sharethis',
+        2 => 'field_date_de_modification',
       ),
     ),
     'fields' => array(
-      'field_scald_image' => 'ds_content',
-      'field_scald_video' => 'ds_content',
       'body' => 'ds_content',
+      'field_scald_video' => 'ds_content',
       'field_date_de_modification' => 'ds_content',
-      'sharethis' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(

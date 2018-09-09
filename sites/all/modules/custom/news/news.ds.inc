@@ -69,6 +69,7 @@ function news_ds_layout_settings_info() {
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
   );
   $export['node|news|default'] = $ds_layout;
 
@@ -82,20 +83,18 @@ function news_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_scald_image',
+        0 => 'field_scald_video',
         1 => 'body',
         2 => 'field_date',
-        3 => 'field_scald_video',
-        4 => 'field_scald_gallery',
-        5 => 'field_scald_sound',
-        6 => 'field_news_only_video',
+        3 => 'field_scald_gallery',
+        4 => 'field_scald_sound',
+        5 => 'field_news_only_video',
       ),
     ),
     'fields' => array(
-      'field_scald_image' => 'ds_content',
+      'field_scald_video' => 'ds_content',
       'body' => 'ds_content',
       'field_date' => 'ds_content',
-      'field_scald_video' => 'ds_content',
       'field_scald_gallery' => 'ds_content',
       'field_scald_sound' => 'ds_content',
       'field_news_only_video' => 'ds_content',

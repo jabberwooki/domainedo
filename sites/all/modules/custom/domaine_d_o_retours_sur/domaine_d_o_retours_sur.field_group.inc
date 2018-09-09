@@ -20,14 +20,14 @@ function domaine_d_o_retours_sur_field_group_info() {
   $field_group->mode = 'full';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Contacter le service éducatif',
+    'label' => 'Contact',
     'weight' => '1',
     'children' => array(
       0 => 'field_edu_contact',
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'label' => 'Contacter le service éducatif',
+      'label' => 'Contact',
       'instance_settings' => array(
         'id' => 'group-contact-retour',
         'classes' => 'group-contact-retour field-group-div',
@@ -112,7 +112,7 @@ function domaine_d_o_retours_sur_field_group_info() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Contacter le service éducatif');
+  t('Contact');
   t('group retour commentaires');
   t('group retour critiques');
 

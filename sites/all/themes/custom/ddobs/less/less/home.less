@@ -1,0 +1,252 @@
+.front {
+  #homeheadband {
+    .container-fluid {
+      @media (max-width: @screen-sm) {
+        padding: 0 0;
+      }
+    }
+    #info-flash {
+      background-color: @grenadine-ddo;
+      color: #FFF;
+      font-weight: bold;
+      margin: 0 0 10px 0;
+      padding: 30px 0;
+      a {
+        color: #FFF;
+        text-transform: uppercase;
+      }
+      a.more {
+        .button-link-more();
+        margin-bottom: 0;
+      }
+    }
+    .region-homenow {
+      position: relative;
+      #now-tranparent-gradient {
+        position: absolute;
+        bottom: 0;
+        height: 39%;
+        width: 100%;
+        background: black; /* For browsers that do not support gradients */
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+        #group-title-more-now {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          .field-name-title {
+            clear: both;
+            a {
+              font-size: 2.375em; /* 38/16 */
+              color: #FFF;
+              .underline-grenadine();
+              display: block;
+              float: right;
+              margin: 0 20px 20px 0;
+              &:after {
+                margin-top: -10px !important;
+              }
+            }
+            &:after {
+              clear: both;
+              display: block;
+              content: "";
+            }
+          }
+          .field-name-node-link a {
+            .button-link-more();
+          }
+        }
+      }
+    }
+
+    .field-name-scald-authors {
+      display: none;
+    }
+    h2.block-title {
+      font-size: 1em;
+      margin: 20px 0;
+    }
+
+
+    /* Carrousel ********************************************************************************************************/
+    .carousel {
+      @media (max-width: @screen-sm) {
+        display: none;
+      }
+      .carousel-inner {
+        position: relative;
+        img {
+          margin-bottom: 21.6%;
+        }
+        .zoom-title-label {
+          position: absolute;
+          top: 93%;
+          text-transform: uppercase;
+          color: white;
+          font-weight: bold;
+          font-size: 2.375em; /* 38/16 */
+          padding-left: 20px;
+          @media (min-width: @screen-sm) and (max-width: 1600px) {
+            font-size: 1.5em;
+            top: 80%;
+          }
+
+        }
+        .views-field-field-link-more-infos {
+          position: absolute;
+          top: 117%;
+          display: table;
+          right: -20px;
+          text-transform: uppercase;
+          a {
+            .button-link-more();
+          }
+          @media (min-width: @screen-sm) and (max-width: 1600px) {
+            font-size: .65em;
+            padding: 7px 5px;
+          }
+        }
+
+        .views-field-field-news-url-target {
+          position: absolute;
+          top: 103%;
+          padding: 0;
+          width: 78%;
+          @media (min-width: @screen-sm) and (max-width: 1600px) {
+
+            a {
+              color: @grenadine-ddo;
+              text-transform: uppercase;
+              font-size: 1em !important;
+            }
+          }
+          a {
+            .big-orange-title-link();
+          }
+        }
+        .views-field-body {
+          position: absolute;
+          top: 118%;
+          padding: 0;
+          width: 78%;
+          @media (min-width: @screen-sm) and (max-width: 1600px) {
+            bottom: -25%;
+            font-size: 0.8em;
+            width: 70%;
+          }
+        }
+      }
+
+      .carousel-control.right,
+      .carousel-control.left {
+        background-image: none !important;
+        filter: none !important;
+        opacity: 1;
+        width: 25px;
+        height: 25px;
+        top: 77%;
+        text-shadow: none;
+        background-color: transparent;
+        border: 0;
+        transition: none;
+        .icon-next,
+        .icon-prev {
+          background-image: none !important;
+          filter: none !important;
+          opacity: 1 !important;
+          background-color: @grenadine-ddo;
+          &:before {
+            background-image: none !important;
+            filter: none !important;
+            top: -2px;
+            left: 3px;
+            color: #fff;
+            content: '\e833';
+            font-size: 0.7em;
+          }
+        }
+        .icon-next {
+          &:before {
+            content: '\e834';
+            left: 6px;
+          }
+        }
+      }
+      .carousel-control.left {
+        right: 50px;
+        left: auto;
+      }
+      .carousel-indicators {
+        display: none;
+      }
+    }
+    /* Fin carrousel **************************************************************************************************/
+
+  }
+
+  #quick-acces {
+    background-color: @gris-clair-ddo;
+    margin: 20px 0;
+    padding: 25px 0 35px 0;
+    h2.block-title {
+      font-size: 1em;
+      margin-bottom: 15px;
+    }
+    .view {
+
+      ul {
+        li {
+          float: left;
+          display: table;
+          a {
+            padding: 10px;
+            color: #FFF;
+            display: block;
+            font-size: 0.875em;/* 14/16 */
+            background-color: black;
+            text-transform: uppercase;
+            margin: 0 25px 10px 0;
+            font-weight: bold;
+           
+          }
+        }
+      }
+      #home-calendar-link {
+        float: right;
+        color: #000;
+        padding: 8px 10px;
+        display: block;
+        font-size: 1em;
+        background-color: white;
+        text-transform: uppercase;
+        border: 1px solid black;
+        @media (max-width: @screen-sm) {
+          float: none;
+          clear: both;
+          display: table;
+          margin-top: 15px;
+        }
+        &:before {
+          content: "\e807";
+          .glyphicon();
+          color: #000;
+          top: -2px;
+        }
+      }
+    }
+  }
+  .more-link {
+    a {
+     .button-red-link();
+    }
+  }
+  #block-views-shows-block-1 {
+    h2.block-title {
+      margin: 20px 0;
+      font-size: 1.5em; /* 24/16 */
+    }
+  }
+
+
+}
+
