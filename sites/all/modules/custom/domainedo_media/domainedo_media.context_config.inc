@@ -257,9 +257,9 @@ function domainedo_media_default_scald_context_config() {
       'settings' => array(
         'width' => '100%',
         'height' => '450',
-        'thumb_style' => 'large-675',
-        'normal_style' => 'large-675',
-        'big_style' => 'large-675',
+        'thumb_style' => 'carre600x600',
+        'normal_style' => 'carre600x600',
+        'big_style' => 'carre600x600',
         'theme' => 'classic',
         'options' => '{"lightbox": true,"showInfo": true}',
         'fullscreen_link' => 1,
