@@ -33,11 +33,16 @@ function feature_lettre_info_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Réinitialiser';
   $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Trier par';
   $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '12';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Éléments par page';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Tout -';
   $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Décalage';
   $handler->display->display_options['pager']['options']['tags']['previous'] = '< précédent';
+  $handler->display->display_options['pager']['options']['tags']['next'] = 'suivant';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'dernier';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Field: Contenu: URL Mailchimp */
@@ -93,15 +98,17 @@ function feature_lettre_info_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['text'] = '<div>
-  <h3 class="title-event-list h3-lettre-info"><a href="[field_url_mailchimp]" target="_blank">[title]</a></h3>
-    <div class="img-lettre-info">
-      <a href="[field_url_mailchimp]" target="_blank">[field_scald_image]</a>
-    </div>
-    <p class="p-lettre-info">
-      [body]
-      <br/><span class="send-info-letter">Envoyée le : [field_date_envoi]</span>
-    </p>
+  $handler->display->display_options['fields']['title']['alter']['text'] = '<div class="group-lettre-info">
+     <div class="img-lettre-info">
+         <a href="[field_url_mailchimp]" target="_blank">[field_scald_image]</a>
+     </div>
+     <div class="group-title-txt-lettre-info">
+        <h3 class="title-event-list h3-lettre-info"><a href="[field_url_mailchimp]" target="_blank">[title]</a></h3>
+         <div class="txt-lettre-info">
+            [body]
+            <div class="send-info-lette-date">Envoyée le : [field_date_envoi]</div>
+          </div>
+     </div>
 </div>';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
@@ -133,6 +140,18 @@ function feature_lettre_info_views_default_views() {
 
   /* Display: Bloc */
   $handler = $view->new_display('block', 'Bloc', 'block_lettres_infos');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'views_bootstrap_grid_plugin_style';
+  $handler->display->display_options['style_options']['columns_horizontal'] = '-1';
+  $handler->display->display_options['style_options']['columns_vertical'] = '4';
+  $handler->display->display_options['style_options']['columns_xs'] = '12';
+  $handler->display->display_options['style_options']['columns_sm'] = '6';
+  $handler->display->display_options['style_options']['columns_md'] = '4';
+  $handler->display->display_options['style_options']['columns_lg'] = '4';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $translatables['lettres_infos'] = array(
     t('Master'),
     t('lettres infos'),
@@ -147,17 +166,19 @@ function feature_lettre_info_views_default_views() {
     t('Décalage'),
     t('« first'),
     t('< précédent'),
-    t('next ›'),
-    t('last »'),
-    t('<div>
-  <h3 class="title-event-list h3-lettre-info"><a href="[field_url_mailchimp]" target="_blank">[title]</a></h3>
-    <div class="img-lettre-info">
-      <a href="[field_url_mailchimp]" target="_blank">[field_scald_image]</a>
-    </div>
-    <p class="p-lettre-info">
-      [body]
-      <br/><span class="send-info-letter">Envoyée le : [field_date_envoi]</span>
-    </p>
+    t('suivant'),
+    t('dernier'),
+    t('<div class="group-lettre-info">
+     <div class="img-lettre-info">
+         <a href="[field_url_mailchimp]" target="_blank">[field_scald_image]</a>
+     </div>
+     <div class="group-title-txt-lettre-info">
+        <h3 class="title-event-list h3-lettre-info"><a href="[field_url_mailchimp]" target="_blank">[title]</a></h3>
+         <div class="txt-lettre-info">
+            [body]
+            <div class="send-info-lette-date">Envoyée le : [field_date_envoi]</div>
+          </div>
+     </div>
 </div>'),
     t('Page'),
     t('Bloc'),
