@@ -1,6 +1,5 @@
-
 body {
-  font-family: Gotham, Arial, sans-serif;
+  font-family: "Gotham", Arial, sans-serif;
   #custom-msg {
     @media (max-width: @screen-sm) {
       height: 70px;
@@ -68,14 +67,24 @@ body {
     font-size: 0.75em; /*12/16*/
     display: block;
     float: right;
+    font-style: normal;
+    font-weight: 800;
     color: @grenadine-ddo;
     border: 1px solid @grenadine-ddo;
     padding: 6px;
     text-transform: uppercase;
+    text-decoration: none;
     &:before {
       .glyphicon();
       content: "\e840";
       color: @grenadine-ddo;
+    }
+    &:hover {
+      background-color: @grenadine-ddo;
+      color: #FFF;
+      &:before {
+        color: #FFF;
+      }
     }
   }
   @media (max-width: @screen-md) {
@@ -141,7 +150,8 @@ header#navbar {
       margin-left: -30px;
       text-transform: uppercase;
       font-size: 0.875em; /*14/16*/
-      font-weight: bold;
+      font-style: normal;
+      font-weight: 800;
       > li > a {
         padding-left: 36px;
         padding-right: 36px;
@@ -594,7 +604,7 @@ footer.container {
         display: table;
         float: left;
         font-size: 1.25em; /* 20/16 */
-        margin: 10px 16% 0 20px;
+        margin: 10px 13% 0 20px;
         @media (max-width: @screen-sm) {
           margin: 0 auto;
           padding-left: 0;
@@ -762,6 +772,11 @@ footer.container {
 }
 /* Fin de la grille ***************************************************************************************************/
 /* Divers *************************************************************************************************************/
+h2.page-header {
+  @media (max-width: @screen-sm) {
+    font-size: 1.5em !important;
+  }
+}
 .cartouche-noir {
   display: block;
   color: @blanc-ddo;
@@ -797,6 +812,22 @@ footer.container {
   color: @blanc-ddo;
   text-align: center;
   text-transform: uppercase;
+}
+.button-bg-black {
+  padding: 10px;
+  color: #FFF;
+  display: block;
+  font-size: 0.875em;/* 14/16 */
+  background-color: black;
+  text-transform: uppercase;
+  margin: 0 25px 10px 0;
+  font-weight: bold;
+  text-decoration: none;
+  border: 1.5px solid black;
+  &:hover {
+    background-color: white;
+    color: #000;
+  }
 }
 
 .date-orange {
@@ -834,10 +865,15 @@ footer.container {
   background-color: white;
   margin: 0 20px 20px 0;
   color: @grenadine-ddo;
+  text-decoration: none;
   &:after {
     clear: both;
     display: block;
     content: "";
+  }
+  &:hover {
+    background-color: @grenadine-ddo;
+    color: #FFF;
   }
 }
 .button-red-link { /* Utiliser sur la page d'accueil pour le lien "voir tous les spectacles." */

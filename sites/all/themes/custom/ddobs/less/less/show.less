@@ -1,4 +1,10 @@
 .group-show-list {
+  @media (max-width: @screen-md) {
+    img {
+      max-width: none;
+      width: 100%;
+    }
+  }
   .little-move();
   position: relative;
   margin-bottom: 30px;
@@ -14,12 +20,15 @@
   .group-tranparent-gradient {
     position: absolute;
     top: 60%;
+    @media (min-width: 618px) and (max-width: @screen-md) {
+      top: 65%;
+    }
     height: 30%;
     width: 100%;
     left: 0;
     background: black; /* For browsers that do not support gradients */
-    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1));
-    div,a {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    div, a {
       color: @blanc-ddo;
       p {
         margin: 0 !important;
@@ -30,14 +39,14 @@
       left: 0;
       bottom: 0;
       .date-orange();
-      .field-name-title  {
+      .field-name-title {
         display: table;
         > div {
           padding-left: 10px;
           a {
             text-transform: uppercase;
             font-weight: bold;
-            font-size: 1.25em;/*20/16*/
+            font-size: 1.25em; /*20/16*/
             padding-bottom: 12px;
             display: block;
           }
@@ -58,6 +67,10 @@
     position: absolute;
     top: 90%;
     height: 10%;
+    @media (min-width: 618px) and (max-width: @screen-md) {
+      height: 5%;
+      top: 95%;
+    }
     width: 100%;
     left: 0;
     background: black;
@@ -90,27 +103,28 @@
       }
     }
   }
-  .field-name-scald-authors{
+  .field-name-scald-authors {
     display: none;
   }
 
 }
+
 /* la page de visualisation d'un spectacle */
 .node-type-show {
-  .breadcrumb{
+  .breadcrumb {
     margin-bottom: 0;
-    li.active{
+    li.active {
       display: none;
     }
   }
   #block-domainedo-ticketoffice-rsi-ws-user-links {
     display: none;
   }
-  #imgfullshow{
+  #imgfullshow {
     .field-name-scald-authors {
       display: none;
     }
-    #block-ds-extras-image-full-show{
+    #block-ds-extras-image-full-show {
       position: relative;
       .field-name-field-scald-image {
         .field-item {
@@ -123,7 +137,7 @@
             z-index: 1;
             position: absolute;
             bottom: 50px;
-            background: linear-gradient(to bottom,rgba(0,0,0,0),#000);
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000);
             visibility: visible;
             width: 100%;
 
@@ -132,11 +146,11 @@
       }
       .group-text-over-img {
         position: relative;
-        .group-text-over-img-abs{
+        .group-text-over-img-abs {
           position: absolute;
           z-index: 2;
           bottom: 50px;
-          .field-name-field-festival{
+          .field-name-field-festival {
             a {
               .cartouche-noir();
               width: auto;
@@ -161,7 +175,7 @@
                 display: block;
                 border: 4px solid @grenadine-off-ddo;
               }
-              &.js-div-date{
+              &.js-div-date {
                 position: static;
               }
             }
@@ -191,12 +205,12 @@
 
     }
   }
-  section > ul.action-links{
+  section > ul.action-links {
     position: absolute;
     top: 200px;
     left: -200px;
   }
-  .tabs--primary{
+  .tabs--primary {
     position: absolute;
     top: 0px;
     left: -200px;
@@ -205,7 +219,7 @@
       float: none;
     }
   }
-  .node-show.view-mode-full{
+  .node-show.view-mode-full {
     position: relative;
     top: -38px;
     /* left column ******************************************************************/
@@ -259,7 +273,7 @@
     .field-name-body {
       margin-bottom: 20px;
     }
-    .distribution{
+    .distribution {
       margin-top: 20px;
       .label-above {
         text-transform: uppercase;
@@ -325,7 +339,7 @@
         color: white;
         text-decoration: underline;
       }
-      .field{
+      .field {
         &:after {
           margin-bottom: 15px;
         }
@@ -342,7 +356,7 @@
           content: "";
         }
       }
-      .field-name-field-price{
+      .field-name-field-price {
         p {
           margin-top: 0;
         }
@@ -364,7 +378,7 @@
     .field-name-field-full,
     .field-name-field-reimbursement,
     .field-name-field-coming-soon,
-    .field_offline{
+    .field_offline {
       margin-bottom: 30px;
     }
     .like-to-label {
@@ -411,6 +425,7 @@
     min-height: 350px;
   }
 }
+
 /* Page tous les spectacles *******************************************************************************************/
 .page-spectacles {
   h2.page-header {
@@ -419,7 +434,7 @@
   #headband-festival {
     @media (min-width: @screen-lg) {
       background: url(../images/bg_all_shows.gif) 50% 0;
-      width:  74%;
+      width: 74%;
       margin: 0 auto;
       min-height: 330px;
     }
@@ -427,7 +442,7 @@
     #block-views-exp-shows-list {
       float: left;
       width: 66.66%;
-      background-color:  @gris-clair-ddo;
+      background-color: @gris-clair-ddo;
       min-height: 330px;
       #edit-field-festival-target-id-wrapper {
         label {

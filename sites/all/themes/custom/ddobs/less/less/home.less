@@ -22,6 +22,13 @@
     }
     .region-homenow {
       position: relative;
+      @media (max-width: @screen-md) {
+        margin-bottom: 20px;
+        img {
+          max-width: none;
+          width: 100%;
+        }
+      }
       #now-tranparent-gradient {
         position: absolute;
         bottom: 0;
@@ -29,6 +36,7 @@
         width: 100%;
         background: black; /* For browsers that do not support gradients */
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+
         #group-title-more-now {
           position: absolute;
           bottom: 0;
@@ -38,12 +46,16 @@
             a {
               font-size: 2.375em; /* 38/16 */
               color: #FFF;
+              text-decoration: none;
               .underline-grenadine();
               display: block;
               float: right;
               margin: 0 20px 20px 0;
               &:after {
                 margin-top: -10px !important;
+              }
+              &:hover {
+                background-color: @grenadine-ddo;
               }
             }
             &:after {
@@ -74,6 +86,12 @@
         display: none;
       }
       .carousel-inner {
+        @media (max-width: @screen-md) {
+          img {
+            max-width: none;
+            width: 100%;
+          }
+        }
         position: relative;
         img {
           margin-bottom: 21.6%;
@@ -199,15 +217,7 @@
           float: left;
           display: table;
           a {
-            padding: 10px;
-            color: #FFF;
-            display: block;
-            font-size: 0.875em;/* 14/16 */
-            background-color: black;
-            text-transform: uppercase;
-            margin: 0 25px 10px 0;
-            font-weight: bold;
-           
+            .button-bg-black();
           }
         }
       }
@@ -220,6 +230,7 @@
         background-color: white;
         text-transform: uppercase;
         border: 1px solid black;
+        text-decoration: none;
         @media (max-width: @screen-sm) {
           float: none;
           clear: both;
@@ -231,6 +242,13 @@
           .glyphicon();
           color: #000;
           top: -2px;
+        }
+        &:hover {
+          background-color: black;
+          color: #FFF;
+          &:before {
+            color: #FFF;
+          }
         }
       }
     }
