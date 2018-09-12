@@ -662,7 +662,7 @@ footer.container {
     margin: 10px 0;
   }
   div:not(.contextual-links-wrapper) {
-    ul {
+    ul:not(.contextual-links) {
       margin: 10px 0 20px 0;
       li {
         &:before {
@@ -814,6 +814,14 @@ footer.container {
       }
     }
   }
+}
+
+.title-link-orange {
+  display: table;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  .underline-grenadine();
 }
 
 .button-link-more {
