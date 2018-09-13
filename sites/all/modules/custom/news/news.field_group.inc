@@ -72,10 +72,43 @@ function news_field_group_info() {
   );
   $field_groups['group_event_summa_dates|node|news|zoom'] = $field_group;
 
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_grandient_now|node|news|right_now';
+  $field_group->group_name = 'group_grandient_now';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'news';
+  $field_group->mode = 'right_now';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Groupe transparence',
+    'weight' => '1',
+    'children' => array(
+      0 => 'group_title_more',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Groupe transparence',
+      'instance_settings' => array(
+        'id' => 'now-tranparent-gradient',
+        'classes' => 'group-grandient-now field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_grandient_now|node|news|right_now'] = $field_group;
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Custom domainedo');
   t('Group event summary and dates');
+  t('Groupe transparence');
 
   return $field_groups;
 }
