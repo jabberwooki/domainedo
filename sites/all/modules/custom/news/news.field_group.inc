@@ -104,11 +104,45 @@ function news_field_group_info() {
   );
   $field_groups['group_grandient_now|node|news|right_now'] = $field_group;
 
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_title_more|node|news|right_now';
+  $field_group->group_name = 'group_title_more';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'news';
+  $field_group->mode = 'right_now';
+  $field_group->parent_name = 'group_grandient_now';
+  $field_group->data = array(
+    'label' => 'Titre et suite',
+    'weight' => '2',
+    'children' => array(
+      0 => 'title',
+      1 => 'node_link',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Titre et suite',
+      'instance_settings' => array(
+        'id' => 'group-title-more-now',
+        'classes' => 'group-title-more field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_title_more|node|news|right_now'] = $field_group;
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Custom domainedo');
   t('Group event summary and dates');
   t('Groupe transparence');
+  t('Titre et suite');
 
   return $field_groups;
 }
