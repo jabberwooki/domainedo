@@ -34,6 +34,7 @@ features[ctools][] = views:views_default:3.0
 features[custom_breadcrumb][] = fiche_v_nement
 features[custom_breadcrumbs_views][] = liste_v_nements
 features[ds_field_settings][] = node|news|full
+features[ds_field_settings][] = node|news|right_now
 features[ds_layout_settings][] = node|news|default
 features[ds_layout_settings][] = node|news|full
 features[ds_layout_settings][] = node|news|right_now

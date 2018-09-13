@@ -33,6 +33,42 @@ function news_ds_field_settings_info() {
   );
   $export['node|news|full'] = $ds_fieldsetting;
 
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|news|right_now';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'news';
+  $ds_fieldsetting->view_mode = 'right_now';
+  $ds_fieldsetting->settings = array(
+    'title' => array(
+      'weight' => '3',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '1',
+        'wrapper' => 'h2',
+        'class' => '',
+        'exclude node title settings' => '1',
+        'ft' => array(),
+      ),
+    ),
+    'node_link' => array(
+      'weight' => '4',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'link text' => 'Plus d\'infos',
+        'link class' => '',
+        'wrapper' => '',
+        'class' => '',
+        'ft' => array(
+          'lb' => 'Plus d\'infos',
+        ),
+      ),
+    ),
+  );
+  $export['node|news|right_now'] = $ds_fieldsetting;
+
   return $export;
 }
 
