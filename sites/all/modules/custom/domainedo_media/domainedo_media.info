@@ -42,6 +42,7 @@ features[image][] = list_image_shows__240x180_
 features[image][] = max__940_
 features[image][] = top-show-1935x693
 features[image][] = zoom-desktop
+features[image][] = zoom_ss_634x440
 features[picture_mapping][] = max
 features[picture_mapping][] = zoom
 features[picture_mapping][] = zoom_homepage

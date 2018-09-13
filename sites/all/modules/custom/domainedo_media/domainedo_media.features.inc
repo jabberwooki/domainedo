@@ -222,5 +222,31 @@ function domainedo_media_image_default_styles() {
     ),
   );
 
+  // Exported image style: zoom_ss_634x440.
+  $styles['zoom_ss_634x440'] = array(
+    'label' => 'Zoom diaporama 634x440',
+    'effects' => array(
+      26 => array(
+        'name' => 'manualcrop_crop',
+        'data' => array(
+          'width' => 634,
+          'height' => 440,
+          'keepproportions' => 1,
+          'reuse_crop_style' => '',
+          'style_name' => 'zoom_ss_634x440',
+        ),
+        'weight' => 0,
+      ),
+      27 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 634,
+          'height' => 440,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   return $styles;
 }
