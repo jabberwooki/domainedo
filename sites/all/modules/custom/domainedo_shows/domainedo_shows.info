@@ -339,6 +339,7 @@ features[variable][] = comment_subject_field_structure
 features[variable][] = date_format_shows_block
 features[variable][] = date_format_shows_block_mobile
 features[variable][] = date_format_shows_list
+features[variable][] = ds_extras_region_blocks
 features[variable][] = exclude_node_title_content_type_modes_festival
 features[variable][] = exclude_node_title_content_type_modes_news
 features[variable][] = exclude_node_title_content_type_modes_show

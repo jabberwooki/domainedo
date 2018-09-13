@@ -230,6 +230,42 @@ function domainedo_shows_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'ds_extras_region_blocks';
+  $strongarm->value = array(
+    'image_full_show' => array(
+      'title' => 'Image full show',
+      'info' => 'node_show_full',
+    ),
+    'headband_festival' => array(
+      'title' => 'Headband Festival',
+      'info' => 'node_festival_full',
+    ),
+    'top_classic_page' => array(
+      'title' => 'Top classic Page',
+      'info' => 'node_page_full',
+    ),
+    'top_complex_page' => array(
+      'title' => 'Top complex Page',
+      'info' => 'node_page_complexe_full',
+    ),
+    'left_block_page' => array(
+      'title' => 'left block page',
+      'info' => 'node_page_complexe_full',
+    ),
+    'top_technic' => array(
+      'title' => 'Top Technic',
+      'info' => 'taxonomy_term_espace_pro_full',
+    ),
+    'top_technic_space' => array(
+      'title' => 'Top technic space',
+      'info' => 'node_tech_document_full',
+    ),
+  );
+  $export['ds_extras_region_blocks'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'exclude_node_title_content_type_modes_festival';
   $strongarm->value = array(
     'full' => 'full',
