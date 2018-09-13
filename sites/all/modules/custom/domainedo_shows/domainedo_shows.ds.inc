@@ -159,6 +159,27 @@ function domainedo_shows_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|show|liste_aussi';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'show';
+  $ds_fieldsetting->view_mode = 'liste_aussi';
+  $ds_fieldsetting->settings = array(
+    'title' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '1',
+        'wrapper' => 'h4',
+        'class' => '',
+        'exclude node title settings' => '1',
+      ),
+    ),
+  );
+  $export['node|show|liste_aussi'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'node|show|teaser';
   $ds_fieldsetting->entity_type = 'node';
   $ds_fieldsetting->bundle = 'show';
