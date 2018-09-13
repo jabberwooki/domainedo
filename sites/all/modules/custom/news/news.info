@@ -35,6 +35,7 @@ features[custom_breadcrumbs_views][] = liste_v_nements
 features[ds_field_settings][] = node|news|full
 features[ds_layout_settings][] = node|news|default
 features[ds_layout_settings][] = node|news|full
+features[ds_layout_settings][] = node|news|right_now
 features[features_api][] = api:2
 features[field_base][] = body
 features[field_base][] = field_date
