@@ -173,6 +173,7 @@
           filter: none !important;
           opacity: 1 !important;
           background-color: @grenadine-ddo;
+          border: 1px solid @grenadine-ddo;
           &:before {
             background-image: none !important;
             filter: none !important;
@@ -181,6 +182,12 @@
             color: #fff;
             content: '\e833';
             font-size: 0.7em;
+          }
+          &:hover {
+            background-color: white;
+            &:before {
+              color: @grenadine-ddo;
+            }
           }
         }
         .icon-next {

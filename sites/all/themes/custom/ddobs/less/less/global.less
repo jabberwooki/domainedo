@@ -29,6 +29,7 @@ body {
   li {
     float: left;
     a {
+      text-decoration: none;
       &:before {
         color: @noir-ddo;
         font-size: 14px;
@@ -37,6 +38,11 @@ body {
       &.icon-tripadvisor {
         &:before {
           margin-right: 15px;
+        }
+      }
+      &:hover {
+        &:before {
+          color: @grenadine-ddo;
         }
       }
     }
@@ -784,14 +790,35 @@ h2.page-header {
   text-decoration: none;
   padding: 5px 10px;
   font-size: 0.6875em; /*11/16*/
+  font-style: normal;
+  font-weight: 700;
+  border: 1px solid black;
+  &:hover {
+    background-color: #FFF;
+    color: #000;
+  }
 }
 
 .underline-grenadine {
+  font-style: normal;
+  font-weight: 800;
   &:after {
     display: block;
     border: 4px solid @grenadine-ddo;
     margin-top: -5px;
     content: "";
+  }
+  &:hover {
+    &:after {
+      border: 4px solid @grenadine-ddo;
+    }
+
+  }
+  a {
+    text-decoration: none !important;
+    &:hover {
+      background-color: @grenadine-ddo;
+    }
   }
 }
 
@@ -812,6 +839,13 @@ h2.page-header {
   color: @blanc-ddo;
   text-align: center;
   text-transform: uppercase;
+  font-style: normal;
+  font-weight: 800;
+  text-decoration: none;
+  &:hover {
+    background-color: white;
+    color: @grenadine-ddo;
+  }
 }
 .button-bg-black {
   padding: 10px;
@@ -874,6 +908,7 @@ h2.page-header {
   &:hover {
     background-color: @grenadine-ddo;
     color: #FFF;
+    text-decoration: none;
   }
 }
 .button-red-link { /* Utiliser sur la page d'accueil pour le lien "voir tous les spectacles." */
@@ -882,10 +917,22 @@ h2.page-header {
   display: table;
   margin: 0 auto;
   color: @grenadine-ddo;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 0.875em;/*14/16*/
   &:after {
     color: @grenadine-ddo !important;
     content: "\e834";
     .glyphicon();
+  }
+  &:hover {
+    background-color: @grenadine-ddo;
+    color: #FFF;
+    &:after {
+      color: white !important;
+    }
   }
 }
 .big-orange-title-link {

@@ -32,6 +32,9 @@
       color: @blanc-ddo;
       p {
         margin: 0 !important;
+        color: white;
+        font-style: normal;
+        font-weight: 600;
       }
     }
     .group-date-title-desc {
@@ -49,6 +52,8 @@
             font-size: 1.25em; /*20/16*/
             padding-bottom: 12px;
             display: block;
+            font-style: normal;
+            font-weight: 800;
           }
         }
       }
@@ -81,7 +86,6 @@
       width: 30%;
       left: 3%;
       display: table;
-      border: 1px solid @grenadine-ddo;
       a {
         display: block;
         background-color: @blanc-ddo;
@@ -89,6 +93,14 @@
         color: @grenadine-ddo;
         text-align: center;
         text-transform: uppercase;
+        text-decoration: none;
+        border: 1px solid @grenadine-ddo;
+        font-style: normal;
+        font-weight: 700;
+        &:hover {
+          background-color: @grenadine-ddo;
+          color: white;
+        }
       }
     }
     .field-name-field-boxoffice-url {
@@ -253,7 +265,7 @@
         color: #000;
         text-decoration: none;
         display: block;
-        padding: 0 24px;
+        padding: 0 18px;
         &:last-child {
           padding-right: 0;
         }
