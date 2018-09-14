@@ -44,6 +44,7 @@ dependencies[] = menu
 dependencies[] = menu_block
 dependencies[] = menu_block_export
 dependencies[] = metatag
+dependencies[] = mmenu
 dependencies[] = module_filter
 dependencies[] = node
 dependencies[] = omega_tools
