@@ -75,6 +75,38 @@ function domaine_d_o_page_complexe_field_group_info() {
   );
   $field_groups['group_img_wrapper|node|page_complexe|full'] = $field_group;
 
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_img_wrapper|node|page|full';
+  $field_group->group_name = 'group_img_wrapper';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'page';
+  $field_group->mode = 'full';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Entoure image',
+    'weight' => '7',
+    'children' => array(
+      0 => 'field_image_page_complexe',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Entoure image',
+      'instance_settings' => array(
+        'id' => 'top-basic-page-title-wrapper',
+        'classes' => 'group-img-wrapper field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_img_wrapper|node|page|full'] = $field_group;
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Entoure image');

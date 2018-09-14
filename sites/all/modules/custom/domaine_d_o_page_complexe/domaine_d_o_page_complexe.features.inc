@@ -27,6 +27,14 @@ function domaine_d_o_page_complexe_ctools_plugin_api($module = NULL, $api = NULL
  */
 function domaine_d_o_page_complexe_node_info() {
   $items = array(
+    'page' => array(
+      'name' => t('Basic page'),
+      'base' => 'node_content',
+      'description' => t('Use <em>basic pages</em> for your static content, such as an \'About us\' page.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'page_complexe' => array(
       'name' => t('Page complexe'),
       'base' => 'node_content',

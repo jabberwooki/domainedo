@@ -10,6 +10,175 @@
 function domaine_d_o_page_complexe_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'node-page-body'.
+  $field_instances['node-page-body'] = array(
+    'bundle' => 'page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'trim_length' => 600,
+        ),
+        'type' => 'text_summary_or_trimmed',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'body',
+    'label' => 'Body',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'debug',
+      'display_summary' => 1,
+      'dnd_enabled' => 1,
+      'mee_enabled' => 0,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-page-field_image_page_complexe'.
+  $field_instances['node-page-field_image_page_complexe'] = array(
+    'bundle' => 'page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'domainedo_media',
+        'settings' => array(),
+        'type' => 'title',
+        'weight' => 2,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'domainedo_media',
+        'settings' => array(),
+        'type' => 'haut_classique',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_image_page_complexe',
+    'label' => 'Image',
+    'required' => 0,
+    'settings' => array(
+      'allow_override' => 0,
+      'referencable_types' => array(
+        'audio' => 0,
+        'file' => 0,
+        'gallery' => 0,
+        'image' => 'image',
+        'twitter' => 0,
+        'video' => 0,
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'atom_reference',
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
+      'type' => 'atom_reference_textfield',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-page-field_scald_gallery'.
+  $field_instances['node-page-field_scald_gallery'] = array(
+    'bundle' => 'page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'domainedo_media',
+        'settings' => array(
+          'link' => 0,
+        ),
+        'type' => 'full',
+        'weight' => 1,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'domainedo_media',
+        'settings' => array(
+          'link' => 0,
+        ),
+        'type' => 'full',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_scald_gallery',
+    'label' => 'Galerie',
+    'required' => 0,
+    'settings' => array(
+      'referencable_types' => array(
+        'audio' => 0,
+        'file' => 0,
+        'gallery' => 'gallery',
+        'image' => 0,
+        'twitter' => 0,
+        'video' => 0,
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'atom_reference',
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
+      'type' => 'atom_reference_textfield',
+      'weight' => 6,
+    ),
+  );
+
   // Exported field_instance: 'node-page_complexe-body'.
   $field_instances['node-page_complexe-body'] = array(
     'bundle' => 'page_complexe',
@@ -708,6 +877,7 @@ function domaine_d_o_page_complexe_field_default_field_instances() {
   t('Body');
   t('Encart blanc gauche');
   t('Encart rouge gauche');
+  t('Galerie');
   t('Image');
   t('Lien plus d\'info');
   t('Paragraphe complexe');
