@@ -407,7 +407,7 @@ function domainedo_media_default_scald_context_config() {
       '*' => 'passthrough',
     ),
     'image' => array(
-      '*' => 'style-large_480x296',
+      '*' => 'passthrough',
     ),
     'twitter' => array(
       '*' => 'passthrough',
@@ -459,7 +459,7 @@ function domainedo_media_default_scald_context_config() {
       '*' => 'passthrough',
     ),
     'image' => array(
-      '*' => 'style-list_image_shows__240x180_',
+      '*' => 'style-list_image_shows_500x694',
     ),
     'twitter' => array(
       '*' => 'passthrough',

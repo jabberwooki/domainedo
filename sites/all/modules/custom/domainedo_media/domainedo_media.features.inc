@@ -137,11 +137,11 @@ function domainedo_media_image_default_styles() {
     ),
   );
 
-  // Exported image style: list_image_shows__240x180_.
-  $styles['list_image_shows__240x180_'] = array(
+  // Exported image style: list_image_shows_500x694.
+  $styles['list_image_shows_500x694'] = array(
     'label' => 'List Image shows 500x694',
     'effects' => array(
-      36 => array(
+      44 => array(
         'name' => 'manualcrop_crop_and_scale',
         'data' => array(
           'width' => 500,
@@ -149,11 +149,11 @@ function domainedo_media_image_default_styles() {
           'upscale' => 0,
           'respectminimum' => 1,
           'onlyscaleifcrop' => 0,
-          'style_name' => 'list_image_shows__240x180_',
+          'style_name' => 'list_image_shows_500x694',
         ),
         'weight' => 0,
       ),
-      37 => array(
+      45 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 500,
