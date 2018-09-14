@@ -252,18 +252,7 @@ function domainedo_contexts_context_default_contexts() {
       ),
     ),
   );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'domainedo_ticketoffice-rsi_ws_user_links' => array(
-          'module' => 'domainedo_ticketoffice',
-          'delta' => 'rsi_ws_user_links',
-          'region' => 'content',
-          'weight' => '-10',
-        ),
-      ),
-    ),
-  );
+  $context->reactions = array();
   $context->condition_mode = 0;
 
   // Translatables
@@ -302,6 +291,18 @@ function domainedo_contexts_context_default_contexts() {
           'module' => 'views',
           'delta' => 'shows-block_quick_acces',
           'region' => 'quickaccess',
+          'weight' => '-10',
+        ),
+        'views-evenements-block_info_flash' => array(
+          'module' => 'views',
+          'delta' => 'evenements-block_info_flash',
+          'region' => 'infoflash',
+          'weight' => '-10',
+        ),
+        'views-shows-block_1' => array(
+          'module' => 'views',
+          'delta' => 'shows-block_1',
+          'region' => 'content',
           'weight' => '-10',
         ),
       ),
