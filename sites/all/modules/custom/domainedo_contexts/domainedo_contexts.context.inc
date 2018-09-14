@@ -292,23 +292,17 @@ function domainedo_contexts_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-evenements-block_1' => array(
+        'views-zoom-block_right_now' => array(
           'module' => 'views',
-          'delta' => 'evenements-block_1',
-          'region' => 'content',
+          'delta' => 'zoom-block_right_now',
+          'region' => 'homenow',
           'weight' => '-10',
         ),
-        'views-zoom-block' => array(
+        'views-shows-block_quick_acces' => array(
           'module' => 'views',
-          'delta' => 'zoom-block',
-          'region' => 'content',
-          'weight' => '-9',
-        ),
-        'views-shows-block_2' => array(
-          'module' => 'views',
-          'delta' => 'shows-block_2',
-          'region' => 'content',
-          'weight' => '-8',
+          'delta' => 'shows-block_quick_acces',
+          'region' => 'quickaccess',
+          'weight' => '-10',
         ),
       ),
     ),
