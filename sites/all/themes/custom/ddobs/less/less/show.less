@@ -450,12 +450,23 @@
       margin: 0 auto;
       min-height: 330px;
     }
+    @media (max-width: @screen-md) {
+      .container {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
 
     #block-views-exp-shows-list {
-      float: left;
-      width: 66.66%;
+      @media (min-width: @screen-md) {
+        float: left;
+        width: 66.66%;
+        min-height: 330px;
+      }
+      @media (max-width: @screen-md) {
+        padding: 0 20px;
+      }
       background-color: @gris-clair-ddo;
-      min-height: 330px;
       #edit-field-festival-target-id-wrapper {
         label {
           color: #000;
@@ -516,23 +527,39 @@
           }
         }
       }
-      button#edit-submit-shows {
-        color: #FFF;
-        font-size: 1.125em; /* 18/16 */
-        text-transform: uppercase;
-        display: block;
-        background-color: @grenadine-ddo;
-        padding: 5px 10px;
-        margin: 0;
-        font-weight: bold;
-        margin: 30px 0 20px 0;
+      .views-exposed-widget {
+        @media (max-width: @screen-md) {
+          float: none;
+          padding: 0;
+          display: block;
+          clear: both;
+          padding-top: 10px;
+        }
+        button#edit-submit-shows {
+          color: #FFF;
+          font-size: 1.125em; /* 18/16 */
+          text-transform: uppercase;
+          display: block;
+          background-color: @grenadine-ddo;
+          padding: 5px 10px;
+          margin: 0;
+          font-weight: bold;
+          margin: 30px 0 20px 0;
+          @media (max-width: @screen-md) {
+            display: table;
+            margin:  15px auto 25px auto;
+          }
+        }
       }
+
 
     }
     #block-boxes-left-shows-info {
-      min-height: 330px;
-      float: left;
-      width: 33.34%;
+      @media (min-width: @screen-md) {
+        min-height: 330px;
+        float: left;
+        width: 33.34%;
+      }
       background-color: @grenadine-ddo;
       &:after {
         display: block;
@@ -544,11 +571,25 @@
         color: #FFF;
         font-size: 1.5em; /* 24/16 */
         text-transform: uppercase;
-        margin: 96px 0 20px 24px;
+        @media (min-width: @screen-md) {
+          margin: 96px 0 20px 24px;
+        }
+        @media (max-width: @screen-md) {
+          font-size: 1em;
+          text-align: center;
+          br {
+            display: none;
+          }
+        }
+        margin: 30px 0 20px 24px;
         font-weight: bold;
       }
       #div-link-calendar {
         a {
+          @media (max-width: @screen-md) {
+            display: table;
+            margin: 20px auto;
+          }
           background-color: white;
           color: #000;
           font-size: 1.125em; /* 18/16 */

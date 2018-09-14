@@ -2054,7 +2054,12 @@ strong{font-weight:700}
 .page-spectacles h2.page-header{text-indent:-6000px}
 @media (min-width:1200px){.page-spectacles #headband-festival{background:url(../images/bg_all_shows.gif) 50% 0;width:74%;margin:0 auto;min-height:330px}
 }
-.page-spectacles #headband-festival #block-views-exp-shows-list{float:left;width:66.66%;background-color:#efefef;min-height:330px}
+.page-spectacles #headband-festival #block-views-exp-shows-list{background-color:#efefef}
+@media (min-width:992px){.page-spectacles #headband-festival #block-views-exp-shows-list{float:left;width:66.66%;min-height:330px}
+}
+@media (max-width:992px){.page-spectacles #headband-festival .container{padding-left:0;padding-right:0}
+.page-spectacles #headband-festival #block-views-exp-shows-list{padding:0 20px}
+}
 .page-spectacles #headband-festival #block-views-exp-shows-list #edit-field-festival-target-id-wrapper label{color:#000;font-size:1.5em;text-transform:uppercase;margin:40px 0 30px}
 .page-spectacles #headband-festival #block-views-exp-shows-list #edit-field-festival-target-id-wrapper .bef-select-as-links .form-item{float:left}
 .page-spectacles #headband-festival #block-views-exp-shows-list #edit-field-festival-target-id-wrapper .bef-select-as-links .form-item a{color:#FFF;font-size:.875em;text-transform:uppercase;display:block;background-color:#000;padding:15px 20px;margin:0 20px 16px 0}
@@ -2063,11 +2068,23 @@ strong{font-weight:700}
 .page-spectacles #headband-festival #block-views-exp-shows-list .views-widget-filter-field_show_type_tid .views-widget .form-control .bef-checkboxes>.form-type-bef-checkbox{float:left}
 .page-spectacles #headband-festival #block-views-exp-shows-list .views-widget-filter-field_show_type_tid .views-widget .form-control .bef-checkboxes>.form-type-bef-checkbox>input{width:10px;float:left;margin-right:3px;border-radius:0!important;background-color:green}
 .page-spectacles #headband-festival #block-views-exp-shows-list .views-widget-filter-field_show_type_tid .views-widget .form-control .bef-checkboxes>.form-type-bef-checkbox>label{margin-right:20px;font-size:1em}
-.page-spectacles #headband-festival #block-views-exp-shows-list button#edit-submit-shows{color:#FFF;font-size:1.125em;text-transform:uppercase;display:block;background-color:#f74e2d;padding:5px 10px;font-weight:700;margin:30px 0 20px}
-.page-spectacles #headband-festival #block-boxes-left-shows-info{min-height:330px;float:left;width:33.34%;background-color:#f74e2d}
+@media (max-width:992px){.page-spectacles #headband-festival #block-views-exp-shows-list .views-exposed-widget{float:none;padding:10px 0 0;display:block;clear:both}
+}
+.page-spectacles #headband-festival #block-views-exp-shows-list .views-exposed-widget button#edit-submit-shows{color:#FFF;font-size:1.125em;text-transform:uppercase;display:block;background-color:#f74e2d;padding:5px 10px;font-weight:700;margin:30px 0 20px}
+@media (max-width:992px){.page-spectacles #headband-festival #block-views-exp-shows-list .views-exposed-widget button#edit-submit-shows{display:table;margin:15px auto 25px}
+}
+.page-spectacles #headband-festival #block-boxes-left-shows-info{background-color:#f74e2d}
 .page-spectacles #headband-festival #block-boxes-left-shows-info:after{display:block;content:"";clear:both;border:2px solid red}
-.page-spectacles #headband-festival #block-boxes-left-shows-info p{color:#FFF;font-size:1.5em;text-transform:uppercase;margin:96px 0 20px 24px;font-weight:700}
+.page-spectacles #headband-festival #block-boxes-left-shows-info p{color:#FFF;font-size:1.5em;text-transform:uppercase;margin:30px 0 20px 24px;font-weight:700}
+@media (min-width:992px){.page-spectacles #headband-festival #block-boxes-left-shows-info{min-height:330px;float:left;width:33.34%}
+.page-spectacles #headband-festival #block-boxes-left-shows-info p{margin:96px 0 20px 24px}
+}
+@media (max-width:992px){.page-spectacles #headband-festival #block-boxes-left-shows-info p{font-size:1em;text-align:center}
+.page-spectacles #headband-festival #block-boxes-left-shows-info p br{display:none}
+}
 .page-spectacles #headband-festival #block-boxes-left-shows-info #div-link-calendar a{background-color:#fff;color:#000;font-size:1.125em;text-transform:uppercase;margin:10px 0 20px 24px;font-weight:700;padding:12px;border:1.5px solid #000}
+@media (max-width:992px){.page-spectacles #headband-festival #block-boxes-left-shows-info #div-link-calendar a{display:table;margin:20px auto}
+}
 .page-spectacles #headband-festival #block-boxes-left-shows-info #div-link-calendar a:before{position:relative;font-family:fontello;font-style:normal;font-weight:400;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"\e807";color:#000;font-size:.875em;top:-2px}
 .page-spectacles .pagination .next,.page-spectacles .pagination .pager-first,.page-spectacles .pagination .pager-last,.page-spectacles .pagination .prev{display:none}
 @media (max-width:768px){.front #homeheadband .container-fluid{padding:0}
