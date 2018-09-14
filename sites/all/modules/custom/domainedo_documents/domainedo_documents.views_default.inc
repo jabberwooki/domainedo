@@ -142,7 +142,7 @@ function domainedo_documents_views_default_views() {
   $handler->display->display_options['header']['area']['content'] = 'Texte d\'intro de la rubrique technique';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Contenu: Catégorie */
+  /* Field: Node: Catégorie */
   $handler->display->display_options['fields']['field_tech_document_type']['id'] = 'field_tech_document_type';
   $handler->display->display_options['fields']['field_tech_document_type']['table'] = 'field_data_field_tech_document_type';
   $handler->display->display_options['fields']['field_tech_document_type']['field'] = 'field_tech_document_type';
@@ -170,7 +170,7 @@ function domainedo_documents_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'tech_document' => 'tech_document',
   );
-  /* Filter criterion: Contenu: Lieu concerné (field_described_location) */
+  /* Filter criterion: Node: Lieu concerné (field_described_location) */
   $handler->display->display_options['filters']['field_described_location_tid']['id'] = 'field_described_location_tid';
   $handler->display->display_options['filters']['field_described_location_tid']['table'] = 'field_data_field_described_location';
   $handler->display->display_options['filters']['field_described_location_tid']['field'] = 'field_described_location_tid';
@@ -248,7 +248,7 @@ function domainedo_documents_views_default_views() {
     'relpub_document' => 'relpub_document',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Contenu: Catégorie (field_relpub_document_type) */
+  /* Filter criterion: Node: Catégorie (field_relpub_document_type) */
   $handler->display->display_options['filters']['field_relpub_document_type_value']['id'] = 'field_relpub_document_type_value';
   $handler->display->display_options['filters']['field_relpub_document_type_value']['table'] = 'field_data_field_relpub_document_type';
   $handler->display->display_options['filters']['field_relpub_document_type_value']['field'] = 'field_relpub_document_type_value';
