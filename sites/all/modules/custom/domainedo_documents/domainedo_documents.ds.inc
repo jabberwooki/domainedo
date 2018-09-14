@@ -138,6 +138,141 @@ function domainedo_documents_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|tech_document|full';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'tech_document';
+  $ds_layout->view_mode = 'full';
+  $ds_layout->layout = 'bootstrap_6_6_stacked';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'left' => array(
+        0 => 'comments',
+        1 => 'body',
+      ),
+      'right' => array(
+        2 => 'field_scald_gallery',
+      ),
+      'bottom' => array(
+        3 => 'group_download_zone',
+        4 => 'field_download_col_1',
+        5 => 'field_download_col_2',
+        6 => 'field_references_techniques',
+        9 => 'group_technic_files',
+        10 => 'group_blueprint_files',
+        11 => 'group_light_files',
+        12 => 'field_download_col_3',
+      ),
+      'top_technic_space' => array(
+        7 => 'group_img_wrapper',
+        8 => 'field_scald_image',
+      ),
+    ),
+    'fields' => array(
+      'comments' => 'left',
+      'body' => 'left',
+      'field_scald_gallery' => 'right',
+      'group_download_zone' => 'bottom',
+      'field_download_col_1' => 'bottom',
+      'field_download_col_2' => 'bottom',
+      'field_references_techniques' => 'bottom',
+      'group_img_wrapper' => 'top_technic_space',
+      'field_scald_image' => 'top_technic_space',
+      'group_technic_files' => 'bottom',
+      'group_blueprint_files' => 'bottom',
+      'group_light_files' => 'bottom',
+      'field_download_col_3' => 'bottom',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'top' => 'div',
+      'left' => 'div',
+      'right' => 'div',
+      'bottom' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
+  );
+  $export['node|tech_document|full'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|tech_document|teaser';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'tech_document';
+  $ds_layout->view_mode = 'teaser';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'group_img_wraper',
+        1 => 'body',
+        2 => 'node_link',
+        3 => 'title',
+        4 => 'field_scald_image',
+      ),
+    ),
+    'fields' => array(
+      'group_img_wraper' => 'ds_content',
+      'body' => 'ds_content',
+      'node_link' => 'ds_content',
+      'title' => 'ds_content',
+      'field_scald_image' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
+  );
+  $export['node|tech_document|teaser'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'taxonomy_term|espace_pro|full';
+  $ds_layout->entity_type = 'taxonomy_term';
+  $ds_layout->bundle = 'espace_pro';
+  $ds_layout->view_mode = 'full';
+  $ds_layout->layout = 'ds_2col_fluid';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'left' => array(
+        0 => 'description',
+      ),
+      'top_technic' => array(
+        1 => 'field_section_image',
+        2 => 'group_img_wrapper',
+      ),
+    ),
+    'fields' => array(
+      'description' => 'left',
+      'field_section_image' => 'top_technic',
+      'group_img_wrapper' => 'top_technic',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'left' => 'div',
+      'right' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_disable_css' => 0,
+  );
+  $export['taxonomy_term|espace_pro|full'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'taxonomy_term|espace_pro|section';
   $ds_layout->entity_type = 'taxonomy_term';
   $ds_layout->bundle = 'espace_pro';
