@@ -153,6 +153,7 @@ features[variable][] = disqus_location
 features[variable][] = disqus_nodetypes
 features[variable][] = logintoboggan_confirm_email_at_registration
 features[variable][] = logintoboggan_login_with_email
+features[variable][] = mmenu_item_mmenu_left
 features[variable][] = pathauto_transliterate
 features[variable][] = site_default_country
 features[variable][] = site_mail
