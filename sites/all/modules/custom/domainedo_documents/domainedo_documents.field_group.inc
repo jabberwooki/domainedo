@@ -395,9 +395,9 @@ function domainedo_documents_field_group_info() {
     'label' => 'Groupe Titre image',
     'weight' => '0',
     'children' => array(
-      0 => 'field_title_ref_tec_doc',
+      0 => 'field_image_ref_tec_doc',
       1 => 'field_summary_ref_tec_doc',
-      2 => 'field_image_ref_tec_doc',
+      2 => 'field_title_ref_tec_doc',
     ),
     'format_type' => 'div',
     'format_settings' => array(

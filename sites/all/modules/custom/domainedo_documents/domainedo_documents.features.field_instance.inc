@@ -433,7 +433,7 @@ function domainedo_documents_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'domainedo_media',
         'settings' => array(),
-        'type' => 'large_480x296_crop',
+        'type' => 'festival',
         'weight' => 3,
       ),
     ),

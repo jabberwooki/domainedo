@@ -146,29 +146,27 @@ function domainedo_documents_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'left' => array(
-        0 => 'comments',
-        1 => 'body',
+        0 => 'body',
       ),
       'right' => array(
-        2 => 'field_scald_gallery',
+        1 => 'field_scald_gallery',
       ),
       'bottom' => array(
-        3 => 'group_download_zone',
-        4 => 'field_download_col_1',
-        5 => 'field_download_col_2',
-        6 => 'field_references_techniques',
-        9 => 'group_technic_files',
-        10 => 'group_blueprint_files',
-        11 => 'group_light_files',
-        12 => 'field_download_col_3',
+        2 => 'group_download_zone',
+        3 => 'field_download_col_1',
+        4 => 'field_download_col_2',
+        5 => 'field_references_techniques',
+        8 => 'group_technic_files',
+        9 => 'group_blueprint_files',
+        10 => 'group_light_files',
+        11 => 'field_download_col_3',
       ),
       'top_technic_space' => array(
-        7 => 'group_img_wrapper',
-        8 => 'field_scald_image',
+        6 => 'group_img_wrapper',
+        7 => 'field_scald_image',
       ),
     ),
     'fields' => array(
-      'comments' => 'left',
       'body' => 'left',
       'field_scald_gallery' => 'right',
       'group_download_zone' => 'bottom',
