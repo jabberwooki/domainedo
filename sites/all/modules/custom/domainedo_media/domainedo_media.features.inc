@@ -180,6 +180,87 @@ function domainedo_media_image_default_styles() {
     ),
   );
 
+  // Exported image style: responsive-showbreakpoints_theme_ddobs_narrow_1x.
+  $styles['responsive-showbreakpoints_theme_ddobs_narrow_1x'] = array(
+    'label' => 'show responsive narrow',
+    'effects' => array(
+      48 => array(
+        'name' => 'manualcrop_crop_and_scale',
+        'data' => array(
+          'width' => 1935,
+          'height' => 693,
+          'upscale' => 0,
+          'respectminimum' => 1,
+          'onlyscaleifcrop' => 0,
+          'style_name' => 'responsive-showbreakpoints_theme_ddobs_narrow_1x',
+        ),
+        'weight' => 0,
+      ),
+      49 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 1935,
+          'height' => 693,
+        ),
+        'weight' => 2,
+      ),
+    ),
+  );
+
+  // Exported image style: responsive-showbreakpoints_theme_ddobs_wide_1x.
+  $styles['responsive-showbreakpoints_theme_ddobs_wide_1x'] = array(
+    'label' => 'show responsive wide',
+    'effects' => array(
+      50 => array(
+        'name' => 'manualcrop_crop_and_scale',
+        'data' => array(
+          'width' => 1935,
+          'height' => 693,
+          'upscale' => 0,
+          'respectminimum' => 1,
+          'onlyscaleifcrop' => 0,
+          'style_name' => 'responsive-showbreakpoints_theme_ddobs_wide_1x',
+        ),
+        'weight' => 0,
+      ),
+      51 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 1935,
+          'height' => 693,
+        ),
+        'weight' => 2,
+      ),
+    ),
+  );
+
+  // Exported image style: responsive-showbreakpoints_theme_domainedo_mobile_1x.
+  $styles['responsive-showbreakpoints_theme_domainedo_mobile_1x'] = array(
+    'label' => 'show responsive mobile',
+    'effects' => array(
+      46 => array(
+        'name' => 'manualcrop_crop_and_scale',
+        'data' => array(
+          'width' => 768,
+          'height' => 768,
+          'upscale' => 0,
+          'respectminimum' => 1,
+          'onlyscaleifcrop' => 0,
+          'style_name' => 'responsive-showbreakpoints_theme_domainedo_mobile_1x',
+        ),
+        'weight' => 0,
+      ),
+      47 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 768,
+          'height' => 768,
+        ),
+        'weight' => 2,
+      ),
+    ),
+  );
+
   // Exported image style: top-show-1935x693.
   $styles['top-show-1935x693'] = array(
     'label' => 'Haut Spectacle 1935x693',

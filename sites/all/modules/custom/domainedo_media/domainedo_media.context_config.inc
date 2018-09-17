@@ -302,7 +302,7 @@ function domainedo_media_default_scald_context_config() {
       '*' => 'passthrough',
     ),
     'image' => array(
-      '*' => 'style-top-show-1935x693',
+      '*' => 'group-show_full_page',
     ),
     'twitter' => array(
       '*' => 'passthrough',
