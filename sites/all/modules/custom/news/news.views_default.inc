@@ -556,12 +556,6 @@ function news_views_default_views() {
   $handler->display->display_options['fields']['field_new_window']['label'] = '';
   $handler->display->display_options['fields']['field_new_window']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_new_window']['element_label_colon'] = FALSE;
-  /* Field: Contenu: Url de destination */
-  $handler->display->display_options['fields']['field_news_url_target']['id'] = 'field_news_url_target';
-  $handler->display->display_options['fields']['field_news_url_target']['table'] = 'field_data_field_news_url_target';
-  $handler->display->display_options['fields']['field_news_url_target']['field'] = 'field_news_url_target';
-  $handler->display->display_options['fields']['field_news_url_target']['label'] = '';
-  $handler->display->display_options['fields']['field_news_url_target']['element_label_colon'] = FALSE;
   /* Field: Field: Image */
   $handler->display->display_options['fields']['field_scald_image']['id'] = 'field_scald_image';
   $handler->display->display_options['fields']['field_scald_image']['table'] = 'field_data_field_scald_image';
@@ -574,16 +568,6 @@ function news_views_default_views() {
     'link' => '0',
   );
   $handler->display->display_options['fields']['field_scald_image']['delta_offset'] = '0';
-  /* Field: Contenu: Body */
-  $handler->display->display_options['fields']['body']['id'] = 'body';
-  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
-  $handler->display->display_options['fields']['body']['field'] = 'body';
-  $handler->display->display_options['fields']['body']['label'] = '';
-  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
-  $handler->display->display_options['fields']['body']['settings'] = array(
-    'trim_length' => '300',
-  );
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
@@ -593,12 +577,40 @@ function news_views_default_views() {
   $handler->display->display_options['fields']['nothing']['element_class'] = 'zoom-title-label';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nothing']['element_default_classes'] = FALSE;
+  /* Field: Contenu: Url de destination */
+  $handler->display->display_options['fields']['field_news_url_target']['id'] = 'field_news_url_target';
+  $handler->display->display_options['fields']['field_news_url_target']['table'] = 'field_data_field_news_url_target';
+  $handler->display->display_options['fields']['field_news_url_target']['field'] = 'field_news_url_target';
+  $handler->display->display_options['fields']['field_news_url_target']['label'] = '';
+  $handler->display->display_options['fields']['field_news_url_target']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_news_url_target']['element_label_colon'] = FALSE;
   /* Field: Contenu: Lien plus d'infos */
   $handler->display->display_options['fields']['field_link_more_infos']['id'] = 'field_link_more_infos';
   $handler->display->display_options['fields']['field_link_more_infos']['table'] = 'field_data_field_link_more_infos';
   $handler->display->display_options['fields']['field_link_more_infos']['field'] = 'field_link_more_infos';
   $handler->display->display_options['fields']['field_link_more_infos']['label'] = '';
+  $handler->display->display_options['fields']['field_link_more_infos']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_link_more_infos']['element_label_colon'] = FALSE;
+  /* Field: Contenu: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['text'] = '<div id="bottom-ss-home-ddo">
+[field_news_url_target] 
+  <div class="views-field-body-in-body">
+    [body-summary] 
+  </div>
+  <div class="views-field-field-link-more-infos">
+    [field_link_more_infos]
+  </div>
+</div>';
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '300',
+  );
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Draggableviews: Poids */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
@@ -896,6 +908,15 @@ function news_views_default_views() {
     t('zoom'),
     t('Voir tous les événements'),
     t('<div>Zoom sur</div>'),
+    t('<div id="bottom-ss-home-ddo">
+[field_news_url_target] 
+  <div class="views-field-body-in-body">
+    [body-summary] 
+  </div>
+  <div class="views-field-field-link-more-infos">
+    [field_link_more_infos]
+  </div>
+</div>'),
     t('block home events'),
     t('Page liste zoom sur'),
     t('Zoom sur'),
