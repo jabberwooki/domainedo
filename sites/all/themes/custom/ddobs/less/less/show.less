@@ -19,11 +19,11 @@
   }
   .group-tranparent-gradient {
     position: absolute;
-    top: 60%;
+    top: 40%;
     @media (min-width: 618px) and (max-width: @screen-md) {
       top: 65%;
     }
-    height: 30%;
+    height: 50%;
     width: 100%;
     left: 0;
     background: black; /* For browsers that do not support gradients */
@@ -41,7 +41,24 @@
       position: absolute;
       left: 0;
       bottom: 0;
+      padding: 0 10px;
       .date-orange();
+
+      .field-name-field-show-dates {
+
+        > div {
+          .underline-grenadine();
+          a {
+            text-transform: none !important;
+            font-style: normal;
+            font-weight: 800;
+          }
+          &:after {
+            border: 3px solid @grenadine-ddo;
+            margin-top: -5px;
+          }
+        }
+      }
       .field-name-title {
         display: table;
         > div {
@@ -59,11 +76,15 @@
       }
       .field-name-body {
         display: table;
-        margin-bottom: 15px;
+        margin-bottom: 25px;
+
         > div {
           padding-left: 10px;
-          height: 30px;
-          overflow: hidden;
+        }
+        p {
+          font-size: 0.875em;
+          font-style: normal;
+          font-weight: 600;
         }
       }
     }
@@ -81,15 +102,14 @@
     background: black;
     .field-name-node-link {
       position: absolute;
-      top: 0;
+      top: -5px;
       right: 2%;
-      width: 30%;
-      left: 3%;
+      left: 5%;
       display: table;
       a {
         display: block;
         background-color: @blanc-ddo;
-        padding: 10px;
+        padding: 14px 14px 10px 14px !important;
         color: @grenadine-ddo;
         text-align: center;
         text-transform: uppercase;
@@ -97,6 +117,7 @@
         border: 1px solid @grenadine-ddo;
         font-style: normal;
         font-weight: 700;
+        font-size: 0.825em;
         &:hover {
           background-color: @grenadine-ddo;
           color: white;
@@ -105,8 +126,8 @@
     }
     .field-name-field-boxoffice-url {
       position: absolute;
-      top: 0;
-      right: 3%;
+      top: -5px;
+      right: 5%;
       width: 30%;
       display: table;
       border: 1px solid @grenadine-ddo;
@@ -446,7 +467,6 @@
   #headband-festival {
     @media (min-width: @screen-lg) {
       background: url(../images/bg_all_shows.gif) 50% 0;
-      width: 74%;
       margin: 0 auto;
       min-height: 330px;
     }

@@ -1,17 +1,26 @@
 body {
   font-family: "Gotham", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 600;
   #custom-msg {
     @media (max-width: @screen-sm) {
       height: 70px;
     }
   }
 }
-
 #logo-ddobs {
   text-align: center;
+  @media (max-width: @screen-md) {
+    margin: 25px 0 20px 0;
+  }
 }
 
 .not-logged-in {
+  a {
+    transition : all .25s ease-in-out;
+    -moz-transition : all .25s ease-in-out;
+    -webkit-transition : all .25s ease-in-out;
+  }
   @media (max-width: @screen-sm) {
     .navbar.container {
       margin-top: 0;
@@ -158,10 +167,19 @@ header#navbar {
       font-size: 0.875em; /*14/16*/
       font-style: normal;
       font-weight: 800;
-      > li > a {
-        padding-left: 36px;
-        padding-right: 36px;
-        color: @noir-ddo
+      > li {
+        > a {
+          padding-left: 36px;
+          padding-right: 36px;
+          color: @noir-ddo;
+          padding-top: 25px;
+          padding-bottom: 5px;
+        }
+        &.open {
+          > a:hover{
+            background-color: transparent !important;
+          }
+        }
       }
     }
   }
@@ -388,20 +406,26 @@ header#navbar {
   }
   &.open-menu-button {
     color: @grenadine-ddo;
-    font-size: 0.53125em; /* 8.5/16 */
+    position: relative;
     &:before {
       .glyphicon();
       content: "\e869";
       color: @grenadine-ddo;
-      font-size: 3.529411765em; /* 30/8.5 */
+      font-size: 2.5em; /* 40/8.5 */
       display: block;
-      margin: 0 0 -5px -3px;
     }
     /* &:after {
        content: "Menu";
        color: black;
        font-size: 0.5em;
      }*/
+
+  }
+  > span {
+    font-size: 0.53125em; /* 8.5/16 */
+    position: absolute;
+    left: 15%;
+    bottom: -5px;
   }
 }
 
@@ -583,7 +607,7 @@ footer.container {
   #block-bean-reseaux-sociaux-bas {
     border-top: 1.5px solid black;
     border-bottom: 1.5px solid black;
-    padding: 10px 0 20px 0;
+    padding: 20px 0 30px 0;
     margin: 30px 0 20px 0;
     .field-name-field-block-body {
       display: table;
@@ -594,6 +618,8 @@ footer.container {
         margin-top: 10px;
         color: #000;
         font-size: 1.25em; /* 20/16 */
+        font-style: normal;
+        font-weight: 800;
         float: left;
         padding-left: 20px;
         @media (max-width: @screen-sm) {
@@ -610,6 +636,8 @@ footer.container {
         display: table;
         float: left;
         font-size: 1.25em; /* 20/16 */
+        font-weight: 700;
+        font-style: italic;
         margin: 10px 13% 0 20px;
         @media (max-width: @screen-sm) {
           margin: 0 auto;
@@ -643,6 +671,7 @@ footer.container {
   }
   p {
     margin: 10px 0;
+    font-size: 0.875em;
   }
   /* Menu bas *************************************/
   #footer-menus {
@@ -658,11 +687,15 @@ footer.container {
     }
     .menu {
       margin-top: 5px;
-      > li > a {
-        color: #000;
-        padding: 5px 0;
-        display: block;
-        margin: 0;
+      > li {
+
+        > a {
+          color: #000;
+          padding: 10px 0;
+          display: block;
+          margin: 0;
+          font-size: 0.875em;
+        }
       }
     }
   }
@@ -787,11 +820,14 @@ h2.page-header {
   color: @blanc-ddo;
   background-color: @noir-ddo;
   text-decoration: none;
-  padding: 5px 10px;
+  padding: 5px;
   font-size: 0.6875em; /*11/16*/
   font-style: normal;
   font-weight: 700;
   border: 1px solid black;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 700;
   &:hover {
     background-color: #FFF;
     color: #000;
@@ -800,18 +836,16 @@ h2.page-header {
 
 .underline-grenadine {
   font-style: normal;
-  font-weight: 800;
+  font-weight: 900;
+  text-transform: uppercase;
   &:after {
     display: block;
-    border: 4px solid @grenadine-ddo;
-    margin-top: -5px;
+    border: 6px solid @grenadine-ddo;
+    margin-top: -14px;
     content: "";
   }
   &:hover {
-    &:after {
-      border: 4px solid @grenadine-ddo;
-    }
-
+    opacity: 0.7;
   }
   a {
     text-decoration: none !important;
@@ -834,13 +868,14 @@ h2.page-header {
   padding-left: 20px;
   display: block;
   background-color: @grenadine-ddo;
-  padding: 10px;
+  padding: 14px 7px 10px 7px;
   color: @blanc-ddo;
   text-align: center;
   text-transform: uppercase;
   font-style: normal;
-  font-weight: 800;
+  font-weight: 700;
   text-decoration: none;
+  font-size: 0.825em;
   &:hover {
     background-color: white;
     color: @grenadine-ddo;
@@ -867,7 +902,7 @@ h2.page-header {
   .field-name-field-show-dates {
     display: table;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     /*overflow: hidden;*/
     > div {
       padding-left: 10px;
@@ -894,7 +929,9 @@ h2.page-header {
   border: solid @grenadine-ddo 1.5px;
   text-transform: uppercase;
   font-size: 0.8125em; /* 13/16 */
-  padding: 15px 17px;
+  font-style: normal;
+  font-weight: 700;
+  padding: 15px 17px 10px 17px;
   background-color: white;
   margin: 0 20px 20px 0;
   color: @grenadine-ddo;
@@ -911,7 +948,7 @@ h2.page-header {
   }
 }
 .button-red-link { /* Utiliser sur la page d'accueil pour le lien "voir tous les spectacles." */
-  padding: 10px 20px;
+  padding: 15px 15px  15px 20px;
   border: 2px solid @grenadine-ddo;
   display: table;
   margin: 0 auto;
@@ -925,6 +962,8 @@ h2.page-header {
     color: @grenadine-ddo !important;
     content: "\e834";
     .glyphicon();
+    margin-left: 10px;
+    margin-right: 0;
   }
   &:hover {
     background-color: @grenadine-ddo;
@@ -938,7 +977,8 @@ h2.page-header {
   color: @grenadine-ddo;
   text-transform: uppercase;
   font-size: 1.5em; /* 24/16 */
-  font-weight: bold;
+  font-style: normal;
+  font-weight: 800;
 }
 .big-off-orange-title {
   color: white;
@@ -957,10 +997,11 @@ strong {
 }
 .little-move {
   &:hover {
-    transform: translate3d(0,-3px,0);
+    transform: translate3d(0,-4px,0);
     transition: all .25s ease-in-out;
     -moz-transition: all .25s ease-in-out;
     -webkit-transition: all .25s ease-in-out;
+    box-shadow: 1px 1px 12px #555;
   }
 }
 .h2-header-simple {
