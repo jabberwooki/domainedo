@@ -598,12 +598,12 @@ function news_views_default_views() {
   $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['body']['alter']['text'] = '<div id="bottom-ss-home-ddo">
-[field_news_url_target] 
+ <div class="views-field-field-link-more-infos">
+    [field_link_more_infos]
+  </div>
+  [field_news_url_target] 
   <div class="views-field-body-in-body">
     [body-summary] 
-  </div>
-  <div class="views-field-field-link-more-infos">
-    [field_link_more_infos]
   </div>
 </div>';
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
@@ -909,12 +909,12 @@ function news_views_default_views() {
     t('Voir tous les événements'),
     t('<div>Zoom sur</div>'),
     t('<div id="bottom-ss-home-ddo">
-[field_news_url_target] 
+ <div class="views-field-field-link-more-infos">
+    [field_link_more_infos]
+  </div>
+  [field_news_url_target] 
   <div class="views-field-body-in-body">
     [body-summary] 
-  </div>
-  <div class="views-field-field-link-more-infos">
-    [field_link_more_infos]
   </div>
 </div>'),
     t('block home events'),
