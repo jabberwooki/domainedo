@@ -356,7 +356,7 @@ function domainedo_media_default_scald_context_config() {
       '*' => 'passthrough',
     ),
     'image' => array(
-      '*' => 'style-large-1935x377',
+      '*' => 'group-page',
     ),
     'twitter' => array(
       '*' => 'passthrough',

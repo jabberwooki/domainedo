@@ -109,33 +109,6 @@ function domainedo_media_image_default_styles() {
     ),
   );
 
-  // Exported image style: large-1935x377.
-  $styles['large-1935x377'] = array(
-    'label' => 'Haut page classique 1935x377',
-    'effects' => array(
-      40 => array(
-        'name' => 'manualcrop_crop_and_scale',
-        'data' => array(
-          'width' => 1935,
-          'height' => 377,
-          'upscale' => 0,
-          'respectminimum' => 1,
-          'onlyscaleifcrop' => 0,
-          'style_name' => 'large-1935x377',
-        ),
-        'weight' => 0,
-      ),
-      41 => array(
-        'name' => 'image_scale_and_crop',
-        'data' => array(
-          'width' => 1935,
-          'height' => 377,
-        ),
-        'weight' => 2,
-      ),
-    ),
-  );
-
   // Exported image style: list_image_shows_500x694.
   $styles['list_image_shows_500x694'] = array(
     'label' => 'List Image shows 500x694',
@@ -175,6 +148,60 @@ function domainedo_media_image_default_styles() {
           'upscale' => 0,
         ),
         'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: pagebreakpoints_theme_ddobs_wide_1x.
+  $styles['pagebreakpoints_theme_ddobs_wide_1x'] = array(
+    'label' => 'page grand',
+    'effects' => array(
+      58 => array(
+        'name' => 'manualcrop_crop_and_scale',
+        'data' => array(
+          'width' => 1935,
+          'height' => 377,
+          'upscale' => 0,
+          'respectminimum' => 1,
+          'onlyscaleifcrop' => 0,
+          'style_name' => 'pagebreakpoints_theme_ddobs_wide_1x',
+        ),
+        'weight' => 0,
+      ),
+      59 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 1935,
+          'height' => 377,
+        ),
+        'weight' => 2,
+      ),
+    ),
+  );
+
+  // Exported image style: pagebreakpoints_theme_domainedo_mobile_1x.
+  $styles['pagebreakpoints_theme_domainedo_mobile_1x'] = array(
+    'label' => 'page petit',
+    'effects' => array(
+      56 => array(
+        'name' => 'manualcrop_crop_and_scale',
+        'data' => array(
+          'width' => 768,
+          'height' => 630,
+          'upscale' => 0,
+          'respectminimum' => 1,
+          'onlyscaleifcrop' => 0,
+          'style_name' => 'pagebreakpoints_theme_domainedo_mobile_1x',
+        ),
+        'weight' => 0,
+      ),
+      57 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 768,
+          'height' => 630,
+        ),
+        'weight' => 2,
       ),
     ),
   );
