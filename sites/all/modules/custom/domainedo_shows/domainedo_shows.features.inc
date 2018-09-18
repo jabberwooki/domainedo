@@ -189,42 +189,6 @@ function domainedo_shows_features_date_type_default() {
 }
 
 /**
- * Implements hook_image_default_styles().
- */
-function domainedo_shows_image_default_styles() {
-  $styles = array();
-
-  // Exported image style: large-675.
-  $styles['large-675'] = array(
-    'label' => 'large-1366',
-    'effects' => array(
-      21 => array(
-        'name' => 'manualcrop_crop_and_scale',
-        'data' => array(
-          'width' => 1366,
-          'height' => 489,
-          'upscale' => 0,
-          'respectminimum' => 1,
-          'onlyscaleifcrop' => 0,
-          'style_name' => 'large-675',
-        ),
-        'weight' => 0,
-      ),
-      22 => array(
-        'name' => 'image_scale_and_crop',
-        'data' => array(
-          'width' => 1366,
-          'height' => 489,
-        ),
-        'weight' => 2,
-      ),
-    ),
-  );
-
-  return $styles;
-}
-
-/**
  * Implements hook_node_info().
  */
 function domainedo_shows_node_info() {

@@ -256,7 +256,6 @@ features[field_instance][] = taxonomy_term-show_locations-field_scald_image
 features[field_instance][] = taxonomy_term-show_locations-field_scald_sound
 features[field_instance][] = taxonomy_term-show_locations-field_scald_video
 features[field_instance][] = taxonomy_term-show_locations-field_seating
-features[image][] = large-675
 features[menu_links][] = main-menu_spectacles:spectacles/tous-les-spectacles
 features[node][] = festival
 features[node][] = programmer
