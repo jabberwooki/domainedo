@@ -80,7 +80,7 @@ function domainedo_media_default_scald_context_config() {
       '*' => 'passthrough',
     ),
     'image' => array(
-      '*' => 'style-image_763x550',
+      '*' => 'group-en_ce_moment',
     ),
     'twitter' => array(
       '*' => 'passthrough',
@@ -235,7 +235,7 @@ function domainedo_media_default_scald_context_config() {
       '*' => 'style-large-675',
     ),
     'image' => array(
-      '*' => 'group-max',
+      '*' => 'passthrough',
     ),
     'twitter' => array(
       '*' => 'passthrough',
@@ -519,7 +519,7 @@ function domainedo_media_default_scald_context_config() {
       '*' => 'passthrough',
     ),
     'image' => array(
-      '*' => 'group-max',
+      '*' => 'passthrough',
     ),
     'twitter' => array(
       '*' => 'passthrough',
@@ -749,7 +749,7 @@ function domainedo_media_default_scald_context_config() {
       '*' => 'passthrough',
     ),
     'image' => array(
-      '*' => 'style-carre600x600',
+      '*' => 'passthrough',
     ),
     'twitter' => array(
       '*' => 'passthrough',

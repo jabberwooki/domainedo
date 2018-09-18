@@ -31,29 +31,54 @@ function domainedo_media_ctools_plugin_api($module = NULL, $api = NULL) {
 function domainedo_media_image_default_styles() {
   $styles = array();
 
-  // Exported image style: carre600x600.
-  $styles['carre600x600'] = array(
-    'label' => 'carré 600x600',
+  // Exported image style: en-ce-momentbreakpoints_theme_ddobs_wide_1x.
+  $styles['en-ce-momentbreakpoints_theme_ddobs_wide_1x'] = array(
+    'label' => 'En ce moment - grand',
     'effects' => array(
-      30 => array(
-        'name' => 'manualcrop_crop_and_scale',
+      54 => array(
+        'name' => 'manualcrop_crop',
         'data' => array(
-          'width' => 600,
-          'height' => 600,
-          'upscale' => 0,
-          'respectminimum' => 1,
-          'onlyscaleifcrop' => 0,
-          'style_name' => 'carre600x600',
+          'width' => 768,
+          'height' => 554,
+          'keepproportions' => 1,
+          'reuse_crop_style' => '',
+          'style_name' => 'image_768x554',
         ),
         'weight' => 0,
       ),
-      31 => array(
+      55 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 600,
-          'height' => 600,
+          'width' => 768,
+          'height' => 554,
         ),
-        'weight' => 2,
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: en-ce-momentbreakpoints_theme_domainedo_mobile_1x.
+  $styles['en-ce-momentbreakpoints_theme_domainedo_mobile_1x'] = array(
+    'label' => 'Carré 768x768  - En ce moment petit',
+    'effects' => array(
+      52 => array(
+        'name' => 'manualcrop_crop',
+        'data' => array(
+          'width' => 768,
+          'height' => 768,
+          'keepproportions' => 1,
+          'reuse_crop_style' => '',
+          'style_name' => 'en-ce-momentbreakpoints_theme_domainedo_mobile_1x',
+        ),
+        'weight' => 0,
+      ),
+      53 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 768,
+          'height' => 768,
+        ),
+        'weight' => 1,
       ),
     ),
   );
@@ -78,32 +103,6 @@ function domainedo_media_image_default_styles() {
         'data' => array(
           'width' => 780,
           'height' => 517,
-        ),
-        'weight' => 1,
-      ),
-    ),
-  );
-
-  // Exported image style: image_763x550.
-  $styles['image_763x550'] = array(
-    'label' => 'En ce moment 763x550',
-    'effects' => array(
-      24 => array(
-        'name' => 'manualcrop_crop',
-        'data' => array(
-          'width' => 763,
-          'height' => 550,
-          'keepproportions' => 1,
-          'reuse_crop_style' => '',
-          'style_name' => 'image_763x550',
-        ),
-        'weight' => 0,
-      ),
-      25 => array(
-        'name' => 'image_scale_and_crop',
-        'data' => array(
-          'width' => 763,
-          'height' => 550,
         ),
         'weight' => 1,
       ),
@@ -180,36 +179,9 @@ function domainedo_media_image_default_styles() {
     ),
   );
 
-  // Exported image style: responsive-showbreakpoints_theme_ddobs_narrow_1x.
-  $styles['responsive-showbreakpoints_theme_ddobs_narrow_1x'] = array(
-    'label' => 'show responsive narrow',
-    'effects' => array(
-      48 => array(
-        'name' => 'manualcrop_crop_and_scale',
-        'data' => array(
-          'width' => 1935,
-          'height' => 693,
-          'upscale' => 0,
-          'respectminimum' => 1,
-          'onlyscaleifcrop' => 0,
-          'style_name' => 'responsive-showbreakpoints_theme_ddobs_narrow_1x',
-        ),
-        'weight' => 0,
-      ),
-      49 => array(
-        'name' => 'image_scale_and_crop',
-        'data' => array(
-          'width' => 1935,
-          'height' => 693,
-        ),
-        'weight' => 2,
-      ),
-    ),
-  );
-
   // Exported image style: responsive-showbreakpoints_theme_ddobs_wide_1x.
   $styles['responsive-showbreakpoints_theme_ddobs_wide_1x'] = array(
-    'label' => 'show responsive wide',
+    'label' => 'Spectacle grand',
     'effects' => array(
       50 => array(
         'name' => 'manualcrop_crop_and_scale',
@@ -236,7 +208,7 @@ function domainedo_media_image_default_styles() {
 
   // Exported image style: responsive-showbreakpoints_theme_domainedo_mobile_1x.
   $styles['responsive-showbreakpoints_theme_domainedo_mobile_1x'] = array(
-    'label' => 'show responsive mobile',
+    'label' => 'Spectacle petit',
     'effects' => array(
       46 => array(
         'name' => 'manualcrop_crop_and_scale',

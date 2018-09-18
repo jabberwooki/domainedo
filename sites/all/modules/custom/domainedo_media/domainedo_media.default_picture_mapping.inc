@@ -23,12 +23,6 @@ function domainedo_media_default_picture_mapping() {
         'image_style' => 'responsive-showbreakpoints_theme_ddobs_wide_1x',
       ),
     ),
-    'breakpoints.theme.ddobs.narrow' => array(
-      '1x' => array(
-        'mapping_type' => 'image_style',
-        'image_style' => 'responsive-showbreakpoints_theme_ddobs_narrow_1x',
-      ),
-    ),
     'breakpoints.theme.ddobs.mobile' => array(
       '1x' => array(
         'mapping_type' => 'image_style',
