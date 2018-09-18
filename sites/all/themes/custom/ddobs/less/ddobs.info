@@ -32,8 +32,7 @@ regions[page_top]               = 'Page top'
 regions[page_bottom]            = 'Page bottom'
 
 ;; Breakpoints
-breakpoints[wide] = (min-width: 992px)
-breakpoints[narrow] = (min-width: 768px)
+breakpoints[wide] = (min-width: 768px)
 breakpoints[mobile] = (min-width: 0px)
 
 
