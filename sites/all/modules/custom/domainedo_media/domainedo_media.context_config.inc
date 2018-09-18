@@ -749,7 +749,7 @@ function domainedo_media_default_scald_context_config() {
       '*' => 'passthrough',
     ),
     'image' => array(
-      '*' => 'passthrough',
+      '*' => 'style-en-ce-momentbreakpoints_theme_domainedo_mobile_1x',
     ),
     'twitter' => array(
       '*' => 'passthrough',
