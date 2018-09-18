@@ -4,7 +4,7 @@
  * Bootstrap 6-6 stacked template for Display Suite.
  */
 ?>
-
+<div class="container">
 
 <<?php print $layout_wrapper; print $layout_attributes; ?> class="<?php print $classes; ?>">
   <?php if (isset($title_suffix['contextual_links'])): ?>
@@ -19,12 +19,13 @@
   <?php endif; ?>
   <?php if ($left || $right): ?>
     <div class="row">
-      <<?php print $left_wrapper; ?> class="col-md-7  <?php print $left_classes; ?>">
-        <?php print $left; ?>
-      </<?php print $left_wrapper; ?>>
-      <<?php print $right_wrapper; ?> class="col-md-4 col-md-offset-1 <?php print $right_classes; ?>">
+
+      <<?php print $right_wrapper; ?> class="col-md-4 col-md-push-8 <?php print $right_classes; ?>">
         <?php print $right; ?>
       </<?php print $right_wrapper; ?>>
+      <<?php print $left_wrapper; ?> class="col-md-7 col-md-pull-4 <?php print $left_classes; ?>">
+        <?php print $left; ?>
+      </<?php print $left_wrapper; ?>>
     </div>
   <?php endif; ?>
   <?php if ($bottom): ?>
@@ -41,3 +42,4 @@
 <?php if (!empty($drupal_render_children)): ?>
   <?php print $drupal_render_children ?>
 <?php endif; ?>
+</div>
