@@ -21,7 +21,7 @@
     position: absolute;
     top: 40%;
     @media (min-width: 618px) and (max-width: @screen-md) {
-      top: 65%;
+      top: 45%;
     }
     height: 50%;
     width: 100%;
@@ -162,18 +162,24 @@
       .field-name-field-scald-image {
         .field-item {
           display: table;
-          border-bottom: 56px solid @gris-clair-ddo;
+          border-bottom: 66px solid @gris-clair-ddo;
+          @media (max-width: @screen-sm) {
+            border-bottom: 66px solid @gris-clair-ddo;
+          }
           &:after {
             content: "";
             display: block;
             height: 200px;
             z-index: 1;
             position: absolute;
-            bottom: 50px;
+            bottom: 60px;
             background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000);
             visibility: visible;
             width: 100%;
-
+            @media (max-width: @screen-sm) {
+              bottom: 60px;
+              height: 300px;
+            }
           }
         }
       }
@@ -183,9 +189,14 @@
           position: absolute;
           z-index: 2;
           bottom: 50px;
+          @media (max-width: @screen-sm) {
+            bottom: 60px;
+          }
           .field-name-field-festival {
             a {
               .cartouche-noir();
+              font-style: normal;
+              font-weight: 800 !important;
               width: auto;
               display: table;
               text-transform: uppercase;
@@ -195,21 +206,26 @@
               }
               font-weight: bold;
             }
-            margin-bottom: 20px;
+            margin-bottom: 10px;
           }
-
           .date-orange();
           .field-name-field-show-dates {
             color: #FFF;
             margin-left: -5px;
 
             > div {
+
               &:after {
                 display: block;
                 border: 4px solid @grenadine-off-ddo;
+                margin-top: -8px;
               }
               &.js-div-date {
                 position: static;
+                text-transform: none;
+                font-style: normal;
+                font-weight: 800;
+                font-size: 1.5em;/*24/16*/
               }
             }
 
@@ -223,7 +239,9 @@
             }
             color: white;
             margin-bottom: 20px;
-            font-weight: bold;
+            margin-top: 20px;
+            font-style: normal;
+            font-weight: 800;
           }
           .field-name-field-subtitle {
             font-size: 1.5em; /* 24/16 */
@@ -231,7 +249,7 @@
               font-size: 1em;
             }
             color: white;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
           }
         }
       }
@@ -256,15 +274,24 @@
     position: relative;
     top: -38px;
     /* left column ******************************************************************/
-
+    .field-name-body {
+      p {
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.375em !important;/*22/16*/
+      }
+    }
     .field-name-field-reservation {
       display: none;
     }
     #group-wrapper-distribution {
       min-height: 16px;
-      margin-top: 5px;
+      margin-top: 0;
       margin-right: 30px;
       .field-name-field-casting-link {
+        @media (max-width: @screen-sm) {
+          display: none;
+        }
         float: left;
         p {
           font-size: 1em;
@@ -276,19 +303,31 @@
           text-decoration: none;
           display: block;
           padding-right: 30px;
-
+          font-style: normal;
+          font-weight: 800;
+          &:hover {
+            color: @grenadine-ddo;
+          }
         }
       }
       margin-bottom: 50px;
       a.show-anchor-link {
+        @media (max-width: @screen-sm) {
+          display: none;
+        }
         float: left;
         text-transform: uppercase;
         color: #000;
         text-decoration: none;
         display: block;
-        padding: 0 18px;
+        padding: 0 17px;
+        font-style: normal;
+        font-weight: 800;
         &:last-child {
           padding-right: 0;
+        }
+        &:hover {
+          color: @grenadine-ddo;
         }
       }
 
@@ -297,11 +336,27 @@
     .field-name-field-from {
       border-top: 1px solid black;
       padding-top: 20px;
+      .field-label {
+        font-style: normal;
+        font-weight: 800;
+      }
+      .field-item {
+        font-style: normal;
+        font-weight: 600;
+      }
     }
     .field-name-field-by {
       border-bottom: 1px solid black;
       padding-bottom: 20px;
       margin-bottom: 20px;
+      .field-label {
+        font-style: normal;
+        font-weight: 800;
+      }
+      .field-item {
+        font-style: normal;
+        font-weight: 600;
+      }
     }
     .field-name-body {
       margin-bottom: 20px;
@@ -310,7 +365,8 @@
       margin-top: 20px;
       .label-above {
         text-transform: uppercase;
-        font-weight: bold;
+        font-style: normal;
+        font-weight: 800;
       }
     }
     .field-name-field-production,
@@ -320,7 +376,8 @@
       .field-label,
       .label-above {
         text-transform: uppercase;
-        font-weight: bold;
+        font-style: normal;
+        font-weight: 800;
       }
     }
     /* Right column *********************************************************************/
@@ -330,10 +387,16 @@
       .field-name-field-boxoffice-url {
         a {
           .button-book();
-          padding: 8px 20px;
-          font-weight: bold;
+          padding: 12px 20px 8px 20px;
+          font-style: normal;
+          font-weight: 800;
           display: table;
-          margin-top: -4px;
+          margin-top: -14px;
+          font-size: 1.125em;/*18/16*/
+          @media (max-width: @screen-sm) {
+            width: 100%;
+            margin: -14px auto 20px auto;
+          }
         }
       }
     }
@@ -344,8 +407,9 @@
       .label-above {
         margin-bottom: 15px;
         text-transform: uppercase;
-        font-weight: bold;
         font-size: 1.125em; /* 18/16px */
+        font-style: normal;
+        font-weight: 800;
         &:before {
           .glyphicon();
           content: "\e807";
@@ -357,6 +421,9 @@
         display: block;
         margin-bottom: 10px;
         font-size: 1em; /* 16px */
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.8125em; /* 29/16 */
       }
     }
     #node-show-full-group-lieu {
@@ -367,6 +434,8 @@
       color: white;
       .field-label {
         text-transform: uppercase;
+        font-style: normal;
+        font-weight: 800;
       }
       a {
         color: white;
@@ -406,6 +475,12 @@
       .field-label {
         text-transform: uppercase;
         color: @grenadine-ddo;
+      }
+      p {
+        font-size: 0.875em; /* 14/16 */
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.8em;/* 28.8/16 */
       }
     }
     .field-name-field-full,

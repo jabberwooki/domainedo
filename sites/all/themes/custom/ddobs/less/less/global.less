@@ -11,7 +11,7 @@ body {
 #logo-ddobs {
   text-align: center;
   @media (max-width: @screen-md) {
-    margin: 25px 0 20px 0;
+    margin: 25px 0 0 0;
   }
 }
 
@@ -110,12 +110,19 @@ body {
 /* Menu principal *****************************************************************************************************/
 header#navbar {
   @media (max-width: @screen-sm) {
-    padding-top: 15px;
+    padding: 15px 0 0 0 !important;
     position: fixed !important;
     margin-top: 0 !important;
-    z-index: 2;
+    z-index: 10;
     width: 99%;
     background-color: white;
+    > .row {
+      div[class^='col-'] {
+        padding: 0;
+        margin: 0;
+        background-color: #FFF;
+      }
+    }
     #logo-ddobs {
       position: relative;
       top: -10px;
@@ -876,6 +883,7 @@ h2.page-header {
   font-weight: 700;
   text-decoration: none;
   font-size: 0.825em;
+  border: 1px solid @grenadine-ddo;
   &:hover {
     background-color: white;
     color: @grenadine-ddo;
