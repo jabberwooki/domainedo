@@ -1631,7 +1631,7 @@ body{font-family:Gotham,Arial,sans-serif;font-style:normal;font-weight:600}
 .not-logged-in a{transition:all .25s ease-in-out;-moz-transition:all .25s ease-in-out;-webkit-transition:all .25s ease-in-out}
 @media (max-width:768px){body #custom-msg{height:70px}
 #col-logo{height:10px}
-#col-logo #logo-ddobs{position:relative;top:-30px}
+#col-logo #logo-ddobs{position:relative;top:-15px}
 #col-logo #logo-ddobs a.logo>img{max-width:35%}
 .not-logged-in .navbar.container{margin-top:0}
 }
@@ -1649,7 +1649,7 @@ body{font-family:Gotham,Arial,sans-serif;font-style:normal;font-weight:600}
 #div-subscritpion #link-subscritpion:hover:before{color:#FFF}
 @media (max-width:992px){#div-subscritpion{display:none}
 }
-@media (max-width:768px){header#navbar{padding:15px 0 0!important;position:fixed!important;margin-top:0!important;z-index:10;width:99%;background-color:#fff}
+@media (max-width:768px){header#navbar{padding:0!important;position:fixed!important;margin-top:0!important;z-index:10;width:99%;background-color:#fff}
 header#navbar>.row div[class^=col-]{padding:0;margin:0;background-color:#FFF}
 header#navbar #row-menu-nav-search{position:static}
 header#navbar #mmenu-custom-buttom{position:absolute;top:10px;left:15px;width:30px;height:40px;border:0;background-color:transparent;padding:0}
