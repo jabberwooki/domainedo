@@ -51,6 +51,7 @@ scripts[] = 'js/move_menu.js'
 scripts[] = 'js/manage_search_region.js'
 scripts[] = 'smartmenus/jquery.smartmenus.js'
 scripts[] = 'smartmenus/addons/bootstrap/jquery.smartmenus.bootstrap.js'
+scripts[] = 'js/manage_sm_top_margin.js'
 
 
 scripts[] = 'bootstrap/js/affix.js'
