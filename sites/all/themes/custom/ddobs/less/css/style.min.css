@@ -1650,7 +1650,7 @@ body{font-family:Gotham,Arial,sans-serif;font-style:normal;font-weight:600}
 @media (max-width:992px){#div-subscritpion{display:none}
 }
 @media (max-width:768px){header#navbar{padding:0!important;position:fixed!important;margin-top:0;z-index:10;width:99%;background-color:#fff}
-header#navbar.top-smartphone{margin-top:30px!important}
+header#navbar.top-smartphone{border-top:30px solid #fff!important}
 header#navbar>.row div[class^=col-]{padding:0;margin:0;background-color:#FFF}
 header#navbar #row-menu-nav-search{position:static}
 header#navbar #mmenu-custom-buttom{position:absolute;top:10px;left:15px;width:30px;height:40px;border:0;background-color:transparent;padding:0}
