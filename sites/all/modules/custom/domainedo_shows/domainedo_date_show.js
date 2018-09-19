@@ -17,7 +17,7 @@ jQuery(function($) {
 
   function manageShowDates() {
     $(".all-dates").each(function(){
-      if($(".date-display-single",$(this)).length > 2) {
+      if($(".date-display-single",$(this)).length > 1) {
         from_date = $(".date-display-single:first",$(this)).attr("content");
         to_date = $(".date-display-single:last",$(this)).attr("content");
 
@@ -72,7 +72,7 @@ jQuery(function($) {
       from_date_like_to = $(".date-display-single:first", $(this)).attr("content");
       to_date_like_to = $(".date-display-single:last",$(this)).attr("content");
 
-      if($(".date-display-single", $(this)).length > 2) {
+      if($(".date-display-single", $(this)).length > 1) {
         if ($(".date-display-single:first", $(this)).attr("content") && $(".date-display-single:last",$(this)).attr("content") ) {
           from_date_like_to = $(".date-display-single:first", $(this)).attr("content");
           to_date_like_to = $(".date-display-single:last",$(this)).attr("content");
