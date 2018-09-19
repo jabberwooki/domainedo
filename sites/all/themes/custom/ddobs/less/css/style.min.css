@@ -1725,7 +1725,7 @@ form#search-block-form{margin:0}
 @media (min-width:768px){.region-search-region #block-search-form{width:25%}
 }
 .region-search-region #block-search-form .input-group .form-control{width:98%;border:0;border-bottom:1px solid #f74e2d;background-color:transparent;-webkit-box-shadow:none;box-shadow:none;border-radius:0}
-@media (max-width:768px){#top-search-icon{right:20px;top:20px}
+@media (max-width:768px){#top-search-icon{right:20px;top:15px}
 #top-search-icon:before{font-size:1.2em}
 .region-search-region #block-search-form #close-custom-search{position:absolute;top:-10px;right:10px}
 .region-search-region #block-search-form .input-group{width:100%;display:block}
