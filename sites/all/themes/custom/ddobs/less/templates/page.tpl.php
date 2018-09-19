@@ -108,7 +108,7 @@
                 </li>
             </ul>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-8" id="col-logo">
           <?php if ($logo): ?>
               <h1 id="logo-ddobs">
                   <a class="logo navbar-btn"
