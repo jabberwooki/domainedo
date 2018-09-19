@@ -43,15 +43,21 @@
       bottom: 0;
       padding: 0 10px;
       .date-orange();
-
       .field-name-field-show-dates {
-
+         @media (max-width: @screen-sm) {
+           margin-bottom: 15px;
+         }
         > div {
           .underline-grenadine();
           a {
             text-transform: none !important;
             font-style: normal;
             font-weight: 800;
+            @media (max-width: @screen-sm) {
+              font-size: 1em;
+              font-style: normal;
+              font-weight: 800;
+            }
           }
           &:after {
             border: 3px solid @grenadine-ddo;
@@ -164,7 +170,7 @@
           display: table;
           border-bottom: 66px solid @gris-clair-ddo;
           @media (max-width: @screen-sm) {
-            border-bottom: 66px solid @gris-clair-ddo;
+            border-bottom: 76px solid @gris-clair-ddo;
           }
           &:after {
             content: "";
@@ -177,7 +183,7 @@
             visibility: visible;
             width: 100%;
             @media (max-width: @screen-sm) {
-              bottom: 60px;
+              bottom: 70px;
               height: 300px;
             }
           }
@@ -395,7 +401,7 @@
           font-size: 1.125em;/*18/16*/
           @media (max-width: @screen-sm) {
             width: 100%;
-            margin: -14px auto 20px auto;
+            margin: -19px auto 20px auto;
           }
         }
       }

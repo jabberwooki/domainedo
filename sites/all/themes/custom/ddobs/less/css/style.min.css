@@ -1624,12 +1624,15 @@ a .glyphicon.icon-after,a.icon-after .glyphicon{margin-left:.25em}
 .btn .glyphicon.icon-before,.btn.icon-before .glyphicon{margin-left:-.25em;margin-right:.25em}
 .btn .glyphicon.icon-after,.btn.icon-after .glyphicon{margin-left:.25em;margin-right:-.25em}
 body{font-family:Gotham,Arial,sans-serif;font-style:normal;font-weight:600}
-#logo-ddobs{text-align:center}
-@media (max-width:992px){#logo-ddobs{margin:25px 0 0}
+#col-logo #logo-ddobs{text-align:center}
+@media (max-width:992px){#col-logo #logo-ddobs{margin:25px 0 0}
 #ul-social{display:none}
 }
 .not-logged-in a{transition:all .25s ease-in-out;-moz-transition:all .25s ease-in-out;-webkit-transition:all .25s ease-in-out}
 @media (max-width:768px){body #custom-msg{height:70px}
+#col-logo{height:10px}
+#col-logo #logo-ddobs{position:relative;top:-30px}
+#col-logo #logo-ddobs a.logo>img{max-width:35%}
 .not-logged-in .navbar.container{margin-top:0}
 }
 .tpl-first-row{margin-top:10px!important}
@@ -1648,11 +1651,10 @@ body{font-family:Gotham,Arial,sans-serif;font-style:normal;font-weight:600}
 }
 @media (max-width:768px){header#navbar{padding:15px 0 0!important;position:fixed!important;margin-top:0!important;z-index:10;width:99%;background-color:#fff}
 header#navbar>.row div[class^=col-]{padding:0;margin:0;background-color:#FFF}
-header#navbar #logo-ddobs{position:relative;top:-10px}
 header#navbar #row-menu-nav-search{position:static}
-header#navbar #mmenu-custom-buttom{position:absolute;top:0;left:15px;width:30px;height:40px;border:0;background-color:transparent;padding:0}
+header#navbar #mmenu-custom-buttom{position:absolute;top:10px;left:15px;width:30px;height:40px;border:0;background-color:transparent;padding:0}
 header#navbar #mmenu-custom-buttom:before{position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;speak:none;display:inline-block;text-decoration:inherit;width:1em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"\e869";font-size:2em;margin:0;padding:0;color:#f74e2d}
-header#navbar #mmenu-custom-buttom span{font-size:.5em;text-transform:uppercase;margin-top:-5px;display:block}
+header#navbar #mmenu-custom-buttom span{font-size:.47em;text-transform:uppercase;margin-top:-1px;margin-left:2px;display:block;color:#f74e2d}
 }
 @media (min-width:768px){header#navbar #mmenu-custom-buttom{display:none}
 }
@@ -1723,7 +1725,8 @@ form#search-block-form{margin:0}
 @media (min-width:768px){.region-search-region #block-search-form{width:25%}
 }
 .region-search-region #block-search-form .input-group .form-control{width:98%;border:0;border-bottom:1px solid #f74e2d;background-color:transparent;-webkit-box-shadow:none;box-shadow:none;border-radius:0}
-@media (max-width:768px){#top-search-icon:before{font-size:1.2em}
+@media (max-width:768px){#top-search-icon{right:20px;top:20px}
+#top-search-icon:before{font-size:1.2em}
 .region-search-region #block-search-form #close-custom-search{position:absolute;top:-10px;right:10px}
 .region-search-region #block-search-form .input-group{width:100%;display:block}
 .region-search-region #block-search-form .input-group .form-control{display:block;margin-bottom:15px}
@@ -1983,6 +1986,9 @@ strong{font-weight:700}
 .group-show-list .group-tranparent-gradient .group-date-title-desc .field-name-field-show-dates>div:after{display:block;content:"";border:3px solid #f74e2d;margin-top:-5px}
 .group-show-list .group-tranparent-gradient .group-date-title-desc .field-name-field-show-dates>div a{text-decoration:none!important;text-transform:none!important;font-style:normal;font-weight:800}
 .group-show-list .group-tranparent-gradient .group-date-title-desc .field-name-field-show-dates>div a:hover{background-color:#f74e2d}
+@media (max-width:768px){.group-show-list .group-tranparent-gradient .group-date-title-desc .field-name-field-show-dates{margin-bottom:15px}
+.group-show-list .group-tranparent-gradient .group-date-title-desc .field-name-field-show-dates>div a{font-size:1em;font-style:normal;font-weight:800}
+}
 .group-show-list .group-tranparent-gradient .group-date-title-desc .field-name-title{display:table}
 .group-show-list .group-tranparent-gradient .group-date-title-desc .field-name-title>div a{text-transform:uppercase;font-size:1.25em;padding-bottom:12px;display:block;font-style:normal;font-weight:800}
 .group-show-list .group-tranparent-gradient .group-date-title-desc .field-name-body{display:table;margin-bottom:25px}
@@ -2002,8 +2008,8 @@ strong{font-weight:700}
 .node-type-show #imgfullshow #block-ds-extras-image-full-show{position:relative}
 .node-type-show #imgfullshow #block-ds-extras-image-full-show .field-name-field-scald-image .field-item{display:table;border-bottom:66px solid #efefef}
 .node-type-show #imgfullshow #block-ds-extras-image-full-show .field-name-field-scald-image .field-item:after{content:"";display:block;height:200px;z-index:1;position:absolute;bottom:60px;background:linear-gradient(to bottom,rgba(0,0,0,0),#000);visibility:visible;width:100%}
-@media (max-width:768px){.node-type-show #imgfullshow #block-ds-extras-image-full-show .field-name-field-scald-image .field-item{border-bottom:66px solid #efefef}
-.node-type-show #imgfullshow #block-ds-extras-image-full-show .field-name-field-scald-image .field-item:after{bottom:60px;height:300px}
+@media (max-width:768px){.node-type-show #imgfullshow #block-ds-extras-image-full-show .field-name-field-scald-image .field-item{border-bottom:76px solid #efefef}
+.node-type-show #imgfullshow #block-ds-extras-image-full-show .field-name-field-scald-image .field-item:after{bottom:70px;height:300px}
 }
 .node-type-show #imgfullshow #block-ds-extras-image-full-show .group-text-over-img{position:relative}
 .node-type-show #imgfullshow #block-ds-extras-image-full-show .group-text-over-img .group-text-over-img-abs{position:absolute;z-index:2;bottom:50px}
@@ -2054,7 +2060,7 @@ strong{font-weight:700}
 .node-type-show .node-show.view-mode-full #group-wrap-book{margin-bottom:50px;min-height:32px}
 .node-type-show .node-show.view-mode-full #group-wrap-book .field-name-field-boxoffice-url a{background-color:#f74e2d;color:#fff;text-align:center;text-transform:uppercase;text-decoration:none;border:1px solid #f74e2d;padding:12px 20px 8px;font-style:normal;font-weight:800;display:table;margin-top:-14px;font-size:1.125em}
 .node-type-show .node-show.view-mode-full #group-wrap-book .field-name-field-boxoffice-url a:hover{background-color:#fff;color:#f74e2d}
-@media (max-width:768px){.node-type-show .node-show.view-mode-full #group-wrap-book .field-name-field-boxoffice-url a{width:100%;margin:-14px auto 20px}
+@media (max-width:768px){.node-type-show .node-show.view-mode-full #group-wrap-book .field-name-field-boxoffice-url a{width:100%;margin:-19px auto 20px}
 }
 .node-type-show .node-show.view-mode-full .all-dates{padding-left:15px;margin-bottom:30px}
 .node-type-show .node-show.view-mode-full .all-dates .label-above{margin-bottom:15px;font-size:1.125em}
@@ -2132,7 +2138,8 @@ strong{font-weight:700}
 .front #homeheadband .region-homenow #now-tranparent-gradient #group-title-more-now .field-name-title a:after{display:block;border:6px solid #f74e2d;margin-top:-14px;content:""}
 .front #homeheadband .region-homenow #now-tranparent-gradient #group-title-more-now .field-name-title a a{text-decoration:none!important}
 .front #homeheadband .region-homenow #now-tranparent-gradient #group-title-more-now .field-name-title a a:hover{background-color:#f74e2d}
-@media (max-width:768px){.front #homeheadband .region-homenow #now-tranparent-gradient #group-title-more-now .field-name-title a{padding-left:20px}
+@media (max-width:768px){.front #homeheadband .region-homenow #now-tranparent-gradient #group-title-more-now .field-name-title a{padding-left:20px;font-size:1.3em}
+.front #homeheadband .region-homenow #now-tranparent-gradient #group-title-more-now .field-name-title a:after{border:3px solid #f74e2d;margin-top:-8px}
 }
 .front #homeheadband .region-homenow #now-tranparent-gradient #group-title-more-now .field-name-title:after{clear:both;display:block;content:""}
 .front #homeheadband .region-homenow #now-tranparent-gradient #group-title-more-now .field-name-node-link a{display:block;float:right;border:1.5px solid #f74e2d;text-transform:uppercase;font-size:.8125em;font-style:normal;font-weight:700;padding:15px 17px 10px;background-color:#fff;margin:0 20px 20px 0;color:#f74e2d;text-decoration:none}

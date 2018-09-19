@@ -8,12 +8,25 @@ body {
     }
   }
 }
-#logo-ddobs {
-  text-align: center;
-  @media (max-width: @screen-md) {
-    margin: 25px 0 0 0;
+#col-logo {
+  @media (max-width: @screen-sm) {
+    height: 10px;
+  }
+  #logo-ddobs {
+    text-align: center;
+    @media (max-width: @screen-md) {
+      margin: 25px 0 0 0;
+    }
+    @media (max-width: @screen-sm) {
+      position: relative;
+      top: -30px;
+      a.logo > img {
+        max-width: 35%;
+      }
+    }
   }
 }
+
 
 .not-logged-in {
   a {
@@ -123,16 +136,12 @@ header#navbar {
         background-color: #FFF;
       }
     }
-    #logo-ddobs {
-      position: relative;
-      top: -10px;
-    }
     #row-menu-nav-search {
       position: static;
     }
     #mmenu-custom-buttom {
       position: absolute;
-      top: 0;
+      top: 10px;
       left: 15px;
       width: 30px;
       height: 40px;
@@ -148,10 +157,12 @@ header#navbar {
         color: @grenadine-ddo;
       }
       span {
-        font-size: 0.5em;
+        font-size: .47em;
         text-transform: uppercase;
-        margin-top: -5px;
+        margin-top: -1px;
+        margin-left: 2px;
         display: block;
+        color: @grenadine-ddo;
       }
     }
   }
@@ -161,7 +172,6 @@ header#navbar {
     }
   }
 }
-
 .navbar-default {
   background-color: transparent;
   border: 0;
@@ -498,11 +508,18 @@ header#navbar {
   position: absolute;
   right: 0;
   top: 10px;
+  @media (max-width: @screen-sm) {
+    right: 20px;
+    top: 20px;
+  }
   &:before {
     .glyphicon();
     content: "\e84f";
     color: @noir-ddo;
     font-size: 1.875em; /*30/16*/
+    @media (max-width: @screen-sm) {
+      font-size: 2em;
+    }
     width: 30px;
     height: 30px;
     @media (max-width: @screen-sm) {
