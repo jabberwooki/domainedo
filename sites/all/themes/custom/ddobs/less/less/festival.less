@@ -4,15 +4,23 @@
       @media (max-width: @screen-sm) {
         padding-left: 0;
         padding-right: 0;
+        .group-affiche-essential {
+          margin-left: -15px;
+          margin-right: -15px;
+        }
       }
     }
     background: url(../images/bg_gray.gif);
     padding-bottom: 20px;
+
     .group-affiche-festival {
       @media (max-width: @screen-sm) {
         border-bottom: 1px solid @grenadine-ddo;
+        padding-right: 0 !important;
       }
-
+      @media (min-width: @screen-sm) {
+        padding-left: 0 !important;
+      }
       position: relative;
       img {
         margin-bottom: 50px;
@@ -23,14 +31,17 @@
       .field-name-field-festival-poster {
         &:after {
           content: "";
-          width: 96%;
+          width: 98%;
           height: 150px;
           position: absolute;
           bottom: 50px;
           @media (max-width: @screen-md) {
             bottom: 0px;
           }
-          left: 16px;
+          @media (max-width: @screen-sm) {
+            height: 30% !important;
+          }
+          left: 0px;
           background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000);
           @media (max-width: @screen-sm) {
             width: 100%;
@@ -41,6 +52,7 @@
           }
         }
       }
+
       .field-name-scald-authors {
         display: none;
       }
@@ -61,6 +73,7 @@
         @media (max-width: @screen-sm) {
           bottom: 20px;
           font-size: 1.8em;
+          padding-left: 15px;
         }
       }
     }
@@ -68,6 +81,9 @@
       background-color: @grenadine-ddo;
       color: white;
       padding: 25px 30px;
+      @media (max-width: @screen-sm) {
+        padding-left: 50px;
+      }
       h2 {
         font-size: 1.875em; /* 30/16 */
         text-transform: uppercase;
@@ -140,12 +156,19 @@
         padding: 0 15px;
       }
     }
+    @media (max-width: @screen-sm) {
+      padding-top: 20px;
+      background-color: @gris-clair-ddo;
+    }
   }
   h3.show-festival-title {
     font-size: 1.5em; /* 24/16 */
     margin: 20px 0;
     font-style: normal;
     font-weight: 600;
+    @media (max-width: @screen-sm) {
+      text-align: center;
+    }
   }
   .node-show {
     .group-show-list {

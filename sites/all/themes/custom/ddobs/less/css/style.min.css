@@ -2234,7 +2234,6 @@ strong{font-weight:700}
 .front #quick-acces .view ul li a:hover{background-color:#fff;color:#000}
 .front #quick-acces .view #home-calendar-link{float:right;color:#000;font-size:1em;background-color:#fff;border:1px solid #000}
 @media (max-width:768px){.front #quick-acces .view #home-calendar-link{float:none;clear:both;display:table;margin-top:15px}
-.node-type-festival #headband-festival .container{padding-left:0;padding-right:0}
 }
 .front #quick-acces .view #home-calendar-link:before{content:"\e807";position:relative;font-family:fontello;font-style:normal;font-weight:400;font-size:1em;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color:#000;top:-2px}
 .front #quick-acces .view #home-calendar-link:hover{background-color:#000;color:#FFF}
@@ -2247,18 +2246,23 @@ strong{font-weight:700}
 .front #block-views-shows-block-1 h2.block-title{margin:20px 0;font-size:1.5em}
 .node-type-festival #headband-festival{background:url(../images/bg_gray.gif);padding-bottom:20px}
 .node-type-festival #headband-festival .group-affiche-festival{position:relative}
+@media (max-width:768px){.node-type-festival #headband-festival .container{padding-left:0;padding-right:0}
+.node-type-festival #headband-festival .container .group-affiche-essential{margin-left:-15px;margin-right:-15px}
+.node-type-festival #headband-festival .group-affiche-festival{border-bottom:1px solid #f74e2d;padding-right:0!important}
+}
+@media (min-width:768px){.node-type-festival #headband-festival .group-affiche-festival{padding-left:0!important}
+}
 .node-type-festival #headband-festival .group-affiche-festival img{margin-bottom:50px}
-.node-type-festival #headband-festival .group-affiche-festival .field-name-field-festival-poster:after{content:"";width:96%;height:150px;position:absolute;bottom:50px;left:16px;background:linear-gradient(to bottom,rgba(0,0,0,0),#000)}
+.node-type-festival #headband-festival .group-affiche-festival .field-name-field-festival-poster:after{content:"";width:98%;height:150px;position:absolute;bottom:50px;left:0;background:linear-gradient(to bottom,rgba(0,0,0,0),#000)}
 @media (max-width:992px){.node-type-festival #headband-festival .group-affiche-festival .field-name-field-festival-poster:after{bottom:0}
 }
-@media (max-width:768px){.node-type-festival #headband-festival .group-affiche-festival{border-bottom:1px solid #f74e2d}
-.node-type-festival #headband-festival .group-affiche-festival img{margin-bottom:0}
-.node-type-festival #headband-festival .group-affiche-festival .field-name-field-festival-poster:after{width:100%;height:150px;position:absolute;bottom:0;left:16px}
+@media (max-width:768px){.node-type-festival #headband-festival .group-affiche-festival img{margin-bottom:0}
+.node-type-festival #headband-festival .group-affiche-festival .field-name-field-festival-poster:after{height:30%!important;width:100%;position:absolute;bottom:0;left:16px}
 }
 .node-type-festival #headband-festival .group-affiche-festival .field-name-scald-authors{display:none}
 .node-type-festival #headband-festival .group-affiche-festival .field-name-field-date-en-clair{position:absolute;bottom:80px;left:35px;color:#fff;text-transform:uppercase;font-size:2.375em;font-style:normal;font-weight:900}
 .node-type-festival #headband-festival .group-affiche-festival .field-name-field-date-en-clair:after{display:block;content:"";margin-top:-15px;border:8px solid #772d2e}
-@media (max-width:768px){.node-type-festival #headband-festival .group-affiche-festival .field-name-field-date-en-clair{bottom:20px;font-size:1.8em}
+@media (max-width:768px){.node-type-festival #headband-festival .group-affiche-festival .field-name-field-date-en-clair{bottom:20px;font-size:1.8em;padding-left:15px}
 }
 .node-type-festival #headband-festival .group-essential-festival{background-color:#f74e2d;color:#fff;padding:25px 30px}
 .node-type-festival #headband-festival .group-essential-festival h2{font-size:1.875em;text-transform:uppercase;margin:0 25px 30px 0;font-style:normal;font-weight:800}
@@ -2272,9 +2276,12 @@ strong{font-weight:700}
 .node-type-festival #headband-festival .group-essential-festival .field-name-field-view-archives a:before{content:"\f0ae"}
 .node-type-festival #headband-festival .group-essential-festival .field-name-field-facebook a:before{content:"\e801"}
 .node-type-festival .group-text-video iframe{width:100%;height:320px}
-@media (max-width:768px){.node-type-festival .group-text-video iframe,.node-type-festival .group-text-video>div>div,.node-type-festival .group-text-video>div>p{padding:0 15px}
-}
 .node-type-festival h3.show-festival-title{font-size:1.5em;margin:20px 0;font-style:normal;font-weight:600}
+@media (max-width:768px){.node-type-festival #headband-festival .group-essential-festival{padding-left:50px}
+.node-type-festival .group-text-video iframe,.node-type-festival .group-text-video>div>div,.node-type-festival .group-text-video>div>p{padding:0 15px}
+.node-type-festival .group-text-video{padding-top:20px;background-color:#efefef}
+.node-type-festival h3.show-festival-title{text-align:center}
+}
 .node-type-festival .node-show .group-show-list:hover{transition:all .25s ease-in-out;-moz-transition:all .25s ease-in-out;-webkit-transition:all .25s ease-in-out}
 .node-type-festival .node-show .group-show-list .group-black-bg{height:13%}
 .node-type-festival .node-show .group-show-list .group-black-bg .field-name-node-link a{font-size:.825em}
