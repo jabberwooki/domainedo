@@ -2068,8 +2068,8 @@ strong{font-weight:700}
 .node-type-show .node-show.view-mode-full #group-wrapper-distribution a.show-anchor-link:last-child{padding-right:0}
 .node-type-show .node-show.view-mode-full #group-wrapper-distribution a.show-anchor-link:hover{color:#f74e2d}
 .node-type-show .node-show.view-mode-full .field-name-field-from{border-top:1px solid #000;padding-top:20px}
-.node-type-show .node-show.view-mode-full .field-name-field-from .field-label{font-style:normal;font-weight:800}
-.node-type-show .node-show.view-mode-full .field-name-field-from .field-item{font-style:normal;font-weight:600}
+.node-type-show .node-show.view-mode-full .field-name-field-from .field-label{font-style:normal;font-weight:800;line-height:2em}
+.node-type-show .node-show.view-mode-full .field-name-field-from .field-item{font-style:normal;font-weight:600;line-height:2em}
 .node-type-show .node-show.view-mode-full .field-name-field-by{border-bottom:1px solid #000;padding-bottom:20px;margin-bottom:20px}
 .node-type-show .node-show.view-mode-full .field-name-field-by .field-label{font-style:normal;font-weight:800}
 .node-type-show .node-show.view-mode-full .field-name-field-by .field-item{font-style:normal;font-weight:600}
@@ -2245,13 +2245,13 @@ strong{font-weight:700}
 .node-type-festival #headband-festival .group-affiche-festival .field-name-field-festival-poster:after{width:100%;height:150px;position:absolute;bottom:0;left:16px}
 }
 .node-type-festival #headband-festival .group-affiche-festival .field-name-scald-authors{display:none}
-.node-type-festival #headband-festival .group-affiche-festival .field-name-field-date-en-clair{position:absolute;bottom:80px;left:35px;color:#fff;text-transform:uppercase;font-weight:700;font-size:2.375em}
-.node-type-festival #headband-festival .group-affiche-festival .field-name-field-date-en-clair:after{display:block;border:4px solid #772d2e;margin-top:-5px;content:""}
+.node-type-festival #headband-festival .group-affiche-festival .field-name-field-date-en-clair{position:absolute;bottom:80px;left:35px;color:#fff;text-transform:uppercase;font-size:2.375em;font-style:normal;font-weight:900}
+.node-type-festival #headband-festival .group-affiche-festival .field-name-field-date-en-clair:after{display:block;content:"";margin-top:-15px;border:8px solid #772d2e}
 @media (max-width:768px){.node-type-festival #headband-festival .group-affiche-festival .field-name-field-date-en-clair{bottom:20px;font-size:1.8em}
 }
 .node-type-festival #headband-festival .group-essential-festival{background-color:#f74e2d;color:#fff;padding:25px 30px}
-.node-type-festival #headband-festival .group-essential-festival h2{font-size:1.875em;text-transform:uppercase;margin:0 25px 30px 0;font-weight:700}
-.node-type-festival #headband-festival .group-essential-festival a{color:#fff;font-size:.6875em;text-transform:uppercase;display:block;border-bottom:1px solid #fff;padding-bottom:10px;margin-bottom:15px}
+.node-type-festival #headband-festival .group-essential-festival h2{font-size:1.875em;text-transform:uppercase;margin:0 25px 30px 0;font-style:normal;font-weight:800}
+.node-type-festival #headband-festival .group-essential-festival a{color:#fff;font-size:.6875em;text-transform:uppercase;font-style:normal;font-weight:600;display:block;border-bottom:1px solid #fff;padding-bottom:10px;margin-bottom:15px}
 .node-type-festival #headband-festival .group-essential-festival a:before{position:relative;top:1px;font-weight:400;display:inline-block;width:1em;margin-right:10px;text-transform:none;line-height:1em;color:#fff;font-size:1.25em}
 .node-type-festival #headband-festival .group-essential-festival img,.node-type-festival .node-show .group-show-list .field-name-field-festival,.node-type-festival .pagination .next,.node-type-festival .pagination .pager-first,.node-type-festival .pagination .pager-last,.node-type-festival .pagination .prev,.node-type-page .field-name-scald-authors,.node-type-page-complexe .field-name-scald-authors,.page-zoom-sur .field-name-scald-authors,.page-zoom-sur h2.page-header{display:none}
 .node-type-festival #headband-festival .group-essential-festival .field-name-link-shows a:before{content:"\f291"}
@@ -2263,7 +2263,7 @@ strong{font-weight:700}
 .node-type-festival .group-text-video iframe{width:100%;height:320px}
 @media (max-width:768px){.node-type-festival .group-text-video iframe,.node-type-festival .group-text-video>div>div,.node-type-festival .group-text-video>div>p{padding:0 15px}
 }
-.node-type-festival h3.show-festival-title{font-size:1.5em;margin:20px 0}
+.node-type-festival h3.show-festival-title{font-size:1.5em;margin:20px 0;font-style:normal;font-weight:600}
 .node-type-festival .node-show .group-show-list:hover{transition:all .25s ease-in-out;-moz-transition:all .25s ease-in-out;-webkit-transition:all .25s ease-in-out}
 .node-type-festival .node-show .group-show-list .group-black-bg{height:13%}
 .node-type-festival .node-show .group-show-list .group-black-bg .field-name-node-link a{font-size:.825em}
