@@ -1703,7 +1703,7 @@ header#navbar #mmenu-custom-buttom span{font-size:.47em;text-transform:uppercase
 .mmenu-nav.mm-fresh.mm-hasheader>.mm-panel>.mm-list ul li a{color:#000}
 .mmenu-nav.mm-fresh.mm-hasheader>.mm-panel>.mm-list>li{border:0}
 .mmenu-nav.mm-fresh.mm-hasheader>.mm-panel>.mm-list>li>a{color:#000;font-weight:700;padding-left:0!important;text-transform:uppercase}
-.mmenu-nav.mm-fresh.mm-hasheader>.mm-panel>.mm-list>li.active-trail>a{color:#f74e2d!important}
+.mmenu-nav.mm-fresh.mm-hasheader>.mm-panel>.mm-list>li.active-trail>a{color:#f74e2d!important;font-style:normal;font-weight:800;font-size:1em!important}
 .mmenu-nav.mm-fresh.mm-hasheader>.mm-panel>.mm-list>li.active-trail>a:hover{color:#000!important}
 .mmenu-nav.mm-fresh.mm-hasheader>.mm-panel>.mm-list>li.active-trail a{color:#000}
 .mmenu-nav.mm-fresh.mm-hasheader>.mm-panel>.mm-list>li>span,.mmenu-nav.mm-fresh.mm-hasheader>.mm-panel>.mm-list>li>span>ul.mm-list{padding:0}
