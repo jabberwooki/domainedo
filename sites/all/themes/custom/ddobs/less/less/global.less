@@ -7,6 +7,27 @@ body {
       height: 70px;
     }
   }
+  .main-container {
+    /*ul:not(.nav) {
+
+    }*/
+    .field-name-body,
+    .field-name-field-additional-infos {
+      .link-body();
+    }
+  }
+}
+.link-body {
+  a {
+    text-decoration: underline;
+    color: @grenadine-ddo;
+    &:visited {
+      color: @grenadine-light-ddo;
+    }
+    &:hover {
+      color: @grenadine-dark-ddo;
+    }
+  }
 }
 #col-logo {
   @media (max-width: @screen-sm) {
