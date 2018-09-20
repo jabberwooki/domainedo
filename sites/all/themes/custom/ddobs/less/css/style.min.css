@@ -1758,6 +1758,7 @@ form#search-block-form{margin:0}
 footer.container{margin-top:0;padding-top:0;padding-bottom:0;border-top:0}
 footer.container #block-bean-reseaux-sociaux-bas{border-top:1.5px solid #000;border-bottom:1.5px solid #000;padding:20px 0 30px;margin:30px 0 20px}
 footer.container #block-bean-reseaux-sociaux-bas .field-name-field-block-body{display:table;width:90%;margin:0 auto}
+#block-system-main div.field ul li:before,.button-red-link:after,.region-headbandfestival div.field ul li:before{font-family:fontello;speak:none;width:1em;text-align:center;font-variant:normal;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 footer.container #block-bean-reseaux-sociaux-bas .field-name-field-block-body #social-title-bottom{text-transform:uppercase;margin-top:10px;color:#000;font-size:1.25em;font-style:normal;font-weight:800;float:left;padding-left:20px}
 @media (max-width:768px){footer.container #block-bean-reseaux-sociaux-bas .field-name-field-block-body #social-title-bottom{display:table;margin:0 auto;padding-left:0;float:none;text-align:center}
 }
@@ -1777,9 +1778,8 @@ footer.container #footer-menus #mmm{float:none;margin-right:0}
 footer.container #footer-menus .menu{margin-top:5px}
 footer.container #footer-menus .menu>li>a{color:#000;padding:10px 0;display:block;margin:0;font-size:.875em}
 #block-system-main p,.region-headbandfestival p{line-height:1.25em;font-size:.875em;margin:10px 0}
-#block-system-main div.field ul li:before,.button-red-link:after,.region-headbandfestival div.field ul li:before{font-family:fontello;speak:none;width:1em;text-align:center;font-variant:normal;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 #block-system-main div.field ul,.region-headbandfestival div.field ul{margin:10px 0 20px}
-#block-system-main div.field ul li:before,.region-headbandfestival div.field ul li:before{position:relative;top:1px;font-style:normal;font-weight:400;display:inline-block;text-decoration:inherit;text-transform:none;content:"\e834";color:#000;margin-right:5px;font-size:.8em}
+#block-system-main div.field ul li:before,.region-headbandfestival div.field ul li:before{position:relative;top:1px;font-style:normal;font-weight:400;display:inline-block;text-decoration:inherit;text-transform:none;line-height:1em;content:"\e834";color:#000;margin-right:5px;font-size:.8em}
 blockquote,blockquote p{font-style:italic!important}
 .node-page h4,.node-page h5,.region-sidebar-first ul.menu>li>a{font-weight:700}
 .cartouche-noir,.underline-grenadine{text-transform:uppercase;font-style:normal}
@@ -1803,10 +1803,10 @@ blockquote,blockquote p{font-style:italic!important}
 }
 blockquote{font-weight:400!important}
 blockquote p{font-weight:800!important;font-size:1.25em}
-p.txt-normal{font-style:normal!important;font-weight:600!important;font-size:.875em!important}
-p.txt-intro,p.txt-intro-grenadine{font-style:normal!important;font-weight:700!important}
-p.txt-intro{font-size:1em!important}
-p.txt-intro-grenadine{font-size:1.5em!important;color:#f74e2d}
+p.txt-intro,p.txt-normal{font-style:normal!important}
+p.txt-normal{font-weight:600!important;font-size:.875em!important;line-height:1.25em}
+p.txt-intro{font-weight:700!important;font-size:1em!important;line-height:1.4em}
+p.txt-intro-grenadine{font-style:italic!important;font-weight:600!important;font-size:1.5em!important;color:#f74e2d}
 .cartouche-noir{display:block;color:#fff;background-color:#000;text-decoration:none;padding:5px;font-size:.6875em;border:1px solid #000;font-weight:700}
 .cartouche-noir:hover{background-color:#FFF;color:#000}
 .button-book,.underline-grenadine a:hover{background-color:#f74e2d}
@@ -1837,7 +1837,7 @@ p.txt-intro-grenadine{font-size:1.5em!important;color:#f74e2d}
 .button-link-more:after{clear:both;display:block;content:""}
 .button-link-more:hover{background-color:#f74e2d;color:#FFF;text-decoration:none}
 .button-red-link{border:2px solid #f74e2d;display:table;color:#f74e2d;text-decoration:none;font-style:normal;font-weight:800;text-transform:uppercase;font-size:.875em}
-.button-red-link:after{color:#f74e2d!important;content:"\e834";font-style:normal;font-weight:400;font-size:1em;display:inline-block;text-decoration:inherit;text-transform:none;margin-left:10px;margin-right:0}
+.button-red-link:after{color:#f74e2d!important;content:"\e834";font-style:normal;font-weight:400;font-size:1em;display:inline-block;text-decoration:inherit;text-transform:none;line-height:1em;margin-left:10px;margin-right:0}
 .button-red-link:hover{background-color:#f74e2d;color:#FFF}
 .button-red-link:hover:after{color:#fff!important}
 .big-orange-title-link{color:#f74e2d;text-transform:uppercase;font-size:1.5em;font-style:normal;font-weight:800}
