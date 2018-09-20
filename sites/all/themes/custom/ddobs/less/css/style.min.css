@@ -1687,7 +1687,7 @@ header#navbar #mmenu-custom-buttom span{font-size:.47em;text-transform:uppercase
 #search-region,.mmenu-nav.mm-fresh.mm-hasheader{padding-right:0}
 .navbar-default nav ul.navbar-nav>li.open>a:hover{background-color:transparent!important}
 .navbar-collapse{padding:0}
-#initial-main-nav ul.navbar-nav>li.active a,#initial-main-nav ul.navbar-nav>li.active-trail a{color:#f74e2d;background-color:transparent}
+#initial-main-nav ul.navbar-nav>li.active a,#initial-main-nav ul.navbar-nav>li.active-trail a{color:#f74e2d;background-color:transparent;font-style:normal;font-weight:800;font-size:1em!important}
 #initial-main-nav ul.navbar-nav>li a:hover{color:#f74e2d}
 #initial-main-nav ul.navbar-nav>li>ul{display:none;height:0!important;background-color:transparent!important;border:0;margin:0;padding:0;box-shadow:none;width:1px!important}
 #mmenu_left{margin-top:70px;padding-top:0!important;max-width:100%}
