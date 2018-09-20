@@ -58,6 +58,13 @@ if (typeof(CKEDITOR) !== 'undefined') {
         }
       },
       {
+        name: 'Intro grenadine',
+        element: 'p',
+        attributes: {
+          'class': 'txt-intro-grenadine'
+        }
+      },
+      {
         name: 'Normal',
         element: 'p',
         attributes: {

@@ -1803,9 +1803,10 @@ blockquote,blockquote p{font-style:italic!important}
 }
 blockquote{font-weight:400!important}
 blockquote p{font-weight:800!important;font-size:1.25em}
-p.txt-intro,p.txt-normal{font-style:normal!important}
-p.txt-normal{font-weight:600!important;font-size:.875em!important}
-p.txt-intro{font-weight:700!important;font-size:1em!important}
+p.txt-normal{font-style:normal!important;font-weight:600!important;font-size:.875em!important}
+p.txt-intro,p.txt-intro-grenadine{font-style:normal!important;font-weight:700!important}
+p.txt-intro{font-size:1em!important}
+p.txt-intro-grenadine{font-size:1.5em!important;color:#f74e2d}
 .cartouche-noir{display:block;color:#fff;background-color:#000;text-decoration:none;padding:5px;font-size:.6875em;border:1px solid #000;font-weight:700}
 .cartouche-noir:hover{background-color:#FFF;color:#000}
 .button-book,.underline-grenadine a:hover{background-color:#f74e2d}
