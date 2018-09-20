@@ -14,6 +14,34 @@ body {
     .field-name-body,
     .field-name-field-additional-infos {
       .link-body();
+      h3 {
+        /* Medium 28 */
+        font-style: normal !important;
+        font-weight: 700 !important;
+        font-size: 1.75em !important;
+        margin-bottom: 18px;
+      }
+      h4 {
+        /* Medium 24 */
+        font-style: normal !important;
+        font-weight: 700 !important;
+        font-size: 1.5em !important;
+        margin-bottom: 15px;
+      }
+      h5 {
+        /* bold 20 */
+        font-style: normal !important;
+        font-weight: 800 !important;
+        font-size: 1.25em !important;
+        margin-bottom: 12px;
+      }
+      h6 {
+        /* Medium 16 */
+        font-style: normal !important;
+        font-weight: 700 !important;
+        font-size: 1em !important;
+        margin-bottom: 10px;
+      }
     }
   }
 }
@@ -864,6 +892,26 @@ h2.page-header {
     font-size: 1.5em !important;
   }
 }
+blockquote {
+  font-style: italic !important;
+  font-weight: normal !important;
+  color: @grenadine-ddo;
+  p {
+    font-style: italic !important;
+    font-weight: 800 !important;
+    font-size: 1.25em;
+  }
+}
+p.txt-normal {
+  font-style: normal !important;
+  font-weight: 600 !important;
+  font-size: 0.875em !important;
+}
+p.txt-intro {
+  font-style: normal !important;
+  font-weight: 700 !important;
+  font-size: 1em !important;
+}
 .cartouche-noir {
   display: block;
   color: @blanc-ddo;
@@ -960,6 +1008,7 @@ h2.page-header {
       &.js-div-date {
         position: relative;
         top: 20px;
+        margin-bottom: 15px;
       }
     }
   }
@@ -1069,7 +1118,6 @@ strong {
     a {
       color: #000;
       background-color: @gris-clair-ddo;
-      border: 0;
       border-radius: 0;
       margin-right: 2px;
       font-weight: bold;
@@ -1077,14 +1125,21 @@ strong {
         background-color: @grenadine-ddo;
         color: #FFF;
       }
+      border: 1px solid @gris-fonce-ddo;
+      width: 34px;
+      height: 34px;
     }
+
     &.active {
       > span {
+        width: 34px;
+        height: 34px;
+        border: 1px solid @gris-fonce-ddo;
         background-color: @grenadine-ddo;
-        border: 0;
         border-radius: 0;
-        margin-right: 6px;
-        font-weight: bold;
+        margin-right: 2px;
+        font-style: normal;
+        font-weight: 700;
         &:hover {
           background-color: @grenadine-ddo;
         }

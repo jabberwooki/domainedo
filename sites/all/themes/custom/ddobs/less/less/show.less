@@ -77,6 +77,11 @@
             display: block;
             font-style: normal;
             font-weight: 800;
+            text-decoration: none;
+            &:hover {
+              text-decoration: none;
+              opacity: 0.5;
+            }
           }
         }
       }
@@ -175,7 +180,7 @@
           &:after {
             content: "";
             display: block;
-            height: 200px;
+            height: 50%;
             z-index: 1;
             position: absolute;
             bottom: 60px;
@@ -210,7 +215,8 @@
               @media (max-width: @screen-sm) {
                 font-size: 1em;
               }
-              font-weight: bold;
+              font-style: normal;
+              font-weight: 800;
             }
             margin-bottom: 10px;
           }
@@ -251,6 +257,8 @@
           }
           .field-name-field-subtitle {
             font-size: 1.5em; /* 24/16 */
+            font-style: normal;
+            font-weight: 600;
             @media (max-width: @screen-sm) {
               font-size: 1em;
             }
