@@ -31,7 +31,7 @@ function domainedo_shows_field_group_info() {
       'label' => 'affiche et essentiel',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'group-affiche-essential field-group-div row',
+        'classes' => 'group-affiche-essential field-group-div',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
