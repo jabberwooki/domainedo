@@ -2277,15 +2277,16 @@ strong{font-weight:700}
 .node-type-festival #headband-festival .group-essential-festival .field-name-field-facebook a:before{content:"\e801"}
 .node-type-festival .group-text-video iframe{width:100%;height:320px}
 .node-type-festival h3.show-festival-title{font-size:1.5em;margin:20px 0;font-style:normal;font-weight:600}
-@media (max-width:768px){.node-type-festival #headband-festival .group-essential-festival{padding-left:50px}
-.node-type-festival .group-text-video iframe,.node-type-festival .group-text-video>div>div,.node-type-festival .group-text-video>div>p{padding:0 15px}
-.node-type-festival .group-text-video{padding-top:20px;background-color:#efefef}
-.node-type-festival h3.show-festival-title{text-align:center}
-}
 .node-type-festival .node-show .group-show-list:hover{transition:all .25s ease-in-out;-moz-transition:all .25s ease-in-out;-webkit-transition:all .25s ease-in-out}
 .node-type-festival .node-show .group-show-list .group-black-bg{height:13%}
 .node-type-festival .node-show .group-show-list .group-black-bg .field-name-node-link a{font-size:.825em}
 .node-type-festival .node-show .group-show-list .group-black-bg .field-name-field-boxoffice-url{right:10%}
+@media (max-width:768px){.node-type-festival #headband-festival .group-essential-festival{padding-left:50px}
+.node-type-festival .group-text-video iframe,.node-type-festival .group-text-video>div>div,.node-type-festival .group-text-video>div>p{padding:0 15px}
+.node-type-festival .group-text-video{padding-top:20px;background-color:#efefef}
+.node-type-festival h3.show-festival-title{text-align:center}
+.node-type-festival .node-show .group-show-list .group-black-bg .field-name-field-boxoffice-url{right:6%}
+}
 .node-type-festival .node-show .group-show-list .group-black-bg .field-name-field-boxoffice-url a{font-size:.825em;font-style:normal;font-weight:800}
 .page-zoom-sur .view-display-id-attachment_top_zoom .views-field-field-scald-image{margin-bottom:5px}
 .page-zoom-sur .view-display-id-attachment_top_zoom .title-event-list a{font-size:1.75em;line-height:1.875em}
