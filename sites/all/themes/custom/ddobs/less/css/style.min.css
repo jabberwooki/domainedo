@@ -1060,6 +1060,7 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 .pager li>a:focus,.pager li>a:hover{text-decoration:none;background-color:#eee}
 .pager .next>a,.pager .next>span{float:right}
 .pager .previous>a,.pager .previous>span{float:left}
+.close,.list-group-item>.badge{float:right}
 .pager .disabled>a,.pager .disabled>a:focus,.pager .disabled>a:hover,.pager .disabled>span{color:#777;background-color:#fff;cursor:not-allowed}
 a.badge:focus,a.badge:hover,a.label:focus,a.label:hover{color:#fff;cursor:pointer;text-decoration:none}
 .label{display:inline;padding:.2em .6em .3em;font-size:75%;color:#fff;vertical-align:baseline;border-radius:.25em}
@@ -1082,7 +1083,6 @@ a.badge:focus,a.badge:hover,a.label:focus,a.label:hover{color:#fff;cursor:pointe
 .btn-group-xs>.btn .badge,.btn-xs .badge{top:0;padding:1px 5px}
 .list-group-item.active>.badge,.nav-pills>.active>a>.badge{color:#337ab7;background-color:#fff}
 .jumbotron,.jumbotron .h1,.jumbotron h1{color:inherit}
-.list-group-item>.badge{float:right}
 .list-group-item>.badge+.badge{margin-right:5px}
 .nav-pills>li>a>.badge{margin-left:3px}
 .jumbotron{padding-top:30px;padding-bottom:30px;margin-bottom:30px;background-color:#eee}
@@ -1106,6 +1106,7 @@ a.thumbnail.active,a.thumbnail:focus,a.thumbnail:hover{border-color:#337ab7}
 .alert>p+p{margin-top:5px}
 .alert-dismissable,.alert-dismissible{padding-right:35px}
 .alert-dismissable .close,.alert-dismissible .close{position:relative;top:-2px;right:-21px;color:inherit}
+.modal,.modal-backdrop{top:0;right:0;bottom:0;left:0}
 .alert-success{background-color:#dff0d8;border-color:#d6e9c6;color:#3c763d}
 .alert-success hr{border-top-color:#c9e2b3}
 .alert-success .alert-link{color:#2b542c}
@@ -1256,18 +1257,18 @@ a.list-group-item-danger.active,a.list-group-item-danger.active:focus,a.list-gro
 .well blockquote{border-color:#ddd;border-color:rgba(0,0,0,.15)}
 .well-lg{padding:24px;border-radius:6px}
 .well-sm{padding:9px;border-radius:3px}
-.close{float:right;font-size:21px;line-height:1;color:#000;text-shadow:0 1px 0 #fff;opacity:.2;filter:alpha(opacity=20)}
+.close{font-size:21px;line-height:1;color:#000;text-shadow:0 1px 0 #fff;opacity:.2;filter:alpha(opacity=20)}
 .popover,.tooltip{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:400;letter-spacing:normal;line-break:auto;line-height:1.42857143;text-shadow:none;word-break:normal;word-spacing:normal;word-wrap:normal;white-space:normal;text-decoration:none;text-transform:none}
 .close:focus,.close:hover{color:#000;text-decoration:none;cursor:pointer;opacity:.5;filter:alpha(opacity=50)}
 button.close{padding:0;background:0 0;border:0;-webkit-appearance:none}
 .modal-content,.popover{background-clip:padding-box}
-.modal{display:none;position:fixed;top:0;right:0;bottom:0;left:0;-webkit-overflow-scrolling:touch;outline:0}
+.modal{display:none;position:fixed;-webkit-overflow-scrolling:touch;outline:0}
 .modal.fade .modal-dialog{-webkit-transform:translate(0,-25%);-ms-transform:translate(0,-25%);-o-transform:translate(0,-25%);transform:translate(0,-25%);-webkit-transition:-webkit-transform .3s ease-out;-moz-transition:-moz-transform .3s ease-out;-o-transition:-o-transform .3s ease-out;transition:transform .3s ease-out}
 .modal.in .modal-dialog{-webkit-transform:translate(0,0);-ms-transform:translate(0,0);-o-transform:translate(0,0);transform:translate(0,0)}
 .modal-open .modal{overflow-x:hidden;overflow-y:auto}
 .modal-dialog{position:relative;width:auto;margin:10px}
 .modal-content{position:relative;background-color:#fff;border:1px solid #999;border:1px solid rgba(0,0,0,.2);border-radius:6px;-webkit-box-shadow:0 3px 9px rgba(0,0,0,.5);-moz-box-shadow:0 3px 9px rgba(0,0,0,.5);box-shadow:0 3px 9px rgba(0,0,0,.5);outline:0}
-.modal-backdrop{position:fixed;top:0;right:0;bottom:0;left:0;background-color:#000}
+.modal-backdrop{position:fixed;background-color:#000}
 .modal-backdrop.fade{opacity:0;filter:alpha(opacity=0)}
 .modal-backdrop.in{opacity:.5;filter:alpha(opacity=50)}
 .modal-header{padding:15px;border-bottom:1px solid #e5e5e5}
@@ -1809,29 +1810,27 @@ p.txt-intro{font-weight:700!important;font-size:1em!important;line-height:1.4em}
 p.txt-intro-grenadine{font-style:italic!important;font-weight:600!important;font-size:1.5em!important;color:#f74e2d}
 .cartouche-noir{display:block;color:#fff;background-color:#000;text-decoration:none;padding:5px;font-size:.6875em;border:1px solid #000;font-weight:700}
 .cartouche-noir:hover{background-color:#FFF;color:#000}
-.button-book,.underline-grenadine a:hover{background-color:#f74e2d}
 .underline-grenadine{font-weight:900}
 .underline-grenadine:after{display:block;border:6px solid #f74e2d;margin-top:-14px;content:""}
 .underline-grenadine:hover{opacity:.7}
 .underline-grenadine a{text-decoration:none!important}
 .button-bg-black,.button-book{display:block;text-transform:uppercase;text-decoration:none;font-weight:700}
 .underline-grenadine-off:after{display:block;border:4px solid #772d2e;margin-top:-5px;content:""}
-.button-book{padding:14px 7px 10px;color:#fff;text-align:center;font-style:normal;font-size:.825em;border:1px solid #f74e2d}
+.underline-grenadine-off:hover{opacity:.5}
+.date-orange .field-name-field-show-dates>div:hover,.group-show-list .group-tranparent-gradient .group-date-title-desc .field-name-field-show-dates>div:hover,.title-link-orange:hover{opacity:.7}
+.button-book{background-color:#f74e2d;padding:14px 7px 10px;color:#fff;text-align:center;font-style:normal;font-size:.825em;border:1px solid #f74e2d}
 .button-book:hover{background-color:#fff;color:#f74e2d}
 .button-bg-black{padding:10px;color:#FFF;font-size:.875em;background-color:#000;margin:0 25px 10px 0;border:1.5px solid #000}
 .date-orange .field-name-field-show-dates>div a,.title-link-orange a{text-decoration:none!important}
 .date-orange .field-name-field-show-dates>div:after,.title-link-orange:after{border:6px solid #f74e2d;margin-top:-14px;content:""}
 .button-bg-black:hover{background-color:#fff;color:#000}
-.date-orange .field-name-field-show-dates>div a:hover,.title-link-orange a:hover{background-color:#f74e2d}
 .date-orange .field-name-field-show-dates{display:table;font-weight:700;margin-bottom:10px}
 .date-orange .field-name-field-show-dates>div,.title-link-orange{padding-left:10px;font-weight:900;text-transform:uppercase;font-style:normal}
 .date-orange .field-name-field-show-dates>div:after{display:block}
-.date-orange .field-name-field-show-dates>div:hover{opacity:.7}
 .date-orange .field-name-field-show-dates>div.js-div-date{position:relative;top:20px;margin-bottom:15px}
 .button-red-link:after,.glyphicon-h3-a-after>h3>span>a:after,.glyphicon-h3-a>h3>span>a:before,[class*=" icon-"]:before,[class^=icon-]:before{position:relative;top:1px}
 .title-link-orange{display:table;margin-bottom:20px}
 .title-link-orange:after{display:block}
-.title-link-orange:hover{opacity:.7}
 .button-link-more{display:block;float:right;border:1.5px solid #f74e2d;text-transform:uppercase;font-size:.8125em;font-style:normal;font-weight:700;padding:15px 17px 10px;background-color:#fff;margin:0 20px 20px 0;color:#f74e2d;text-decoration:none}
 .button-red-link,.front .more-link a{padding:15px 15px 15px 20px;margin:0 auto}
 .button-link-more:after{clear:both;display:block;content:""}
@@ -2010,9 +2009,7 @@ strong{font-weight:700}
 .group-show-list .group-tranparent-gradient .group-date-title-desc .field-name-field-show-dates>div{padding-left:10px;font-style:normal;font-weight:900;text-transform:uppercase}
 .group-show-list .group-tranparent-gradient .group-date-title-desc .field-name-field-show-dates>div.js-div-date{position:relative;top:20px;margin-bottom:15px}
 .group-show-list .group-tranparent-gradient .group-date-title-desc .field-name-field-show-dates>div:after{display:block;content:"";border:3px solid #f74e2d;margin-top:-5px}
-.group-show-list .group-tranparent-gradient .group-date-title-desc .field-name-field-show-dates>div:hover{opacity:.7}
 .group-show-list .group-tranparent-gradient .group-date-title-desc .field-name-field-show-dates>div a{text-decoration:none!important;text-transform:none!important;font-style:normal;font-weight:800}
-.group-show-list .group-tranparent-gradient .group-date-title-desc .field-name-field-show-dates>div a:hover{background-color:#f74e2d}
 @media (max-width:768px){.group-show-list .group-tranparent-gradient .group-date-title-desc .field-name-field-show-dates{margin-bottom:15px}
 .group-show-list .group-tranparent-gradient .group-date-title-desc .field-name-field-show-dates>div a{font-size:1em;font-style:normal;font-weight:800}
 }
@@ -2052,7 +2049,6 @@ strong{font-weight:700}
 .node-type-show #imgfullshow #block-ds-extras-image-full-show .group-text-over-img .group-text-over-img-abs .field-name-field-show-dates>div{padding-left:10px;font-style:normal;font-weight:900;text-transform:uppercase}
 .node-type-show #imgfullshow #block-ds-extras-image-full-show .group-text-over-img .group-text-over-img-abs .field-name-field-show-dates>div:after{content:"";display:block;border:4px solid #772d2e;margin-top:-8px}
 .node-type-show #imgfullshow #block-ds-extras-image-full-show .group-text-over-img .group-text-over-img-abs .field-name-field-show-dates>div a{text-decoration:none!important}
-.node-type-show #imgfullshow #block-ds-extras-image-full-show .group-text-over-img .group-text-over-img-abs .field-name-field-show-dates>div a:hover{background-color:#f74e2d}
 .node-type-show #imgfullshow #block-ds-extras-image-full-show .group-text-over-img .group-text-over-img-abs .field-name-field-show-dates>div.js-div-date{top:20px;margin-bottom:15px;position:static;text-transform:none;font-style:normal;font-weight:800;font-size:1.5em}
 .node-type-show #imgfullshow #block-ds-extras-image-full-show .group-text-over-img .group-text-over-img-abs .field-name-title{text-transform:uppercase;font-size:2.25em;color:#fff;margin-bottom:20px;margin-top:20px;font-style:normal;font-weight:800}
 @media (max-width:768px){.node-type-show #imgfullshow #block-ds-extras-image-full-show .group-text-over-img .group-text-over-img-abs .field-name-title{font-size:1.6em}
@@ -2125,7 +2121,6 @@ strong{font-weight:700}
 }
 .node-type-show .group-tranparent-gradient .group-date-title-desc .field-name-field-show-dates>div:after{display:block;content:"";border:3px solid #f74e2d;margin-top:-5px}
 .node-type-show .group-tranparent-gradient .group-date-title-desc .field-name-field-show-dates>div a{text-decoration:none!important;text-transform:none!important;font-style:normal;font-weight:800}
-.node-type-show .group-tranparent-gradient .group-date-title-desc .field-name-field-show-dates>div a:hover{background-color:#f74e2d}
 .node-type-show .group-tranparent-gradient .group-date-title-desc .field-name-field-show-dates>div a span{font-size:1em!important}
 .node-type-show .group-tranparent-gradient .group-date-title-desc .field-name-title{display:table}
 .node-type-show .group-tranparent-gradient .group-date-title-desc .field-name-title>div a{text-transform:uppercase;font-size:1.25em!important;padding-bottom:12px;display:block;font-style:normal;font-weight:800}
@@ -2187,7 +2182,6 @@ strong{font-weight:700}
 .front #homeheadband .region-homenow #now-tranparent-gradient #group-title-more-now .field-name-title a{font-size:2.375em;color:#FFF;text-decoration:none;font-style:normal;font-weight:900;text-transform:uppercase;display:block;float:right;margin:0 20px 20px 0}
 .front #homeheadband .region-homenow #now-tranparent-gradient #group-title-more-now .field-name-title a:after{display:block;border:6px solid #f74e2d;margin-top:-14px;content:""}
 .front #homeheadband .region-homenow #now-tranparent-gradient #group-title-more-now .field-name-title a a{text-decoration:none!important}
-.front #homeheadband .region-homenow #now-tranparent-gradient #group-title-more-now .field-name-title a a:hover{background-color:#f74e2d}
 @media (max-width:768px){.front #homeheadband .region-homenow #now-tranparent-gradient #group-title-more-now .field-name-title a{padding-left:20px;font-size:1.3em}
 .front #homeheadband .region-homenow #now-tranparent-gradient #group-title-more-now .field-name-title a:after{border:3px solid #f74e2d;margin-top:-8px}
 }
@@ -2262,6 +2256,7 @@ strong{font-weight:700}
 .node-type-festival #headband-festival .group-affiche-festival .field-name-scald-authors{display:none}
 .node-type-festival #headband-festival .group-affiche-festival .field-name-field-date-en-clair{position:absolute;bottom:80px;left:35px;color:#fff;text-transform:uppercase;font-size:2.375em;font-style:normal;font-weight:900}
 .node-type-festival #headband-festival .group-affiche-festival .field-name-field-date-en-clair:after{display:block;content:"";margin-top:-15px;border:8px solid #772d2e}
+.node-type-festival #headband-festival .group-affiche-festival .field-name-field-date-en-clair:hover{opacity:.5}
 @media (max-width:768px){.node-type-festival #headband-festival .group-affiche-festival .field-name-field-date-en-clair{bottom:20px;font-size:1.8em;padding-left:15px}
 }
 .node-type-festival #headband-festival .group-essential-festival{background-color:#f74e2d;color:#fff;padding:25px 30px}
@@ -2396,6 +2391,5 @@ strong{font-weight:700}
 .node-type-webform .group-lettre-info .group-title-txt-lettre-info .h3-lettre-info{display:table;margin-bottom:20px;font-style:normal;font-weight:900;text-transform:uppercase;padding-left:0}
 .node-type-webform .group-lettre-info .group-title-txt-lettre-info .h3-lettre-info:after{display:block;border:6px solid #f74e2d;margin-top:-14px;content:""}
 .node-type-webform .group-lettre-info .group-title-txt-lettre-info .h3-lettre-info a{text-decoration:none!important;color:#FFF;font-size:1.8em;text-transform:uppercase}
-.node-type-webform .group-lettre-info .group-title-txt-lettre-info .h3-lettre-info a:hover{background-color:#f74e2d}
 .node-type-webform .group-lettre-info .group-title-txt-lettre-info .send-info-lette-date{margin-top:15px;font-size:.8em;font-style:italic}
 .node-type-webform .group-lettre-info:after{display:block;content:'';position:absolute;top:40%;height:60%;width:100%;left:0;background:#000;background:linear-gradient(to bottom,rgba(0,0,0,0),#000);z-index:1}
