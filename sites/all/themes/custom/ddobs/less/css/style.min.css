@@ -2168,7 +2168,7 @@ strong{font-weight:700}
 .page-spectacles #headband-festival #block-boxes-left-shows-info{min-height:330px;float:left;width:33.34%}
 .page-spectacles #headband-festival #block-boxes-left-shows-info p{margin:96px 0 20px 24px}
 }
-@media (max-width:992px){.page-spectacles #headband-festival #block-boxes-left-shows-info p{font-size:1em;text-align:center}
+@media (max-width:992px){.page-spectacles #headband-festival #block-boxes-left-shows-info p{margin-top:20%;font-size:1em;text-align:center}
 .page-spectacles #headband-festival #block-boxes-left-shows-info p br{display:none}
 }
 .page-spectacles #headband-festival #block-boxes-left-shows-info #div-link-calendar a{background-color:#fff;color:#000;font-size:1.125em;text-transform:uppercase;margin:10px 0 20px 24px;font-weight:700;padding:12px 12px 10px;border:1.5px solid #000}
@@ -2181,7 +2181,6 @@ strong{font-weight:700}
 .page-spectacles .pagination .next,.page-spectacles .pagination .pager-first,.page-spectacles .pagination .pager-last,.page-spectacles .pagination .prev{display:none}
 .front #block-views-evenements-block-info-flash a{display:block;text-decoration:none}
 .front #block-views-evenements-block-info-flash a:hover{opacity:.5}
-.front #homeheadband .region-homenow #now-tranparent-gradient #group-title-more-now .field-name-title a:hover,.node-type-webform .group-lettre-info .group-title-txt-lettre-info .h3-lettre-info:hover{opacity:.7}
 .front #block-views-evenements-block-info-flash a h2.title-flash-info{font-style:normal;font-weight:800;font-size:1.125em}
 @media (max-width:768px){.front #homeheadband .container-fluid{padding:0}
 }
@@ -2189,7 +2188,8 @@ strong{font-weight:700}
 .front #homeheadband #info-flash a{color:#FFF;text-transform:uppercase}
 .front #homeheadband #info-flash a.more{display:block;float:right;border:1.5px solid #f74e2d;text-transform:uppercase;font-size:.8125em;font-style:normal;font-weight:700;padding:15px 17px 10px;background-color:#fff;margin:0 20px 0 0;color:#f74e2d;text-decoration:none}
 .front #homeheadband #info-flash a.more:after{clear:both;display:block;content:""}
-.front #homeheadband #info-flash a.more:hover{background-color:#f74e2d;color:#FFF;text-decoration:none}
+.front #homeheadband #info-flash a.more:hover{text-decoration:none;background-color:#000;color:#FFF;opacity:1}
+.front #homeheadband .region-homenow #now-tranparent-gradient #group-title-more-now .field-name-title a:hover,.node-type-webform .group-lettre-info .group-title-txt-lettre-info .h3-lettre-info:hover{opacity:.7}
 .front #homeheadband .region-homenow{position:relative}
 @media (max-width:992px){.front #homeheadband .region-homenow{margin-bottom:20px}
 .front #homeheadband .carousel .carousel-inner img,.front #homeheadband .region-homenow img{max-width:none;width:100%}
