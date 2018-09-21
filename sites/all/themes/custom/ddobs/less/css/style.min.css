@@ -43,7 +43,7 @@ h2,h3{page-break-after:avoid}
 .table td,.table th{background-color:#fff!important}
 .table-bordered td,.table-bordered th{border:1px solid #ddd!important}
 }
-.btn,.btn-danger.active,.btn-danger:active,.btn-default.active,.btn-default:active,.btn-info.active,.btn-info:active,.btn-primary.active,.btn-primary:active,.btn-warning.active,.btn-warning:active,.btn.active,.btn:active,.dropdown-menu>.disabled>a:focus,.dropdown-menu>.disabled>a:hover,.form-control,.navbar-toggle,.open>.dropdown-toggle.btn-danger,.open>.dropdown-toggle.btn-default,.open>.dropdown-toggle.btn-info,.open>.dropdown-toggle.btn-primary,.open>.dropdown-toggle.btn-warning,html.js input.form-autocomplete{background-image:none}
+.btn,.btn-danger.active,.btn-danger:active,.btn-default.active,.btn-default:active,.btn-info.active,.btn-info:active,.btn-primary.active,.btn-primary:active,.btn-warning.active,.btn-warning:active,.btn.active,.btn:active,.dropdown-menu>.disabled>a:focus,.dropdown-menu>.disabled>a:hover,.form-control,.navbar-toggle,.open>.dropdown-toggle.btn-danger,.open>.dropdown-toggle.btn-default,.open>.dropdown-toggle.btn-info,.open>.dropdown-toggle.btn-primary,.open>.dropdown-toggle.btn-warning{background-image:none}
 .img-thumbnail,body{background-color:#fff}
 @font-face{font-family:'Glyphicons Halflings';src:url(../bootstrap/fonts/glyphicons-halflings-regular.eot);src:url(../bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'),url(../bootstrap/fonts/glyphicons-halflings-regular.woff2) format('woff2'),url(../bootstrap/fonts/glyphicons-halflings-regular.woff) format('woff'),url(../bootstrap/fonts/glyphicons-halflings-regular.ttf) format('truetype'),url(../bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')}
 .glyphicon{position:relative;top:1px}
@@ -1441,6 +1441,7 @@ table{border-collapse:collapse;border-spacing:0}
 @font-face{font-family:Gotham;src:url(../fonts/Gotham-Black/Gotham-Black.eot);src:url(../fonts/Gotham-Black/Gotham-Black.otf) format('truetype'),url(../fonts/Gotham-Black/Gotham-Black.Ultra) format('woff'),url(../fonts/Gotham-Black/Gotham-Black.Ultra) format('embedded-opentype'),url(../fonts/Gotham-Black/Gotham-Black.svg) format('svg');font-style:normal;font-weight:900}
 html.overlay-open .navbar-fixed-top{z-index:400}
 html.js fieldset.collapsed{border-left-width:1px;border-right-width:1px;height:auto}
+html.js input.form-autocomplete{background-image:none}
 html.js .autocomplete-throbber{background-position:100% 2px;background-repeat:no-repeat;display:inline-block;height:15px;margin:2px 0 0 2px;width:15px}
 html.js .autocomplete-throbber.throbbing{background-position:100% -18px}
 body.admin-expanded.admin-vertical.admin-nw .navbar,body.admin-expanded.admin-vertical.admin-sw .navbar{margin-left:260px}
@@ -1795,7 +1796,7 @@ blockquote,blockquote p{font-style:italic!important}
 .region-sidebar-first a{font-size:1.125em;display:block;padding:10px 0;color:#000}
 .region-sidebar-first ul.menu li.active>a,blockquote{color:#f74e2d}
 .region-sidebar-first ul.dropdown-menu{display:block!important;border:0!important;box-shadow:none}
-.group-show-list:hover,.little-move:hover,.node-type-festival .node-show .group-show-list:hover{transform:translate3d(0,-4px,0);box-shadow:1px 1px 12px #555}
+.group-show-list:hover,.little-move:hover{transition:all .25s ease-in-out;box-shadow:1px 1px 12px #555;transform:translate3d(0,-4px,0)}
 .region-sidebar-first ul.menu{margin-top:20px}
 .region-sidebar-first ul.menu li.active>ul>li>a{background-color:transparent}
 .region-sidebar-first ul.menu>li>ul>li>a{padding-left:20px}
@@ -1804,10 +1805,10 @@ blockquote,blockquote p{font-style:italic!important}
 }
 blockquote{font-weight:400!important}
 blockquote p{font-weight:800!important;font-size:1.25em}
-p.txt-intro,p.txt-normal{font-style:normal!important}
-p.txt-normal{font-weight:600!important;font-size:.875em!important;line-height:1.25em}
-p.txt-intro{font-weight:700!important;font-size:1em!important;line-height:1.4em}
-p.txt-intro-grenadine{font-style:italic!important;font-weight:600!important;font-size:1.5em!important;color:#f74e2d}
+p.txt-intro,p.txt-normal{font-style:normal!important;line-height:1.375em}
+p.txt-normal{font-weight:600!important;font-size:.875em!important}
+p.txt-intro{font-weight:700!important;font-size:1em!important}
+p.txt-intro-grenadine{font-style:italic;font-weight:400;font-size:1.25em!important;line-height:1.5em;color:#f74e2d}
 .cartouche-noir{display:block;color:#fff;background-color:#000;text-decoration:none;padding:5px;font-size:.6875em;border:1px solid #000;font-weight:700}
 .cartouche-noir:hover{background-color:#FFF;color:#000}
 .underline-grenadine{font-weight:900}
@@ -1831,11 +1832,11 @@ p.txt-intro-grenadine{font-style:italic!important;font-weight:600!important;font
 .button-red-link:after,.glyphicon-h3-a-after>h3>span>a:after,.glyphicon-h3-a>h3>span>a:before,[class*=" icon-"]:before,[class^=icon-]:before{position:relative;top:1px}
 .title-link-orange{display:table;margin-bottom:20px}
 .title-link-orange:after{display:block}
-.button-link-more{display:block;float:right;border:1.5px solid #f74e2d;text-transform:uppercase;font-size:.8125em;font-style:normal;font-weight:700;padding:15px 17px 10px;background-color:#fff;margin:0 20px 20px 0;color:#f74e2d;text-decoration:none}
-.button-red-link,.front .more-link a{padding:15px 15px 15px 20px;margin:0 auto}
+.button-link-more,.button-red-link,.glyphicon-h3-a>h3>span>a:hover:before,[class*=" icon-"]:hover{text-decoration:none}
+.button-link-more{display:block;float:right;border:1.5px solid #f74e2d;text-transform:uppercase;font-size:.8125em;font-style:normal;font-weight:700;padding:15px 17px 10px;background-color:#fff;margin:0 20px 20px 0;color:#f74e2d}
 .button-link-more:after{clear:both;display:block;content:""}
 .button-link-more:hover{background-color:#f74e2d;color:#FFF;text-decoration:none}
-.button-red-link{border:2px solid #f74e2d;display:table;color:#f74e2d;text-decoration:none;font-style:normal;font-weight:800;text-transform:uppercase;font-size:.875em}
+.button-red-link{padding:15px 15px 15px 20px;border:2px solid #f74e2d;display:table;margin:0 auto;color:#f74e2d;font-style:normal;font-weight:800;text-transform:uppercase;font-size:.875em}
 .button-red-link:after{color:#f74e2d!important;content:"\e834";font-style:normal;font-weight:400;font-size:1em;display:inline-block;text-decoration:inherit;text-transform:none;line-height:1em;margin-left:10px;margin-right:0}
 .button-red-link:hover{background-color:#f74e2d;color:#FFF}
 .button-red-link:hover:after{color:#fff!important}
@@ -1844,7 +1845,7 @@ p.txt-intro-grenadine{font-style:italic!important;font-weight:600!important;font
 .big-off-orange-title{color:#fff;font-weight:700}
 .big-off-orange-title:after{display:block;border:4px solid #772d2e;margin-top:-5px;content:""}
 strong{font-weight:700}
-.little-move:hover{transition:all .25s ease-in-out;-moz-transition:all .25s ease-in-out;-webkit-transition:all .25s ease-in-out}
+.little-move:hover{-moz-transition:all .25s ease-in-out;-webkit-transition:all .25s ease-in-out}
 .h2-header-simple{position:static;top:0;border:0;font-weight:700;margin-top:10px;color:#000;display:table}
 .h2-header-simple:after{display:block;border:4px solid #772d2e;margin-top:-5px;content:""}
 .pagination>li a{color:#000;background-color:#efefef;border-radius:0;margin-right:2px;font-weight:700;border:1px solid #c9c9c9;width:34px;height:34px}
@@ -1856,10 +1857,8 @@ strong{font-weight:700}
 .atom-align-left{margin:0 20px 0 0}
 .atom-align-right{margin:0 0 0 20px}
 @font-face{font-family:fontello;src:url(../fontello/font/fontello.eot?90885294);src:url(../fontello/font/fontello.eot?90885294#iefix) format('embedded-opentype'),url(../fontello/font/fontello.woff?90885294) format('woff'),url(../fontello/font/fontello.ttf?90885294) format('truetype'),url(../fontello/font/fontello.svg?90885294#fontello) format('svg');font-weight:400;font-style:normal}
-[class*=" icon-"]:hover{text-decoration:none}
 .glyphicon,.glyphicon-h3-a-after>h3>span>a:after,.glyphicon-h3-a>h3>span>a:before,[class*=" icon-"]:before,[class^=icon-]:before{font-family:fontello;font-style:normal;font-weight:400;font-size:1em;speak:none;display:inline-block;text-decoration:inherit;width:1em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;margin-right:10px;color:#777}
-.glyphicon-h3-a>h3>span>a:hover:before{text-decoration:none}
-.private-file a:before,[class*=" iconafter-"]:after{top:1px;font-weight:400;font-size:1em;display:inline-block;text-decoration:inherit;width:1em;text-align:center;text-transform:none;line-height:1em;position:relative;font-style:normal;font-family:fontello;speak:none;font-variant:normal;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.private-file a:before,[class*=" iconafter-"]:after{top:1px;font-weight:400;font-size:1em;display:inline-block;text-decoration:inherit;width:1em;text-transform:none;line-height:1em;position:relative;font-style:normal;font-family:fontello;speak:none;text-align:center;font-variant:normal;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 [class*=" iconafter-"]:after{margin-right:10px;color:#777}
 .icon-tripadvisor:before{content:"\f262"}
 .icon-doc:before{content:"\e804"}
@@ -1994,7 +1993,7 @@ strong{font-weight:700}
 .group-show-list{position:relative;margin-bottom:30px}
 @media (max-width:992px){.group-show-list img{max-width:none;width:100%}
 }
-.group-show-list:hover{transition:all .25s ease-in-out;-moz-transition:all .25s ease-in-out;-webkit-transition:all .25s ease-in-out}
+.group-show-list:hover{-moz-transition:all .25s ease-in-out;-webkit-transition:all .25s ease-in-out}
 .group-show-list .field-name-field-festival{position:absolute;top:10px;left:10px;display:table}
 .group-show-list .field-name-field-festival a{display:block;color:#fff;background-color:#000;text-decoration:none;padding:5px;font-size:.6875em;border:1px solid #000;text-transform:uppercase;font-style:normal;font-weight:700}
 .group-show-list .field-name-field-festival a:hover{background-color:#FFF;color:#000}
@@ -2019,15 +2018,14 @@ strong{font-weight:700}
 .front #homeheadband .region-homenow #now-tranparent-gradient #group-title-more-now .field-name-title a:hover,.node-type-show #imgfullshow #block-ds-extras-image-full-show .group-text-over-img .group-text-over-img-abs .field-name-field-show-dates>div:hover,.node-type-show .group-tranparent-gradient .group-date-title-desc .field-name-field-show-dates>div:hover,.node-type-webform .group-lettre-info .group-title-txt-lettre-info .h3-lettre-info:hover{opacity:.7}
 .group-show-list .group-tranparent-gradient .group-date-title-desc .field-name-body{display:table;margin-bottom:25px}
 .group-show-list .group-tranparent-gradient .group-date-title-desc .field-name-body p{font-size:.875em;font-style:normal;font-weight:600}
-.group-show-list .group-black-bg .field-name-field-boxoffice-url a,.group-show-list .group-black-bg .field-name-node-link a{font-size:.825em;border:1px solid #f74e2d;text-decoration:none;text-transform:uppercase;font-style:normal;text-align:center}
 .group-show-list .group-black-bg{position:absolute;top:90%;height:10%;width:100%;left:0;background:#000}
 @media (min-width:618px) and (max-width:992px){.group-show-list .group-black-bg{height:5%;top:95%}
 }
 .group-show-list .group-black-bg .field-name-node-link{position:absolute;top:-5px;right:2%;left:5%;display:table}
-.group-show-list .group-black-bg .field-name-node-link a{display:block;background-color:#fff;padding:14px 14px 10px!important;color:#f74e2d;font-weight:700}
+.group-show-list .group-black-bg .field-name-node-link a{display:block;background-color:#fff;padding:14px 14px 10px!important;color:#f74e2d;text-align:center;text-transform:uppercase;text-decoration:none;border:1px solid #f74e2d;font-style:normal;font-weight:700;font-size:.813em}
 .group-show-list .group-black-bg .field-name-node-link a:hover{background-color:#f74e2d;color:#fff}
 .group-show-list .group-black-bg .field-name-field-boxoffice-url{position:absolute;top:-5px;right:5%;width:30%;display:table;border:1px solid #f74e2d}
-.group-show-list .group-black-bg .field-name-field-boxoffice-url a{display:block;background-color:#f74e2d;padding:14px 7px 10px;color:#fff;font-weight:700}
+.group-show-list .group-black-bg .field-name-field-boxoffice-url a{display:block;background-color:#f74e2d;padding:14px 7px 10px;color:#fff;text-align:center;text-transform:uppercase;font-style:normal;text-decoration:none;border:1px solid #f74e2d;font-weight:700!important;font-size:13px!important}
 .group-show-list .field-name-scald-authors,.node-type-show #block-domainedo-ticketoffice-rsi-ws-user-links,.node-type-show #imgfullshow .field-name-scald-authors,.node-type-show .breadcrumb li.active{display:none}
 .group-show-list .group-black-bg .field-name-field-boxoffice-url a:hover{background-color:#fff;color:#f74e2d}
 .node-type-show .breadcrumb{margin-bottom:0}
@@ -2128,42 +2126,53 @@ strong{font-weight:700}
 .node-type-show .group-tranparent-gradient .group-date-title-desc .field-name-body p{font-size:.875em;font-style:normal;font-weight:600}
 .node-type-show .group-black-bg .field-name-node-link{top:-15px!important;left:7%!important}
 .node-type-show .group-black-bg .field-name-field-boxoffice-url{top:-15px!important}
-.page-spectacles h2.page-header{text-indent:-6000px}
+.page-spectacles h2.page-header{text-indent:-6000px;display:none}
+.page-spectacles #headband-festival{position:relative;border-bottom:50px solid #fff}
 @media (min-width:1200px){.page-spectacles #headband-festival{background:url(../images/bg_all_shows.gif) 50% 0;margin:0 auto;min-height:330px}
 }
 .page-spectacles #headband-festival #block-views-exp-shows-list{background-color:#efefef}
-@media (min-width:992px){.page-spectacles #headband-festival #block-views-exp-shows-list{float:left;width:66.66%;min-height:330px}
+@media (min-width:992px){.page-spectacles #headband-festival .views-exposed-widgets{padding-bottom:100px}
+.page-spectacles #headband-festival #block-views-exp-shows-list{float:left;width:66.66%;min-height:330px}
 }
 @media (max-width:992px){.page-spectacles #headband-festival .container{padding-left:0;padding-right:0}
 .page-spectacles #headband-festival #block-views-exp-shows-list{padding:0 20px}
 }
-.page-spectacles #headband-festival #block-views-exp-shows-list #edit-field-festival-target-id-wrapper label{color:#000;font-size:1.5em;text-transform:uppercase;margin:40px 0 30px}
+.page-spectacles #headband-festival #block-views-exp-shows-list #edit-field-festival-target-id-wrapper label{color:#000;font-size:1.5em;text-transform:uppercase;margin:40px 0 30px;font-style:normal;font-weight:900}
 .page-spectacles #headband-festival #block-views-exp-shows-list #edit-field-festival-target-id-wrapper .bef-select-as-links>.form-item .form-type-bef-link:first-child{display:none}
 .page-spectacles #headband-festival #block-views-exp-shows-list #edit-field-festival-target-id-wrapper .bef-select-as-links .form-item{float:left}
-.page-spectacles #headband-festival #block-views-exp-shows-list #edit-field-festival-target-id-wrapper .bef-select-as-links .form-item a{color:#FFF;font-size:.875em;text-transform:uppercase;display:block;background-color:#000;padding:15px 20px;margin:0 20px 16px 0}
+.page-spectacles #headband-festival #block-views-exp-shows-list #edit-field-festival-target-id-wrapper .bef-select-as-links .form-item a{color:#FFF;font-size:.875em;font-style:normal;font-weight:700;text-transform:uppercase;display:block;background-color:#000;padding:15px 20px;margin:0 20px 16px 0;text-decoration:none}
 .page-spectacles #headband-festival #block-views-exp-shows-list .views-widget-filter-field_show_type_tid .views-widget .form-control a.bef-toggle,.page-spectacles #headband-festival #block-views-exp-shows-list .views-widget-filter-field_show_type_tid>label{display:none}
+.page-spectacles #headband-festival #block-views-exp-shows-list #edit-field-festival-target-id-wrapper .bef-select-as-links .form-item a:hover,.page-spectacles #headband-festival #block-views-exp-shows-list #edit-field-festival-target-id-wrapper .bef-select-as-links .form-item[class*=selected] a{background-color:#f74e2d;color:#FFF}
 .page-spectacles #headband-festival #block-views-exp-shows-list .views-widget-filter-field_show_type_tid .views-widget .form-control{height:auto;padding:0;background-color:transparent;border:0}
 .page-spectacles #headband-festival #block-views-exp-shows-list .views-widget-filter-field_show_type_tid .views-widget .form-control .bef-checkboxes>.form-type-bef-checkbox{float:left}
-.page-spectacles #headband-festival #block-views-exp-shows-list .views-widget-filter-field_show_type_tid .views-widget .form-control .bef-checkboxes>.form-type-bef-checkbox>input{width:10px;float:left;margin-right:3px;border-radius:0!important;background-color:green}
-.page-spectacles #headband-festival #block-views-exp-shows-list .views-widget-filter-field_show_type_tid .views-widget .form-control .bef-checkboxes>.form-type-bef-checkbox>label{margin-right:20px;font-size:1em}
-@media (max-width:992px){.page-spectacles #headband-festival #block-views-exp-shows-list .views-exposed-widget{float:none;padding:10px 0 0;display:block;clear:both}
+.page-spectacles #headband-festival #block-views-exp-shows-list .views-widget-filter-field_show_type_tid .views-widget .form-control .bef-checkboxes>.form-type-bef-checkbox>input{width:10px;float:left;margin-right:4px;margin-top:-1px;border-radius:0!important;-webkit-appearance:none;border:1px solid #c9c9c9;box-shadow:none;padding:9px;display:inline-block;position:relative}
+.page-spectacles #headband-festival #block-views-exp-shows-list .views-widget-filter-field_show_type_tid .views-widget .form-control .bef-checkboxes>.form-type-bef-checkbox>input:checked{box-shadow:0 1px 2px rgba(0,0,0,.5),inset 0 1px 3px #000;background-color:#000;border:1px solid #f74e2d}
+.page-spectacles #headband-festival #block-views-exp-shows-list .views-widget-filter-field_show_type_tid .views-widget .form-control .bef-checkboxes>.form-type-bef-checkbox>input:checked:active{border:1px solid #f74e2d}
+.page-spectacles #headband-festival #block-views-exp-shows-list .views-widget-filter-field_show_type_tid .views-widget .form-control .bef-checkboxes>.form-type-bef-checkbox>label{margin-right:20px;font-size:16px;font-style:normal;font-weight:700;color:#000}
+@media (max-width:992px){.page-spectacles #headband-festival #block-views-exp-shows-list .views-widget-filter-field_show_type_tid .views-widget .form-control .bef-checkboxes>.form-type-bef-checkbox{margin-bottom:25px}
+.page-spectacles #headband-festival #block-views-exp-shows-list .views-exposed-widget{float:none;padding:10px 0 0;display:block;clear:both}
 }
-.page-spectacles #headband-festival #block-views-exp-shows-list .views-exposed-widget button#edit-submit-shows{color:#FFF;font-size:1.125em;text-transform:uppercase;display:block;background-color:#f74e2d;padding:5px 10px;font-weight:700;margin:30px 0 20px}
+.page-spectacles #headband-festival #block-views-exp-shows-list .views-exposed-widget button#edit-submit-shows{color:#FFF;font-size:1.125em;text-transform:uppercase;display:block;background-color:#f74e2d;padding:8px 14px 6px;font-style:normal;font-weight:800;border:0;border-radius:0!important;margin:30px 0 20px}
 @media (max-width:992px){.page-spectacles #headband-festival #block-views-exp-shows-list .views-exposed-widget button#edit-submit-shows{display:table;margin:15px auto 25px}
 }
+.page-spectacles #headband-festival #block-views-exp-shows-list .views-exposed-widget button#edit-submit-shows:hover{background-color:#000}
 .page-spectacles #headband-festival #block-boxes-left-shows-info{background-color:#f74e2d}
 .page-spectacles #headband-festival #block-boxes-left-shows-info:after{display:block;content:"";clear:both;border:2px solid red}
-.page-spectacles #headband-festival #block-boxes-left-shows-info p{color:#FFF;font-size:1.5em;text-transform:uppercase;margin:30px 0 20px 24px;font-weight:700}
-@media (min-width:992px){.page-spectacles #headband-festival #block-boxes-left-shows-info{min-height:330px;float:left;width:33.34%}
+.page-spectacles #headband-festival #block-boxes-left-shows-info p{color:#FFF;font-size:1.5em;text-transform:uppercase;font-style:normal;font-weight:800!important;margin:30px 0 20px 24px}
+@media (min-width:992px){.page-spectacles #headband-festival #block-views-exp-shows-list .views-exposed-widget button#edit-submit-shows{position:absolute;top:80%;right:10%}
+.page-spectacles #headband-festival #block-boxes-left-shows-info{min-height:330px;float:left;width:33.34%}
 .page-spectacles #headband-festival #block-boxes-left-shows-info p{margin:96px 0 20px 24px}
 }
 @media (max-width:992px){.page-spectacles #headband-festival #block-boxes-left-shows-info p{font-size:1em;text-align:center}
 .page-spectacles #headband-festival #block-boxes-left-shows-info p br{display:none}
 }
-.page-spectacles #headband-festival #block-boxes-left-shows-info #div-link-calendar a{background-color:#fff;color:#000;font-size:1.125em;text-transform:uppercase;margin:10px 0 20px 24px;font-weight:700;padding:12px;border:1.5px solid #000}
+.page-spectacles #headband-festival #block-boxes-left-shows-info #div-link-calendar a{background-color:#fff;color:#000;font-size:1.125em;text-transform:uppercase;margin:10px 0 20px 24px;font-weight:700;padding:12px 12px 10px;border:1.5px solid #000}
 @media (max-width:992px){.page-spectacles #headband-festival #block-boxes-left-shows-info #div-link-calendar a{display:table;margin:20px auto}
 }
-.page-spectacles #headband-festival #block-boxes-left-shows-info #div-link-calendar a:before{position:relative;font-family:fontello;font-style:normal;font-weight:400;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"\e807";color:#000;font-size:.875em;top:-2px}
+.front #quick-acces .view #home-calendar-link:before,.page-spectacles #headband-festival #block-boxes-left-shows-info #div-link-calendar a:before{content:"\e807";font-family:fontello;font-weight:400;speak:none;display:inline-block;text-decoration:inherit;text-align:center;font-variant:normal;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;width:1em}
+.page-spectacles #headband-festival #block-boxes-left-shows-info #div-link-calendar a:before{position:relative;font-style:normal;margin-right:10px;text-transform:none;color:#000;font-size:.875em;top:-2px}
+.page-spectacles #headband-festival #block-boxes-left-shows-info #div-link-calendar a:hover{text-decoration:none;background-color:#000;color:#FFF}
+.page-spectacles #headband-festival #block-boxes-left-shows-info #div-link-calendar a:hover:before{color:#FFF}
 .page-spectacles .pagination .next,.page-spectacles .pagination .pager-first,.page-spectacles .pagination .pager-last,.page-spectacles .pagination .prev{display:none}
 @media (max-width:768px){.front #homeheadband .container-fluid{padding:0}
 }
@@ -2181,6 +2190,7 @@ strong{font-weight:700}
 .front #homeheadband .region-homenow #now-tranparent-gradient #group-title-more-now .field-name-title{clear:both}
 .front #homeheadband .region-homenow #now-tranparent-gradient #group-title-more-now .field-name-title a{font-size:2.375em;color:#FFF;text-decoration:none;font-style:normal;font-weight:900;text-transform:uppercase;display:block;float:right;margin:0 20px 20px 0}
 .front #homeheadband .region-homenow #now-tranparent-gradient #group-title-more-now .field-name-title a:after{display:block;border:6px solid #f74e2d;margin-top:-14px;content:""}
+.node-type-festival #headband-festival .group-affiche-festival .field-name-field-date-en-clair:hover,.node-type-festival #headband-festival .group-essential-festival a:hover{opacity:.5}
 .front #homeheadband .region-homenow #now-tranparent-gradient #group-title-more-now .field-name-title a a{text-decoration:none!important}
 @media (max-width:768px){.front #homeheadband .region-homenow #now-tranparent-gradient #group-title-more-now .field-name-title a{padding-left:20px;font-size:1.3em}
 .front #homeheadband .region-homenow #now-tranparent-gradient #group-title-more-now .field-name-title a:after{border:3px solid #f74e2d;margin-top:-8px}
@@ -2229,12 +2239,12 @@ strong{font-weight:700}
 .front #quick-acces .view #home-calendar-link{float:right;color:#000;font-size:1em;background-color:#fff;border:1px solid #000}
 @media (max-width:768px){.front #quick-acces .view #home-calendar-link{float:none;clear:both;display:table;margin-top:15px}
 }
-.front #quick-acces .view #home-calendar-link:before{content:"\e807";position:relative;font-family:fontello;font-style:normal;font-weight:400;font-size:1em;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color:#000;top:-2px}
+.front #quick-acces .view #home-calendar-link:before{position:relative;font-style:normal;font-size:1em;margin-right:10px;text-transform:none;color:#000;top:-2px}
+.front .more-link a:after,.node-type-festival #headband-festival .group-essential-festival a:before{top:1px;line-height:1em;font-family:fontello;speak:none;text-align:center;font-variant:normal;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-style:normal}
 .front #quick-acces .view #home-calendar-link:hover{background-color:#000;color:#FFF}
 .front #quick-acces .view #home-calendar-link:hover:before{color:#FFF}
-.front .more-link a{border:2px solid #f74e2d;display:table;color:#f74e2d;text-decoration:none;font-style:normal;font-weight:800;text-transform:uppercase;font-size:.875em}
-.front .more-link a:after,.node-type-festival #headband-festival .group-essential-festival a:before,.node-type-page .field-name-field-red-frame-left li:before,.node-type-page .field-name-field-white-frame-left li:before,.node-type-page-complexe .field-name-field-red-frame-left li:before,.node-type-page-complexe .field-name-field-white-frame-left li:before{text-decoration:inherit;font-family:fontello;speak:none;text-align:center;font-variant:normal;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-style:normal}
-.front .more-link a:after{color:#f74e2d!important;content:"\e834";position:relative;top:1px;font-weight:400;font-size:1em;display:inline-block;width:1em;text-transform:none;line-height:1em;margin-left:10px;margin-right:0}
+.front .more-link a{padding:15px 15px 15px 20px;border:2px solid #f74e2d;display:table;margin:0 auto;color:#f74e2d;text-decoration:none;font-style:normal;font-weight:800;text-transform:uppercase;font-size:.875em}
+.front .more-link a:after{color:#f74e2d!important;content:"\e834";position:relative;font-weight:400;font-size:1em;display:inline-block;text-decoration:inherit;width:1em;text-transform:none;margin-left:10px;margin-right:0}
 .front .more-link a:hover{background-color:#f74e2d;color:#FFF}
 .front .more-link a:hover:after{color:#fff!important}
 .front #block-views-shows-block-1 h2.block-title{margin:20px 0;font-size:1.5em}
@@ -2256,13 +2266,12 @@ strong{font-weight:700}
 .node-type-festival #headband-festival .group-affiche-festival .field-name-scald-authors{display:none}
 .node-type-festival #headband-festival .group-affiche-festival .field-name-field-date-en-clair{position:absolute;bottom:80px;left:35px;color:#fff;text-transform:uppercase;font-size:2.375em;font-style:normal;font-weight:900}
 .node-type-festival #headband-festival .group-affiche-festival .field-name-field-date-en-clair:after{display:block;content:"";margin-top:-15px;border:8px solid #772d2e}
-.node-type-festival #headband-festival .group-affiche-festival .field-name-field-date-en-clair:hover{opacity:.5}
 @media (max-width:768px){.node-type-festival #headband-festival .group-affiche-festival .field-name-field-date-en-clair{bottom:20px;font-size:1.8em;padding-left:15px}
 }
 .node-type-festival #headband-festival .group-essential-festival{background-color:#f74e2d;color:#fff;padding:25px 30px}
-.node-type-festival #headband-festival .group-essential-festival h2{font-size:1.875em;text-transform:uppercase;margin:0 25px 30px 0;font-style:normal;font-weight:800}
-.node-type-festival #headband-festival .group-essential-festival a{color:#fff;font-size:.6875em;text-transform:uppercase;font-style:normal;font-weight:600;display:block;border-bottom:1px solid #fff;padding-bottom:10px;margin-bottom:15px}
-.node-type-festival #headband-festival .group-essential-festival a:before{position:relative;top:1px;font-weight:400;display:inline-block;width:1em;margin-right:10px;text-transform:none;line-height:1em;color:#fff;font-size:1.25em}
+.node-type-festival #headband-festival .group-essential-festival h2{font-size:1.875em;text-transform:uppercase;margin:0 25px 30px 0;font-style:normal;font-weight:900}
+.node-type-festival #headband-festival .group-essential-festival a{color:#fff;font-size:.688em;text-transform:uppercase;font-style:normal;font-weight:600;display:block;border-bottom:1px solid #fff;padding-bottom:10px;margin-bottom:15px;text-decoration:none}
+.node-type-festival #headband-festival .group-essential-festival a:before{position:relative;font-weight:400;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;text-transform:none;color:#fff;font-size:1.5em}
 .node-type-festival #headband-festival .group-essential-festival img,.node-type-festival .node-show .group-show-list .field-name-field-festival,.node-type-festival .pagination .next,.node-type-festival .pagination .pager-first,.node-type-festival .pagination .pager-last,.node-type-festival .pagination .prev,.node-type-page .field-name-scald-authors,.node-type-page-complexe .field-name-scald-authors,.page-zoom-sur .field-name-scald-authors,.page-zoom-sur h2.page-header{display:none}
 .node-type-festival #headband-festival .group-essential-festival .field-name-link-shows a:before{content:"\f291"}
 .node-type-festival #headband-festival .group-essential-festival .field-name-field-programme-pdf a:before{content:"\e823"}
@@ -2272,7 +2281,7 @@ strong{font-weight:700}
 .node-type-festival #headband-festival .group-essential-festival .field-name-field-facebook a:before{content:"\e801"}
 .node-type-festival .group-text-video iframe{width:100%;height:320px}
 .node-type-festival h3.show-festival-title{font-size:1.5em;margin:20px 0;font-style:normal;font-weight:600}
-.node-type-festival .node-show .group-show-list:hover{transition:all .25s ease-in-out;-moz-transition:all .25s ease-in-out;-webkit-transition:all .25s ease-in-out}
+.node-type-festival .node-show .group-show-list:hover{transform:translate3d(0,-4px,0);transition:all .25s ease-in-out;-moz-transition:all .25s ease-in-out;-webkit-transition:all .25s ease-in-out;box-shadow:1px 1px 12px #555}
 .node-type-festival .node-show .group-show-list .group-black-bg{height:13%}
 .node-type-festival .node-show .group-show-list .group-black-bg .field-name-node-link a{font-size:.825em}
 .node-type-festival .node-show .group-show-list .group-black-bg .field-name-field-boxoffice-url{right:10%}
@@ -2304,9 +2313,9 @@ strong{font-weight:700}
 .node-type-page .field-name-field-red-frame-left p a,.node-type-page .field-name-field-white-frame-left p a,.node-type-page-complexe .field-name-field-red-frame-left p a,.node-type-page-complexe .field-name-field-white-frame-left p a{text-transform:uppercase;display:table;margin:10px auto 0;color:#fff;font-size:1em;font-weight:700}
 .node-type-page .field-name-field-red-frame-left p a:after,.node-type-page .field-name-field-white-frame-left p a:after,.node-type-page-complexe .field-name-field-red-frame-left p a:after,.node-type-page-complexe .field-name-field-white-frame-left p a:after{position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;font-size:1em;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"\e834";color:#fff}
 .node-type-page .field-name-field-red-frame-left li,.node-type-page .field-name-field-white-frame-left li,.node-type-page-complexe .field-name-field-red-frame-left li,.node-type-page-complexe .field-name-field-white-frame-left li{margin:10px 0;line-height:1.5em}
-.node-type-page .field-name-field-red-frame-left li:before,.node-type-page .field-name-field-white-frame-left li:before,.node-type-page-complexe .field-name-field-red-frame-left li:before,.node-type-page-complexe .field-name-field-white-frame-left li:before{position:relative;top:1px;font-weight:400;font-size:1em;display:inline-block;width:1em;text-transform:none;line-height:1em;content:"\e834";color:#fff;margin-right:0}
+.node-type-page .field-name-field-red-frame-left li:before,.node-type-page .field-name-field-white-frame-left li:before,.node-type-page-complexe .field-name-field-red-frame-left li:before,.node-type-page-complexe .field-name-field-white-frame-left li:before{position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;font-size:1em;speak:none;display:inline-block;text-decoration:inherit;width:1em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"\e834";color:#fff;margin-right:0}
 .node-type-page .field-name-field-white-frame-left,.node-type-page-complexe .field-name-field-white-frame-left{background-color:#fff;margin-top:20px;color:#000}
-.node-type-page .field-name-field-white-frame-left li:before,.node-type-page-complexe .field-name-field-white-frame-left li:before{position:relative;top:1px;font-weight:400;font-size:1em;display:inline-block;width:1em;text-transform:none;line-height:1em;color:#000;margin-right:0}
+.node-type-page .field-name-field-white-frame-left li:before,.node-type-page-complexe .field-name-field-white-frame-left li:before{position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;font-size:1em;speak:none;display:inline-block;text-decoration:inherit;width:1em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color:#000;margin-right:0}
 .node-type-page .field-name-field-white-frame-left p a,.node-type-page .field-name-field-white-frame-left p a:after,.node-type-page-complexe .field-name-field-white-frame-left p a,.node-type-page-complexe .field-name-field-white-frame-left p a:after{color:#f74e2d}
 @media (min-width:768px){.node-type-page .paragraphs-items-field-paragraphe-complexe>div>div>.field-item,.node-type-page-complexe .paragraphs-items-field-paragraphe-complexe>div>div>.field-item{float:left;width:30%;margin-right:2%}
 }

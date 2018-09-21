@@ -89,12 +89,12 @@
         text-transform: uppercase;
         margin: 0 25px 0 0;
         font-style: normal;
-        font-weight: 800;
+        font-weight: 900;
         margin-bottom: 30px;
       }
       a {
         color: white;
-        font-size: 0.6875em; /* 11/16 */
+        font-size: 0.688em; /* 11/16 */
         text-transform: uppercase;
         font-style: normal;
         font-weight: 600;
@@ -102,10 +102,14 @@
         border-bottom: 1px solid white;
         padding-bottom: 10px;
         margin-bottom: 15px;
+        text-decoration: none;
         &:before {
           .glyphicon();
           color: white;
-          font-size: 1.25em; /* 20/16 */
+          font-size: 1.5em;
+        }
+        &:hover {
+          opacity: 0.5;
         }
       }
       .field-name-link-shows {
