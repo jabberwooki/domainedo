@@ -2020,7 +2020,7 @@ strong{font-weight:700}
 .group-show-list .group-tranparent-gradient .group-date-title-desc .field-name-title{display:table}
 .group-show-list .group-tranparent-gradient .group-date-title-desc .field-name-title>div a{text-transform:uppercase;font-size:1.25em;padding-bottom:12px;display:block;font-style:normal;font-weight:800;text-decoration:none}
 .group-show-list .group-tranparent-gradient .group-date-title-desc .field-name-title>div a:hover{text-decoration:none;opacity:.5}
-.front #homeheadband .region-homenow #now-tranparent-gradient #group-title-more-now .field-name-title a:hover,.node-type-show #imgfullshow #block-ds-extras-image-full-show .group-text-over-img .group-text-over-img-abs .field-name-field-show-dates>div:hover,.node-type-show .group-tranparent-gradient .group-date-title-desc .field-name-field-show-dates>div:hover,.node-type-webform .group-lettre-info .group-title-txt-lettre-info .h3-lettre-info:hover{opacity:.7}
+.node-type-show #imgfullshow #block-ds-extras-image-full-show .group-text-over-img .group-text-over-img-abs .field-name-field-show-dates>div:hover,.node-type-show .group-tranparent-gradient .group-date-title-desc .field-name-field-show-dates>div:hover{opacity:.7}
 .group-show-list .group-tranparent-gradient .group-date-title-desc .field-name-body{display:table;margin-bottom:25px}
 .group-show-list .group-tranparent-gradient .group-date-title-desc .field-name-body p{font-size:.875em;font-style:normal;font-weight:600}
 .group-show-list .group-black-bg{position:absolute;top:90%;height:10%;width:100%;left:0;background:#000}
@@ -2132,11 +2132,11 @@ strong{font-weight:700}
 .node-type-show .group-black-bg .field-name-node-link{top:-15px!important;left:7%!important}
 .node-type-show .group-black-bg .field-name-field-boxoffice-url{top:-15px!important}
 .page-spectacles h2.page-header{text-indent:-6000px;display:none}
-.page-spectacles #headband-festival{position:relative;border-bottom:50px solid #fff}
+.page-spectacles #headband-festival{border-bottom:50px solid #fff}
 @media (min-width:1200px){.page-spectacles #headband-festival{background:url(../images/bg_all_shows.gif) 50% 0;margin:0 auto;min-height:330px}
 }
 .page-spectacles #headband-festival #block-views-exp-shows-list{background-color:#efefef}
-@media (min-width:992px){.page-spectacles #headband-festival .views-exposed-widgets{padding-bottom:100px}
+@media (min-width:992px){.page-spectacles #headband-festival .views-exposed-widgets{position:relative;padding-bottom:100px}
 .page-spectacles #headband-festival #block-views-exp-shows-list{float:left;width:66.66%;min-height:330px}
 }
 @media (max-width:992px){.page-spectacles #headband-festival .container{padding-left:0;padding-right:0}
@@ -2179,6 +2179,10 @@ strong{font-weight:700}
 .page-spectacles #headband-festival #block-boxes-left-shows-info #div-link-calendar a:hover{text-decoration:none;background-color:#000;color:#FFF}
 .page-spectacles #headband-festival #block-boxes-left-shows-info #div-link-calendar a:hover:before{color:#FFF}
 .page-spectacles .pagination .next,.page-spectacles .pagination .pager-first,.page-spectacles .pagination .pager-last,.page-spectacles .pagination .prev{display:none}
+.front #block-views-evenements-block-info-flash a{display:block;text-decoration:none}
+.front #block-views-evenements-block-info-flash a:hover{opacity:.5}
+.front #homeheadband .region-homenow #now-tranparent-gradient #group-title-more-now .field-name-title a:hover,.node-type-webform .group-lettre-info .group-title-txt-lettre-info .h3-lettre-info:hover{opacity:.7}
+.front #block-views-evenements-block-info-flash a h2.title-flash-info{font-style:normal;font-weight:800;font-size:1.125em}
 @media (max-width:768px){.front #homeheadband .container-fluid{padding:0}
 }
 .front #homeheadband #info-flash{background-color:#f74e2d;color:#FFF;font-weight:700;margin:0 0 10px;padding:30px 0}
