@@ -2162,6 +2162,8 @@ strong{font-weight:700}
 }
 .page-spectacles #headband-festival #block-views-exp-shows-list .views-exposed-widget button#edit-submit-shows:hover{background-color:#000}
 .page-spectacles #headband-festival #block-boxes-left-shows-info{background-color:#f74e2d}
+@media (min-width:768px){.page-spectacles #headband-festival #block-boxes-left-shows-info{margin-top:10%}
+}
 .page-spectacles #headband-festival #block-boxes-left-shows-info:after{display:block;content:"";clear:both;border:2px solid red}
 .page-spectacles #headband-festival #block-boxes-left-shows-info p{color:#FFF;font-size:1.5em;text-transform:uppercase;font-style:normal;font-weight:800!important;margin:30px 0 20px 24px}
 @media (min-width:992px){.page-spectacles #headband-festival #block-views-exp-shows-list .views-exposed-widget button#edit-submit-shows{position:absolute;top:80%;right:10%}
