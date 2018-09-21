@@ -1628,18 +1628,18 @@ body .main-container .field-name-body a:visited,body .main-container .field-name
 body .main-container .field-name-body a:hover,body .main-container .field-name-field-additional-infos a:hover{color:#861a05}
 body .main-container .field-name-body h3,body .main-container .field-name-field-additional-infos h3{font-style:normal!important;font-weight:700!important;font-size:1.75em!important;margin-bottom:14px;margin-top:18px;color:#f74e2d}
 body .main-container .field-name-body h4,body .main-container .field-name-field-additional-infos h4{font-style:normal!important;font-weight:700!important;font-size:1.5em!important;margin-bottom:12px;margin-top:15px}
-body .main-container .field-name-body h5,body .main-container .field-name-field-additional-infos h5{font-style:normal!important;font-weight:800!important;font-size:1.25em!important;margin-bottom:10px;margin-top:12px}
-body .group-text-video h3,body .group-text-video h4{font-weight:700!important;font-style:normal!important}
-body .main-container .field-name-body h6,body .main-container .field-name-field-additional-infos h6{font-style:normal!important;font-weight:700!important;font-size:1em!important;margin-bottom:8px;margin-top:10px;text-transform:uppercase}
-body .group-text-video h3{font-size:1.75em!important;margin-bottom:14px;margin-top:18px;color:#f74e2d}
-body .group-text-video h4{font-size:1.5em!important;margin-bottom:12px;margin-top:15px}
-body .group-text-video h5{font-style:normal!important;font-weight:800!important;font-size:1.25em!important;margin-bottom:10px;margin-top:12px}
-.classic-style h3,.classic-style h4,body .group-text-video h6{font-weight:700!important;font-style:normal!important}
-body .group-text-video h6{font-size:1em!important;margin-bottom:8px;margin-top:10px;text-transform:uppercase}
-.classic-style h3{font-size:1.75em!important;margin-bottom:14px;margin-top:18px;color:#f74e2d}
-.classic-style h4{font-size:1.5em!important;margin-bottom:12px;margin-top:15px}
-.classic-style h5{font-style:normal!important;font-weight:800!important;font-size:1.25em!important;margin-bottom:10px;margin-top:12px}
-.classic-style h6{font-style:normal!important;font-weight:700!important;font-size:1em!important;margin-bottom:8px;margin-top:10px;text-transform:uppercase}
+body .main-container .field-name-body h5,body .main-container .field-name-field-additional-infos h5{font-style:normal!important;font-weight:800!important;font-size:1.25em!important;margin-bottom:10px;margin-top:15px}
+body .main-container .field-name-body h6,body .main-container .field-name-field-additional-infos h6{font-style:normal!important;font-weight:700!important;font-size:1em!important;margin-bottom:8px;margin-top:15px;text-transform:uppercase}
+body .group-text-video h3{font-style:normal!important;font-weight:700!important;font-size:1.75em!important;margin-bottom:14px;margin-top:18px;color:#f74e2d}
+body .group-text-video h4,body .group-text-video h5,body .group-text-video h6{margin-top:15px;font-style:normal!important}
+body .group-text-video h4{font-weight:700!important;font-size:1.5em!important;margin-bottom:12px}
+body .group-text-video h5{font-weight:800!important;font-size:1.25em!important;margin-bottom:10px}
+body .group-text-video h6{font-weight:700!important;font-size:1em!important;margin-bottom:8px;text-transform:uppercase}
+.classic-style h3{font-style:normal!important;font-weight:700!important;font-size:1.75em!important;margin-bottom:14px;margin-top:18px;color:#f74e2d}
+.classic-style h4,.classic-style h5,.classic-style h6{font-style:normal!important;margin-top:15px}
+.classic-style h4{font-weight:700!important;font-size:1.5em!important;margin-bottom:12px}
+.classic-style h5{font-weight:800!important;font-size:1.25em!important;margin-bottom:10px}
+.classic-style h6{font-weight:700!important;font-size:1em!important;margin-bottom:8px;text-transform:uppercase}
 .link-body a{text-decoration:underline;color:#f74e2d}
 .link-body a:visited{color:#fdcac0}
 .link-body a:hover{color:#861a05}
