@@ -1623,13 +1623,13 @@ a .glyphicon.icon-after,a.icon-after .glyphicon{margin-left:.25em}
 .btn .glyphicon.icon-before,.btn.icon-before .glyphicon{margin-left:-.25em;margin-right:.25em}
 .btn .glyphicon.icon-after,.btn.icon-after .glyphicon{margin-left:.25em;margin-right:-.25em}
 body{font-family:Gotham,Arial,sans-serif;font-style:normal;font-weight:600}
-body .main-container .field-name-body a,body .main-container .field-name-field-additional-infos a{text-decoration:underline;color:#f74e2d}
-body .main-container .field-name-body a:visited,body .main-container .field-name-field-additional-infos a:visited{color:#fdcac0}
-body .main-container .field-name-body a:hover,body .main-container .field-name-field-additional-infos a:hover{color:#861a05}
-body .main-container .field-name-body h3,body .main-container .field-name-field-additional-infos h3{font-style:normal!important;font-weight:700!important;font-size:1.75em!important;margin-bottom:14px;margin-top:18px;color:#f74e2d}
-body .main-container .field-name-body h4,body .main-container .field-name-field-additional-infos h4{font-style:normal!important;font-weight:700!important;font-size:1.5em!important;margin-bottom:12px;margin-top:15px}
-body .main-container .field-name-body h5,body .main-container .field-name-field-additional-infos h5{font-style:normal!important;font-weight:800!important;font-size:1.25em!important;margin-bottom:10px;margin-top:15px}
-body .main-container .field-name-body h6,body .main-container .field-name-field-additional-infos h6{font-style:normal!important;font-weight:700!important;font-size:1em!important;margin-bottom:8px;margin-top:15px;text-transform:uppercase}
+body .main-container .field-name-body a,body .main-container .field-name-field-additional-infos a,body .main-container .taxonomy-term-description a{text-decoration:underline;color:#f74e2d}
+body .main-container .field-name-body a:visited,body .main-container .field-name-field-additional-infos a:visited,body .main-container .taxonomy-term-description a:visited{color:#fdcac0}
+body .main-container .field-name-body a:hover,body .main-container .field-name-field-additional-infos a:hover,body .main-container .taxonomy-term-description a:hover{color:#861a05}
+body .main-container .field-name-body h3,body .main-container .field-name-field-additional-infos h3,body .main-container .taxonomy-term-description h3{font-style:normal!important;font-weight:700!important;font-size:1.75em!important;margin-bottom:14px;margin-top:18px;color:#f74e2d}
+body .main-container .field-name-body h4,body .main-container .field-name-field-additional-infos h4,body .main-container .taxonomy-term-description h4{font-style:normal!important;font-weight:700!important;font-size:1.5em!important;margin-bottom:12px;margin-top:15px}
+body .main-container .field-name-body h5,body .main-container .field-name-field-additional-infos h5,body .main-container .taxonomy-term-description h5{font-style:normal!important;font-weight:800!important;font-size:1.25em!important;margin-bottom:10px;margin-top:15px}
+body .main-container .field-name-body h6,body .main-container .field-name-field-additional-infos h6,body .main-container .taxonomy-term-description h6{font-style:normal!important;font-weight:700!important;font-size:1em!important;margin-bottom:8px;margin-top:15px;text-transform:uppercase}
 body .group-text-video h3{font-style:normal!important;font-weight:700!important;font-size:1.75em!important;margin-bottom:14px;margin-top:18px;color:#f74e2d}
 body .group-text-video h4,body .group-text-video h5,body .group-text-video h6{margin-top:15px;font-style:normal!important}
 body .group-text-video h4{font-weight:700!important;font-size:1.5em!important;margin-bottom:12px}
