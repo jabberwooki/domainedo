@@ -2376,7 +2376,7 @@ strong{font-weight:700}
 .page-taxonomy-term .node-tech-document .group-img-wraper .field-name-title{position:absolute;bottom:0;z-index:2}
 .page-taxonomy-term .node-tech-document .group-img-wraper .field-name-title a{text-transform:uppercase;font-weight:700;font-size:1.25em;display:block;color:#FFF;padding:50% 5px 10px 10px;margin:0;text-decoration:none}
 .page-taxonomy-term .node-tech-document .group-img-wraper .field-name-title a:hover{text-decoration:none;opacity:.5}
-.node-type-tech-document .group-img-wrapper .field-name-field-image-page-complexe:after,.page-taxonomy-term .node-tech-document .group-img-wraper .field-name-field-scald-image .field-item:after{content:"";width:100%;height:85px;position:absolute;bottom:0;left:0;background:linear-gradient(to bottom,rgba(0,0,0,0),#000)}
+.node-type-tech-document .group-img-wrapper .field-name-field-scald-image:after,.page-taxonomy-term .node-tech-document .group-img-wraper .field-name-field-scald-image .field-item:after{content:"";width:100%;height:85px;position:absolute;bottom:0;left:0;background:linear-gradient(to bottom,rgba(0,0,0,0),#000)}
 }
 .page-taxonomy-term .field-name-node-link .button-link-more{margin-right:0}
 .node-type-tech-document .field-name-scald-authors{display:none}
