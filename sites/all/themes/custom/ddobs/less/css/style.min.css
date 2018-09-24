@@ -2418,7 +2418,7 @@ strong{font-weight:700}
 .page-espace-multimedia h2.page-header{border:0;text-transform:uppercase;font-size:2.375em;font-weight:700;color:#000}
 .page-espace-multimedia h2.page-header:after{display:block;border:4px solid #772d2e;content:"";margin-top:-7px!important}
 .page-espace-multimedia #edit-scald-tags-tid-wrapper div.form-item{float:left}
-.page-espace-multimedia #edit-scald-tags-tid-wrapper div.form-item a{text-transform:uppercase;color:#f74e2d;margin-bottom:20px;margin-right:18px;display:block}
+.page-espace-multimedia #edit-scald-tags-tid-wrapper div.form-item a{text-transform:uppercase;color:#f74e2d;margin-bottom:20px;margin-right:10px;display:block}
 .page-espace-multimedia #edit-scald-tags-tid-wrapper div.form-item div.selected a{color:#000}
 .page-espace-multimedia .field-content a img{margin-bottom:20px}
 .node-type-webform .group-lettre-info{position:relative;margin-bottom:20px}
