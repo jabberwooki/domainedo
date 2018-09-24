@@ -14,7 +14,8 @@ body {
     .field-name-field-additional-infos,
     .taxonomy-term-description {
       .link-body();
-      .classic-style
+      .classic-style();
+      .ul-in-text();
     }
   }
   .group-text-video {
@@ -821,24 +822,7 @@ footer.container {
     font-weight: 600;
   }
   div.field {
-    ul {
-      margin: 10px 0 20px 0;
-      li {
-        &:before {
-          .glyphicon();
-          content: "\e834";
-          color: #000;;
-          margin-right: 5px;
-          font-size: 0.8em;
-        }
-        h2,
-        h3,
-        h4,
-        h5 {
-          display: inline;
-        }
-      }
-    }
+    .ul-in-text();
   }
 }
 .node-page {
@@ -858,7 +842,26 @@ footer.container {
     color: black;
   }
 }
-
+.ul-in-text {
+  ul {
+    margin: 10px 0 20px 0;
+    li {
+      &:before {
+        .glyphicon();
+        content: "\e834";
+        color: #000;;
+        margin-right: 5px;
+        font-size: 0.8em;
+      }
+      h2,
+      h3,
+      h4,
+      h5 {
+        display: inline;
+      }
+    }
+  }
+}
 /* Fin texte **********************************************************************************************************/
 /* Menu secondaire de la zone de gauche *******************************************************************************/
 
