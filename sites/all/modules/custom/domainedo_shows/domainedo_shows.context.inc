@@ -156,6 +156,7 @@ function domainedo_shows_context_default_contexts() {
     'path' => array(
       'values' => array(
         'domaine-do/espaces/*' => 'domaine-do/espaces/*',
+        'lieux-de-spectacle/*' => 'lieux-de-spectacle/*',
       ),
     ),
   );
