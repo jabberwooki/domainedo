@@ -43,7 +43,7 @@ h2,h3{page-break-after:avoid}
 .table td,.table th{background-color:#fff!important}
 .table-bordered td,.table-bordered th{border:1px solid #ddd!important}
 }
-.btn,.btn-danger.active,.btn-danger:active,.btn-default.active,.btn-default:active,.btn-info.active,.btn-info:active,.btn-primary.active,.btn-primary:active,.btn-warning.active,.btn-warning:active,.btn.active,.btn:active,.dropdown-menu>.disabled>a:focus,.dropdown-menu>.disabled>a:hover,.form-control,.navbar-toggle,.open>.dropdown-toggle.btn-danger,.open>.dropdown-toggle.btn-default,.open>.dropdown-toggle.btn-info,.open>.dropdown-toggle.btn-primary,.open>.dropdown-toggle.btn-warning,html.js input.form-autocomplete{background-image:none}
+.btn,.btn-danger.active,.btn-danger:active,.btn-default.active,.btn-default:active,.btn-info.active,.btn-info:active,.btn-primary.active,.btn-primary:active,.btn-warning.active,.btn-warning:active,.btn.active,.btn:active,.dropdown-menu>.disabled>a:focus,.dropdown-menu>.disabled>a:hover,.form-control,.navbar-toggle,.open>.dropdown-toggle.btn-danger,.open>.dropdown-toggle.btn-default,.open>.dropdown-toggle.btn-info,.open>.dropdown-toggle.btn-primary,.open>.dropdown-toggle.btn-warning{background-image:none}
 .img-thumbnail,body{background-color:#fff}
 @font-face{font-family:'Glyphicons Halflings';src:url(../bootstrap/fonts/glyphicons-halflings-regular.eot);src:url(../bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'),url(../bootstrap/fonts/glyphicons-halflings-regular.woff2) format('woff2'),url(../bootstrap/fonts/glyphicons-halflings-regular.woff) format('woff'),url(../bootstrap/fonts/glyphicons-halflings-regular.ttf) format('truetype'),url(../bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')}
 .glyphicon{position:relative;top:1px}
@@ -1441,6 +1441,7 @@ table{border-collapse:collapse;border-spacing:0}
 @font-face{font-family:Gotham;src:url(../fonts/Gotham-Black/Gotham-Black.eot);src:url(../fonts/Gotham-Black/Gotham-Black.otf) format('truetype'),url(../fonts/Gotham-Black/Gotham-Black.Ultra) format('woff'),url(../fonts/Gotham-Black/Gotham-Black.Ultra) format('embedded-opentype'),url(../fonts/Gotham-Black/Gotham-Black.svg) format('svg');font-style:normal;font-weight:900}
 html.overlay-open .navbar-fixed-top{z-index:400}
 html.js fieldset.collapsed{border-left-width:1px;border-right-width:1px;height:auto}
+html.js input.form-autocomplete{background-image:none}
 html.js .autocomplete-throbber{background-position:100% 2px;background-repeat:no-repeat;display:inline-block;height:15px;margin:2px 0 0 2px;width:15px}
 html.js .autocomplete-throbber.throbbing{background-position:100% -18px}
 body.admin-expanded.admin-vertical.admin-nw .navbar,body.admin-expanded.admin-vertical.admin-sw .navbar{margin-left:260px}
@@ -1670,7 +1671,8 @@ body .group-text-video h6{font-weight:700!important;font-size:1em!important;marg
 @media (max-width:350px){#social-bottom #ul-social li a:before{margin-right:10px!important}
 }
 #div-subscritpion #link-subscritpion{font-size:.75em;display:block;float:right;font-style:normal;font-weight:800;color:#f74e2d;border:1px solid #f74e2d;padding:6px;text-transform:uppercase;text-decoration:none}
-#div-subscritpion #link-subscritpion:before{position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;font-size:1em;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"\e840";color:#f74e2d}
+@media (min-width:1200px){#div-subscritpion #link-subscritpion:before{position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;font-size:1em;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"\e840";color:#f74e2d}
+}
 #div-subscritpion #link-subscritpion:hover{background-color:#f74e2d;color:#FFF}
 #div-subscritpion #link-subscritpion:hover:before{color:#FFF}
 @media (max-width:992px){#div-subscritpion,#ul-social{display:none}

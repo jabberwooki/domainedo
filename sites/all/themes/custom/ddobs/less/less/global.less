@@ -172,11 +172,14 @@ body {
     padding: 6px;
     text-transform: uppercase;
     text-decoration: none;
-    &:before {
-      .glyphicon();
-      content: "\e840";
-      color: @grenadine-ddo;
+    @media (min-width: @screen-lg) {
+      &:before {
+        .glyphicon();
+        content: "\e840";
+        color: @grenadine-ddo;
+      }
     }
+
     &:hover {
       background-color: @grenadine-ddo;
       color: #FFF;
