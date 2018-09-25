@@ -98,6 +98,7 @@ function domainedo_media_default_scald_context_config() {
     ),
     'gallery' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'image' => array(
       '*' => 'default',
@@ -204,6 +205,7 @@ function domainedo_media_default_scald_context_config() {
     ),
     'gallery' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'image' => array(
       '*' => 'default',
@@ -232,10 +234,10 @@ function domainedo_media_default_scald_context_config() {
       '*' => 'passthrough',
     ),
     'gallery' => array(
-      '*' => 'style-large-675',
+      '*' => 'passthrough',
     ),
     'image' => array(
-      '*' => 'passthrough',
+      '*' => 'style-festival780x517',
     ),
     'twitter' => array(
       '*' => 'passthrough',
@@ -257,9 +259,9 @@ function domainedo_media_default_scald_context_config() {
       'settings' => array(
         'width' => '100%',
         'height' => '450',
-        'thumb_style' => 'carre600x600',
-        'normal_style' => 'carre600x600',
-        'big_style' => 'carre600x600',
+        'thumb_style' => 'thumbnail',
+        'normal_style' => 'festival780x517',
+        'big_style' => 'original',
         'theme' => 'classic',
         'options' => '{"lightbox": true,"showInfo": true}',
         'fullscreen_link' => 1,
@@ -282,7 +284,7 @@ function domainedo_media_default_scald_context_config() {
     ),
   );
   $context_config->data = array(
-    'width' => '',
+    'width' => '100%',
     'height' => '',
   );
   $export['full'] = $context_config;
@@ -374,6 +376,7 @@ function domainedo_media_default_scald_context_config() {
     ),
     'gallery' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'image' => array(
       '*' => 'default',
@@ -384,6 +387,7 @@ function domainedo_media_default_scald_context_config() {
     ),
     'video' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
   );
   $context_config->data = array(
@@ -425,6 +429,7 @@ function domainedo_media_default_scald_context_config() {
     ),
     'gallery' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'image' => array(
       '*' => 'default',
@@ -767,6 +772,7 @@ function domainedo_media_default_scald_context_config() {
     ),
     'gallery' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'image' => array(
       '*' => 'default',
@@ -777,6 +783,7 @@ function domainedo_media_default_scald_context_config() {
     ),
     'video' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
   );
   $context_config->data = array(
