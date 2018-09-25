@@ -146,5 +146,37 @@ function domainedo_shows_context_default_contexts() {
   t('all layout');
   $export['page-all-shows'] = $context;
 
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'place_taxonomy';
+  $context->description = '';
+  $context->tag = 'all layout';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'domaine-do/espaces/*' => 'domaine-do/espaces/*',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'ds_extras-top_place_taxonomy' => array(
+          'module' => 'ds_extras',
+          'delta' => 'top_place_taxonomy',
+          'region' => 'topclassicpage',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('all layout');
+  $export['place_taxonomy'] = $context;
+
   return $export;
 }

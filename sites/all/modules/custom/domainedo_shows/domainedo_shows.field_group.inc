@@ -218,6 +218,38 @@ function domainedo_shows_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_img_wrapper|taxonomy_term|show_locations|full';
+  $field_group->group_name = 'group_img_wrapper';
+  $field_group->entity_type = 'taxonomy_term';
+  $field_group->bundle = 'show_locations';
+  $field_group->mode = 'full';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Entoure image',
+    'weight' => '8',
+    'children' => array(
+      0 => 'field_scald_image',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Entoure image',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-img-wrapper field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_img_wrapper|taxonomy_term|show_locations|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_lieu|node|show|full';
   $field_group->group_name = 'group_lieu';
   $field_group->entity_type = 'node';
@@ -785,6 +817,7 @@ function domainedo_shows_field_group_info() {
   t('Date titre description');
   t('Degradé transparent');
   t('Distribution');
+  t('Entoure image');
   t('Essentiel Festival');
   t('Group UL short links');
   t('Groupe short links');
