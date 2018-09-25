@@ -260,6 +260,10 @@ function domainedo_shows_strongarm() {
       'title' => 'Top technic space',
       'info' => 'node_tech_document_full',
     ),
+    'top_event' => array(
+      'title' => 'Top event',
+      'info' => 'node_news_full',
+    ),
   );
   $export['ds_extras_region_blocks'] = $strongarm;
 

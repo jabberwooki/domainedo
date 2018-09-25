@@ -43,6 +43,7 @@ function domainedo_shows_default_scald_context_config() {
     ),
     'gallery' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'image' => array(
       '*' => 'default',
