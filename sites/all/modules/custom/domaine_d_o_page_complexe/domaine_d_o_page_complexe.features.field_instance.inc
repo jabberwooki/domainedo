@@ -143,7 +143,7 @@ function domaine_d_o_page_complexe_field_default_field_instances() {
         'settings' => array(
           'link' => 0,
         ),
-        'type' => 'full',
+        'type' => 'slideshow_home',
         'weight' => 3,
       ),
       'teaser' => array(
@@ -468,8 +468,10 @@ function domaine_d_o_page_complexe_field_default_field_instances() {
       'default' => array(
         'label' => 'hidden',
         'module' => 'domainedo_media',
-        'settings' => array(),
-        'type' => 'large_480x296_crop',
+        'settings' => array(
+          'link' => 0,
+        ),
+        'type' => 'full',
         'weight' => 2,
       ),
       'paragraphs_editor_preview' => array(
