@@ -1,0 +1,43 @@
+.page-search {
+  h2.page-header {
+    font-style: normal;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 2.25em;
+  }
+  #block-system-main {
+    > h2 {
+      font-style: normal;
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 1.75em;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    .search-results {
+      h3.title {
+        a {
+          color: @grenadine-ddo;
+          font-style: italic;
+          font-weight: normal;
+          font-size: 1.5em;
+          display: block;
+          &:hover {
+            text-decoration: none;
+            opacity: 0.5;
+          }
+        }
+      }
+      .search-info {
+        margin-bottom: 30px;
+        a {
+          display: none;
+        }
+      }
+    }
+  }
+  li.next,
+  li.pager-last {
+    display: none;
+  }
+}
