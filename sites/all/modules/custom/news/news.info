@@ -43,6 +43,7 @@ features[ds_layout_settings][] = node|news|default
 features[ds_layout_settings][] = node|news|full
 features[ds_layout_settings][] = node|news|right_now
 features[ds_view_modes][] = right_now
+features[fe_block_settings][] = ds_extras-top_event
 features[fe_block_settings][] = views-zoom-block_right_now
 features[features_api][] = api:2
 features[field_base][] = body
