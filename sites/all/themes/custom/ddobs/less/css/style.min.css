@@ -1257,7 +1257,7 @@ a.list-group-item-danger.active,a.list-group-item-danger.active:focus,a.list-gro
 .well-lg{padding:24px;border-radius:6px}
 .well-sm{padding:9px;border-radius:3px}
 .close{float:right;font-size:21px;line-height:1;color:#000;text-shadow:0 1px 0 #fff;opacity:.2;filter:alpha(opacity=20)}
-.popover,.tooltip{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:400;line-break:auto;line-height:1.42857143;text-shadow:none;text-transform:none;word-break:normal;word-spacing:normal;word-wrap:normal;white-space:normal;text-decoration:none}
+.popover,.tooltip{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-style:normal;font-weight:400;line-break:auto;line-height:1.42857143;text-shadow:none;text-transform:none;word-break:normal;word-spacing:normal;word-wrap:normal;white-space:normal;text-decoration:none}
 .close:focus,.close:hover{color:#000;text-decoration:none;cursor:pointer;opacity:.5;filter:alpha(opacity=50)}
 button.close{padding:0;background:0 0;border:0;-webkit-appearance:none}
 .modal-content,.popover{background-clip:padding-box}
@@ -1286,7 +1286,7 @@ button.close{padding:0;background:0 0;border:0;-webkit-appearance:none}
 .tooltip.top-left .tooltip-arrow,.tooltip.top-right .tooltip-arrow{bottom:0;margin-bottom:-5px;border-width:5px 5px 0;border-top-color:#000}
 @media (min-width:992px){.modal-lg{width:900px}
 }
-.tooltip{position:absolute;z-index:1070;display:block;font-style:normal;letter-spacing:normal;text-align:left;text-align:start;font-size:12px;opacity:0;filter:alpha(opacity=0)}
+.tooltip{position:absolute;z-index:1070;display:block;letter-spacing:normal;text-align:left;text-align:start;font-size:12px;opacity:0;filter:alpha(opacity=0)}
 .tooltip.in{opacity:.9;filter:alpha(opacity=90)}
 .tooltip.top{margin-top:-3px;padding:5px 0}
 .tooltip.right{margin-left:3px;padding:0 5px}
@@ -1303,7 +1303,7 @@ button.close{padding:0;background:0 0;border:0;-webkit-appearance:none}
 .tooltip.bottom .tooltip-arrow{left:50%;margin-left:-5px}
 .tooltip.bottom-left .tooltip-arrow{right:5px;margin-top:-5px}
 .tooltip.bottom-right .tooltip-arrow{left:5px;margin-top:-5px}
-.popover{position:absolute;top:0;left:0;z-index:1060;display:none;max-width:276px;padding:1px;font-style:normal;letter-spacing:normal;text-align:left;text-align:start;font-size:14px;background-color:#fff;border:1px solid #ccc;border:1px solid rgba(0,0,0,.2);border-radius:6px;-webkit-box-shadow:0 5px 10px rgba(0,0,0,.2);-moz-box-shadow:0 5px 10px rgba(0,0,0,.2);box-shadow:0 5px 10px rgba(0,0,0,.2)}
+.popover{position:absolute;top:0;left:0;z-index:1060;display:none;max-width:276px;padding:1px;letter-spacing:normal;text-align:left;text-align:start;font-size:14px;background-color:#fff;border:1px solid #ccc;border:1px solid rgba(0,0,0,.2);border-radius:6px;-webkit-box-shadow:0 5px 10px rgba(0,0,0,.2);-moz-box-shadow:0 5px 10px rgba(0,0,0,.2);box-shadow:0 5px 10px rgba(0,0,0,.2)}
 .carousel-caption,.carousel-control{color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.6);text-align:center}
 .popover.top{margin-top:-10px}
 .popover.right{margin-left:10px}
@@ -1623,16 +1623,17 @@ a .glyphicon.icon-after,a.icon-after .glyphicon{margin-left:.25em}
 .btn .glyphicon.icon-before,.btn.icon-before .glyphicon{margin-left:-.25em;margin-right:.25em}
 .btn .glyphicon.icon-after,.btn.icon-after .glyphicon{margin-left:.25em;margin-right:-.25em}
 body{font-family:Gotham,Arial,sans-serif;font-style:normal;font-weight:600}
-body .main-container .field-name-body a,body .main-container .field-name-field-additional-infos a,body .main-container .taxonomy-term-description a{text-decoration:underline;color:#f74e2d}
-body .main-container .field-name-body a:visited,body .main-container .field-name-field-additional-infos a:visited,body .main-container .taxonomy-term-description a:visited{color:#fdcac0}
-body .main-container .field-name-body a:hover,body .main-container .field-name-field-additional-infos a:hover,body .main-container .taxonomy-term-description a:hover{color:#861a05}
-body .main-container .field-name-body h3,body .main-container .field-name-field-additional-infos h3,body .main-container .taxonomy-term-description h3{font-style:normal!important;font-weight:700!important;font-size:1.75em!important;margin-bottom:14px;margin-top:18px;color:#f74e2d}
-body .main-container .field-name-body h4,body .main-container .field-name-field-additional-infos h4,body .main-container .taxonomy-term-description h4{font-style:normal!important;font-weight:700!important;font-size:1.5em!important;margin-bottom:12px;margin-top:15px}
-body .main-container .field-name-body h5,body .main-container .field-name-field-additional-infos h5,body .main-container .taxonomy-term-description h5{font-style:normal!important;font-weight:800!important;font-size:1.25em!important;margin-bottom:10px;margin-top:15px}
-body .main-container .field-name-body h6,body .main-container .field-name-field-additional-infos h6,body .main-container .taxonomy-term-description h6{font-style:normal!important;font-weight:700!important;font-size:1em!important;margin-bottom:8px;margin-top:15px;text-transform:uppercase}
-body .main-container .field-name-body ul,body .main-container .field-name-field-additional-infos ul,body .main-container .taxonomy-term-description ul{margin:10px 0 20px}
-body .main-container .field-name-body ul li:before,body .main-container .field-name-field-additional-infos ul li:before,body .main-container .taxonomy-term-description ul li:before{position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;speak:none;display:inline-block;text-decoration:inherit;width:1em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"\e834";color:#000;margin-right:5px;font-size:.8em}
-body .main-container .field-name-body ul li h2,body .main-container .field-name-body ul li h3,body .main-container .field-name-body ul li h4,body .main-container .field-name-body ul li h5,body .main-container .field-name-field-additional-infos ul li h2,body .main-container .field-name-field-additional-infos ul li h3,body .main-container .field-name-field-additional-infos ul li h4,body .main-container .field-name-field-additional-infos ul li h5,body .main-container .taxonomy-term-description ul li h2,body .main-container .taxonomy-term-description ul li h3,body .main-container .taxonomy-term-description ul li h4,body .main-container .taxonomy-term-description ul li h5{display:inline}
+body .main-container .field-name-body a,body .main-container .field-name-field-additional-infos a,body .main-container .field-name-field-ls-practical a,body .main-container .taxonomy-term-description a{text-decoration:underline;color:#f74e2d}
+body .main-container .field-name-body a:visited,body .main-container .field-name-field-additional-infos a:visited,body .main-container .field-name-field-ls-practical a:visited,body .main-container .taxonomy-term-description a:visited{color:#fdcac0}
+body .main-container .field-name-body a:hover,body .main-container .field-name-field-additional-infos a:hover,body .main-container .field-name-field-ls-practical a:hover,body .main-container .taxonomy-term-description a:hover{color:#861a05}
+body .main-container .field-name-body h3,body .main-container .field-name-field-additional-infos h3,body .main-container .field-name-field-ls-practical h3,body .main-container .taxonomy-term-description h3{font-style:normal!important;font-weight:700!important;font-size:1.75em!important;margin-bottom:14px;margin-top:18px;color:#f74e2d}
+body .main-container .field-name-body h4,body .main-container .field-name-field-additional-infos h4,body .main-container .field-name-field-ls-practical h4,body .main-container .taxonomy-term-description h4{font-style:normal!important;font-weight:700!important;font-size:1.5em!important;margin-bottom:12px;margin-top:15px}
+body .main-container .field-name-body h5,body .main-container .field-name-field-additional-infos h5,body .main-container .field-name-field-ls-practical h5,body .main-container .taxonomy-term-description h5{font-style:normal!important;font-weight:800!important;font-size:1.25em!important;margin-bottom:10px;margin-top:15px}
+body .main-container .field-name-body h6,body .main-container .field-name-field-additional-infos h6,body .main-container .field-name-field-ls-practical h6,body .main-container .taxonomy-term-description h6{font-style:normal!important;font-weight:700!important;font-size:1em!important;margin-bottom:8px;margin-top:15px;text-transform:uppercase}
+body .main-container .field-name-body ul,body .main-container .field-name-field-additional-infos ul,body .main-container .field-name-field-ls-practical ul,body .main-container .taxonomy-term-description ul{margin:10px 0 20px}
+body .main-container .field-name-body ul li,body .main-container .field-name-field-additional-infos ul li,body .main-container .field-name-field-ls-practical ul li,body .main-container .taxonomy-term-description ul li{line-height:1.5em}
+body .main-container .field-name-body ul li:before,body .main-container .field-name-field-additional-infos ul li:before,body .main-container .field-name-field-ls-practical ul li:before,body .main-container .taxonomy-term-description ul li:before{position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;speak:none;display:inline-block;text-decoration:inherit;width:1em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"\e834";color:#000;margin-right:5px;font-size:.8em}
+body .main-container .field-name-body ul li h2,body .main-container .field-name-body ul li h3,body .main-container .field-name-body ul li h4,body .main-container .field-name-body ul li h5,body .main-container .field-name-field-additional-infos ul li h2,body .main-container .field-name-field-additional-infos ul li h3,body .main-container .field-name-field-additional-infos ul li h4,body .main-container .field-name-field-additional-infos ul li h5,body .main-container .field-name-field-ls-practical ul li h2,body .main-container .field-name-field-ls-practical ul li h3,body .main-container .field-name-field-ls-practical ul li h4,body .main-container .field-name-field-ls-practical ul li h5,body .main-container .taxonomy-term-description ul li h2,body .main-container .taxonomy-term-description ul li h3,body .main-container .taxonomy-term-description ul li h4,body .main-container .taxonomy-term-description ul li h5{display:inline}
 body .group-text-video h3{font-style:normal!important;font-weight:700!important;font-size:1.75em!important;margin-bottom:14px;margin-top:18px;color:#f74e2d}
 body .group-text-video h4,body .group-text-video h5,body .group-text-video h6{margin-top:15px;font-style:normal!important}
 body .group-text-video h4{font-weight:700!important;font-size:1.5em!important;margin-bottom:12px}
@@ -1769,6 +1770,7 @@ footer.container #block-bean-reseaux-sociaux-bas .field-name-field-block-body #s
 @media (max-width:768px){footer.container #block-bean-reseaux-sociaux-bas .field-name-field-block-body #social-title-bottom{display:table;margin:0 auto;padding-left:0;float:none;text-align:center}
 }
 footer.container #block-bean-reseaux-sociaux-bas .field-name-field-block-body #tag-social{text-transform:lowercase;color:#f74e2d;display:table;float:left;font-size:1.25em;font-weight:700;font-style:italic;margin:10px 13% 0 20px}
+#block-system-main div.field ul li:before,.region-headbandfestival div.field ul li:before,.ul-in-text ul li:before{top:1px;text-decoration:inherit;text-transform:none;content:"\e834";position:relative;font-family:fontello;speak:none;width:1em;text-align:center;font-variant:normal;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 @media (max-width:768px){footer.container #block-bean-reseaux-sociaux-bas .field-name-field-block-body #tag-social{padding-left:0;float:none;margin:0 auto}
 }
 footer.container #block-bean-reseaux-sociaux-bas .field-name-field-block-body ul#ul-social a:before{font-size:2.125em;margin-right:26px}
@@ -1784,15 +1786,16 @@ footer.container #footer-menus #mmm{float:none;margin-right:0}
 footer.container #footer-menus .menu{margin-top:5px}
 footer.container #footer-menus .menu>li>a{color:#000;padding:10px 0;display:block;margin:0;font-size:.875em}
 #block-system-main p,.region-headbandfestival p{line-height:20px;font-size:.875em;margin:10px 0;font-style:normal;font-weight:600}
-#block-system-main div.field ul li:before,.region-headbandfestival div.field ul li:before,.ul-in-text ul li:before{top:1px;font-style:normal;text-decoration:inherit;text-transform:none;line-height:1em;content:"\e834";position:relative;font-family:fontello;speak:none;width:1em;text-align:center;font-variant:normal;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 #block-system-main div.field ul,.region-headbandfestival div.field ul{margin:10px 0 20px}
-#block-system-main div.field ul li:before,.region-headbandfestival div.field ul li:before{font-weight:400;display:inline-block;color:#000;margin-right:5px;font-size:.8em}
+#block-system-main div.field ul li,.region-headbandfestival div.field ul li{line-height:1.5em}
+#block-system-main div.field ul li:before,.region-headbandfestival div.field ul li:before{font-style:normal;font-weight:400;display:inline-block;line-height:1em;color:#000;margin-right:5px;font-size:.8em}
 #block-system-main div.field ul li h2,#block-system-main div.field ul li h3,#block-system-main div.field ul li h4,#block-system-main div.field ul li h5,.region-headbandfestival div.field ul li h2,.region-headbandfestival div.field ul li h3,.region-headbandfestival div.field ul li h4,.region-headbandfestival div.field ul li h5{display:inline}
 .node-page h3{font-size:1.75em;color:#f74e2d;margin:20px 0 10px}
 .node-page h4{font-size:1.5em;font-weight:700;color:#000}
 .node-page h5{font-size:1.25em;font-weight:700;color:#000}
 .ul-in-text ul{margin:10px 0 20px}
-.ul-in-text ul li:before{font-weight:400;display:inline-block;color:#000;margin-right:5px;font-size:.8em}
+.ul-in-text ul li{line-height:1.5em}
+.ul-in-text ul li:before{font-style:normal;font-weight:400;display:inline-block;line-height:1em;color:#000;margin-right:5px;font-size:.8em}
 .cartouche-noir,.underline-grenadine{text-transform:uppercase;font-style:normal}
 .ul-in-text ul li h2,.ul-in-text ul li h3,.ul-in-text ul li h4,.ul-in-text ul li h5{display:inline}
 .region-sidebar-first{background-color:#fff;border:0}
