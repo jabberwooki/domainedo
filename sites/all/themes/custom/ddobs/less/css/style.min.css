@@ -2359,8 +2359,8 @@ strong{font-weight:700}
 .node-type-news .main-container h2.page-header:after{display:block;border:4px solid #772d2e;content:"";margin-top:-14px!important}
 @media (max-width:768px){.node-type-news .main-container h2.page-header:after{margin-top:-8px!important}
 }
-.node-type-news section.no-img-top h2.page-header{position:static;top:0;border:0;text-transform:uppercase;font-size:2.375em;font-weight:700;margin-top:10px;color:#000;display:table}
-.node-type-news section.no-img-top h2.page-header:after{display:block;border:4px solid #772d2e;margin-top:-5px;content:""}
+.node-type-news .no-img-top h2.page-header{position:static;top:0;border:0;text-transform:uppercase;font-size:2.375em;font-weight:700;margin-top:10px;color:#000;display:table}
+.node-type-news .no-img-top h2.page-header:after{display:block;border:4px solid #772d2e;margin-top:-5px;content:""}
 #block-views-personnes-block-1 .field-name-field-person-img-2,#block-views-personnes-block-2 .field-name-field-person-img-2,#block-views-personnes-block-3 .field-name-field-person-img-2,#block-views-personnes-block-artistique .field-name-field-person-img-2,#block-views-personnes-block-equipe-recettes .field-name-field-person-img-2,.node-type-news .field-name-field-news-only-video,.node-type-news .field-name-scald-authors,.page-taxonomy-term .field-name-scald-authors{display:none}
 .node-type-news .field-name-field-image-colonne-droite{margin-bottom:20px!important}
 .node-type-news .galleria-info-link{top:10px!important}
