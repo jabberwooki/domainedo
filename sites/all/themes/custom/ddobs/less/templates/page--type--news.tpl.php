@@ -204,11 +204,9 @@
 </div>
 <?php endif; ?>
 <!-- FIN TOP CLASSIC PAGE  ---------------------------------------------------->
-<div class="main-container <?php print $container_class; ?>">
+<div class="main-container <?php print $container_class; ?> <?php if (empty($page['topclassicpage'])) print'no-img-top ';?>">
 
     <header role="banner" id="page-header">
-
-
       <?php print render($page['header']); ?>
     </header> <!-- /#page-header -->
 
