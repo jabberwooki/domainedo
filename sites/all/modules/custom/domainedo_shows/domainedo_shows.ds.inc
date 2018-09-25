@@ -857,6 +857,7 @@ function domainedo_shows_ds_layout_settings_info() {
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
   );
   $export['taxonomy_term|show_locations|full'] = $ds_layout;
 

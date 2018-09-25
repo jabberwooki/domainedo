@@ -264,6 +264,14 @@ function domainedo_shows_strongarm() {
       'title' => 'Top event',
       'info' => 'node_news_full',
     ),
+    'top_article' => array(
+      'title' => 'Top article',
+      'info' => 'node_article_full',
+    ),
+    'top_place_taxonomy' => array(
+      'title' => 'Top place taxonomy',
+      'info' => 'taxonomy_term_show_locations_full',
+    ),
   );
   $export['ds_extras_region_blocks'] = $strongarm;
 
