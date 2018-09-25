@@ -348,5 +348,55 @@ function domainedo_contexts_context_default_contexts() {
   t('desktop layout ');
   $export['not-front'] = $context;
 
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'team_page';
+  $context->description = '';
+  $context->tag = 'all layout';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'domaine-do/equipe' => 'domaine-do/equipe',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-personnes-block_1' => array(
+          'module' => 'views',
+          'delta' => 'personnes-block_1',
+          'region' => 'content',
+          'weight' => '-9',
+        ),
+        'views-personnes-block_2' => array(
+          'module' => 'views',
+          'delta' => 'personnes-block_2',
+          'region' => 'content',
+          'weight' => '-8',
+        ),
+        'views-personnes-block_3' => array(
+          'module' => 'views',
+          'delta' => 'personnes-block_3',
+          'region' => 'content',
+          'weight' => '-7',
+        ),
+        'views-personnes-block_artistique' => array(
+          'module' => 'views',
+          'delta' => 'personnes-block_artistique',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('all layout');
+  $export['team_page'] = $context;
+
   return $export;
 }
