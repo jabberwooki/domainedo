@@ -177,7 +177,8 @@
           display: table;
           border-bottom: 66px solid @gris-clair-ddo;
           @media (max-width: @screen-sm) {
-            border-bottom: 76px solid @gris-clair-ddo;
+            border-bottom: 3px solid @gris-clair-ddo;
+
           }
           &:after {
             content: "";
@@ -203,7 +204,7 @@
           z-index: 2;
           bottom: 50px;
           @media (max-width: @screen-sm) {
-            bottom: 60px;
+            bottom: 20px;
           }
           .field-name-field-festival {
             a {
@@ -403,6 +404,12 @@
       margin-bottom: 50px;
       min-height: 32px;
       .field-name-field-boxoffice-url {
+        @media (max-width: @screen-sm) {
+          margin-left: -15px;
+          width: 110%;
+          padding: 10px 0 !important;
+          background-color: @gris-clair-ddo;
+        }
         a {
           .button-book();
           padding: 12px 20px 8px 20px;
@@ -412,8 +419,9 @@
           margin-top: -14px;
           font-size: 1.125em;/*18/16*/
           @media (max-width: @screen-sm) {
-            width: 100%;
-            margin: -19px auto 20px auto;
+
+            margin: 20px auto 20px auto;
+
           }
         }
       }
