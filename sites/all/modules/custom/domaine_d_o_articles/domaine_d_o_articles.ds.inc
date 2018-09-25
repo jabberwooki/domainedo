@@ -112,6 +112,8 @@ function domaine_d_o_articles_ds_field_settings_info() {
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_expert',
+          'lb' => 'Distribution',
+          'lb-col' => TRUE,
           'lbw-el' => 'div',
           'prefix' => '<a name="casting" id="casting"></a>',
           'ow' => TRUE,
@@ -290,6 +292,52 @@ function domaine_d_o_articles_ds_layout_settings_info() {
     'layout_disable_css' => FALSE,
   );
   $export['node|article|frontpage_block'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|article|full';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'article';
+  $ds_layout->view_mode = 'full';
+  $ds_layout->layout = 'bootstrap_6_6_stacked';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'left' => array(
+        0 => 'body',
+      ),
+      'right' => array(
+        1 => 'field_image_colonne_droite',
+        2 => 'field_scald_video',
+        3 => 'gallery_items',
+      ),
+      'top_article' => array(
+        4 => 'field_scald_image',
+        5 => 'group_img_wrapper',
+      ),
+    ),
+    'fields' => array(
+      'body' => 'left',
+      'field_image_colonne_droite' => 'right',
+      'field_scald_video' => 'right',
+      'gallery_items' => 'right',
+      'field_scald_image' => 'top_article',
+      'group_img_wrapper' => 'top_article',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'top' => 'div',
+      'left' => 'div',
+      'right' => 'div',
+      'bottom' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
+  );
+  $export['node|article|full'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;

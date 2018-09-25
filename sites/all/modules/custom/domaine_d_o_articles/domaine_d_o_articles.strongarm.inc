@@ -20,7 +20,7 @@ function domaine_d_o_articles_strongarm() {
         'custom_settings' => TRUE,
       ),
       'full' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'rss' => array(
         'custom_settings' => FALSE,
@@ -62,16 +62,16 @@ function domaine_d_o_articles_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '6',
+          'weight' => '10',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '4',
+          'weight' => '8',
         ),
         'redirect' => array(
-          'weight' => '5',
+          'weight' => '9',
         ),
       ),
       'display' => array(
@@ -87,6 +87,10 @@ function domaine_d_o_articles_strongarm() {
           'frontpage_block' => array(
             'weight' => '15',
             'visible' => FALSE,
+          ),
+          'full' => array(
+            'weight' => '4',
+            'visible' => TRUE,
           ),
         ),
       ),
