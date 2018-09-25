@@ -2379,11 +2379,11 @@ strong{font-weight:700}
 .node-type-news .galleria-thumbnails-list{top:-30px!important}
 #block-views-personnes-block-1 h2.block-title,#block-views-personnes-block-2 h2.block-title,#block-views-personnes-block-3 h2.block-title,#block-views-personnes-block-artistique h2.block-title,#block-views-personnes-block-equipe-recettes h2.block-title{text-transform:uppercase;font-weight:700;font-size:1.5em;margin:10px 0}
 #block-views-personnes-block-1 .field-name-field-person-img-1,#block-views-personnes-block-2 .field-name-field-person-img-1,#block-views-personnes-block-3 .field-name-field-person-img-1,#block-views-personnes-block-artistique .field-name-field-person-img-1,#block-views-personnes-block-equipe-recettes .field-name-field-person-img-1{float:left;margin-right:20px;margin-bottom:30px}
-.page-taxonomy-term .group-img-wrapper .field-name-field-image-page-complexe:after,.page-taxonomy-term .group-img-wrapper .field-name-field-section-image:after{content:"";width:100%;height:85px;position:absolute;bottom:0;left:0;background:linear-gradient(to bottom,rgba(0,0,0,0),#000)}
+.page-taxonomy-term .group-img-wrapper .field-name-field-image-page-complexe:after,.page-taxonomy-term .group-img-wrapper .field-name-field-section-image:after,.page-taxonomy-term .group-img-wrapper picture.img-responsive:after{content:"";width:100%;height:85px;position:absolute;bottom:0;left:0;background:linear-gradient(to bottom,rgba(0,0,0,0),#000)}
 .page-taxonomy-term .main-container{position:relative}
 .page-taxonomy-term .main-container h2.page-header{position:absolute;top:-60px;border:0;border-top:150px;color:#FFF!important;text-transform:uppercase;font-size:2.375em;font-weight:700}
 .page-taxonomy-term .main-container h2.page-header:after{display:block;border:4px solid #772d2e;content:"";margin-top:-10px!important}
-@media (max-width:768px){.page-taxonomy-term .group-img-wrapper .field-name-field-image-page-complexe:after,.page-taxonomy-term .group-img-wrapper .field-name-field-section-image:after{height:60%}
+@media (max-width:768px){.page-taxonomy-term .group-img-wrapper .field-name-field-image-page-complexe:after,.page-taxonomy-term .group-img-wrapper .field-name-field-section-image:after,.page-taxonomy-term .group-img-wrapper picture.img-responsive:after{height:60%}
 .page-taxonomy-term .main-container h2.page-header:after{margin-top:-10px!important}
 }
 .page-taxonomy-term section.no-img-top h2.page-header{position:static;top:0;border:0;text-transform:uppercase;font-size:2.375em;font-weight:700;margin-top:10px;display:table;color:#000!important}
