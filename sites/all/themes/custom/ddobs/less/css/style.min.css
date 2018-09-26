@@ -2081,7 +2081,7 @@ strong{font-weight:700}
 .node-type-show .node-show.view-mode-full .distribution,.node-type-show .node-show.view-mode-full .field-name-field-coproduction,.node-type-show .node-show.view-mode-full .field-name-field-partenariats,.node-type-show .node-show.view-mode-full .field-name-field-production{margin-top:20px}
 .node-type-show .node-show.view-mode-full #group-wrapper-distribution .field-name-field-casting-link a{text-transform:uppercase;color:#000;text-decoration:none;display:block;padding-right:30px;font-style:normal;font-weight:800}
 .node-type-show .node-show.view-mode-full #group-wrapper-distribution .field-name-field-casting-link a:hover{color:#f74e2d}
-.node-type-show .node-show.view-mode-full #group-wrapper-distribution a.show-anchor-link{float:left;text-transform:uppercase;color:#000;text-decoration:none;display:block;padding:0 17px;font-style:normal;font-weight:800}
+.node-type-show .node-show.view-mode-full #group-wrapper-distribution a.show-anchor-link{float:left;text-transform:uppercase;color:#000;text-decoration:none;display:block;padding:0 16px;font-style:normal;font-weight:800}
 .node-type-show .node-show.view-mode-full #group-wrapper-distribution a.show-anchor-link:last-child{padding-right:0}
 .node-type-show .node-show.view-mode-full #group-wrapper-distribution a.show-anchor-link:hover{color:#f74e2d}
 .node-type-show .node-show.view-mode-full .field-name-field-from{border-top:1px solid #000;padding-top:20px}
