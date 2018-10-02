@@ -41,7 +41,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_affiche_essential|node|festival|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -74,7 +74,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_affiche_festival|node|festival|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -107,40 +107,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups[''] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
-  $field_group->identifier = 'group_casting|node|show|form';
-  $field_group->group_name = 'group_casting';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'show';
-  $field_group->mode = 'form';
-  $field_group->parent_name = '';
-  $field_group->data = array(
-    'label' => 'Distribution',
-    'weight' => '38',
-    'children' => array(
-      0 => 'field_back_to_top_link',
-      1 => 'field_casting_link',
-      2 => 'field_comments_link',
-      3 => 'field_photos_link',
-      4 => 'field_sound_link',
-      5 => 'field_video_link',
-    ),
-    'format_type' => 'tab',
-    'format_settings' => array(
-      'label' => 'Distribution',
-      'instance_settings' => array(
-        'required_fields' => 1,
-        'classes' => 'group-casting field-group-tab',
-        'description' => '',
-      ),
-      'formatter' => 'open',
-    ),
-  );
-  $field_groups[''] = $field_group;
+  $field_groups['group_black_bg|node|show|teaser'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -174,7 +141,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_date_title_desc|node|show|teaser'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -213,7 +180,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_essential_festival|node|festival|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -245,7 +212,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_img_wrapper|taxonomy_term|show_locations|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -283,7 +250,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_lieu|node|show|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -313,7 +280,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_psr|node|show|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -345,7 +312,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_shorts_links|node|show|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -381,7 +348,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_show_icons_bottom|node|show|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -416,74 +383,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups[''] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
-  $field_group->identifier = 'group_summary_dates|node|show|zoom';
-  $field_group->group_name = 'group_summary_dates';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'show';
-  $field_group->mode = 'zoom';
-  $field_group->parent_name = '';
-  $field_group->data = array(
-    'label' => 'Résumé et dates',
-    'weight' => '45',
-    'children' => array(
-      0 => 'body',
-      1 => 'field_show_dates',
-    ),
-    'format_type' => 'div',
-    'format_settings' => array(
-      'label' => 'Résumé et dates',
-      'instance_settings' => array(
-        'classes' => 'group-summary-dates field-group-div',
-        'description' => '',
-        'show_label' => '0',
-        'label_element' => 'h3',
-        'effect' => 'none',
-        'speed' => 'fast',
-        'id' => 'node_show_zoom_group_summary_dates',
-      ),
-      'formatter' => 'open',
-    ),
-  );
-  $field_groups[''] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
-  $field_group->identifier = 'group_td|node|show|frontpage_block';
-  $field_group->group_name = 'group_td';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'show';
-  $field_group->mode = 'frontpage_block';
-  $field_group->parent_name = '';
-  $field_group->data = array(
-    'label' => 'Titre et dates',
-    'weight' => '0',
-    'children' => array(
-      0 => 'field_festival',
-      1 => 'field_show_dates',
-      2 => 'title',
-    ),
-    'format_type' => 'div',
-    'format_settings' => array(
-      'label' => 'Titre et dates',
-      'instance_settings' => array(
-        'classes' => 'group-td field-group-div',
-        'description' => '',
-        'show_label' => '0',
-        'label_element' => 'h3',
-        'effect' => 'none',
-        'speed' => 'fast',
-        'id' => 'node_show_frontpage_block_group_td',
-      ),
-      'formatter' => 'open',
-    ),
-  );
-  $field_groups[''] = $field_group;
+  $field_groups['group_show_list|node|show|teaser'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -516,7 +416,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_technical_fiels|node|festival|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -550,7 +450,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_text_over_img_abs|node|show|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -582,7 +482,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_text_over_img|node|show|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -615,7 +515,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_text_video|node|festival|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -647,7 +547,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_tranparent_gradient|node|show|teaser'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -676,73 +576,7 @@ function domainedo_shows_field_group_info() {
       ),
     ),
   );
-  $field_groups[''] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
-  $field_group->identifier = 'group_vsrm|node|show|frontpage_block_mobile';
-  $field_group->group_name = 'group_vsrm';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'show';
-  $field_group->mode = 'frontpage_block_mobile';
-  $field_group->parent_name = '';
-  $field_group->data = array(
-    'label' => 'Vignette et statu réservation',
-    'weight' => '28',
-    'children' => array(
-      0 => 'field_thumbnail',
-      1 => 'field_reservation',
-    ),
-    'format_type' => 'div',
-    'format_settings' => array(
-      'label' => 'Vignette et statu réservation',
-      'instance_settings' => array(
-        'classes' => 'group-vsrm field-group-div',
-        'description' => '',
-        'show_label' => '0',
-        'label_element' => 'h3',
-        'effect' => 'none',
-        'speed' => 'none',
-        'id' => 'node_show_frontpage_block_mobile_group_vsrm',
-      ),
-      'formatter' => 'open',
-    ),
-  );
-  $field_groups[''] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
-  $field_group->identifier = 'group_vsr|node|show|frontpage_block';
-  $field_group->group_name = 'group_vsr';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'show';
-  $field_group->mode = 'frontpage_block';
-  $field_group->parent_name = '';
-  $field_group->data = array(
-    'label' => 'Vignette et statut réservation',
-    'weight' => '1',
-    'children' => array(
-      0 => 'field_reservation',
-      1 => 'field_thumbnail',
-    ),
-    'format_type' => 'div',
-    'format_settings' => array(
-      'label' => 'Vignette et statut réservation',
-      'instance_settings' => array(
-        'classes' => 'group-vsr field-group-div',
-        'description' => '',
-        'show_label' => '0',
-        'label_element' => 'h3',
-        'effect' => 'none',
-        'speed' => 'none',
-        'id' => 'node_show_frontpage_block_group_vsr',
-      ),
-      'formatter' => 'open',
-    ),
-  );
-  $field_groups[''] = $field_group;
+  $field_groups['group_ul_short_links|node|show|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -775,7 +609,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_wrap_book|node|show|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -807,7 +641,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_wrapper_distribution|node|show|full'] = $field_group;
 
   // Translatables
   // Included for use with string extractors like potx.
@@ -816,20 +650,15 @@ function domainedo_shows_field_group_info() {
   t('Contour réserver');
   t('Date titre description');
   t('Degradé transparent');
-  t('Distribution');
   t('Entoure image');
   t('Essentiel Festival');
   t('Group UL short links');
   t('Groupe short links');
   t('Liens et résultats');
   t('Photo et statut réservation');
-  t('Résumé et dates');
   t('Texte et Vidéo');
   t('Texte sur image absolute');
   t('Textes sur image fixe');
-  t('Titre et dates');
-  t('Vignette et statu réservation');
-  t('Vignette et statut réservation');
   t('affiche et essentiel');
   t('fond noir');
   t('group show');
