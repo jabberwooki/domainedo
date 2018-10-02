@@ -5191,6 +5191,52 @@ function domainedo_shows_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'taxonomy_term-show_locations-field_adrress_public'.
+  $field_instances['taxonomy_term-show_locations-field_adrress_public'] = array(
+    'bundle' => 'show_locations',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 7,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_adrress_public',
+    'label' => 'Adresse pour le public',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 10,
+    ),
+  );
+
+  // Exported field_instance:
   // 'taxonomy_term-show_locations-field_geolocalisation'.
   $field_instances['taxonomy_term-show_locations-field_geolocalisation'] = array(
     'bundle' => 'show_locations',
@@ -5571,6 +5617,7 @@ function domainedo_shows_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('A partir de');
+  t('Adresse pour le public');
   t('Affiche du festival');
   t('Artiste associé');
   t('Billetterie indisponible');

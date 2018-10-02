@@ -252,6 +252,7 @@ features[field_instance][] = node-structure-field_scald_video
 features[field_instance][] = node-structure-field_site_web
 features[field_instance][] = node-structure-field_structure_shows
 features[field_instance][] = node-structure-field_structure_type
+features[field_instance][] = taxonomy_term-show_locations-field_adrress_public
 features[field_instance][] = taxonomy_term-show_locations-field_geolocalisation
 features[field_instance][] = taxonomy_term-show_locations-field_ls_practical
 features[field_instance][] = taxonomy_term-show_locations-field_scald_gallery
