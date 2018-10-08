@@ -1,0 +1,476 @@
+<?php
+/**
+ * @file
+ * Code for the Mapado feature.
+ */
+
+include_once 'domainedo_mapado.features.inc';
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+
+function domainedo_mapado_form_show_node_form_alter(&$form, &$form_state, $form_id) {
+  // Vertical tab "Mapado" moved to bottom of existing vertical tabs.
+  $form['#groups']['group_mapado']->weight = 2000;
+  $form['field_mapado_apislug']['und'][0]['value']['#attributes']['readonly'] = 'readonly';
+}
+
+/**
+ * Implements hook_node_postinsert().
+ *
+ * Création du spectacle sur Mapado.
+ */
+function domainedo_mapado_node_postinsert($node) {
+  $is_watchdog_on = FALSE;
+  if ($node->type == 'show') {
+    if($is_watchdog_on) {watchdog('domainedo_mapado_post_action', "The inserted node {$node->type} id is {$node->nid} from " . __FUNCTION__);}
+
+    // Envoi d'une requête de création (POST) à Mapado.
+    // Tous les champs mapado utilisés ci-dessous sont nécessaires (d'après Dimitri) sinon erreur mapado.
+    // La doc de l'API mapado (https://api.mapado.net/v2/docs#tag/Activity) n'indique pourtant que 3 champs obligatoires.
+    $url = 'https://api.mapado.net/v2/activities.json?fields=title,description,imageList,formattedSchedule,place,apiSlug';
+    $request_result = domainedo_mapado_send_request_to_media_api($url, 'POST', $node);
+    if($is_watchdog_on) {watchdog('domainedo_mapado', "mapado insert response = {$request_result}");}
+
+    // Ensuite on récupère la valeur du champ mapado "apiSlug" et on met à jour le node.
+    // On va sauvegarder le node une seconde fois donc ça va déclencher le hook domainedo_mapado_node_postupdate() ci-dessous.
+    // Pour éviter de déclencher une requête de mise à jour vers Mapado, on ajoute un flag au node.
+    $result_data = json_decode($request_result);
+    $apiSlug = $result_data->apiSlug;
+    if($is_watchdog_on) {watchdog('domainedo_mapado', "apiSlug of the node {$node->title} created on Mapado {$node->nid} is : {$apiSlug}");}
+    $node->field_mapado_apislug['und'][0]['value'] = $apiSlug;
+    $node->field_boxoffice_url['und'][0]['url'] = 'https://domainedo.mapado.com/event/';
+    $node->flag = TRUE;
+    node_save($node);
+  }
+}
+
+/**
+ * Implements hook_node_postupdate().
+ *
+ * Modification du spectacle sur Mapado
+ */
+function domainedo_mapado_node_postupdate($node) {
+  $is_watchdog_on = FALSE;
+
+  if ($node->type == 'show') {
+    if($is_watchdog_on) {watchdog('domainedo_mapado', "The updated node {$node->type} id is {$node->nid} from " . __FUNCTION__);}
+
+    // SITUATION 1 : $node n'a pas de flag
+    // C'est un update normal, le spectacle existait déjà sur domainedo.
+    if (!isset($node->flag)) {
+      if($is_watchdog_on) {watchdog('domainedo_mapado', "pas de flag" . " (ligne " . __LINE__ . ")");}
+
+      // Attention, il y a 2 cas possibles :
+      // 1 - champ apiSlug vide -> le spectacle a été créé avant la mise en place de Mapado -> Il faut l'insérer dans Mapado.
+      // 2 - champ apiSlug renseigné -> le spectacle existe déjà sur Mapado -> il faut le mettre à jour sur Mapado aussi.
+
+      // Cas 1 - Le spectacle n'existe pas encore sur Mapado, il faut le créer.
+      if (!isset($node->field_mapado_apislug['und'][0]['value'])) {
+        if($is_watchdog_on) { watchdog('domainedo_mapado', "pas de slug");}
+
+        // Envoi d'une requête de création (POST) à Mapado.
+        // Tous les champs mapado utilisés ci-dessous sont nécessaires (d'après Dimitri) sinon erreur mapado.
+        // La doc de l'API mapado (https://api.mapado.net/v2/docs#tag/Activity) n'indique pourtant que 3 champs obligatoires.
+        $url = 'https://api.mapado.net/v2/activities.json?fields=title,description,imageList,formattedSchedule,place,apiSlug,urlList';
+        $request_result = domainedo_mapado_send_request_to_media_api($url, 'POST', $node);
+        if($is_watchdog_on) { watchdog('domainedo_mapado', "mapado insert response = {$request_result}");}
+
+        // Ensuite on récupère la valeur du champ mapado "apiSlug" et on met à jour le node.
+        //// On va sauvegarder le node une seconde fois donc ça va déclencher le hook domainedo_mapado_node_postupdate() ci-dessous.
+        // Pour éviter de déclencher une requête de mise à jour vers Mapado, on ajoute un flag au node.
+        $result_data = json_decode($request_result);
+        $apiSlug = $result_data->apiSlug;
+        if($is_watchdog_on) {watchdog('domainedo_mapado', "apiSlug of the node {$node->title} created on Mapado {$node->nid} is : {$apiSlug}");}
+        $node_wrapper = entity_metadata_wrapper('node', $node);
+        $node_wrapper->field_mapado_apislug->set($apiSlug);
+        $node->field_boxoffice_url['und'][0]['url'] = 'https://domainedo.mapado.com/event/';
+        $node->flag = TRUE;
+        $node_wrapper->save();
+      }
+      // Cas 2 - Le spectacle existe déjà sur Mapado, il faut le mettre à jour.
+      else {
+        if($is_watchdog_on) { watchdog('domainedo_mapado', "y a un slug");}
+
+        // Envoir d'une requête PATCH de mise à jour à Mapado.
+        $url = 'https://api.mapado.net/v2/activities/'
+          . $node->field_mapado_apislug['und'][0]['value'] . '.json?fields=title,description,imageList,formattedSchedule,apiSlug,urlList';
+        $request_result = domainedo_mapado_send_request_to_media_api($url, 'PATCH', $node);
+        if($is_watchdog_on) {watchdog('domainedo_mapado', "mapado update response = {$request_result}");}
+
+        if (!isset($node->field_boxoffice_url['und'][0]['url'])) {
+          $node_wrapper = entity_metadata_wrapper('node', $node);
+          $node->field_boxoffice_url['und'][0]['url'] = 'https://domainedo.mapado.com/event/';
+          $node->flag = TRUE;
+          $node_wrapper->save();
+        }
+      }
+    }
+    // SITUATION 2 : $node a un flag
+    // Le spectacle n'existait pas encore sur domainedo.
+    // C'est un update provoqué juste après la création du node à la fin de la fonction domainedo_mapado_node_postinsert() ci-dessus.
+    // servant à stocker la valeur du champ apiSlug de Mapado dans le champ field_mapado_apiSlug de Drupal.
+    // Il ne faut RIEN FAIRE sur Mapado.
+    else {
+      if($is_watchdog_on) { watchdog('domainedo_mapado', "y a un flag : on ne fait rien");}
+    }
+  }
+}
+
+/**
+ * Implements hook_node_postdelete().
+ *
+ * Suppression du spectacle sur Mapado
+ */
+function domainedo_mapado_node_postdelete($node) {
+  $is_watchdog_on = false;
+  if ($node->type == 'show') {
+    if($is_watchdog_on) {watchdog('domainedo_mapado', "The deleted node {$node->type} id is {$node->nid} from " . __FUNCTION__);}
+
+    // Envoi d'une requête de suppression à Mapado.
+    $url = 'https://api.mapado.net/v2/activities/' . $node->field_mapado_apislug['und'][0]['value'] .'.json?fields=trashStatus';
+    $request_result = domainedo_mapado_send_request_to_media_api($url, 'DELETE', $node);
+    if($is_watchdog_on) {watchdog('domainedo_mapado', "mapado delete response = {$request_result}");}
+  }
+}
+
+/**
+ * Récupère les données d'un node spectacle à envoyer à Mapado.
+ *
+ * @param $node
+ * @return array Tableau contenant les données à envoyer à Mapado.
+ *
+ * ----------------- Champs obligatoires ---------------------------------------
+ *
+ * DOMAINE D'O                                  MAPADO
+ * - title                                      - title
+ * - "/v2/activities/montpellier--domaine-do"   - place
+ * - descrption                                 - description
+ * - field_show_dates                           - formattedSchedule
+ *
+ * ----------------- Champs supplémentaires ------------------------------------
+ *
+ * DOMAINE D'O                                  MAPADO
+ * - field_show_type                            - ??? (Rubrique)
+ * - field_location                             - concaténé en tête du champ description.
+ * - field_scald_image                          - imageList
+ * - field_by                                   - ??? (Interprète)
+ * - field_festival                             - ???
+ */
+function domainedo_mapado_get_data_for_mapado($node) {
+  $show_data = array();
+  $is_watchdog_on = FALSE;
+
+  ////////////////////////////////////////////////////////
+  // RECUPERATION DES 4 CHAMPS OBLIGATOIRES CHEZ MAPADO //
+  ////////////////////////////////////////////////////////
+
+  // 1 - Nom de l'événement (title -> title)
+  $title = $node->title;
+  $show_data['title'] = $title;
+  if($is_watchdog_on) {
+    watchdog('domainedo_mapado', "Titre = {$title}");
+  }
+
+  // 2 - Ou se déroule l'événément (field_lieu_generique -> place)
+  // Toujours la même valeur : c'est l'apliSlug du lieu Domaine d'O sur Mapado
+  $place = '/v2/activities/montpellier--domaine-do';
+  $show_data['place'] = $place;
+  if($is_watchdog_on) {
+    watchdog('domainedo_mapado', "Place = {$place}");
+  }
+
+  // 3 - Description (body -> description)
+  $desc = $node->body['und'][0]['value'];
+  $show_data['description'] = strip_tags($desc);
+  if($is_watchdog_on) {
+    watchdog('domainedo_mapado', "Description = {$desc}");
+  }
+
+  // 4- Dates et horaires (field_show_dates -> formattedSchedule)
+  $dates_string = '';
+  foreach ($node->field_show_dates['und'] as $date) {
+    $viewed_date = field_view_value('node', $node, 'field_show_dates', $date);
+    $cleaned_date = strip_tags(render($viewed_date));
+    $dates_string .= $cleaned_date . '. ';
+    //$dates_string .= str_replace('T', ' à ', $date['value']) . '. ';
+  }
+  $show_data['formattedSchedule'] = $dates_string;
+  if($is_watchdog_on) {
+    watchdog('domainedo_mapado', "Dates = {$dates_string}");
+  }
+
+  /////////////////////////////////////////////////////////////////
+  // RECUPERATION DES AUTRES CHAMPS QU'IL EST POSSIBLE D'ENVOYER //
+  /////////////////////////////////////////////////////////////////
+
+  // Rubrique (field_show_type -> ???) - Il faudrait y stocker le type de spectacle (field_show_type)
+  $term = taxonomy_term_load($node->field_show_type['und'][0]['tid']);
+  $show_type = $term->name;
+  //$show_data['showType'] = $show_type;
+  if($is_watchdog_on) {
+    watchdog('domainedo_mapado', "Show type = {$show_type}");
+  }
+
+  // A quel endroit dans le domaine d'O ?
+  // Il faut le concaténer avec la description (field_location -> field_location + description).
+  $locations = array();
+  foreach ($node->field_location['und'] as $location) {
+    $term = taxonomy_term_load($location['tid']);
+    $locations[] = $term->name;
+  }
+  $locations_string = implode(', ', $locations);
+  $show_data['description'] =
+    'LIEU : ' . $locations_string . "." . "\n\n"
+    . $show_data['description'];
+  if($is_watchdog_on) {
+    watchdog('domainedo_mapado', "Locations = {$locations_string}");
+  }
+
+  // Medias (field_scald_image -> imageList)
+  if (isset($node->field_scald_image['und'][0]['sid'])) {
+    $atom = scald_atom_load($node->field_scald_image['und'][0]['sid']);
+    $image_url = file_create_url($atom->file_source);
+    // Si je teste depuis mon dev local, le serveur d'images Mapado ne pourra pas me voir.
+    // Donc je change pour l'url du serveur de recette qui, lui, sera accessible par Mapado.
+    // Contrainte pour les tests en local : il faut utiliser une image déjà présente sur la recette.
+    if ($_SERVER['HTTP_HOST'] == 'www.domainedo.localhost') {
+      $image_url = str_replace('www.domainedo.localhost', 'rece.domainedo.fr', $image_url);
+    }
+    $show_data['imageUrl'] = $image_url;
+    if ($is_watchdog_on) {
+      watchdog('domainedo_mapado', "Image url = {$image_url}");
+    }
+  }
+
+  // Interprète (field_by -> ???)
+  // $node->field_by['und'][0]['target_id']
+  $structure_titles = array();
+  foreach($node->field_by['und'] as $structure) {
+    $structure = node_load($structure['target_id']);
+    $structure_titles[] = $structure->title;
+  }
+  $structure_titles_string = implode(' / ', $structure_titles);
+  //$show_data['performer'] = $structure_titles_string;
+  if($is_watchdog_on) {
+    watchdog('domainedo_mapado', "Interprète: {$structure_titles_string}");
+  }
+
+  // Festival (field_festival -> ??? pas encore disponible).
+  if (isset($node->field_festival['und'][0]['target_id'])) {
+    $festival = node_load($node->field_festival['und'][0]['target_id']);
+    //$show_data['festival'] = $festival_title;
+    if ($is_watchdog_on) {
+      watchdog('domainedo_mapado', "Festival: {$festival->title}");
+    }
+  }
+
+  // Url de la fiche spectacle sur domaine d'O.
+  $official_url = $GLOBALS['base_url'] . '/' . drupal_get_path_alias("node/{$node->nid}");
+  if ($_SERVER['HTTP_HOST'] == 'www.domainedo.localhost') {
+    $official_url = str_replace('www.domainedo.localhost', 'rece.domainedo.fr', $official_url);
+  }
+  $show_data['urlList'] = array(
+    "official" => $official_url
+  );
+
+  return $show_data;
+}
+
+/**
+ * Envoie d'une requête à l'API media de Mapado.
+ *
+ * @param $url Url cible de la requête.
+ * @param string $method methode utilisée :
+ * Valeur du paramètre      Méthode HTTP
+ * - GET                    -GET
+ * - POST                   - POST
+ * - PATCH                  - PATCH
+ * - DELETE                 - PATCH
+ * @param $node Le node spectacle en cours de traitement (création, mise à jour ou suppressions).
+ * @return mixed Object JSON.
+ * En cas de succès, les valeurs des champs demandés dans l'url.
+ * En cas d'échec, l'erreur détaillée.
+ */
+function domainedo_mapado_send_request_to_media_api($url, $method='POST', $node) {
+  $is_watchdog_on = FALSE;
+
+  // 1 - ACTION EN LECTURE SEULE
+  if ($method == 'GET') {
+    $ch = curl_init($url);
+    $headers = array();
+    $headers[] = "Authorization: Bearer ZWZkYTFmZWJmNTJhNDM4Y2Y2MTc1ZGMzZDQ1MTg0Nzk1ZjNiYTk2ZDFhZTc5YzIxODZiMjQwNDg1YTM0ODgzYg";
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+    curl_setopt($ch,CURLOPT_RETURNTRANSFER, 1);
+    $result = curl_exec($ch);
+
+    if (curl_errno($ch)) {
+      if ($is_watchdog_on) {watchdog('domainedo_mapado', "Curl error: " . curl_error($ch));}
+    }
+    else {
+      $result_string = serialize($result);
+      if ($is_watchdog_on) {watchdog('domainedo_mapado', "Request result: {$result_string}");}
+      if ($is_watchdog_on) {watchdog('domainedo_mapado', "The node '{$node->title}' has been {$method}ED on Mapado.");}
+    }
+    curl_close ($ch);
+    return $result;
+  }
+
+  // 2 - ACTIONS D'ÉCRITURE
+  // 2.1 - Cas le plus simple : requête de suppression
+  if ($method == 'DELETE') {
+    $data = array('trashStatus' => 'trashed');
+  }
+  // 2.2 - Les 2 autres cas : création ou modification sur Mapado.
+  else {
+    $data = domainedo_mapado_get_data_for_mapado($node);
+    //watchdog('domainedo_mapado', "Description: {$data['description']}");
+
+    // 1 - Il faut d'abord poster l'image du spectacle (s'il y en a une) sur img.mapado.net et récupérer son imagePath.
+    if (isset($data['imageUrl'])) {
+      $ch = curl_init();
+      curl_setopt($ch, CURLOPT_URL, "https://www.mapado.com/image/upload/?width=160&height=100");
+      curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+      curl_setopt($ch, CURLOPT_POSTFIELDS, "url=" . $data['imageUrl']);
+      curl_setopt($ch, CURLOPT_POST, 1);
+      curl_setopt($ch, CURLOPT_ENCODING, 'gzip, deflate');
+
+      $headers = array();
+      $headers[] = "Origin: https://www.mapado.com";
+      $headers[] = "Content-Type: application/x-www-form-urlencoded";
+      $headers[] = "Accept: */*";
+      $headers[] = "Referer: https://www.mapado.com/create-activity";
+      $headers[] = "X-Requested-With: XMLHttpRequest";
+      $headers[] = "Connection: keep-alive";
+      curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+      $result = curl_exec($ch);
+      $imagePath = '';
+      if (curl_errno($ch)) {
+        //watchdog('domainedo_mapado', "Curl error: " . curl_error($ch));
+      }
+      else {
+        $decoded_result = json_decode($result);
+        $imagePath = $decoded_result->imagePath;
+      }
+      curl_close($ch);
+
+      // On ajoute imagePath aux données.
+      $data['imageList'] = array($imagePath);
+      //watchdog('domainedo_mapado', "imagePath: {$imagePath}");
+      // Puis on supprime "imageUrl" des données (ce champ est inconnu de l'API).
+      unset($data['imageUrl']);
+    }
+  }
+
+  // 2 - On peut maintenant envoyer la requête à Mapado.
+  $ch = curl_init($url);
+  curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+  $headers = array();
+  $headers[] = "Authorization: Bearer ZWZkYTFmZWJmNTJhNDM4Y2Y2MTc1ZGMzZDQ1MTg0Nzk1ZjNiYTk2ZDFhZTc5YzIxODZiMjQwNDg1YTM0ODgzYg";
+  $headers[] = "Content-Type: application/json";
+  curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+  if ($method == 'POST') {
+    curl_setopt($ch, CURLOPT_POST, 1);
+  }
+  elseif($method == 'PATCH' || $method == 'DELETE') {
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PATCH");
+  }
+
+  $result = curl_exec($ch);
+  if (curl_errno($ch)) {
+    //watchdog('domainedo_mapado', "Curl error: " . curl_error($ch));
+  }
+  else {
+    $result_string = serialize($result);
+    //watchdog('domainedo_mapado', "Request result: {$result_string}");
+    //watchdog('domainedo_mapado', "The node '{$node->title}' has been {$method}ED on Mapado.");
+  }
+  curl_close ($ch);
+  return $result;
+}
+
+function domainedo_mapado_send_request_to_ticketing_api($url) {
+  $is_watchdog_on = FALSE;
+
+  $ch = curl_init($url);
+  $headers = array();
+  $headers[] = "Authorization: Bearer ZWZkYTFmZWJmNTJhNDM4Y2Y2MTc1ZGMzZDQ1MTg0Nzk1ZjNiYTk2ZDFhZTc5YzIxODZiMjQwNDg1YTM0ODgzYg";
+  curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+  curl_setopt($ch,CURLOPT_RETURNTRANSFER, 1);
+  $result = curl_exec($ch);
+
+  if (curl_errno($ch)) {
+    if ($is_watchdog_on) {watchdog('domainedo_mapado', "Curl error: " . curl_error($ch));}
+  }
+  else {
+    $result_string = serialize($result);
+    if ($is_watchdog_on) {watchdog('domainedo_mapado', "Request result: {$result_string}");}
+  }
+  curl_close ($ch);
+  return $result;
+}
+
+/**
+ * Implements hook_node_view_alter().
+ */
+/**
+ * Implements hook_node_view().
+ */
+function domainedo_mapado_node_view($node, $view_mode, $langcode) {
+  if ($node->type = 'show') {
+    $is_on_sale = TRUE;
+
+    // Si le spectacle est connu sur mapado, on teste s'il a un ticketingId.
+    if (isset($node->field_mapado_apislug['und'][0]['value'])) {
+      $apiSlug = $node->field_mapado_apislug['und'][0]['value'];
+      $url = "https://api.mapado.net/v2/activities/". $apiSlug . ".json?fields=title,ticketingId";
+      $media_api_result = json_decode(domainedo_mapado_send_request_to_media_api($url, "GET", $node));
+
+      // S'il n'a pas de ticketingId, on cache le bouton RESERVER.
+      if (!$media_api_result->ticketingId) {
+        $is_on_sale = FALSE;
+      }
+      // S'il en a un, ça veut dire que la billetterie a été activée.
+      // Mais ça ne veut pas dire que le spectacle est en vente.
+      else {
+        $ticketingId = substr(strrchr($media_api_result->ticketingId, '/'), 1);
+        $url = 'https://ticketing.mapado.net/v1/ticketings?@id=' . $ticketingId . '&isOnSale=1&hasEventDateFuture=1&hasOpenedEventDate=1&fields=@id,slug,isOnSale,eventDateList,hasEventDateFuture,hasOpenedEventDate';
+
+        // Si l'API billetterie retourne un résultat, on peut réserver.
+        // NOTE : On est obligé de convertir l'object stdClass retourné par json_decode()
+        // en tableau PHP grâce à get_object_vars()
+        // parce qu'il n'est pas possible d'accéder à Object->hydra:member,
+        // le caractère ":" provoquant une faute de syntaxe.
+        if ($ticketing_api_result = get_object_vars(json_decode(domainedo_mapado_send_request_to_ticketing_api($url)))) {
+          // Attention, ça peut retourner un résultat alors qu'il n'y a pas de séance en vente
+          // ou que la vente a été suspendue.
+          if (isset ($ticketing_api_result['hydra:member'][0]->slug)) {
+            $ticketing_slug = $ticketing_api_result['hydra:member'][0]->slug;
+            $mapado_ticketing_url = "https://domainedo.mapado.com/event/$ticketing_slug";
+            $node->content['field_boxoffice_url'][0]['#element']['url'] = $mapado_ticketing_url;
+            $node->content['field_boxoffice_url'][0]['#element']['attributes']['class'] = '';
+          }
+          else {
+            $is_on_sale = FALSE;
+          }
+        }
+        // Sinon on cache le bouton RESERVER.
+        else {
+          $is_on_sale = FALSE;
+        }
+      }
+    }
+    // Si le spectacle n'est pas connu sur mapado, on cache le bouton RESERVER.
+    else {
+      $is_on_sale = FALSE;
+    }
+
+    if (!$is_on_sale) {
+      unset($node->content['field_boxoffice_url']);
+    }
+  }
+}
