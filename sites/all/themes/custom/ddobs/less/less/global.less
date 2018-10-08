@@ -24,6 +24,9 @@ body {
   }
 }
 .classic-style {
+  p {
+    font-size: 0.875em;
+  }
   h3 {
     /* Medium 28 */
     font-style: normal !important;
@@ -39,7 +42,7 @@ body {
     font-weight: 700 !important;
     font-size: 1.5em !important;
     margin-bottom: 12px;
-    margin-top: 15px;
+    margin-top: 25px;
   }
   h5 {
     /* bold 20 */
@@ -47,20 +50,21 @@ body {
     font-weight: 800 !important;
     font-size: 1.25em !important;
     margin-bottom: 10px;
-    margin-top: 15px;
+    margin-top: 25px;
   }
   h6 {
     /* Medium 16 */
     font-style: normal !important;
-    font-weight: 700 !important;
+    font-weight: 800 !important;
     font-size: 1em !important;
     margin-bottom: 8px;
-    margin-top: 15px;
+    margin-top: 25px;
     text-transform: uppercase;
   }
 }
 .link-body {
   a {
+    font-weight: bold;
     text-decoration: underline;
     color: @grenadine-ddo;
     &:visited {
@@ -849,12 +853,13 @@ footer.container {
     margin: 10px 0 20px 0;
     li {
       line-height: 1.5em;
+      font-size: 0.875em;
       &:before {
         .glyphicon();
-        content: "\e834";
+        content: "\f105";
         color: #000;;
         margin-right: 5px;
-        font-size: 0.8em;
+        top: 0;
       }
       h2,
       h3,
@@ -957,7 +962,7 @@ p.txt-intro {
   font-style: normal !important;
   font-weight: 700 !important;
   font-size: 1em !important;
-  line-height: 1.375em;
+  line-height: 22px !important;
 }
 p.txt-intro-grenadine {
   font-style: italic;
@@ -965,6 +970,7 @@ p.txt-intro-grenadine {
   font-size: 1.25em !important;
   line-height: 1.5em;
   color: @grenadine-ddo;
+  line-height: 22px !important;
 }
 .cartouche-noir {
   display: block;
