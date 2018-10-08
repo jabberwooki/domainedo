@@ -209,6 +209,11 @@ function domainedo_shows_ds_field_settings_info() {
         'ft' => array(),
       ),
     ),
+    'field_show_dates' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
   );
   $export['node|show|teaser'] = $ds_fieldsetting;
 
