@@ -780,6 +780,9 @@ footer.container {
           float: none;
           margin: 0 auto
         }
+        @media (min-width: @screen-md) and (max-width: @screen-lg){
+          margin-right: 20px;
+        }
       }
       ul#ul-social {
         a:before {
@@ -792,6 +795,16 @@ footer.container {
         @media (max-width: @screen-sm) {
           display: table;
           margin: 20px auto 0 auto;
+        }
+        @media (min-width: @screen-md) and (max-width: @screen-lg){
+          a:before {
+            font-size: 1.8em; /* 34/16 */
+            margin-right: 12px;
+          }
+          a.icon-gplus:before {
+            margin-right: 0px;
+            margin-left: 12px;
+          }
         }
       }
     }
