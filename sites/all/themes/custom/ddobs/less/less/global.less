@@ -507,7 +507,7 @@ header#navbar {
       text-decoration: none;
       top: 10px;
       left: -12px;
-      border: 1px solid white;
+      border: 1px solid transparent;
     }
   }
 }
@@ -521,11 +521,29 @@ header#navbar {
   float: left;
   &.close-menu-button {
     width: 27px;
-    &:before {
-      .glyphicon();
-      content: "\e832";
-      color: red;
-      font-size: 2em;
+    @media (min-width: @screen-sm) {
+      width: 55px;
+      height: 50px;
+      overflow: hidden;
+      float: left;
+      z-index: 9999;
+      background-color: white;
+      text-align: right;
+      padding-right: 10px;
+      text-decoration: none;
+      transform: rotate(45deg);
+      margin-left: -5px;
+      margin-top: 0px;
+      &:before {
+        content: "+";
+        color: @grenadine-ddo;
+        font-size: 4.0625em;
+        background-color: white;
+        text-decoration: none;
+        top: 10px;
+        left: -12px;
+        border: 1px solid transparent;
+      }
     }
     span {
       display: none;
@@ -706,14 +724,28 @@ form#search-block-form {
     &:hover {
       cursor: pointer;
     }
+    position: absolute;
+    top: -10px;
+    right: -70px;
+    width: 60px;
+    height: 50px;
+    overflow: hidden;
+    z-index: 9999;
+    background-color: transparent;
+    text-align: right;
+    padding-right: 10px;
+    text-decoration: none;
+    transform: rotate(45deg);
+    border: 0;
     &:before {
-      .glyphicon();
-      content: "\e832";
+      content: "+";
       color: @grenadine-ddo;
-      font-size: 1.875em; /*30/16*/
-      position: absolute;
-      top: 0;
-      right: -50px;
+      font-size: 4.0625em;
+      background-color: transparent;
+      text-decoration: none;
+      top: 10px;
+      left: -12px;
+      border: 1px solid transparent;
     }
   }
 }
