@@ -70,7 +70,7 @@ function domainedo_shows_ds_field_settings_info() {
           'ow-def-at' => FALSE,
           'fi' => TRUE,
           'fi-el' => 'div',
-          'fi-cl' => 'col-md-3',
+          'fi-cl' => 'col-md-4 col-lg-3',
           'fi-at' => '',
           'fi-def-at' => FALSE,
           'fi-odd-even' => FALSE,
