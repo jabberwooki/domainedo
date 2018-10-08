@@ -779,7 +779,7 @@ function news_views_default_views() {
   $handler->display->display_options['style_options']['columns_horizontal'] = '-1';
   $handler->display->display_options['style_options']['columns_vertical'] = '4';
   $handler->display->display_options['style_options']['columns_xs'] = '12';
-  $handler->display->display_options['style_options']['columns_sm'] = '12';
+  $handler->display->display_options['style_options']['columns_sm'] = '6';
   $handler->display->display_options['style_options']['columns_md'] = '6';
   $handler->display->display_options['style_options']['columns_lg'] = '6';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
