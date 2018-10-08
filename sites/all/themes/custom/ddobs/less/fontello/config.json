@@ -781,6 +781,12 @@
       "src": "elusive"
     },
     {
+      "uid": "7bf14281af5633a597f85b061ef1cfb9",
+      "css": "angle-right",
+      "code": 61701,
+      "src": "fontawesome"
+    },
+    {
       "uid": "63d1b79b9f75b8aeaa48c79b6184c536",
       "css": "crealead-bleu",
       "code": 59456,
