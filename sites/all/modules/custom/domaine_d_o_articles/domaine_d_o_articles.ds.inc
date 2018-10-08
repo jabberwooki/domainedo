@@ -205,7 +205,7 @@ function domaine_d_o_articles_ds_field_settings_info() {
           'ow-def-at' => FALSE,
           'fi' => TRUE,
           'fi-el' => 'div',
-          'fi-cl' => 'col-md-3 like-to-item',
+          'fi-cl' => 'col-md-4 col-lg-3 like-to-item',
           'fi-at' => '',
           'fi-def-at' => FALSE,
           'fi-odd-even' => FALSE,
