@@ -364,6 +364,12 @@ function domainedo_contexts_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'views-personnes-block_artistique' => array(
+          'module' => 'views',
+          'delta' => 'personnes-block_artistique',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
         'views-personnes-block_1' => array(
           'module' => 'views',
           'delta' => 'personnes-block_1',
@@ -381,12 +387,6 @@ function domainedo_contexts_context_default_contexts() {
           'delta' => 'personnes-block_3',
           'region' => 'content',
           'weight' => '-7',
-        ),
-        'views-personnes-block_artistique' => array(
-          'module' => 'views',
-          'delta' => 'personnes-block_artistique',
-          'region' => 'content',
-          'weight' => '-10',
         ),
       ),
     ),
