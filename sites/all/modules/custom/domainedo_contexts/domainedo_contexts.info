@@ -13,7 +13,6 @@ dependencies[] = ctools
 dependencies[] = domaine_d_o_page_complexe
 dependencies[] = domainedo_config
 dependencies[] = domainedo_shows
-dependencies[] = domainedo_ticketoffice
 dependencies[] = ds_extras
 dependencies[] = entityform_block
 dependencies[] = fe_block

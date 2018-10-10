@@ -73,7 +73,7 @@
             text-transform: uppercase;
             font-weight: bold;
             font-size: 1.25em; /*20/16*/
-            padding-bottom: 12px;
+            padding-bottom: 9px;
             display: block;
             font-style: normal;
             font-weight: 800;
@@ -191,7 +191,7 @@
             visibility: visible;
             width: 100%;
             @media (max-width: @screen-sm) {
-              bottom: 70px;
+              bottom: 0;
               height: 300px;
             }
           }
@@ -205,6 +205,7 @@
           bottom: 80px;
           @media (max-width: @screen-sm) {
             bottom: 20px;
+            font-size: 0.8em;
           }
           .field-name-field-festival {
             a {
@@ -661,7 +662,7 @@
       }
     }
 
-    @media (min-width: @screen-lg) {
+    @media (min-width: @screen-md) {
       background: url(../images/bg_all_shows.gif) 50% 0;
       margin: 0 auto;
       min-height: 330px;
