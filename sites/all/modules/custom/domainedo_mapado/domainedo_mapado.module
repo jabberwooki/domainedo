@@ -421,7 +421,7 @@ function domainedo_mapado_send_request_to_ticketing_api($url) {
  * Implements hook_node_view().
  */
 function domainedo_mapado_node_view($node, $view_mode, $langcode) {
-  if ($node->type = 'show') {
+  if ($node->type == 'show') {
     $is_on_sale = TRUE;
 
     // Si le spectacle est connu sur mapado, on teste s'il a un ticketingId.
