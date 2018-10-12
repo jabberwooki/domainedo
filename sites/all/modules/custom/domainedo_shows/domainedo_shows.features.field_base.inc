@@ -419,6 +419,7 @@ function domainedo_shows_field_default_field_bases() {
         'festival-hiver' => 'Festival d\'hiver',
         'nuit-gitane' => 'Nuit Gitane',
         'cine-metropole' => 'Ciné Métropole',
+        'cirque-metropole' => 'Cirque Métropole',
       ),
       'allowed_values_function' => '',
     ),
