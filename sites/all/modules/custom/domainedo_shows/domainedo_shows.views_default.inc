@@ -937,7 +937,7 @@ else {
   $handler->display->display_options['filters']['field_show_dates_value']['field'] = 'field_show_dates_value';
   $handler->display->display_options['filters']['field_show_dates_value']['operator'] = '>=';
   $handler->display->display_options['filters']['field_show_dates_value']['default_date'] = 'now';
-  /* Filter criterion: Nœud: Promu en info flash (field_promoted) */
+  /* Filter criterion: Nœud: Promu en page d&#039;accueil (field_promoted) */
   $handler->display->display_options['filters']['field_promoted_value']['id'] = 'field_promoted_value';
   $handler->display->display_options['filters']['field_promoted_value']['table'] = 'field_data_field_promoted';
   $handler->display->display_options['filters']['field_promoted_value']['field'] = 'field_promoted_value';
@@ -1461,6 +1461,7 @@ else {
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = 'text';
+  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
@@ -1472,6 +1473,7 @@ else {
   $handler->display->display_options['fields']['field_show_dates']['table'] = 'field_data_field_show_dates';
   $handler->display->display_options['fields']['field_show_dates']['field'] = 'field_show_dates';
   $handler->display->display_options['fields']['field_show_dates']['label'] = 'date';
+  $handler->display->display_options['fields']['field_show_dates']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['field_show_dates']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_show_dates']['settings'] = array(
     'format_type' => 'short',
@@ -1487,6 +1489,7 @@ else {
   $handler->display->display_options['fields']['field_location']['table'] = 'field_data_field_location';
   $handler->display->display_options['fields']['field_location']['field'] = 'field_location';
   $handler->display->display_options['fields']['field_location']['label'] = 'location';
+  $handler->display->display_options['fields']['field_location']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['field_location']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_location']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_location']['delta_offset'] = '0';
