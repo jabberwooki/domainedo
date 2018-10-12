@@ -18,17 +18,17 @@ function domainedo_shows_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
     'anchor_shows' => array(
-      'weight' => '13',
+      'weight' => '2',
       'label' => 'hidden',
       'format' => 'default',
     ),
     'link_shows' => array(
-      'weight' => '1',
+      'weight' => '3',
       'label' => 'hidden',
       'format' => 'default',
     ),
     'title' => array(
-      'weight' => '0',
+      'weight' => '2',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -36,6 +36,59 @@ function domainedo_shows_ds_field_settings_info() {
         'wrapper' => 'h2',
         'class' => '',
         'exclude node title settings' => '0',
+      ),
+    ),
+    'body' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'col-md-6',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_festival_shows' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb' => 'Les spectacles du festival',
+          'lb-el' => 'h3',
+          'lb-cl' => 'show-festival-title',
+          'lb-col' => TRUE,
+          'lbw' => 1,
+          'lbw-el' => 'div',
+          'lbw-cl' => 'col-md-12',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'row',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'col-md-4 col-lg-3',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
+        ),
+      ),
+    ),
+    'field_scald_video' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'col-md-6',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
       ),
     ),
   );
@@ -106,13 +159,73 @@ function domainedo_shows_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|show|liste_aussi';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'show';
+  $ds_fieldsetting->view_mode = 'liste_aussi';
+  $ds_fieldsetting->settings = array(
+    'title' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '1',
+        'wrapper' => 'h4',
+        'class' => '',
+        'exclude node title settings' => '1',
+      ),
+    ),
+  );
+  $export['node|show|liste_aussi'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|show|teaser';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'show';
+  $ds_fieldsetting->view_mode = 'teaser';
+  $ds_fieldsetting->settings = array(
+    'title' => array(
+      'weight' => '53',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '1',
+        'wrapper' => 'h3',
+        'class' => '',
+        'exclude node title settings' => '1',
+        'ft' => array(),
+      ),
+    ),
+    'node_link' => array(
+      'weight' => '4',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'link text' => 'Détails',
+        'link class' => '',
+        'wrapper' => '',
+        'class' => '',
+        'ft' => array(),
+      ),
+    ),
+    'field_show_dates' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
+  );
+  $export['node|show|teaser'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'taxonomy_term|show_locations|full';
   $ds_fieldsetting->entity_type = 'taxonomy_term';
   $ds_fieldsetting->bundle = 'show_locations';
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
     'ancre_geolocalisation' => array(
-      'weight' => '7',
+      'weight' => '6',
       'label' => 'hidden',
       'format' => 'default',
     ),
@@ -220,46 +333,52 @@ function domainedo_shows_ds_layout_settings_info() {
   $ds_layout->layout = 'ds_3col_stacked_fluid';
   $ds_layout->settings = array(
     'regions' => array(
-      'header' => array(
+      'headband_festival' => array(
         0 => 'title',
-      ),
-      'left' => array(
-        1 => 'link_shows',
-        2 => 'field_programme_pdf',
-        3 => 'field_feuilleter_en_ligne',
-        4 => 'field_calendar_archive',
-        5 => 'field_view_archives',
-        6 => 'field_facebook',
-        7 => 'body',
-        8 => 'field_scald_file',
-      ),
-      'right' => array(
-        9 => 'field_festival_poster',
+        2 => 'link_shows',
+        3 => 'field_programme_pdf',
+        6 => 'field_scald_file',
+        8 => 'field_feuilleter_en_ligne',
+        9 => 'field_calendar_archive',
+        10 => 'group_affiche_essential',
+        11 => 'field_view_archives',
+        12 => 'group_text_video',
+        13 => 'field_festival_poster',
+        14 => 'group_affiche_festival',
+        15 => 'field_date_en_clair',
+        16 => 'body',
+        17 => 'field_facebook',
+        18 => 'group_essential_festival',
+        19 => 'field_scald_video',
       ),
       'footer' => array(
-        10 => 'field_scald_video',
-        11 => 'field_scald_gallery',
-        12 => 'field_scald_sound',
-        13 => 'anchor_shows',
-        14 => 'field_festival_shows',
+        1 => 'anchor_shows',
+        4 => 'field_scald_gallery',
+        5 => 'field_scald_sound',
+        7 => 'field_festival_shows',
       ),
     ),
     'fields' => array(
-      'title' => 'header',
-      'link_shows' => 'left',
-      'field_programme_pdf' => 'left',
-      'field_feuilleter_en_ligne' => 'left',
-      'field_calendar_archive' => 'left',
-      'field_view_archives' => 'left',
-      'field_facebook' => 'left',
-      'body' => 'left',
-      'field_scald_file' => 'left',
-      'field_festival_poster' => 'right',
-      'field_scald_video' => 'footer',
+      'title' => 'headband_festival',
+      'anchor_shows' => 'footer',
+      'link_shows' => 'headband_festival',
+      'field_programme_pdf' => 'headband_festival',
       'field_scald_gallery' => 'footer',
       'field_scald_sound' => 'footer',
-      'anchor_shows' => 'footer',
+      'field_scald_file' => 'headband_festival',
       'field_festival_shows' => 'footer',
+      'field_feuilleter_en_ligne' => 'headband_festival',
+      'field_calendar_archive' => 'headband_festival',
+      'group_affiche_essential' => 'headband_festival',
+      'field_view_archives' => 'headband_festival',
+      'group_text_video' => 'headband_festival',
+      'field_festival_poster' => 'headband_festival',
+      'group_affiche_festival' => 'headband_festival',
+      'field_date_en_clair' => 'headband_festival',
+      'body' => 'headband_festival',
+      'field_facebook' => 'headband_festival',
+      'group_essential_festival' => 'headband_festival',
+      'field_scald_video' => 'headband_festival',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -392,121 +511,107 @@ function domainedo_shows_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'show';
   $ds_layout->view_mode = 'full';
-  $ds_layout->layout = 'ds_2col_stacked_fluid';
+  $ds_layout->layout = 'bootstrap_6_6_stacked';
   $ds_layout->settings = array(
     'regions' => array(
       'left' => array(
-        0 => 'title',
-        1 => 'field_subtitle',
-        2 => 'field_festival',
-        3 => 'field_proposed_by',
+        0 => 'group_wrapper_distribution',
+        1 => 'field_casting_link',
+        2 => 'field_proposed_by',
         4 => 'field_from',
         5 => 'field_by',
-        6 => 'field_casting_link',
-        7 => 'group_psr',
-        8 => 'body',
-        9 => 'field_scald_image',
+        7 => 'body',
+        9 => 'field_scald_video',
         10 => 'field_casting',
-        11 => 'field_reservation',
-        12 => 'field_production',
-        13 => 'field_coproduction',
-        14 => 'field_partenariats',
-        15 => 'field_scald_gallery',
-        16 => 'field_scald_video',
-        17 => 'field_scald_sound',
+        11 => 'field_production',
+        12 => 'field_coproduction',
+        13 => 'field_partenariats',
+        14 => 'field_scald_gallery',
+        15 => 'field_scald_sound',
+      ),
+      'image_full_show' => array(
+        3 => 'field_festival',
+        6 => 'title',
+        8 => 'field_subtitle',
+        26 => 'field_scald_image',
+        29 => 'group_text_over_img',
+        36 => 'group_text_over_img_abs',
       ),
       'right' => array(
-        18 => 'field_show_dates',
-        19 => 'group_lieu',
-        20 => 'field_entrance',
-        21 => 'field_duration',
-        22 => 'field_lieu_generique',
-        23 => 'field_location',
-        24 => 'field_minimum_age',
-        25 => 'field_price',
-        26 => 'field_restauration',
-        27 => 'field_additional_infos',
-        28 => 'field_coming_soon',
-        29 => 'field_boxoffice_url',
-        30 => 'field_full',
-        31 => 'field_reimbursement',
-        32 => 'group_ul_short_links',
-        33 => 'field_offline',
-        35 => 'group_shorts_links',
-        37 => 'group_show_icons_bottom',
-        38 => 'field_video_link',
-        39 => 'field_photos_link',
-        40 => 'field_sound_link',
-        41 => 'field_comments_link',
-        42 => 'field_back_to_top_link',
-        43 => 'partage',
-        44 => 'sharethis',
+        16 => 'group_wrap_book',
+        17 => 'field_full',
+        18 => 'field_reimbursement',
+        19 => 'field_offline',
+        20 => 'field_boxoffice_url',
+        21 => 'field_coming_soon',
+        22 => 'field_reservation',
+        23 => 'field_show_dates',
+        24 => 'group_lieu',
+        25 => 'field_additional_infos',
+        27 => 'field_price',
+        28 => 'field_lieu_generique',
+        30 => 'field_location',
+        31 => 'field_entrance',
+        32 => 'field_duration',
+        33 => 'field_minimum_age',
+        34 => 'field_restauration',
       ),
-      'footer' => array(
-        34 => 'comments',
-        36 => 'field_linked_shows',
+      'bottom' => array(
+        35 => 'field_linked_shows',
       ),
     ),
     'fields' => array(
-      'title' => 'left',
-      'field_subtitle' => 'left',
-      'field_festival' => 'left',
+      'group_wrapper_distribution' => 'left',
+      'field_casting_link' => 'left',
       'field_proposed_by' => 'left',
+      'field_festival' => 'image_full_show',
       'field_from' => 'left',
       'field_by' => 'left',
-      'field_casting_link' => 'left',
-      'group_psr' => 'left',
+      'title' => 'image_full_show',
       'body' => 'left',
-      'field_scald_image' => 'left',
+      'field_subtitle' => 'image_full_show',
+      'field_scald_video' => 'left',
       'field_casting' => 'left',
-      'field_reservation' => 'left',
       'field_production' => 'left',
       'field_coproduction' => 'left',
       'field_partenariats' => 'left',
       'field_scald_gallery' => 'left',
-      'field_scald_video' => 'left',
       'field_scald_sound' => 'left',
-      'field_show_dates' => 'right',
-      'group_lieu' => 'right',
-      'field_entrance' => 'right',
-      'field_duration' => 'right',
-      'field_lieu_generique' => 'right',
-      'field_location' => 'right',
-      'field_minimum_age' => 'right',
-      'field_price' => 'right',
-      'field_restauration' => 'right',
-      'field_additional_infos' => 'right',
-      'field_coming_soon' => 'right',
-      'field_boxoffice_url' => 'right',
+      'group_wrap_book' => 'right',
       'field_full' => 'right',
       'field_reimbursement' => 'right',
-      'group_ul_short_links' => 'right',
       'field_offline' => 'right',
-      'comments' => 'footer',
-      'group_shorts_links' => 'right',
-      'field_linked_shows' => 'footer',
-      'group_show_icons_bottom' => 'right',
-      'field_video_link' => 'right',
-      'field_photos_link' => 'right',
-      'field_sound_link' => 'right',
-      'field_comments_link' => 'right',
-      'field_back_to_top_link' => 'right',
-      'partage' => 'right',
-      'sharethis' => 'right',
+      'field_boxoffice_url' => 'right',
+      'field_coming_soon' => 'right',
+      'field_reservation' => 'right',
+      'field_show_dates' => 'right',
+      'group_lieu' => 'right',
+      'field_additional_infos' => 'right',
+      'field_scald_image' => 'image_full_show',
+      'field_price' => 'right',
+      'field_lieu_generique' => 'right',
+      'group_text_over_img' => 'image_full_show',
+      'field_location' => 'right',
+      'field_entrance' => 'right',
+      'field_duration' => 'right',
+      'field_minimum_age' => 'right',
+      'field_restauration' => 'right',
+      'field_linked_shows' => 'bottom',
+      'group_text_over_img_abs' => 'image_full_show',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'header' => 'div',
+      'top' => 'div',
       'left' => 'div',
       'right' => 'div',
-      'footer' => 'div',
+      'bottom' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
-    'layout_disable_css' => 0,
+    'layout_disable_css' => FALSE,
   );
   $export['node|show|full'] = $ds_layout;
 
@@ -588,6 +693,55 @@ function domainedo_shows_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['node|show|liste_aussi'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|show|teaser';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'show';
+  $ds_layout->view_mode = 'teaser';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'group_show_list',
+        1 => 'field_scald_image',
+        2 => 'field_festival',
+        3 => 'group_tranparent_gradient',
+        4 => 'node_link',
+        5 => 'field_boxoffice_url',
+        6 => 'group_black_bg',
+        7 => 'group_date_title_desc',
+        8 => 'field_show_dates',
+        9 => 'title',
+        10 => 'body',
+      ),
+    ),
+    'fields' => array(
+      'group_show_list' => 'ds_content',
+      'field_scald_image' => 'ds_content',
+      'field_festival' => 'ds_content',
+      'group_tranparent_gradient' => 'ds_content',
+      'node_link' => 'ds_content',
+      'field_boxoffice_url' => 'ds_content',
+      'group_black_bg' => 'ds_content',
+      'group_date_title_desc' => 'ds_content',
+      'field_show_dates' => 'ds_content',
+      'title' => 'ds_content',
+      'body' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
+  );
+  $export['node|show|teaser'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
@@ -680,24 +834,28 @@ function domainedo_shows_ds_layout_settings_info() {
         0 => 'field_ls_practical',
         1 => 'description',
         2 => 'field_seating',
-        3 => 'field_scald_image',
-        4 => 'field_scald_gallery',
-        5 => 'field_scald_video',
-        6 => 'field_scald_sound',
-        7 => 'ancre_geolocalisation',
-        8 => 'field_geolocalisation',
+        3 => 'field_scald_gallery',
+        4 => 'field_scald_video',
+        5 => 'field_scald_sound',
+        6 => 'ancre_geolocalisation',
+        7 => 'field_geolocalisation',
+      ),
+      'top_place_taxonomy' => array(
+        8 => 'group_img_wrapper',
+        9 => 'field_scald_image',
       ),
     ),
     'fields' => array(
       'field_ls_practical' => 'ds_content',
       'description' => 'ds_content',
       'field_seating' => 'ds_content',
-      'field_scald_image' => 'ds_content',
       'field_scald_gallery' => 'ds_content',
       'field_scald_video' => 'ds_content',
       'field_scald_sound' => 'ds_content',
       'ancre_geolocalisation' => 'ds_content',
       'field_geolocalisation' => 'ds_content',
+      'group_img_wrapper' => 'top_place_taxonomy',
+      'field_scald_image' => 'top_place_taxonomy',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -708,6 +866,7 @@ function domainedo_shows_ds_layout_settings_info() {
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
   );
   $export['taxonomy_term|show_locations|full'] = $ds_layout;
 

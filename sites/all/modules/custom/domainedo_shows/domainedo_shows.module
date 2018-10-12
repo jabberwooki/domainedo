@@ -6,12 +6,6 @@
 
 include_once 'domainedo_shows.features.inc';
 
-/**
- * Implements hook_init().
- */
-function domainedo_shows_init() {
-    drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_shows.js');
-}
 
 /**
  * Implements hook_form_FORM_ID_alter().
@@ -31,7 +25,10 @@ function domainedo_shows_node_view_alter(&$build) {
   $now = $now->format('Ymd'); 
   $show_is_past = false;
   
-	if ($build['#bundle'] == 'show') {		
+	if ($build['#bundle'] == 'show') {
+    if ($build['#view_mode'] == 'teaser') {
+      drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_date_show_list_festival.js');
+    }
 		// Processing of festival's name in List view mode.
 		if ($build['#view_mode'] == 'list' && isset($build['field_festival'][0]['#markup'])) {
 			$festival_infos = domainedo_shows_get_festival_infos($build['field_festival'][0]['#markup'], array('title'));
@@ -61,7 +58,9 @@ function domainedo_shows_node_view_alter(&$build) {
       
     }
 		if ($build['#view_mode'] == 'full') {
-			// Breadcrumb processing : if the show node is requested from a festival page,
+      drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_shows.js');
+      drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_date_show.js');
+      // Breadcrumb processing : if the show node is requested from a festival page,
 			// the breadcrumb link 'Tous les spectacles' must send user to the shows list
 			// filtered on the latest edition of the same festival.
 			$url_elements = explode('/', $_SERVER['HTTP_REFERER']);
@@ -534,10 +533,10 @@ function domainedo_shows_form_festival_node_form_alter(&$form, &$form_state, $fo
  * Implements hook_views_pre_render().
  */
 function domainedo_shows_views_pre_render(&$view) {
-	if ($view->name == 'shows' && $view->current_display == 'list') {
+	/*if ($view->name == 'shows' && $view->current_display == 'list') {
 		$block = module_invoke('views', 'block_view', '-exp-shows-list');
 		$view->header['area']->options['content'] = render($block['content']);
-	}
+	}*/
 	if ($view->name == 'shows' && $view->current_display == 'views_data_export_1') {
 		foreach ($view->result as &$value) {
 			$array = array();
@@ -545,8 +544,11 @@ function domainedo_shows_views_pre_render(&$view) {
 			if (isset($array[1])) $value->field_field_scald_image[0]['rendered']['#markup'] = $array[1];
 		}
 	}
-	/*dpm($view->name);
-	dpm($view->current_display);*/
+	if ($view->name == 'shows' && ($view->current_display == 'block_1' || $view->current_display == 'list')) {
+    drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_date_show_list.js');
+	}
+
+  /*dpm($view->current_display);*/
 }
 
 /**

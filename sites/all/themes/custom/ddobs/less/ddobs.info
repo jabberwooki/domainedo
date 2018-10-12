@@ -1,0 +1,74 @@
+name = 'DDOBOOTSTRAP'
+description = Uses the Bootstrap Framework Less source files and must be compiled (not for beginners).
+core = 7.x
+base theme = bootstrap
+php = 5.3.0
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Regions
+;;;;;;;;;;;;;;;;;;;;;
+
+regions[navigation]             = 'Navigation'
+regions[megamenu]               = 'Mega menu'
+regions[header]                 = 'Top Bar'
+regions[search_region]          = 'Search Region'
+regions[highlighted]            = 'Highlighted'
+regions[homenow]                = 'Home Now'
+regions[quickaccess]            = 'Quick Acces'
+regions[homeslideshow]          = 'Home Zoom Slide Show'
+regions[infoflash]              = 'Info Flash'
+regions[imagefullshow]          = 'Image Full Show'
+regions[headbandfestival]       = 'Headband Festival'
+regions[topclassicpage]         = 'Top Classiq Page'
+regions[help]                   = 'Help'
+regions[content]                = 'Content'
+regions[sidebar_first]          = 'Primary'
+regions[sidebar_second]         = 'Secondary'
+regions[footer]                 = 'Footer'
+regions[commodity_bottom_one]   = 'Commodity Bottom One'
+regions[commodity_bottom_two]   = 'Commodity Bottom Two'
+regions[page_top]               = 'Page top'
+regions[page_bottom]            = 'Page bottom'
+
+;; Breakpoints
+breakpoints[wide] = (min-width: 768px)
+breakpoints[mobile] = (min-width: 0px)
+
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Stylesheets
+;;;;;;;;;;;;;;;;;;;;;
+
+stylesheets[all][] = css/style.min.css
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Scripts
+;;;;;;;;;;;;;;;;;;;;;
+scripts[] = 'js/move_menu.js'
+scripts[] = 'js/manage_search_region.js'
+scripts[] = 'smartmenus/jquery.smartmenus.js'
+scripts[] = 'smartmenus/addons/bootstrap/jquery.smartmenus.bootstrap.js'
+scripts[] = 'js/manage_sm_top_margin.js'
+scripts[] = 'js/managePageTitleUnderline.js'
+
+
+scripts[] = 'bootstrap/js/affix.js'
+scripts[] = 'bootstrap/js/alert.js'
+scripts[] = 'bootstrap/js/button.js'
+scripts[] = 'bootstrap/js/carousel.js'
+scripts[] = 'bootstrap/js/collapse.js'
+scripts[] = 'bootstrap/js/dropdown.js'
+scripts[] = 'bootstrap/js/modal.js'
+scripts[] = 'bootstrap/js/tooltip.js'
+scripts[] = 'bootstrap/js/popover.js'
+scripts[] = 'bootstrap/js/scrollspy.js'
+scripts[] = 'bootstrap/js/tab.js'
+scripts[] = 'bootstrap/js/transition.js'
+
+
+
+; Disable the CDN provider so compiled source files can be used.
+settings[bootstrap_cdn] = ''

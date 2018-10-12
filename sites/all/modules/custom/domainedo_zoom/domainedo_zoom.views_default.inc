@@ -63,12 +63,28 @@ function domainedo_zoom_views_default_views() {
     'show' => 'show',
   );
 
-  /* Display: Zoom */
-  $handler = $view->new_display('block', 'Zoom', 'block');
+  /* Display: En ce moment */
+  $handler = $view->new_display('block', 'En ce moment', 'block_right_now');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'En ce moment';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'ds';
+  $handler->display->display_options['row_options']['view_mode'] = 'right_now';
+  $handler->display->display_options['row_options']['load_comments'] = 0;
+  $handler->display->display_options['row_options']['alternating'] = 0;
+  $handler->display->display_options['row_options']['grouping'] = 0;
+  $handler->display->display_options['row_options']['advanced'] = 0;
+  $handler->display->display_options['row_options']['delta_fieldset']['delta_fields'] = array();
+  $handler->display->display_options['row_options']['grouping_fieldset']['group_field'] = 'draggableviews_structure|weight';
+  $handler->display->display_options['row_options']['default_fieldset']['view_mode'] = 'right_now';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Draggableviews: Poids */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
@@ -169,7 +185,7 @@ function domainedo_zoom_views_default_views() {
     'link' => '0',
   );
   $handler->display->display_options['fields']['field_scald_image']['delta_offset'] = '0';
-  /* Field: Contenu: Description */
+  /* Field: Contenu: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -235,7 +251,7 @@ function domainedo_zoom_views_default_views() {
     t('Trier par'),
     t('Asc'),
     t('Desc'),
-    t('Zoom'),
+    t('En ce moment'),
     t('Page'),
     t('Zoom sur'),
   );

@@ -1,0 +1,212 @@
+.node-type-festival {
+  #headband-festival {
+    .container {
+      @media (max-width: @screen-sm) {
+        padding-left: 0;
+        padding-right: 0;
+        .group-affiche-essential {
+          margin-left: -15px;
+          margin-right: -15px;
+        }
+      }
+    }
+    background: url(../images/bg_gray.gif);
+    padding-bottom: 20px;
+
+    .group-affiche-festival {
+      @media (max-width: @screen-sm) {
+        border-bottom: 1px solid @grenadine-ddo;
+        padding-right: 0 !important;
+      }
+      @media (min-width: @screen-sm) {
+        padding-left: 0 !important;
+      }
+      position: relative;
+      img {
+        margin-bottom: 50px;
+        @media (max-width: @screen-sm) {
+          margin-bottom: 0;
+        }
+      }
+      .field-name-field-festival-poster {
+        &:after {
+          content: "";
+          width: 98%;
+          height: 150px;
+          position: absolute;
+          bottom: 50px;
+          @media (max-width: @screen-md) {
+            bottom: 0px;
+          }
+          @media (max-width: @screen-sm) {
+            height: 30% !important;
+          }
+          left: 0px;
+          background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000);
+          @media (max-width: @screen-sm) {
+            width: 100%;
+            height: 150px;
+            position: absolute;
+            bottom: 0px;
+            left: 16px;
+          }
+        }
+      }
+
+      .field-name-scald-authors {
+        display: none;
+      }
+      .field-name-field-date-en-clair {
+        position: absolute;
+        bottom: 80px;
+        left: 35px;
+        color: white;
+        text-transform: uppercase;
+        font-size: 2.375em; /* 38/16 */
+        font-style: normal;
+        font-weight: 900;
+        .underline-grenadine-off();
+        &:after {
+          margin-top: -15px;
+          border: 8px solid @grenadine-off-ddo;
+        }
+        @media (max-width: @screen-sm) {
+          bottom: 20px;
+          font-size: 1.8em;
+          padding-left: 15px;
+        }
+      }
+    }
+    .group-essential-festival {
+      background-color: @grenadine-ddo;
+      color: white;
+      padding: 25px 30px;
+      @media (max-width: @screen-sm) {
+        padding-left: 50px;
+      }
+      h2 {
+        font-size: 1.875em; /* 30/16 */
+        text-transform: uppercase;
+        margin: 0 25px 0 0;
+        font-style: normal;
+        font-weight: 900;
+        margin-bottom: 30px;
+      }
+      a {
+        color: white;
+        font-size: 0.688em; /* 11/16 */
+        text-transform: uppercase;
+        font-style: normal;
+        font-weight: 700;
+        display: block;
+        border-bottom: 1px solid white;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+        text-decoration: none;
+        &:before {
+          .glyphicon();
+          color: white;
+          font-size: 2em;
+        }
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+      .field-name-link-shows {
+        a:before {
+          content: "\f291";
+        }
+      }
+      .field-name-field-programme-pdf {
+        a:before {
+          content: "\e823";
+        }
+      }
+      .field-name-field-feuilleter-en-ligne {
+        a:before {
+          content: "\e82f";
+        }
+      }
+      .field-name-field-calendar-archive {
+        a:before {
+          content: "\e807";
+        }
+      }
+      .field-name-field-view-archives {
+        a:before {
+          content: "\f0ae";
+        }
+      }
+      .field-name-field-facebook {
+        a:before {
+          content: "\e801";
+        }
+      }
+      img {
+        display: none;
+      }
+    }
+
+  }
+  .group-text-video {
+    iframe {
+      width: 100%;
+      height: 320px;
+    }
+    @media (max-width: @screen-sm) {
+      > div > p,
+      > div > div,
+      iframe {
+        padding: 0 15px;
+      }
+    }
+    @media (max-width: @screen-sm) {
+      padding-top: 20px;
+      background-color: @gris-clair-ddo;
+    }
+  }
+  h3.show-festival-title {
+    font-size: 1.5em; /* 24/16 */
+    margin: 20px 0;
+    font-style: normal;
+    font-weight: 600;
+    @media (max-width: @screen-sm) {
+      text-align: center;
+    }
+  }
+  .node-show {
+    .group-show-list {
+      .little-move();
+      .field-name-field-festival {
+        display: none;
+      }
+      .group-black-bg {
+        height: 13%;
+
+        .field-name-node-link a {
+          font-size: 0.825em;
+        }
+        .field-name-field-boxoffice-url {
+          right: 10%;
+          @media (max-width: @screen-sm) {
+            right: 6%;
+          }
+          a {
+            font-size: 0.825em;
+            font-style: normal;
+            font-weight: 800;
+          }
+        }
+
+      }
+    }
+  }
+  .pagination {
+    .next,
+    .prev,
+    .pager-first,
+    .pager-last {
+      display: none;
+    }
+  }
+}

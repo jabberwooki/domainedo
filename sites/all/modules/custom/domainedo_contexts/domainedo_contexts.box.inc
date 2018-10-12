@@ -31,7 +31,7 @@ function domainedo_contexts_default_box() {
   $box->api_version = 1;
   $box->delta = 'logos_bottom';
   $box->plugin_key = 'simple';
-  $box->title = '<none>';
+  $box->title = '';
   $box->description = 'logos et adresse de bas de page';
   $box->options = array(
     'body' => array(
@@ -47,7 +47,8 @@ Tél. : 0800 200 165 - appel gratuit depuis un poste fixe</p>
 <div id="partner-bottom">
 <p><a href="http://www.montpellier3m.fr" style="font-size: 13px; line-height: 1.6;" target="_blank"><img alt="Montpellier 3M" id="img-logo-mmm-bottom" src="/sites/default/files/images/partenaires/logo-mmm.jpg" class="logo-mmm-bottom" /></a><span style="font-size:13px">&nbsp;</span></p>
 </div>
-</div>',
+</div>
+',
       'format' => 'full_html',
     ),
     'additional_classes' => '',
@@ -59,14 +60,13 @@ Tél. : 0800 200 165 - appel gratuit depuis un poste fixe</p>
   $box->api_version = 1;
   $box->delta = 'logos_top';
   $box->plugin_key = 'simple';
-  $box->title = '<none>';
+  $box->title = '';
   $box->description = 'Les logos de haut de page';
   $box->options = array(
     'body' => array(
       'value' => '<div id="logos-top">
-<h1><a href="/."><img alt="domaine d\'O" id="logo-domainedo-top" src="/sites/all/themes/custom/domainedo/images/logos/logo-domaine-do.gif" /></a><br />
-<span style="color:#757575">domaine départemental d\'art et de culture</span></h1>
-<!--<a href="http://www.herault.fr/" target="_blank"><img alt="Département de l\'Hérault" id="cg-top" src="/sites/all/themes/custom/domainedo/images/logos/cg34.gif" /></a> --></div>
+<h1><a href="/."><img alt="domaine d\'O" id="logo-domainedo-top" src="/sites/default/files/images/domaine-d-o.png"  /></a> <span style="position:absolute;width:1px;height:1px;top:-1000em;overflow:hidden;">Domaine d\'art et de culture</span></h1>
+</div>
 ',
       'format' => 'full_html',
     ),

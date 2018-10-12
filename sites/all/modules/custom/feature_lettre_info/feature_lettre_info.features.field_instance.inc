@@ -10,7 +10,7 @@
 function feature_lettre_info_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-lettre_info-body'
+  // Exported field_instance: 'node-lettre_info-body'.
   $field_instances['node-lettre_info-body'] = array(
     'bundle' => 'lettre_info',
     'default_value' => NULL,
@@ -59,7 +59,7 @@ function feature_lettre_info_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-lettre_info-field_date_envoi'
+  // Exported field_instance: 'node-lettre_info-field_date_envoi'.
   $field_instances['node-lettre_info-field_date_envoi'] = array(
     'bundle' => 'lettre_info',
     'deleted' => 0,
@@ -113,7 +113,7 @@ function feature_lettre_info_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-lettre_info-field_scald_image'
+  // Exported field_instance: 'node-lettre_info-field_scald_image'.
   $field_instances['node-lettre_info-field_scald_image'] = array(
     'bundle' => 'lettre_info',
     'default_value' => NULL,
@@ -163,7 +163,7 @@ function feature_lettre_info_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-lettre_info-field_url_mailchimp'
+  // Exported field_instance: 'node-lettre_info-field_url_mailchimp'.
   $field_instances['node-lettre_info-field_url_mailchimp'] = array(
     'bundle' => 'lettre_info',
     'default_value' => NULL,
