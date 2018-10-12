@@ -172,6 +172,7 @@ function domainedo_shows_get_festivals() {
 			'festival-hiver' => array('title' => 'Festival d\'hiver', 'weight' => 17, 'url' => 'spectacles/festival-dhiver'),
       'nuit-gitane' => array('title' => 'Nuit Gitane', 'weight' => 18, 'url' => 'spectacles/nuit-gitane'),
       'cine-metropole' => array('title' => 'Ciné Métropole', 'weight' => 19, 'url' => 'spectacles/cine-metropole'),
+      'cirque-metropole' => array('title' => 'Cirque Métropole', 'weight' => 20, 'url' => 'spectacles/cirque-metropole'),
 	);
 	
 	return $festivals;
