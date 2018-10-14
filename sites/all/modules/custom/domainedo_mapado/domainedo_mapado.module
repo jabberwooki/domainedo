@@ -434,31 +434,47 @@ function domainedo_mapado_node_view($node, $view_mode, $langcode) {
       if (!$media_api_result->ticketingId) {
         $is_on_sale = FALSE;
       }
+
       // S'il en a un, ça veut dire que la billetterie a été activée.
       // Mais ça ne veut pas dire que le spectacle est en vente.
+      // On cherche plus avant.
       else {
+        // INTERROGATION DE L'API BILLETTERIE
         $ticketingId = substr(strrchr($media_api_result->ticketingId, '/'), 1);
-        $url = 'https://ticketing.mapado.net/v1/ticketings?@id=' . $ticketingId . '&isOnSale=1&hasEventDateFuture=1&hasOpenedEventDate=1&fields=@id,slug,isOnSale,eventDateList,hasEventDateFuture,hasOpenedEventDate';
+        $url = 'https://ticketing.mapado.net/v1/ticketings?@id=' . $ticketingId . '&isOnSale=1&fields=@id,slug,isOnSale,availableStatus,sellingDeviceData{hasTicketPriceOnSale,sellingDevice{name}}';
+        $result = domainedo_mapado_send_request_to_ticketing_api($url);
 
-        // Si l'API billetterie retourne un résultat, on peut réserver.
-        // NOTE : On est obligé de convertir l'object stdClass retourné par json_decode()
-        // en tableau PHP grâce à get_object_vars()
-        // parce qu'il n'est pas possible d'accéder à Object->hydra:member,
-        // le caractère ":" provoquant une faute de syntaxe.
-        if ($ticketing_api_result = get_object_vars(json_decode(domainedo_mapado_send_request_to_ticketing_api($url)))) {
-          // Attention, ça peut retourner un résultat alors qu'il n'y a pas de séance en vente
-          // ou que la vente a été suspendue.
+        if ($ticketing_api_result = get_object_vars(json_decode($result))) {
+          // Si l'API billetterie retourne un résultat, il faut vérifier plus en détail encore
+          // NOTE : On est obligé de convertir l'object stdClass retourné par json_decode() en tableau PHP grâce à get_object_vars()
+          // parce qu'il n'est pas possible d'accéder à Object->hydra:member, le caractère ":" provoquant une faute de syntaxe.
           if (isset ($ticketing_api_result['hydra:member'][0]->slug)) {
-            $ticketing_slug = $ticketing_api_result['hydra:member'][0]->slug;
-            $mapado_ticketing_url = "https://domainedo.mapado.com/event/$ticketing_slug";
-            $node->content['field_boxoffice_url'][0]['#element']['url'] = $mapado_ticketing_url;
-            $node->content['field_boxoffice_url'][0]['#element']['attributes']['class'] = '';
+
+            // Il faut vérifier s'il y a au moins une séance avec tarif en vente sur le canal site web du domainedo.
+            foreach ($ticketing_api_result['hydra:member'][0]->sellingDeviceData as $item) {
+              if ($item->sellingDevice->name == 'domainedo') {
+                $has_price = $item->hasTicketPriceOnSale;
+              }
+            }
+
+            // S'il y a un tarif, alors c'est bon, on peut laisser l'affichage du bouton RESERVER
+            if($has_price) {
+              $ticketing_slug = $ticketing_api_result['hydra:member'][0]->slug;
+              $mapado_ticketing_url = "https://domainedo.mapado.com/event/$ticketing_slug";
+              $node->content['field_boxoffice_url'][0]['#element']['url'] = $mapado_ticketing_url;
+              $node->content['field_boxoffice_url'][0]['#element']['attributes']['class'] = '';
+            }
+            // S'il n'a pas de tarif en vente, on cache le bouton RESERVER.
+            else {
+              $is_on_sale = FALSE;
+            }
           }
+          // Si l'API billetterie retourne un résultat, mais qu'il n'y a même pas de slug, on cache le bouton RESERVER.
           else {
             $is_on_sale = FALSE;
           }
         }
-        // Sinon on cache le bouton RESERVER.
+        // Si l'API billetterie ne retourne pas de résultat, on cache le bouton RESERVER.
         else {
           $is_on_sale = FALSE;
         }
