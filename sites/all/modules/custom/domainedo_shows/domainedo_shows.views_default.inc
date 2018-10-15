@@ -945,9 +945,7 @@ else {
   $handler->display->display_options['filters']['field_show_dates_value']['field'] = 'field_show_dates_value';
   $handler->display->display_options['filters']['field_show_dates_value']['operator'] = '>=';
   $handler->display->display_options['filters']['field_show_dates_value']['default_date'] = 'now';
-
-  /* Filter criterion: Nœud: Promu en page d&#039;accueil (field_promoted) */
-
+  /* Filter criterion: Contenu: Promu en page d&#039;accueil (field_promoted) */
   $handler->display->display_options['filters']['field_promoted_value']['id'] = 'field_promoted_value';
   $handler->display->display_options['filters']['field_promoted_value']['table'] = 'field_data_field_promoted';
   $handler->display->display_options['filters']['field_promoted_value']['field'] = 'field_promoted_value';
@@ -1237,12 +1235,17 @@ else {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Accès rapide';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
-  $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'Voir tous les spectacles';
+  $handler->display->display_options['defaults']['group_by'] = FALSE;
+  $handler->display->display_options['group_by'] = TRUE;
+  $handler->display->display_options['defaults']['query'] = FALSE;
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['distinct'] = TRUE;
+  $handler->display->display_options['query']['options']['pure_distinct'] = TRUE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '0';
@@ -1262,73 +1265,16 @@ else {
   $handler->display->display_options['footer']['area']['content'] = '<a id="home-calendar-link" href="calendar">Le Calendrier</a>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = 'name';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Content: Path */
-  $handler->display->display_options['fields']['path']['id'] = 'path';
-  $handler->display->display_options['fields']['path']['table'] = 'node';
-  $handler->display->display_options['fields']['path']['field'] = 'path';
-  $handler->display->display_options['fields']['path']['label'] = 'url';
-  $handler->display->display_options['fields']['path']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['path']['alter']['text'] = 'http://www.domainedo.fr[path]';
-  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
-  /* Field: Nœud: Body */
-  $handler->display->display_options['fields']['body']['id'] = 'body';
-  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
-  $handler->display->display_options['fields']['body']['field'] = 'body';
-  $handler->display->display_options['fields']['body']['label'] = 'text';
-  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
-  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['body']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
-  $handler->display->display_options['fields']['body']['settings'] = array(
-    'trim_length' => '300',
+  /* Field: Contenu: Festival */
+  $handler->display->display_options['fields']['field_festival']['id'] = 'field_festival';
+  $handler->display->display_options['fields']['field_festival']['table'] = 'field_data_field_festival';
+  $handler->display->display_options['fields']['field_festival']['field'] = 'field_festival';
+  $handler->display->display_options['fields']['field_festival']['label'] = '';
+  $handler->display->display_options['fields']['field_festival']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_festival']['settings'] = array(
+    'bypass_access' => 0,
+    'link' => 1,
   );
-  /* Field: Nœud: Date(s) */
-  $handler->display->display_options['fields']['field_show_dates']['id'] = 'field_show_dates';
-  $handler->display->display_options['fields']['field_show_dates']['table'] = 'field_data_field_show_dates';
-  $handler->display->display_options['fields']['field_show_dates']['field'] = 'field_show_dates';
-  $handler->display->display_options['fields']['field_show_dates']['label'] = 'date';
-  $handler->display->display_options['fields']['field_show_dates']['alter']['strip_tags'] = TRUE;
-  $handler->display->display_options['fields']['field_show_dates']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_show_dates']['settings'] = array(
-    'format_type' => 'short',
-    'fromto' => 'both',
-    'multiple_number' => '',
-    'multiple_from' => '',
-    'multiple_to' => '',
-    'show_remaining_days' => 0,
-  );
-  $handler->display->display_options['fields']['field_show_dates']['delta_offset'] = '0';
-  /* Field: Nœud: Lieu */
-  $handler->display->display_options['fields']['field_location']['id'] = 'field_location';
-  $handler->display->display_options['fields']['field_location']['table'] = 'field_data_field_location';
-  $handler->display->display_options['fields']['field_location']['field'] = 'field_location';
-  $handler->display->display_options['fields']['field_location']['label'] = 'location';
-  $handler->display->display_options['fields']['field_location']['alter']['strip_tags'] = TRUE;
-  $handler->display->display_options['fields']['field_location']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_location']['type'] = 'taxonomy_term_reference_plain';
-  $handler->display->display_options['fields']['field_location']['delta_offset'] = '0';
-  /* Field: Field: Image */
-  $handler->display->display_options['fields']['field_scald_image']['id'] = 'field_scald_image';
-  $handler->display->display_options['fields']['field_scald_image']['table'] = 'field_data_field_scald_image';
-  $handler->display->display_options['fields']['field_scald_image']['field'] = 'field_scald_image';
-  $handler->display->display_options['fields']['field_scald_image']['label'] = 'image';
-  $handler->display->display_options['fields']['field_scald_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_scald_image']['click_sort_column'] = 'sid';
-  $handler->display->display_options['fields']['field_scald_image']['type'] = 'full_show';
-  $handler->display->display_options['fields']['field_scald_image']['settings'] = array(
-    'link' => '0',
-  );
-  $handler->display->display_options['fields']['field_scald_image']['group_column'] = 'entity_id';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Contenu: Published */
@@ -1351,13 +1297,6 @@ else {
   $handler->display->display_options['filters']['field_show_dates_value']['field'] = 'field_show_dates_value';
   $handler->display->display_options['filters']['field_show_dates_value']['operator'] = '>=';
   $handler->display->display_options['filters']['field_show_dates_value']['default_date'] = 'now';
-  /* Filter criterion: Contenu: Promu en page d&#039;accueil (field_promoted) */
-  $handler->display->display_options['filters']['field_promoted_value']['id'] = 'field_promoted_value';
-  $handler->display->display_options['filters']['field_promoted_value']['table'] = 'field_data_field_promoted';
-  $handler->display->display_options['filters']['field_promoted_value']['field'] = 'field_promoted_value';
-  $handler->display->display_options['filters']['field_promoted_value']['value'] = array(
-    1 => '1',
-  );
   $translatables['shows'] = array(
     t('Master'),
     t('plus'),
