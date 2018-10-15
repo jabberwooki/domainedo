@@ -5,6 +5,8 @@ jQuery(function($) {
     from_year_date,
     to_year_date,
     msg_date,
+    from_month,
+    to_month,
     url_show;
 
   $(".group-date-title-desc").each(function(){
@@ -20,9 +22,12 @@ jQuery(function($) {
       from_date = new Date(from_date);
       to_date = new Date(to_date);
 
+      from_month = parseInt(from_date.getMonth()) + 1;
+      to_month = parseInt(to_date.getMonth()) + 1;
+
       msg_date =
-        customGetDate(from_date) + "/" + from_date.getMonth() + "/" + from_year_date +
-        " > " + to_date.getDate() + "/" + to_date.getMonth() + "/" + to_year_date;
+        customGetDate(from_date) + "/" + from_month + "/" + from_year_date +
+        " > " + to_date.getDate() + "/" + to_month + "/" + to_year_date;
 
       $(".field-name-field-show-dates", $(this)).html("");
 
