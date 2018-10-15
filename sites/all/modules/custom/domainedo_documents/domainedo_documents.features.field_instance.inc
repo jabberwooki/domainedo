@@ -433,7 +433,7 @@ function domainedo_documents_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'domainedo_media',
         'settings' => array(),
-        'type' => 'large_480x296_crop',
+        'type' => 'festival',
         'weight' => 3,
       ),
     ),
@@ -990,6 +990,13 @@ function domainedo_documents_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 0,
       ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
       'list' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -999,8 +1006,11 @@ function domainedo_documents_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'trim_length' => 200,
+        ),
+        'type' => 'text_summary_or_trimmed',
         'weight' => 1,
       ),
     ),
@@ -1043,6 +1053,12 @@ function domainedo_documents_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 22,
       ),
+      'full' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 22,
+      ),
       'list' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1053,7 +1069,7 @@ function domainedo_documents_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 20,
       ),
     ),
     'entity_type' => 'node',
@@ -1092,6 +1108,12 @@ function domainedo_documents_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 19,
       ),
+      'full' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 20,
+      ),
       'list' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1102,7 +1124,7 @@ function domainedo_documents_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 19,
       ),
     ),
     'entity_type' => 'node',
@@ -1141,6 +1163,19 @@ function domainedo_documents_field_default_field_instances() {
         'type' => 'field_collection_view',
         'weight' => 3,
       ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => 'Ajouter',
+          'delete' => 'Supprimer',
+          'description' => 1,
+          'edit' => 'Modifier',
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_view',
+        'weight' => 4,
+      ),
       'list' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1151,7 +1186,7 @@ function domainedo_documents_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 14,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -1191,6 +1226,19 @@ function domainedo_documents_field_default_field_instances() {
         'type' => 'field_collection_view',
         'weight' => 4,
       ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => 'Ajouter',
+          'delete' => 'Supprimer',
+          'description' => TRUE,
+          'edit' => 'Modifier',
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_view',
+        'weight' => 4,
+      ),
       'list' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1201,7 +1249,7 @@ function domainedo_documents_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 16,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -1241,6 +1289,19 @@ function domainedo_documents_field_default_field_instances() {
         'type' => 'field_collection_view',
         'weight' => 5,
       ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => 'Ajouter',
+          'delete' => 'Supprimer',
+          'description' => TRUE,
+          'edit' => 'Modifier',
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_view',
+        'weight' => 33,
+      ),
       'list' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1251,7 +1312,7 @@ function domainedo_documents_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 13,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -1291,6 +1352,19 @@ function domainedo_documents_field_default_field_instances() {
         'type' => 'field_collection_view',
         'weight' => 5,
       ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => 'Ajouter',
+          'delete' => 'Supprimer',
+          'description' => TRUE,
+          'edit' => 'Modifier',
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_view',
+        'weight' => 6,
+      ),
       'list' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1301,7 +1375,7 @@ function domainedo_documents_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 15,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -1337,6 +1411,15 @@ function domainedo_documents_field_default_field_instances() {
         'type' => 'full',
         'weight' => 1,
       ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'domainedo_media',
+        'settings' => array(
+          'link' => 0,
+        ),
+        'type' => 'full',
+        'weight' => 2,
+      ),
       'list' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1347,7 +1430,7 @@ function domainedo_documents_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 17,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -1391,6 +1474,13 @@ function domainedo_documents_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 21,
       ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'domainedo_media',
+        'settings' => array(),
+        'type' => 'haut_classique',
+        'weight' => 21,
+      ),
       'list' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1401,14 +1491,14 @@ function domainedo_documents_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'domainedo_media',
         'settings' => array(),
-        'type' => 'large_480x296_crop',
-        'weight' => 0,
+        'type' => 'festival',
+        'weight' => 3,
       ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_scald_image',
-    'label' => 'Vignette',
+    'label' => 'Image',
     'required' => 0,
     'settings' => array(
       'allow_override' => 0,
@@ -1446,6 +1536,12 @@ function domainedo_documents_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 20,
       ),
+      'full' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 21,
+      ),
       'list' => array(
         'label' => 'hidden',
         'settings' => array(),
@@ -1456,7 +1552,7 @@ function domainedo_documents_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 18,
       ),
     ),
     'entity_type' => 'node',
@@ -1495,8 +1591,8 @@ function domainedo_documents_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'domainedo_media',
         'settings' => array(),
-        'type' => 'full_show',
-        'weight' => 0,
+        'type' => 'haut_classique',
+        'weight' => 1,
       ),
       'section' => array(
         'label' => 'hidden',
@@ -1559,7 +1655,6 @@ function domainedo_documents_field_default_field_instances() {
   t('Téléchargement col 1');
   t('Téléchargement col 2');
   t('Téléchargement col 3');
-  t('Vignette');
 
   return $field_instances;
 }

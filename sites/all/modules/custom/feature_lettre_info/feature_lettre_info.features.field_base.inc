@@ -10,14 +10,13 @@
 function feature_lettre_info_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_date_envoi'
+  // Exported field_base: 'field_date_envoi'.
   $field_bases['field_date_envoi'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_date_envoi',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'date',
@@ -40,14 +39,13 @@ function feature_lettre_info_field_default_field_bases() {
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_url_mailchimp'
+  // Exported field_base: 'field_url_mailchimp'.
   $field_bases['field_url_mailchimp'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_url_mailchimp',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',

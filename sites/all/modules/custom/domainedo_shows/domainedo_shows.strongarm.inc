@@ -230,6 +230,61 @@ function domainedo_shows_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'ds_extras_region_blocks';
+  $strongarm->value = array(
+    'image_full_show' => array(
+      'title' => 'Image full show',
+      'info' => 'node_show_full',
+    ),
+    'headband_festival' => array(
+      'title' => 'Headband Festival',
+      'info' => 'node_festival_full',
+    ),
+    'top_classic_page' => array(
+      'title' => 'Top classic Page',
+      'info' => 'node_page_full',
+    ),
+    'top_complex_page' => array(
+      'title' => 'Top complex Page',
+      'info' => 'node_page_complexe_full',
+    ),
+    'left_block_page' => array(
+      'title' => 'left block page',
+      'info' => 'node_page_complexe_full',
+    ),
+    'top_technic' => array(
+      'title' => 'Top Technic',
+      'info' => 'taxonomy_term_espace_pro_full',
+    ),
+    'top_technic_space' => array(
+      'title' => 'Top technic space',
+      'info' => 'node_tech_document_full',
+    ),
+    'top_event' => array(
+      'title' => 'Top event',
+      'info' => 'node_news_full',
+    ),
+    'top_article' => array(
+      'title' => 'Top article',
+      'info' => 'node_article_full',
+    ),
+    'top_place_taxonomy' => array(
+      'title' => 'Top place taxonomy',
+      'info' => 'taxonomy_term_show_locations_full',
+    ),
+  );
+  $export['ds_extras_region_blocks'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'ds_extras_region_to_block';
+  $strongarm->value = 1;
+  $export['ds_extras_region_to_block'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'exclude_node_title_content_type_modes_festival';
   $strongarm->value = array(
     'full' => 'full',
@@ -239,9 +294,11 @@ function domainedo_shows_strongarm() {
     'search_result' => 0,
     'diff_standard' => 0,
     'token' => 0,
+    'right_now' => 0,
     'frontpage_block' => 0,
     'frontpage_block_mobile' => 0,
     'list' => 0,
+    'liste_aussi' => 0,
     'zoom' => 0,
     'revision' => 0,
     'nodeform' => 0,
@@ -261,9 +318,11 @@ function domainedo_shows_strongarm() {
     'search_result' => 0,
     'diff_standard' => 0,
     'token' => 0,
+    'right_now' => 0,
     'frontpage_block' => 0,
     'frontpage_block_mobile' => 0,
     'list' => 0,
+    'liste_aussi' => 0,
     'revision' => 0,
     'nodeform' => 0,
   );
@@ -285,6 +344,8 @@ function domainedo_shows_strongarm() {
     'search_result' => 0,
     'diff_standard' => 0,
     'token' => 0,
+    'right_now' => 0,
+    'liste_aussi' => 0,
     'revision' => 0,
     'nodeform' => 0,
   );
@@ -345,16 +406,16 @@ function domainedo_shows_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '13',
+          'weight' => '14',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '14',
+          'weight' => '15',
         ),
         'redirect' => array(
-          'weight' => '15',
+          'weight' => '16',
         ),
       ),
       'display' => array(
@@ -484,8 +545,8 @@ function domainedo_shows_strongarm() {
       'display' => array(
         'sharethis' => array(
           'full' => array(
-            'weight' => '55',
-            'visible' => TRUE,
+            'weight' => '48',
+            'visible' => FALSE,
           ),
           'default' => array(
             'weight' => '10',
@@ -497,6 +558,10 @@ function domainedo_shows_strongarm() {
           ),
           'frontpage_block' => array(
             'weight' => '10',
+            'visible' => FALSE,
+          ),
+          'teaser' => array(
+            'weight' => '13',
             'visible' => FALSE,
           ),
         ),

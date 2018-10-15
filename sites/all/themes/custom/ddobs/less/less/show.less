@@ -1,0 +1,900 @@
+.group-show-list {
+  @media (max-width: @screen-md) {
+    img {
+      max-width: none;
+      width: 100%;
+    }
+  }
+  .little-move();
+  position: relative;
+  margin-bottom: 30px;
+  .field-name-field-festival {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: table;
+    a {
+      .cartouche-noir();
+    }
+  }
+  .group-tranparent-gradient {
+    position: absolute;
+    top: 40%;
+    @media (min-width: 618px) and (max-width: @screen-md) {
+      top: 45%;
+    }
+    height: 50%;
+    width: 100%;
+    left: 0;
+    background: black; /* For browsers that do not support gradients */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    div, a {
+      color: @blanc-ddo;
+      p {
+        margin: 0 !important;
+        color: white;
+        font-style: normal;
+        font-weight: 600;
+      }
+    }
+    .group-date-title-desc {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      padding: 0 10px;
+      .date-orange();
+      .field-name-field-show-dates {
+         @media (max-width: @screen-sm) {
+           margin-bottom: 15px;
+         }
+        > div {
+          .underline-grenadine();
+          a {
+            text-transform: none !important;
+            font-style: normal;
+            font-weight: 800;
+            @media (max-width: @screen-sm) {
+              font-size: 1em;
+              font-style: normal;
+              font-weight: 800;
+            }
+          }
+          &:after {
+            border: 3px solid @grenadine-ddo;
+            margin-top: -5px;
+          }
+        }
+      }
+      .field-name-title {
+        display: table;
+        > div {
+          padding-left: 10px;
+          a {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 1.25em; /*20/16*/
+            padding-bottom: 9px;
+            display: block;
+            font-style: normal;
+            font-weight: 800;
+            text-decoration: none;
+            &:hover {
+              text-decoration: none;
+              opacity: 0.5;
+            }
+          }
+        }
+      }
+      .field-name-body {
+        display: table;
+        margin-bottom: 25px;
+
+        > div {
+          padding-left: 10px;
+        }
+        p {
+          font-size: 0.875em;
+          font-style: normal;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  .group-black-bg {
+    position: absolute;
+    top: 90%;
+    height: 10%;
+    @media (min-width: 618px) and (max-width: @screen-md) {
+      height: 5%;
+      top: 95%;
+    }
+    width: 100%;
+    left: 0;
+    background: black;
+    .field-name-node-link {
+      position: absolute;
+      top: -5px;
+      right: 2%;
+      left: 5%;
+      display: table;
+      a {
+        display: block;
+        background-color: @blanc-ddo;
+        padding: 14px 14px 10px 14px !important;
+        color: @grenadine-ddo;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        border: 1px solid @grenadine-ddo;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 0.813em;
+        &:hover {
+          background-color: @grenadine-ddo;
+          color: white;
+        }
+      }
+    }
+    .field-name-field-boxoffice-url {
+      position: absolute;
+      top: -5px;
+      right: 5%;
+      width: 30%;
+      display: table;
+      border: 1px solid @grenadine-ddo;
+      a {
+        .button-book();
+        font-weight: 700 !important;
+        font-size: 13px !important;
+      }
+    }
+  }
+  .field-name-scald-authors {
+    display: none;
+  }
+
+}
+
+/* la page de visualisation d'un spectacle */
+.node-type-show {
+  .breadcrumb {
+    margin-bottom: 0;
+    li.active {
+      display: none;
+    }
+  }
+  #block-domainedo-ticketoffice-rsi-ws-user-links {
+    display: none;
+  }
+  #imgfullshow {
+    .field-name-scald-authors {
+      display: none;
+    }
+    #block-ds-extras-image-full-show {
+      position: relative;
+      .field-name-field-scald-image {
+        .field-item {
+          display: table;
+          border-bottom: 66px solid @gris-clair-ddo;
+          @media (max-width: @screen-sm) {
+            border-bottom: 3px solid @gris-clair-ddo;
+
+          }
+          &:after {
+            content: "";
+            display: block;
+            height: 50%;
+            z-index: 1;
+            position: absolute;
+            bottom: 60px;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000);
+            visibility: visible;
+            width: 100%;
+            @media (max-width: @screen-sm) {
+              bottom: 0;
+              height: 300px;
+            }
+          }
+        }
+      }
+      .group-text-over-img {
+        position: relative;
+        .group-text-over-img-abs {
+          position: absolute;
+          z-index: 2;
+          bottom: 80px;
+          @media (max-width: @screen-sm) {
+            bottom: 20px;
+            font-size: 0.8em;
+          }
+          .field-name-field-festival {
+            a {
+              .cartouche-noir();
+              font-style: normal;
+              font-weight: 800 !important;
+              width: auto;
+              display: table;
+              text-transform: uppercase;
+              font-size: 1.125em; /* 18/16 */
+              @media (max-width: @screen-sm) {
+                font-size: 1em;
+              }
+              font-style: normal;
+              font-weight: 800;
+            }
+            margin-bottom: 10px;
+          }
+          .date-orange();
+          .field-name-field-show-dates {
+            color: #FFF;
+            margin-left: -5px;
+
+            > div {
+
+              &:after {
+                display: block;
+                border: 4px solid @grenadine-off-ddo;
+                margin-top: -8px;
+              }
+              &.js-div-date {
+                position: static;
+                text-transform: none;
+                font-style: normal;
+                font-weight: 800;
+                font-size: 1.5em;/*24/16*/
+                margin-bottom: 0;
+              }
+            }
+
+          }
+
+          .field-name-title {
+            text-transform: uppercase;
+            font-size: 2.25em; /* 36/16 */
+            @media (max-width: @screen-sm) {
+              font-size: 1.6em;
+            }
+            color: white;
+            margin-bottom: 10px;
+            margin-top: 0;
+            font-style: normal;
+            font-weight: 800;
+          }
+          .field-name-field-subtitle {
+            font-size: 1.5em; /* 24/16 */
+            font-style: normal;
+            font-weight: 600;
+            @media (max-width: @screen-sm) {
+              font-size: 1em;
+            }
+            color: white;
+            margin-bottom: 10px;
+          }
+        }
+      }
+
+    }
+  }
+  section > ul.action-links {
+    position: absolute;
+    top: 200px;
+    left: -200px;
+  }
+  .tabs--primary {
+    position: absolute;
+    top: 0px;
+    left: -200px;
+    border-left: 1px solid red;
+    li {
+      float: none;
+    }
+  }
+  .node-show.view-mode-full {
+    position: relative;
+    top: -38px;
+    /* left column ******************************************************************/
+    .field-name-body {
+      p {
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.375em !important;/*22/16*/
+      }
+    }
+    .field-name-field-reservation {
+      display: none;
+    }
+    #group-wrapper-distribution {
+      min-height: 16px;
+      margin-top: 0;
+      margin-right: 30px;
+      .field-name-field-casting-link {
+        @media (max-width: @screen-sm) {
+          display: none;
+        }
+        float: left;
+        p {
+          font-size: 1em;
+          margin-top: -2px;
+        }
+        a {
+          text-transform: uppercase;
+          color: #000;
+          text-decoration: none;
+          display: block;
+          padding-right: 30px;
+          font-style: normal;
+          font-weight: 800;
+          &:hover {
+            color: @grenadine-ddo;
+          }
+        }
+      }
+      margin-bottom: 50px;
+      a.show-anchor-link {
+        @media (max-width: @screen-sm) {
+          display: none;
+        }
+        float: left;
+        text-transform: uppercase;
+        color: #000;
+        text-decoration: none;
+        display: block;
+        padding: 0 16px;
+        font-style: normal;
+        font-weight: 800;
+        &:last-child {
+          padding-right: 0;
+        }
+        &:hover {
+          color: @grenadine-ddo;
+        }
+      }
+
+    }
+
+    .field-name-field-from {
+      border-top: 1px solid black;
+      padding-top: 20px;
+      .field-label {
+        font-style: normal;
+        font-weight: 800;
+        line-height: 2em;
+      }
+      .field-item {
+        font-style: normal;
+        font-weight: 600;
+        line-height: 2em;
+      }
+    }
+    .field-name-field-by {
+      border-bottom: 1px solid black;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      .field-label {
+        font-style: normal;
+        font-weight: 800;
+      }
+      .field-item {
+        font-style: normal;
+        font-weight: 600;
+      }
+    }
+    .field-name-body {
+      margin-bottom: 20px;
+    }
+    .distribution {
+      margin-top: 20px;
+      .label-above {
+        text-transform: uppercase;
+        font-style: normal;
+        font-weight: 800;
+      }
+    }
+    .field-name-field-production,
+    .field-name-field-coproduction,
+    .field-name-field-partenariats {
+      margin-top: 20px;
+      .field-label,
+      .label-above {
+        text-transform: uppercase;
+        font-style: normal;
+        font-weight: 800;
+      }
+    }
+    /* Right column *********************************************************************/
+    #group-wrap-book {
+      margin-bottom: 50px;
+      min-height: 32px;
+      .field-name-field-boxoffice-url {
+        @media (max-width: @screen-sm) {
+          margin-left: -15px;
+          width: 110%;
+          padding: 10px 0 !important;
+          background-color: @gris-clair-ddo;
+        }
+        a {
+          .button-book();
+          padding: 12px 20px 8px 20px;
+          font-style: normal;
+          font-weight: 800;
+          display: table;
+          margin-top: -14px;
+          font-size: 1.125em;/*18/16*/
+          @media (max-width: @screen-sm) {
+
+            margin: 20px auto 20px auto;
+
+          }
+        }
+      }
+    }
+
+    .all-dates {
+      padding-left: 15px;
+      margin-bottom: 30px;
+      .label-above {
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        font-size: 1.125em; /* 18/16px */
+        font-style: normal;
+        font-weight: 800;
+        &:before {
+          .glyphicon();
+          content: "\e807";
+          color: @grenadine-ddo;
+          top: -1px;
+        }
+      }
+      .date-display-single {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 1em; /* 16px */
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.8125em; /* 29/16 */
+      }
+    }
+    #node-show-full-group-lieu {
+      font-size: 0.876em; /*14/16*/
+      background-color: @grenadine-ddo;
+      padding: 15px;
+      margin-bottom: 20px;
+      color: white;
+      .field-label {
+        text-transform: uppercase;
+        font-style: normal;
+        font-weight: 800;
+      }
+      a {
+        color: white;
+        text-decoration: underline;
+      }
+      .field {
+        &:after {
+          margin-bottom: 15px;
+        }
+      }
+      .field-name-field-lieu-generique {
+        &:after {
+          margin-bottom: 0;
+        }
+      }
+      .field-name-field-location {
+        &:after {
+          display: block;
+          margin-bottom: 20px;
+          content: "";
+        }
+      }
+      .field-name-field-price {
+        p {
+          margin-top: -3px;
+        }
+      }
+    }
+
+    .field-name-field-full,
+    .field-name-field-reimbursement,
+    .field-name-field-additional-infos,
+    .field-name-field-coming-soon,
+    .field_offline {
+      margin-top: 30px;
+      border: 2px solid @grenadine-ddo;
+      padding: 15px;
+      .field-label {
+        text-transform: uppercase;
+        color: @grenadine-ddo;
+      }
+      p {
+        font-size: 0.875em; /* 14/16 */
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.8em;/* 28.8/16 */
+      }
+    }
+    .field-name-field-full,
+    .field-name-field-reimbursement,
+    .field-name-field-coming-soon,
+    .field_offline {
+      margin-bottom: 30px;
+    }
+    .like-to-label {
+      margin-top: 25px;
+      margin-bottom: 15px;
+      padding-left: 15px;
+      font-size: 1.5em; /* 24/16 */
+    }
+    .like-to-item {
+      .field-name-field-festival {
+        display: none;
+      }
+      .field-name-field-show-dates {
+        span {
+          font-size: 0.8em;
+        }
+        > div:after {
+          border-color: @grenadine-off-ddo;
+        }
+      }
+      .field-name-title {
+        a {
+          font-size: 0.8em;
+        }
+      }
+      .field-name-node-link {
+        top: -5px;
+        left: 4%;
+        a {
+          font-size: 0.8em;
+        }
+      }
+      .field-name-field-boxoffice-url {
+        top: -5px;
+        right: 10%;
+        a {
+          font-size: 0.8em;
+        }
+      }
+    }
+  }
+  iframe {
+    width: 100%;
+    min-height: 350px;
+  }
+
+  /* vous aimerez aussi */
+  .group-tranparent-gradient {
+    top: 0;
+    @media (min-width: 618px) and (max-width: @screen-md) {
+      top: 45%;
+    }
+    height: 90%;
+    width: 100%;
+    background: black; /* For browsers that do not support gradients */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    div, a {
+      p {
+      }
+    }
+    .group-date-title-desc {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      padding: 0 10px;
+      .date-orange();
+      .field-name-field-show-dates {
+        @media (max-width: @screen-sm) {
+          margin-bottom: 15px;
+        }
+        > div {
+          .underline-grenadine();
+          a {
+            text-transform: none !important;
+            font-style: normal;
+            font-weight: 800;
+            span {
+              font-size: 1em !important;
+            }
+          }
+          &:after {
+            border: 3px solid @grenadine-ddo;
+            margin-top: -5px;
+          }
+          &.js-div-date {
+            margin-bottom: 15px;
+          }
+        }
+      }
+      .field-name-title {
+        display: table;
+        > div {
+          padding-left: 10px;
+          a {
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 1.25em !important; /*20/16*/
+            padding-bottom: 12px;
+            display: block;
+            font-style: normal;
+            font-weight: 800;
+          }
+        }
+      }
+      .field-name-body {
+        display: table;
+        margin-bottom: 25px;
+
+        > div {
+          padding-left: 10px;
+        }
+        p {
+          font-size: 0.875em;
+          font-style: normal;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  .group-black-bg {
+    .field-name-node-link {
+      top: -15px !important;
+      left: 7% !important;
+    }
+    .field-name-field-boxoffice-url {
+      top: -15px !important;
+    }
+  }
+}
+
+/* Page tous les spectacles *******************************************************************************************/
+.page-spectacles {
+  h2.page-header {
+    text-indent: -6000px;
+    display: none;
+  }
+  #headband-festival {
+
+    border-bottom: 50px solid white;
+    @media (min-width: @screen-md) {
+      .views-exposed-widgets {
+        position: relative;
+        padding-bottom: 100px;
+      }
+    }
+
+    @media (min-width: @screen-md) {
+      background: url(../images/bg_all_shows.gif) 50% 0;
+      margin: 0 auto;
+      min-height: 330px;
+    }
+    @media (max-width: @screen-md) {
+      .container {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    #block-views-exp-shows-list {
+      @media (min-width: @screen-md) {
+        float: left;
+        width: 66.66%;
+        min-height: 330px;
+      }
+      @media (max-width: @screen-md) {
+        padding: 0 20px;
+      }
+      background-color: @gris-clair-ddo;
+      #edit-field-festival-target-id-wrapper {
+        label {
+          color: #000;
+          font-size: 1.5em; /* 24/16 */
+          text-transform: uppercase;
+          margin: 40px 0 30px 0;
+          font-style: normal;
+          font-weight: 900;
+        }
+        .bef-select-as-links {
+          > .form-item {
+            .form-type-bef-link:first-child {
+              display: none;
+            }
+          }
+          .form-item {
+            float: left;
+            a {
+              color: #FFF;
+              font-size: 0.875em; /* 14/16 */
+              font-style: normal;
+              font-weight: 700;
+              text-transform: uppercase;
+              display: block;
+              background-color: black;
+              padding: 15px 20px;
+              margin: 0 20px 16px 0;
+              text-decoration: none;
+              &:hover {
+                background-color: @grenadine-ddo;
+                color: #FFF;
+              }
+            }
+            &[class*="selected"] {
+              a {
+                background-color: @grenadine-ddo;
+                color: #FFF;
+              }
+            }
+          }
+        }
+      }
+      .views-widget-filter-field_show_type_tid {
+        > label {
+          display: none;
+        }
+        .views-widget {
+          .form-control {
+            height: auto;
+            padding: 0;
+            background-color: transparent;
+            border: 0;
+            a.bef-toggle {
+              display: none;
+            }
+            .bef-checkboxes {
+              > .form-type-bef-checkbox {
+                @media (max-width: @screen-md) {
+                  margin-bottom: 25px;
+                }
+                float: left;
+                > input {
+                  width: 10px;
+                  float: left;
+                  margin-right: 4px;
+                  margin-top: -1px;
+                  border-radius: 0 !important;
+                  -webkit-appearance: none;
+                  border: 1px solid @gris-fonce-ddo;
+                  box-shadow: none;
+                  padding: 9px;
+                  border-radius: 0px;
+                  display: inline-block;
+                  position: relative;
+                  &:checked {
+                    box-shadow: 0 1px 2px rgba(0,0,0,0.5), inset 0px 1px 3px rgba(0,0,0,1);
+                    background-color: #000;
+                    border: 1px solid @grenadine-ddo;
+                    &:active {
+                      border: 1px solid @grenadine-ddo;
+                    }
+                  }
+
+                }
+                > label {
+                  margin-right: 20px;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 700;
+                  color: #000;
+                }
+              }
+            }
+          }
+        }
+      }
+      .views-exposed-widget {
+
+        @media (max-width: @screen-md) {
+          float: none;
+          padding: 0;
+          display: block;
+          clear: both;
+          padding-top: 10px;
+        }
+        button#edit-submit-shows {
+          color: #FFF;
+          font-size: 1.125em; /* 18/16 */
+          text-transform: uppercase;
+          display: block;
+          background-color: @grenadine-ddo;
+          padding: 8px 14px 6px 14px;
+          margin: 0;
+          font-style: normal;
+          font-weight: 800;
+          border: 0;
+          border-radius: 0 !important;
+          margin: 30px 0 20px 0;
+          @media (min-width: @screen-md) {
+            position: absolute;
+            top: 80%;
+            right: 10%;
+          }
+          @media (max-width: @screen-md) {
+            display: table;
+            margin:  15px auto 25px auto;
+          }
+          &:hover {
+            background-color: black;
+          }
+
+        }
+      }
+
+
+    }
+    #block-boxes-left-shows-info {
+      @media (min-width: @screen-md) {
+        min-height: 330px;
+        float: left;
+        width: 33.34%;
+      }
+      @media (min-width: @screen-sm) {
+        margin-top:  10%;
+      }
+      background-color: @grenadine-ddo;
+      &:after {
+        display: block;
+        content: "";
+        clear: both;
+        border: 2px solid red;
+      }
+      p {
+        color: #FFF;
+        font-size: 1.5em; /* 24/16 */
+        text-transform: uppercase;
+        font-style: normal;
+        font-weight: 800 !important;
+        @media (min-width: @screen-md) {
+          margin: 96px 0 20px 24px;
+        }
+        @media (max-width: @screen-md) {
+          margin-top: 20%;
+          font-size: 1em;
+          text-align: center;
+          br {
+            display: none;
+          }
+        }
+        margin: 30px 0 20px 24px;
+        font-weight: bold;
+      }
+      #div-link-calendar {
+        a {
+          @media (max-width: @screen-md) {
+            display: table;
+            margin: 20px auto;
+          }
+          background-color: white;
+          color: #000;
+          font-size: 1.125em; /* 18/16 */
+          text-transform: uppercase;
+          margin: 10px 0 20px 24px;
+          font-weight: bold;
+          padding: 12px 12px 10px 12px;
+          border: 1.5px solid black;
+          &:before {
+            .glyphicon();
+            content: "\e807";
+            color: #000;
+            font-size: 0.875em;
+            top: -2px;
+          }
+          &:hover {
+            text-decoration: none;
+            background-color: black;
+            color: #FFF;
+            &:before {
+              color: #FFF;
+            }
+          }
+        }
+      }
+    }
+  }
+  .pagination {
+    .next,
+    .prev,
+    .pager-first,
+    .pager-last {
+      display: none;
+    }
+  }
+}

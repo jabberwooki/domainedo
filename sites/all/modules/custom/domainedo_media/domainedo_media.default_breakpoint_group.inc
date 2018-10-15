@@ -12,6 +12,22 @@ function domainedo_media_default_breakpoint_group() {
 
   // Breakpoints.
   $breakpoints = array();
+  $breakpoints[] = 'breakpoints.theme.ddobs.wide';
+  $breakpoints[] = 'breakpoints.theme.ddobs.mobile';
+
+  // Breakpoint group.
+  $breakpoint_group = new stdClass();
+  $breakpoint_group->disabled = FALSE; /* Edit this to true to make a default breakpoint_group disabled initially */
+  $breakpoint_group->api_version = 1;
+  $breakpoint_group->machine_name = 'ddobs';
+  $breakpoint_group->name = 'DDOBOOTSTRAP';
+  $breakpoint_group->breakpoints = $breakpoints;
+  $breakpoint_group->type = 'theme';
+  $breakpoint_group->overridden = 0;
+  $export['ddobs'] = $breakpoint_group;
+
+  // Breakpoints.
+  $breakpoints = array();
   $breakpoints[] = 'breakpoints.theme.domainedo.mobile';
   $breakpoints[] = 'breakpoints.theme.domainedo.narrow';
   $breakpoints[] = 'breakpoints.theme.domainedo.wide';

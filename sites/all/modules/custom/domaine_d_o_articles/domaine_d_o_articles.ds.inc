@@ -17,19 +17,6 @@ function domaine_d_o_articles_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'article';
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
-    'field_scald_image' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => 'right',
-          'ow-def-cl' => FALSE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
-        ),
-      ),
-    ),
     'field_scald_video' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -110,13 +97,8 @@ function domaine_d_o_articles_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'show';
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
-    'partage' => array(
-      'weight' => '49',
-      'label' => 'hidden',
-      'format' => 'default',
-    ),
     'title' => array(
-      'weight' => '0',
+      'weight' => '4',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -126,10 +108,110 @@ function domaine_d_o_articles_ds_field_settings_info() {
         'exclude node title settings' => '0',
       ),
     ),
-    'comments' => array(
-      'weight' => '28',
-      'label' => 'hidden',
-      'format' => 'default',
+    'field_casting' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb' => 'Distribution',
+          'lb-col' => TRUE,
+          'lbw-el' => 'div',
+          'prefix' => '<a name="casting" id="casting"></a>',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'distribution',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_coproduction' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb' => 'Coproduction',
+          'lb-col' => TRUE,
+          'prefix' => '<a name="coproduction" id="coproduction"></a>',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'field-name-field-coproduction',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_production' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb-col' => TRUE,
+          'prefix' => '<a name="production" id="production"></a>',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'field-name-field-production',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_show_dates' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb' => 'Toutes les dates',
+          'lb-col' => TRUE,
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'all-dates',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_partenariats' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb' => 'Partenariats',
+          'lb-el' => 'div',
+          'lb-col' => TRUE,
+          'prefix' => '<a name="partenariats" id="partenariats"></a>',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'field-name-field-partenariats',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_linked_shows' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb' => 'Vous aimerez aussi',
+          'lb-el' => 'div',
+          'lb-cl' => 'like-to-label',
+          'lb-def-at' => TRUE,
+          'lb-col' => TRUE,
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'row',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'col-md-4 col-lg-3 like-to-item',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
+        ),
+      ),
     ),
   );
   $export['node|show|full'] = $ds_fieldsetting;
@@ -153,19 +235,15 @@ function domaine_d_o_articles_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_scald_image',
+        0 => 'body',
         1 => 'field_scald_video',
-        2 => 'body',
-        3 => 'field_date_de_modification',
-        4 => 'sharethis',
+        2 => 'field_date_de_modification',
       ),
     ),
     'fields' => array(
-      'field_scald_image' => 'ds_content',
-      'field_scald_video' => 'ds_content',
       'body' => 'ds_content',
+      'field_scald_video' => 'ds_content',
       'field_date_de_modification' => 'ds_content',
-      'sharethis' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -214,6 +292,52 @@ function domaine_d_o_articles_ds_layout_settings_info() {
     'layout_disable_css' => FALSE,
   );
   $export['node|article|frontpage_block'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|article|full';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'article';
+  $ds_layout->view_mode = 'full';
+  $ds_layout->layout = 'bootstrap_6_6_stacked';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'left' => array(
+        0 => 'body',
+      ),
+      'right' => array(
+        1 => 'field_image_colonne_droite',
+        2 => 'field_scald_video',
+        3 => 'gallery_items',
+      ),
+      'top_article' => array(
+        4 => 'field_scald_image',
+        5 => 'group_img_wrapper',
+      ),
+    ),
+    'fields' => array(
+      'body' => 'left',
+      'field_image_colonne_droite' => 'right',
+      'field_scald_video' => 'right',
+      'gallery_items' => 'right',
+      'field_scald_image' => 'top_article',
+      'group_img_wrapper' => 'top_article',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'top' => 'div',
+      'left' => 'div',
+      'right' => 'div',
+      'bottom' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
+  );
+  $export['node|article|full'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;

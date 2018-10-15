@@ -42,6 +42,38 @@ function domainedo_documents_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_blueprint_files|node|tech_document|full';
+  $field_group->group_name = 'group_blueprint_files';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'tech_document';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_download_zone';
+  $field_group->data = array(
+    'label' => 'Plans',
+    'weight' => '31',
+    'children' => array(
+      0 => 'field_download_col_2',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Plans',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-blueprint-files field-group-div tech-open-close',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'collapsed',
+    ),
+  );
+  $field_groups['group_blueprint_files|node|tech_document|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_description|node|tech_document|form';
   $field_group->group_name = 'group_description';
   $field_group->entity_type = 'node';
@@ -102,6 +134,169 @@ function domainedo_documents_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_download_zone|node|tech_document|full';
+  $field_group->group_name = 'group_download_zone';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'tech_document';
+  $field_group->mode = 'full';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Zone téléchargement',
+    'weight' => '3',
+    'children' => array(
+      0 => 'group_technic_files',
+      1 => 'group_blueprint_files',
+      2 => 'group_light_files',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Zone téléchargement',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-download-zone field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_download_zone|node|tech_document|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_img_wraper|node|tech_document|teaser';
+  $field_group->group_name = 'group_img_wraper';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'tech_document';
+  $field_group->mode = 'teaser';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Groupe image titre',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_scald_image',
+      1 => 'title',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Groupe image titre',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-img-wraper field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_img_wraper|node|tech_document|teaser'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_img_wrapper|node|tech_document|full';
+  $field_group->group_name = 'group_img_wrapper';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'tech_document';
+  $field_group->mode = 'full';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Entoure image',
+    'weight' => '7',
+    'children' => array(
+      0 => 'field_scald_image',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Entoure image',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-img-wrapper field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_img_wrapper|node|tech_document|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_img_wrapper|taxonomy_term|espace_pro|full';
+  $field_group->group_name = 'group_img_wrapper';
+  $field_group->entity_type = 'taxonomy_term';
+  $field_group->bundle = 'espace_pro';
+  $field_group->mode = 'full';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Entoure image',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_section_image',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Entoure image',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-img-wrapper field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_img_wrapper|taxonomy_term|espace_pro|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_light_files|node|tech_document|full';
+  $field_group->group_name = 'group_light_files';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'tech_document';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_download_zone';
+  $field_group->data = array(
+    'label' => 'Lumières',
+    'weight' => '32',
+    'children' => array(
+      0 => 'field_download_col_3',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Lumières',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-light-files field-group-div tech-open-close',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'collapsed',
+    ),
+  );
+  $field_groups['group_light_files|node|tech_document|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_onglets|node|tech_document|form';
   $field_group->group_name = 'group_onglets';
   $field_group->entity_type = 'node';
@@ -158,6 +353,38 @@ function domainedo_documents_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_technic_files|node|tech_document|full';
+  $field_group->group_name = 'group_technic_files';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'tech_document';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_download_zone';
+  $field_group->data = array(
+    'label' => 'Fiche technique',
+    'weight' => '30',
+    'children' => array(
+      0 => 'field_download_col_1',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Fiche technique',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-technic-files field-group-div tech-open-close',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'collapsed',
+    ),
+  );
+  $field_groups['group_technic_files|node|tech_document|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_title_img_location|field_collection_item|field_references_techniques|default';
   $field_group->group_name = 'group_title_img_location';
   $field_group->entity_type = 'field_collection_item';
@@ -168,9 +395,9 @@ function domainedo_documents_field_group_info() {
     'label' => 'Groupe Titre image',
     'weight' => '0',
     'children' => array(
-      0 => 'field_title_ref_tec_doc',
+      0 => 'field_image_ref_tec_doc',
       1 => 'field_summary_ref_tec_doc',
-      2 => 'field_image_ref_tec_doc',
+      2 => 'field_title_ref_tec_doc',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -227,11 +454,17 @@ function domainedo_documents_field_group_info() {
   // Included for use with string extractors like potx.
   t('Autres');
   t('Description et galerie');
+  t('Entoure image');
+  t('Fiche technique');
   t('Fichiers en téléchargement');
   t('Groupe Titre image');
+  t('Groupe image titre');
+  t('Lumières');
   t('Onglets');
+  t('Plans');
   t('Références');
   t('Zone de téléchargement');
+  t('Zone téléchargement');
 
   return $field_groups;
 }

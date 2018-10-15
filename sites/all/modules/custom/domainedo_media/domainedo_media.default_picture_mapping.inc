@@ -13,67 +13,68 @@ function domainedo_media_default_picture_mapping() {
   $picture_mapping = new PictureMapping();
   $picture_mapping->disabled = FALSE; /* Edit this to true to make a default picture_mapping disabled initially */
   $picture_mapping->api_version = 2;
-  $picture_mapping->label = 'max';
-  $picture_mapping->machine_name = 'max';
-  $picture_mapping->breakpoint_group = 'max';
+  $picture_mapping->label = 'En ce moment';
+  $picture_mapping->machine_name = 'en_ce_moment';
+  $picture_mapping->breakpoint_group = 'ddobs';
   $picture_mapping->mapping = array(
-    'breakpoints.theme.domainedo.mobile' => array(
+    'breakpoints.theme.ddobs.wide' => array(
       '1x' => array(
         'mapping_type' => 'image_style',
-        'image_style' => 'maxbreakpoints_theme_domainedo_mobile_1x',
+        'image_style' => 'en-ce-momentbreakpoints_theme_ddobs_wide_1x',
       ),
     ),
-    'breakpoints.theme.domainedo.narrow' => array(
+    'breakpoints.theme.ddobs.mobile' => array(
       '1x' => array(
         'mapping_type' => 'image_style',
-        'image_style' => 'maxbreakpoints_theme_domainedo_narrow_1x',
-      ),
-    ),
-    'breakpoints.theme.domainedo.wide' => array(
-      '1x' => array(
-        'mapping_type' => 'image_style',
-        'image_style' => 'maxbreakpoints_theme_domainedo_wide_1x',
+        'image_style' => 'en-ce-momentbreakpoints_theme_domainedo_mobile_1x',
       ),
     ),
   );
-  $export['max'] = $picture_mapping;
+  $export['en_ce_moment'] = $picture_mapping;
 
   $picture_mapping = new PictureMapping();
   $picture_mapping->disabled = FALSE; /* Edit this to true to make a default picture_mapping disabled initially */
   $picture_mapping->api_version = 2;
-  $picture_mapping->label = 'zoom';
-  $picture_mapping->machine_name = 'zoom';
-  $picture_mapping->breakpoint_group = 'zoom';
+  $picture_mapping->label = 'Page';
+  $picture_mapping->machine_name = 'page';
+  $picture_mapping->breakpoint_group = 'ddobs';
   $picture_mapping->mapping = array(
-    'breakpoints.theme.domainedo.wide' => array(
+    'breakpoints.theme.ddobs.wide' => array(
       '1x' => array(
         'mapping_type' => 'image_style',
-        'image_style' => 'zoombreakpoints_theme_domainedo_wide_1x',
+        'image_style' => 'pagebreakpoints_theme_ddobs_wide_1x',
       ),
     ),
-    'breakpoints.theme.domainedo.narrow' => array(
+    'breakpoints.theme.ddobs.mobile' => array(
       '1x' => array(
         'mapping_type' => 'image_style',
-        'image_style' => 'zoombreakpoints_theme_domainedo_narrow_1x',
-      ),
-    ),
-    'breakpoints.theme.domainedo.mobile' => array(
-      '1x' => array(
-        'mapping_type' => 'image_style',
-        'image_style' => 'zoombreakpoints_theme_domainedo_mobile_1x',
+        'image_style' => 'pagebreakpoints_theme_domainedo_mobile_1x',
       ),
     ),
   );
-  $export['zoom'] = $picture_mapping;
+  $export['page'] = $picture_mapping;
 
   $picture_mapping = new PictureMapping();
   $picture_mapping->disabled = FALSE; /* Edit this to true to make a default picture_mapping disabled initially */
   $picture_mapping->api_version = 2;
-  $picture_mapping->label = 'zoom_homepage';
-  $picture_mapping->machine_name = 'zoom_homepage';
-  $picture_mapping->breakpoint_group = '';
-  $picture_mapping->mapping = array();
-  $export['zoom_homepage'] = $picture_mapping;
+  $picture_mapping->label = 'show full page';
+  $picture_mapping->machine_name = 'show_full_page';
+  $picture_mapping->breakpoint_group = 'ddobs';
+  $picture_mapping->mapping = array(
+    'breakpoints.theme.ddobs.wide' => array(
+      '1x' => array(
+        'mapping_type' => 'image_style',
+        'image_style' => 'responsive-showbreakpoints_theme_ddobs_wide_1x',
+      ),
+    ),
+    'breakpoints.theme.ddobs.mobile' => array(
+      '1x' => array(
+        'mapping_type' => 'image_style',
+        'image_style' => 'responsive-showbreakpoints_theme_domainedo_mobile_1x',
+      ),
+    ),
+  );
+  $export['show_full_page'] = $picture_mapping;
 
   return $export;
 }

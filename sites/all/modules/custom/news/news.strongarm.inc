@@ -108,20 +108,26 @@ function news_strongarm() {
       'list' => array(
         'custom_settings' => FALSE,
       ),
+      'right_now' => array(
+        'custom_settings' => TRUE,
+      ),
+      'liste_aussi' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '14',
+          'weight' => '15',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '15',
+          'weight' => '16',
         ),
         'redirect' => array(
-          'weight' => '16',
+          'weight' => '17',
         ),
       ),
       'display' => array(
@@ -134,6 +140,7 @@ function news_strongarm() {
             'weight' => '15',
             'visible' => FALSE,
           ),
+          'right_now' => NULL,
         ),
       ),
     ),

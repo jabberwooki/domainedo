@@ -1,3 +1,7 @@
+Domaine d'O 1.1.0 - 2018-10-15
+----------------------------
+Theme change to ddobs - bootstrap now used and a lot of layouts changed via features
+
 Domaine d'O 1.0.61 - 2018-07-24
 ----------------------------
 domainedo-alpha-default-narrow.css, template.php, supersubs.js up as fix from Ambika

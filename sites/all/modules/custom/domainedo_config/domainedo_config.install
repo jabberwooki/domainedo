@@ -14,3 +14,10 @@ function domainedo_config_install() {
 	// Modules settings.
 	module_disable(array('toolbar'));
 }
+
+/**
+ * Enable mm menu to manage mobile menu
+ */
+function domainedo_config_update_7001() {
+  module_enable(array('mmenu'));
+}

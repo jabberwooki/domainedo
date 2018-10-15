@@ -211,21 +211,22 @@ function domainedo_config_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'disqus_nodetypes';
   $strongarm->value = array(
-    'show' => 'show',
-    'news' => 'news',
-    'article' => 'article',
     'press_document' => 0,
     'relpub_document' => 0,
     'tech_document' => 0,
     'festival' => 0,
     'programmer' => 0,
+    'show' => 0,
     'structure' => 0,
     'personne' => 0,
+    'article' => 0,
     'entree' => 0,
     'page_complexe' => 0,
     'lieu_location' => 0,
     'presentation_location_salles' => 0,
+    'retour_sur' => 0,
     'lettre_info' => 0,
+    'news' => 0,
     'page' => 0,
     'webform' => 0,
   );
@@ -244,6 +245,146 @@ function domainedo_config_strongarm() {
   $strongarm->name = 'logintoboggan_login_with_email';
   $strongarm->value = '1';
   $export['logintoboggan_login_with_email'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'mmenu_item_mmenu_left';
+  $strongarm->value = array(
+    'enabled' => '1',
+    'title' => 'Left menu',
+    'name' => 'mmenu_left',
+    'blocks' => array(
+      0 => array(
+        'module_delta' => 'system|main-menu',
+        'menu_parameters' => array(
+          'min_depth' => '1',
+        ),
+        'title' => '<none>',
+        'collapsed' => '0',
+        'wrap' => '0',
+        'module' => 'system',
+        'delta' => 'main-menu',
+      ),
+      1 => array(
+        'module_delta' => 'menu|menu-top-courtesy-nav',
+        'menu_parameters' => array(
+          'min_depth' => '1',
+        ),
+        'title' => '<none>',
+        'collapsed' => '0',
+        'wrap' => '1',
+        'module' => 'menu',
+        'delta' => 'menu-top-courtesy-nav',
+      ),
+    ),
+    'options' => array(
+      'classes' => 'mm-fresh',
+      'effects' => array(
+        'mm-slide' => 'mm-slide',
+      ),
+      'slidingSubmenus' => FALSE,
+      'clickOpen' => array(
+        'open' => TRUE,
+        'selector' => '#mmenu-custom-buttom',
+      ),
+      'counters' => array(
+        'add' => TRUE,
+        'update' => TRUE,
+      ),
+      'dragOpen' => array(
+        'open' => TRUE,
+        'pageNode' => 'body',
+        'threshold' => 100,
+        'maxStartPos' => 50,
+      ),
+      'footer' => array(
+        'add' => TRUE,
+        'content' => '',
+        'title' => 'Copyright ©2018',
+        'update' => TRUE,
+      ),
+      'header' => array(
+        'add' => TRUE,
+        'content' => '',
+        'title' => 'Domaine d\'O',
+        'update' => TRUE,
+      ),
+      'labels' => array(
+        'collapse' => FALSE,
+      ),
+      'offCanvas' => array(
+        'enabled' => TRUE,
+        'modal' => FALSE,
+        'moveBackground' => TRUE,
+        'position' => 'left',
+        'zposition' => 'front',
+      ),
+      'searchfield' => array(
+        'add' => FALSE,
+        'addTo' => 'menu',
+        'search' => FALSE,
+        'placeholder' => 'Rechercher',
+        'noResults' => 'No results found.',
+        'showLinksOnly' => TRUE,
+      ),
+    ),
+    'configurations' => array(
+      'clone' => FALSE,
+      'preventTabbing' => FALSE,
+      'panelNodetype' => 'div, ul, ol',
+      'transitionDuration' => 400,
+      'classNames' => array(
+        'label' => 'Label',
+        'panel' => 'Panel',
+        'selected' => 'Selected',
+        'buttonbars' => array(
+          'buttonbar' => 'anchors',
+        ),
+        'counters' => array(
+          'counter' => 'Counter',
+        ),
+        'fixedElements' => array(
+          'fixedTop' => 'FixedTop',
+          'fixedBottom' => 'FixedBottom',
+        ),
+        'footer' => array(
+          'panelFooter' => 'Footer',
+        ),
+        'header' => array(
+          'panelHeader' => 'Header',
+          'panelNext' => 'Next',
+          'panelPrev' => 'Prev',
+        ),
+        'labels' => array(
+          'collapsed' => 'Collapsed',
+        ),
+        'toggles' => array(
+          'toggle' => 'Toggle',
+          'check' => 'Check',
+        ),
+      ),
+      'dragOpen' => array(
+        'width' => array(
+          'perc' => 0.80000000000000004,
+          'min' => 140,
+          'max' => 440,
+        ),
+        'height' => array(
+          'perc' => 0.80000000000000004,
+          'min' => 140,
+          'max' => 880,
+        ),
+      ),
+      'offCanvas' => array(
+        'menuInjectMethod' => 'prepend',
+        'menuWrapperSelector' => 'body',
+        'pageNodetype' => 'div',
+        'pageSelector' => 'body > div',
+      ),
+    ),
+  );
+  $export['mmenu_item_mmenu_left'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -277,14 +418,14 @@ function domainedo_config_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_slogan';
-  $strongarm->value = 'domaine départemental d\'art et de culture';
+  $strongarm->value = 'domaine d\'art et de culture';
   $export['site_slogan'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'theme_default';
-  $strongarm->value = 'domainedo';
+  $strongarm->value = 'ddobs';
   $export['theme_default'] = $strongarm;
 
   $strongarm = new stdClass();

@@ -6,3 +6,10 @@ function domainedo_shows_update_7001() {
 	module_disable(array('conditional_fields'));
 	drupal_uninstall_modules(array('conditional_fields'));
 }
+
+/**
+ * Enable ds bootstrap layout to manage new theme layout
+ */
+function domainedo_shows_update_7002() {
+  module_enable(array('ds_bootstrap_layouts'));
+}

@@ -43,6 +43,7 @@ function domainedo_seo_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'location' => 'location',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'redirect',
   );
