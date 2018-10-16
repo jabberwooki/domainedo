@@ -121,7 +121,7 @@
           <?php endif; ?>
         </div>
         <div class="col-md-2" id="div-subscritpion">
-            <a id="link-subscritpion" href="abonnement">Abonnement</a>
+            <a id="link-subscritpion" href="/abonnement">Abonnement</a>
         </div>
     </div> <!-- Fin de la première ligne -->
 
