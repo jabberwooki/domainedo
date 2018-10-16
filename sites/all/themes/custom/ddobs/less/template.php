@@ -13,9 +13,11 @@ function ddobs_menu_tree($variables) {
  * This function allow to use specific tpl for each content type or node id
  */
 function ddobs_preprocess_page(&$variables, $hook) {
-  //some other stuff
   if (isset($variables['node'])) {
     $variables['theme_hook_suggestions'][] = 'page__type__'. $variables['node']->type;
     $variables['theme_hook_suggestions'][] = "page__node__" . $variables['node']->nid;
+  }
+  if(drupal_is_front_page()) {
+    drupal_add_js(drupal_get_path('theme', 'ddobs') . '/js/festivals_front.js');
   }
 }
