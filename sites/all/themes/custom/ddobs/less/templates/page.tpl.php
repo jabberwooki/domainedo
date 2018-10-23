@@ -336,7 +336,7 @@
         <div class="col-md-3 col-sm-6 col-xs-6">
             <p><strong>Domaine d'O</strong></p>
             <p>178, rue de la Carriérasse<br> 34090 Montpellier</p>
-            <p>Tél. : 0800 200 165<br> appel gratuit depuis un poste fixe</p>
+            <p>Tél. : 0800 200 165<br> service et appel gratuits</p>
         </div>
         <div class="col-md-3 col-sm-6 col-xs-6">
             <a href="http://www.montpellier3m.fr/">
