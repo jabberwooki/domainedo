@@ -2085,8 +2085,11 @@ strong{font-weight:700}
 }
 .node-type-show #imgfullshow #block-ds-extras-image-full-show .group-text-over-img .group-text-over-img-abs .field-name-field-subtitle{font-size:1.5em;font-style:normal;font-weight:600;color:#fff;margin-bottom:10px}
 .node-type-show section>ul.action-links{position:absolute;top:200px;left:-200px}
-.node-type-show .tabs--primary{position:absolute;top:0;left:-200px;border-left:1px solid red}
+@media (min-width:1578px){.node-type-show .tabs--primary{position:absolute;top:0;left:-200px;border-left:1px solid red}
 .node-type-show .tabs--primary li{float:none}
+}
+@media (max-width:1578px){.node-type-show .tabs--primary{margin-bottom:50px}
+}
 .node-type-show .node-show.view-mode-full{position:relative;top:-38px}
 .node-type-show .node-show.view-mode-full .field-name-body p{font-style:normal;font-weight:700;line-height:1.375em!important}
 .node-type-show .node-show.view-mode-full .field-name-field-reservation{display:none}

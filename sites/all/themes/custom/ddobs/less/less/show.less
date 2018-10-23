@@ -280,13 +280,20 @@
     top: 200px;
     left: -200px;
   }
-  .tabs--primary {
-    position: absolute;
-    top: 0px;
-    left: -200px;
-    border-left: 1px solid red;
-    li {
-      float: none;
+  @media (min-width: 1578px) {
+    .tabs--primary {
+      position: absolute;
+      top: 0px;
+      left: -200px;
+      border-left: 1px solid red;
+      li {
+        float: none;
+      }
+    }
+  }
+  @media (max-width: 1578px) {
+    .tabs--primary {
+      margin-bottom: 50px;
     }
   }
   .node-show.view-mode-full {
