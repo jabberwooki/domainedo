@@ -2121,7 +2121,7 @@ strong{font-weight:700}
 }
 .node-type-show .node-show.view-mode-full #group-wrap-book .field-name-field-boxoffice-url a{background-color:#f74e2d;color:#fff;text-align:center;text-transform:uppercase;text-decoration:none;border:1px solid #f74e2d;padding:12px 20px 8px;font-style:normal;font-weight:800;display:table;margin-top:-14px;font-size:1.125em}
 .node-type-show .node-show.view-mode-full #group-wrap-book .field-name-field-boxoffice-url a:hover{background-color:#fff;color:#f74e2d}
-@media (max-width:768px){.node-type-show .node-show.view-mode-full #group-wrap-book .field-name-field-boxoffice-url a{margin:20px auto}
+@media (max-width:768px){.node-type-show .node-show.view-mode-full #group-wrap-book .field-name-field-boxoffice-url a{margin:50px auto 20px}
 }
 .node-type-show .node-show.view-mode-full .all-dates{padding-left:15px;margin-bottom:30px}
 .node-type-show .node-show.view-mode-full .all-dates .label-above{margin-bottom:15px;font-size:1.125em}
