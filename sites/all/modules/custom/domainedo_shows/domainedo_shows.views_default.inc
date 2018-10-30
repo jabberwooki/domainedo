@@ -1372,6 +1372,15 @@ else {
     'link' => '0',
   );
   $handler->display->display_options['fields']['field_scald_image_1']['group_column'] = 'entity_id';
+  /* Field: Contenu: Festival */
+  $handler->display->display_options['fields']['field_festival']['id'] = 'field_festival';
+  $handler->display->display_options['fields']['field_festival']['table'] = 'field_data_field_festival';
+  $handler->display->display_options['fields']['field_festival']['field'] = 'field_festival';
+  $handler->display->display_options['fields']['field_festival']['label'] = 'festival';
+  $handler->display->display_options['fields']['field_festival']['settings'] = array(
+    'bypass_access' => 0,
+    'link' => 0,
+  );
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Contenu: Published */
@@ -1487,6 +1496,7 @@ else {
     t('date'),
     t('url'),
     t('https://www.domainedo.fr/[path]'),
+    t('festival'),
   );
   $export['shows'] = $view;
 
