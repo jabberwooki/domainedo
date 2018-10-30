@@ -1882,6 +1882,7 @@ strong{font-weight:700}
 .pagination>li a:hover,.pagination>li.active>span:hover{background-color:#f74e2d}
 .pagination>li a:hover{color:#FFF}
 .pagination>li.active>span{width:34px;height:34px;border:1px solid #c9c9c9;background-color:#f74e2d;border-radius:0;margin-right:2px;font-style:normal;font-weight:700}
+.pagination>li.next a{width:auto!important}
 .pagination .glyphicon-menu-left:before{content:"\e833"!important}
 .pagination .glyphicon-menu-right:before{content:"\e834"!important}
 .atom-align-left{margin:0 20px 0 0}
