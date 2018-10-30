@@ -1394,7 +1394,7 @@ else {
   $handler->display->display_options['filters']['field_show_dates_value']['field'] = 'field_show_dates_value';
   $handler->display->display_options['filters']['field_show_dates_value']['operator'] = '>=';
   $handler->display->display_options['filters']['field_show_dates_value']['default_date'] = 'now';
-  $handler->display->display_options['path'] = 'shows-metropole-agenda.csv';
+  $handler->display->display_options['path'] = 'shows-metropole-agenda';
   $translatables['shows'] = array(
     t('Master'),
     t('plus'),
