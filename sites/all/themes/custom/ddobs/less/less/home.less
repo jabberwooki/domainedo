@@ -171,7 +171,17 @@
           .views-field-field-link-more-infos {
             display: table;
             float: right;
-            margin-top: 60px;
+
+            @media (min-width: 1600px) {
+              margin-top: 60px !important;
+            }
+            @media (min-width: @screen-lg) {
+              margin-top: 30px;
+            }
+            @media (max-width: @screen-md) {
+              margin-top: 30px;
+
+            }
             text-transform: uppercase;
             a {
               .button-link-more();
@@ -182,10 +192,7 @@
                 clear: both;
               }
             }
-            @media (min-width: @screen-sm) and (max-width: 1600px) {
-              padding: 7px 5px;
-              margin-right: -3px;
-            }
+
           }
         }
       }

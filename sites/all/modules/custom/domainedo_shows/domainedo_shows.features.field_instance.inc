@@ -3488,24 +3488,7 @@ function domainedo_shows_field_default_field_instances() {
   // Exported field_instance: 'node-show-field_restauration'.
   $field_instances['node-show-field_restauration'] = array(
     'bundle' => 'show',
-    'default_value' => array(
-      0 => array(
-        'mee' => array(
-          'resource_manager' => array(
-            0 => array(
-              'weight' => 0,
-            ),
-          ),
-        ),
-        'value' => '<!--
-
-<p>Une restauration légère est proposée tous les soirs de spectacle une heure avant la représentation et une heure après la représentation.</p>
-
--->
-',
-        'format' => 'full_html',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(

@@ -22,6 +22,12 @@ body {
   .group-text-video {
     .classic-style();
   }
+  em {
+    font-style: italic;
+  }
+  strong {
+    font-weight: bold;
+  }
 }
 
 &.caret {
@@ -1307,6 +1313,12 @@ strong {
         &:hover {
           background-color: @grenadine-ddo;
         }
+      }
+    }
+    &.next,
+    &.pager-last {
+      a {
+        width: auto !important;
       }
     }
   }
