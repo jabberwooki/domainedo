@@ -618,7 +618,7 @@ function domainedo_shows_node_postsave($node, $op) {
       $festival_name = "festival-dhiver";
     }
 
-    watchdog('domainedo_shows', 'Node ' . $node->nid . ' field field_no_result up for festival ' .$festival_name);
+
 
     $no_result_msg =
       '<p class="field-no-result">Pas de spectacle mis en ligne pour la prochaine édition de ce festival.<br>
@@ -639,7 +639,11 @@ function domainedo_shows_node_postsave($node, $op) {
       '</div>'."\n" .
       '</div>'."\n";
 
-    $wrapper->field_no_result->value = $no_result_msg;
-    $wrapper->save();
+    if (!strpos($wrapper->field_no_result->value->raw() ,'myModal')) {
+      $wrapper->field_no_result->value = $no_result_msg;
+      $wrapper->save();
+      watchdog('domainedo_shows', 'Node ' . $node->nid . ' field field_no_result updated for festival ' .$festival_name);
+    }
+    else watchdog('domainedo_shows', 'Node ' . $node->nid . 'not updated');
   }
 }
