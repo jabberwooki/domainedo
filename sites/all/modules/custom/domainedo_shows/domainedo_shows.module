@@ -547,8 +547,12 @@ function domainedo_shows_views_pre_render(&$view) {
 	if ($view->name == 'shows' && ($view->current_display == 'block_1' || $view->current_display == 'list')) {
     drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_date_show_list.js');
 	}
+  if ($view->name == 'shows' && $view->current_display == 'list') {
+    drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_shows_festival_modal.js');
+  }
 
-  /*dpm($view->current_display);*/
+ /* dpm($view->name);
+  dpm($view->current_display);*/
 }
 
 /**
@@ -601,4 +605,41 @@ function domainedo_shows_menu_block_blocks() {
 				'sort'        => 0,
 		),
 	);
+}
+
+/**
+ * Implements hook_node_postsave().
+ */
+function domainedo_shows_node_postsave($node, $op) {
+  if ($node->type == 'festival') {
+    $wrapper = entity_metadata_wrapper('node', $node);
+    $festival_name =  $wrapper->field_festival_name->value();
+    if ($festival_name == "festival-hiver") {
+      $festival_name = "festival-dhiver";
+    }
+
+    watchdog('domainedo_shows', 'Node ' . $node->nid . ' field field_no_result up for festival ' .$festival_name);
+
+    $no_result_msg =
+      '<p class="field-no-result">Pas de spectacle mis en ligne pour la prochaine édition de ce festival.<br>
+        <a class="more-info-festival" href="/spectacles/' . $festival_name . '">Plus d\'informations</a>
+        </p>'."\n" .
+      '<div class="modal fade" id="myModal" role="dialog">'."\n" .
+      '<div class="modal-dialog">'."\n" .
+      ' <div class="modal-content">'."\n" .
+      '<div class="modal-header"><button class="close" data-dismiss="modal" type="button">×</button>'."\n" .
+      '<h4 class="modal-title">Pas de résultat</h4>'."\n" .
+
+      '<div class="modal-body modal-no-result">'."\n" .
+      '<p >Pas de spectacle mis en ligne pour la prochaine édition de ce festival.<br />'."\n" .
+      '<a class="more-info-festival" href="/spectacles/' . $festival_name . '">Plus d\'informations</a>.</p>'."\n" .
+      '</div>'."\n" .
+      '<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Fermer</button></div>'."\n" .
+      '</div>'."\n" .
+      '</div>'."\n" .
+      '</div>'."\n";
+
+    $wrapper->field_no_result->value = $no_result_msg;
+    $wrapper->save();
+  }
 }
