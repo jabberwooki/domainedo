@@ -1,3 +1,7 @@
+Domaine d'O 1.1.6 - 2018-11-03
+----------------------------
+Festival field no-result automatically filled 
+
 Domaine d'O 1.1.5 - 2018-10-30
 ----------------------------
 a lot of small things improved : https://mail.google.com/mail/u/0/#search/marion/FMfcgxvzLNSzNnPtmdBZJPFZRNtzhtdG
