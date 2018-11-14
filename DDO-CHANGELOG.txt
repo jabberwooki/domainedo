@@ -1,3 +1,7 @@
+Domaine d'O 1.1.9 - 2018-11-14
+----------------------------
+Export all next shows for metropole
+
 Domaine d'O 1.1.8 - 2018-11-14
 ----------------------------
 Manage 2 cols for festival
