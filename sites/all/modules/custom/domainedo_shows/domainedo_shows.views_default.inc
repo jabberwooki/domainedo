@@ -1346,7 +1346,7 @@ else {
   $handler->display->display_options['fields']['field_show_dates']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_show_dates']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['field_show_dates']['settings'] = array(
-    'format_type' => 'long',
+    'format_type' => 'short',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
