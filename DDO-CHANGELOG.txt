@@ -1,3 +1,7 @@
+Domaine d'O 1.1.8 - 2018-11-14
+----------------------------
+Manage 2 cols for festival
+
 Domaine d'O 1.1.7 - 2018-11-03
 ----------------------------
 no-result automatically filled infinite loop corrected
