@@ -21,7 +21,7 @@ function domainedo_shows_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'affiche et essentiel',
-    'weight' => '7',
+    'weight' => '4',
     'children' => array(
       0 => 'group_essential_festival',
       1 => 'group_affiche_festival',
@@ -255,6 +255,40 @@ function domainedo_shows_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_multimedia_right|node|festival|full';
+  $field_group->group_name = 'group_multimedia_right';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'festival';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_text_video';
+  $field_group->data = array(
+    'label' => 'Group right',
+    'weight' => '7',
+    'children' => array(
+      0 => 'field_scald_gallery',
+      1 => 'field_scald_image',
+      2 => 'field_scald_video',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Group right',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-multimedia-right col-md-6',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_multimedia_right|node|festival|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_psr|node|show|full';
   $field_group->group_name = 'group_psr';
   $field_group->entity_type = 'node';
@@ -421,6 +455,38 @@ function domainedo_shows_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_text_left|node|festival|full';
+  $field_group->group_name = 'group_text_left';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'festival';
+  $field_group->mode = 'full';
+  $field_group->parent_name = 'group_text_video';
+  $field_group->data = array(
+    'label' => 'Group left',
+    'weight' => '6',
+    'children' => array(
+      0 => 'body',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Group left',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-text-left col-md-6',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_text_left|node|festival|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_text_over_img_abs|node|show|full';
   $field_group->group_name = 'group_text_over_img_abs';
   $field_group->entity_type = 'node';
@@ -495,10 +561,10 @@ function domainedo_shows_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Texte et Vidéo',
-    'weight' => '8',
+    'weight' => '5',
     'children' => array(
-      0 => 'body',
-      1 => 'field_scald_video',
+      0 => 'group_text_left',
+      1 => 'group_multimedia_right',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -653,6 +719,8 @@ function domainedo_shows_field_group_info() {
   t('Entoure image');
   t('Essentiel Festival');
   t('Group UL short links');
+  t('Group left');
+  t('Group right');
   t('Groupe short links');
   t('Liens et résultats');
   t('Photo et statut réservation');

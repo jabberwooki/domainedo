@@ -24,7 +24,9 @@ function domainedo_shows_node_view_alter(&$build) {
   $now = new DateTime( $now );
   $now = $now->format('Ymd'); 
   $show_is_past = false;
-  
+  if ($build['#bundle'] == 'festival') {
+    drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_shows_manageTwoColsFestival.js');
+  }
 	if ($build['#bundle'] == 'show') {
     if ($build['#view_mode'] == 'teaser') {
       drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_date_show_list_festival.js');

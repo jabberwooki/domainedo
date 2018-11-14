@@ -61,7 +61,7 @@ function domainedo_shows_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 7,
+      'weight' => 6,
     ),
   );
 
@@ -192,7 +192,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 9,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -252,7 +252,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 25,
+        'weight' => 23,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -328,7 +328,7 @@ function domainedo_shows_field_default_field_instances() {
         'context' => 'sdl_editor_representation',
       ),
       'type' => 'atom_reference_textfield',
-      'weight' => 6,
+      'weight' => 5,
     ),
   );
 
@@ -358,7 +358,7 @@ function domainedo_shows_field_default_field_instances() {
           'view_mode' => 'teaser',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 6,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -467,7 +467,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 19,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -530,7 +530,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 20,
+        'weight' => 18,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -665,7 +665,7 @@ function domainedo_shows_field_default_field_instances() {
         'context' => 'sdl_editor_representation',
       ),
       'type' => 'atom_reference_textfield',
-      'weight' => 9,
+      'weight' => 8,
     ),
   );
 
@@ -690,7 +690,7 @@ function domainedo_shows_field_default_field_instances() {
           'link' => 0,
         ),
         'type' => 'full',
-        'weight' => 4,
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -721,7 +721,7 @@ function domainedo_shows_field_default_field_instances() {
         'context' => 'sdl_editor_representation',
       ),
       'type' => 'atom_reference_textfield',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 
@@ -730,7 +730,7 @@ function domainedo_shows_field_default_field_instances() {
     'bundle' => 'festival',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Image en surimpression.',
+    'description' => 'Image en cas de manque de vidéo',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -741,9 +741,12 @@ function domainedo_shows_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 22,
+        'module' => 'domainedo_media',
+        'settings' => array(
+          'link' => 0,
+        ),
+        'type' => 'full',
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -752,11 +755,13 @@ function domainedo_shows_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_scald_image',
-    'label' => 'Image en surimpression',
+    'label' => 'Image droite',
     'required' => 0,
     'settings' => array(
+      'allow_override' => 0,
       'referencable_types' => array(
         'audio' => 0,
         'file' => 0,
@@ -768,13 +773,13 @@ function domainedo_shows_field_default_field_instances() {
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
+      'active' => 1,
       'module' => 'atom_reference',
       'settings' => array(
         'context' => 'sdl_editor_representation',
       ),
       'type' => 'atom_reference_textfield',
-      'weight' => 5,
+      'weight' => 10,
     ),
   );
 
@@ -799,7 +804,7 @@ function domainedo_shows_field_default_field_instances() {
           'link' => 0,
         ),
         'type' => 'full',
-        'weight' => 5,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -886,7 +891,7 @@ function domainedo_shows_field_default_field_instances() {
         'context' => 'sdl_editor_representation',
       ),
       'type' => 'atom_reference_textfield',
-      'weight' => 11,
+      'weight' => 9,
     ),
   );
 
@@ -913,7 +918,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 24,
+        'weight' => 22,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -960,7 +965,7 @@ function domainedo_shows_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 23,
+        'weight' => 21,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -998,7 +1003,7 @@ function domainedo_shows_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 8,
+      'weight' => 7,
     ),
   );
 
@@ -1021,7 +1026,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 8,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -5621,8 +5626,8 @@ function domainedo_shows_field_default_field_instances() {
   t('Géolocalisation');
   t('Identifiant billetterie');
   t('Image');
-  t('Image en surimpression');
-  t('Image en surimpression.');
+  t('Image droite');
+  t('Image en cas de manque de vidéo');
   t('Infos supplémentaires');
   t('Jauge');
   t('Lien commentaires');
