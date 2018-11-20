@@ -535,6 +535,9 @@ function domainedo_shows_form_festival_node_form_alter(&$form, &$form_state, $fo
  * Implements hook_views_pre_render().
  */
 function domainedo_shows_views_pre_render(&$view) {
+  if ($view->name == 'calendar' && $view->current_display == 'page_1') {
+    drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_shows_calendar.js');
+  }
 	/*if ($view->name == 'shows' && $view->current_display == 'list') {
 		$block = module_invoke('views', 'block_view', '-exp-shows-list');
 		$view->header['area']->options['content'] = render($block['content']);
