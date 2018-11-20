@@ -17,7 +17,7 @@ jQuery(function($) {
         // Cache tous les groupes de spectacles de droite
         $(".group-show-domainedo").hide(0);
         // affiche le groupe concerné
-        $("."+$(this).attr('id')).show();
+        $("."+$(this).attr('id')).show(1500);
       });
 
       // création d'un groupe avec les spectacles

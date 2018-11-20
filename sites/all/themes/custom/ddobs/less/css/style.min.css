@@ -2374,6 +2374,7 @@ strong{font-weight:700}
 .node-type-page .paragraphs-items-field-paragraphe-complexe>div>div>.field-item .group-img-txt h3.title-open-close,.node-type-page-complexe .paragraphs-items-field-paragraphe-complexe>div>div>.field-item .group-img-txt h3.title-open-close{position:absolute;bottom:0;padding:10px;width:100%;color:#fff;font-size:1em;text-transform:uppercase;font-weight:800;z-index:2}
 .node-type-page .paragraphs-items-field-paragraphe-complexe>div>div>.field-item .field-name-field-link-more-info a,.node-type-page-complexe .paragraphs-items-field-paragraphe-complexe>div>div>.field-item .field-name-field-link-more-info a{padding:15px 15px 15px 20px;border:2px solid #f74e2d;display:table;margin:0 auto 20px;color:#f74e2d;text-decoration:none;float:right;text-transform:uppercase;font-size:.71875em!important;font-style:normal;font-weight:700}
 .node-type-page .paragraphs-items-field-paragraphe-complexe>div>div>.field-item .field-name-field-link-more-info a:after,.node-type-page-complexe .paragraphs-items-field-paragraphe-complexe>div>div>.field-item .field-name-field-link-more-info a:after{color:#f74e2d!important;content:"\e834";position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;font-size:1em;speak:none;text-decoration:inherit;width:1em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;margin-left:10px;margin-right:0;display:none}
+.view-calendar #calendar-detail-domainedo .right-date,.view-calendar .view-header li.next a,.view-calendar .view-header li.prev a{font-family:Gotham,Arial,sans-serif}
 .node-type-page .paragraphs-items-field-paragraphe-complexe>div>div>.field-item .field-name-field-link-more-info a:hover,.node-type-page-complexe .paragraphs-items-field-paragraphe-complexe>div>div>.field-item .field-name-field-link-more-info a:hover{background-color:#f74e2d;color:#FFF}
 .node-type-page .paragraphs-items-field-paragraphe-complexe>div>div>.field-item .field-name-field-link-more-info a:hover:after,.node-type-page-complexe .paragraphs-items-field-paragraphe-complexe>div>div>.field-item .field-name-field-link-more-info a:hover:after{color:#fff!important}
 .node-type-page .field-name-field-summary-page-complexe p,.node-type-page-complexe .field-name-field-summary-page-complexe p{font-size:13px!important;line-height:20px!important}
@@ -2408,8 +2409,14 @@ strong{font-weight:700}
 .view-calendar .calendar-calendar .month-view table#calendar-domainedo td:hover{background-color:#efefef}
 .view-calendar .calendar-calendar .month-view table#calendar-domainedo td div.inner div{background-color:transparent!important}
 .node-type-article #block-ds-extras-top-article picture.img-responsive:after,.node-type-news #block-ds-extras-top-event picture.img-responsive:after,.node-type-tech-document .group-img-wrapper .field-name-field-scald-image:after{left:0;background:linear-gradient(to bottom,rgba(0,0,0,0),#000);content:"";bottom:0}
-.view-calendar #calendar-detail-domainedo{float:left;width:40%;min-height:500px}
-.view-calendar #calendar-detail-domainedo .right-date{clear:both;display:block;text-align:center;font-family:Gotham,Arial,sans-serif;font-style:normal;font-weight:600;text-transform:uppercase}
+.view-calendar #calendar-detail-domainedo{width:40%;min-height:500px}
+@media (min-width:768px){.view-calendar #calendar-detail-domainedo{float:left;margin-left:20px}
+}
+.view-calendar #calendar-detail-domainedo .right-date{clear:both;display:block;text-align:center;font-style:normal;font-weight:600;text-transform:uppercase;margin-top:-30px;margin-bottom:30px}
+.view-calendar #calendar-detail-domainedo .views-field-title a{text-transform:uppercase;font-size:2em;padding-bottom:9px;display:block;font-style:normal;font-weight:900;text-decoration:none;color:#f74e2d!important}
+.view-calendar #calendar-detail-domainedo .views-field-field-show-dates{font-style:normal;font-weight:900;font-size:2em;float:right}
+.view-calendar #calendar-detail-domainedo .views-field-field-scald-image{width:70px}
+.view-calendar #calendar-detail-domainedo .field-name-scald-authors{display:none}
 .view-calendar #calendar-detail-domainedo .date-full-domainedo{clip:rect(1px,1px,1px,1px);height:1px;margin:0;overflow:hidden;padding:0;position:absolute;white-space:nowrap;width:1px;z-index:-1000}
 .node-type-article .field-name-field-image-colonne-droite,.node-type-news .field-name-field-image-colonne-droite{margin-bottom:20px!important}
 .node-type-article #block-system-main{margin-top:20px}

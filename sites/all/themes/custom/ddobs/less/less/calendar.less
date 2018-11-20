@@ -21,9 +21,14 @@
     li.prev {
       a {
         width: 90px;
+        font-family: "Gotham", Arial, sans-serif;
       }
     }
-
+    li.next {
+      a {
+        font-family: "Gotham", Arial, sans-serif;
+      }
+    }
   }
   /* Specific calendar **************************************************************************************************/
   .calendar-calendar .month-view table#calendar-domainedo {
@@ -123,7 +128,10 @@
     }
   }
   #calendar-detail-domainedo {
-    float: left;
+    @media (min-width: @screen-sm) {
+      float: left;
+      margin-left: 20px;
+    }
     width: 40%;
     min-height: 500px;
     
@@ -135,6 +143,30 @@
       font-style: normal;
       font-weight: 600;
       text-transform: uppercase;
+      margin-top: -30px;
+      margin-bottom: 30px;
+    }
+    .views-field-title a{
+      text-transform: uppercase;
+      font-size: 2em;
+      padding-bottom: 9px;
+      display: block;
+      font-style: normal;
+      font-weight: 900;
+      text-decoration: none;
+      color: @grenadine-ddo !important;
+    }
+    .views-field-field-show-dates {
+      font-style: normal;
+      font-weight: 900;
+      font-size: 2em;
+      float: right;
+    }
+    .views-field-field-scald-image {
+      width: 70px;
+    }
+    .field-name-scald-authors {
+      display: none;
     }
     
     .date-full-domainedo {
