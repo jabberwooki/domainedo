@@ -2397,14 +2397,14 @@ strong{font-weight:700}
 .view-calendar .calendar-calendar .month-view table#calendar-domainedo td.date-box>div>div{border:0;background-color:transparent}
 .view-calendar .calendar-calendar .month-view table#calendar-domainedo td.single-day{height:60px;border:0}
 .view-calendar .calendar-calendar .month-view table#calendar-domainedo td.single-day.empty{background-color:transparent}
-.view-calendar .calendar-calendar .month-view table#calendar-domainedo td.single-day .group-show-domainedo{display:table;margin:0 auto}
-.view-calendar .calendar-calendar .month-view table#calendar-domainedo td.single-day .group-show-domainedo.group-size-6{width:60px}
-.view-calendar .calendar-calendar .month-view table#calendar-domainedo td.single-day .group-show-domainedo.group-size-5{width:50px}
-.view-calendar .calendar-calendar .month-view table#calendar-domainedo td.single-day .group-show-domainedo.group-size-4{width:60px}
-.view-calendar .calendar-calendar .month-view table#calendar-domainedo td.single-day .group-show-domainedo.group-size-3{width:30px}
-.view-calendar .calendar-calendar .month-view table#calendar-domainedo td.single-day .group-show-domainedo.group-size-2{width:20px}
-.view-calendar .calendar-calendar .month-view table#calendar-domainedo td.single-day .group-show-domainedo.group-size-1{width:10px}
-.view-calendar .calendar-calendar .month-view table#calendar-domainedo td.single-day .group-show-domainedo .item-show-domainedo{width:9px;height:9px;background-color:red!important;float:left;margin:1px 1px 1px 0;border-radius:7px}
+.view-calendar .calendar-calendar .month-view table#calendar-domainedo td.single-day .group-show-points-domainedo{display:table;margin:0 auto}
+.view-calendar .calendar-calendar .month-view table#calendar-domainedo td.single-day .group-show-points-domainedo.group-size-6{width:60px}
+.view-calendar .calendar-calendar .month-view table#calendar-domainedo td.single-day .group-show-points-domainedo.group-size-5{width:50px}
+.view-calendar .calendar-calendar .month-view table#calendar-domainedo td.single-day .group-show-points-domainedo.group-size-4{width:60px}
+.view-calendar .calendar-calendar .month-view table#calendar-domainedo td.single-day .group-show-points-domainedo.group-size-3{width:30px}
+.view-calendar .calendar-calendar .month-view table#calendar-domainedo td.single-day .group-show-points-domainedo.group-size-2{width:20px}
+.view-calendar .calendar-calendar .month-view table#calendar-domainedo td.single-day .group-show-points-domainedo.group-size-1{width:10px}
+.view-calendar .calendar-calendar .month-view table#calendar-domainedo td.single-day .group-show-points-domainedo .item-show-point-domainedo{width:9px;height:9px;background-color:red!important;float:left;margin:1px 1px 1px 0;border-radius:7px}
 .node-type-article .field-name-field-image-colonne-droite,.node-type-news .field-name-field-image-colonne-droite{margin-bottom:20px!important}
 .view-calendar .calendar-calendar .month-view table#calendar-domainedo td div.day{float:none;width:auto}
 .view-calendar .calendar-calendar .month-view table#calendar-domainedo td:hover{background-color:#efefef}

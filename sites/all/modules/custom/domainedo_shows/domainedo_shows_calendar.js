@@ -8,13 +8,14 @@ jQuery(function($) {
       // création du container des points avec centrage dans la case
       width_container_points = (nb_points > 6) ? 6 : nb_points
       container_points = $("<div></div>",{
-        "class": "group-show-domainedo group-size-"+ width_container_points,
+        "class": "group-show-points-domainedo group-size-"+ width_container_points,
+        "id": "group-show-points-domainedo-" + index,
       }).appendTo($(this));
 
       // création des points et placement dans le container
-      $(".view-item", $(this)).each(function(index) {
+      $(".view-item", $(this)).each(function(num) {
         $("<div></div>",{
-          "class": "item-show-domainedo",
+          "class": "item-show-point-domainedo",
         }).appendTo(container_points);
         $(this).appendTo("#calendar-detail-domainedo");
       });
