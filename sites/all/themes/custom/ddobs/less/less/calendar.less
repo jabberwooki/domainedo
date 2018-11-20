@@ -74,6 +74,10 @@
         .group-show-points-domainedo {
           display: table;
           margin: 0 auto;
+          min-height : 50px;
+          &:hover {
+            cursor: pointer;
+          }
           &.group-size-6{
             width: 60px;
           }
@@ -95,7 +99,7 @@
           .item-show-point-domainedo {
             width: 9px;
             height: 9px;
-            background-color: red !important;
+            background-color: @grenadine-ddo !important;
             float: left;
             margin: 1px 1px 1px 0;
             border-radius: 7px;
@@ -120,8 +124,29 @@
   }
   #calendar-detail-domainedo {
     float: left;
-    border: 1px solid red;
     width: 40%;
     min-height: 500px;
+    
+    .right-date {
+      clear: both;
+      display: block;
+      text-align: center;
+      font-family: "Gotham", Arial, sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    
+    .date-full-domainedo {
+      clip: rect(1px,1px,1px,1px);
+      height: 1px;
+      margin: 0;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+      z-index: -1000;
+    }
   }
 }
