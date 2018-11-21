@@ -123,6 +123,13 @@ function domainedo_shows_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['hide_alter_empty'] = FALSE;
+  /* Field: Contenu: Chemin */
+  $handler->display->display_options['fields']['path']['id'] = 'path';
+  $handler->display->display_options['fields']['path']['table'] = 'node';
+  $handler->display->display_options['fields']['path']['field'] = 'path';
+  $handler->display->display_options['fields']['path']['label'] = '';
+  $handler->display->display_options['fields']['path']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
   /* Field: Date heure seulement */
   $handler->display->display_options['fields']['field_show_dates']['id'] = 'field_show_dates';
   $handler->display->display_options['fields']['field_show_dates']['table'] = 'field_data_field_show_dates';
@@ -145,11 +152,13 @@ function domainedo_shows_views_default_views() {
   $handler->display->display_options['fields']['field_scald_image']['table'] = 'field_data_field_scald_image';
   $handler->display->display_options['fields']['field_scald_image']['field'] = 'field_scald_image';
   $handler->display->display_options['fields']['field_scald_image']['label'] = '';
+  $handler->display->display_options['fields']['field_scald_image']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_scald_image']['alter']['text'] = '<a href="[path]">[field_scald_image]</a>';
   $handler->display->display_options['fields']['field_scald_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_scald_image']['click_sort_column'] = 'sid';
   $handler->display->display_options['fields']['field_scald_image']['type'] = 'petit_100';
   $handler->display->display_options['fields']['field_scald_image']['settings'] = array(
-    'link' => '1',
+    'link' => '0',
   );
   /* Field: Date longue sans heure */
   $handler->display->display_options['fields']['field_show_dates_1']['id'] = 'field_show_dates_1';
@@ -432,6 +441,7 @@ function domainedo_shows_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('Month'),
+    t('<a href="[path]">[field_scald_image]</a>'),
     t('Tout'),
     t('Week'),
     t('Day'),
