@@ -1,3 +1,7 @@
+Domaine d'O 1.1.11 - 2018-11-21
+----------------------------
+Calendar link error corrected
+
 Domaine d'O 1.1.10 - 2018-11-21
 ----------------------------
 Calendar new display
