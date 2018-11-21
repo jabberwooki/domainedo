@@ -2378,16 +2378,16 @@ strong{font-weight:700}
 .node-type-page .paragraphs-items-field-paragraphe-complexe>div>div>.field-item .field-name-field-link-more-info a:hover,.node-type-page-complexe .paragraphs-items-field-paragraphe-complexe>div>div>.field-item .field-name-field-link-more-info a:hover{background-color:#f74e2d;color:#FFF}
 .node-type-page .paragraphs-items-field-paragraphe-complexe>div>div>.field-item .field-name-field-link-more-info a:hover:after,.node-type-page-complexe .paragraphs-items-field-paragraphe-complexe>div>div>.field-item .field-name-field-link-more-info a:hover:after{color:#fff!important}
 .node-type-page .field-name-field-summary-page-complexe p,.node-type-page-complexe .field-name-field-summary-page-complexe p{font-size:13px!important;line-height:20px!important}
-@media (min-width:768px){.page-calendrier ul.pagination.pull-right{margin-right:52%}
+@media (min-width:992px){.page-calendrier ul.pagination.pull-right{margin-right:52%}
 }
 .view-calendar .view-header{position:relative}
 .view-calendar .view-header h3{position:absolute;top:-80px;left:-20px;font-size:2em;text-transform:uppercase;margin:96px 0 20px 24px;font-weight:700}
 .view-calendar .view-header li.prev a{width:90px}
 .view-calendar .calendar-calendar .month-view table#calendar-domainedo{float:left}
-@media (max-width:768px){.view-calendar .calendar-calendar .month-view table#calendar-domainedo{width:100%}
+@media (max-width:992px){.view-calendar .calendar-calendar .month-view table#calendar-domainedo{width:100%}
 .view-calendar .calendar-calendar .month-view table#calendar-domainedo td{width:14%}
 }
-@media (min-width:768px){.view-calendar .calendar-calendar .month-view table#calendar-domainedo{width:auto}
+@media (min-width:992px){.view-calendar .calendar-calendar .month-view table#calendar-domainedo{width:auto}
 }
 .view-calendar .calendar-calendar .month-view table#calendar-domainedo th{padding:15px 0 30px;background-color:transparent;border:0;font-family:Gotham,Arial,sans-serif;font-style:normal;font-weight:600;text-transform:uppercase}
 .view-calendar .calendar-calendar .month-view table#calendar-domainedo td{width:80px;overflow:hidden;transition:.5s}
@@ -2409,14 +2409,15 @@ strong{font-weight:700}
 .view-calendar .calendar-calendar .month-view table#calendar-domainedo td:hover{background-color:#efefef}
 .view-calendar .calendar-calendar .month-view table#calendar-domainedo td div.inner div{background-color:transparent!important}
 .node-type-article #block-ds-extras-top-article picture.img-responsive:after,.node-type-news #block-ds-extras-top-event picture.img-responsive:after,.node-type-tech-document .group-img-wrapper .field-name-field-scald-image:after{left:0;background:linear-gradient(to bottom,rgba(0,0,0,0),#000);content:"";bottom:0}
-.view-calendar #calendar-detail-domainedo{width:40%;min-height:500px}
-@media (min-width:768px){.view-calendar #calendar-detail-domainedo{float:left;margin-left:20px}
+@media (min-width:992px){.view-calendar #calendar-detail-domainedo{float:left;margin-left:20px;width:35%;min-height:500px}
+}
+@media (max-width:992px){.view-calendar #calendar-detail-domainedo{float:none;margin-left:20px}
 }
 .view-calendar #calendar-detail-domainedo .right-date{clear:both;display:block;text-align:center;font-style:normal;font-weight:600;text-transform:uppercase;margin-top:-30px;margin-bottom:30px}
 .view-calendar #calendar-detail-domainedo .views-field-title a{text-transform:uppercase;font-size:2em;padding-bottom:9px;display:block;font-style:normal;font-weight:900;text-decoration:none;color:#f74e2d!important}
 .view-calendar #calendar-detail-domainedo .views-field-field-show-dates{font-style:normal;font-weight:900;font-size:2em;float:right}
 .view-calendar #calendar-detail-domainedo .views-field-field-scald-image{width:70px}
-.view-calendar #calendar-detail-domainedo .field-name-scald-authors{display:none}
+.view-calendar #calendar-detail-domainedo .field-name-scald-authors,.view-calendar #calendar-detail-domainedo .views-field-field-show-dates-3{display:none}
 .view-calendar #calendar-detail-domainedo .date-full-domainedo{clip:rect(1px,1px,1px,1px);height:1px;margin:0;overflow:hidden;padding:0;position:absolute;white-space:nowrap;width:1px;z-index:-1000}
 .node-type-article .field-name-field-image-colonne-droite,.node-type-news .field-name-field-image-colonne-droite{margin-bottom:20px!important}
 .node-type-article #block-system-main{margin-top:20px}

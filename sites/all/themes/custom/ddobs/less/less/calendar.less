@@ -1,7 +1,7 @@
 .page-calendrier{
   ul.pagination.pull-right {
     /* pour les grands écrans  ***********/
-    @media (min-width: @screen-sm) {
+    @media (min-width: @screen-md) {
       margin-right: 52%;
     }
   }
@@ -34,14 +34,14 @@
   .calendar-calendar .month-view table#calendar-domainedo {
     float: left;
     /* pour les petits écrans  ***********/
-    @media (max-width: @screen-sm) {
+    @media (max-width: @screen-md) {
       width: 100%;
       td {
         width: 14%;
       }
     }
     /* pour les grands écrans  ***********/
-    @media (min-width: @screen-sm) {
+    @media (min-width: @screen-md) {
       width: auto;
     }
     /* Pour petits et grands écrans ****************/
@@ -128,13 +128,20 @@
     }
   }
   #calendar-detail-domainedo {
-    @media (min-width: @screen-sm) {
+    /* Grands écrans ****************************/
+    @media (min-width: @screen-md) {
       float: left;
       margin-left: 20px;
+      width: 35%;
+      min-height: 500px;
+
     }
-    width: 40%;
-    min-height: 500px;
-    
+    /* Petits écrans ****************************/
+    @media (max-width: @screen-md) {
+      float: none;
+      margin-left: 20px;
+    }
+
     .right-date {
       clear: both;
       display: block;
@@ -165,10 +172,10 @@
     .views-field-field-scald-image {
       width: 70px;
     }
-    .field-name-scald-authors {
+    .field-name-scald-authors,
+    .views-field-field-show-dates-3 {
       display: none;
     }
-    
     .date-full-domainedo {
       clip: rect(1px,1px,1px,1px);
       height: 1px;
