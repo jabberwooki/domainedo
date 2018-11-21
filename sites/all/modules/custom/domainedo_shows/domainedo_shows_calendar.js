@@ -22,6 +22,8 @@ jQuery(function($) {
         $(".group-show-domainedo").hide(0);
         // affiche le groupe concerné
         $("." + $(this).attr('id') ).show(1500);
+        $(".selected-day-domainedo").removeClass("selected-day-domainedo");
+        $(this).addClass("selected-day-domainedo");
 
         // Scroll to result
         if($(window).width() < 993) {
@@ -42,10 +44,11 @@ jQuery(function($) {
         // récupérer la date sur le premier spectacle
         if(num == 0) {
           date_short_english = $(".date-short-english",$(this)).text();
-          td_date = $( "[data-date='" + date_short_english + "']" );
+          td_date = $( ".date-box[data-date='" + date_short_english + "']");
           td_date.attr("data-target", $(container_points).attr('id'));
-          // attache l'événement click sur le lien de la cellule concernée
-          deleteClickOnDay($("a", td_date));
+
+          // Supprime le lien de la cellule concernée
+          td_date.html('<div class="effective-day-caleandar-domainedo">' + td_date.text() + '</div>');
 
           right_date = $(".date-full-domainedo",$(this)).text();
           right_date = $("<div></div>",{
@@ -64,7 +67,9 @@ jQuery(function($) {
       });
 
       // affiche le groupe concerné au click sur le td
-      td_date.click(function() { //animate({"font-size": "1.5em"},2000).
+      td_date.click(function() {
+        $(".selected-day-domainedo").removeClass("selected-day-domainedo");
+        $(this).addClass("selected-day-domainedo");
         // Cache tous les groupes de spectacles de droite
         $(".group-show-domainedo").hide(0);
         // Scroll to result
@@ -87,21 +92,5 @@ jQuery(function($) {
 
     }
   });
-
-  function deleteClickOnDay(theLink) {
-    theLink.click(function() {
-
-      // Cache tous les groupes de spectacles de droite
-      $(".group-show-domainedo").hide(0);
-      // Scroll to result
-      if($(window).width() < 993) {
-        $('html,body').animate({
-          scrollTop: ($("#calendar-detail-domainedo").offset().top + 130)
-        }, 'slow');
-      }
-      $("." + theLink.parent().parent().parent().attr("data-target")).show(1500);
-      return false;
-    });
-  }
 });
 

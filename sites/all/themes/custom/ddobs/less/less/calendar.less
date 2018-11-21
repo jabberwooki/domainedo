@@ -1,7 +1,10 @@
 .page-calendrier{
   ul.pagination.pull-right {
     /* pour les grands écrans  ***********/
-    @media (min-width: @screen-md) {
+    @media (min-width: @screen-md) and (max-width: @screen-lg) {
+      margin-right: 45%;
+    }
+    @media (min-width: @screen-lg) {
       margin-right: 52%;
     }
   }
@@ -42,7 +45,10 @@
     }
     /* pour les grands écrans  ***********/
     @media (min-width: @screen-md) {
-      width: auto;
+      width: auto !important;
+      td {
+        width: 80px;
+      }
     }
     /* Pour petits et grands écrans ****************/
     th {
@@ -55,8 +61,17 @@
       text-transform: uppercase;
     }
     td {
-      width: 80px;
+      .effective-day-caleandar-domainedo {
+        color: @noir-ddo;
+        font-style: normal;
+        font-weight: 900;
+        &:hover {
+          color: @grenadine-ddo;
+          cursor: pointer;
+        }
+      }
       &.date-box {
+        text-align: center;
         &.empty {
           background-color: transparent;
         }
@@ -77,6 +92,9 @@
           background-color: transparent;
         }
         .group-show-points-domainedo {
+          &.selected-day-domainedo {
+            background-color: @gris-fonce-ddo !important;
+          }
           display: table;
           margin: 0 auto;
           min-height : 50px;
@@ -109,6 +127,12 @@
             margin: 1px 1px 1px 0;
             border-radius: 7px;
           }
+          &:hover {
+            .item-show-point-domainedo {
+              background-color: @noir-ddo !important;
+
+            }
+          }
         }
       }
       div.day {
@@ -126,6 +150,9 @@
         }
       }
     }
+    .selected-day-domainedo {
+      background-color: @gris-fonce-ddo !important;
+    }
   }
   #calendar-detail-domainedo {
     /* Grands écrans ****************************/
@@ -141,17 +168,23 @@
       float: none;
       margin-left: 20px;
     }
-
+    /* Zone de droite pour petits et grands écrans ********************************************************************/
     .right-date {
       clear: both;
-      display: block;
-      text-align: center;
+      display: table;
       font-family: "Gotham", Arial, sans-serif;
       font-style: normal;
       font-weight: 600;
       text-transform: uppercase;
-      margin-top: -30px;
-      margin-bottom: 30px;
+      margin-top: -30px auto 20px auto;
+      font-size: 1.6em;
+      .underline-grenadine();
+      &:after {
+        display: block;
+        border: 4px solid @grenadine-off-ddo;
+        margin-top: 2px;
+        margin-bottom: 20px;
+      }
     }
     .views-field-title a{
       text-transform: uppercase;
