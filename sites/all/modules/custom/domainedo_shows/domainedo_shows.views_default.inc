@@ -123,6 +123,71 @@ function domainedo_shows_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['hide_alter_empty'] = FALSE;
+  /* Field: Date heure seulement */
+  $handler->display->display_options['fields']['field_show_dates']['id'] = 'field_show_dates';
+  $handler->display->display_options['fields']['field_show_dates']['table'] = 'field_data_field_show_dates';
+  $handler->display->display_options['fields']['field_show_dates']['field'] = 'field_show_dates';
+  $handler->display->display_options['fields']['field_show_dates']['ui_name'] = 'Date heure seulement';
+  $handler->display->display_options['fields']['field_show_dates']['label'] = '';
+  $handler->display->display_options['fields']['field_show_dates']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_show_dates']['settings'] = array(
+    'format_type' => 'heure_seulement',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
+  );
+  $handler->display->display_options['fields']['field_show_dates']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_show_dates']['delta_offset'] = '0';
+  /* Field: Field: Image */
+  $handler->display->display_options['fields']['field_scald_image']['id'] = 'field_scald_image';
+  $handler->display->display_options['fields']['field_scald_image']['table'] = 'field_data_field_scald_image';
+  $handler->display->display_options['fields']['field_scald_image']['field'] = 'field_scald_image';
+  $handler->display->display_options['fields']['field_scald_image']['label'] = '';
+  $handler->display->display_options['fields']['field_scald_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_scald_image']['click_sort_column'] = 'sid';
+  $handler->display->display_options['fields']['field_scald_image']['type'] = 'petit_100';
+  $handler->display->display_options['fields']['field_scald_image']['settings'] = array(
+    'link' => '1',
+  );
+  /* Field: Date longue sans heure */
+  $handler->display->display_options['fields']['field_show_dates_1']['id'] = 'field_show_dates_1';
+  $handler->display->display_options['fields']['field_show_dates_1']['table'] = 'field_data_field_show_dates';
+  $handler->display->display_options['fields']['field_show_dates_1']['field'] = 'field_show_dates';
+  $handler->display->display_options['fields']['field_show_dates_1']['ui_name'] = 'Date longue sans heure';
+  $handler->display->display_options['fields']['field_show_dates_1']['label'] = '';
+  $handler->display->display_options['fields']['field_show_dates_1']['element_class'] = 'date-full-domainedo';
+  $handler->display->display_options['fields']['field_show_dates_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_show_dates_1']['settings'] = array(
+    'format_type' => 'long_sans_heure',
+    'fromto' => 'both',
+    'multiple_number' => '1',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
+  );
+  $handler->display->display_options['fields']['field_show_dates_1']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_show_dates_1']['delta_limit'] = '';
+  $handler->display->display_options['fields']['field_show_dates_1']['delta_offset'] = '0';
+  /* Field: Date courte anglaise */
+  $handler->display->display_options['fields']['field_show_dates_3']['id'] = 'field_show_dates_3';
+  $handler->display->display_options['fields']['field_show_dates_3']['table'] = 'field_data_field_show_dates';
+  $handler->display->display_options['fields']['field_show_dates_3']['field'] = 'field_show_dates';
+  $handler->display->display_options['fields']['field_show_dates_3']['ui_name'] = 'Date courte anglaise';
+  $handler->display->display_options['fields']['field_show_dates_3']['label'] = '';
+  $handler->display->display_options['fields']['field_show_dates_3']['element_class'] = 'date-short-english';
+  $handler->display->display_options['fields']['field_show_dates_3']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_show_dates_3']['settings'] = array(
+    'format_type' => 'court_anglais',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
+  );
+  $handler->display->display_options['fields']['field_show_dates_3']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_show_dates_3']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Date: Date (node) */
   $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
