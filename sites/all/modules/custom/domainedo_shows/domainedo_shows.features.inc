@@ -148,6 +148,12 @@ function domainedo_shows_features_date_format_default() {
     'type' => 'custom',
     'locked' => 0,
   );
+  $fdf_config[] = array(
+    'dfid' => 45,
+    'format' => 'Y-m-d',
+    'type' => 'custom',
+    'locked' => 0,
+  );
   return $fdf_config;
 }
 
@@ -162,6 +168,20 @@ function domainedo_shows_features_date_type_default() {
     'module' => '',
     'type' => 'calendar_time',
     'title' => 'Calendrier (heure)',
+    'locked' => 0,
+  );
+  $fdt_config[] = array(
+    'is_new' => FALSE,
+    'module' => '',
+    'type' => 'court_anglais',
+    'title' => 'Court anglais',
+    'locked' => 0,
+  );
+  $fdt_config[] = array(
+    'is_new' => FALSE,
+    'module' => '',
+    'type' => 'heure_seulement',
+    'title' => 'Heure seulement',
     'locked' => 0,
   );
   $fdt_config[] = array(

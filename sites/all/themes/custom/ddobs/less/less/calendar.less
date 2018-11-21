@@ -1,3 +1,11 @@
+.page-calendrier{
+  ul.pagination.pull-right {
+    /* pour les grands écrans  ***********/
+    @media (min-width: @screen-md) {
+      margin-right: 52%;
+    }
+  }
+}
 .view-calendar {
   .view-header {
     position: relative;
@@ -9,6 +17,175 @@
       text-transform: uppercase;
       margin: 96px 0 20px 24px;
       font-weight: bold;
+    }
+    li.prev {
+      a {
+        width: 90px;
+        font-family: "Gotham", Arial, sans-serif;
+      }
+    }
+    li.next {
+      a {
+        font-family: "Gotham", Arial, sans-serif;
+      }
+    }
+  }
+  /* Specific calendar **************************************************************************************************/
+  .calendar-calendar .month-view table#calendar-domainedo {
+    float: left;
+    /* pour les petits écrans  ***********/
+    @media (max-width: @screen-md) {
+      width: 100%;
+      td {
+        width: 14%;
+      }
+    }
+    /* pour les grands écrans  ***********/
+    @media (min-width: @screen-md) {
+      width: auto;
+    }
+    /* Pour petits et grands écrans ****************/
+    th {
+      padding: 15px 0 30px 0;
+      background-color: transparent;
+      border: 0;
+      font-family: "Gotham", Arial, sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    td {
+      width: 80px;
+      &.date-box {
+        &.empty {
+          background-color: transparent;
+        }
+        height: 20px;
+        border: 0;
+        > div {
+          border: 0;
+          > div {
+            border: 0;
+            background-color: transparent;
+          }
+        }
+      }
+      &.single-day {
+        height: 60px;
+        border: 0;
+        &.empty {
+          background-color: transparent;
+        }
+        .group-show-points-domainedo {
+          display: table;
+          margin: 0 auto;
+          min-height : 50px;
+          &:hover {
+            cursor: pointer;
+          }
+          &.group-size-6{
+            width: 60px;
+          }
+          &.group-size-5{
+            width: 50px;
+          }
+          &.group-size-4{
+            width: 60px;
+          }
+          &.group-size-3{
+            width: 30px;
+          }
+          &.group-size-2{
+            width: 20px;
+          }
+          &.group-size-1{
+            width: 10px;
+          }
+          .item-show-point-domainedo {
+            width: 9px;
+            height: 9px;
+            background-color: @grenadine-ddo !important;
+            float: left;
+            margin: 1px 1px 1px 0;
+            border-radius: 7px;
+          }
+        }
+      }
+      div.day {
+        float: none;
+        width: auto;
+      }
+      overflow: hidden;
+      transition: 0.5s;
+      &:hover {
+        background-color: @gris-clair-ddo;
+      }
+      div.inner {
+        div {
+          background-color: transparent !important;
+        }
+      }
+    }
+  }
+  #calendar-detail-domainedo {
+    /* Grands écrans ****************************/
+    @media (min-width: @screen-md) {
+      float: left;
+      margin-left: 20px;
+      width: 35%;
+      min-height: 500px;
+
+    }
+    /* Petits écrans ****************************/
+    @media (max-width: @screen-md) {
+      float: none;
+      margin-left: 20px;
+    }
+
+    .right-date {
+      clear: both;
+      display: block;
+      text-align: center;
+      font-family: "Gotham", Arial, sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-top: -30px;
+      margin-bottom: 30px;
+    }
+    .views-field-title a{
+      text-transform: uppercase;
+      font-size: 2em;
+      padding-bottom: 9px;
+      display: block;
+      font-style: normal;
+      font-weight: 900;
+      text-decoration: none;
+      color: @grenadine-ddo !important;
+    }
+    .views-field-field-show-dates {
+      font-style: normal;
+      font-weight: 900;
+      font-size: 2em;
+      float: right;
+    }
+    .views-field-field-scald-image {
+      width: 70px;
+    }
+    .field-name-scald-authors,
+    .views-field-field-show-dates-3 {
+      display: none;
+    }
+    .date-full-domainedo {
+      clip: rect(1px,1px,1px,1px);
+      height: 1px;
+      margin: 0;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+      z-index: -1000;
     }
   }
 }
