@@ -7,6 +7,13 @@
     @media (min-width: @screen-lg) {
       margin-right: 52%;
     }
+    @media (min-width: 506px) {
+      margin-top: 14px;
+    }
+    /* Pour les tous petits écrans */
+    @media (max-width: 506px) {
+      float: left !important;
+    }
   }
 }
 .view-calendar {
@@ -14,13 +21,24 @@
     position: relative;
     h3 {
       position: absolute;
-      top: -80px;
-      left: -20px;
-      font-size: 2em; /* 32/16 */
+      /* Petits écrans ******************/
+      @media (max-width: 506px) {
+        top: -10px;
+        margin: 0 0 20px 0;
+        font-size: 1.6em; /* 32/16 */
+      }
+      /* Grands écrans ******************/
+      @media (min-width: 506px) {
+        top: -80px;
+        left: -20px;
+        margin: 96px 0 20px 24px;
+        font-size: 2em; /* 32/16 */
+      }
+
       text-transform: uppercase;
-      margin: 96px 0 20px 24px;
       font-weight: bold;
     }
+
     li.prev {
       a {
         width: 90px;
