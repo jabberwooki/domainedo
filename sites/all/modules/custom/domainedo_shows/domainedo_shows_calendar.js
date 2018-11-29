@@ -14,7 +14,7 @@ jQuery(function($) {
     if(nb_points) {
 
       // création du container des points avec centrage dans la case
-      width_container_points = (nb_points > 6) ? 6 : nb_points
+      width_container_points = (nb_points > 4) ? 4 : nb_points
       container_points = $("<div></div>",{
         "class": "group-show-points-domainedo group-size-"+ width_container_points,
         "id": "group-show-domainedo-" + index,
