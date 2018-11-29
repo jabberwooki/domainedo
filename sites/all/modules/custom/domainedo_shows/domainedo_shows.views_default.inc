@@ -113,6 +113,7 @@ function domainedo_shows_views_default_views() {
     'structure' => '#ffffff',
   );
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Contenu: Titre */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -123,6 +124,15 @@ function domainedo_shows_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['hide_alter_empty'] = FALSE;
+  /* Field: Contenu: Type */
+  $handler->display->display_options['fields']['type']['id'] = 'type';
+  $handler->display->display_options['fields']['type']['table'] = 'node';
+  $handler->display->display_options['fields']['type']['field'] = 'type';
+  $handler->display->display_options['fields']['type']['label'] = '';
+  $handler->display->display_options['fields']['type']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['type']['alter']['text'] = '<span class="content-type sr-only">[type]</span>';
+  $handler->display->display_options['fields']['type']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['type']['machine_name'] = TRUE;
   /* Field: Contenu: Chemin */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
@@ -147,6 +157,24 @@ function domainedo_shows_views_default_views() {
   );
   $handler->display->display_options['fields']['field_show_dates']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_show_dates']['delta_offset'] = '0';
+  /* Field: Date evt heure seulement */
+  $handler->display->display_options['fields']['field_date_2']['id'] = 'field_date_2';
+  $handler->display->display_options['fields']['field_date_2']['table'] = 'field_data_field_date';
+  $handler->display->display_options['fields']['field_date_2']['field'] = 'field_date';
+  $handler->display->display_options['fields']['field_date_2']['ui_name'] = 'Date evt heure seulement';
+  $handler->display->display_options['fields']['field_date_2']['label'] = '';
+  $handler->display->display_options['fields']['field_date_2']['element_class'] = '.views-field-field-show-dates';
+  $handler->display->display_options['fields']['field_date_2']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_date_2']['settings'] = array(
+    'format_type' => 'heure_seulement',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
+  );
+  $handler->display->display_options['fields']['field_date_2']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_date_2']['delta_offset'] = '0';
   /* Field: Field: Image */
   $handler->display->display_options['fields']['field_scald_image']['id'] = 'field_scald_image';
   $handler->display->display_options['fields']['field_scald_image']['table'] = 'field_data_field_scald_image';
@@ -179,6 +207,24 @@ function domainedo_shows_views_default_views() {
   $handler->display->display_options['fields']['field_show_dates_1']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_show_dates_1']['delta_limit'] = '';
   $handler->display->display_options['fields']['field_show_dates_1']['delta_offset'] = '0';
+  /* Field: Date evt longue sans heure */
+  $handler->display->display_options['fields']['field_date_1']['id'] = 'field_date_1';
+  $handler->display->display_options['fields']['field_date_1']['table'] = 'field_data_field_date';
+  $handler->display->display_options['fields']['field_date_1']['field'] = 'field_date';
+  $handler->display->display_options['fields']['field_date_1']['ui_name'] = 'Date evt longue sans heure';
+  $handler->display->display_options['fields']['field_date_1']['label'] = '';
+  $handler->display->display_options['fields']['field_date_1']['element_class'] = 'date-full-domainedo';
+  $handler->display->display_options['fields']['field_date_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_date_1']['settings'] = array(
+    'format_type' => 'long_sans_heure',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
+  );
+  $handler->display->display_options['fields']['field_date_1']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_date_1']['delta_offset'] = '0';
   /* Field: Date courte anglaise */
   $handler->display->display_options['fields']['field_show_dates_3']['id'] = 'field_show_dates_3';
   $handler->display->display_options['fields']['field_show_dates_3']['table'] = 'field_data_field_show_dates';
@@ -197,6 +243,24 @@ function domainedo_shows_views_default_views() {
   );
   $handler->display->display_options['fields']['field_show_dates_3']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_show_dates_3']['delta_offset'] = '0';
+  /* Field: Date evt courte anglaise */
+  $handler->display->display_options['fields']['field_date']['id'] = 'field_date';
+  $handler->display->display_options['fields']['field_date']['table'] = 'field_data_field_date';
+  $handler->display->display_options['fields']['field_date']['field'] = 'field_date';
+  $handler->display->display_options['fields']['field_date']['ui_name'] = 'Date evt courte anglaise';
+  $handler->display->display_options['fields']['field_date']['label'] = '';
+  $handler->display->display_options['fields']['field_date']['element_class'] = 'date-short-english';
+  $handler->display->display_options['fields']['field_date']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_date']['settings'] = array(
+    'format_type' => 'court_anglais',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
+  );
+  $handler->display->display_options['fields']['field_date']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_date']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Date: Date (node) */
   $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
@@ -441,6 +505,7 @@ function domainedo_shows_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('Month'),
+    t('<span class="content-type sr-only">[type]</span>'),
     t('<a href="[path]">[field_scald_image]</a>'),
     t('Tout'),
     t('Week'),
@@ -1020,7 +1085,7 @@ else {
   $handler->display->display_options['filters']['field_show_dates_value']['field'] = 'field_show_dates_value';
   $handler->display->display_options['filters']['field_show_dates_value']['operator'] = '>=';
   $handler->display->display_options['filters']['field_show_dates_value']['default_date'] = 'now';
-  /* Filter criterion: Contenu: Promu en page d&#039;accueil (field_promoted) */
+  /* Filter criterion: Contenu: Promu en info flash (field_promoted) */
   $handler->display->display_options['filters']['field_promoted_value']['id'] = 'field_promoted_value';
   $handler->display->display_options['filters']['field_promoted_value']['table'] = 'field_data_field_promoted';
   $handler->display->display_options['filters']['field_promoted_value']['field'] = 'field_promoted_value';

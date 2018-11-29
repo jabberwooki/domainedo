@@ -1,3 +1,7 @@
+Domaine d'O 1.1.13 - 2018-11-29
+----------------------------
+Calendar working for events and shows
+
 Domaine d'O 1.1.12 - 2018-11-22
 ----------------------------
 Calendar layout improved for very small screens

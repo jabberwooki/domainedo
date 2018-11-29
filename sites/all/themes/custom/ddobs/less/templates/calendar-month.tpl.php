@@ -21,6 +21,10 @@
 ?>
 <div class="calendar-calendar"><div class="month-view">
 <table id="calendar-domainedo">
+    <caption>
+        <div class="legend-calendar-show">Spectacle</div>
+        <div class="legend-calendar-news">Evénement</div>
+    </caption>
   <thead>
     <tr>
       <?php foreach ($day_names as $id => $cell): ?>

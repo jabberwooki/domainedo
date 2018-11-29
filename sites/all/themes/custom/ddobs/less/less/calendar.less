@@ -1,21 +1,49 @@
-.page-calendrier{
-  ul.pagination.pull-right {
-    /* pour les grands écrans  ***********/
-    @media (min-width: @screen-md) and (max-width: @screen-lg) {
-      margin-right: 45%;
-    }
-    @media (min-width: @screen-lg) {
-      margin-right: 52%;
-    }
-    @media (min-width: 506px) {
-      margin-top: 14px;
-    }
-    /* Pour les tous petits écrans */
-    @media (max-width: 506px) {
-      float: left !important;
+.page-calendrier {
+  //pour les mois
+  .view-display-id-page_1 {
+    ul.pagination.pull-right {
+      /* pour les grands écrans  ***********/
+      @media (min-width: @screen-md) and (max-width: @screen-lg) {
+        margin-right: 45%;
+      }
+      @media (min-width: @screen-lg) {
+        margin-right: 52%;
+      }
+      @media (min-width: 506px) {
+        margin-top: 14px;
+      }
+      /* Pour les tous petits écrans */
+      @media (max-width: 506px) {
+        float: left !important;
+      }
     }
   }
+
+  // pour les années ******************************/
+  .view-display-id-page {
+    .mini-day-on {
+      a {
+        color: @grenadine-ddo;
+      }
+    }
+  }
+  // pour les semaines ******************************/
+  .weekview {
+    a {
+      color: @grenadine-ddo;
+      font-size: 1.4em;
+    }
+  }
+  // pour les jours ******************************/
+  .dayview {
+    a {
+      color: @grenadine-ddo;
+      font-size: 1.5em;
+    }
+  }
+
 }
+
 .view-calendar {
   .view-header {
     position: relative;
@@ -54,6 +82,42 @@
   /* Specific calendar **************************************************************************************************/
   .calendar-calendar .month-view table#calendar-domainedo {
     float: left;
+    caption {
+      padding: 0;
+      caption-side: bottom;
+      .legend-calendar-news {
+        color: @bleu-calendrier-ddo;
+        float: left;
+        font-weight: 800;
+        font-style: normal;
+        &:before {
+          content: '';
+          display: block;
+          width: 9px;
+          height: 9px;
+          background-color: @bleu-calendrier-ddo !important;
+          float: left;
+          margin: 4px 10px 1px 35px;
+          border-radius: 7px;
+        }
+      }
+      .legend-calendar-show {
+        color: @grenadine-ddo;
+        float: left;
+        font-weight: 800;
+        font-style: normal;
+        &:before {
+          content: '';
+          display: block;
+          width: 9px;
+          height: 9px;
+          background-color: @grenadine-ddo !important;
+          float: left;
+          margin: 4px 10px 1px 35px;
+          border-radius: 7px;
+        }
+      }
+    }
     /* pour les petits écrans  ***********/
     @media (max-width: @screen-md) {
       width: 100%;
@@ -115,32 +179,35 @@
           }
           display: table;
           margin: 0 auto;
-          min-height : 50px;
+          min-height: 50px;
           &:hover {
             cursor: pointer;
           }
-          &.group-size-6{
+          &.group-size-6 {
             width: 60px;
           }
-          &.group-size-5{
+          &.group-size-5 {
             width: 50px;
           }
-          &.group-size-4{
+          &.group-size-4 {
             width: 60px;
           }
-          &.group-size-3{
+          &.group-size-3 {
             width: 30px;
           }
-          &.group-size-2{
+          &.group-size-2 {
             width: 20px;
           }
-          &.group-size-1{
+          &.group-size-1 {
             width: 10px;
           }
           .item-show-point-domainedo {
             width: 9px;
             height: 9px;
             background-color: @grenadine-ddo !important;
+            &.news {
+              background-color: @bleu-calendrier-ddo !important;
+            }
             float: left;
             margin: 1px 1px 1px 0;
             border-radius: 7px;
@@ -204,7 +271,7 @@
         margin-bottom: 20px;
       }
     }
-    .views-field-title a{
+    .views-field-title a {
       text-transform: uppercase;
       font-size: 2em;
       padding-bottom: 9px;
@@ -213,6 +280,9 @@
       font-weight: 900;
       text-decoration: none;
       color: @grenadine-ddo !important;
+      &.title-calendar-right-news {
+        color: @bleu-calendrier-ddo !important;
+      }
     }
     .views-field-field-show-dates {
       font-style: normal;
@@ -224,11 +294,12 @@
       width: 70px;
     }
     .field-name-scald-authors,
-    .views-field-field-show-dates-3 {
+    .views-field-field-show-dates-3,
+    .views-field-field-date {
       display: none;
     }
     .date-full-domainedo {
-      clip: rect(1px,1px,1px,1px);
+      clip: rect(1px, 1px, 1px, 1px);
       height: 1px;
       margin: 0;
       overflow: hidden;

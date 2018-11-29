@@ -6,6 +6,7 @@ jQuery(function($) {
   var right_date;
   var date_short_english;
   var td_date;
+  var content_type;
 
   $(".single-day div.inner").each(function(index) {
     nb_points = $(".view-item", $(this)).length;
@@ -39,7 +40,7 @@ jQuery(function($) {
         "class": "group-show-domainedo group-show-domainedo-" + index,
       });
 
-      // Parcours des spectacles
+      // Parcours des spectacles et/ou des événements
       $(".view-item", $(this)).each(function(num) {
         // récupérer la date sur le premier spectacle
         if(num == 0) {
@@ -56,11 +57,14 @@ jQuery(function($) {
             "text": right_date
           }).appendTo(container_shows);
         }
-
+        content_type = $(".content-type", $(this)).text();
         // création des points et placement dans le container de points
         $("<div></div>",{
-          "class": "item-show-point-domainedo",
+          "class": "item-show-point-domainedo " + content_type,
         }).appendTo(container_points);
+
+        // Ajout de la class du titre en fonction du type de contenu
+        $(".views-field-title a", $(this)).addClass("title-calendar-right-" + content_type);
 
         // Placement des spectacles dans le container de spectacles et déplacement de ce dernier
         $(this).appendTo(container_shows);

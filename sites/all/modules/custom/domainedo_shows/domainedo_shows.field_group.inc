@@ -41,7 +41,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_affiche_essential|node|festival|full'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -74,7 +74,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_affiche_festival|node|festival|full'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -107,7 +107,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_black_bg|node|show|teaser'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -141,7 +141,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_date_title_desc|node|show|teaser'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -180,7 +180,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_essential_festival|node|festival|full'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -212,7 +212,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_img_wrapper|taxonomy_term|show_locations|full'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -250,7 +250,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_lieu|node|show|full'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -284,7 +284,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_multimedia_right|node|festival|full'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -314,7 +314,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_psr|node|show|full'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -346,7 +346,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_shorts_links|node|show|full'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -382,7 +382,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_show_icons_bottom|node|show|full'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -417,7 +417,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_show_list|node|show|teaser'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -450,7 +450,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $field_groups['group_technical_fiels|node|festival|form'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -482,7 +482,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_text_left|node|festival|full'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -516,7 +516,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_text_over_img_abs|node|show|full'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -548,7 +548,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_text_over_img|node|show|full'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -581,7 +581,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_text_video|node|festival|full'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -613,7 +613,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_tranparent_gradient|node|show|teaser'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -642,7 +642,7 @@ function domainedo_shows_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_ul_short_links|node|show|full'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -675,7 +675,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_wrap_book|node|show|full'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -707,7 +707,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_wrapper_distribution|node|show|full'] = $field_group;
+  $field_groups[''] = $field_group;
 
   // Translatables
   // Included for use with string extractors like potx.
