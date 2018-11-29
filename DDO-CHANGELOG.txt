@@ -1,3 +1,7 @@
+Domaine d'O 1.1.15 - 2018-11-29
+----------------------------
+Show max 4 points width in calendar view month
+
 Domaine d'O 1.1.14 - 2018-11-29
 ----------------------------
 Shows group layout reverted
