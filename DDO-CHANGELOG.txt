@@ -1,3 +1,7 @@
+Domaine d'O 1.1.14 - 2018-11-29
+----------------------------
+Shows group layout reverted
+
 Domaine d'O 1.1.13 - 2018-11-29
 ----------------------------
 Calendar working for events and shows
