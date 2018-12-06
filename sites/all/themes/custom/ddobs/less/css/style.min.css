@@ -2397,6 +2397,9 @@ strong{font-weight:700}
 .view-calendar .view-header li.prev a{width:90px}
 .view-calendar .calendar-calendar .month-view table#calendar-domainedo{float:left}
 .view-calendar .calendar-calendar .month-view table#calendar-domainedo caption{padding:0;caption-side:bottom}
+@media (max-width:768px){.view-calendar .calendar-calendar .month-view table#calendar-domainedo caption{caption-side:top}
+.view-calendar .calendar-calendar .month-view table#calendar-domainedo caption .legend-calendar-show:before{margin:4px 10px 1px!important}
+}
 .view-calendar .calendar-calendar .month-view table#calendar-domainedo caption .legend-calendar-news{color:#008c9b;float:left;font-weight:800;font-style:normal}
 .view-calendar .calendar-calendar .month-view table#calendar-domainedo caption .legend-calendar-news:before{content:'';display:block;width:9px;height:9px;background-color:#008c9b!important;float:left;margin:4px 10px 1px 35px;border-radius:7px}
 .view-calendar .calendar-calendar .month-view table#calendar-domainedo caption .legend-calendar-show{color:#f74e2d;float:left;font-weight:800;font-style:normal}

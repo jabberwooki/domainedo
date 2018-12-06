@@ -85,6 +85,14 @@
     caption {
       padding: 0;
       caption-side: bottom;
+      @media (max-width: @screen-sm) {
+        caption-side: top;
+        .legend-calendar-show {
+          &:before {
+            margin: 4px 10px 1px 10px !important;
+          }
+        }
+      }
       .legend-calendar-news {
         color: @bleu-calendrier-ddo;
         float: left;
