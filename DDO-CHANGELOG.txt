@@ -1,5 +1,9 @@
 Domaine d'O 1.1.16 - 2018-12-06
 ----------------------------
+Cloud font gotham installed + feature domainedo_shows up to manage export to metropole
+
+Domaine d'O 1.1.16 - 2018-12-06
+----------------------------
 Core and contrib updated for security reasons
 
 Domaine d'O 1.1.15 - 2018-11-29
