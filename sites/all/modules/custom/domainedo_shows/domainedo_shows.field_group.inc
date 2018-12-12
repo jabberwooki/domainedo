@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * domainedo_shows.field_group.inc
@@ -212,7 +213,7 @@ function domainedo_shows_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_img_wrapper|taxonomy_term|show_locations|full'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
