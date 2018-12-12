@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * domainedo_shows.views_default.inc
@@ -1085,7 +1086,7 @@ else {
   $handler->display->display_options['filters']['field_show_dates_value']['field'] = 'field_show_dates_value';
   $handler->display->display_options['filters']['field_show_dates_value']['operator'] = '>=';
   $handler->display->display_options['filters']['field_show_dates_value']['default_date'] = 'now';
-  /* Filter criterion: Contenu: Promu en info flash (field_promoted) */
+  /* Filter criterion: Contenu: Promu en page d&#039;accueil (field_promoted) */
   $handler->display->display_options['filters']['field_promoted_value']['id'] = 'field_promoted_value';
   $handler->display->display_options['filters']['field_promoted_value']['table'] = 'field_data_field_promoted';
   $handler->display->display_options['filters']['field_promoted_value']['field'] = 'field_promoted_value';
@@ -1128,7 +1129,7 @@ else {
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = 'titre';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
@@ -1446,6 +1447,11 @@ else {
   $handler->display->display_options['style_options']['parent_sort'] = 0;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Contenu: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = 'nid';
   /* Field: Contenu: Titre */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -1521,6 +1527,13 @@ else {
     'bypass_access' => 0,
     'link' => 0,
   );
+  /* Field: Contenu: Lieu */
+  $handler->display->display_options['fields']['field_location']['id'] = 'field_location';
+  $handler->display->display_options['fields']['field_location']['table'] = 'field_data_field_location';
+  $handler->display->display_options['fields']['field_location']['field'] = 'field_location';
+  $handler->display->display_options['fields']['field_location']['label'] = 'lieu';
+  $handler->display->display_options['fields']['field_location']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_location']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Contenu: Published */
@@ -1562,6 +1575,7 @@ else {
     t('Tous les spectacles'),
     t('Tous les spectacles au domaine d\'O'),
     t('Filtrer les spectacles'),
+    t('Options avancées'),
     t('No result info'),
     t('<div itemscope="" itemtype="http://schema.org/TheaterEvent" class="microdata">
   <a class="link-title-microdata" href="http://www.domaine-do-34.eu[path]"><h3 class="h3-microdata"
@@ -1606,7 +1620,7 @@ else {
     t('Accueil mobile'),
     t('Spectacles à l\'affiche'),
     t('Data export'),
-    t('title'),
+    t('titre'),
     t('dates'),
     t('<span class="date">[field_show_dates-value]</span>'),
     t('contenu'),
@@ -1631,12 +1645,13 @@ else {
     t('Accès rapide'),
     t('<a id="home-calendar-link" href="calendar">Le Calendrier</a>'),
     t('All shows Metropole Agenda'),
-    t('titre'),
+    t('nid'),
     t('description'),
     t('date'),
     t('url'),
     t('https://www.domainedo.fr/[path]'),
     t('festival'),
+    t('lieu'),
   );
   $export['shows'] = $view;
 
