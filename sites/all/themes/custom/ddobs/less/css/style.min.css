@@ -1841,7 +1841,7 @@ p.txt-intro{font-weight:700!important;font-size:1em!important;line-height:22px!i
 p.txt-intro-grenadine{font-style:italic;font-weight:400;font-size:1.25em!important;color:#f74e2d;line-height:22px!important}
 .cartouche-noir{display:block;color:#fff;background-color:#000;text-decoration:none;padding:5px;font-size:.6875em;border:1px solid #000;font-weight:500}
 .cartouche-noir:hover{background-color:#FFF;color:#000}
-.underline-grenadine{font-weight:900}
+.underline-grenadine{font-weight:800}
 .underline-grenadine:after{display:block;border:6px solid #f74e2d;margin-top:-14px;content:""}
 .underline-grenadine:hover{opacity:.7}
 .underline-grenadine a{text-decoration:none!important}
@@ -1856,7 +1856,7 @@ p.txt-intro-grenadine{font-style:italic;font-weight:400;font-size:1.25em!importa
 .date-orange .field-name-field-show-dates>div:after,.title-link-orange:after{border:6px solid #f74e2d;margin-top:-14px;content:""}
 .button-bg-black:hover{background-color:#fff;color:#000}
 .date-orange .field-name-field-show-dates{display:table;font-weight:700;margin-bottom:10px}
-.date-orange .field-name-field-show-dates>div,.title-link-orange{padding-left:10px;font-weight:900;text-transform:uppercase;font-style:normal}
+.date-orange .field-name-field-show-dates>div,.title-link-orange{padding-left:10px;font-weight:800;text-transform:uppercase;font-style:normal}
 .date-orange .field-name-field-show-dates>div:after{display:block}
 .date-orange .field-name-field-show-dates>div.js-div-date{position:relative;top:20px;margin-bottom:8px}
 .button-red-link:after,.glyphicon-h3-a-after>h3>span>a:after,.glyphicon-h3-a>h3>span>a:before,[class*=" icon-"]:before,[class^=icon-]:before{position:relative;top:1px}
@@ -2038,7 +2038,7 @@ strong{font-weight:700}
 .group-show-list .group-tranparent-gradient .group-date-title-desc{position:absolute;left:0;bottom:0;padding:0 10px}
 .group-show-list .group-tranparent-gradient .group-date-title-desc .field-name-body>div,.group-show-list .group-tranparent-gradient .group-date-title-desc .field-name-title>div{padding-left:10px}
 .group-show-list .group-tranparent-gradient .group-date-title-desc .field-name-field-show-dates{display:table;font-weight:700;margin-bottom:10px}
-.group-show-list .group-tranparent-gradient .group-date-title-desc .field-name-field-show-dates>div{padding-left:10px;font-style:normal;font-weight:900;text-transform:uppercase}
+.group-show-list .group-tranparent-gradient .group-date-title-desc .field-name-field-show-dates>div{padding-left:10px;font-style:normal;font-weight:800;text-transform:uppercase}
 .group-show-list .group-tranparent-gradient .group-date-title-desc .field-name-field-show-dates>div.js-div-date{position:relative;top:20px;margin-bottom:8px}
 .group-show-list .group-tranparent-gradient .group-date-title-desc .field-name-field-show-dates>div:after{display:block;content:"";border:3px solid #f74e2d;margin-top:-5px}
 .group-show-list .group-tranparent-gradient .group-date-title-desc .field-name-field-show-dates>div:hover{opacity:.7}
@@ -2079,7 +2079,7 @@ strong{font-weight:700}
 @media (max-width:768px){.node-type-show #imgfullshow #block-ds-extras-image-full-show .group-text-over-img .group-text-over-img-abs .field-name-field-festival a{font-size:1em}
 }
 .node-type-show #imgfullshow #block-ds-extras-image-full-show .group-text-over-img .group-text-over-img-abs .field-name-field-show-dates{display:table;font-weight:700;margin-bottom:10px;color:#FFF;margin-left:-5px}
-.node-type-show #imgfullshow #block-ds-extras-image-full-show .group-text-over-img .group-text-over-img-abs .field-name-field-show-dates>div{padding-left:10px;font-style:normal;font-weight:900;text-transform:uppercase}
+.node-type-show #imgfullshow #block-ds-extras-image-full-show .group-text-over-img .group-text-over-img-abs .field-name-field-show-dates>div{padding-left:10px;font-style:normal;font-weight:800;text-transform:uppercase}
 .node-type-show #imgfullshow #block-ds-extras-image-full-show .group-text-over-img .group-text-over-img-abs .field-name-field-show-dates>div:after{content:"";display:block;border:4px solid #772d2e;margin-top:-8px}
 .node-type-show #imgfullshow #block-ds-extras-image-full-show .group-text-over-img .group-text-over-img-abs .field-name-field-show-dates>div a{text-decoration:none!important}
 .node-type-show #imgfullshow #block-ds-extras-image-full-show .group-text-over-img .group-text-over-img-abs .field-name-field-show-dates>div.js-div-date{top:20px;position:static;text-transform:none;font-style:normal;font-weight:800;font-size:1.5em;margin-bottom:0}
@@ -2152,7 +2152,7 @@ strong{font-weight:700}
 .node-type-show .group-tranparent-gradient .group-date-title-desc{position:absolute;left:0;bottom:0;padding:0 10px}
 .node-type-show .group-tranparent-gradient .group-date-title-desc .field-name-body>div,.node-type-show .group-tranparent-gradient .group-date-title-desc .field-name-title>div{padding-left:10px}
 .node-type-show .group-tranparent-gradient .group-date-title-desc .field-name-field-show-dates{display:table;font-weight:700;margin-bottom:10px}
-.node-type-show .group-tranparent-gradient .group-date-title-desc .field-name-field-show-dates>div{padding-left:10px;font-style:normal;font-weight:900;text-transform:uppercase}
+.node-type-show .group-tranparent-gradient .group-date-title-desc .field-name-field-show-dates>div{padding-left:10px;font-style:normal;font-weight:800;text-transform:uppercase}
 .node-type-show .group-tranparent-gradient .group-date-title-desc .field-name-field-show-dates>div.js-div-date{position:relative;top:20px;margin-bottom:15px}
 @media (max-width:768px){.node-type-show .group-tranparent-gradient .group-date-title-desc .field-name-field-show-dates{margin-bottom:15px}
 }
@@ -2175,7 +2175,7 @@ strong{font-weight:700}
 @media (max-width:992px){.page-spectacles #headband-festival .container{padding-left:0;padding-right:0}
 .page-spectacles #headband-festival #block-views-exp-shows-list{padding:0 20px}
 }
-.page-spectacles #headband-festival #block-views-exp-shows-list #edit-field-festival-target-id-wrapper label{color:#000;font-size:1.5em;text-transform:uppercase;margin:40px 0 30px;font-style:normal;font-weight:900}
+.page-spectacles #headband-festival #block-views-exp-shows-list #edit-field-festival-target-id-wrapper label{color:#000;font-size:1.5em;text-transform:uppercase;margin:40px 0 30px;font-style:normal;font-weight:800}
 .page-spectacles #headband-festival #block-views-exp-shows-list #edit-field-festival-target-id-wrapper .bef-select-as-links>.form-item .form-type-bef-link:first-child{display:none}
 .page-spectacles #headband-festival #block-views-exp-shows-list #edit-field-festival-target-id-wrapper .bef-select-as-links .form-item{float:left}
 .page-spectacles #headband-festival #block-views-exp-shows-list #edit-field-festival-target-id-wrapper .bef-select-as-links .form-item a{color:#FFF;font-size:.875em;font-style:normal;font-weight:500;text-transform:uppercase;display:block;background-color:#000;padding:15px 20px;margin:0 20px 16px 0;text-decoration:none}
@@ -2231,7 +2231,7 @@ strong{font-weight:700}
 .front #homeheadband .region-homenow #now-tranparent-gradient{position:absolute;bottom:0;height:39%;width:100%;background:#000;background:linear-gradient(to bottom,rgba(0,0,0,0),#000)}
 .front #homeheadband .region-homenow #now-tranparent-gradient #group-title-more-now{position:absolute;bottom:0;width:100%}
 .front #homeheadband .region-homenow #now-tranparent-gradient #group-title-more-now .field-name-title{clear:both}
-.front #homeheadband .region-homenow #now-tranparent-gradient #group-title-more-now .field-name-title a{font-size:2.375em;color:#FFF;text-decoration:none;font-style:normal;font-weight:900;text-transform:uppercase;display:block;float:right;margin:0 20px 20px 0}
+.front #homeheadband .region-homenow #now-tranparent-gradient #group-title-more-now .field-name-title a{font-size:2.375em;color:#FFF;text-decoration:none;font-style:normal;font-weight:800;text-transform:uppercase;display:block;float:right;margin:0 20px 20px 0}
 .front #homeheadband .region-homenow #now-tranparent-gradient #group-title-more-now .field-name-title a:after{display:block;border:6px solid #f74e2d;margin-top:-14px;content:""}
 .front #homeheadband .region-homenow #now-tranparent-gradient #group-title-more-now .field-name-title a:hover{opacity:.7}
 .front #homeheadband .region-homenow #now-tranparent-gradient #group-title-more-now .field-name-title a a{text-decoration:none!important}
@@ -2250,7 +2250,7 @@ strong{font-weight:700}
 @media (min-width:992px) and (max-width:1200px){.front #homeheadband .carousel .carousel-inner{padding-bottom:40px}
 }
 .front #homeheadband .carousel .carousel-inner img{margin-bottom:21.6%}
-.front #homeheadband .carousel .carousel-inner .zoom-title-label{position:absolute;top:93.4%;text-transform:uppercase;color:#fff;font-style:normal;font-weight:900;font-size:2.375em;padding-left:20px}
+.front #homeheadband .carousel .carousel-inner .zoom-title-label{position:absolute;top:93.4%;text-transform:uppercase;color:#fff;font-style:normal;font-weight:800;font-size:2.375em;padding-left:20px}
 @media (min-width:768px) and (max-width:1600px){.front #homeheadband .carousel .carousel-inner .zoom-title-label{font-size:1.5em;top:94%}
 .front #homeheadband .carousel .carousel-inner .views-field-body .title-event-list a{color:#f74e2d;text-transform:uppercase;font-size:1em!important}
 }
@@ -2314,12 +2314,12 @@ strong{font-weight:700}
 .node-type-festival #headband-festival .group-affiche-festival .field-name-field-festival-poster:after{height:30%!important;width:100%;position:absolute;bottom:0;left:16px}
 }
 .node-type-festival #headband-festival .group-affiche-festival .field-name-scald-authors{display:none}
-.node-type-festival #headband-festival .group-affiche-festival .field-name-field-date-en-clair{position:absolute;bottom:80px;left:35px;color:#fff;text-transform:uppercase;font-size:2.375em;font-style:normal;font-weight:900}
+.node-type-festival #headband-festival .group-affiche-festival .field-name-field-date-en-clair{position:absolute;bottom:80px;left:35px;color:#fff;text-transform:uppercase;font-size:2.375em;font-style:normal;font-weight:800}
 .node-type-festival #headband-festival .group-affiche-festival .field-name-field-date-en-clair:after{display:block;content:"";margin-top:-15px;border:8px solid #772d2e}
 @media (max-width:768px){.node-type-festival #headband-festival .group-affiche-festival .field-name-field-date-en-clair{bottom:20px;font-size:1.8em;padding-left:15px}
 }
 .node-type-festival #headband-festival .group-essential-festival{background-color:#f74e2d;color:#fff;padding:25px 30px}
-.node-type-festival #headband-festival .group-essential-festival h2{font-size:1.875em;text-transform:uppercase;margin:0 25px 30px 0;font-style:normal;font-weight:900}
+.node-type-festival #headband-festival .group-essential-festival h2{font-size:1.875em;text-transform:uppercase;margin:0 25px 30px 0;font-style:normal;font-weight:800}
 .node-type-festival #headband-festival .group-essential-festival a{color:#fff;font-size:.688em;text-transform:uppercase;font-style:normal;font-weight:500;display:block;border-bottom:1px solid #fff;padding-bottom:10px;margin-bottom:15px;text-decoration:none}
 .node-type-festival #headband-festival .group-essential-festival a:before{position:relative;font-weight:400;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;text-transform:none;color:#fff;font-size:2em}
 .node-type-festival #headband-festival .group-essential-festival img,.node-type-festival .node-show .group-show-list .field-name-field-festival,.node-type-festival .pagination .next,.node-type-festival .pagination .pager-first,.node-type-festival .pagination .pager-last,.node-type-festival .pagination .prev{display:none}
@@ -2352,7 +2352,7 @@ strong{font-weight:700}
 }
 .node-type-page #block-ds-extras-top-classic-page picture.img-responsive:after,.node-type-page-complexe #block-ds-extras-top-classic-page picture.img-responsive:after{content:"";width:100%;height:50%;position:absolute;bottom:0;left:0;background:linear-gradient(to bottom,rgba(0,0,0,0),#000)}
 .node-type-page .main-container,.node-type-page-complexe .main-container{position:relative}
-.node-type-page .main-container h2.page-header,.node-type-page-complexe .main-container h2.page-header{font-style:normal;font-weight:900!important;position:absolute;top:-60px;border:0;border-top:150px;text-transform:uppercase;font-size:2.375em;color:#FFF}
+.node-type-page .main-container h2.page-header,.node-type-page-complexe .main-container h2.page-header{font-style:normal;font-weight:800!important;position:absolute;top:-60px;border:0;border-top:150px;text-transform:uppercase;font-size:2.375em;color:#FFF}
 .node-type-page .main-container h2.page-header:after,.node-type-page-complexe .main-container h2.page-header:after{display:block;border:4px solid #772d2e;content:"";margin-top:-12px!important}
 @media (max-width:768px){.node-type-page .main-container h2.page-header:after,.node-type-page-complexe .main-container h2.page-header:after{margin-top:-8px!important}
 }
@@ -2414,7 +2414,7 @@ strong{font-weight:700}
 }
 .view-calendar .calendar-calendar .month-view table#calendar-domainedo th{padding:15px 0 30px;background-color:transparent;border:0;font-family:Gotham,Arial,sans-serif;font-style:normal;font-weight:400;text-transform:uppercase}
 .view-calendar .calendar-calendar .month-view table#calendar-domainedo td{overflow:hidden;transition:.5s}
-.view-calendar .calendar-calendar .month-view table#calendar-domainedo td .effective-day-caleandar-domainedo{color:#000;font-style:normal;font-weight:900}
+.view-calendar .calendar-calendar .month-view table#calendar-domainedo td .effective-day-caleandar-domainedo{color:#000;font-style:normal;font-weight:800}
 .view-calendar .calendar-calendar .month-view table#calendar-domainedo td .effective-day-caleandar-domainedo:hover{color:#f74e2d;cursor:pointer}
 .view-calendar .calendar-calendar .month-view table#calendar-domainedo td.date-box{text-align:center;height:20px;border:0}
 .view-calendar .calendar-calendar .month-view table#calendar-domainedo td.date-box.empty{background-color:transparent}
@@ -2440,13 +2440,13 @@ strong{font-weight:700}
 }
 @media (max-width:992px){.view-calendar #calendar-detail-domainedo{float:none;margin-left:20px}
 }
-.view-calendar #calendar-detail-domainedo .right-date{clear:both;display:table;margin-top:-30px auto 20px auto;font-size:1.6em;font-style:normal;font-weight:900;text-transform:uppercase}
+.view-calendar #calendar-detail-domainedo .right-date{clear:both;display:table;margin-top:-30px auto 20px auto;font-size:1.6em;font-style:normal;font-weight:800;text-transform:uppercase}
 .view-calendar #calendar-detail-domainedo .right-date:after{content:"";display:block;border:4px solid #772d2e;margin-top:2px;margin-bottom:20px}
 .view-calendar #calendar-detail-domainedo .right-date:hover{opacity:.7}
 .view-calendar #calendar-detail-domainedo .right-date a{text-decoration:none!important}
-.view-calendar #calendar-detail-domainedo .views-field-title a{text-transform:uppercase;font-size:2em;padding-bottom:9px;display:block;font-style:normal;font-weight:900;text-decoration:none;color:#f74e2d!important}
+.view-calendar #calendar-detail-domainedo .views-field-title a{text-transform:uppercase;font-size:2em;padding-bottom:9px;display:block;font-style:normal;font-weight:800;text-decoration:none;color:#f74e2d!important}
 .view-calendar #calendar-detail-domainedo .views-field-title a.title-calendar-right-news{color:#008c9b!important}
-.view-calendar #calendar-detail-domainedo .views-field-field-show-dates{font-style:normal;font-weight:900;font-size:2em;float:right}
+.view-calendar #calendar-detail-domainedo .views-field-field-show-dates{font-style:normal;font-weight:800;font-size:2em;float:right}
 .view-calendar #calendar-detail-domainedo .views-field-field-scald-image{width:70px}
 .view-calendar #calendar-detail-domainedo .field-name-scald-authors,.view-calendar #calendar-detail-domainedo .views-field-field-date,.view-calendar #calendar-detail-domainedo .views-field-field-show-dates-3{display:none}
 .view-calendar #calendar-detail-domainedo .date-full-domainedo{clip:rect(1px,1px,1px,1px);height:1px;margin:0;overflow:hidden;padding:0;position:absolute;white-space:nowrap;width:1px;z-index:-1000}
@@ -2456,7 +2456,7 @@ strong{font-weight:700}
 }
 .node-type-article #block-ds-extras-top-article picture.img-responsive:after{width:100%;height:50%;position:absolute}
 .node-type-article .main-container{position:relative}
-.node-type-article .main-container h2.page-header{font-style:normal;font-weight:900!important;position:absolute;top:-60px;border:0;border-top:150px;text-transform:uppercase;font-size:2.375em;color:#FFF}
+.node-type-article .main-container h2.page-header{font-style:normal;font-weight:800!important;position:absolute;top:-60px;border:0;border-top:150px;text-transform:uppercase;font-size:2.375em;color:#FFF}
 .node-type-article .main-container h2.page-header:after{display:block;border:4px solid #772d2e;content:"";margin-top:-14px!important}
 @media (max-width:768px){.node-type-article .main-container h2.page-header:after{margin-top:-8px!important}
 }
@@ -2472,7 +2472,7 @@ strong{font-weight:700}
 }
 .node-type-news #block-ds-extras-top-event picture.img-responsive:after{width:100%;height:50%;position:absolute}
 .node-type-news .main-container{position:relative}
-.node-type-news .main-container h2.page-header{font-style:normal;font-weight:900!important;position:absolute;top:-60px;border:0;border-top:150px;text-transform:uppercase;font-size:2.375em;color:#FFF}
+.node-type-news .main-container h2.page-header{font-style:normal;font-weight:800!important;position:absolute;top:-60px;border:0;border-top:150px;text-transform:uppercase;font-size:2.375em;color:#FFF}
 .node-type-news .main-container h2.page-header:after{display:block;border:4px solid #772d2e;content:"";margin-top:-14px!important}
 @media (max-width:768px){.node-type-news .main-container h2.page-header:after{margin-top:-8px!important}
 }
@@ -2486,7 +2486,7 @@ strong{font-weight:700}
 #block-views-personnes-block-1 .field-name-field-person-img-1,#block-views-personnes-block-2 .field-name-field-person-img-1,#block-views-personnes-block-3 .field-name-field-person-img-1,#block-views-personnes-block-artistique .field-name-field-person-img-1,#block-views-personnes-block-equipe-recettes .field-name-field-person-img-1{float:left;margin-right:20px;margin-bottom:30px}
 .page-taxonomy-term .group-img-wrapper .field-name-field-image-page-complexe:after,.page-taxonomy-term .group-img-wrapper .field-name-field-section-image:after,.page-taxonomy-term .group-img-wrapper picture.img-responsive:after{content:"";width:100%;height:85px;position:absolute;bottom:0;left:0;background:linear-gradient(to bottom,rgba(0,0,0,0),#000)}
 .page-taxonomy-term .main-container{position:relative}
-.page-taxonomy-term .main-container h2.page-header{position:absolute;top:-60px;border:0;border-top:150px;color:#FFF!important;text-transform:uppercase;font-size:2.375em;font-weight:700;font-weight:900}
+.page-taxonomy-term .main-container h2.page-header{position:absolute;top:-60px;border:0;border-top:150px;color:#FFF!important;text-transform:uppercase;font-size:2.375em;font-weight:700;font-weight:800}
 .page-taxonomy-term .main-container h2.page-header:after{display:block;border:4px solid #772d2e;content:"";margin-top:-10px!important}
 @media (max-width:768px){.page-taxonomy-term .group-img-wrapper .field-name-field-image-page-complexe:after,.page-taxonomy-term .group-img-wrapper .field-name-field-section-image:after,.page-taxonomy-term .group-img-wrapper picture.img-responsive:after{height:60%}
 .page-taxonomy-term .main-container h2.page-header:after{margin-top:-10px!important}
@@ -2505,7 +2505,7 @@ strong{font-weight:700}
 .node-type-tech-document .field-name-scald-authors{display:none}
 .node-type-tech-document .group-img-wrapper .field-name-field-scald-image:after{width:100%;height:85px;position:absolute}
 .node-type-tech-document .main-container{position:relative}
-.node-type-tech-document .main-container h2.page-header{font-style:normal!important;font-weight:900!important;position:absolute;top:-60px;border:0;border-top:150px;color:#FFF!important;text-transform:uppercase;font-size:2.375em}
+.node-type-tech-document .main-container h2.page-header{font-style:normal!important;font-weight:800!important;position:absolute;top:-60px;border:0;border-top:150px;color:#FFF!important;text-transform:uppercase;font-size:2.375em}
 .node-type-tech-document .main-container h2.page-header:after{display:block;border:4px solid #772d2e;content:"";margin-top:-7px!important}
 .node-type-tech-document section.no-img-top h2.page-header{position:static;top:0;border:0;text-transform:uppercase;font-size:2.375em;font-weight:700;margin-top:10px;color:#000;display:table}
 .node-type-tech-document section.no-img-top h2.page-header:after{display:block;border:4px solid #772d2e;margin-top:-5px;content:""}
@@ -2542,9 +2542,9 @@ strong{font-weight:700}
 .field-name-field-scald-gallery .arrow-youtube-galleria,.field-name-gallery-items .arrow-youtube-galleria{display:none}
 .field-name-field-scald-gallery .galleria-theme-classic,.field-name-gallery-items .galleria-theme-classic{position:relative;overflow:hidden;background:#FFF}
 .page-taxonomy-term .galleria-fullscreen-link{margin-left:10px;margin-top:17px}
-.page-espace-multimedia h2.page-header{border:0;text-transform:uppercase;font-size:2.375em;font-style:normal;font-weight:900;color:#000}
+.page-espace-multimedia h2.page-header{border:0;text-transform:uppercase;font-size:2.375em;font-style:normal;font-weight:800;color:#000}
 .page-espace-multimedia h2.page-header:after{display:block;border:4px solid #772d2e;content:"";margin-top:-11px!important}
-.page-espace-multimedia .no-img-top h2.page-header{border:0;display:table;text-transform:uppercase;font-size:2.375em;margin-top:50px;font-style:normal;font-weight:900;color:#000}
+.page-espace-multimedia .no-img-top h2.page-header{border:0;display:table;text-transform:uppercase;font-size:2.375em;margin-top:50px;font-style:normal;font-weight:800;color:#000}
 .page-espace-multimedia .no-img-top h2.page-header:after{display:block;border:4px solid #f74e2d;content:"";opacity:.5;margin-top:-11px!important}
 .page-espace-multimedia #edit-scald-tags-tid-wrapper div.form-item{float:left}
 .page-espace-multimedia #edit-scald-tags-tid-wrapper div.form-item a{padding:10px;color:#FFF;display:block;font-size:.875em;background-color:#000;text-transform:uppercase;margin:0 25px 10px 0;font-weight:700;text-decoration:none;border:1.5px solid #000}
@@ -2554,16 +2554,16 @@ strong{font-weight:700}
 .node-type-webform .group-lettre-info{position:relative;margin-bottom:20px}
 .node-type-webform .group-lettre-info .field-name-scald-authors{display:none}
 .node-type-webform .group-lettre-info .group-title-txt-lettre-info{position:absolute;left:0;bottom:0;z-index:2;color:#fff;padding:15px}
-.node-type-webform .group-lettre-info .group-title-txt-lettre-info .h3-lettre-info{display:table;margin-bottom:20px;font-style:normal;font-weight:900;text-transform:uppercase;padding-left:0}
+.node-type-webform .group-lettre-info .group-title-txt-lettre-info .h3-lettre-info{display:table;margin-bottom:20px;font-style:normal;font-weight:800;text-transform:uppercase;padding-left:0}
 .node-type-webform .group-lettre-info .group-title-txt-lettre-info .h3-lettre-info:after{display:block;border:6px solid #f74e2d;margin-top:-14px;content:""}
 .node-type-webform .group-lettre-info .group-title-txt-lettre-info .h3-lettre-info:hover{opacity:.7}
 .node-type-webform .group-lettre-info .group-title-txt-lettre-info .h3-lettre-info a{text-decoration:none!important;color:#FFF;font-size:1.8em;text-transform:uppercase}
 .node-type-webform .group-lettre-info .group-title-txt-lettre-info .send-info-lette-date{margin-top:15px;font-size:.8em;font-style:italic;font-weight:400}
 .node-type-webform .group-lettre-info:after{display:block;content:'';position:absolute;top:40%;height:60%;width:100%;left:0;background:#000;background:linear-gradient(to bottom,rgba(0,0,0,0),#000);z-index:1}
-[id*=block-views-personnes] h2.block-title{font-style:normal;font-weight:900!important;text-transform:uppercase;font-size:1.375em}
+[id*=block-views-personnes] h2.block-title{font-style:normal;font-weight:800!important;text-transform:uppercase;font-size:1.375em}
 [id*=block-views-personnes] [id*=node-personne] h3{text-transform:uppercase;font-style:normal;font-weight:500;color:#f74e2d;font-size:1.25em}
 [id*=block-views-personnes] [id*=node-personne] .field{font-style:italic;font-weight:400}
-.page-search h2.page-header{font-style:normal;font-weight:900;text-transform:uppercase;font-size:2.25em}
+.page-search h2.page-header{font-style:normal;font-weight:800;text-transform:uppercase;font-size:2.25em}
 .page-search #block-system-main>h2{font-style:normal;font-weight:700;text-transform:uppercase;font-size:1.75em;margin-top:20px;margin-bottom:20px}
 .page-search #block-system-main .search-results h3.title a{color:#f74e2d;font-style:italic;font-weight:400;font-size:1.5em;display:block}
 .page-search #block-system-main .search-results h3.title a:hover{text-decoration:none;opacity:.5}
