@@ -1,6 +1,8 @@
 # Ignore configuration files that may contain sensitive information.
 sites/*/settings*.php
 .idea/
+sites/all/themes/custom/ddobs/less/package.json
+sites/all/themes/custom/ddobs/less/node_modules
 # Ignore paths that contain user-generated content.
 sites/*/files
 sites/*/private
