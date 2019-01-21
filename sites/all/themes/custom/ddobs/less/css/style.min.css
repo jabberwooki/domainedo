@@ -1831,7 +1831,7 @@ h2.page-header.title-several-lines:after{display:none!important}
 blockquote{font-weight:400!important}
 blockquote p{font-weight:800!important;font-size:1.25em}
 p.txt-intro,p.txt-normal{font-style:normal!important}
-p.txt-normal{font-weight:600!important;font-size:.875em!important;line-height:1.375em}
+p.txt-normal{font-weight:400!important;font-size:.875em!important;line-height:1.375em}
 p.txt-intro{font-weight:700!important;font-size:1em!important;line-height:22px!important}
 p.txt-intro-grenadine{font-style:italic;font-weight:400;font-size:1.25em!important;color:#f74e2d;line-height:22px!important}
 .cartouche-noir{display:block;color:#fff;background-color:#000;text-decoration:none;padding:5px;font-size:.6875em;border:1px solid #000;font-weight:500}

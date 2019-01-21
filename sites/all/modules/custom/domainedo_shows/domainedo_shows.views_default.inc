@@ -1401,7 +1401,7 @@ else {
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['empty'] = TRUE;
-  $handler->display->display_options['footer']['area']['content'] = '<a id="home-calendar-link" href="calendar">Le Calendrier</a>';
+  $handler->display->display_options['footer']['area']['content'] = '<a id="home-calendar-link" href="/calendar">Le Calendrier</a>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Contenu: Festival */
@@ -1643,7 +1643,7 @@ else {
     t('Heure de départ (HH:MM) (Obligatoire)'),
     t('Durée (nombre de minutes) (Obligatoire)'),
     t('Accès rapide'),
-    t('<a id="home-calendar-link" href="calendar">Le Calendrier</a>'),
+    t('<a id="home-calendar-link" href="/calendar">Le Calendrier</a>'),
     t('All shows Metropole Agenda'),
     t('nid'),
     t('description'),
