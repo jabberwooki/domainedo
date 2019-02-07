@@ -33,7 +33,7 @@ jQuery(function($) {
     //Twitter
     const twitter_url = 'https://twitter.com/intent/tweet?url=https%3A%2F%2Fdomainedo.fr'+
     pathname +
-    '&text=Je+vous+suggère&hashtags=spectacle,Montpellier';
+    '&text=&hashtags=spectacle,Montpellier';
     
     const twitter_button = $('<a></a>',{
         text: "lien",
@@ -42,6 +42,15 @@ jQuery(function($) {
     }).insertAfter(facebook_button);  
 
     // SMS
-    const sms_link = $('<a href="sms:?&body=Je suggère ' + 'https://www.domainedo.fr' + pathname + '">SMS</a>');
-    sms_link.insertAfter(twitter_button);  
+    const ua = navigator.userAgent.toLowerCase();
+    const isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
+    if(isAndroid) {
+        let sms_link = $('<a href="sms:?&body=' + 'https://www.domainedo.fr' + pathname + '">SMS</a>');
+        sms_link.insertAfter(twitter_button); 
+    }
+    if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
+        let sms_link = $('<a href="sms:;body=https://www.domainedo.fr' + pathname + '">SMS</a>');
+        sms_link.insertAfter(twitter_button); 
+   }
+     
 });
