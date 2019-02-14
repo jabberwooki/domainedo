@@ -2166,8 +2166,8 @@ strong{font-weight:700}
 .node-type-show .under_show-social-wrapper .show-social-wrapper .chat-show{display:block;float:left;margin:-4px 20px 20px 0;color:#000}
 .node-type-show .under_show-social-wrapper .show-social-wrapper .chat-show:before{font-size:2em;color:orange}
 .node-type-show .under_show-social-wrapper .show-social-wrapper .chat-show:hover,.node-type-show .under_show-social-wrapper .show-social-wrapper .chat-show:hover:before{text-decoration:none;color:#f74e2d}
-.node-type-show .under_show-social-wrapper .show-social-wrapper .show-whatsapp{display:block;float:left;margin:0 20px 20px 40px;color:#000}
-.node-type-show .under_show-social-wrapper .show-social-wrapper .show-whatsapp:before{position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"\f232";font-size:2em;color:#00FF79}
+.node-type-show .under_show-social-wrapper .show-social-wrapper .show-whatsapp{display:block;float:left;margin:0 0 20px 20px;color:#000}
+.node-type-show .under_show-social-wrapper .show-social-wrapper .show-whatsapp:before{position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;speak:none;text-decoration:inherit;width:1em;margin-right:10px;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:'\f232';display:block;font-size:2em;color:#00FF79}
 .node-type-show .under_show-social-wrapper .show-social-wrapper .show-whatsapp:hover,.node-type-show .under_show-social-wrapper .show-social-wrapper .show-whatsapp:hover:before{color:#f74e2d;text-decoration:none}
 .node-type-show .under_show-social-wrapper .show-social-wrapper .twitter-show{width:35px;margin:0 20px;overflow:hidden}
 .node-type-show .under_show-social-wrapper .show-social-wrapper .twitter-show:before{font-size:2em;color:#1890F6}
