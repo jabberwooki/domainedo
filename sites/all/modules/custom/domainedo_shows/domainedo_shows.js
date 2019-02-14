@@ -91,3 +91,4 @@ jQuery(function ($) {
         href: twitter_url
     }).appendTo(social_wrapper);
 });
+
