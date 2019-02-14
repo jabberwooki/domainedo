@@ -648,65 +648,74 @@
       top: -15px !important;
     }
   }
-  .show-social-wrapper {
+  .under_show-social-wrapper {
     border-bottom: 1px solid black;
     padding-bottom: 20px;
     margin-bottom:  10px;
-    .chat-show {
-      display: block;
-      float: left;
-      margin: -4px 20px 0 0;
-      color: black;
-      &:before {
-        font-size: 2em;
-        color: orange;
+    .show-social-wrapper {
+      @media (max-width: 580px) {
+        display: table;
+        max-width: 290px;
+        margin: 0 auto;
       }
-      &:hover {
-        color: @grenadine-ddo;
-        text-decoration: none;
+     
+      .chat-show {
+        display: block;
+        float: left;
+        margin: -4px 20px 20px 0;
+        color: black;
         &:before {
-          text-decoration: none;
+          font-size: 2em;
+          color: orange;
+        }
+        &:hover {
           color: @grenadine-ddo;
+          text-decoration: none;
+          &:before {
+            text-decoration: none;
+            color: @grenadine-ddo;
+          }
         }
       }
-    }
-    .show-whatsapp {
-      display: block;
-      float: left;
-      margin: 0 20px;
-      color: black;
-      &:before {
-        .glyphicon();
-        content: "\f232";
-        font-size: 2em;
-        color: #00FF79;
-      }
-      &:hover {
-        color: @grenadine-ddo;
-        text-decoration: none;
+      .show-whatsapp {
+        display: block;
+        float: left;
+        margin: 0 20px 20px 40px;
+        color: black;
         &:before {
-          text-decoration: none;
+          .glyphicon();
+          content: "\f232";
+          font-size: 2em;
+          color: #00FF79;
+        }
+        &:hover {
           color: @grenadine-ddo;
+          text-decoration: none;
+          &:before {
+            text-decoration: none;
+            color: @grenadine-ddo;
+          }
         }
       }
-    }
-    .twitter-show {
-      width: 35px;
-      margin: 0 20px;
-      overflow: hidden;
-      &:before {
-        font-size: 2em;
-        color: #1890F6;
-      }
-      &:hover {
+      .twitter-show {
+        width: 35px;
+        margin: 0 20px;
+        overflow: hidden;
         &:before {
-          text-decoration: none;
-          color: @grenadine-ddo;
+          font-size: 2em;
+          color: #1890F6;
+        }
+        &:hover {
+          &:before {
+            text-decoration: none;
+            color: @grenadine-ddo;
+          }
         }
       }
+    
     }
-  
   }
+  
   
 }
 
