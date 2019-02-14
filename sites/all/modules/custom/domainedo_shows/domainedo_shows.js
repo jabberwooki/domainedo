@@ -51,10 +51,12 @@ jQuery(function ($) {
 
     // whatsApp
     if (isAndroid ||(navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
-        const whatsapp_button = $('<a class=" icon-whatsapp show-whatsapp" href="whatsapp://send?text=' +
+        const whatsapp_button = $('<a class="show-whatsapp" href="whatsapp://send?text=' +
     'https://www.domainedo.fr' + 
         pathname +
-    '" data-action="share/whatsapp/share"><span class="sr-only">Partager avec Whatsapp</span></a>').appendTo(social_wrapper);
+    '" data-action="share/whatsapp/share"> ' + 
+    '<img id="whatsapp" src="/sites/all/themes/custom/ddobs/less/images/whatsapp.png" alt="Partager sur WhatsApp">' +
+    '<span class="sr-only">Partager avec Whatsapp</span></a>').appendTo(social_wrapper);
     }
    /*  const whatsapp_button = $('<a class="icon-whatsapp show-whatsapp" href="whatsapp://send?text=' +
     'https://www.domainedo.fr' + 
