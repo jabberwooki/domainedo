@@ -17,10 +17,15 @@ jQuery(function ($) {
     // boutons réseaux sociaux
     const pathname = window.location.pathname;
     let first_button;
+    const under_social_wrapper = $("<div></div>",{
+        class: "under_show-social-wrapper"
+    });
     const social_wrapper = $("<div></div>",{
         class: "show-social-wrapper"
     });
-    social_wrapper.insertAfter(".field-name-field-by");
+    
+    under_social_wrapper.insertAfter(".field-name-field-by");
+    social_wrapper.appendTo(under_social_wrapper);
 
     // SMS
     const ua = navigator.userAgent.toLowerCase();
@@ -40,10 +45,21 @@ jQuery(function ($) {
     }
     /* sms_link = $('<a class="icon-chat chat-show" href="sms:?&body=' + 'https://www.domainedo.fr' + pathname +
         '"><span>Partager par SMS</span></a>');
-    sms_link.appendTo(social_wrapper); */
+    sms_link.appendTo(social_wrapper);
     
-    first_button = (sms_link) ? sms_link : ".field-name-field-by";
-    
+    first_button = (sms_link) ? sms_link : ".field-name-field-by"; */
+
+    // whatsApp
+    if (isAndroid ||(navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
+        const whatsapp_button = $('<a class="icon-whatsapp show-whatsapp" href="whatsapp://send?text=' +
+    'https://www.domainedo.fr' + 
+        pathname +
+    '" data-action="share/whatsapp/share"><span class="sr-only">Partager avec Whatsapp</span></a>').appendTo(social_wrapper);
+    }
+   /*  const whatsapp_button = $('<a class="icon-whatsapp show-whatsapp" href="whatsapp://send?text=' +
+    'https://www.domainedo.fr' + 
+        pathname +
+    '" data-action="share/whatsapp/share"><span class="sr-only">Partager avec Whatsapp</span></a>').appendTo(social_wrapper); */
     // facebook
     const facebook_button =
         $('<div class="fb-like" data-href="https://www.domainedo.fr' +
@@ -59,13 +75,7 @@ jQuery(function ($) {
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 
-    // whatsApp
-    if (isAndroid ||(navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
-        const whatsapp_button = $('<a class="icon-whatsapp show-whatsapp" href="whatsapp://send?text=' +
-    'https://www.domainedo.fr' + 
-        pathname +
-    '" data-action="share/whatsapp/share"><span class="sr-only">Partager avec Whatsapp</span></a>').appendTo(social_wrapper);
-    }
+    
     
 
     //Twitter
@@ -78,7 +88,4 @@ jQuery(function ($) {
         class: "icon-twitter twitter-show",
         href: twitter_url
     }).appendTo(social_wrapper);
-
-
-
 });
