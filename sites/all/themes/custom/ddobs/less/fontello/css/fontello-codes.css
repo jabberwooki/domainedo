@@ -72,6 +72,7 @@
 .icon-resize-full-alt-2:before { content: '\e846'; } /* '' */
 .icon-desktop-1:before { content: '\e847'; } /* '' */
 .icon-target:before { content: '\e848'; } /* '' */
+.icon-chat-1:before { content: '\e849'; } /* '' */
 .icon-search-1:before { content: '\e84f'; } /* '' */
 .icon-ok:before { content: '\e850'; } /* '' */
 .icon-twitter-squared:before { content: '\e851'; } /* '' */
@@ -127,5 +128,6 @@
 .icon-thumbs-down-alt:before { content: '\f165'; } /* '' */
 .icon-cart-plus:before { content: '\f217'; } /* '' */
 .icon-cart-arrow-down:before { content: '\f218'; } /* '' */
+.icon-whatsapp:before { content: '\f232'; } /* '' */
 .icon-tripadvisor:before { content: '\f262'; } /* '' */
 .icon-shopping-basket:before { content: '\f291'; } /* '' */

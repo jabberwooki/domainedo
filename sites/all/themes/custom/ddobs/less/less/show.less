@@ -648,6 +648,75 @@
       top: -15px !important;
     }
   }
+  .under_show-social-wrapper {
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+    margin-bottom:  10px;
+    .show-social-wrapper {
+      @media (max-width: 580px) {
+        display: table;
+        max-width: 290px;
+        margin: 0 auto;
+      }
+      .chat-show {
+        display: block;
+        float: left;
+        margin: -4px 20px 20px 0;
+        color: black;
+        &:before {
+          font-size: 2em;
+          color: orange;
+        }
+        &:hover {
+          color: @grenadine-ddo;
+          text-decoration: none;
+          &:before {
+            text-decoration: none;
+            color: @grenadine-ddo;
+          }
+        }
+      }
+      .show-whatsapp{
+        display: block;
+        float: left;
+        margin: 0 0px 20px 20px;
+        color: black;
+        /* &:before {
+          .glyphicon();
+          content: '\f232';
+          display:block;
+          font-size: 2em;
+          color: #00FF79;
+        } */
+        #whatsapp {
+          height: 36px;
+          margin-right: 20px;
+        }
+        &:hover {
+          color: @grenadine-ddo;
+          text-decoration: none;
+        }
+      }
+      .twitter-show {
+        width: 35px;
+        margin: 0 20px;
+        overflow: hidden;
+        &:before {
+          font-size: 2em;
+          color: #1890F6;
+        }
+        &:hover {
+          &:before {
+            text-decoration: none;
+            color: @grenadine-ddo;
+          }
+        }
+      }
+    
+    }
+  }
+  
+  
 }
 
 /* Page tous les spectacles *******************************************************************************************/

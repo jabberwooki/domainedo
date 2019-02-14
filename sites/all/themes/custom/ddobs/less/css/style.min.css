@@ -2160,6 +2160,18 @@ strong{font-weight:700}
 .node-type-show .group-tranparent-gradient .group-date-title-desc .field-name-body p{font-size:.875em;font-style:normal;font-weight:400}
 .node-type-show .group-black-bg .field-name-node-link{top:-15px!important;left:7%!important}
 .node-type-show .group-black-bg .field-name-field-boxoffice-url{top:-15px!important}
+.node-type-show .under_show-social-wrapper{border-bottom:1px solid #000;padding-bottom:20px;margin-bottom:10px}
+@media (max-width:580px){.node-type-show .under_show-social-wrapper .show-social-wrapper{display:table;max-width:290px;margin:0 auto}
+}
+.node-type-show .under_show-social-wrapper .show-social-wrapper .chat-show{display:block;float:left;margin:-4px 20px 20px 0;color:#000}
+.node-type-show .under_show-social-wrapper .show-social-wrapper .chat-show:before{font-size:2em;color:orange}
+.node-type-show .under_show-social-wrapper .show-social-wrapper .chat-show:hover,.node-type-show .under_show-social-wrapper .show-social-wrapper .chat-show:hover:before{color:#f74e2d;text-decoration:none}
+.node-type-show .under_show-social-wrapper .show-social-wrapper .show-whatsapp{display:block;float:left;margin:0 0 20px 20px;color:#000}
+.node-type-show .under_show-social-wrapper .show-social-wrapper .show-whatsapp #whatsapp{height:36px;margin-right:20px}
+.node-type-show .under_show-social-wrapper .show-social-wrapper .show-whatsapp:hover{color:#f74e2d;text-decoration:none}
+.node-type-show .under_show-social-wrapper .show-social-wrapper .twitter-show{width:35px;margin:0 20px;overflow:hidden}
+.node-type-show .under_show-social-wrapper .show-social-wrapper .twitter-show:before{font-size:2em;color:#1890F6}
+.node-type-show .under_show-social-wrapper .show-social-wrapper .twitter-show:hover:before{text-decoration:none;color:#f74e2d}
 .page-spectacles h2.page-header{text-indent:-6000px;display:none}
 .page-spectacles #headband-festival{border-bottom:50px solid #fff}
 @media (min-width:992px){.page-spectacles #headband-festival .views-exposed-widgets{position:relative;padding-bottom:100px}
