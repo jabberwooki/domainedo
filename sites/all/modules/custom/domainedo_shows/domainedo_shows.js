@@ -51,7 +51,7 @@ jQuery(function ($) {
 
     // whatsApp
     if (isAndroid ||(navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
-        const whatsapp_button = $('<a class="icon-whatsapp show-whatsapp" href="whatsapp://send?text=' +
+        const whatsapp_button = $('<a class=" icon-whatsapp show-whatsapp" href="whatsapp://send?text=' +
     'https://www.domainedo.fr' + 
         pathname +
     '" data-action="share/whatsapp/share"><span class="sr-only">Partager avec Whatsapp</span></a>').appendTo(social_wrapper);
