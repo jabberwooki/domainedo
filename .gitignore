@@ -2,7 +2,6 @@
 sites/*/settings*.php
 gitflow/
 .idea/
-sites/all/themes/custom/ddobs/less/package.json
 sites/all/themes/custom/ddobs/less/node_modules
 sites/all/themes/custom/ddobs/less/fonts/
 # Ignore paths that contain user-generated content.
