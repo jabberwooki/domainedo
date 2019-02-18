@@ -49,4 +49,7 @@ jQuery(function($) {
       return "0" + d.getDate();
     } else return d.getDate();
   }
+
+  // Tracking bouton réserver
+  $(".field-name-field-boxoffice-url a").attr("onClick","ga('send', 'event', 'Button', 'Click', 'Billetterie via bouton réserver sur le site du domaine'");
 });
