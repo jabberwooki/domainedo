@@ -90,5 +90,8 @@ jQuery(function ($) {
         class: "icon-twitter twitter-show",
         href: twitter_url
     }).appendTo(social_wrapper);
+
+    // Tracking bouton réserver
+    $(".field-name-field-boxoffice-url a").attr("onClick","ga('send', 'event', 'Button', 'Click', 'Billetterie via bouton réserver sur le site du domaine'");
 });
 
