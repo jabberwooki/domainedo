@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * domaine_d_o_articles.features.fe_block_settings.inc
@@ -21,12 +22,6 @@ function domaine_d_o_articles_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'bootstrap' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bootstrap',
-        'weight' => 0,
-      ),
       'ddobs' => array(
         'region' => '',
         'status' => 0,
@@ -46,7 +41,7 @@ function domaine_d_o_articles_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => '',
+    'title' => '<none>',
     'visibility' => 0,
   );
 
