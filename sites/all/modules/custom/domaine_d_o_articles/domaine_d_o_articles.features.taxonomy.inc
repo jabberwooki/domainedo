@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * domaine_d_o_articles.features.taxonomy.inc

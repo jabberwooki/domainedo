@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * domaine_d_o_articles.features.field_base.inc
@@ -115,7 +116,7 @@ function domaine_d_o_articles_field_default_field_bases() {
   // Exported field_base: 'gallery_items'.
   $field_bases['gallery_items'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'gallery_items',

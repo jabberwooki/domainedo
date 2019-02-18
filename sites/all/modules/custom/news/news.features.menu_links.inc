@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * news.features.menu_links.inc
