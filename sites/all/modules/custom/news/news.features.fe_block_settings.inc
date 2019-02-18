@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * news.features.fe_block_settings.inc
@@ -21,12 +22,6 @@ function news_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'bootstrap' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bootstrap',
-        'weight' => 0,
-      ),
       'ddobs' => array(
         'region' => '',
         'status' => 0,
@@ -59,12 +54,6 @@ function news_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'bootstrap' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bootstrap',
-        'weight' => 0,
-      ),
       'ddobs' => array(
         'region' => '',
         'status' => 0,
