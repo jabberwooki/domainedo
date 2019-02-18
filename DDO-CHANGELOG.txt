@@ -1,3 +1,7 @@
+Domaine d'O 1.1.22 - 2019-02-18
+----------------------------
+Pathauto up for articles and events
+
 Domaine d'O 1.1.21 - 2019-02-18
 ----------------------------
 Tracking of button réserver
