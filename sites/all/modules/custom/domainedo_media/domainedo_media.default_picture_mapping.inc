@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * domainedo_media.default_picture_mapping.inc
