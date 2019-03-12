@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * domainedo_media.default_breakpoint_group.inc

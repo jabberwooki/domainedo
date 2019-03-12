@@ -60,6 +60,7 @@ features[scald_context_config][] = full_show
 features[scald_context_config][] = haut_classique
 features[scald_context_config][] = large_480x296_crop
 features[scald_context_config][] = list
+features[scald_context_config][] = petit_100
 features[scald_context_config][] = sdl_editor_representation
 features[scald_context_config][] = sdl_library_item
 features[scald_context_config][] = sdl_preview

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * domaine_d_o_page_complexe.features.field_instance.inc
@@ -114,7 +115,7 @@ function domaine_d_o_page_complexe_field_default_field_instances() {
       'active' => 1,
       'module' => 'atom_reference',
       'settings' => array(
-        'context' => 'sdl_editor_representation',
+        'context' => 'petit_100',
       ),
       'type' => 'atom_reference_textfield',
       'weight' => 1,
@@ -608,6 +609,52 @@ function domaine_d_o_page_complexe_field_default_field_instances() {
       ),
       'type' => 'text_textarea',
       'weight' => 34,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-titre3_txt_summary_option-field_texte_page_complexe'.
+  $field_instances['paragraphs_item-titre3_txt_summary_option-field_texte_page_complexe'] = array(
+    'bundle' => 'titre3_txt_summary_option',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_texte_page_complexe',
+    'label' => 'Texte',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 1,
+      'mee_enabled' => 1,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 36,
     ),
   );
 
