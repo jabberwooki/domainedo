@@ -211,7 +211,7 @@ function domainedo_shows_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'date_format_shows_block';
-  $strongarm->value = 'D d M H\\hi';
+  $strongarm->value = 'm/d/Y - H:i';
   $export['date_format_shows_block'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -225,7 +225,7 @@ function domainedo_shows_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'date_format_shows_list';
-  $strongarm->value = 'l d M - H\\hi';
+  $strongarm->value = 'D d F H\\hi';
   $export['date_format_shows_list'] = $strongarm;
 
   $strongarm = new stdClass();
