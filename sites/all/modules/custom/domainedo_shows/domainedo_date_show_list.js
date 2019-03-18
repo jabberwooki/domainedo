@@ -21,8 +21,8 @@ jQuery(function($) {
       from_date = new Date(from_date);
       to_date = new Date(to_date);
 
-      from_month = parseInt(from_date.getMonth()) + 1;
-      to_month = parseInt(to_date.getMonth()) + 1;
+      from_month = customGetMonth(parseInt(from_date.getMonth()) + 1);
+      to_month = customGetMonth(parseInt(to_date.getMonth()) + 1);
 
       msg_date =
         customGetDate(from_date) +
@@ -55,6 +55,11 @@ jQuery(function($) {
     if (d.getDate() < 10) {
       return "0" + d.getDate();
     } else return d.getDate();
+  }
+  function customGetMonth(m) {
+    if (m < 10) {
+      return "0" + m;
+    } else return m;
   }
 
   // Tracking bouton réserver
