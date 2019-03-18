@@ -133,7 +133,7 @@ function domainedo_shows_features_date_format_default() {
   );
   $fdf_config[] = array(
     'dfid' => 40,
-    'format' => 'D d M H\\hi',
+    'format' => 'D d F H\\hi',
     'type' => 'custom',
     'locked' => 0,
   );

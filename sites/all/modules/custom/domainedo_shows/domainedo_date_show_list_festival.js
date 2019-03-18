@@ -21,8 +21,8 @@ jQuery(function($) {
       from_date = new Date(from_date);
       to_date = new Date(to_date);
 
-      from_month = parseInt(from_date.getMonth()) + 1;
-      to_month = parseInt(to_date.getMonth()) + 1;
+      from_month = customGetMonth(parseInt(from_date.getMonth()) + 1);
+      to_month = customGetMonth(parseInt(to_date.getMonth()) + 1);
 
       msg_date =
         customGetDate(from_date) +
@@ -51,10 +51,10 @@ jQuery(function($) {
     $(".date-display-single", $(this)).wrap('<a href="' + url_show + '"></a>');
   });
 
-  function customGetMonth(d) {
-    if (d.getMonth() < 10) {
-      return "0" + d.getMonth();
-    } else return d.getMonth();
+  function customGetMonth(m) {
+    if (m < 10) {
+      return "0" + m;
+    } else return m;
   }
   function customGetDate(d) {
     if (d.getDate() < 10) {
