@@ -1,3 +1,7 @@
+Domaine d'O 1.1.26 - 2019-05-09
+------------------
+"en ce moment" crop and redirecton improved
+
 Domaine d'O 1.1.25 - 2019-03-18
 ------------------
 Show dates format improved

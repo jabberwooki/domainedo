@@ -41,7 +41,7 @@ breakpoints[mobile] = (min-width: 0px)
 ;; Stylesheets
 ;;;;;;;;;;;;;;;;;;;;;
 
-stylesheets[all][] = css/style.min.css
+stylesheets[all][] = css/style.css
 
 
 ;;;;;;;;;;;;;;;;;;;;;

@@ -141,7 +141,10 @@ function news_strongarm() {
             'weight' => '15',
             'visible' => FALSE,
           ),
-          'right_now' => NULL,
+          'right_now' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
       ),
     ),
