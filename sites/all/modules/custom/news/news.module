@@ -80,7 +80,18 @@ function news_views_pre_render(&$view) {
   }
 
 }
+function news_preprocess_page(&$variables) {
+  $node = $variables['node'];
 
+  /* if ($node->type === 'family') {
+
+    // works within this function, but must be getting overridden later
+    //$variables['node']->title = 'The ' . $node->title . ' Family';
+
+    // works
+    $variables['title'] = 'The ' . $node->title . ' Family';
+  } */
+}
 /**
  * Implements hook_node_view_alter().
  */
