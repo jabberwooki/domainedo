@@ -36,18 +36,18 @@ function domainedo_media_image_default_styles() {
   $styles['en-ce-momentbreakpoints_theme_ddobs_wide_1x'] = array(
     'label' => 'En ce moment - grand',
     'effects' => array(
-      54 => array(
+      18 => array(
         'name' => 'manualcrop_crop',
         'data' => array(
           'width' => 768,
           'height' => 554,
           'keepproportions' => 1,
           'reuse_crop_style' => '',
-          'style_name' => 'image_768x554',
+          'style_name' => 'en-ce-momentbreakpoints_theme_ddobs_wide_1x',
         ),
         'weight' => 0,
       ),
-      55 => array(
+      19 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 768,
