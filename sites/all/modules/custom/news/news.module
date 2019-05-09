@@ -85,6 +85,32 @@ function news_views_pre_render(&$view) {
  * Implements hook_node_view_alter().
  */
 function news_node_view_alter(&$build) {
+  // En ce moment
+  if ($build['#bundle'] == 'news' && $build['#view_mode'] == 'right_now') {
+    //dpm($build);
+    $node = $build['#node'];
+    $node_wrapper = entity_metadata_wrapper('node', $node);
+    // cas où url target est renseignée"
+    if($node_wrapper->field_news_url_target->value()) {
+      // Modification et récupération du titre
+      $build['title'][0]['#markup'] = '<h2><a href="' .
+      $node_wrapper->field_news_url_target->value() .
+      '">' .
+      $node_wrapper->title->value() .
+      '</a></h2>';
+
+      // Modification du lien "plus d'infos"
+      $build['node_link'][0]['#markup'] = '<a href="' .
+      $node_wrapper->field_news_url_target->value() .
+      '" >Plus d\'infos</a>';
+    }
+
+    if (isset($build['field_scald_image']['#object']->field_news_url_target['und'][0]['value'])) {
+      //dpm("********** ici ****************");
+      $build['field_scald_image']['#object']->title = "Test";
+      $build['node_link']['#items'][0]['value'] ="TEST";
+    }
+  }
 
   $path_alias = '';
 
