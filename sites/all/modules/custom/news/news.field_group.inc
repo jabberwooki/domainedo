@@ -150,8 +150,9 @@ function news_field_group_info() {
     'label' => 'Titre et suite',
     'weight' => '2',
     'children' => array(
-      0 => 'title',
-      1 => 'node_link',
+      0 => 'field_news_url_target',
+      1 => 'title',
+      2 => 'node_link',
     ),
     'format_type' => 'div',
     'format_settings' => array(

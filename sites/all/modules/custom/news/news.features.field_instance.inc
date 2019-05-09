@@ -499,10 +499,11 @@ function news_field_default_field_instances() {
         'weight' => 25,
       ),
       'right_now' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 22,
+        'type' => 'text_default',
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1064,7 +1065,7 @@ function news_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => 'Evénement visible sur la zone "En ce moment" de la page d\'accueil ?',
+    'description' => 'Evénement visible sur la zone "En ce moment" de la page d\'accueil ? Pour que l\'événement soit visible, il faut le mettre en première place (cliquer/glisser) sur l\'interface suivante :  <a href="/admin/sorting/zoom">https://www.domainedo.fr/admin/sorting/zoom</a>',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1122,7 +1123,7 @@ function news_field_default_field_instances() {
   t('Date d\'événement');
   t('Date de parution');
   t('En ce moment');
-  t('Evénement visible sur la zone "En ce moment" de la page d\'accueil ?');
+  t('Evénement visible sur la zone "En ce moment" de la page d\'accueil ? Pour que l\'événement soit visible, il faut le mettre en première place (cliquer/glisser) sur l\'interface suivante :  <a href="/admin/sorting/zoom">https://www.domainedo.fr/admin/sorting/zoom</a>');
   t('Fichiers attachés');
   t('Galerie');
   t('Image bandeau');
