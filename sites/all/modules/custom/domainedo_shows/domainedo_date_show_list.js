@@ -1,5 +1,5 @@
 jQuery(function($) {
-  console.log("dans date_show_list");
+  //console.log("dans date_show_list");
   var from_date,
     to_date,
     from_year_date,
