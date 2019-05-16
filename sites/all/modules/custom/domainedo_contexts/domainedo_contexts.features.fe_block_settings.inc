@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * domainedo_contexts.features.fe_block_settings.inc
@@ -21,12 +22,6 @@ function domainedo_contexts_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'bootstrap' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bootstrap',
-        'weight' => 0,
-      ),
       'ddobs' => array(
         'region' => '',
         'status' => 0,
@@ -59,12 +54,6 @@ function domainedo_contexts_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'bootstrap' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bootstrap',
-        'weight' => 0,
-      ),
       'ddobs' => array(
         'region' => '',
         'status' => 0,
@@ -98,12 +87,6 @@ function domainedo_contexts_default_fe_block_settings() {
 spectacle*',
     'roles' => array(),
     'themes' => array(
-      'bootstrap' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bootstrap',
-        'weight' => -27,
-      ),
       'ddobs' => array(
         'region' => '',
         'status' => 0,
@@ -136,12 +119,6 @@ spectacle*',
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'bootstrap' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bootstrap',
-        'weight' => 0,
-      ),
       'ddobs' => array(
         'region' => '',
         'status' => 0,

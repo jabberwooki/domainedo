@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * domainedo_contexts.features.user_permission.inc

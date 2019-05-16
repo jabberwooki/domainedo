@@ -1,4 +1,5 @@
 jQuery(function($) {
+  //console.log("dans date_show_list");
   var from_date,
     to_date,
     from_year_date,
@@ -31,7 +32,7 @@ jQuery(function($) {
         "/" +
         from_year_date +
         " > " +
-        to_date.getDate() +
+        customGetDate(to_date) +
         "/" +
         to_month +
         "/" +
