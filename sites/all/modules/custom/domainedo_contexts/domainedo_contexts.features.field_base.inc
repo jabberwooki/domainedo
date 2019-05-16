@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * domainedo_contexts.features.field_base.inc

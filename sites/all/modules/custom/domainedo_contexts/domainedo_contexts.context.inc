@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * domainedo_contexts.context.inc
@@ -37,12 +38,6 @@ function domainedo_contexts_context_default_contexts() {
           'delta' => 'main',
           'region' => 'content',
           'weight' => '0',
-        ),
-        'bean-reseaux-sociaux-bas' => array(
-          'module' => 'bean',
-          'delta' => 'reseaux-sociaux-bas',
-          'region' => 'footer',
-          'weight' => '-10',
         ),
       ),
     ),
