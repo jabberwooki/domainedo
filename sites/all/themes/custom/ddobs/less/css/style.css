@@ -9252,6 +9252,10 @@ strong {
 .atom-align-right {
   margin: 0 0 0 20px;
 }
+#footer-menus {
+  border-top: 1.5px solid #000;
+  padding-top: 20px;
+}
 /* fontello icons *************************************************************/
 @font-face {
   font-family: 'fontello';
