@@ -864,9 +864,51 @@ function domainedo_shows_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_programmer_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_programmer_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_show_pattern';
   $strongarm->value = 'spectacles/tous-les-spectacles/[node:title]';
   $export['pathauto_node_show_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_structure_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_structure_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_audience_types_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_audience_types_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_show_locations_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_show_locations_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_show_types_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_show_types_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_structure_types_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_structure_types_pattern'] = $strongarm;
 
   return $export;
 }
