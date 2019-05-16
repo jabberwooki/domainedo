@@ -1371,10 +1371,10 @@ else {
   );
   $handler->display->display_options['path'] = 'nuits-do-metropole-agenda.csv';
 
-  /* Display: Accès rapide */
-  $handler = $view->new_display('block', 'Accès rapide', 'block_quick_acces');
+  /* Display: Accès par festival */
+  $handler = $view->new_display('block', 'Accès par festival', 'block_quick_acces');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Accès rapide';
+  $handler->display->display_options['title'] = 'Accès par festival';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
@@ -1642,7 +1642,7 @@ else {
     t('Date de début (JJ/MM/AAAA) (Obligatoire)'),
     t('Heure de départ (HH:MM) (Obligatoire)'),
     t('Durée (nombre de minutes) (Obligatoire)'),
-    t('Accès rapide'),
+    t('Accès par festival'),
     t('<a id="home-calendar-link" href="/calendar">Le Calendrier</a>'),
     t('All shows Metropole Agenda'),
     t('nid'),
