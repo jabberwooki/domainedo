@@ -1,3 +1,7 @@
+Domaine d'O 1.1.28 - 2019-06-06
+------------------
+Feature domainedo_shows up to enlarge years range in calendar views.
+
 Domaine d'O 1.1.27 - 2019-05-16
 ------------------
 Dates improved, social bottom buttons deleted and pathauto updated
