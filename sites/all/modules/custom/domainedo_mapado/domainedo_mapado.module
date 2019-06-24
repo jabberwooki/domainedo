@@ -424,8 +424,23 @@ function domainedo_mapado_node_view($node, $view_mode, $langcode) {
   if ($node->type == 'show') {
     $is_on_sale = TRUE;
 
+    // calcul de la dernière date de représentation
+    $today = date("Y-m-d\TH:i:sP");
+    $next_show = 0;
+    // Dès qu'un spectacle a une date dans le futur, on arrête la boucle pour dire que la
+    // variable next_show est vraie
+    foreach ($node->field_show_dates['und'] as $item) {
+      if($item['value'] > $today) {
+        $next_show = 1;
+        break;
+      }
+    }
+    // si le spectacle est passé on cache le bouton RESERVER
+    if (!$next_show) {
+      $is_on_sale = FALSE;
+    }
     // Si le spectacle est connu sur mapado, on teste s'il a un ticketingId.
-    if (isset($node->field_mapado_apislug['und'][0]['value'])) {
+    else if (isset($node->field_mapado_apislug['und'][0]['value'])) {
       $apiSlug = $node->field_mapado_apislug['und'][0]['value'];
       $url = "https://api.mapado.net/v2/activities/". $apiSlug . ".json?fields=title,ticketingId";
       $media_api_result = json_decode(domainedo_mapado_send_request_to_media_api($url, "GET", $node));
