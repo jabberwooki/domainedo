@@ -121,7 +121,7 @@ function domainedo_webpush_node_postinsert($node) {
       $form_state['values']['title'] = 'Nouvel événement au domaine d\'O';
       $form_state['values']['body'] = 'Un nouvel événément a été publié dans le calendrier du domaine d\'O.';
       $form_state['values']['link_type'] = 'custom';
-      $form_state['values']['link_custom'] = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . '/node/' . $node->nid;
+      $form_state['values']['link_custom'] = domainedo_webpush_get_server_protocol() . '://' . $_SERVER['HTTP_HOST'] . '/node/' . $node->nid;
       $form_state['values']['topics_mode'] = $node->field_topic_mode['und'][0]['value'];
       $form_state['values']['topics'] = domainedo_webpush_build_topics_array($node);
 
@@ -162,4 +162,14 @@ function domainedo_webpush_build_topics_array($node) {
   }
 
   return $topics;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function domainedo_webpush_get_server_protocol() {
+  if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') {
+    return 'https';
+  }
+  return 'http';
 }
