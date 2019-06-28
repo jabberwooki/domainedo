@@ -1,0 +1,40 @@
+#webpush-simple-sub-button {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: rgba(255,255,255,0.95);
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 999;
+  padding: 10px;
+  min-width: 84px;
+  min-height: 84px;
+  border-radius: 50%;
+}
+
+#webpush-simple-sub-button[data-webpush-state="enabled"],
+#webpush-simple-sub-button[data-webpush-state="disabled"] {
+  background-image: url('../images/bell-black.png');
+  cursor: pointer;
+}
+
+#webpush-simple-sub-button[data-webpush-state="incompatible"],
+#webpush-simple-sub-button[data-webpush-state="userdenied"],
+#webpush-simple-sub-button[data-webpush-state="computing"],
+#webpush-simple-sub-button[data-webpush-state="unknown"] {
+  background-image: url('../images/bell-grey.png');
+  cursor: not-allowed;
+}
+
+#webpush-simple-sub-button:hover::after {
+  content: attr(data-webpush-message);
+  display: block;
+  position: fixed;
+  left: 20px;
+  bottom: 110px;
+  font-size: 12px;
+  line-height: 14px;
+  background-color: rgba(255,255,255,0.95);
+  padding: 3px 5px;
+  border-radius: 2px;
+}

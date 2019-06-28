@@ -1,0 +1,165 @@
+<?php
+
+/**
+ * @file
+ * Code for the Domaine d'O Web Push feature.
+ */
+
+include_once 'domainedo_webpush.features.inc';
+
+/**
+ * Implements hook_init().
+ */
+function domainedo_webpush_init() {
+  drupal_add_css(drupal_get_path('module','domainedo_webpush') . '/css/domainedo_webpush.css');
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function domainedo_webpush_block_info() {
+  $blocks = [];
+  $blocks['domainedo_webpush_user_panel'] = [
+    'info' => t('Domaine d\'O Webpush user panel', [], ['context' => 'webpush_topics']),
+    'cache' => DRUPAL_NO_CACHE,
+  ];
+
+  return $blocks;
+}
+
+
+/**
+ * Implements hook_block_view().
+ */
+function domainedo_webpush_block_view($delta = '') {
+  if (!webpush_is_enabled() || !user_access('register webpush')) {
+    return [];
+  }
+
+  $block = [];
+
+  switch ($delta) {
+    case 'domainedo_webpush_user_panel' :
+
+      $block['content'] = [
+        'message' => ['#markup' => theme('domainedo_webpush_user_panel', _webpush_topics_block_variables())],
+        '#attached' => [
+          'css' => [
+            drupal_get_path('module', 'domainedo_webpush') . '/css/user_panel.css',
+          ],
+          'js' => [
+            [
+              'data' => drupal_get_path('module', 'webpush_topics') . '/js/build/user_panel.js',
+              'type' => 'file',
+            ],
+          ],
+        ],
+      ];
+      break;
+  }
+
+  return $block;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function domainedo_webpush_theme($existing, $type, $theme, $path) {
+  return [
+    'domainedo_webpush_user_panel' => [
+      'template' => 'domainedo-webpush--user-panel',
+      'variables' => [
+        'topics' => NULL,
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function domainedo_webpush_form_news_node_form_alter(&$form, &$form_state, $form_id) {
+  dpm($form);
+  dpm($form_state);
+  if (!isset($form['nid']['#value'])) {
+    dpm('ajout du champ');
+
+    drupal_add_js(drupal_get_path('module','domainedo_webpush') . '/js/domainedo_webpush.js');
+
+//    if (!webpush_subscription__count()) {
+//      return;
+//    }
+
+
+  }
+  else {
+    dpm('aucun ajout');
+    $form['field_topic_mode']['und']['#required'] = FALSE;
+    $form['field_topic_mode']['und']['#disabled'] = TRUE;
+    $form['field_topics']['und']['#required'] = FALSE;
+    $form['field_topics']['und']['#disabled'] = TRUE;
+    $form['field_send_notification']['und']['#disabled'] = TRUE;
+
+    drupal_add_css(drupal_get_path('module','domainedo_webpush') . '/css/domainedo_webpush_disabled.css');
+  }
+}
+
+/**
+ * Implements hook_node_postinsert().
+ */
+function domainedo_webpush_node_postinsert($node) {
+  if ($node->type == 'news') {
+    if (!empty($node->field_send_notification) && $node->field_send_notification['und'][0]['value'] == 1) {
+      watchdog('domainedo_webpush', 'faut envoyer une notification');
+
+      $topic_mode = $node->field_topic_mode['und'][0]['value'];
+
+      // Envoi d'une notification via le formulaire admin du module webpush
+      $form_id = 'webpush_admin_send_form';
+
+      $form_state = array();
+      $form_state['values']['title'] = 'Nouvel événement au domaine d\'O';
+      $form_state['values']['body'] = 'Un nouvel événément a été publié dans le calendrier du domaine d\'O.';
+      $form_state['values']['link_type'] = 'custom';
+      $form_state['values']['link_custom'] = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . '/node/' . $node->nid;
+      $form_state['values']['topics_mode'] = $node->field_topic_mode['und'][0]['value'];
+      $form_state['values']['topics'] = domainedo_webpush_build_topics_array($node);
+
+      watchdog('domainedo_webpush', 'topic mode = ' . $form_state['values']['topic_mode']);
+      drupal_form_submit($form_id, $form_state);
+      $form_errors = form_get_errors();
+      watchdog('domainedo_webpush', 'form errors = ' . serialize($form_errors));
+
+    }
+  }
+}
+
+//function domainedo_webpush_get_node_topics_tids($node) {
+//  $node_topics = $node->field_webpush_topics;
+//
+//  if (empty($node->field_webpush_topics)) {
+//    return array();
+//  }
+//
+//  $node_topics_tids = array();
+//  foreach($node_topics['und'] as $topic) {
+//    $node_topics_tids[] = $topic['tid'];
+//  }
+//
+//  return $node_topics_tids;
+//}
+
+function domainedo_webpush_build_topics_array($node) {
+  if ($node->field_topic_mode['und'][0]['value'] == 'all') {
+    return array();
+  }
+
+  $node_topics = $node->field_topics['und'];
+
+  $topics = array();
+  foreach($node_topics as $topic) {
+    $topics[$topic['tid']] = $topic['tid'];
+  }
+
+  return $topics;
+}

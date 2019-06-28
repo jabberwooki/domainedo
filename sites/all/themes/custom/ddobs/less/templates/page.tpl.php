@@ -123,6 +123,19 @@
         <div class="col-md-2" id="div-subscritpion">
             <a id="link-subscritpion" href="/abonnement">Abonnement</a>
         </div>
+
+        <!-- Affichage du bloc domainedo_webpush_user_panel. -->
+        <!-- Un bloc vide est affiché si le module webpush n'est pas activé ou si l'utilisateur n'as pas de droit d'activer les notifications. -->
+        <div id="webpush-handling">
+          <?php
+          if (webpush_is_enabled() && user_access('register webpush')) {
+            $block = block_load('domainedo_webpush','domainedo_webpush_user_panel');
+            $render_array = _block_get_renderable_array(_block_render_blocks(array($block)));
+            $output = drupal_render($render_array);
+            print $output;
+          }
+          ?>
+        </div><!-- Fin affichage du bloc domainedo_webpush_user_panel. -->
     </div> <!-- Fin de la première ligne -->
 
     <div class="row">
