@@ -1,3 +1,11 @@
+Domaine d'O 1.1.30 - 2019-06-24
+------------------
+Hide reservation button when show is passed and dump today shows and events in calendar.
+
+Domaine d'O 1.1.29 - 2019-06-18
+------------------
+Feature domainedo_mapado up to manage field field_reservation in other way.
+
 Domaine d'O 1.1.28 - 2019-06-06
 ------------------
 Feature domainedo_shows up to enlarge years range in calendar views.
