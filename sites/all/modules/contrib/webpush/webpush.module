@@ -246,7 +246,7 @@ function webpush_admin_send_form_validate(&$form, &$form_state) {
   }
 }
 
-function webpush_admin_send_form_submit($form, &$form_state) {dpm($form_state);
+function webpush_admin_send_form_submit($form, &$form_state) {
   $values = $form_state['values'];
   $title = $values['title'];
   $body = $values['body'];
