@@ -7,3 +7,6 @@ sites/all/themes/custom/ddobs/less/fonts/
 # Ignore paths that contain user-generated content.
 sites/*/files
 sites/*/private
+
+# Ignore web-push PHP library and its dependencies
+sites/all/vendor
