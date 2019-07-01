@@ -79,8 +79,8 @@ function domainedo_webpush_theme($existing, $type, $theme, $path) {
  * Implements hook_form_FORM_ID_alter().
  */
 function domainedo_webpush_form_news_node_form_alter(&$form, &$form_state, $form_id) {
-  dpm($form);
-  dpm($form_state);
+//  dpm($form);
+//  dpm($form_state);
   if (!isset($form['nid']['#value'])) {
     dpm('ajout du champ');
 
