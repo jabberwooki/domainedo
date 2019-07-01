@@ -79,19 +79,15 @@ function domainedo_webpush_theme($existing, $type, $theme, $path) {
  * Implements hook_form_FORM_ID_alter().
  */
 function domainedo_webpush_form_news_node_form_alter(&$form, &$form_state, $form_id) {
-//  dpm($form);
-//  dpm($form_state);
+  // Création du node : ajout du code javascript qui gère les champs de notification.
   if (!isset($form['nid']['#value'])) {
-    dpm('ajout du champ');
-
     drupal_add_js(drupal_get_path('module','domainedo_webpush') . '/js/domainedo_webpush.js');
 
 //    if (!webpush_subscription__count()) {
 //      return;
 //    }
-
-
   }
+  // Modification du node : on affiche les champs pour info, ils sont désactivés.
   else {
     dpm('aucun ajout');
     $form['field_topic_mode']['und']['#required'] = FALSE;
