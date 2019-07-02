@@ -2,10 +2,6 @@
  * Created by ubuntu on 27/06/19.
  */
 
-jQuery(function($){
-  // fait en sorte que les actualités des marques aient la meme hauteur
-  //$('.group-brand-news .view-id-news .views-row').matchHeight();
-});
 (function ($) {
 
   Drupal.behaviors.ddoWebpush = {
