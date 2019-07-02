@@ -114,16 +114,28 @@ function domainedo_webpush_node_postinsert($node) {
       $form_id = 'webpush_admin_send_form';
 
       $form_state = array();
-      $form_state['values']['title'] = 'Nouvel événement au domaine d\'O';
-      $form_state['values']['body'] = 'Un nouvel événément a été publié dans le calendrier du domaine d\'O.';
+
+      $form_state['values']['title'] = $node->title;
+
+      // Récupération de la ou des thématiques.
+//      $topics = '';
+//      foreach($node->field_topics['und'] as $tid) {
+//        $term = taxonomy_term_load($tid['tid']);
+//        $name = $term->name;
+//        $topics .= $name . ' - ';
+//      }
+//      $topics_string = substr($topics,0,-3);
+
+      $form_state['values']['body'] = strip_tags($node->body['und'][0]['value']);
       $form_state['values']['link_type'] = 'custom';
       $form_state['values']['link_custom'] = domainedo_webpush_get_server_protocol() . '://' . $_SERVER['HTTP_HOST'] . '/node/' . $node->nid;
       $form_state['values']['topics_mode'] = $node->field_topic_mode['und'][0]['value'];
       $form_state['values']['topics'] = domainedo_webpush_build_topics_array($node);
 
-      watchdog('domainedo_webpush', 'topic mode = ' . $form_state['values']['topic_mode']);
+      watchdog('domainedo_webpush', 'topic mode = ' .  $node->field_topic_mode['und'][0]['value']);
       drupal_form_submit($form_id, $form_state);
       $form_errors = form_get_errors();
+      watchdog('domainedo_webpush', 'data = ' . serialize($form_state['values']));
       watchdog('domainedo_webpush', 'form errors = ' . serialize($form_errors));
 
     }
