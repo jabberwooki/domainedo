@@ -1,0 +1,1006 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function webpush_menu() {
+  $items = [];
+
+  $items['webpush/serviceworker/js'] = [
+    'page callback' => 'webpush_serviceworker_file_data',
+    'access arguments' => ['register webpush'],
+    'access callback' => TRUE,
+    'delivery callback' => 'webpush_deliver_js_file',
+    'type' => MENU_CALLBACK,
+  ];
+
+  $items['webpush/subscription-registration'] = [
+    'type' => MENU_CALLBACK,
+    'page callback' => 'webpush_subscription_registration_callback',
+    'access arguments' => ['register webpush'],
+    'access callback' => TRUE,
+  ];
+
+  $items['admin/config/services/webpush'] = [
+    'title' => 'Webpush',
+    'description' => 'Webpush settings.',
+    'access arguments' => ['administer webpush'],
+    'file' => 'webpush.admin.inc',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => ['webpush_admin_configuration_form'],
+  ];
+
+  $items['admin/config/services/webpush/configure'] = [
+    'type' => MENU_DEFAULT_LOCAL_TASK,
+    'title' => 'Configuration',
+    'description' => 'Webpush settings.',
+    'access arguments' => ['administer webpush'],
+    'file' => 'webpush.admin.inc',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => ['webpush_admin_configuration_form'],
+    'weight' => 5,
+  ];
+
+  $items['admin/config/services/webpush/advanced'] = [
+    'type' => MENU_LOCAL_TASK,
+    'title' => 'Advanced',
+    'description' => 'Advanced webpush settings.',
+    'access arguments' => ['administer webpush'],
+    'file' => 'webpush.admin.inc',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => ['webpush_admin_advanced_configuration_form'],
+    'weight' => 10,
+  ];
+
+  $items['webpush/autocomplete-node'] = [
+    'page callback' => 'webpush_autocomplete_node_callback',
+    'type' => MENU_CALLBACK,
+    'file' => 'webpush.admin.inc',
+    'access arguments' => ['send push notifications'],
+  ];
+
+  $items['admin/reports/webpush-subscriptions'] = [
+    'title' => 'WebPush Subscriptions',
+    'description' => 'Overview of WebPush subscriptions.',
+    'page callback' => 'webpush_subscription__overview',
+    'file' => 'includes/webpush_subscription.inc',
+    'access arguments' => ['send push notifications'],
+  ];
+
+
+  // Dummy elements for the entities administration pages.
+  $items['admin/structure/webpush-subscription/manage'] = [
+    'title' => 'WebPush subscriptions',
+    'access arguments' => ['administer webpush'],
+  ];
+  $items['admin/structure/webpush-notification/manage'] = [
+    'title' => 'WebPush notifications',
+    'access arguments' => ['administer webpush'],
+  ];
+
+  return $items;
+}
+
+/**
+ * Implements hook_menu_alter().
+ */
+function webpush_menu_alter(&$items) {
+  $items['admin/content/webpush']['type'] = MENU_LOCAL_TASK;
+  $items['admin/content/webpush']['title'] = t('Push notifications', [], ['context' => 'webpush']);
+
+  $items['admin/content/webpush/add']['page callback'] = 'drupal_get_form';
+  $items['admin/content/webpush/add']['page arguments'] = ['webpush_admin_send_form'];
+}
+
+function webpush_admin_send_form() {
+  $form = [];
+
+  if (!webpush_subscription__count()) {
+    return [
+      'no_subscriptions_message' => [
+        '#markup' => t('You need to have at least one registered subscription in order to send a push notification, but it seems that you have none.', [], ['context' => 'webpush']),
+      ],
+    ];
+  }
+
+  $form['title'] = [
+    '#type' => 'textfield',
+    '#title' => t('Title', [], ['context' => 'webpush']),
+    '#description' => t('The title of your notification.', [], ['context' => 'webpush']),
+    '#required' => TRUE,
+  ];
+
+  $form['body'] = [
+    '#type' => 'textfield',
+    '#title' => t('Body', [], ['context' => 'webpush']),
+    '#description' => t('The body of your notification.', [], ['context' => 'webpush']),
+    '#maxlength' => 2048,
+    '#required' => TRUE,
+  ];
+
+  $form['link'] = [
+    '#type' => 'fieldset',
+    '#title' => t('Link', [], ['context' => 'webpush']),
+  ];
+  $form['link']['link_type'] = [
+    '#type' => 'radios',
+    '#title' => t('Link type', [], ['context' => 'webpush']),
+    '#options' => webpush_link_type_options(),
+    '#default_value' => variable_get('webpush_link_type', 'frontpage'),
+  ];
+  $form['link']['link_node'] = [
+    '#type' => 'textfield',
+    '#title' => t('Node', [], ['context' => 'webpush']),
+    '#description' => t('Autocomplete field', [], ['context' => 'webpush']),
+    '#states' => [
+      'visible' => [
+        ':input[name="link_type"]' => ['value' => 'node'],
+      ],
+    ],
+    '#autocomplete_path' => 'webpush/autocomplete-node',
+  ];
+  $form['link']['link_custom'] = [
+    '#type' => 'textfield',
+    '#title' => t('Custom link', [], ['context' => 'webpush']),
+    '#maxlength' => 512,
+    '#states' => [
+      'visible' => [
+        ':input[name="link_type"]' => ['value' => 'custom'],
+      ],
+    ],
+  ];
+  $form['utm'] = [
+    '#type' => 'fieldset',
+    '#title' => t('UTM parameters', [], ['context' => 'webpush']),
+  ];
+  $form['utm']['utm_source'] = [
+    '#type' => 'textfield',
+    '#default_value' => variable_get('webpush_utm_source', ''),
+    '#title' => 'utm_source',
+    '#description' => t('Add utm_source parameter to url. Leave empty to ignore.', [], ['context' => 'webpush']),
+  ];
+  $form['utm']['utm_medium'] = [
+    '#type' => 'textfield',
+    '#default_value' => variable_get('webpush_utm_medium', ''),
+    '#title' => 'utm_medium',
+    '#description' => t('Add utm_medium parameter to url. Leave empty to ignore.', [], ['context' => 'webpush']),
+  ];
+  $form['utm']['utm_campaign'] = [
+    '#type' => 'textfield',
+    '#default_value' => variable_get('webpush_utm_campaign', ''),
+    '#title' => 'utm_campaign',
+    '#description' => t('Add utm_campaign parameter to url. Leave empty to ignore.', [], ['context' => 'webpush']),
+  ];
+
+
+  $form['submit'] = [
+    '#type' => 'submit',
+    '#value' => t('Send', [], ['context' => 'webpush']),
+    '#weight' => 100,
+  ];
+
+  return $form;
+}
+
+function webpush_admin_send_form_validate(&$form, &$form_state) {
+  global $base_url;
+  $values = $form_state['values'];
+
+  if ($values['link_type'] == 'node') {
+    $title = $values['link_node'];
+    if (empty($title)) {
+      form_error($form['link']['link_node'], t('You need to select a valid node.', [], ['context' => 'webpush']));
+      return FALSE;
+    }
+    $matches = [];
+
+    // This preg_match() looks for the last pattern like [33334] and if found
+    // extracts the numeric portion.
+    $result = preg_match('/\[([0-9]+)\]$/', $title, $matches);
+    if ($result > 0) {
+      // If $result is nonzero, we found a match and can use it as the index into
+      // $matches.
+      $nid = $matches[$result];
+      // Verify that it's a valid nid.
+      $node = node_load($nid);
+      if (empty($node)) {
+        form_error($form['link']['link_node'], t('No node with nid %nid can be found', ['%nid' => $nid], ['context' => 'webpush']));
+        return FALSE;
+      }
+    }
+    // BUT: Not everybody will have javascript turned on, or they might hit ESC
+    // and not use the autocomplete values offered. In that case, we can attempt
+    // to come up with a useful value. This is not absolutely necessary, and we
+    // *could* just emit a form_error() as below.
+    else {
+      $nid = db_select('node')
+        ->fields('node', ['nid'])
+        ->condition('title', db_like($title) . '%', 'LIKE')
+        ->range(0, 1)
+        ->execute()
+        ->fetchField();
+    }
+
+    // Now, if we somehow found a nid, assign it to the node. If we failed, emit
+    // an error.
+    if (!empty($nid)) {
+      $form_state['values']['link_node'] = $nid;
+    }
+    else {
+      form_error($form['link']['link_node'], t('No node starting with %title can be found', ['%title' => $title], ['context' => 'webpush']));
+      return FALSE;
+    }
+
+  }
+  elseif ($values['link_type'] == 'custom') {
+    $url = $values['link_custom'];
+    if (!valid_url($url, TRUE)) {
+      form_error($form['link']['link_custom'], t('The url you typed is not valid. It has to begin with http:// or https://', [], ['context' => 'webpush']));
+      return FALSE;
+    }
+    if (strpos($url, $base_url) !== 0) {
+      form_error($form['link']['link_custom'], t('You can only add urls from the current domain (!url)', ['!url' => $base_url], ['context' => 'webpush']));
+      return FALSE;
+    }
+
+  }
+}
+
+function webpush_admin_send_form_submit($form, &$form_state) {
+  $values = $form_state['values'];
+  $title = $values['title'];
+  $body = $values['body'];
+  switch ($values['link_type']) {
+    case 'node':
+      $link = '/' . drupal_get_path_alias('node/' . $values['link_node']);
+      break;
+    case 'custom':
+      $link = $values['link_custom'];
+      break;
+    case 'frontpage':
+    default:
+      global $base_url;
+      $link = $base_url;
+      break;
+  }
+
+  $query_params = [];
+  if ($values['utm_source']) {
+    $query_params['utm_source'] = $values['utm_source'];
+  }
+  if ($values['utm_medium']) {
+    $query_params['utm_medium'] = $values['utm_medium'];
+  }
+  if ($values['utm_campaign']) {
+    $query_params['utm_campaign'] = $values['utm_campaign'];
+  }
+  if (!empty($query_params)) {
+    $query_params = implode('&', array_map(
+      function ($v, $k) {
+        return sprintf("%s=%s", $k, $v);
+      },
+      $query_params,
+      array_keys($query_params)
+    ));
+    $link .= '?' . $query_params;
+  }
+
+  $notification_entity = webpush_notification__create_entity($title, $body, $link);
+  if (isset($form_state['_webpush_notification_entity_fields'])) {
+    $notification_wrapper = entity_metadata_wrapper('webpush_notification', $notification_entity);
+    foreach ($form_state['_webpush_notification_entity_fields'] as $field => $field_values) {
+      $notification_wrapper->$field->set($field_values);
+    }
+    $notification_wrapper->save();
+  }
+
+  $targets = [];
+  if (isset($form_state['_webpush_targets'])) {
+    if ($form_state['_webpush_targets']) {
+      $targets = $form_state['_webpush_targets'];
+    }
+    else {
+      $msg = t('You have no subscriptions to your selected topics.', [], ['context' => 'webpush']);
+      drupal_set_message($msg, 'warning');
+      return;
+    }
+  }
+
+  batch_set(webpush__send_notification_batch($notification_entity, $targets));
+}
+
+
+function webpush_link_type_options() {
+  return [
+    'frontpage' => t('Frontpage', [], ['context' => 'webpush']),
+    'node' => t('Node', [], ['context' => 'webpush']),
+    'custom' => t('Custom', [], ['context' => 'webpush']),
+  ];
+}
+
+
+/**
+ * Deliver the JS for the service worker.
+ *
+ * Adds a Service-Worker-Allowed header so that a file served from
+ * '/webpush/serviceworker/js' can have a scope of '/'.
+ */
+function webpush_deliver_js_file($page_callback_result) {
+  drupal_add_http_header('Content-Type', 'application/javascript');
+  drupal_add_http_header('Content-Disposition', 'inline; filename="sw.js"');
+  drupal_add_http_header('Service-Worker-Allowed', base_path());
+  print $page_callback_result;
+}
+
+/**
+ * Returns the JS of the service worker.
+ *
+ * @return mixed
+ */
+function webpush_serviceworker_file_data() {
+  $data = cache_get('webpush:serviceworker', 'cache');
+  if ($data) {
+    $data = $data->data;
+  }
+  else {
+    $data = _webpush_serviceworker_file();
+    cache_set('webpush:serviceworker', $data, 'cache');
+  }
+
+  return $data;
+}
+
+/**
+ * Take the serviceworker template file and return its contents.
+ *
+ * @return string
+ */
+function _webpush_serviceworker_file() {
+  $path = drupal_get_path('module', 'webpush');
+  $sw = file_get_contents($path . '/js/sw.js');
+  return $sw;
+}
+
+
+/**
+ * Implements hook_permission().
+ */
+function webpush_permission() {
+  return [
+    'register webpush' => [
+      'title' => t('Register webpush', [], ['context' => 'webpush']),
+      'description' => t('Register for receiving push notifications.', [], ['context' => 'webpush']),
+    ],
+    'administer webpush' => [
+      'title' => t('Administer webpush', [], ['context' => 'webpush']),
+      'description' => t('Set configuration options for webpush.', [], ['context' => 'webpush']),
+    ],
+    'send push notifications' => [
+      'title' => t('Send push notifications', [], ['context' => 'webpush']),
+      'description' => t('Allows the user to send push notifications.', [], ['context' => 'webpush']),
+    ],
+  ];
+
+}
+
+function webpush_is_enabled() {
+  return variable_get('webpush_public_key', FALSE) && variable_get('webpush_private_key', FALSE);
+}
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function webpush_preprocess_html(&$variables) {
+  if (!webpush_is_enabled() || !user_access('register webpush')) {
+    return;
+  }
+
+  // Let js know about all the active properties.
+  drupal_add_js(['webpush' => ['properties' => webpush_get_properties()]], ['type' => 'setting']);
+
+  // Let js know about all the active buttons.
+  drupal_add_js(['webpush' => ['buttons' => webpush_get_buttons()]], ['type' => 'setting']);
+
+  // Load the app script.
+  drupal_add_js(drupal_get_path('module', 'webpush') . '/js/build/app.js', 'file');
+
+  // Load the app CSS.
+  drupal_add_css(drupal_get_path('module', 'webpush') . '/css/notify_user.css', 'file');
+
+  // Load the service worker.
+  drupal_add_js(['webpush' => ['path' => url('/webpush/serviceworker/js')]], 'setting');
+
+  // Send the public key to js.
+  drupal_add_js(['webpush' => ['applicationServerKey' => variable_get('webpush_public_key', FALSE)]], ['type' => 'setting']);
+}
+
+
+/**
+ * Implements hook_block_info().
+ */
+function webpush_block_info() {
+  $blocks = [];
+  $blocks['simple_button'] = [
+    'info' => t('Webpush simple button', [], ['context' => 'webpush']),
+  ];
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function webpush_block_view($delta = '') {
+  $block = [];
+
+  switch ($delta) {
+    case 'simple_button' :
+      $block['content'] = _webpush_block_build();
+      break;
+  }
+
+  return $block;
+}
+
+function _webpush_block_build() {
+  if (!webpush_is_enabled() || !user_access('register webpush')) {
+    return [];
+  }
+
+  $block = [
+    'message' => [
+      '#type' => 'markup',
+      '#markup' => '<div id="webpush-simple-sub-button"></div>',
+      '#suffix' => '',
+    ],
+
+    '#attached' => [
+      'css' => [
+        drupal_get_path('module', 'webpush') . '/css/simple_button.css',
+      ],
+
+      'js' => [
+        [
+          'data' => drupal_get_path('module', 'webpush') . '/js/build/simple_button.js',
+          'type' => 'file',
+        ],
+      ],
+    ],
+
+  ];
+  return $block;
+}
+
+function webpush_get_properties() {
+  $result = [];
+  foreach (module_implements('webpush_properties_info') as $module) {
+    $module_result = module_invoke($module, 'webpush_properties_info');
+    $result = array_merge($result, $module_result);
+  }
+  return $result;
+}
+
+function webpush_get_buttons() {
+  $result = [];
+  foreach (module_implements('webpush_buttons_info') as $module) {
+    $module_result = module_invoke($module, 'webpush_buttons_info');
+    $result = array_merge($result, $module_result);
+  }
+  return $result;
+}
+
+function webpush_webpush_buttons_info() {
+  return [
+    'simple_button_id' => 'webpush-simple-sub-button',
+  ];
+}
+
+
+function webpush_subscription_registration_callback() {
+  $subscription_input = json_decode(file_get_contents('php://input'), TRUE);
+  $subscription = $subscription_input ?
+    Minishlink\WebPush\Subscription::create([
+      'endpoint' => $subscription_input['endpoint'],
+      'authToken' => $subscription_input['authToken'],
+      'publicKey' => $subscription_input['publicKey'],
+      'contentEncoding' => $subscription_input['contentEncoding'],
+    ]) :
+    FALSE;
+  $data = $subscription_input['data'] ?? FALSE;
+
+  $entity = FALSE;
+  switch ($_SERVER['REQUEST_METHOD']) {
+    case 'POST':
+    case 'PUT':
+      $entity = webpush_register($subscription, $data);
+      break;
+
+    case 'DELETE':
+      $entity = webpush_unregister($subscription);
+      break;
+
+    //    case 'GET':
+    //      if ($subscription) {
+    //        $entity = webpush_register__retrieve_entity($subscription);
+    //      }
+    //      break;
+
+    default:
+      break;
+  }
+
+  if (is_object($entity)) {
+    list($id, $vid, $bundle) = entity_extract_ids('webpush_subscription', $entity);
+
+    $return_data = [];
+    // Give an opportunity to other modules to alter the outgoing data before we
+    // json serialize them.
+    drupal_alter('webpush_return_subscription_data', $return_data, $entity);
+
+    drupal_json_output([
+      'webpush' => [
+        'entity_id' => $id,
+        'data' => $return_data,
+      ],
+    ]);
+    drupal_exit();
+  }
+  else {
+    drupal_json_output(FALSE);
+    drupal_exit();
+  }
+  return;
+}
+
+/**
+ * Callback function for registering a new subscription.
+ *
+ * @param \Minishlink\WebPush\Subscription $subscription
+ *
+ * @param $data
+ *
+ */
+function webpush_register(Minishlink\WebPush\Subscription $subscription, $data = FALSE) {
+
+  if ($data && !empty($data['entity_id'])) {
+    $incoming_entity_id = $data['entity_id'];
+    $entity = entity_load_single('webpush_subscription', [$incoming_entity_id]);
+    unset($data['entity_id']);
+  }
+  else {
+    $entity = webpush_register__retrieve_entity($subscription);
+  }
+
+  // Is there an entity hosting this subscription?
+  if ($entity) {
+    // Yes, so update it.
+    $entity = webpush_register__update_entity($subscription, $entity, $data);
+  }
+  else {
+    // No, so create one..
+    $entity = webpush_register__create_entity($subscription, $data);
+  }
+  return $entity;
+}
+
+/**
+ * Callback function for deleting a subscription.
+ *
+ * @param \Minishlink\WebPush\Subscription $subscription
+ */
+function webpush_unregister(Minishlink\WebPush\Subscription $subscription) {
+  webpush_register__delete_entity($subscription);
+}
+
+function webpush_register__update_entity(Minishlink\WebPush\Subscription $subscription, WebpushSubscription $entity, $data = FALSE) {
+  $serialized = serialize($subscription);
+
+  try {
+    $entity_wrapper = entity_metadata_wrapper('webpush_subscription', $entity);
+    $entity_wrapper->subscription->set($serialized);
+    if (is_array($data)) {
+
+      // Give an opportunity to other modules to alter the incoming data before we
+      // assign the values to fields.
+      drupal_alter('webpush_update_subscription', $data);
+
+      // Just for safety reasons, because the drupal_alter might have unset all
+      // the fields.
+      if (!empty($data)) {
+        foreach ($data as $field => $values) {
+          $entity_wrapper->$field->set($values);
+        }
+      }
+    }
+    $entity_wrapper->save();
+  } catch (EntityMetadataWrapperException $e) {
+    watchdog(
+      'webpush',
+      $e->getMessage() . '<br>See ' . __FUNCTION__ . '():' . __LINE__ . ' <pre>!trace</pre>',
+      ['!trace' => $e->getTraceAsString()],
+      WATCHDOG_ERROR
+    );
+    return FALSE;
+  }
+
+  return $entity_wrapper->value();
+}
+
+/**
+ * Creates a new webpush_subscription entity that hosts the subscription.
+ *
+ * @param \Minishlink\WebPush\Subscription $subscription
+ *
+ * @param $data
+ * It is expecting to receive an associative array where keys will be field
+ * (or properties) machine names, and values will be the actual value to be
+ * stored in the field/property.
+ * Check webpush_topics submodule for an example implementation.
+ *
+ * @return bool
+ */
+function webpush_register__create_entity(Minishlink\WebPush\Subscription $subscription, $data) {
+  $serialized = serialize($subscription);
+
+  $entity_type = 'webpush_subscription';
+  $entity = entity_create($entity_type, [
+    'subscription' => $serialized,
+    'created' => REQUEST_TIME,
+  ]);
+  $entity->save();
+
+  if (is_array($data)) {
+    // Give an opportunity to other modules to alter the incoming data before we
+    // assign the values to fields.
+    drupal_alter('webpush_create_subscription', $data);
+
+    // Just for safety reasons, because the drupal_alter might have unset all
+    // the fields.
+    if (empty($data)) {
+      return $entity;
+    }
+
+    try {
+      $entity_wrapper = entity_metadata_wrapper('webpush_subscription', $entity);
+      foreach ($data as $field => $values) {
+        $entity_wrapper->$field->set($values);
+      }
+      $entity_wrapper->save();
+    } catch (EntityMetadataWrapperException $e) {
+      watchdog(
+        'webpush',
+        $e->getMessage() . '<br>See ' . __FUNCTION__ . '():' . __LINE__ . ' <pre>!trace</pre>',
+        ['!trace' => $e->getTraceAsString()],
+        WATCHDOG_ERROR
+      );
+      return FALSE;
+    }
+  }
+
+  return $entity;
+}
+
+function webpush_notification__create_entity($title, $body, $link) {
+  $entity_type = 'webpush_notification';
+  $entity = entity_create($entity_type, [
+    'title' => $title,
+    'body' => $body,
+    'link' => $link,
+    'created' => REQUEST_TIME,
+  ]);
+  $entity->save();
+
+  return $entity;
+}
+
+/**
+ * Retrieve the id of the entity that hosts the subscription.
+ *
+ * @param \Minishlink\WebPush\Subscription $subscription
+ *
+ * @return bool|int|null|string
+ */
+function webpush_register__retrieve_entity(Minishlink\WebPush\Subscription $subscription) {
+  $serialized = serialize($subscription);
+
+  $query = new EntityFieldQuery();
+  $query
+    ->entityCondition('entity_type', 'webpush_subscription')
+    ->propertyCondition('subscription', $serialized)
+    ->addMetaData('account', user_load(1)); // Run the query as user 1.
+  $result = $query->execute();
+  if (isset($result['webpush_subscription'])) {
+    reset($result['webpush_subscription']);
+    $id = key($result['webpush_subscription']);
+    $entity = entity_load_single('webpush_subscription', [$id]);
+    return $entity;
+  }
+  return FALSE;
+}
+
+/**
+ * Deletes the webpush_subscription entity that hosts the subscription.
+ *
+ * @param \Minishlink\WebPush\Subscription $subscription
+ *
+ * @return bool|int|null|string
+ */
+function webpush_register__delete_entity(Minishlink\WebPush\Subscription $subscription) {
+  $entity = webpush_register__retrieve_entity($subscription);
+  list($id, $vid, $bundle) = entity_extract_ids('webpush_subscription', $entity);
+  entity_delete('webpush_subscription', $id);
+}
+
+/**
+ * Returns an array with the IDs of all the webpush_subscription entities.
+ *
+ * @return array|bool
+ */
+function webpush_subscription__get_all() {
+  $query = new EntityFieldQuery();
+  $query
+    ->entityCondition('entity_type', 'webpush_subscription')
+    ->addMetaData('account', user_load(1)); // Run the query as user 1.
+  $result = $query->execute();
+  if (isset($result['webpush_subscription'])) {
+    return array_keys($result['webpush_subscription']);
+  }
+  return FALSE;
+}
+
+function webpush__send_notification(Minishlink\WebPush\Subscription $subscription, $title, $body, $link) {
+  $auth = [
+    'VAPID' => [
+      'subject' => $title,
+      'publicKey' => variable_get('webpush_public_key', ''),
+      'privateKey' => variable_get('webpush_private_key', ''),
+    ],
+  ];
+
+  $payload = [
+    'title' => $title,
+    'body' => $body,
+  ];
+  if ($link) {
+    $payload['url'] = $link;
+  }
+  if ($icon = variable_get('webpush_icon_fid', '')) {
+    $file = file_load($icon);
+    $uri = $file->uri;
+    $url = file_create_url($uri);
+    $payload['icon'] = $url;
+  }
+  if ($badge = variable_get('webpush_badge_fid', '')) {
+    $file = file_load($icon);
+    $uri = $file->uri;
+    $url = file_create_url($uri);
+    $payload['badge'] = $url;
+  }
+
+  // Alter hook for the payload
+  drupal_alter('webpush_payload', $payload);
+
+  // @TODO implement also an "image" (here, and in JS)
+
+  try {
+    $webPush = new Minishlink\WebPush\WebPush($auth);
+    $result = $webPush->sendNotification(
+      $subscription, // @param Subscription $subscription
+      json_encode($payload), // @param string|null $payload If you want to send an array, json_encode it
+      TRUE // @param bool $flush If you want to flush directly (usually when you send only one notification)
+    // @param array $options Array with several options tied to this notification. If not set, will use the default options that you can set in the WebPush object
+    // @param array $auth Use this auth details instead of what you provided when creating WebPush
+    );
+    if (is_array($result) && !$result['success']) {
+      _webpush_send_subscription_failure($result, $subscription);
+      return FALSE;
+    }
+    return TRUE;
+  } catch (Exception $e) {
+    watchdog_exception('webpush', $e);
+    return FALSE;
+  }
+}
+
+function _webpush_send_subscription_failure(array $result, Minishlink\WebPush\Subscription $subscription) {
+  switch ($result['statusCode']) {
+    case '404':
+      // If we end up here the subscription is not valid anymore, so we just
+      // delete it.
+      $keep_invalid = variable_get('webpush_keep_invalid_subscriptions', FALSE);
+      if (!$keep_invalid) {
+        webpush_register__delete_entity($subscription);
+      }
+      break;
+    default:
+      break;
+  }
+}
+
+/**
+ * Initiates the notification sending procedure.
+ *
+ * @param $subscription_id
+ * @param $data
+ * @param $context
+ */
+function webpush__send_notification_batch_wrapper($subscription_id, $data, &$context) {
+  $title = $data['title'];
+  $body = $data['body'];
+  $link = $data['link'];
+  $context['results']['notification_entity'] = $data['notification_entity'];
+
+  $wrapper = entity_metadata_wrapper('webpush_subscription', $subscription_id);
+
+  /** @var Minishlink\WebPush\Subscription $subscription */
+  $subscription = unserialize($wrapper->subscription->value());
+  $sent = webpush__send_notification($subscription, $title, $body, $link);
+  if ($sent) {
+    if (!isset($context['results']['webpush_success'])) {
+      $context['results']['webpush_success'] = 1;
+    }
+    else {
+      $context['results']['webpush_success']++;
+    }
+  }
+  else {
+    if (!isset($context['results']['webpush_fail'])) {
+      $context['results']['webpush_fail'] = 1;
+    }
+    else {
+      $context['results']['webpush_fail']++;
+    }
+  }
+}
+
+
+function webpush__send_notification_batch(WebpushNotification $notification_entity, array $targets) {
+  $wrapper = entity_metadata_wrapper('webpush_notification', $notification_entity);
+
+  if (empty($targets)) {
+    $subscriptions = webpush_subscription__get_all();
+  }
+  else {
+    $subscriptions = $targets;
+  }
+
+  $operations = [];
+  foreach ($subscriptions as $subscription_id) {
+    $data = [
+      'title' => $wrapper->title->value(),
+      'body' => $wrapper->body->value(),
+      'link' => $wrapper->link->value(),
+      'notification_entity' => $wrapper->value(),
+    ];
+    $operations[] = [
+      'webpush__send_notification_batch_wrapper',
+      [
+        'subscription_id' => $subscription_id,
+        'data' => $data,
+      ],
+    ];
+  }
+  $batch = [
+    'operations' => $operations,
+    'finished' => 'webpush__send_notification_batch_finished',
+  ];
+  return $batch;
+}
+
+
+function webpush__send_notification_batch_finished($success, $results, $operations) {
+  if ($success) {
+    $success = isset($results['webpush_success']) ? (int) $results['webpush_success'] : 0;
+    $fail = isset($results['webpush_fail']) ? (int) $results['webpush_fail'] : 0;
+    $total = $success + $fail;
+    $msg = t('Attempted to send @count push notifications. @success have successfully been sent and @fail have failed.', [
+      '@count' => $total,
+      '@success' => $success,
+      '@fail' => $fail,
+    ],
+      ['context' => 'webpush']);
+    $notification_entity = $results["notification_entity"];
+    $notification_wrapper = entity_metadata_wrapper('webpush_notification', $notification_entity);
+    $notification_wrapper->total->set($total);
+    $notification_wrapper->success->set($success);
+    $notification_wrapper->save();
+
+    drupal_set_message($msg);
+
+    if ($fail) {
+      $keep_invalid = variable_get('webpush_keep_invalid_subscriptions', FALSE);
+      if (!$keep_invalid) {
+        $invalid = t('The subscriptions of the failed notifications have been deleted.', [], ['context' => 'webpush']);
+        drupal_set_message($invalid);
+      }
+      else {
+        $invalid = t('The subscriptions of the failed notifications have not been deleted because your configuration indicates to keep them, but you should consider deleting them.', [], ['context' => 'webpush']);
+        drupal_set_message($invalid, 'warning');
+      }
+    }
+  }
+  else {
+    // An error occurred.
+    // $operations contains the operations that remained unprocessed.
+    $error_operation = reset($operations);
+    drupal_set_message(t('An error occurred while processing @operation with arguments : @args', [
+      '@operation' => $error_operation[0],
+      '@args' => print_r($error_operation[0], TRUE),
+    ],
+      ['context' => 'webpush']));
+  }
+}
+
+
+/**
+ * Implements hook_entity_info().
+ */
+function webpush_entity_info() {
+  module_load_include('inc', 'webpush', 'includes/webpush_subscription');
+  $_webpush_subscription_entity_info = _webpush_subscription_entity_info();
+
+  module_load_include('inc', 'webpush', 'includes/webpush_notification');
+  $_webpush_notification_entity_info = _webpush_notification_entity_info();
+
+  $info = array_merge($_webpush_subscription_entity_info, $_webpush_notification_entity_info);
+  return $info;
+}
+
+/**
+ * Implements hook_entity_property_info().
+ */
+function webpush_entity_property_info() {
+  module_load_include('inc', 'webpush', 'includes/webpush_subscription');
+  $_webpush_subscription_entity_property_info = _webpush_subscription_entity_property_info();
+
+  module_load_include('inc', 'webpush', 'includes/webpush_notification');
+  $_webpush_notification_entity_property_info = _webpush_notification_entity_property_info();
+
+  $info = array_merge($_webpush_subscription_entity_property_info, $_webpush_notification_entity_property_info);
+  return $info;
+}
+
+/**
+ * Access callback for WebPush Subscription drupal entity.
+ */
+function webpush_subscription_access_callback() {
+  return user_access('administer webpush');
+}
+
+/**
+ * Access callback for WebPush Subscription drupal entity.
+ */
+function webpush_notification_access_callback() {
+  return user_access('administer webpush');
+}
+
+function webpush_subscription__count() {
+  $query = "SELECT COUNT(id) FROM {webpush_subscription}";
+  $total = db_query($query)->fetchField();
+  return $total;
+}
+
+function webpush_views_api() {
+  return [
+    'api' => 3,
+  ];
+}
+
+function webpush_subscription__delete_all_form() {
+  $form = [
+    'delete' => [
+      '#type' => 'submit',
+      '#value' => t('Delete all subscriptions', [], ['context' => 'webpush']),
+      '#prefix' => '<br>',
+      '#submit' => ['webpush_subscription__delete_all'],
+    ],
+  ];
+  return $form;
+}
+
+function webpush_subscription__delete_all() {
+  $subscriptions = webpush_subscription__get_all();
+  entity_delete('webpush_subscription', $subscriptions);
+  $msg = t('!count subscriptions deleted.', ['!count' => count($subscriptions)], ['context' => 'webpush']);
+  drupal_set_message($msg);
+}

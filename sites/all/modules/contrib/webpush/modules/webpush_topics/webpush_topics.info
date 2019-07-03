@@ -1,0 +1,13 @@
+name = Webpush Topics
+description = "Categorize Webpush notifications with topics."
+core = 7.x
+
+dependencies[] = webpush
+dependencies[] = taxonomy
+dependencies[] = entityreference
+
+; Information added by Drupal.org packaging script on 2019-05-31
+version = "7.x-1.0-alpha3"
+core = "7.x"
+project = "webpush"
+datestamp = "1559290386"
