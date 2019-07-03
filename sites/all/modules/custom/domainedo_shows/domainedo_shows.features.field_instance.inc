@@ -1280,7 +1280,7 @@ function domainedo_shows_field_default_field_instances() {
     'bundle' => 'show',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'A utiliser dans le cas où la billetterie est externalisée (PDC) ou si gratuité (Radio France) ou pour préciser tout type d\'info supplémentaire',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1333,12 +1333,14 @@ function domainedo_shows_field_default_field_instances() {
         'weight' => 27,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_additional_infos',
     'label' => 'Infos supplémentaires',
     'required' => 0,
     'settings' => array(
-      'context' => '',
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
       'dnd_enabled' => 0,
       'mee_enabled' => 0,
       'text_processing' => 1,
@@ -3179,7 +3181,7 @@ function domainedo_shows_field_default_field_instances() {
     'bundle' => 'show',
     'default_value' => array(
       0 => array(
-        'value' => 0,
+        'value' => 1,
       ),
     ),
     'deleted' => 0,
@@ -3235,6 +3237,7 @@ function domainedo_shows_field_default_field_instances() {
         'weight' => 23,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_promoted',
     'label' => 'Promu en page d\'accueil',
@@ -3479,6 +3482,7 @@ function domainedo_shows_field_default_field_instances() {
         'weight' => 34,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_reservation',
     'label' => 'Réservation',
@@ -5611,6 +5615,7 @@ function domainedo_shows_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('A partir de');
+  t('A utiliser dans le cas où la billetterie est externalisée (PDC) ou si gratuité (Radio France) ou pour préciser tout type d\'info supplémentaire');
   t('Adresse pour le public');
   t('Affiche du festival');
   t('Artiste associé');
