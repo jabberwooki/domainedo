@@ -1,0 +1,19 @@
+name = Webpush
+description = "Drupal integration of the PHP WebPush library."
+core = 7.x
+php = 7.1
+
+configure = admin/config/services/webpush
+
+dependencies[] = entity
+dependencies[] = views
+dependencies[] = composer_manager
+
+files[] = includes/webpush_subscription.inc
+files[] = includes/webpush_notification.inc
+
+; Information added by Drupal.org packaging script on 2019-05-31
+version = "7.x-1.0-alpha3"
+core = "7.x"
+project = "webpush"
+datestamp = "1559290386"
