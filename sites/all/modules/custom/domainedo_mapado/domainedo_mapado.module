@@ -422,6 +422,7 @@ function domainedo_mapado_send_request_to_ticketing_api($url) {
  */
 function domainedo_mapado_node_view($node, $view_mode, $langcode) {
   if ($node->type == 'show') {
+
     $is_on_sale = TRUE;
 
     // calcul de la dernière date de représentation
@@ -493,6 +494,18 @@ function domainedo_mapado_node_view($node, $view_mode, $langcode) {
              // la valeur du champ field_reservation qui sera ensuite utilisé dans domainedo_shows.module
              $node->content['field_reservation']['#items'][0]['value'] = 3;
             }
+            /**
+             * Ajouté par yvan : dans le cas où c'est un diplay view teaser
+             * et qu'il n'y a pas de billetterie en ligne, le bouton réserver renvoie
+             * vers le spectacle en question sans colorbox
+             */
+            if($view_mode == "teaser") {
+              $path = drupal_get_path_alias('node/' . $node->nid);
+              $node->content['field_boxoffice_url'][0]['#element']['attributes']['target'] = '_self';
+              $node->content['field_boxoffice_url'][0]['#element']['attributes']['class'] = '';
+              $node->content['field_boxoffice_url'][0]['#element']['url'] = $path;
+            }
+            // fin ajout Yvan
           }
         }
         // Si l'API billetterie ne retourne pas de résultat, on cache le bouton RESERVER.
@@ -507,7 +520,17 @@ function domainedo_mapado_node_view($node, $view_mode, $langcode) {
     }
 
     if (!$is_on_sale) {
-      unset($node->content['field_boxoffice_url']);
+
+      if($view_mode == "teaser") {
+        //dpm("tptp");
+        // billetterie externalisée : on laisse un bouton réserver mais différent...
+        if($node->field_reservation['und'][0]['value'] == 7) {
+          //
+        }
+      }
+      if($view_mode == "full") {
+        unset($node->content['field_boxoffice_url']);
+      }
     }
   }
 }
