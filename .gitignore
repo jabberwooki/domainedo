@@ -10,3 +10,6 @@ sites/*/private
 
 # Ignore web-push PHP library and its dependencies
 sites/all/vendor
+
+# Ignore Browscap cache files
+sites/all/modules/custom/domainedo_webpush/cache/
