@@ -951,6 +951,8 @@ function domainedo_shows_field_default_field_bases() {
         3 => 'complet',
         4 => 'annulé',
         5 => 'passé',
+        7 => 'Externalisé',
+        8 => 'Gratuit',
       ),
       'allowed_values_function' => '',
     ),

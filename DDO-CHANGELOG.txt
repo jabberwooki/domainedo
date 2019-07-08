@@ -1,3 +1,7 @@
+Domaine d'O 1.1.31 - 2019-07-03
+------------------
+Shows can be now free or in other ticketing system
+
 Domaine d'O 1.1.30 - 2019-06-24
 ------------------
 Hide reservation button when show is passed and dump today shows and events in calendar.
