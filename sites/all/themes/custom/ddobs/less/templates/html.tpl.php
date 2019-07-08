@@ -67,6 +67,7 @@
   <![endif]-->
   <?php print $scripts; ?>
     <script href="sites/all/libraries/mmenu/main/src/js/jquery.mmenu.debugger.js" type="text/javascript"></script>
+    <script src="https://gist.github.com/c-kick/2d717790aadd3aa86884ee0b07c3119f.js"></script>
 </head>
 <body<?php print $body_attributes; ?>>
   <div id="skip-link">
