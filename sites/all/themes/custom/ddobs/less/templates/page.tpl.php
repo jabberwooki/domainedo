@@ -125,7 +125,10 @@
         </div>
 
         <!-- Affichage du bloc domainedo_webpush_user_panel. -->
-        <!-- Un bloc vide est affiché si le module webpush n'est pas activé ou si l'utilisateur n'as pas de droit d'activer les notifications. -->
+        <!-- Un bloc vide est affiché si :
+         - le navigateur est incompatible Web Push (tous les navigateurs iOS ne le sont pas),
+         - le module webpush n'est pas activé
+          - si l'utilisateur n'as pas de droit d'activer les notifications. -->
         <div id="webpush-handling">
           <?php
           if ($variables['webpush_compatibility'] && webpush_is_enabled() && user_access('register webpush')) {
