@@ -80,7 +80,7 @@
 <header id="navbar" role="banner"
         class="<?php print $navbar_classes; ?> tpl-first-row">
     <div class="row">
-        <div class="col-md-2">
+        <div class="col-md-3">
             <ul id="ul-social">
                 <li><a class="icon-facebook"
                        href="http://www.facebook.com/domaine.do"
@@ -108,7 +108,7 @@
                 </li>
             </ul>
         </div>
-        <div class="col-md-8" id="col-logo">
+        <div class="col-md-5" id="col-logo">
           <?php if ($logo): ?>
               <h1 id="logo-ddobs">
                   <a class="logo navbar-btn"
@@ -120,11 +120,8 @@
               </h1>
           <?php endif; ?>
         </div>
-        <div class="col-md-2" id="div-subscritpion">
-            <a id="link-subscritpion" href="/abonnement">Abonnement</a>
-        </div>
-
-        <!-- Affichage du bloc domainedo_webpush_user_panel. -->
+        <div class="col-md-4" id="div-subscritpion">
+          <!-- Affichage du bloc domainedo_webpush_user_panel. -->
         <!-- Un bloc vide est affiché si :
          - le navigateur est incompatible Web Push (tous les navigateurs iOS ne le sont pas),
          - le module webpush n'est pas activé
@@ -139,6 +136,10 @@
           }
           ?>
         </div><!-- Fin affichage du bloc domainedo_webpush_user_panel. -->
+            <a id="link-subscritpion" href="/abonnement">Abonnement</a>
+        </div>
+
+
     </div> <!-- Fin de la première ligne -->
 
     <div class="row">
