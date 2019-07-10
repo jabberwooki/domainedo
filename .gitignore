@@ -10,3 +10,9 @@ sites/*/private
 
 # Ignore web-push PHP library and its dependencies
 sites/all/vendor
+# Do not ignore Composer Manager's composer.json file
+!sites/default/files/composer/composer.json
+!sites/default/files/composer/composer.lock
+
+# Ignore Browscap cache files
+sites/all/modules/custom/domainedo_webpush/cache/
