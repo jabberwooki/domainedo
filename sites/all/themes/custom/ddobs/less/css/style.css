@@ -13446,6 +13446,10 @@ section#block-domainedo-webpush-domainedo-webpush-user-panel {
     padding: 5px 0 5px 35px;
     display: table;
   }
+  section#block-domainedo-webpush-domainedo-webpush-user-panel #webpush-topics-panel.expanded {
+    top: 40px;
+    padding: 20px 40px;
+  }
 }
 #webpush-topics-panel.expanded {
   position: absolute;
