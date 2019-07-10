@@ -8,7 +8,13 @@
   }
   #webpush-topics-panel.expanded {
     position: absolute;
-    left: -20px;
+    @media (min-width: @screen-md) {
+      width: 285px;
+      right: 30px;
+    }
+    @media (max-width: @screen-md) {
+      left: 0;
+    }
     font-family: "Gotham A", "Gotham B";
     input {
       margin-right: 10px;
@@ -17,6 +23,7 @@
       float: none;
     }
   }
+
   @media (max-width: @screen-md) {
     display: table;
     float: none;

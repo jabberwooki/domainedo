@@ -13439,8 +13439,18 @@ strong {
 }
 #webpush-handling #webpush-topics-panel.expanded {
   position: absolute;
-  left: -20px;
   font-family: "Gotham A", "Gotham B";
+}
+@media (min-width: 992px) {
+  #webpush-handling #webpush-topics-panel.expanded {
+    width: 285px;
+    right: 30px;
+  }
+}
+@media (max-width: 992px) {
+  #webpush-handling #webpush-topics-panel.expanded {
+    left: 0;
+  }
 }
 #webpush-handling #webpush-topics-panel.expanded input {
   margin-right: 10px;
