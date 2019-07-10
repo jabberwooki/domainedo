@@ -1,4 +1,45 @@
-section#block-domainedo-webpush-domainedo-webpush-user-panel {
+#webpush-handling {
+  display: table;
+  float: right;
+  margin-left: 20px;
+  #block-domainedo-webpush-domainedo-webpush-user-panel {
+    float: none;
+    display: table;
+  }
+  #webpush-topics-panel.expanded {
+    position: absolute;
+    left: -20px;
+    font-family: "Gotham A", "Gotham B";
+    input {
+      margin-right: 10px;
+    }
+    #webpush-topics-user-panel-wrapper {
+      float: none;
+    }
+  }
+  @media (max-width: @screen-md) {
+    display: table;
+    float: none;
+    margin: 0 auto 0 auto;
+    #webpush-topics-user-panel-wrapper {
+      float: none;
+      border: 0;
+      display: table;
+      margin-left: 15px;
+      div.title {
+        padding: 5px 0 5px 35px;
+        display: table;
+      }
+    }
+    #webpush-topics-panel {
+      &.expanded {
+        top: 0;
+        padding: 20px 60px;
+      }
+    }
+  }
+}
+/* section#block-domainedo-webpush-domainedo-webpush-user-panel {
 
   float: none;
   @media (max-width: @screen-md) {
@@ -33,3 +74,4 @@ section#block-domainedo-webpush-domainedo-webpush-user-panel {
     float: none;
   }
 }
+ */
