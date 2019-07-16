@@ -8053,7 +8053,7 @@ body strong {
   header#navbar > .row div[class^='col-'] {
     padding: 0;
     margin: 0;
-    background-color: #FFF;
+    background-color: transparent;
   }
   header#navbar #row-menu-nav-search {
     position: static;
