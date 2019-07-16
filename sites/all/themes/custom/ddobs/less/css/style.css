@@ -13469,6 +13469,7 @@ strong {
     border: 0;
     display: table;
     margin-left: 15px;
+    margin-top: 20px;
   }
   #webpush-handling #webpush-topics-user-panel-wrapper div.title {
     padding: 5px 0 5px 35px;
