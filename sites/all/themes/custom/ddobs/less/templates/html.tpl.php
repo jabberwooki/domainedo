@@ -67,6 +67,7 @@
   <![endif]-->
   <?php print $scripts; ?>
     <script href="sites/all/libraries/mmenu/main/src/js/jquery.mmenu.debugger.js" type="text/javascript"></script>
+<!--    <script src="sites/all/libraries/mobileConsole/mobileConsole.js"></script>-->
 </head>
 <body<?php print $body_attributes; ?>>
   <div id="skip-link">
