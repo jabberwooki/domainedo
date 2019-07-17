@@ -1,3 +1,21 @@
+Domaine d'O 1.2 - 2019-07-17
+----------------------------
+ * page.tpl.php up to improve notification layout.
+
+ * domainedo_webpush up: Code to test navigator platform type improved: makes the Notifications block visible only if Browscap PHP testing librairy is installed.
+
+ * composer.json and composer.lock files un-ignored in .gitignore
+
+ * domainedo_webpush up: Testing iOS Platform added.
+
+ * mobileConsole library loading commented in html.tpl.php.
+
+ * mobileConsole debugger library added to project.
+
+ * Javascript called in <head> for debugging on mobile devices.
+
+ * domainedo_webpush up: user panel's css improved.
+
 Domaine d'O 1.1.31 - 2019-07-03
 ------------------
 Shows can be now free or in other ticketing system
