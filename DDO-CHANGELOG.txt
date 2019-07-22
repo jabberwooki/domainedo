@@ -1,3 +1,9 @@
+Hotfix user-panel-css-and-infotext-improvement - 2019-07-22
+-----------------------------------------------------------
+ * domainedo_webpush up: typo fixed in user panel info text.
+
+ * domainedo_webpush up: incompatibility tooltip css positioning improved.
+
 Hotfix user-panel-javascript-file-alteration - 2019-07-22
 ---------------------------------------------------------
  * domainedo_webpush up: custom user_panel.js file created and added to domainedo_webpush module to prevent non sw compatible navigator
