@@ -1,3 +1,8 @@
+Hotfix user-panel-javascript-file-alteration - 2019-07-22
+---------------------------------------------------------
+ * domainedo_webpush up: custom user_panel.js file created and added to domainedo_webpush module to prevent non sw compatible navigator
+ to break frontpage javascript code and festival quick access block display.
+
 Domaine d'O 1.2 - 2019-07-17
 ----------------------------
  * page.tpl.php up to improve notification layout.

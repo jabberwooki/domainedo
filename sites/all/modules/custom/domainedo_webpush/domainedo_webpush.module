@@ -49,7 +49,7 @@ function domainedo_webpush_block_view($delta = '') {
           ],
           'js' => [
             [
-              'data' => drupal_get_path('module', 'webpush_topics') . '/js/build/user_panel.js',
+              'data' => drupal_get_path('module', 'domainedo_webpush') . '/js/user_panel.js',
               'type' => 'file',
             ],
           ],
@@ -89,7 +89,6 @@ function domainedo_webpush_form_news_node_form_alter(&$form, &$form_state, $form
   }
   // Modification du node : on affiche les champs pour info, ils sont désactivés.
   else {
-    dpm('aucun ajout');
     $form['field_topic_mode']['und']['#required'] = FALSE;
     $form['field_topic_mode']['und']['#disabled'] = TRUE;
     $form['field_topics']['und']['#required'] = FALSE;
