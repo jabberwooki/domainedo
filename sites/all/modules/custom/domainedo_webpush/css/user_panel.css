@@ -47,8 +47,9 @@
   content: attr(data-webpush-message);
   display: block;
   position: absolute;
-  bottom: 100%;
-  left: 0;
+  /*bottom: 100%;*/
+  /*left: 0;*/
+  top: 30px;
   font-size: 12px;
   line-height: 14px;
   width: 240px;
