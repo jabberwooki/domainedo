@@ -1,3 +1,7 @@
+Hotfix user-panel-infotext-typo - 2019-07-23
+--------------------------------------------
+ * domainedo_webpush up: typo fixed in user panel's info text.
+
 Hotfix user-panel-css-and-infotext-improvement - 2019-07-22
 -----------------------------------------------------------
  * domainedo_webpush up: typo fixed in user panel info text.
