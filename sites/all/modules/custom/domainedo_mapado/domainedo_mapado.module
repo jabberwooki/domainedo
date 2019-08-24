@@ -422,7 +422,6 @@ function domainedo_mapado_send_request_to_ticketing_api($url) {
  */
 function domainedo_mapado_node_view($node, $view_mode, $langcode) {
   if ($node->type == 'show') {
-
     $is_on_sale = TRUE;
 
     // calcul de la dernière date de représentation
@@ -526,15 +525,13 @@ function domainedo_mapado_node_view($node, $view_mode, $langcode) {
     else {
       $is_on_sale = FALSE;
     }
-
     if (!$is_on_sale) {
-
       if($view_mode == "teaser") {
-        //dpm("tptp");
+        // on renvoie vers le spectacle car le spectacle n'est pas à vendre et on est dans le teaser
+        changeReservationButtonToShowView($node);
         // billetterie externalisée : on laisse un bouton réserver mais différent...
-        if($node->field_reservation['und'][0]['value'] == 7) {
-          //
-        }
+        /* if($node->field_reservation['und'][0]['value'] == 7) {
+        } */
       }
       if($view_mode == "full") {
         unset($node->content['field_boxoffice_url']);
