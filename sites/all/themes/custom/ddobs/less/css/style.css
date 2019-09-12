@@ -8032,7 +8032,7 @@ body strong {
   color: #FFF;
 }
 @media (max-width: 992px) {
-  #div-subscritpion {
+  #div-subscritpion #link-subscritpion {
     display: none;
   }
 }
@@ -8053,7 +8053,7 @@ body strong {
   header#navbar > .row div[class^='col-'] {
     padding: 0;
     margin: 0;
-    background-color: #FFF;
+    background-color: transparent;
   }
   header#navbar #row-menu-nav-search {
     position: static;
@@ -13428,3 +13428,91 @@ strong {
 .page-search li.pager-last {
   display: none;
 }
+#webpush-handling {
+  display: table;
+  float: right;
+  margin-left: 20px;
+}
+#webpush-handling #block-domainedo-webpush-domainedo-webpush-user-panel {
+  float: none;
+  display: table;
+}
+#webpush-handling #webpush-topics-panel.expanded {
+  position: absolute;
+  font-family: "Gotham A", "Gotham B";
+}
+@media (min-width: 992px) {
+  #webpush-handling #webpush-topics-panel.expanded {
+    width: 285px;
+    right: 30px;
+  }
+}
+@media (max-width: 992px) {
+  #webpush-handling #webpush-topics-panel.expanded {
+    left: 0;
+  }
+}
+#webpush-handling #webpush-topics-panel.expanded input {
+  margin-right: 10px;
+}
+#webpush-handling #webpush-topics-panel.expanded #webpush-topics-user-panel-wrapper {
+  float: none;
+}
+@media (max-width: 992px) {
+  #webpush-handling {
+    display: table;
+    float: none;
+    margin: 0 auto 0 auto;
+  }
+  #webpush-handling #webpush-topics-user-panel-wrapper {
+    float: none;
+    border: 0;
+    display: table;
+    margin-left: 15px;
+    margin-top: 20px;
+  }
+  #webpush-handling #webpush-topics-user-panel-wrapper div.title {
+    padding: 5px 0 5px 35px;
+    display: table;
+  }
+  #webpush-handling #webpush-topics-panel.expanded {
+    top: 20px;
+    padding: 20px 60px;
+  }
+}
+/* section#block-domainedo-webpush-domainedo-webpush-user-panel {
+
+  float: none;
+  @media (max-width: @screen-md) {
+    display: table;
+    margin: 0 auto 0 auto;
+    #webpush-topics-user-panel-wrapper {
+      float: none;
+      border: 0;
+      display: table;
+      margin-left: 15px;
+      div.title {
+        padding: 5px 15px 5px 35px;
+        display: table;
+      }
+    }
+    #webpush-topics-panel {
+      &.expanded {
+        top: 40px;
+        padding: 20px 40px;
+      }
+    }
+  }
+}
+#webpush-topics-panel.expanded {
+  position: absolute;
+  left: -20px;
+  font-family: "Gotham A", "Gotham B";
+  input {
+    margin-right: 10px;
+  }
+  #webpush-topics-user-panel-wrapper {
+    float: none;
+  }
+}
+ */
