@@ -1,0 +1,6 @@
+name = Domaine d'O access
+core = 7.x
+package = Domaine d'O
+version = 7.x-1.0
+
+project path = sites/all/modules/custom
