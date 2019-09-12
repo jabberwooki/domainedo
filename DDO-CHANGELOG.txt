@@ -1,6 +1,38 @@
-Domaine d'O 1.1.32 - 2019-09-12
+Domaine d'O 1.2.2 - 2019-09-12
 ------------------
 If show is not on sale but we are in a teaser view mode, ticket button send to full view mode show
+Hotfix user-panel-infotext-typo - 2019-07-23
+--------------------------------------------
+ * domainedo_webpush up: typo fixed in user panel's info text.
+
+Hotfix user-panel-css-and-infotext-improvement - 2019-07-22
+-----------------------------------------------------------
+ * domainedo_webpush up: typo fixed in user panel info text.
+
+ * domainedo_webpush up: incompatibility tooltip css positioning improved.
+
+Hotfix user-panel-javascript-file-alteration - 2019-07-22
+---------------------------------------------------------
+ * domainedo_webpush up: custom user_panel.js file created and added to domainedo_webpush module to prevent non sw compatible navigator
+ to break frontpage javascript code and festival quick access block display.
+
+Domaine d'O 1.2 - 2019-07-17
+----------------------------
+ * page.tpl.php up to improve notification layout.
+
+ * domainedo_webpush up: Code to test navigator platform type improved: makes the Notifications block visible only if Browscap PHP testing librairy is installed.
+
+ * composer.json and composer.lock files un-ignored in .gitignore
+
+ * domainedo_webpush up: Testing iOS Platform added.
+
+ * mobileConsole library loading commented in html.tpl.php.
+
+ * mobileConsole debugger library added to project.
+
+ * Javascript called in <head> for debugging on mobile devices.
+
+ * domainedo_webpush up: user panel's css improved.
 
 Domaine d'O 1.1.31 - 2019-07-03
 ------------------

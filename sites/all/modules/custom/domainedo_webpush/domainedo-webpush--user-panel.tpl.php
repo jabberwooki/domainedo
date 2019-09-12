@@ -6,7 +6,7 @@
 
   <div class="info-text">
     <p>Vous pouvez vous abonner à une ou plusieurs thématiques.</p>
-    <p>Vous recevrez une notification chaque fois qu'un événement corresponsant à l'une de vos thématiques sera publié.</p>
+    <p>Vous recevrez une notification chaque fois qu'un événement correspondant à l'une de vos thématiques sera publié.</p>
   </div>
 
   <div class="topics-list">
