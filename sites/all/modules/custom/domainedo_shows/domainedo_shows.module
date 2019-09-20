@@ -12,7 +12,8 @@ include_once 'domainedo_shows.features.inc';
  */
 function domainedo_shows_form_show_node_form_alter(&$form, &$form_state, $form_id) {
 	// Vertical tab "Lien distribution" moved to bottom of existing tabs in create/edit form.
-	$form['#groups']['group_casting']->weight = 1000;
+  $form['#groups']['group_casting']->weight = 1000;
+
 }
 
 /**
@@ -22,7 +23,8 @@ function domainedo_shows_node_view_alter(&$build) {
 	// If show node
   $now = date('Y-m-d');
   $now = new DateTime( $now );
-  $now = $now->format('Ymd'); 
+  $now = $now->format('Ymd');
+
   $show_is_past = false;
   if ($build['#bundle'] == 'festival') {
     drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_shows_manageTwoColsFestival.js');
@@ -43,21 +45,24 @@ function domainedo_shows_node_view_alter(&$build) {
 		}
 		if ($build['#view_mode'] == 'liste_aussi') {
       $show_is_past = false;
-      for ($i = 0; $i < count($build['field_show_dates']['#items']); $i++) {    
+      for ($i = 0; $i < count($build['field_show_dates']['#items']); $i++) {
           $show_date_item = $build['field_show_dates']['#items'][$i]['value'];
           $show_date_item = substr($show_date_item, 0, 10);
           $show_date_item = new DateTime( $show_date_item );
           $show_date_item = $show_date_item->format('Ymd');
-          
+          // Ajout d'une journée à la date pour permettre aux internautes d'acheter même quand
+          // le spectacle a commencé
+          $show_date_item->add(new DateInterval('P1D'));
+
           if ($now <= $show_date_item) {
-            $show_is_past  = false; 
+            $show_is_past  = false;
             break;
           } else {
             $show_is_past = true;
           }
         }
         if ($show_is_past) $build = null;
-      
+
     }
 		if ($build['#view_mode'] == 'full') {
       drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_shows.js');
@@ -76,7 +81,7 @@ function domainedo_shows_node_view_alter(&$build) {
 				$breadcrumb[2] = $modified_link;
 				drupal_set_breadcrumb($breadcrumb);
 			}
-			
+
 			//Puts a link on Festival name, except for festival-hiver.
 			if (isset($build['field_festival'])) {
 				$festival_infos = domainedo_shows_get_festival_infos($build['field_festival']['#items'][0]['target_id'], array('title', 'url'));
@@ -84,26 +89,28 @@ function domainedo_shows_node_view_alter(&$build) {
 					$build['field_festival'][0]['#markup'] = '<a href="/' . $festival_infos['url'] . '">' . $build['field_festival'][0]['#markup'] . '</a>';
 				}
 			}
-			
+
 			// Manage display of fields depending on Reservation value : prochainement=1, url billetterie=2, complet=3, annulé=4)
 			$field_reservation_value = $build['field_reservation']['#items'][0]['value'];
-      
+
       /* In the case where the link to ticketing is enable and the show went,
        * we automaticly enable the "passed" option : $field_reservation_value = 5;
       */
-      
-      
+
+
       $show_has_ticket_link = (isset($build['field_reservation']) && $build['field_reservation']['#items'][0]['value'] == 2);
       $show_is_past = false;
       if ($show_has_ticket_link && isset($build['field_show_dates']['#items'])){
-        for ($i = 0; $i < count($build['field_show_dates']['#items']); $i++) {    
+        for ($i = 0; $i < count($build['field_show_dates']['#items']); $i++) {
           $show_date_item = $build['field_show_dates']['#items'][$i]['value'];
           $show_date_item = substr($show_date_item, 0, 10);
           $show_date_item = new DateTime( $show_date_item );
           $show_date_item = $show_date_item->format('Ymd');
-          
+          // Ajout d'une journée à la date pour permettre aux internautes d'acheter même quand
+          // le spectacle a commencé
+          $show_date_item->add(new DateInterval('P1D'));
           if ($now <= $show_date_item) {
-            $show_is_past  = false; 
+            $show_is_past  = false;
             break;
           } else {
             $show_is_past = true;
@@ -123,12 +130,12 @@ function domainedo_shows_node_view_alter(&$build) {
 					unset($build[$field_name]);
 				}
 			}
-			
+
 			// Manage display of link Distribution
 			if (!isset($build['field_casting'])) {
 				unset($build['field_casting_link']);
 			}
-			
+
 			// Processing of field Reservation when its value is 'annulé'.
 			if (isset($build['field_reservation']) && $build['field_reservation']['#items'][0]['value'] == 4) {
 				$start_tag = '';
@@ -143,7 +150,7 @@ function domainedo_shows_node_view_alter(&$build) {
 				}
 				$build['field_reservation'][0]['#markup'] = $start_tag . $build['field_reservation'][0]['#markup'] . $end_tag;
 			}
-			
+
 			// Displays video, sound and photos links only if corresponding fields contain data.
 			if (!isset($build['field_scald_video'])) {
 				unset($build['field_video_link']);
@@ -160,7 +167,7 @@ function domainedo_shows_node_view_alter(&$build) {
 
 /**
  * Returns the list of managed festivals.
- * 
+ *
  * @return array Festivals.
  */
 function domainedo_shows_get_festivals() {
@@ -176,13 +183,13 @@ function domainedo_shows_get_festivals() {
       'cine-metropole' => array('title' => 'Ciné Métropole', 'weight' => 19, 'url' => 'spectacles/cine-metropole'),
       'cirque-metropole' => array('title' => 'Cirque Métropole', 'weight' => 20, 'url' => 'spectacles/cirque-metropole'),
 	);
-	
+
 	return $festivals;
 }
 
-/** 
+/**
  * Returns the Festival name of a given edition
- * 
+ *
  * @param int Nid of the Festival edition.
  * @param array An array containing the requested info types.
  * @return array Array containing requested festival info values.
@@ -190,12 +197,12 @@ function domainedo_shows_get_festivals() {
 function domainedo_shows_get_festival_infos($edition_id, $info_types) {
 	$query = db_select('node', 'n');
 	$query->join('field_data_field_festival_name', 'f', 'n.nid = f.entity_id');
-	
+
 	$query->addField('f', 'field_festival_name_value', 'name');
 	$query->condition('n.nid', $edition_id);
 
 	$result = $query->execute()->fetchField();//
-	
+
 	if ($result != 'festival-hiver') {
 		$festivals = domainedo_shows_get_festivals();
 		$info_values = array('title' => '', 'url' => '');
@@ -209,7 +216,7 @@ function domainedo_shows_get_festival_infos($edition_id, $info_types) {
 
 /**
  * Returns the latest festival (latest season) of a given festival name.
- * 
+ *
  * @param string $festival_name The name of the festival.
  * @param int $ignored_id Nid of the festival edition to be ignored.
  * @return int Nid of the latest festival.
@@ -218,16 +225,16 @@ function domainedo_shows_get_latest_festival_values($festival_name, $ignored_id=
 	$query = db_select('node', 'n');
 	$query->join('field_data_field_festival_name', 'f', 'n.nid = f.entity_id');
 	$query->join('field_data_field_season', 's', 'n.nid = s.entity_id');
-	
+
 	$query->addField('n', 'nid');
 	$query->addField('f', 'field_festival_name_value', 'name');
 	$query->addField('s', 'field_season_value', 'season');
 	$query->condition('n.type', 'festival')
 	->condition('f.field_festival_name_value', $festival_name)
 	->condition('n.status', '1');
-	
+
 	$result = $query->execute()->fetchAll();
-	
+
 	$festival_values = array();
 	foreach ($result as $festival) {
 		if ($ignored_id && $festival->nid == $ignored_id) continue;
@@ -250,7 +257,7 @@ function domainedo_shows_node_validate($node, $form, &$form_state) {
 			->fieldCondition('field_season', 'value', $form_state['values']['field_season']['und'][0]['value'])
 			->fieldCondition('field_festival_name', 'value', $form_state['values']['field_festival_name']['und'][0]['value'])
 			->count();
-			
+
 			$count = $query->execute();
 			// and the same festival already exists
 			if ($count > 0) {
@@ -408,7 +415,7 @@ function domainedo_shows_node_presave($node) {
  * Tests if a processed festival ($node) is the more recent one.
  * If yes, returns nid of the previous season's festival, or TRUE if there is no previous festival.
  * If no, return FALSE.
- * 
+ *
  * @param Object $node The tested festival.
  * @param Bolean $is_new TRUE is the processed festival is new, otherwise FASLE.
  * @return mixed
@@ -421,27 +428,27 @@ function is_latest_festival($node, $is_new=TRUE) {
 	$query = db_select('node', 'n');
 	$query->join('field_data_field_festival_name', 'f', 'n.nid = f.entity_id');
 	$query->join('field_data_field_season', 's', 'n.nid = s.entity_id');
-	
+
 	$query->addField('n', 'nid');
 	$query->addField('s', 'field_season_value', 'season');
 	$query->condition('n.type', 'festival')
 	->condition('f.field_festival_name_value', $node->field_festival_name['und'][0]['value']);
 	//->condition('n.status', '1');
-	
+
 	// If current process is an update or deletion, the festival node being performed
 	// must NOT be retrieved from database to prevent to be compared to itself.
 	if(!$is_new) {
 		//$query->condition('s.field_season_value', $node->field_season['und'][0]['value'], '<>');
 		$query->condition('n.nid', $node->nid, '<>');
 	}
-	
+
 	$result = $query->execute()->fetchAll();
-	
+
 	// If there is no previous festival registered
 	if (empty($result)){
 		return TRUE;
 	}
-	
+
 	// else gets the season and nid values of the latest registered festival
 	$max_season = 0;
 	$previous_nid = 0;
@@ -451,7 +458,7 @@ function is_latest_festival($node, $is_new=TRUE) {
 			$previous_nid = $festival->nid;
 		}
 	}
-	
+
 	// Finally, compares theses values to the festival in registration process
 	$season_to_save = $node->field_season['und'][0]['value'];
 	// If this festival is latest
@@ -467,7 +474,7 @@ function is_latest_festival($node, $is_new=TRUE) {
 /**
  * Updates the path alias of a given festival when it is no longer the latest one.
  * Results in adding season value to the end of the existing alias.
- * 
+ *
  * @param array $values An array containing the previous festival's nid, season and name values;
  */
 function domainedo_shows_festival_pathalias_update($values, $is_latest=FALSE) {
@@ -507,7 +514,7 @@ function domainedo_shows_node_delete($node) {
 					'weight' => $festivals[$node->field_festival_name['und'][0]['value']]['weight'],
 				);
 				menu_link_save($item);
-				
+
 				// and its path alias is updated.
 				$festival_values = array_merge($previous_festival_values, array($node->field_festival_name['und'][0]['value']));
 				domainedo_shows_festival_pathalias_update($festival_values, TRUE);
@@ -524,7 +531,7 @@ function domainedo_shows_form_festival_node_form_alter(&$form, &$form_state, $fo
 	// Hey ! Give me a break ! I know there is a typo on 'fiels' (instead of 'fields')
 	// but I'm too lazy to delete and recreate the corresponding custom field group in festival content type.
 	$form['#groups']['group_technical_fiels']->weight = 1000;
-	
+
 	// In edit form only, disables the festival_name field to prevent user to change it.
 	if (isset($form_state['node']->nid)) {
 		$form['field_festival_name']['#disabled'] = TRUE;
@@ -564,7 +571,7 @@ function domainedo_shows_views_pre_render(&$view) {
  * Implements hook_form_FORM_ID_alter().
  */
 function domainedo_shows_form_views_exposed_form_alter(&$form, &$form_state, $form_id) {
-       if (isset($form['field_festival_target_id'])) {                
+       if (isset($form['field_festival_target_id'])) {
                // Get the id of the latest festival for each festival type.
                $festivals = domainedo_shows_get_festivals();
                $latest_festival_ids = array();
@@ -574,7 +581,7 @@ function domainedo_shows_form_views_exposed_form_alter(&$form, &$form_state, $fo
                                $latest_festival_ids[$latest_festival['nid']] = $latest_festival['nid'];
                        }
                }
-               
+
                // Compare the exposed festival list and the latest festival list
                // to get rid of festivals not being the latest.
                foreach ($form['field_festival_target_id']['#options'] as $key=>$label) {
@@ -583,7 +590,7 @@ function domainedo_shows_form_views_exposed_form_alter(&$form, &$form_state, $fo
                                unset($form['field_festival_target_id']['#options'][$key]);
                        }
                }
-               
+
                $form['field_festival_target_id']['#options']['All'] = t('All upcoming shows');
        }
 }
@@ -596,7 +603,7 @@ function domainedo_shows_menu_block_blocks() {
 	// $parent_mlid values are different on different Drupal instances (dev, preprod, prod).
 	// So we must fetch this value from the database, based on menu link Title (Spectacles in this case).
 	$parent_mlid = db_select('menu_links', 'ml')->fields('ml', array('mlid'))->condition('link_title', 'Spectacles')->execute()->fetchField();
-	
+
 	return array(
 		'domainedo-shows-tab-menu' => array(
 				'menu_name'   => 'main-menu',
