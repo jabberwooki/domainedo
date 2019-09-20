@@ -1,3 +1,7 @@
+Domaine d'O 1.2.2 - 2019-09-20
+------------------
+show can be bought 4 hours after begining - referencement system set up - image author visible
+
 Domaine d'O 1.2.1 - 2019-09-12
 ------------------
 If show is not on sale but we are in a teaser view mode, ticket button send to full view mode show
