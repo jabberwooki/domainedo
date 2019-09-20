@@ -49,10 +49,11 @@ function domainedo_shows_node_view_alter(&$build) {
           $show_date_item = $build['field_show_dates']['#items'][$i]['value'];
           $show_date_item = substr($show_date_item, 0, 10);
           $show_date_item = new DateTime( $show_date_item );
+          //$show_date_item->add(new DateInterval('P1D'));
           $show_date_item = $show_date_item->format('Ymd');
           // Ajout d'une journée à la date pour permettre aux internautes d'acheter même quand
           // le spectacle a commencé
-          $show_date_item->add(new DateInterval('P1D'));
+
 
           if ($now <= $show_date_item) {
             $show_is_past  = false;
@@ -105,10 +106,11 @@ function domainedo_shows_node_view_alter(&$build) {
           $show_date_item = $build['field_show_dates']['#items'][$i]['value'];
           $show_date_item = substr($show_date_item, 0, 10);
           $show_date_item = new DateTime( $show_date_item );
-          $show_date_item = $show_date_item->format('Ymd');
           // Ajout d'une journée à la date pour permettre aux internautes d'acheter même quand
           // le spectacle a commencé
-          $show_date_item->add(new DateInterval('P1D'));
+          //$show_date_item->add(new DateInterval('P1D'));
+          $show_date_item = $show_date_item->format('Ymd');
+
           if ($now <= $show_date_item) {
             $show_is_past  = false;
             break;
