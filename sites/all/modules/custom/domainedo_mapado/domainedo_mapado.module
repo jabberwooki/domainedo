@@ -425,7 +425,10 @@ function domainedo_mapado_node_view($node, $view_mode, $langcode) {
     $is_on_sale = TRUE;
 
     // calcul de la dernière date de représentation
-    $today = date("Y-m-d\TH:i:sP");
+    // on recule la date de 4 h pour permettre aux internautes d'acheter alors que le
+    // spectacle est en cours
+    $today = date("Y-m-d\TH:i:sP", strtotime('-4 hours'));
+
     $next_show = 0;
     // Dès qu'un spectacle a une date dans le futur, on arrête la boucle pour dire que la
     // variable next_show est vraie

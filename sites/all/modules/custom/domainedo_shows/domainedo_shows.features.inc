@@ -236,7 +236,7 @@ function domainedo_shows_node_info() {
       'description' => '',
       'has_title' => '1',
       'title_label' => t('Titre'),
-      'help' => '',
+      'help' => t('<h3 style="color:#FF2400, font-size:2em;" target="_blank">ATTENTION RÉFÉRENCEMENT : Merci de vous référer à la page <a href="https://www.domainedo.fr/optimisation-referencement">https://www.domainedo.fr/optimisation-referencement</a> pour mettre en valeur chaque spectacles sur les moteurs de recherche.  '),
     ),
     'structure' => array(
       'name' => t('Structure'),

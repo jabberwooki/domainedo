@@ -1,0 +1,19 @@
+<?php
+/**
+ * @file
+ * Code for the Domaine d'O access module.
+ */
+
+/**
+ * Access control for specific url path for anonymous user.
+ *
+ * Implements hook_node_access().
+*/
+function domainedo_access_node_access($node, $op, $account) {
+  global $user;
+  $path_alias = drupal_get_path_alias();
+  if ($path_alias == "optimisation-referencement" &&
+  $user->uid == 0) {
+    return NODE_ACCESS_DENY;
+  }
+}
