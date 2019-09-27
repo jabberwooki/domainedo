@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * domainedo_seo.strongarm.inc
@@ -16,6 +17,13 @@ function domainedo_seo_strongarm() {
   $strongarm->name = 'metatag_schema_installed';
   $strongarm->value = TRUE;
   $export['metatag_schema_installed'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_pager_pattern';
+  $strongarm->value = '';
+  $export['page_title_pager_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -61,7 +69,7 @@ function domainedo_seo_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'xmlsitemap_regenerate_needed';
-  $strongarm->value = TRUE;
+  $strongarm->value = FALSE;
   $export['xmlsitemap_regenerate_needed'] = $strongarm;
 
   return $export;
