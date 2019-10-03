@@ -278,9 +278,12 @@
             <p>Tél. : 0800 200 165<br> service et appel gratuits</p>
         </div>
         <div class="col-md-3 col-sm-6 col-xs-6">
-            <a href="http://www.montpellier3m.fr/">
-                <img id="mmm" src="/sites/all/themes/custom/ddobs/less/images/mmm.gif" alt="Montpellier Métropole Méditerranée">
-            </a>
+          <div id="text-bottom-ddo">
+            <p><a href="http://www.montpellier3m.fr/">
+                  <img id="mmm" src="/sites/all/themes/custom/ddobs/less/images/mmm.gif" alt="Montpellier Métropole Méditerranée">
+              </a>
+            Le domaine d'O est un domaine d'art et de spectacles pluridisciplinaire : <strong>théâtre</strong>, <strong>musique</strong>, <strong>cirque</strong>, <strong>danse</strong>, spectacles <strong>jeune public</strong>. </p><p>Il abrite un amphithéâtre de 1800 places, le théâtre Jean-Claude Carrière de 600 à 1200 places, un bistrot et une pinède de 3 hectares. Le domaine d'O produit une saison culturelle et quatre <strong>festivals</strong> et accueille quatre autres festivals.</p>
+          </div>
         </div>
     </div>
 </footer>
