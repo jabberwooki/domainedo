@@ -264,7 +264,7 @@ function news_views_default_views() {
   $handler->display->display_options['filters']['field_news_publication_date_value2']['field'] = 'field_news_publication_date_value2';
   $handler->display->display_options['filters']['field_news_publication_date_value2']['operator'] = '>=';
   $handler->display->display_options['filters']['field_news_publication_date_value2']['default_date'] = 'now';
-  /* Filter criterion: Contenu: Promu en page d&#039;accueil (field_promoted) */
+  /* Filter criterion: Contenu: Promu en info flash (field_promoted) */
   $handler->display->display_options['filters']['field_promoted_value']['id'] = 'field_promoted_value';
   $handler->display->display_options['filters']['field_promoted_value']['table'] = 'field_data_field_promoted';
   $handler->display->display_options['filters']['field_promoted_value']['field'] = 'field_promoted_value';
@@ -493,7 +493,7 @@ function news_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'news' => 'news',
   );
-  /* Filter criterion: Contenu: Promu en page d&#039;accueil (field_promoted) */
+  /* Filter criterion: Contenu: Promu en info flash (field_promoted) */
   $handler->display->display_options['filters']['field_promoted_value']['id'] = 'field_promoted_value';
   $handler->display->display_options['filters']['field_promoted_value']['table'] = 'field_data_field_promoted';
   $handler->display->display_options['filters']['field_promoted_value']['field'] = 'field_promoted_value';
