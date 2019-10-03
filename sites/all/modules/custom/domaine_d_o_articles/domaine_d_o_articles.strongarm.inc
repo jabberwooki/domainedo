@@ -198,6 +198,20 @@ function domaine_d_o_articles_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_type_article';
+  $strongarm->value = '[current-page:page-title] | [site:name]';
+  $export['page_title_type_article'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_type_article_showfield';
+  $strongarm->value = 1;
+  $export['page_title_type_article_showfield'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'page_title_vocab_thematique_article';
   $strongarm->value = '';
   $export['page_title_vocab_thematique_article'] = $strongarm;
