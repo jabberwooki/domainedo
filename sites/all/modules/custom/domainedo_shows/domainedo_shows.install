@@ -13,3 +13,10 @@ function domainedo_shows_update_7001() {
 function domainedo_shows_update_7002() {
   module_enable(array('ds_bootstrap_layouts'));
 }
+
+/**
+ * Enable module term_reference_tree
+ */
+function domainedo_shows_update_7003() {
+  module_enable(array('term_reference_tree'));
+}
