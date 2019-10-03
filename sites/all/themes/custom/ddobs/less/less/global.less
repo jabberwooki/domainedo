@@ -113,9 +113,9 @@ body {
 
 .not-logged-in {
   a {
-    transition: all .25s ease-in-out;
-    -moz-transition: all .25s ease-in-out;
-    -webkit-transition: all .25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
   }
   @media (max-width: @screen-sm) {
     .navbar.container {
@@ -204,15 +204,15 @@ body {
 
     &:hover {
       background-color: @grenadine-ddo;
-      color: #FFF;
+      color: #fff;
       &:before {
-        color: #FFF;
+        color: #fff;
       }
     }
   }
   @media (max-width: @screen-md) {
     #link-subscritpion {
-      display: none
+      display: none;
     }
   }
 }
@@ -232,7 +232,7 @@ header#navbar {
     width: 99%;
     background-color: white;
     > .row {
-      div[class^='col-'] {
+      div[class^="col-"] {
         padding: 0;
         margin: 0;
         background-color: transparent;
@@ -261,7 +261,7 @@ header#navbar {
         color: @grenadine-ddo;
       }
       span {
-        font-size: .47em;
+        font-size: 0.47em;
         text-transform: uppercase;
         margin-top: -1px;
         margin-left: 2px;
@@ -436,16 +436,17 @@ header#navbar {
             color: #000;
           }
           ul {
-            background-color: #E4E4E4;
+            background-color: #e4e4e4;
           }
         }
         &.mm-opened {
           ul {
-            background-color: #E4E4E4;
+            background-color: #e4e4e4;
           }
         }
       }
-      > li > span { /* les menus autres que le principal */
+      > li > span {
+        /* les menus autres que le principal */
         padding: 0;
         > ul.mm-list {
           padding: 0;
@@ -472,11 +473,10 @@ header#navbar {
                 color: @grenadine-ddo;
               }
               ul {
-                background-color: #E4E4E4;
+                background-color: #e4e4e4;
               }
             }
           }
-
         }
       }
     }
@@ -573,7 +573,6 @@ header#navbar {
        color: black;
        font-size: 0.5em;
      }*/
-
   }
   > span {
     font-size: 0.53125em; /* 8.5/16 */
@@ -819,9 +818,9 @@ footer.container {
           margin: 0 auto;
           padding-left: 0;
           float: none;
-          margin: 0 auto
+          margin: 0 auto;
         }
-        @media (min-width: @screen-md) and (max-width: @screen-lg){
+        @media (min-width: @screen-md) and (max-width: @screen-lg) {
           margin-right: 20px;
         }
       }
@@ -837,7 +836,7 @@ footer.container {
           display: table;
           margin: 20px auto 0 auto;
         }
-        @media (min-width: @screen-md) and (max-width: @screen-lg){
+        @media (min-width: @screen-md) and (max-width: @screen-lg) {
           a:before {
             font-size: 1.8em; /* 34/16 */
             margin-right: 12px;
@@ -877,7 +876,6 @@ footer.container {
     .menu {
       margin-top: 5px;
       > li {
-
         > a {
           color: #000;
           padding: 10px 0;
@@ -894,7 +892,6 @@ footer.container {
 /* Textes *************************************************************************************************************/
 #block-system-main,
 .region-headbandfestival .group-text-video {
-
   p {
     line-height: 20px; /* 20/16 */
     font-size: 0.875em; /* 14/16 */
@@ -934,7 +931,7 @@ footer.container {
       &:before {
         .glyphicon();
         content: "\f105";
-        color: #000;;
+        color: #000;
         margin-right: 5px;
         top: 0;
       }
@@ -971,7 +968,6 @@ footer.container {
     &:hover {
       opacity: 0.5;
     }
-
   }
   ul.dropdown-menu {
     display: block !important;
@@ -1077,7 +1073,7 @@ p.txt-intro-grenadine {
   font-style: normal;
   font-weight: 500;
   &:hover {
-    background-color: #FFF;
+    background-color: #fff;
     color: #000;
   }
 }
@@ -1133,7 +1129,7 @@ p.txt-intro-grenadine {
 
 .button-bg-black {
   padding: 10px;
-  color: #FFF;
+  color: #fff;
   display: block;
   font-size: 0.875em; /* 14/16 */
   background-color: black;
@@ -1194,12 +1190,13 @@ p.txt-intro-grenadine {
   }
   &:hover {
     background-color: @grenadine-ddo;
-    color: #FFF;
+    color: #fff;
     text-decoration: none;
   }
 }
 
-.button-red-link { /* Utiliser sur la page d'accueil pour le lien "voir tous les spectacles." */
+.button-red-link {
+  /* Utiliser sur la page d'accueil pour le lien "voir tous les spectacles." */
   padding: 15px 15px 15px 20px;
   border: 2px solid @grenadine-ddo;
   display: table;
@@ -1219,7 +1216,7 @@ p.txt-intro-grenadine {
   }
   &:hover {
     background-color: @grenadine-ddo;
-    color: #FFF;
+    color: #fff;
     &:after {
       color: white !important;
     }
@@ -1268,9 +1265,9 @@ strong {
 .little-move {
   &:hover {
     transform: translate3d(0, -4px, 0);
-    transition: all .25s ease-in-out;
-    -moz-transition: all .25s ease-in-out;
-    -webkit-transition: all .25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
     box-shadow: 1px 1px 12px #555;
   }
 }
@@ -1296,7 +1293,7 @@ strong {
       font-weight: bold;
       &:hover {
         background-color: @grenadine-ddo;
-        color: #FFF;
+        color: #fff;
       }
       width: 34px;
       height: 34px;
@@ -1343,4 +1340,23 @@ strong {
 #footer-menus {
   border-top: 1.5px solid #000;
   padding-top: 20px;
+}
+/* Auteurs photos images grandes *************/
+.scald-author-big-img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 30px;
+  color: #eeeeee;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  :after {
+    display: none !important;
+  }
+  .field-item {
+    border-bottom: 0 !important;
+    &:after {
+      display: none !important;
+    }
+  }
 }

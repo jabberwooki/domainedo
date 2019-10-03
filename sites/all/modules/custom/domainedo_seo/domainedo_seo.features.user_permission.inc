@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * domainedo_seo.features.user_permission.inc

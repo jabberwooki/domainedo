@@ -1,3 +1,6 @@
+Domaine d'O 1.2.4 - 2019-10-03
+page title patched, css up, text added on bottom page, photo credit added on most pages
+
 Domaine d'O 1.2.3 - 2019-09-20
 show can be bought 4 hours after begining - referencement system set up - image author visible
 
