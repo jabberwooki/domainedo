@@ -37,7 +37,7 @@ function domainedo_shows_taxonomy_default_vocabularies() {
       'name' => 'Lieux de spectacle',
       'machine_name' => 'show_locations',
       'description' => '',
-      'hierarchy' => 0,
+      'hierarchy' => 1,
       'module' => 'taxonomy',
       'weight' => 0,
       'rdf_mapping' => array(

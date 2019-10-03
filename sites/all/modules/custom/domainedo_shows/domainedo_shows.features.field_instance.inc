@@ -2607,7 +2607,7 @@ function domainedo_shows_field_default_field_instances() {
   // Exported field_instance: 'node-show-field_location'.
   $field_instances['node-show-field_location'] = array(
     'bundle' => 'show',
-    'default_value' => NULL,
+    'default_value' => array(),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -2671,9 +2671,19 @@ function domainedo_shows_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
+      'module' => 'term_reference_tree',
+      'settings' => array(
+        'cascading_selection' => 0,
+        'filter_view' => '',
+        'leaves_only' => 0,
+        'max_depth' => '',
+        'parent_term_id' => '',
+        'select_parents' => 0,
+        'start_minimized' => 0,
+        'token_display' => '',
+        'track_list' => 0,
+      ),
+      'type' => 'term_reference_tree',
       'weight' => 5,
     ),
   );
