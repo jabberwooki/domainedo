@@ -11666,6 +11666,9 @@ strong {
   font-size: 1.5em;
   /* 24/16 */
 }
+.front #block-views-shows-block-1 .more-link {
+  margin-bottom: 30px;
+}
 .node-type-festival #headband-festival {
   background: url(../images/bg_gray.gif);
   padding-bottom: 20px;
