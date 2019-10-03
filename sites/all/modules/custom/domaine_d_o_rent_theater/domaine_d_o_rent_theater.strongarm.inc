@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * domaine_d_o_rent_theater.strongarm.inc
@@ -349,6 +350,20 @@ function domaine_d_o_rent_theater_strongarm() {
   $strongarm->name = 'node_submitted_presentation_location_salles';
   $strongarm->value = 0;
   $export['node_submitted_presentation_location_salles'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_type_lieu_location';
+  $strongarm->value = '';
+  $export['page_title_type_lieu_location'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'page_title_type_lieu_location_showfield';
+  $strongarm->value = 1;
+  $export['page_title_type_lieu_location_showfield'] = $strongarm;
 
   return $export;
 }

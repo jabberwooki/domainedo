@@ -90,4 +90,6 @@ features[variable][] = node_preview_lieu_location
 features[variable][] = node_preview_presentation_location_salles
 features[variable][] = node_submitted_lieu_location
 features[variable][] = node_submitted_presentation_location_salles
+features[variable][] = page_title_type_lieu_location
+features[variable][] = page_title_type_lieu_location_showfield
 project path = sites/all/modules/custom
