@@ -9975,6 +9975,27 @@ strong {
   position: relative;
   margin-bottom: 30px;
 }
+.group-show-list .field-name-field-scald-image .field-item a {
+  position: relative;
+  display: block;
+}
+.group-show-list .field-name-field-scald-image .field-item a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 40%;
+  height: 50%;
+  width: 100%;
+  left: 0;
+  background: black;
+  /* For browsers that do not support gradients */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000);
+}
+@media (min-width: 618px) and (max-width: 992px) {
+  .group-show-list .field-name-field-scald-image .field-item a:before {
+    top: 45%;
+  }
+}
 @media (max-width: 992px) {
   .group-show-list img {
     max-width: none;
@@ -10011,21 +10032,6 @@ strong {
   background-color: #fff;
   color: #000;
 }
-.group-show-list .group-tranparent-gradient {
-  position: absolute;
-  top: 40%;
-  height: 50%;
-  width: 100%;
-  left: 0;
-  background: black;
-  /* For browsers that do not support gradients */
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000);
-}
-@media (min-width: 618px) and (max-width: 992px) {
-  .group-show-list .group-tranparent-gradient {
-    top: 45%;
-  }
-}
 .group-show-list .group-tranparent-gradient div,
 .group-show-list .group-tranparent-gradient a {
   color: #ffffff;
@@ -10040,7 +10046,7 @@ strong {
 .group-show-list .group-tranparent-gradient .group-date-title-desc {
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 50px;
   padding: 0 10px;
 }
 .group-show-list .group-tranparent-gradient .group-date-title-desc .field-name-field-show-dates {
@@ -10332,7 +10338,7 @@ strong {
   margin-bottom: 8px;
 }
 .node-type-show #imgfullshow #block-ds-extras-image-full-show .group-text-over-img .group-text-over-img-abs .field-name-field-show-dates {
-  color: #FFF;
+  color: #fff;
   margin-left: -5px;
 }
 .node-type-show #imgfullshow #block-ds-extras-image-full-show .group-text-over-img .group-text-over-img-abs .field-name-field-show-dates > div:after {
@@ -10889,7 +10895,7 @@ strong {
 }
 .node-type-show .under_show-social-wrapper .show-social-wrapper .twitter-show:before {
   font-size: 2em;
-  color: #1890F6;
+  color: #1890f6;
 }
 .node-type-show .under_show-social-wrapper .show-social-wrapper .twitter-show:hover:before {
   text-decoration: none;
@@ -10953,7 +10959,7 @@ strong {
   float: left;
 }
 .page-spectacles #headband-festival #block-views-exp-shows-list #edit-field-festival-target-id-wrapper .bef-select-as-links .form-item a {
-  color: #FFF;
+  color: #fff;
   font-size: 0.875em;
   /* 14/16 */
   font-style: normal;
@@ -10967,11 +10973,11 @@ strong {
 }
 .page-spectacles #headband-festival #block-views-exp-shows-list #edit-field-festival-target-id-wrapper .bef-select-as-links .form-item a:hover {
   background-color: #f74e2d;
-  color: #FFF;
+  color: #fff;
 }
 .page-spectacles #headband-festival #block-views-exp-shows-list #edit-field-festival-target-id-wrapper .bef-select-as-links .form-item[class*="selected"] a {
   background-color: #f74e2d;
-  color: #FFF;
+  color: #fff;
 }
 .page-spectacles #headband-festival #block-views-exp-shows-list .views-widget-filter-field_show_type_tid > label {
   display: none;
@@ -11032,7 +11038,7 @@ strong {
   }
 }
 .page-spectacles #headband-festival #block-views-exp-shows-list .views-exposed-widget button#edit-submit-shows {
-  color: #FFF;
+  color: #fff;
   font-size: 1.125em;
   /* 18/16 */
   text-transform: uppercase;
@@ -11084,7 +11090,7 @@ strong {
   border: 2px solid red;
 }
 .page-spectacles #headband-festival #block-boxes-left-shows-info p {
-  color: #FFF;
+  color: #fff;
   font-size: 1.5em;
   /* 24/16 */
   text-transform: uppercase;
@@ -11157,10 +11163,10 @@ strong {
 .page-spectacles #headband-festival #block-boxes-left-shows-info #div-link-calendar a:hover {
   text-decoration: none;
   background-color: black;
-  color: #FFF;
+  color: #fff;
 }
 .page-spectacles #headband-festival #block-boxes-left-shows-info #div-link-calendar a:hover:before {
-  color: #FFF;
+  color: #fff;
 }
 .page-spectacles .pagination .next,
 .page-spectacles .pagination .prev,
@@ -11191,13 +11197,13 @@ strong {
 }
 .front #homeheadband #info-flash {
   background-color: #f74e2d;
-  color: #FFF;
+  color: #fff;
   font-weight: bold;
   margin: 0 0 10px 0;
   padding: 30px 0;
 }
 .front #homeheadband #info-flash a {
-  color: #FFF;
+  color: #fff;
   text-transform: uppercase;
 }
 .front #homeheadband #info-flash a.more {
@@ -11228,7 +11234,7 @@ strong {
 }
 .front #homeheadband #info-flash a.more:hover {
   background-color: black;
-  color: #FFF;
+  color: #fff;
   opacity: 1;
 }
 .front #homeheadband .region-homenow {
@@ -11266,7 +11272,7 @@ strong {
 .front #homeheadband .region-homenow #now-tranparent-gradient #group-title-more-now .field-name-title a {
   font-size: 2.375em;
   /* 38/16 */
-  color: #FFF;
+  color: #fff;
   text-decoration: none;
   font-style: normal;
   font-weight: 800;
@@ -11458,7 +11464,7 @@ strong {
   text-decoration: none;
 }
 .front #homeheadband .carousel .carousel-inner .views-field-body .views-field-field-link-more-infos a:after {
-  content: '';
+  content: "";
   display: block;
   clear: both;
 }
@@ -11484,7 +11490,7 @@ strong {
   opacity: 1 !important;
   background-color: #f74e2d;
   border: 1px solid #f74e2d;
-  padding: 0!important;
+  padding: 0 !important;
   margin-top: 0px;
 }
 .front #homeheadband .carousel .carousel-control.right .icon-next:before,
@@ -11496,7 +11502,7 @@ strong {
   top: -4px;
   left: 3px;
   color: #fff;
-  content: '\e833';
+  content: "\e833";
   font-size: 0.6em;
 }
 .front #homeheadband .carousel .carousel-control.right .icon-next:hover,
@@ -11513,7 +11519,7 @@ strong {
 }
 .front #homeheadband .carousel .carousel-control.right .icon-next:before,
 .front #homeheadband .carousel .carousel-control.left .icon-next:before {
-  content: '\e834';
+  content: "\e834";
   left: 6px;
 }
 .front #homeheadband .carousel .carousel-control.left {
@@ -11606,10 +11612,10 @@ strong {
 }
 .front #quick-acces .view #home-calendar-link:hover {
   background-color: black;
-  color: #FFF;
+  color: #fff;
 }
 .front #quick-acces .view #home-calendar-link:hover:before {
-  color: #FFF;
+  color: #fff;
 }
 .front .more-link a {
   /* Utiliser sur la page d'accueil pour le lien "voir tous les spectacles." */

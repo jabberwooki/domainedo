@@ -1,4 +1,26 @@
 .group-show-list {
+  .field-name-field-scald-image .field-item a {
+    position: relative;
+    display: block;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 40%;
+      @media (min-width: 618px) and (max-width: @screen-md) {
+        top: 45%;
+      }
+      height: 50%;
+      width: 100%;
+      left: 0;
+      background: black; /* For browsers that do not support gradients */
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 1)
+      );
+    }
+  }
   @media (max-width: @screen-md) {
     img {
       max-width: none;
@@ -18,17 +40,8 @@
     }
   }
   .group-tranparent-gradient {
-    position: absolute;
-    top: 40%;
-    @media (min-width: 618px) and (max-width: @screen-md) {
-      top: 45%;
-    }
-    height: 50%;
-    width: 100%;
-    left: 0;
-    background: black; /* For browsers that do not support gradients */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
-    div, a {
+    div,
+    a {
       color: @blanc-ddo;
       p {
         margin: 0 !important;
@@ -40,13 +53,13 @@
     .group-date-title-desc {
       position: absolute;
       left: 0;
-      bottom: 0;
+      bottom: 50px;
       padding: 0 10px;
       .date-orange();
       .field-name-field-show-dates {
-         @media (max-width: @screen-sm) {
-           margin-bottom: 15px;
-         }
+        @media (max-width: @screen-sm) {
+          margin-bottom: 15px;
+        }
         > div {
           .underline-grenadine();
           a {
@@ -152,7 +165,6 @@
   .field-name-scald-authors {
     display: none;
   }
-
 }
 
 /* la page de visualisation d'un spectacle */
@@ -169,7 +181,6 @@
   #imgfullshow {
     .field-name-scald-authors {
       /* display: none; */
-
     }
     #block-ds-extras-image-full-show {
       position: relative;
@@ -179,7 +190,6 @@
           border-bottom: 66px solid @gris-clair-ddo;
           @media (max-width: @screen-sm) {
             border-bottom: 3px solid @gris-clair-ddo;
-
           }
           &:after {
             content: "";
@@ -227,11 +237,10 @@
           }
           .date-orange();
           .field-name-field-show-dates {
-            color: #FFF;
+            color: #fff;
             margin-left: -5px;
 
             > div {
-
               &:after {
                 display: block;
                 border: 4px solid @grenadine-off-ddo;
@@ -242,11 +251,10 @@
                 text-transform: none;
                 font-style: normal;
                 font-weight: 800;
-                font-size: 1.5em;/*24/16*/
+                font-size: 1.5em; /*24/16*/
                 margin-bottom: 0;
               }
             }
-
           }
 
           .field-name-title {
@@ -273,7 +281,6 @@
           }
         }
       }
-
     }
   }
   section > ul.action-links {
@@ -305,7 +312,7 @@
       p {
         font-style: normal;
         font-weight: 500;
-        line-height: 1.375em !important;/*22/16*/
+        line-height: 1.375em !important; /*22/16*/
       }
     }
     .field-name-field-reservation {
@@ -357,7 +364,6 @@
           color: @grenadine-ddo;
         }
       }
-
     }
 
     .field-name-field-from {
@@ -427,7 +433,7 @@
           font-weight: 800;
           display: table;
           margin-top: -14px;
-          font-size: 1.125em;/*18/16*/
+          font-size: 1.125em; /*18/16*/
           @media (max-width: @screen-sm) {
             margin: 50px auto 20px auto;
           }
@@ -514,7 +520,7 @@
         font-size: 0.875em; /* 14/16 */
         font-style: normal;
         font-weight: 400;
-        line-height: 1.8em;/* 28.8/16 */
+        line-height: 1.8em; /* 28.8/16 */
       }
     }
     .field-name-field-full,
@@ -577,7 +583,8 @@
     width: 100%;
     background: black; /* For browsers that do not support gradients */
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
-    div, a {
+    div,
+    a {
       p {
       }
     }
@@ -652,7 +659,7 @@
   .under_show-social-wrapper {
     border-bottom: 1px solid black;
     padding-bottom: 20px;
-    margin-bottom:  10px;
+    margin-bottom: 10px;
     .show-social-wrapper {
       @media (max-width: 580px) {
         display: table;
@@ -677,7 +684,7 @@
           }
         }
       }
-      .show-whatsapp{
+      .show-whatsapp {
         display: block;
         float: left;
         margin: 0 0px 20px 20px;
@@ -704,7 +711,7 @@
         overflow: hidden;
         &:before {
           font-size: 2em;
-          color: #1890F6;
+          color: #1890f6;
         }
         &:hover {
           &:before {
@@ -713,11 +720,8 @@
           }
         }
       }
-
     }
   }
-
-
 }
 
 /* Page tous les spectacles *******************************************************************************************/
@@ -727,7 +731,6 @@
     display: none;
   }
   #headband-festival {
-
     border-bottom: 50px solid white;
     @media (min-width: @screen-md) {
       .views-exposed-widgets {
@@ -776,7 +779,7 @@
           .form-item {
             float: left;
             a {
-              color: #FFF;
+              color: #fff;
               font-size: 0.875em; /* 14/16 */
               font-style: normal;
               font-weight: 500;
@@ -788,13 +791,13 @@
               text-decoration: none;
               &:hover {
                 background-color: @grenadine-ddo;
-                color: #FFF;
+                color: #fff;
               }
             }
             &[class*="selected"] {
               a {
                 background-color: @grenadine-ddo;
-                color: #FFF;
+                color: #fff;
               }
             }
           }
@@ -833,14 +836,14 @@
                   display: inline-block;
                   position: relative;
                   &:checked {
-                    box-shadow: 0 1px 2px rgba(0,0,0,0.5), inset 0px 1px 3px rgba(0,0,0,1);
+                    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5),
+                      inset 0px 1px 3px rgba(0, 0, 0, 1);
                     background-color: #000;
                     border: 1px solid @grenadine-ddo;
                     &:active {
                       border: 1px solid @grenadine-ddo;
                     }
                   }
-
                 }
                 > label {
                   margin-right: 20px;
@@ -855,7 +858,6 @@
         }
       }
       .views-exposed-widget {
-
         @media (max-width: @screen-md) {
           float: none;
           padding: 0;
@@ -864,7 +866,7 @@
           padding-top: 10px;
         }
         button#edit-submit-shows {
-          color: #FFF;
+          color: #fff;
           font-size: 1.125em; /* 18/16 */
           text-transform: uppercase;
           display: block;
@@ -883,16 +885,13 @@
           }
           @media (max-width: @screen-md) {
             display: table;
-            margin:  15px auto 25px auto;
+            margin: 15px auto 25px auto;
           }
           &:hover {
             background-color: black;
           }
-
         }
       }
-
-
     }
     #block-boxes-left-shows-info {
       @media (min-width: @screen-md) {
@@ -901,7 +900,7 @@
         width: 33.34%;
       }
       @media (min-width: @screen-sm) {
-        margin-top:  10%;
+        margin-top: 10%;
       }
       background-color: @grenadine-ddo;
       &:after {
@@ -911,7 +910,7 @@
         border: 2px solid red;
       }
       p {
-        color: #FFF;
+        color: #fff;
         font-size: 1.5em; /* 24/16 */
         text-transform: uppercase;
         font-style: normal;
@@ -954,9 +953,9 @@
           &:hover {
             text-decoration: none;
             background-color: black;
-            color: #FFF;
+            color: #fff;
             &:before {
-              color: #FFF;
+              color: #fff;
             }
           }
         }
