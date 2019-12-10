@@ -7848,6 +7848,12 @@ body em {
 body strong {
   font-weight: bold;
 }
+.extramuros {
+  border: 1px solid red;
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
 .caret {
   display: none;
 }
