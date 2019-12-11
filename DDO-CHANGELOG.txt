@@ -1,3 +1,6 @@
+Domaine d'O 1.2.7 - 2019-12-11
+Manage extrumros shows, no-result in view shows, anchor after view shows, notification on all site, metropole text on bottom
+
 Domaine d'O 1.2.6 - 2019-12-10
 core and contrib modules up for security reasons. css improved for home show teasers
 
