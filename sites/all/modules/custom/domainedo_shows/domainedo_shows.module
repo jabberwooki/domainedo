@@ -39,7 +39,7 @@ function domainedo_shows_node_view_alter(&$build) {
       $parent = taxonomy_get_parents($tid);
       $is_extra = false;
       foreach ($parent as $key => $value){
-        if(strstr( $parent[$key]->name, "intra")) {
+        if(stristr( $parent[$key]->name, "intra")) {
           $is_extra = false;
         } else $is_extra = true;
       }
