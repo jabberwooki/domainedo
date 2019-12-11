@@ -12,7 +12,8 @@ include_once 'domainedo_mapado.features.inc';
 
 function domainedo_mapado_form_show_node_form_alter(&$form, &$form_state, $form_id) {
   // Vertical tab "Mapado" moved to bottom of existing vertical tabs.
-  $form['#groups']['group_mapado']->weight = 2000;
+  //$form['#groups']['group_mapado']->weight = 2000;
+  
   $form['field_mapado_apislug']['und'][0]['value']['#attributes']['readonly'] = 'readonly';
 }
 
