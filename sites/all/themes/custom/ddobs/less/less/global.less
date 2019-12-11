@@ -31,10 +31,20 @@ body {
   }
 }
 .extramuros {
-  border: 1px solid red;
   position: absolute;
-  top: 10px;
-  right: 0;
+  top: 5px;
+  right: 5px;
+  background-color: rgb(255, 255, 255);
+  padding: 4px 0;
+  border-radius: 50%;
+  cursor: help;
+  &:after {
+    .glyphicon();
+    content: "\e879";
+    color: @grenadine-ddo;
+    font-size: 2em;
+    left: 5px;
+  }
 }
 
 &.caret {
@@ -855,11 +865,7 @@ footer.container {
       }
     }
   }
-  #mmm {
-    max-height: 150px;
-    float: right;
-    margin-right: -5px;
-  }
+
   strong {
     font-weight: bold;
   }
@@ -1363,6 +1369,29 @@ strong {
     border-bottom: 0 !important;
     &:after {
       display: none !important;
+    }
+  }
+}
+/* Pied de page */
+.flex-xs {
+  @media (max-width: @screen-xs) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+#ddo-title-botton {
+  padding-top: 15px;
+  border-top: 1px solid black;
+}
+#mmm {
+  max-height: 150px;
+  float: right;
+  margin-right: -5px;
+}
+#text-bottom-ddo {
+  @media (max-width: @screen-xs) {
+    img#mmm {
+      float: left !important;
     }
   }
 }
