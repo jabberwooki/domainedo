@@ -7848,6 +7848,44 @@ body em {
 body strong {
   font-weight: bold;
 }
+.extramuros {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: #ffffff;
+  padding: 4px 0;
+  border-radius: 50%;
+  cursor: help;
+}
+.extramuros:after {
+  position: relative;
+  top: 1px;
+  font-family: 'Glyphicons Halflings';
+  line-height: 1;
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1em;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 10px;
+  text-align: center;
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  color: #777777;
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e879";
+  color: #f74e2d;
+  font-size: 2em;
+  left: 5px;
+}
 .caret {
   display: none;
 }
@@ -8693,11 +8731,6 @@ footer.container #block-bean-reseaux-sociaux-bas .field-name-field-block-body ul
     margin-left: 12px;
   }
 }
-footer.container #mmm {
-  max-height: 150px;
-  float: right;
-  margin-right: -5px;
-}
 footer.container strong {
   font-weight: bold;
 }
@@ -9274,6 +9307,27 @@ strong {
 }
 .scald-author-big-img .field-item:after {
   display: none !important;
+}
+/* Pied de page */
+@media (max-width: 480px) {
+  .flex-xs {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+#ddo-title-botton {
+  padding-top: 15px;
+  border-top: 1px solid black;
+}
+#mmm {
+  max-height: 150px;
+  float: right;
+  margin-right: -5px;
+}
+@media (max-width: 480px) {
+  #text-bottom-ddo img#mmm {
+    float: left !important;
+  }
 }
 /* fontello icons *************************************************************/
 @font-face {
