@@ -69,6 +69,7 @@ features[custom_breadcrumbs_views][] = liste_spectacles
 features[ds_field_settings][] = node|festival|full
 features[ds_field_settings][] = node|show|frontpage_block
 features[ds_field_settings][] = node|show|frontpage_block_mobile
+features[ds_field_settings][] = node|show|full
 features[ds_field_settings][] = node|show|list
 features[ds_field_settings][] = node|show|liste_aussi
 features[ds_field_settings][] = node|show|teaser
