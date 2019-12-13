@@ -566,6 +566,12 @@ function domainedo_shows_strongarm() {
             'visible' => FALSE,
           ),
         ),
+        'webform' => array(
+          'full' => array(
+            'weight' => '10',
+            'visible' => TRUE,
+          ),
+        ),
       ),
     ),
   );

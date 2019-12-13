@@ -33,8 +33,9 @@ function domainedo_shows_node_view_alter(&$build) {
   }
 	if ($build['#bundle'] == 'show') {
     if ($build['#view_mode'] == 'teaser') {
+      // Récupération du lieu parent pour déterminer si le spectacle
+      // est hors les murs
       drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_date_show_list_festival.js');
-      /* dpm($build['body']['#object']->field_location['und'][0]['tid']); */
       $tid = $build['body']['#object']->field_location['und'][0]['tid'];
       $parent = taxonomy_get_parents($tid);
       $is_extra = false;
@@ -82,6 +83,12 @@ function domainedo_shows_node_view_alter(&$build) {
 		if ($build['#view_mode'] == 'full') {
       drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_shows.js');
       drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_date_show.js');
+
+      //dpm($build);
+      /* Teste s'il y a bien un formulaire joint et appelle le script js le cas échéant */
+      if(!empty($build['body']['#object']->field_formulaire)) {
+        drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_form.js');
+      }
       // Breadcrumb processing : if the show node is requested from a festival page,
 			// the breadcrumb link 'Tous les spectacles' must send user to the shows list
 			// filtered on the latest edition of the same festival.
