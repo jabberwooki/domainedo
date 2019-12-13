@@ -508,8 +508,8 @@
     .field-name-field-reimbursement,
     .field-name-field-additional-infos,
     .field-name-field-coming-soon,
-    .field_offline {
-      margin-top: 30px;
+    .field_offline,
+    #no-more-ticket {
       border: 2px solid @grenadine-ddo;
       padding: 15px;
       .field-label {
@@ -521,6 +521,27 @@
         font-style: normal;
         font-weight: 400;
         line-height: 1.8em; /* 28.8/16 */
+      }
+    }
+    #no-more-ticket {
+      margin-bottom: 30px;
+      div.label-above {
+        text-transform: uppercase;
+        color: #f74e2d;
+        font-weight: bold;
+      }
+      #link_ask_information {
+        &:hover {
+          cursor: pointer;
+        }
+        &:before {
+          .glyphicon();
+          content: "\e818";
+          display: block;
+          font-size: 2em;
+          color: @grenadine-ddo;
+          float: left;
+        }
       }
     }
     .field-name-field-full,
@@ -565,6 +586,11 @@
         a {
           font-size: 0.8em;
         }
+      }
+    }
+    #demande-d-information-entityform-edit-form {
+      #edit-submit {
+        background-color: @grenadine-ddo !important;
       }
     }
   }

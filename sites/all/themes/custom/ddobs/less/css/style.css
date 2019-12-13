@@ -10703,8 +10703,8 @@ strong {
 .node-type-show .node-show.view-mode-full .field-name-field-reimbursement,
 .node-type-show .node-show.view-mode-full .field-name-field-additional-infos,
 .node-type-show .node-show.view-mode-full .field-name-field-coming-soon,
-.node-type-show .node-show.view-mode-full .field_offline {
-  margin-top: 30px;
+.node-type-show .node-show.view-mode-full .field_offline,
+.node-type-show .node-show.view-mode-full #no-more-ticket {
   border: 2px solid #f74e2d;
   padding: 15px;
 }
@@ -10712,7 +10712,8 @@ strong {
 .node-type-show .node-show.view-mode-full .field-name-field-reimbursement .field-label,
 .node-type-show .node-show.view-mode-full .field-name-field-additional-infos .field-label,
 .node-type-show .node-show.view-mode-full .field-name-field-coming-soon .field-label,
-.node-type-show .node-show.view-mode-full .field_offline .field-label {
+.node-type-show .node-show.view-mode-full .field_offline .field-label,
+.node-type-show .node-show.view-mode-full #no-more-ticket .field-label {
   text-transform: uppercase;
   color: #f74e2d;
 }
@@ -10720,13 +10721,55 @@ strong {
 .node-type-show .node-show.view-mode-full .field-name-field-reimbursement p,
 .node-type-show .node-show.view-mode-full .field-name-field-additional-infos p,
 .node-type-show .node-show.view-mode-full .field-name-field-coming-soon p,
-.node-type-show .node-show.view-mode-full .field_offline p {
+.node-type-show .node-show.view-mode-full .field_offline p,
+.node-type-show .node-show.view-mode-full #no-more-ticket p {
   font-size: 0.875em;
   /* 14/16 */
   font-style: normal;
   font-weight: 400;
   line-height: 1.8em;
   /* 28.8/16 */
+}
+.node-type-show .node-show.view-mode-full #no-more-ticket {
+  margin-bottom: 30px;
+}
+.node-type-show .node-show.view-mode-full #no-more-ticket div.label-above {
+  text-transform: uppercase;
+  color: #f74e2d;
+  font-weight: bold;
+}
+.node-type-show .node-show.view-mode-full #no-more-ticket #link_ask_information:hover {
+  cursor: pointer;
+}
+.node-type-show .node-show.view-mode-full #no-more-ticket #link_ask_information:before {
+  position: relative;
+  top: 1px;
+  font-family: 'Glyphicons Halflings';
+  line-height: 1;
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1em;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 10px;
+  text-align: center;
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  color: #777777;
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e818";
+  display: block;
+  font-size: 2em;
+  color: #f74e2d;
+  float: left;
 }
 .node-type-show .node-show.view-mode-full .field-name-field-full,
 .node-type-show .node-show.view-mode-full .field-name-field-reimbursement,
@@ -10766,6 +10809,9 @@ strong {
 }
 .node-type-show .node-show.view-mode-full .like-to-item .field-name-field-boxoffice-url a {
   font-size: 0.8em;
+}
+.node-type-show .node-show.view-mode-full #demande-d-information-entityform-edit-form #edit-submit {
+  background-color: #f74e2d !important;
 }
 .node-type-show iframe {
   width: 100%;
