@@ -11,6 +11,82 @@
 function domainedo_shows_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'entityform-demande_d_information-field_email'.
+  $field_instances['entityform-demande_d_information-field_email'] = array(
+    'bundle' => 'demande_d_information',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_email',
+    'label' => 'Email',
+    'required' => 1,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 31,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'entityform-demande_d_information-field_spectacle'.
+  $field_instances['entityform-demande_d_information-field_spectacle'] = array(
+    'bundle' => 'demande_d_information',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'entityform',
+    'field_name' => 'field_spectacle',
+    'label' => 'Spectacle',
+    'required' => FALSE,
+    'settings' => array(
+      'context' => '',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 32,
+    ),
+  );
+
   // Exported field_instance: 'node-festival-body'.
   $field_instances['node-festival-body'] = array(
     'bundle' => 'festival',
@@ -5760,6 +5836,7 @@ function domainedo_shows_field_default_field_instances() {
   t('Description');
   t('Distribution');
   t('Durée');
+  t('Email');
   t('Entrée');
   t('Facebook');
   t('Festival');
@@ -5802,6 +5879,7 @@ function domainedo_shows_field_default_field_instances() {
   t('Site web');
   t('Son');
   t('Sous-titre');
+  t('Spectacle');
   t('Spectacles');
   t('Sur proposition de');
   t('Sélectionner le formulaire à montrer dans le cas où une demande d\'information est possible lorsque le spectacle est complet.');
