@@ -10738,6 +10738,9 @@ strong {
   color: #f74e2d;
   font-weight: bold;
 }
+.node-type-show .node-show.view-mode-full #no-more-ticket #link_ask_information {
+  text-decoration: underline;
+}
 .node-type-show .node-show.view-mode-full #no-more-ticket #link_ask_information:hover {
   cursor: pointer;
 }
@@ -10770,6 +10773,7 @@ strong {
   font-size: 2em;
   color: #f74e2d;
   float: left;
+  text-decoration: none;
 }
 .node-type-show .node-show.view-mode-full .field-name-field-full,
 .node-type-show .node-show.view-mode-full .field-name-field-reimbursement,
