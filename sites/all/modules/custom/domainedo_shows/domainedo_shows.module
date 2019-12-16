@@ -13,9 +13,18 @@ include_once 'domainedo_shows.features.inc';
 function domainedo_shows_form_show_node_form_alter(&$form, &$form_state, $form_id) {
 	// Vertical tab "Lien distribution" moved to bottom of existing tabs in create/edit form.
   $form['#groups']['group_casting']->weight = 1000;
-
+  /* A faire sur les champs url billetterie  mapado
+  $form['#after_build'][] = 'crealead_newsflashes_after_build'; */
 }
+/* function crealead_newsflashes_after_build($form, &$form_state) {
+  // Make the field field_sent readonly if user is not superadmin.
+  global $user;
 
+  if ($user->uid != 1) {
+    $form['field_sent']['#attributes']['readonly'] = 'readonly';
+  }
+ return $form;
+} */
 /**
  * Implements hook_node_view_alter().
  */
@@ -689,7 +698,7 @@ function domainedo_shows_node_postsave($node, $op) {
       ' est passée</strong>, rendez-vous prochainement pour l\'édition ' . $next_season .'.<br>
         Soyez les premiers à être informés : <strong>Inscrivez vous à la ' .
         '<a class="link-nl" href="/content/abonnement-la-lettre-dinformation-du-domaine-do">lettre d\'info</a>
-        ou aux notifications</strong> du domaine d\'O !
+        ou aux notifications</strong> du domaine d\'O.
         </p>'."\n".
       '<div class="modal fade" id="myModal" role="dialog">'."\n" .
       '<div class="modal-dialog">'."\n" .

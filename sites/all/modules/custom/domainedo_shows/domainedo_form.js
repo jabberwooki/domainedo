@@ -13,7 +13,7 @@ jQuery(function($) {
 
     const link_ask_information = $("<span></span>", {
       text:
-        "Soyez les premiers à obtenir des informations si des places se libèrent",
+        "Soyez les premiers à obtenir des informations si des places se libèrent !",
       id: "link_ask_information"
     })
       .appendTo("#no-more-ticket")
