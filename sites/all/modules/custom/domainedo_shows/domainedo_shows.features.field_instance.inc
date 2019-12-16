@@ -11,6 +11,82 @@
 function domainedo_shows_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'entityform-demande_d_information-field_email'.
+  $field_instances['entityform-demande_d_information-field_email'] = array(
+    'bundle' => 'demande_d_information',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_email',
+    'label' => 'Email',
+    'required' => 1,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 31,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'entityform-demande_d_information-field_spectacle'.
+  $field_instances['entityform-demande_d_information-field_spectacle'] = array(
+    'bundle' => 'demande_d_information',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'entityform',
+    'field_name' => 'field_spectacle',
+    'label' => 'Spectacle',
+    'required' => FALSE,
+    'settings' => array(
+      'context' => '',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 32,
+    ),
+  );
+
   // Exported field_instance: 'node-festival-body'.
   $field_instances['node-festival-body'] = array(
     'bundle' => 'festival',
@@ -184,14 +260,18 @@ function domainedo_shows_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'link',
-        'settings' => array(),
+        'settings' => array(
+          'custom_title' => '',
+        ),
         'type' => 'link_default',
         'weight' => 19,
       ),
       'full' => array(
         'label' => 'hidden',
         'module' => 'link',
-        'settings' => array(),
+        'settings' => array(
+          'custom_title' => '',
+        ),
         'type' => 'link_default',
         'weight' => 10,
       ),
@@ -207,6 +287,7 @@ function domainedo_shows_field_default_field_instances() {
     'label' => 'Facebook',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => 'glyphicon-facebook',
         'configurable_title' => 0,
@@ -220,6 +301,7 @@ function domainedo_shows_field_default_field_instances() {
       'enable_tokens' => 1,
       'rel_remove' => 'default',
       'title' => 'value',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 255,
       'title_value' => 'Facebook',
       'url' => 0,
@@ -401,14 +483,18 @@ function domainedo_shows_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'link',
-        'settings' => array(),
+        'settings' => array(
+          'custom_title' => '',
+        ),
         'type' => 'link_default',
         'weight' => 17,
       ),
       'full' => array(
         'label' => 'hidden',
         'module' => 'link',
-        'settings' => array(),
+        'settings' => array(
+          'custom_title' => '',
+        ),
         'type' => 'link_default',
         'weight' => 6,
       ),
@@ -424,6 +510,7 @@ function domainedo_shows_field_default_field_instances() {
     'label' => 'Feuilleter en ligne',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -437,6 +524,7 @@ function domainedo_shows_field_default_field_instances() {
       'enable_tokens' => 1,
       'rel_remove' => 'default',
       'title' => 'value',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => 'Feuilleter le programme',
       'url' => 0,
@@ -962,7 +1050,9 @@ function domainedo_shows_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'link',
-        'settings' => array(),
+        'settings' => array(
+          'custom_title' => '',
+        ),
         'type' => 'link_default',
         'weight' => 13,
       ),
@@ -984,6 +1074,7 @@ function domainedo_shows_field_default_field_instances() {
     'label' => 'Liens utiles',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -997,6 +1088,7 @@ function domainedo_shows_field_default_field_instances() {
       'enable_tokens' => 1,
       'rel_remove' => 'default',
       'title' => 'required',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,
@@ -1022,14 +1114,18 @@ function domainedo_shows_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'link',
-        'settings' => array(),
+        'settings' => array(
+          'custom_title' => '',
+        ),
         'type' => 'link_default',
         'weight' => 18,
       ),
       'full' => array(
         'label' => 'hidden',
         'module' => 'link',
-        'settings' => array(),
+        'settings' => array(
+          'custom_title' => '',
+        ),
         'type' => 'link_default',
         'weight' => 9,
       ),
@@ -1045,6 +1141,7 @@ function domainedo_shows_field_default_field_instances() {
     'label' => 'Voir les archives',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -1058,6 +1155,7 @@ function domainedo_shows_field_default_field_instances() {
       'enable_tokens' => 1,
       'rel_remove' => 'default',
       'title' => 'value',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => 'Voir les archives',
       'url' => 0,
@@ -1450,7 +1548,9 @@ function domainedo_shows_field_default_field_instances() {
       'default' => array(
         'label' => 'inline',
         'module' => 'link',
-        'settings' => array(),
+        'settings' => array(
+          'custom_title' => '',
+        ),
         'type' => 'link_default',
         'weight' => 20,
       ),
@@ -1469,7 +1569,9 @@ function domainedo_shows_field_default_field_instances() {
       'full' => array(
         'label' => 'hidden',
         'module' => 'link',
-        'settings' => array(),
+        'settings' => array(
+          'custom_title' => '',
+        ),
         'type' => 'link_default',
         'weight' => 16,
       ),
@@ -1488,7 +1590,9 @@ function domainedo_shows_field_default_field_instances() {
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'link',
-        'settings' => array(),
+        'settings' => array(
+          'custom_title' => '',
+        ),
         'type' => 'link_default',
         'weight' => 5,
       ),
@@ -1504,6 +1608,7 @@ function domainedo_shows_field_default_field_instances() {
     'label' => 'Url billetterie',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => 'colorbox-load',
         'configurable_title' => 0,
@@ -1517,6 +1622,7 @@ function domainedo_shows_field_default_field_instances() {
       'enable_tokens' => 1,
       'rel_remove' => 'default',
       'title' => 'value',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => 'Réserver',
       'url' => 0,
@@ -2271,6 +2377,92 @@ function domainedo_shows_field_default_field_instances() {
       ),
       'type' => 'entityreference_autocomplete',
       'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'node-show-field_formulaire'.
+  $field_instances['node-show-field_formulaire'] = array(
+    'bundle' => 'show',
+    'default_value' => array(
+      0 => array(
+        'target_id' => 3,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Sélectionner le formulaire à montrer dans le cas où une demande d\'information est possible lorsque le spectacle est complet.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'bypass_access' => FALSE,
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 43,
+      ),
+      'frontpage_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'frontpage_block_mobile' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'use_content_language' => 1,
+          'view_mode' => 'default',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 0,
+      ),
+      'list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'liste_aussi' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'zoom' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_formulaire',
+    'label' => 'Formulaire',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 41,
     ),
   );
 
@@ -5053,14 +5245,18 @@ function domainedo_shows_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'link',
-        'settings' => array(),
+        'settings' => array(
+          'custom_title' => '',
+        ),
         'type' => 'link_default',
         'weight' => 5,
       ),
       'full' => array(
         'label' => 'inline',
         'module' => 'link',
-        'settings' => array(),
+        'settings' => array(
+          'custom_title' => '',
+        ),
         'type' => 'link_default',
         'weight' => 5,
       ),
@@ -5076,6 +5272,7 @@ function domainedo_shows_field_default_field_instances() {
     'label' => 'Site web',
     'required' => 0,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -5089,6 +5286,7 @@ function domainedo_shows_field_default_field_instances() {
       'enable_tokens' => 1,
       'rel_remove' => 'rel_remove_internal',
       'title' => 'none',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,
@@ -5638,10 +5836,12 @@ function domainedo_shows_field_default_field_instances() {
   t('Description');
   t('Distribution');
   t('Durée');
+  t('Email');
   t('Entrée');
   t('Facebook');
   t('Festival');
   t('Feuilleter en ligne');
+  t('Formulaire');
   t('Galerie');
   t('Géolocalisation');
   t('Identifiant billetterie');
@@ -5679,8 +5879,10 @@ function domainedo_shows_field_default_field_instances() {
   t('Site web');
   t('Son');
   t('Sous-titre');
+  t('Spectacle');
   t('Spectacles');
   t('Sur proposition de');
+  t('Sélectionner le formulaire à montrer dans le cas où une demande d\'information est possible lorsque le spectacle est complet.');
   t('Tarif');
   t('Texte d\'explication des modalités de remboursement en cas d\'annulation de spectacle.');
   t('Texte à afficher lorsque le spectacle est complet.');

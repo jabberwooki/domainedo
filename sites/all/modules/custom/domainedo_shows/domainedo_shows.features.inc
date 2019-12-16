@@ -102,6 +102,45 @@ Tous les spectacles',
 }
 
 /**
+ * Implements hook_default_entityform_type().
+ */
+function domainedo_shows_default_entityform_type() {
+  $items = array();
+  $items['demande_d_information'] = entity_import('entityform_type', '{
+    "type" : "demande_d_information",
+    "label" : "Demande d\\u0027information",
+    "data" : {
+      "draftable" : 0,
+      "draft_redirect_path" : "",
+      "draft_button_text" : "",
+      "draft_save_text" : { "value" : "", "format" : "full_html" },
+      "submit_button_text" : "",
+      "submit_confirm_msg" : "",
+      "your_submissions" : "",
+      "disallow_resubmit_msg" : "",
+      "delete_confirm_msg" : "",
+      "page_title_view" : "",
+      "preview_page" : 0,
+      "submission_page_title" : "",
+      "submission_text" : { "value" : "", "format" : "full_html" },
+      "submission_show_submitted" : 0,
+      "submissions_view" : "default",
+      "user_submissions_view" : "default",
+      "form_status" : "ENTITYFORM_OPEN",
+      "roles" : { "1" : "1", "3" : "3", "4" : "4", "2" : "2", "5" : "5", "6" : 0 },
+      "resubmit_action" : "new",
+      "redirect_path" : "",
+      "instruction_pre" : { "value" : "", "format" : "full_html" },
+      "enable_block" : 0
+    },
+    "weight" : "0",
+    "rdf_mapping" : [],
+    "paths" : []
+  }');
+  return $items;
+}
+
+/**
  * Implements hook_features_date_format_default().
  */
 function domainedo_shows_features_date_format_default() {
