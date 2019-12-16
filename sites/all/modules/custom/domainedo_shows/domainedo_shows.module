@@ -689,7 +689,7 @@ function domainedo_shows_node_postsave($node, $op) {
       ' est passée</strong>, rendez-vous prochainement pour l\'édition ' . $next_season .'.<br>
         Soyez les premiers à être informés : <strong>Inscrivez vous à la ' .
         '<a class="link-nl" href="/content/abonnement-la-lettre-dinformation-du-domaine-do">lettre d\'info</a>
-        ou aux notifications</strong> du domaine d\'O
+        ou aux notifications</strong> du domaine d\'O !
         </p>'."\n".
       '<div class="modal fade" id="myModal" role="dialog">'."\n" .
       '<div class="modal-dialog">'."\n" .
