@@ -12,7 +12,7 @@ include_once 'domainedo_shows.features.inc';
  */
 function domainedo_shows_form_show_node_form_alter(&$form, &$form_state, $form_id) {
 	// Vertical tab "Lien distribution" moved to bottom of existing tabs in create/edit form.
-  $form['#groups']['group_casting']->weight = 1000;
+  //$form['#groups']['group_casting']->weight = 1000;
 
 }
 
