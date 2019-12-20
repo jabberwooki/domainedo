@@ -34,7 +34,6 @@ features[ctools][] = views:views_default:3.0
 features[ds_field_settings][] = node|article|default
 features[ds_field_settings][] = node|article|frontpage_block
 features[ds_field_settings][] = node|article|teaser
-features[ds_field_settings][] = node|show|full
 features[ds_layout_settings][] = node|article|default
 features[ds_layout_settings][] = node|article|frontpage_block
 features[ds_layout_settings][] = node|article|full

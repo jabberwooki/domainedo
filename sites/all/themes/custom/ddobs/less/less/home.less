@@ -12,7 +12,6 @@
         font-size: 1.125em;
       }
     }
-
   }
 
   #homeheadband {
@@ -23,19 +22,19 @@
     }
     #info-flash {
       background-color: @grenadine-ddo;
-      color: #FFF;
+      color: #fff;
       font-weight: bold;
       margin: 0 0 10px 0;
       padding: 30px 0;
       a {
-        color: #FFF;
+        color: #fff;
         text-transform: uppercase;
       }
       a.more {
         .button-link-more();
         &:hover {
           background-color: black;
-          color: #FFF;
+          color: #fff;
           opacity: 1;
         }
         margin-bottom: 0;
@@ -44,7 +43,6 @@
     .region-homenow {
       .field-name-field-news-url-target {
         display: none;
-
       }
       position: relative;
       @media (max-width: @screen-md) {
@@ -60,7 +58,11 @@
         height: 39%;
         width: 100%;
         background: black; /* For browsers that do not support gradients */
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0),
+          rgba(0, 0, 0, 1)
+        );
 
         #group-title-more-now {
           position: absolute;
@@ -70,7 +72,7 @@
             clear: both;
             a {
               font-size: 2.375em; /* 38/16 */
-              color: #FFF;
+              color: #fff;
               text-decoration: none;
               .underline-grenadine();
               display: block;
@@ -106,7 +108,6 @@
       margin: 20px 0;
     }
 
-
     /* Carrousel ********************************************************************************************************/
     .carousel {
       @media (max-width: @screen-sm) {
@@ -139,7 +140,6 @@
             font-size: 1.5em;
             top: 94%;
           }
-
         }
 
         .views-field-body {
@@ -183,19 +183,17 @@
             }
             @media (max-width: @screen-md) {
               margin-top: 30px;
-
             }
             text-transform: uppercase;
             a {
               .button-link-more();
               margin-right: 1px;
               &:after {
-                content: '';
+                content: "";
                 display: block;
                 clear: both;
               }
             }
-
           }
         }
       }
@@ -219,7 +217,7 @@
           opacity: 1 !important;
           background-color: @grenadine-ddo;
           border: 1px solid @grenadine-ddo;
-          padding: 0!important;
+          padding: 0 !important;
           margin-top: 0px;
           &:before {
             background-image: none !important;
@@ -227,7 +225,7 @@
             top: -4px;
             left: 3px;
             color: #fff;
-            content: '\e833';
+            content: "\e833";
             font-size: 0.6em;
           }
           &:hover {
@@ -239,7 +237,7 @@
         }
         .icon-next {
           &:before {
-            content: '\e834';
+            content: "\e834";
             left: 6px;
           }
         }
@@ -253,7 +251,6 @@
       }
     }
     /* Fin carrousel **************************************************************************************************/
-
   }
 
   #quick-acces {
@@ -265,7 +262,6 @@
       margin-bottom: 15px;
     }
     .view {
-
       ul {
         li {
           float: left;
@@ -303,9 +299,9 @@
         }
         &:hover {
           background-color: black;
-          color: #FFF;
+          color: #fff;
           &:before {
-            color: #FFF;
+            color: #fff;
           }
         }
       }
@@ -313,7 +309,7 @@
   }
   .more-link {
     a {
-     .button-red-link();
+      .button-red-link();
     }
   }
   #block-views-shows-block-1 {
@@ -325,7 +321,4 @@
       margin-bottom: 30px;
     }
   }
-
-
 }
-

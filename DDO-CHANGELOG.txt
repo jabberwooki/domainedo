@@ -1,3 +1,12 @@
+Domaine d'O 1.2.8 - 2019-12-16
+Manage information form if no more ticket
+
+Domaine d'O 1.2.7 - 2019-12-11
+Manage extrumros shows, no-result in view shows, anchor after view shows, notification on all site, metropole text on bottom
+
+Domaine d'O 1.2.6 - 2019-12-10
+core and contrib modules up for security reasons. css improved for home show teasers
+
 Domaine d'O 1.2.5 - 2019-10-03
 term_reference_tree added
 

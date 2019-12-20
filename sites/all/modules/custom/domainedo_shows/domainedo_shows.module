@@ -14,8 +14,19 @@ function domainedo_shows_form_show_node_form_alter(&$form, &$form_state, $form_i
 	// Vertical tab "Lien distribution" moved to bottom of existing tabs in create/edit form.
   //$form['#groups']['group_casting']->weight = 1000;
 
+  $form['#groups']['group_casting']->weight = 1000;
+  /* A faire sur les champs url billetterie  mapado
+  $form['#after_build'][] = 'crealead_newsflashes_after_build'; */
 }
+/* function crealead_newsflashes_after_build($form, &$form_state) {
+  // Make the field field_sent readonly if user is not superadmin.
+  global $user;
 
+  if ($user->uid != 1) {
+    $form['field_sent']['#attributes']['readonly'] = 'readonly';
+  }
+ return $form;
+} */
 /**
  * Implements hook_node_view_alter().
  */
@@ -33,7 +44,24 @@ function domainedo_shows_node_view_alter(&$build) {
   }
 	if ($build['#bundle'] == 'show') {
     if ($build['#view_mode'] == 'teaser') {
+      // Récupération du lieu parent pour déterminer si le spectacle
+      // est hors les murs
       drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_date_show_list_festival.js');
+      $tid = $build['body']['#object']->field_location['und'][0]['tid'];
+      $parent = taxonomy_get_parents($tid);
+      $is_extra = false;
+      foreach ($parent as $key => $value){
+        if(stristr( $parent[$key]->name, "intra")) {
+          $is_extra = false;
+        } else $is_extra = true;
+      }
+      if($is_extra) {
+        $build['field_scald_image'][0]['#markup'] .=
+        '<div title="Hors les murs du domaine d\'O" class="extramuros">'.
+        '  <span class="sr-only">Hors les murs</span>'.
+        '</div>';
+      }
+
     }
 		// Processing of festival's name in List view mode.
 		if ($build['#view_mode'] == 'list' && isset($build['field_festival'][0]['#markup'])) {
@@ -66,6 +94,12 @@ function domainedo_shows_node_view_alter(&$build) {
 		if ($build['#view_mode'] == 'full') {
       drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_shows.js');
       drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_date_show.js');
+
+      //dpm($build);
+      /* Teste s'il y a bien un formulaire joint et appelle le script js le cas échéant */
+      if(!empty($build['body']['#object']->field_formulaire)) {
+        drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_form.js');
+      }
       // Breadcrumb processing : if the show node is requested from a festival page,
 			// the breadcrumb link 'Tous les spectacles' must send user to the shows list
 			// filtered on the latest edition of the same festival.
@@ -617,33 +651,72 @@ function domainedo_shows_menu_block_blocks() {
 		),
 	);
 }
-
+function textFestival($festival_name, $festival_season) {
+  if(strpos($festival_name, 'hiver') !== false ) {
+    $season_first_year = substr($festival_season, -2);
+    $season_second_year = $season_first_year + 1;
+    return " de la Saison ". $season_first_year. "/" .$season_second_year;
+  } else if(strpos($festival_name, 'cirque') !== false ) {
+    return " de la Métropole fait son Cirque";
+  } else if(strpos($festival_name, 'cine') !== false ) {
+    return " de la Métropole fait son Cinéma";
+  } else if(strpos($festival_name, 'nuits') !== false ) {
+    return " des Nuits d'O";
+  } else if(strpos($festival_name, 'arabesques') !== false ) {
+    return " d'Arabesques";
+  } else if(strpos($festival_name, 'radio') !== false ) {
+    return " de Radio France";
+  } else if(strpos($festival_name, 'saperlipopette') !== false ) {
+    return " de Saperlipopette";
+  } else if(strpos($festival_name, 'printemps') !== false ) {
+    return " du Printemps des Comédiens";
+  } else if(strpos($festival_name, 'folies') !== false ) {
+    return " des Folies d'O";
+  }
+}
 /**
  * Implements hook_node_postsave().
+ * Le principe est de placer dans le champ "field_no_result"
+ * Le message qui s'affichera après un click sur le festival sur la page "/spectacles/tous-les-spectacles"
+ * lorsqu'il n'y a plus de spectacles en cours
  */
 function domainedo_shows_node_postsave($node, $op) {
   if ($node->type == 'festival') {
     $wrapper = entity_metadata_wrapper('node', $node);
     $festival_name =  $wrapper->field_festival_name->value();
+    $festival_season = $wrapper->field_season->value();
+    $next_season = $festival_season + 1;
     if ($festival_name == "festival-hiver") {
       $festival_name = "festival-dhiver";
+      $season_first_year = substr($festival_season, -2);
+      $season_second_year = $season_first_year + 1;
+      $next_season = $season_second_year. "/" . ($season_second_year + 1);
     }
 
-
-
     $no_result_msg =
-      '<p class="field-no-result">Pas de spectacle mis en ligne pour la prochaine édition de ce festival.<br>
-        <a class="more-info-festival" href="/spectacles/' . $festival_name . '">Plus d\'informations</a>
-        </p>'."\n" .
+      '<p class="field-no-result">' .
+      '<a class="more-info-festival" href="/spectacles/' . $festival_name .
+      '"><strong>L\'éditon ' . $festival_season . textFestival($festival_name, $festival_season) . '</a>' .
+      ' est passée</strong>, rendez-vous prochainement pour l\'édition ' . $next_season .'.<br>
+        Soyez les premiers à être informés : <strong>Inscrivez vous à la ' .
+        '<a class="link-nl" href="/content/abonnement-la-lettre-dinformation-du-domaine-do">lettre d\'info</a>
+        ou aux notifications</strong> du domaine d\'O.
+        </p>'."\n".
       '<div class="modal fade" id="myModal" role="dialog">'."\n" .
       '<div class="modal-dialog">'."\n" .
       ' <div class="modal-content">'."\n" .
       '<div class="modal-header"><button class="close" data-dismiss="modal" type="button">×</button>'."\n" .
-      '<h4 class="modal-title">Pas de résultat</h4>'."\n" .
+      '<h4 class="modal-title"></h4>'."\n" .
 
       '<div class="modal-body modal-no-result">'."\n" .
-      '<p >Pas de spectacle mis en ligne pour la prochaine édition de ce festival.<br />'."\n" .
-      '<a class="more-info-festival" href="/spectacles/' . $festival_name . '">Plus d\'informations</a>.</p>'."\n" .
+      '<p class="field-no-result">'.
+      '<a class="more-info-festival" href="/spectacles/' . $festival_name .
+      '"><strong>L\'éditon ' . $festival_season . textFestival($festival_name, $festival_season) . '</a>' .
+      ' est passée</strong>, rendez-vous prochainement pour l\'édition ' . $next_season .'.<br>
+        Soyez les premiers à être informés : <strong>Inscrivez vous à la ' .
+        '<a class="link-nl" href="/content/abonnement-la-lettre-dinformation-du-domaine-do">lettre d\'info</a>
+        ou aux notifications</strong> du domaine d\'O
+        </p>'."\n" .
       '</div>'."\n" .
       '<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Fermer</button></div>'."\n" .
       '</div>'."\n" .
