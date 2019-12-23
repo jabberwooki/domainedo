@@ -375,40 +375,40 @@ function domainedo_mapado_get_data_for_mapado($node) {
   //     Mapado affiche "place - ville" sur la liste des événements
   //     Mais n'affiche que
 
-  $location_tid = $node->field_location['und'][0]['tid'];
-  $location = taxonomy_term_load($location_tid)->name;
-  $parents = taxonomy_get_parents($location_tid);
-
-  // Si c'est au domaine d'O
-  if (reset($parents)->name == 'INTRAMUROS') {
-    $is_intramuros = true;
-    // S'il y a plus d'un lieu, on récupère aussi les autres noms de lieu
-    if (count($node->field_location['und']) > 1) {
-      $locations = array();
-      foreach ($node->field_location['und'] as $item) {
-        $term = taxonomy_term_load($item['tid']);
-        $locations[] = $term->name;
-      }
-      $location = implode(', ', $locations);
-    }
-    $show_data['place'] = 'Domaine d\'O - ' . $location;
-  }
-  // Sinon
-  else {
-    $is_intramuros = false;
-    $show_address = explode(' - ', $location);
-    $city = $show_address[0];
-    $place = $show_address[1];
-    $show_data['place'] = $place;
-    $show_data['city'] = $city;
-  }
-
-  // 3 - Description (body -> description)
-  $desc = $node->body['und'][0]['value'];
-  $show_data['description'] = strip_tags($desc);
-  if($is_watchdog_on) {
-    watchdog('domainedo_mapado', "Description = {$desc}");
-  }
+//  $location_tid = $node->field_location['und'][0]['tid'];
+//  $location = taxonomy_term_load($location_tid)->name;
+//  $parents = taxonomy_get_parents($location_tid);
+//
+//  // Si c'est au domaine d'O
+//  if (reset($parents)->name == 'INTRAMUROS') {
+//    $is_intramuros = true;
+//    // S'il y a plus d'un lieu, on récupère aussi les autres noms de lieu
+//    if (count($node->field_location['und']) > 1) {
+//      $locations = array();
+//      foreach ($node->field_location['und'] as $item) {
+//        $term = taxonomy_term_load($item['tid']);
+//        $locations[] = $term->name;
+//      }
+//      $location = implode(', ', $locations);
+//    }
+//    $show_data['place'] = 'Domaine d\'O - ' . $location;
+//  }
+//  // Sinon
+//  else {
+//    $is_intramuros = false;
+//    $show_address = explode(' - ', $location);
+//    $city = $show_address[0];
+//    $place = $show_address[1];
+//    $show_data['place'] = $place;
+//    $show_data['city'] = $city;
+//  }
+//
+//  // 3 - Description (body -> description)
+//  $desc = $node->body['und'][0]['value'];
+//  $show_data['description'] = strip_tags($desc);
+//  if($is_watchdog_on) {
+//    watchdog('domainedo_mapado', "Description = {$desc}");
+//  }
 
   // 4- Dates et horaires (field_show_dates -> formattedSchedule)
 //  $dates_string = '';
