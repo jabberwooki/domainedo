@@ -347,6 +347,62 @@ function domainedo_mapado_get_data_for_mapado($node) {
 //    watchdog('domainedo_mapado', "Place = {$place}");
 //  }
 
+  // Version 2019 - Gestion avancée des lieux
+  // On suppose que seuls les spectacles ayant lieu au domaine d'O (intra-muros) peuvent avoir plusieurs lieux.
+  // Pour les autres, si une meme représentation a lieu à 2 endroits différents, alors ce sont des spectacles différents.
+  // La logique est la suivante :
+  //
+  // Si intra-muros alors
+  //     on récupère le ou les lieux et on récupère les données suivantes :
+  //     $place = Domaine d'O - Lieu 1, lieu 2...
+  //     $city = Montpellier
+  // Sinon
+  //     on récupère le lieu unique et on le découpe pour avoir :
+  //     $place = lieu dans la ville
+  //     $ville = ville indiquée
+  //
+  // A NOTER : Il est important de saisir les termes du vocabulaire 'Lieux de spectacle'
+  // dans le bon ordre : ville - lieu
+  // et non l'inverse.
+  //
+  // Coté Mapado, la logique est la suivante (on ne peut pas la modifier) :
+  //
+  // Si "place" ET "city" ne sont pas renseignés alors
+  //     Mapado affiche "Domaine d'O - Montpellier" (qui je suppose est la valeur affichée de "venue":"/v1/venues/391")
+  //     sur la liste des évenements, visible de l'admin mapado seulement
+  //     ainsi que sur la page d'achat de billets, visible des internautes.
+  // Sinon
+  //     Mapado affiche "place - ville" sur la liste des événements
+  //     Mais n'affiche que
+
+  $location_tid = $node->field_location['und'][0]['tid'];
+  $location = taxonomy_term_load($location_tid)->name;
+  $parents = taxonomy_get_parents($location_tid);
+
+  // Si c'est au domaine d'O
+  if (reset($parents)->name == 'INTRAMUROS') {
+    $is_intramuros = true;
+    // S'il y a plus d'un lieu, on récupère aussi les autres noms de lieu
+    if (count($node->field_location['und']) > 1) {
+      $locations = array();
+      foreach ($node->field_location['und'] as $item) {
+        $term = taxonomy_term_load($item['tid']);
+        $locations[] = $term->name;
+      }
+      $location = implode(', ', $locations);
+    }
+    $show_data['place'] = 'Domaine d\'O - ' . $location;
+  }
+  // Sinon
+  else {
+    $is_intramuros = false;
+    $show_address = explode(' - ', $location);
+    $city = $show_address[0];
+    $place = $show_address[1];
+    $show_data['place'] = $place;
+    $show_data['city'] = $city;
+  }
+
   // 3 - Description (body -> description)
   $desc = $node->body['und'][0]['value'];
   $show_data['description'] = strip_tags($desc);
@@ -381,17 +437,16 @@ function domainedo_mapado_get_data_for_mapado($node) {
 
   // A quel endroit dans le domaine d'O ?
   // Il faut le concaténer avec la description (field_location -> field_location + description).
-  $locations = array();
-  foreach ($node->field_location['und'] as $location) {
-    $term = taxonomy_term_load($location['tid']);
-    $locations[] = $term->name;
-  }
-  $locations_string = implode(', ', $locations);
-  $show_data['description'] =
-    'LIEU : ' . $locations_string . "." . "\n\n"
-    . $show_data['description'];
-  if($is_watchdog_on) {
-    watchdog('domainedo_mapado', "Locations = {$locations_string}");
+  //
+  // Version 2019
+  // Lorsque ce n'est pas un spectacle intra-muros,
+  // il faut préciser la ville et le lieu dans le texte de la description.
+  if (!$is_intramuros) {
+    $show_data['description'] = 'LIEU : ' . $city . " - " . $place ."." . "\n"
+      . $show_data['description'];
+    if ($is_watchdog_on) {
+      watchdog('domainedo_mapado', "LIEU = {$city} - {$place}.");
+    }
   }
 
   // Medias (field_scald_image -> imageList)
