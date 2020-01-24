@@ -1,3 +1,7 @@
+Domaine d'O v1.3.0 - 2020-01-22
+  * domainedo_mapado up: Advanced location handling based on intramuros (yes/nos) state of a show.
+  * domainedo_mapado up: Major rewriting of REST requests to Mapado APIs: This 2019 version uses the Mapado Ticketing API. The Media API is abandoned.
+
 Domaine d'O 1.2.8 - 2019-12-16
 Manage information form if no more ticket
 
@@ -159,7 +163,7 @@ no-result automatically filled infinite loop corrected
 
 Domaine d'O 1.1.6 - 2018-11-03
 ----------------------------
-Festival field no-result automatically filled 
+Festival field no-result automatically filled
 
 Domaine d'O 1.1.5 - 2018-10-30
 ----------------------------
@@ -377,7 +381,7 @@ Galleria modified and smartphone bug menu fixed
 
 Domaine d'O 1.0.11 - 2015-09-15
 ----------------------------
-Add title on main menu 
+Add title on main menu
 
 Domaine d'O 1.0.10 - 2015-08-25
 ----------------------------

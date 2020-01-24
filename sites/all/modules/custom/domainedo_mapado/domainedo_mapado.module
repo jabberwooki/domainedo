@@ -12,7 +12,8 @@ include_once 'domainedo_mapado.features.inc';
 
 function domainedo_mapado_form_show_node_form_alter(&$form, &$form_state, $form_id) {
   // Vertical tab "Mapado" moved to bottom of existing vertical tabs.
-  $form['#groups']['group_mapado']->weight = 2000;
+  //$form['#groups']['group_mapado']->weight = 2000;
+
   $form['field_mapado_apislug']['und'][0]['value']['#attributes']['readonly'] = 'readonly';
 }
 
@@ -20,29 +21,68 @@ function domainedo_mapado_form_show_node_form_alter(&$form, &$form_state, $form_
  * Implements hook_node_postinsert().
  *
  * Création du spectacle sur Mapado.
+ *
+ * La version 2018 utilise la notion de flag.
+ * La version 2019 n'en n'a plus besoin.
+ * (voir commentaires dans la fonction)
  */
 function domainedo_mapado_node_postinsert($node) {
-  $is_watchdog_on = FALSE;
+  $is_watchdog_on = false;
   if ($node->type == 'show') {
-    if($is_watchdog_on) {watchdog('domainedo_mapado_post_action', "The inserted node {$node->type} id is {$node->nid} from " . __FUNCTION__);}
+    if($is_watchdog_on) {
+      watchdog('domainedo_mapado_post_action', "Postinsert (line ". __LINE__ . ") : The inserted node {$node->type} id is {$node->nid} from " . __FUNCTION__);
+    }
+    // Modifs 2019 - Envoi d'une requete de création (POST) à Mapado via l'API Ticketing, et non plus Media.
+    // La doc de cette API : https://ticketing.mapado.net/doc.html
+    $url = 'https://ticketing.mapado.net/v1/ticketings?fields=@id,title,slug';
+    $request_result = domainedo_mapado_send_request_to_ticketing_api($url, 'POST', $node);
+    if($is_watchdog_on) {
+      watchdog('domainedo_mapado', "Postinsert (line ". __LINE__ . ") : Mapado insert response = {$request_result}");
+    }
 
-    // Envoi d'une requête de création (POST) à Mapado.
-    // Tous les champs mapado utilisés ci-dessous sont nécessaires (d'après Dimitri) sinon erreur mapado.
-    // La doc de l'API mapado (https://api.mapado.net/v2/docs#tag/Activity) n'indique pourtant que 3 champs obligatoires.
-    $url = 'https://api.mapado.net/v2/activities.json?fields=title,description,imageList,formattedSchedule,place,apiSlug';
-    $request_result = domainedo_mapado_send_request_to_media_api($url, 'POST', $node);
-    if($is_watchdog_on) {watchdog('domainedo_mapado', "mapado insert response = {$request_result}");}
+    // Ensuite on récupère la valeur du champ Mapado "slug" en vue de le stocker dans le node.
+    $result_data = get_object_vars(json_decode($request_result));
+    if ($result_data) {
+      $slug = $result_data['slug'];
+      $ticketing = $result_data['@id'];
+      if ($is_watchdog_on) {
+        watchdog('domainedo_mapado', "apiSlug of the node {$node->title} created on Mapado {$node->nid} is : {$slug}");
+        watchdog('domainedo_mapado', "ticketing of the node {$node->title} created on Mapado {$node->nid} is : {$ticketing}");
+      }
+      $node->field_mapado_apislug['und'][0]['value'] = $slug;
+      $node->field_mapado_ticketing['und'][0]['value'] = $ticketing;
+      $node->field_boxoffice_url['und'][0]['url'] = 'https://domainedo.mapado.com/event/';
 
-    // Ensuite on récupère la valeur du champ mapado "apiSlug" et on met à jour le node.
-    // On va sauvegarder le node une seconde fois donc ça va déclencher le hook domainedo_mapado_node_postupdate() ci-dessous.
-    // Pour éviter de déclencher une requête de mise à jour vers Mapado, on ajoute un flag au node.
-    $result_data = json_decode($request_result);
-    $apiSlug = $result_data->apiSlug;
-    if($is_watchdog_on) {watchdog('domainedo_mapado', "apiSlug of the node {$node->title} created on Mapado {$node->nid} is : {$apiSlug}");}
-    $node->field_mapado_apislug['und'][0]['value'] = $apiSlug;
-    $node->field_boxoffice_url['und'][0]['url'] = 'https://domainedo.mapado.com/event/';
-    $node->flag = TRUE;
-    node_save($node);
+      // AJOUT 2019 - On s'occupe ensuite de créer les dates de ce spectacle dans Mapado.
+      // Pour chaque date du spectacle, on envoie une requete POST a l'API ticketing,
+      // mais cette fois-ci au endpoint /v1/event_dates.
+      $url = 'https://ticketing.mapado.net/v1/event_dates?fields=@id,createdAt,startDate,endDate';
+      $mapado_dates_ids = array();
+
+      foreach ($node->field_show_dates['und'] as $key=>$date) {
+        $data = array(
+          'ticketing' => $ticketing,
+          'startDate' => $date['value'],
+        );
+        $request_result = domainedo_mapado_send_event_date_request_to_mapado($url, 'POST', $data);
+        if($is_watchdog_on) {
+          watchdog('domainedo_mapado', "Date creation request result (line " . __LINE__ . ") = = {$request_result}");
+        }
+        $result_data = get_object_vars(json_decode($request_result));
+        $mapado_dates_ids[$key]['value'] = $result_data['@id'];
+      }
+      // On n'utilise plus un champ texte unique dans lequel on sérialise le tableau des ids de date,
+      // parce qu'à partir de 8 dates, le nombre de caractères à stocker dépasse 256.
+      //$node->field_mapado_dates_ids['und'][0]['value'] = serialize($mapado_dates_ids);
+
+      // On utilise à la place un champ texte multiple, chaque item de champ ne stockant qu'un seul id.
+      $node->field_mapado_dates_ids['und'] = $mapado_dates_ids;
+
+      // On va sauvegarder le node une seconde fois donc ça va déclencher le hook domainedo_mapado_node_postupdate() ci-dessous.
+      // Pour éviter de déclencher une requête de mise à jour vers Mapado, on ajoute un flag au node.
+      $node->flag = false;
+      node_save($node);
+    }
   }
 }
 
@@ -50,9 +90,17 @@ function domainedo_mapado_node_postinsert($node) {
  * Implements hook_node_postupdate().
  *
  * Modification du spectacle sur Mapado
+ *
+ * Le code de cette fonction correspond à la version créée en 2018.
+ * En 2019, il n'y a plus la notion de flog, voir commentaires dans la fonction domainedo_mapado_node_postinsert().
+ * Mais la version 2018 continue à fonctionner comme on le souhaite en 2019, sans toucher au code.
+ * La seule différence est qu'en 2019, on est toujours dans la situation 1 ($node n'a pas de flag).
+ * On garde les 2 cas possibles, on ne sait jamais.
+ *
+ *
  */
 function domainedo_mapado_node_postupdate($node) {
-  $is_watchdog_on = FALSE;
+  $is_watchdog_on = false;
 
   if ($node->type == 'show') {
     if($is_watchdog_on) {watchdog('domainedo_mapado', "The updated node {$node->type} id is {$node->nid} from " . __FUNCTION__);}
@@ -68,52 +116,168 @@ function domainedo_mapado_node_postupdate($node) {
 
       // Cas 1 - Le spectacle n'existe pas encore sur Mapado, il faut le créer.
       if (!isset($node->field_mapado_apislug['und'][0]['value'])) {
-        if($is_watchdog_on) { watchdog('domainedo_mapado', "pas de slug");}
+        if($is_watchdog_on) {
+          watchdog('domainedo_mapado', "pas de slug");
+        }
 
         // Envoi d'une requête de création (POST) à Mapado.
-        // Tous les champs mapado utilisés ci-dessous sont nécessaires (d'après Dimitri) sinon erreur mapado.
-        // La doc de l'API mapado (https://api.mapado.net/v2/docs#tag/Activity) n'indique pourtant que 3 champs obligatoires.
-        $url = 'https://api.mapado.net/v2/activities.json?fields=title,description,imageList,formattedSchedule,place,apiSlug,urlList';
-        $request_result = domainedo_mapado_send_request_to_media_api($url, 'POST', $node);
-        if($is_watchdog_on) { watchdog('domainedo_mapado', "mapado insert response = {$request_result}");}
+        $url = 'https://ticketing.mapado.net/v1/ticketings?fields=@id,title,slug,eventDateList';
+        $request_result = domainedo_mapado_send_request_to_ticketing_api($url, 'POST', $node);
+        if($is_watchdog_on) {
+          watchdog('domainedo_mapado', "Mapado insert response = {$request_result}");
+        }
 
-        // Ensuite on récupère la valeur du champ mapado "apiSlug" et on met à jour le node.
-        //// On va sauvegarder le node une seconde fois donc ça va déclencher le hook domainedo_mapado_node_postupdate() ci-dessous.
-        // Pour éviter de déclencher une requête de mise à jour vers Mapado, on ajoute un flag au node.
-        $result_data = json_decode($request_result);
-        $apiSlug = $result_data->apiSlug;
-        if($is_watchdog_on) {watchdog('domainedo_mapado', "apiSlug of the node {$node->title} created on Mapado {$node->nid} is : {$apiSlug}");}
-        $node_wrapper = entity_metadata_wrapper('node', $node);
-        $node_wrapper->field_mapado_apislug->set($apiSlug);
+        // Ensuite on récupère la valeur du champ Mapado "slug" en vue de le stocker dans le node.
+        $result_data = get_object_vars(json_decode($request_result));
+        $slug = $result_data['slug'];
+        $ticketing = $result_data['@id'];
+        if ($is_watchdog_on) {
+          watchdog('domainedo_mapado', "apiSlug of the node {$node->title} created on Mapado {$node->nid} is : {$slug}");
+          watchdog('domainedo_mapado', "ticketing of the node {$node->title} created on Mapado {$node->nid} is : {$ticketing}");
+        }
+        $node->field_mapado_apislug['und'][0]['value'] = $slug;
+        $node->field_mapado_ticketing['und'][0]['value'] = $ticketing;
         $node->field_boxoffice_url['und'][0]['url'] = 'https://domainedo.mapado.com/event/';
-        $node->flag = TRUE;
-        $node_wrapper->save();
+
+        // AJOUT 2019 - On s'occupe ensuite de créer les dates de ce spectacle dans Mapado.
+        // Pour chaque date du spectacle, on envoie une requete POST a l'API ticketing,
+        // mais cette fois-ci au endpoint /v1/event_dates.
+        $url = 'https://ticketing.mapado.net/v1/event_dates?fields=@id,createdAt,startDate,endDate';
+        $ticketing = '/v1/ticketings/' . substr($slug, 0, strpos($slug, '-'));
+        $mapado_dates_ids = array();
+
+        foreach ($node->field_show_dates['und'] as $date) {
+          $data = array(
+            'ticketing' => $ticketing,
+            'startDate' => $date['value'],
+          );
+          $request_result = domainedo_mapado_send_event_date_request_to_mapado($url, 'POST', $data);
+          if($is_watchdog_on) {
+            watchdog('domainedo_mapado', "Date creation request result (line " . __LINE__ . ") = = {$request_result}");
+          }
+          $result_data = get_object_vars(json_decode($request_result));
+          $mapado_dates_ids[$key]['value'] = $result_data['@id'];
+        }
+        // On n'utilise plus un champ texte unique dans lequel on sérialise le tableau des ids de date,
+        // parce qu'à partir de 8 dates, le nombre de caractères à stocker dépasse 256.
+        //$node->field_mapado_dates_ids['und'][0]['value'] = serialize($mapado_dates_ids);
+
+        // On utilise à la place un champ texte multiple, chaque item de champ ne stockant qu'un seul id.
+        $node->field_mapado_dates_ids['und'] = $mapado_dates_ids;
+
+        // On va sauvegarder le node une seconde fois donc ça va déclencher le hook domainedo_mapado_node_postupdate() ci-dessous.
+        // Pour éviter de déclencher une requête de mise à jour vers Mapado, on ajoute un flag au node.
+        $node->flag = false;
+        node_save($node);
       }
       // Cas 2 - Le spectacle existe déjà sur Mapado, il faut le mettre à jour.
       else {
-        if($is_watchdog_on) { watchdog('domainedo_mapado', "y a un slug");}
+        if($is_watchdog_on) {
+          watchdog('domainedo_mapado', "y a un slug");
+        }
 
-        // Envoir d'une requête PATCH de mise à jour à Mapado.
-        $url = 'https://api.mapado.net/v2/activities/'
-          . $node->field_mapado_apislug['und'][0]['value'] . '.json?fields=title,description,imageList,formattedSchedule,apiSlug,urlList';
-        $request_result = domainedo_mapado_send_request_to_media_api($url, 'PATCH', $node);
-        if($is_watchdog_on) {watchdog('domainedo_mapado', "mapado update response = {$request_result}");}
+        // 2.1 - Envoir d'une requête PUT de mise à jour de l'événement à Mapado.
+        $slug = $node->field_mapado_apislug['und'][0]['value'];
+        if (isset($node->field_mapado_ticketing['und'][0]['value'])) {
+          $ticketing = $node->field_mapado_ticketing['und'][0]['value'];
+        }
+        else {
+          $ticketing = '/v1/ticketings/' . substr($slug, 0, strpos($slug, '-'));
+        }
+        $url = 'https://ticketing.mapado.net' . $ticketing . '?fields=@id,title,imageList,slug';
+
+        $request_result = domainedo_mapado_send_request_to_ticketing_api($url, 'PUT', $node);
+        if($is_watchdog_on) {
+          watchdog('domainedo_mapado', "mapado update response = {$request_result}");
+        }
 
         if (!isset($node->field_boxoffice_url['und'][0]['url'])) {
-          $node_wrapper = entity_metadata_wrapper('node', $node);
+          //$node_wrapper = entity_metadata_wrapper('node', $node);
           $node->field_boxoffice_url['und'][0]['url'] = 'https://domainedo.mapado.com/event/';
-          $node->flag = TRUE;
-          $node_wrapper->save();
         }
+
+        // 2.2 - Il faut aussi mettre à jour les dates Mapado.
+        //$mapado_dates_ids = unserialize($node->field_mapado_dates_ids['und'][0]['value']);
+        $mapado_dates_ids = $node->field_mapado_dates_ids['und'];
+        $drupal_dates = $node->field_show_dates['und'];
+
+        // On passe en revue les dates du tableau $drupal_dates.
+        $new_mapado_dates_ids = array();
+        foreach ($drupal_dates as $k1=>$date) {
+          // Si l'id de date mapado d'index equivalent $k existe,
+          // on met à jour la date mapado avec la date drupal.
+          if (isset($mapado_dates_ids[$k1])) {
+            $url = 'https://ticketing.mapado.net' . $mapado_dates_ids[$k1]['value'] .'?fields=@id,createdAt,startDate,endDate';
+            $data = array(
+              'ticketing' => $ticketing,
+              'startDate' => $date['value'],
+            );
+            $request_result = domainedo_mapado_send_event_date_request_to_mapado($url, 'PUT', $data);
+            if($is_watchdog_on) {
+              watchdog('domainedo_mapado', "DATE UPDATE");
+              watchdog('domainedo_mapado', "Date update request result (line " . __LINE__ . ") = = {$request_result}");
+              watchdog('domainedo_mapado', "Date update index (line " . __LINE__ . ") = {$k1}");
+            }
+            $result_data = get_object_vars(json_decode($request_result));
+            $new_mapado_dates_ids[$k1]['value'] = $result_data['@id'];
+          }
+          // Sinon, on crée une nouvelle date mapado.
+          else {
+            $url = 'https://ticketing.mapado.net/v1/event_dates?fields=@id,createdAt,startDate,endDate';
+            $data = array(
+              'ticketing' => $ticketing,
+              'startDate' => $date['value'],
+            );
+            $request_result = domainedo_mapado_send_event_date_request_to_mapado($url, 'POST', $data);
+            if($is_watchdog_on) {
+              watchdog('domainedo_mapado', "DATE INSERT");
+              watchdog('domainedo_mapado', "Date insert request result (line " . __LINE__ . ") = = {$request_result}");
+              watchdog('domainedo_mapado', "Date insert index (line " . __LINE__ . ") = = {$k1}");
+            }
+            $result_data = get_object_vars(json_decode($request_result));
+            $new_mapado_dates_ids[] = array('value' => $result_data['@id']);
+          }
+        }
+        // On n'utilise plus un champ texte unique dans lequel on sérialise le tableau des ids de date,
+        // parce qu'à partir de 8 dates, le nombre de caractères à stocker dépasse 256.
+        //$node->field_mapado_dates_ids['und'][0]['value'] = serialize($mapado_dates_ids);
+
+        // On utilise à la place un champ texte multiple, chaque item de champ ne stockant qu'un seul id.
+        $node->field_mapado_dates_ids['und'] = $new_mapado_dates_ids;
+        if($is_watchdog_on) {
+              watchdog('domainedo_mapado', "New ids (line " . __LINE__ . ") = " .serialize($node->field_mapado_dates_ids['und']));
+        }
+
+
+        // Ensuite on passe en revue les dates du tableau $mapado_dates_ids
+        foreach ($mapado_dates_ids as $k2=>$date_id) {
+          // Si la date drupal d'index équivalent $k n'existe pas,
+          // on supprime la date mapado.
+          if (!isset($drupal_dates[$k2])) {
+            $url = 'https://ticketing.mapado.net' . $date_id['value'] . '?fields=@id';
+            $request_result = domainedo_mapado_send_event_date_request_to_mapado($url, 'DELETE', array());
+            if($is_watchdog_on) {
+              watchdog('domainedo_mapado', "DATE DELETE");
+              watchdog('domainedo_mapado', "Date deletion request result (line " . __LINE__ . ") = = {$request_result}");
+              watchdog('domainedo_mapado', "Date deletion index = {$k2}");
+            }
+          }
+        }
+
+        $node->flag = false;
+        node_save($node);
       }
     }
     // SITUATION 2 : $node a un flag
     // Le spectacle n'existait pas encore sur domainedo.
     // C'est un update provoqué juste après la création du node à la fin de la fonction domainedo_mapado_node_postinsert() ci-dessus.
-    // servant à stocker la valeur du champ apiSlug de Mapado dans le champ field_mapado_apiSlug de Drupal.
+    // servant à stocker la valeur des champ slug de l'événement Mapado dans le champ field_mapado_apiSlug de Drupal
+    // et les valeurs des identifiants de date Mapado dans le champ field_mapado_dates_ids de Drupal.
     // Il ne faut RIEN FAIRE sur Mapado.
     else {
-      if($is_watchdog_on) { watchdog('domainedo_mapado', "y a un flag : on ne fait rien");}
+      if($is_watchdog_on) {
+        watchdog('domainedo_mapado', "y a un flag : on ne fait rien");
+      }
     }
   }
 }
@@ -129,9 +293,15 @@ function domainedo_mapado_node_postdelete($node) {
     if($is_watchdog_on) {watchdog('domainedo_mapado', "The deleted node {$node->type} id is {$node->nid} from " . __FUNCTION__);}
 
     // Envoi d'une requête de suppression à Mapado.
-    $url = 'https://api.mapado.net/v2/activities/' . $node->field_mapado_apislug['und'][0]['value'] .'.json?fields=trashStatus';
-    $request_result = domainedo_mapado_send_request_to_media_api($url, 'DELETE', $node);
-    if($is_watchdog_on) {watchdog('domainedo_mapado', "mapado delete response = {$request_result}");}
+    //$url = 'https://api.mapado.net/v2/activities/' . $node->field_mapado_apislug['und'][0]['value'] .'.json?fields=trashStatus';
+    $slug = $node->field_mapado_apislug['und'][0]['value'];
+    $ticketingId = substr($slug, 0, strpos($slug, '-'));
+    $url = 'https://ticketing.mapado.net/v1/ticketings/'
+      . $ticketingId . '?fields=id,title';
+    $request_result = domainedo_mapado_send_request_to_ticketing_api($url, 'DELETE', $node);
+    if($is_watchdog_on) {
+      watchdog('domainedo_mapado', "mapado delete response = {$request_result}");
+    }
   }
 }
 
@@ -160,11 +330,7 @@ function domainedo_mapado_node_postdelete($node) {
  */
 function domainedo_mapado_get_data_for_mapado($node) {
   $show_data = array();
-  $is_watchdog_on = FALSE;
-
-  ////////////////////////////////////////////////////////
-  // RECUPERATION DES 4 CHAMPS OBLIGATOIRES CHEZ MAPADO //
-  ////////////////////////////////////////////////////////
+  $is_watchdog_on = false;
 
   // 1 - Nom de l'événement (title -> title)
   $title = $node->title;
@@ -175,31 +341,91 @@ function domainedo_mapado_get_data_for_mapado($node) {
 
   // 2 - Ou se déroule l'événément (field_lieu_generique -> place)
   // Toujours la même valeur : c'est l'apliSlug du lieu Domaine d'O sur Mapado
-  $place = '/v2/activities/montpellier--domaine-do';
-  $show_data['place'] = $place;
-  if($is_watchdog_on) {
-    watchdog('domainedo_mapado', "Place = {$place}");
+//  $place = '/v2/activities/montpellier--domaine-do';
+//  $show_data['place'] = $place;
+//  if($is_watchdog_on) {
+//    watchdog('domainedo_mapado', "Place = {$place}");
+//  }
+
+  // Version 2019 - Gestion avancée des lieux
+  // On suppose que seuls les spectacles ayant lieu au domaine d'O (intra-muros) peuvent avoir plusieurs lieux.
+  // Pour les autres, si une meme représentation a lieu à 2 endroits différents, alors ce sont des spectacles différents.
+  // La logique est la suivante :
+  //
+  // Si intra-muros alors
+  //     on récupère le ou les lieux et on récupère les données suivantes :
+  //     $place = Domaine d'O - Lieu 1, lieu 2...
+  //     $city = Montpellier
+  // Sinon
+  //     on récupère le lieu unique et on le découpe pour avoir :
+  //     $place = lieu dans la ville
+  //     $ville = ville indiquée
+  //
+  // A NOTER : Il est important de saisir les termes du vocabulaire 'Lieux de spectacle'
+  // dans le bon ordre : ville - lieu
+  // et non l'inverse.
+  //
+  // Coté Mapado, la logique est la suivante (on ne peut pas la modifier) :
+  //
+  // Si "place" ET "city" ne sont pas renseignés alors
+  //     Mapado affiche "Domaine d'O - Montpellier" (qui je suppose est la valeur affichée de "venue":"/v1/venues/391")
+  //     sur la liste des évenements, visible de l'admin mapado seulement
+  //     ainsi que sur la page d'achat de billets, visible des internautes.
+  // Sinon
+  //     Mapado affiche "place - ville" sur la liste des événements
+  //     Mais n'affiche que
+
+  $location_tid = $node->field_location['und'][0]['tid'];
+  $location = taxonomy_term_load($location_tid)->name;
+  $parents = taxonomy_get_parents($location_tid);
+  $parent = reset($parents)->name;
+
+  // Si c'est au domaine d'O
+  if (strtoupper($parent) == 'INTRAMUROS') {
+    $is_intramuros = true;
+    // S'il y a plus d'un lieu, on récupère aussi les autres noms de lieu
+    if (count($node->field_location['und']) > 1) {
+      $locations = array();
+      foreach ($node->field_location['und'] as $item) {
+        $term = taxonomy_term_load($item['tid']);
+        $locations[] = $term->name;
+      }
+      $location = implode(', ', $locations);
+    }
+    $show_data['place'] = 'Domaine d\'O - ' . $location;
+    $show_data['city'] = 'Montpellier';
+  }
+  // Sinon
+  elseif (strtoupper($parent) == 'EXTRAMUROS') {
+    $is_intramuros = false;
+    $show_address = explode(' - ', $location);
+    $city = $show_address[0];
+    $place = $show_address[1];
+    $show_data['place'] = $place;
+    $show_data['city'] = $city;
   }
 
-  // 3 - Description (body -> description)
-  $desc = $node->body['und'][0]['value'];
-  $show_data['description'] = strip_tags($desc);
-  if($is_watchdog_on) {
-    watchdog('domainedo_mapado', "Description = {$desc}");
-  }
+  //dpm($show_data['place'] . ' - ' . $show_data['city']);
+
+//  // 3 - Description (body -> description)
+//  $desc = $node->body['und'][0]['value'];
+//  $show_data['description'] = strip_tags($desc);
+//  if($is_watchdog_on) {
+//    watchdog('domainedo_mapado', "Description = {$desc}");
+//  }
 
   // 4- Dates et horaires (field_show_dates -> formattedSchedule)
-  $dates_string = '';
-  foreach ($node->field_show_dates['und'] as $date) {
-    $viewed_date = field_view_value('node', $node, 'field_show_dates', $date);
-    $cleaned_date = strip_tags(render($viewed_date));
-    $dates_string .= $cleaned_date . '. ';
-    //$dates_string .= str_replace('T', ' à ', $date['value']) . '. ';
-  }
-  $show_data['formattedSchedule'] = $dates_string;
-  if($is_watchdog_on) {
-    watchdog('domainedo_mapado', "Dates = {$dates_string}");
-  }
+//  $dates_string = '';
+//  foreach ($node->field_show_dates['und'] as $date) {
+//    $viewed_date = field_view_value('node', $node, 'field_show_dates', $date);
+//    $cleaned_date = strip_tags(render($viewed_date));
+//    $dates_string .= $cleaned_date . '. ';
+//    //$dates_string .= str_replace('T', ' à ', $date['value']) . '. ';
+//  }
+//  $show_data['formattedSchedule'] = $dates_string;
+//  if($is_watchdog_on) {
+//    watchdog('domainedo_mapado', "Dates = {$dates_string}");
+//  }
 
   /////////////////////////////////////////////////////////////////
   // RECUPERATION DES AUTRES CHAMPS QU'IL EST POSSIBLE D'ENVOYER //
@@ -215,17 +441,16 @@ function domainedo_mapado_get_data_for_mapado($node) {
 
   // A quel endroit dans le domaine d'O ?
   // Il faut le concaténer avec la description (field_location -> field_location + description).
-  $locations = array();
-  foreach ($node->field_location['und'] as $location) {
-    $term = taxonomy_term_load($location['tid']);
-    $locations[] = $term->name;
-  }
-  $locations_string = implode(', ', $locations);
-  $show_data['description'] =
-    'LIEU : ' . $locations_string . "." . "\n\n"
-    . $show_data['description'];
-  if($is_watchdog_on) {
-    watchdog('domainedo_mapado', "Locations = {$locations_string}");
+  //
+  // Version 2019
+  // Lorsque ce n'est pas un spectacle intra-muros,
+  // il faut préciser la ville et le lieu dans le texte de la description.
+  if (!$is_intramuros) {
+    $show_data['description'] = 'LIEU : ' . $city . " - " . $place ."." . "\n"
+      . $show_data['description'];
+    if ($is_watchdog_on) {
+      watchdog('domainedo_mapado', "LIEU = {$city} - {$place}.");
+    }
   }
 
   // Medias (field_scald_image -> imageList)
@@ -236,7 +461,7 @@ function domainedo_mapado_get_data_for_mapado($node) {
     // Donc je change pour l'url du serveur de recette qui, lui, sera accessible par Mapado.
     // Contrainte pour les tests en local : il faut utiliser une image déjà présente sur la recette.
     if ($_SERVER['HTTP_HOST'] == 'www.domainedo.localhost') {
-      $image_url = str_replace('www.domainedo.localhost', 'rece.domainedo.fr', $image_url);
+      $image_url = str_replace('www.domainedo.localhost', 'www.domainedo.fr', $image_url);
     }
     $show_data['imageUrl'] = $image_url;
     if ($is_watchdog_on) {
@@ -267,150 +492,185 @@ function domainedo_mapado_get_data_for_mapado($node) {
   }
 
   // Url de la fiche spectacle sur domaine d'O.
-  $official_url = $GLOBALS['base_url'] . '/' . drupal_get_path_alias("node/{$node->nid}");
-  if ($_SERVER['HTTP_HOST'] == 'www.domainedo.localhost') {
-    $official_url = str_replace('www.domainedo.localhost', 'rece.domainedo.fr', $official_url);
-  }
-  $show_data['urlList'] = array(
-    "official" => $official_url
-  );
+//  $official_url = $GLOBALS['base_url'] . '/' . drupal_get_path_alias("node/{$node->nid}");
+//  if ($_SERVER['HTTP_HOST'] == 'www.domainedo.localhost') {
+//    $official_url = str_replace('www.domainedo.localhost', 'rece.domainedo.fr', $official_url);
+//  }
+//  $show_data['urlList'] = array(
+//    "official" => $official_url
+//  );
 
   return $show_data;
 }
 
-/**
- * Envoie d'une requête à l'API media de Mapado.
- *
- * @param $url Url cible de la requête.
- * @param string $method methode utilisée :
- * Valeur du paramètre      Méthode HTTP
- * - GET                    -GET
- * - POST                   - POST
- * - PATCH                  - PATCH
- * - DELETE                 - PATCH
- * @param $node Le node spectacle en cours de traitement (création, mise à jour ou suppressions).
- * @return mixed Object JSON.
- * En cas de succès, les valeurs des champs demandés dans l'url.
- * En cas d'échec, l'erreur détaillée.
- */
-function domainedo_mapado_send_request_to_media_api($url, $method='POST', $node) {
-  $is_watchdog_on = FALSE;
+function domainedo_mapado_send_request_to_ticketing_api($url, $method='GET', $node=null) {
+  $is_watchdog_on = false;
 
-  // 1 - ACTION EN LECTURE SEULE
+  // On commence à préparer la requete avec la librairie cURL de PHP.
+  $ch = curl_init($url);
+  $headers = array();
+  $headers[] = "Authorization: Bearer ZWZkYTFmZWJmNTJhNDM4Y2Y2MTc1ZGMzZDQ1MTg0Nzk1ZjNiYTk2ZDFhZTc5YzIxODZiMjQwNDg1YTM0ODgzYg";
+
+  // 1 - LECTURE SEULE
   if ($method == 'GET') {
-    $ch = curl_init($url);
-    $headers = array();
-    $headers[] = "Authorization: Bearer ZWZkYTFmZWJmNTJhNDM4Y2Y2MTc1ZGMzZDQ1MTg0Nzk1ZjNiYTk2ZDFhZTc5YzIxODZiMjQwNDg1YTM0ODgzYg";
-    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-    curl_setopt($ch,CURLOPT_RETURNTRANSFER, 1);
-    $result = curl_exec($ch);
-
-    if (curl_errno($ch)) {
-      if ($is_watchdog_on) {watchdog('domainedo_mapado', "Curl error: " . curl_error($ch));}
-    }
-    else {
-      $result_string = serialize($result);
-      if ($is_watchdog_on) {watchdog('domainedo_mapado', "Request result: {$result_string}");}
-      if ($is_watchdog_on) {watchdog('domainedo_mapado', "The node '{$node->title}' has been {$method}ED on Mapado.");}
-    }
-    curl_close ($ch);
-    return $result;
+    // Rien à faire de particulier, c'est la méthode par défaut de la librairie PHP cURL.
+    // L'url doit contenir l'identifiant Mapado de la ressource ticketing à lire.
   }
-
-  // 2 - ACTIONS D'ÉCRITURE
-  // 2.1 - Cas le plus simple : requête de suppression
-  if ($method == 'DELETE') {
-    $data = array('trashStatus' => 'trashed');
-  }
-  // 2.2 - Les 2 autres cas : création ou modification sur Mapado.
-  else {
+  // 2 - CREATION, MODIFICATION
+  elseif ($method == 'POST' || $method == 'PUT') {
+    // 2.0 - On récupère d'abord les données Drupal
+    if ($is_watchdog_on && !$node) {
+      watchdog('domainedo_mapado', "Attention ! Aucun node passé en paramètre, impossible de charger des données.");
+    }
     $data = domainedo_mapado_get_data_for_mapado($node);
-    //watchdog('domainedo_mapado', "Description: {$data['description']}");
 
-    // 1 - Il faut d'abord poster l'image du spectacle (s'il y en a une) sur img.mapado.net et récupérer son imagePath.
+    if ($is_watchdog_on) {
+      watchdog('domainedo_mapado', "Titre du node dont on a récupéré les données : {$data['title']}");
+    }
+
+    // 2.1 - Envoi préalable de l'image, s'il y en a une, sur img.mapado.net et récupération de son imagePath
     if (isset($data['imageUrl'])) {
-      $ch = curl_init();
-      curl_setopt($ch, CURLOPT_URL, "https://www.mapado.com/image/upload/?width=160&height=100");
-      curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-      curl_setopt($ch, CURLOPT_POSTFIELDS, "url=" . $data['imageUrl']);
-      curl_setopt($ch, CURLOPT_POST, 1);
-      curl_setopt($ch, CURLOPT_ENCODING, 'gzip, deflate');
+      $ch2 = curl_init();
+      curl_setopt($ch2, CURLOPT_URL, "https://www.mapado.com/image/upload/?width=160&height=100");
+      curl_setopt($ch2, CURLOPT_RETURNTRANSFER, 1);
+      curl_setopt($ch2, CURLOPT_POSTFIELDS, "url=" . $data['imageUrl']);
+      curl_setopt($ch2, CURLOPT_POST, 1);
+      curl_setopt($ch2, CURLOPT_ENCODING, 'gzip, deflate');
 
-      $headers = array();
-      $headers[] = "Origin: https://www.mapado.com";
-      $headers[] = "Content-Type: application/x-www-form-urlencoded";
-      $headers[] = "Accept: */*";
-      $headers[] = "Referer: https://www.mapado.com/create-activity";
-      $headers[] = "X-Requested-With: XMLHttpRequest";
-      $headers[] = "Connection: keep-alive";
-      curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+      $headers2 = array();
+      $headers2[] = "Origin: https://www.mapado.com";
+      $headers2[] = "Content-Type: application/x-www-form-urlencoded";
+      $headers2[] = "Accept: */*";
+      $headers2[] = "Referer: https://www.mapado.com/create-activity";
+      $headers2[] = "X-Requested-With: XMLHttpRequest";
+      $headers2[] = "Connection: keep-alive";
+      curl_setopt($ch2, CURLOPT_HTTPHEADER, $headers2);
+      $result = curl_exec($ch2);
 
-      $result = curl_exec($ch);
       $imagePath = '';
-      if (curl_errno($ch)) {
-        //watchdog('domainedo_mapado', "Curl error: " . curl_error($ch));
+      if (curl_errno($ch2)) {
+        if ($is_watchdog_on) {
+          watchdog('domainedo_mapado', "Curl error: (line " . __LINE__ . ")" . curl_error($ch2));
+        }
       }
       else {
         $decoded_result = json_decode($result);
         $imagePath = $decoded_result->imagePath;
       }
-      curl_close($ch);
+      curl_close($ch2);
 
       // On ajoute imagePath aux données.
       $data['imageList'] = array($imagePath);
-      //watchdog('domainedo_mapado', "imagePath: {$imagePath}");
+      if ($is_watchdog_on) {
+        watchdog('domainedo_mapado', "imagePath: {$imagePath}");
+      }
+
       // Puis on supprime "imageUrl" des données (ce champ est inconnu de l'API).
       unset($data['imageUrl']);
     }
+
+    // 2.2 - Si création, il faut ajouter les données Mapado utiles.
+    if ($method == 'POST') {
+      curl_setopt($ch, CURLOPT_POST, 1);
+      // Rattachement au portefeuille domaine d'O. D'après la doc de l'API, c'est le seul champ obligatoire.
+      $data['wallet'] = '/v1/wallets/858';
+      // Si on laisse 'permanent' à true (valeur defaut), on ne pourra pas y rattacher de dates.
+      // Explication fournie par Julien Deniau (rien dans la doc de l'API).
+      $data['permanent'] = false;
+      // Bien que non indiqué dans la doc, timezone est obligatoire, sinon "Internal Server Error".
+      $data['timezone'] = 'Europe/Paris';
+      // Lieu (Domaine d'O)
+      $data['venue'] = '/v1/venues/391';
+      // Ville
+      $data['city'] = 'Montpellier';
+    }
+    // Sinon
+    elseif ($method == 'PUT') {
+      curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
+    }
+    // 2.3 - On finit de préparer la requete en écriture.
+    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+    $headers[] = "Content-Type: application/json";
+  }
+  // 3 - SUPPRESSION
+  elseif ($method == 'DELETE') {
+    // Pas grand chose à faire là non plus, à part dire qu'on lance une requete de suppression.
+    // L'url doit contenir l'identifiant Mapado de la ressource ticketing à supprimer.
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
   }
 
-  // 2 - On peut maintenant envoyer la requête à Mapado.
-  $ch = curl_init($url);
-  curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
-  $headers = array();
-  $headers[] = "Authorization: Bearer ZWZkYTFmZWJmNTJhNDM4Y2Y2MTc1ZGMzZDQ1MTg0Nzk1ZjNiYTk2ZDFhZTc5YzIxODZiMjQwNDg1YTM0ODgzYg";
-  $headers[] = "Content-Type: application/json";
+  // On finit de préparer la requete.
   curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+  curl_setopt($ch,CURLOPT_RETURNTRANSFER, 1);
 
-  if ($method == 'POST') {
-    curl_setopt($ch, CURLOPT_POST, 1);
-  }
-  elseif($method == 'PATCH' || $method == 'DELETE') {
-    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PATCH");
-  }
-
+  // Puis on l'exécute.
   $result = curl_exec($ch);
-  if (curl_errno($ch)) {
-    //watchdog('domainedo_mapado', "Curl error: " . curl_error($ch));
-  }
-  else {
-    $result_string = serialize($result);
-    //watchdog('domainedo_mapado', "Request result: {$result_string}");
-    //watchdog('domainedo_mapado', "The node '{$node->title}' has been {$method}ED on Mapado.");
+
+  if ($is_watchdog_on) {
+    if (curl_errno($ch)) {
+      watchdog('domainedo_mapado', "Curl error (line " . __LINE__ . ") : " . curl_error($ch));
+    }
+    else {
+      $result_string = serialize($result);
+      watchdog('domainedo_mapado', "Request result (line " . __LINE__ . ") : {$result_string}");
+      if ($node) {
+        watchdog('domainedo_mapado', "{$method} on Mapado Ticketing for node '{$node->title}'.");
+      }
+    }
   }
   curl_close ($ch);
+
   return $result;
 }
 
-function domainedo_mapado_send_request_to_ticketing_api($url) {
-  $is_watchdog_on = FALSE;
+function domainedo_mapado_send_event_date_request_to_mapado($url, $method='POST', $data) {
+  $is_watchdog_on = false;
 
+  // On commence à préparer la requete.
   $ch = curl_init($url);
   $headers = array();
   $headers[] = "Authorization: Bearer ZWZkYTFmZWJmNTJhNDM4Y2Y2MTc1ZGMzZDQ1MTg0Nzk1ZjNiYTk2ZDFhZTc5YzIxODZiMjQwNDg1YTM0ODgzYg";
+
+  if ($is_watchdog_on) {
+    watchdog('domainedo_mapado', "Data sent (line" . __LINE__ . ") : " . serialize($data));
+  }
+
+  if ($method == 'GET') {
+    // On peut en avoir besoin un jour.
+  }
+  elseif ($method == 'POST') {
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+    $headers[] = "Content-Type: application/json";
+  }
+  elseif ($method == 'PUT') {
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
+    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+    $headers[] = "Content-Type: application/json";
+  }
+  elseif ($method == 'DELETE') {
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
+  }
+
+  // On finit de préparer la requete.
   curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
   curl_setopt($ch,CURLOPT_RETURNTRANSFER, 1);
+
+  // Puis on l'exécute.
   $result = curl_exec($ch);
 
-  if (curl_errno($ch)) {
-    if ($is_watchdog_on) {watchdog('domainedo_mapado', "Curl error: " . curl_error($ch));}
-  }
-  else {
-    $result_string = serialize($result);
-    if ($is_watchdog_on) {watchdog('domainedo_mapado', "Request result: {$result_string}");}
+  if ($is_watchdog_on) {
+    if (curl_errno($ch)) {
+      watchdog('domainedo_mapado', "Curl error (line " . __LINE__ . ") : " . curl_error($ch));
+    }
+    else {
+      $result_string = serialize($result);
+      watchdog('domainedo_mapado', "Date {$method} url (line " . __LINE__ . ") : {$url}");
+      watchdog('domainedo_mapado', "Date {$method} request result (line " . __LINE__ . ") : {$result_string}");
+    }
   }
   curl_close ($ch);
+
   return $result;
 }
 
@@ -453,72 +713,49 @@ function domainedo_mapado_node_view($node, $view_mode, $langcode) {
       changeReservationButtonToShowView($node);
     }
     // fin ajout Yvan
-    // Si le spectacle est connu sur mapado, on teste s'il a un ticketingId.
-    else if (isset($node->field_mapado_apislug['und'][0]['value'])) {
-      $apiSlug = $node->field_mapado_apislug['und'][0]['value'];
-      $url = "https://api.mapado.net/v2/activities/". $apiSlug . ".json?fields=title,ticketingId";
-      $media_api_result = json_decode(domainedo_mapado_send_request_to_media_api($url, "GET", $node));
 
-      // S'il n'a pas de ticketingId, on cache le bouton RESERVER.
-      if (!$media_api_result->ticketingId) {
+    // Si le spectacle est connu sur mapado, on vérifie s'il est en vente.
+    // Pour vérifier ça, dans la version 2019, on accède directement et uniquement aux infos via l'API Ticketing.
+    // Plus besoin, comme en 2018, de faire d'abord une requete sur l'API Media, puis si isOnSale == True, faire une seconde requete sur l'API Ticketing.
+    else if (isset($node->field_mapado_apislug['und'][0]['value'])) {
+      $slug = $node->field_mapado_apislug['und'][0]['value'];
+      if (isset($node->field_mapado_ticketing['und'][0]['value'])) {
+        $ticketing = $node->field_mapado_ticketing['und'][0]['value'];
+      }
+      else {
+        $ticketing = '/v1/ticketings/' . substr($slug, 0, strpos($slug, '-'));
+      }
+      $url = 'https://ticketing.mapado.net' . $ticketing . '?fields=@id,title,slug,isOnSale,availabilityStatus,sellingDeviceData{hasTicketPriceOnSale,sellingDevice{name}}';
+
+      $request_result = domainedo_mapado_send_request_to_ticketing_api($url);
+      $result_data = json_decode($request_result);
+
+      // isOnSale passe à TRUE dès qu'on met une séance en vente, meme si celle-ci n'a pas encore de tarifs associés.
+      // Donc il est insuffisant et inutile de tester isOnSale.
+      // Il faut tester directement la valeur de availabilityStatus :
+      // - si aucune séance en vente ->  pastOrClosed
+      // - si séance en vente, mais pas encore de tarif -> noTicketPrice
+      // - si séance en vente avec tarif -> onSale
+      // -si tout vendu -> soldOut (cas à vérifier auprès de Mapado).
+      // et vérifier que sa valeur soit "onSale".
+
+      // S'il n'est pas en vente, on cache le bouton RESERVER.
+      if ($result_data->availabilityStatus != 'onSale') {
         $is_on_sale = FALSE;
       }
-
-      // S'il en a un, ça veut dire que la billetterie a été activée.
-      // Mais ça ne veut pas dire que le spectacle est en vente.
-      // On cherche plus avant.
+      // Sinon il faut vérifier qu'il y a vente sur le canal domainedo (= site web)
       else {
-        // INTERROGATION DE L'API BILLETTERIE
-        $ticketingId = substr(strrchr($media_api_result->ticketingId, '/'), 1);
-        $url = 'https://ticketing.mapado.net/v1/ticketings?@id=' . $ticketingId . '&isOnSale=1&fields=@id,slug,isOnSale,availableStatus,sellingDeviceData{hasTicketPriceOnSale,sellingDevice{name}}';
-        $result = domainedo_mapado_send_request_to_ticketing_api($url);
-
-        if ($ticketing_api_result = get_object_vars(json_decode($result))) {
-          // Si l'API billetterie retourne un résultat, il faut vérifier plus en détail encore
-          // NOTE : On est obligé de convertir l'object stdClass retourné par json_decode() en tableau PHP grâce à get_object_vars()
-          // parce qu'il n'est pas possible d'accéder à Object->hydra:member, le caractère ":" provoquant une faute de syntaxe.
-          if (isset ($ticketing_api_result['hydra:member'][0]->slug)) {
-
-            // Il faut vérifier s'il y a au moins une séance avec tarif en vente sur le canal site web du domainedo.
-            foreach ($ticketing_api_result['hydra:member'][0]->sellingDeviceData as $item) {
-              if ($item->sellingDevice->name == 'domainedo') {
-                $has_price = $item->hasTicketPriceOnSale;
-              }
-            }
-
-            // S'il y a un tarif, alors c'est bon, on peut laisser l'affichage du bouton RESERVER
-            if($has_price) {
-              $ticketing_slug = $ticketing_api_result['hydra:member'][0]->slug;
-              $mapado_ticketing_url = "https://domainedo.mapado.com/event/$ticketing_slug";
-              $node->content['field_boxoffice_url'][0]['#element']['url'] = $mapado_ticketing_url;
-              $node->content['field_boxoffice_url'][0]['#element']['attributes']['class'] = '';
-            }
-            // S'il n'a pas de tarif en vente, on cache le bouton RESERVER.
-            else {
-              $is_on_sale = FALSE;
-            }
-          }
-          // Si l'API billetterie retourne un résultat, mais qu'il n'y a même pas de slug, on cache le bouton RESERVER.
-          else {
-            // on cache le bouton uniquement en view mode "full"
-           if($view_mode == "full") {
-             $is_on_sale = FALSE;
-             // on doit également afficher le champ field_full, et pour cela il suffit de changer
-             // la valeur du champ field_reservation qui sera ensuite utilisé dans domainedo_shows.module
-             $node->content['field_reservation']['#items'][0]['value'] = 3;
-            }
-            /**
-             * Ajouté par yvan : dans le cas où c'est un diplay view teaser
-             * et qu'il n'y a pas de billetterie en ligne, le bouton réserver renvoie
-             * vers le spectacle en question sans colorbox
-             */
-            if($view_mode == "teaser") {
-              changeReservationButtonToShowView($node);
-            }
-            // fin ajout Yvan
+        $has_price = false;
+        foreach ($result_data->sellingDeviceData as $item) {
+          if ($item->sellingDevice->name == 'domainedo' && $item->hasTicketPriceOnSale) {
+            $has_price = true;
           }
         }
-        // Si l'API billetterie ne retourne pas de résultat, on cache le bouton RESERVER.
+
+        if ($has_price) {
+          $node->content['field_boxoffice_url'][0]['#element']['url'] = "https://domainedo.mapado.com/event/$result_data->slug";
+          $node->content['field_boxoffice_url'][0]['#element']['attributes']['class'] = '';
+        }
         else {
           $is_on_sale = FALSE;
         }
@@ -528,6 +765,7 @@ function domainedo_mapado_node_view($node, $view_mode, $langcode) {
     else {
       $is_on_sale = FALSE;
     }
+
     if (!$is_on_sale) {
       if($view_mode == "teaser") {
         // on renvoie vers le spectacle car le spectacle n'est pas à vendre et on est dans le teaser
