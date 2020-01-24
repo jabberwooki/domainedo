@@ -1,3 +1,6 @@
+Domaine d'O 1.3.1 - 2020-01-24
+Module globalredirect and patch to module scald soundCloud added.
+
 Domaine d'O v1.3.0 - 2020-01-22
   * domainedo_mapado up: Advanced location handling based on intramuros (yes/nos) state of a show.
   * domainedo_mapado up: Major rewriting of REST requests to Mapado APIs: This 2019 version uses the Mapado Ticketing API. The Media API is abandoned.
