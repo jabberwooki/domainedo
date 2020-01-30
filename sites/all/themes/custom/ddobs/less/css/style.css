@@ -11651,6 +11651,9 @@ strong {
   /* Carrousel ********************************************************************************************************/
 }
 @media (max-width: 768px) {
+  .front .region-content .carousel .carousel-indicators {
+    display: none;
+  }
   .front .region-content .carousel .carousel-inner {
     overflow: visible;
     margin-bottom: 120px;
@@ -11659,6 +11662,7 @@ strong {
     display: none;
   }
   .front .region-content .carousel .carousel-inner .zoom-title-label {
+    font-family: "Gotham A", "Gotham B";
     position: absolute;
     top: 85%;
     left: -20px;

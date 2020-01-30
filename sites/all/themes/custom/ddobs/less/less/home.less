@@ -259,6 +259,9 @@
     /* Carrousel ********************************************************************************************************/
     .carousel {
       @media (max-width: @screen-sm) {
+        .carousel-indicators {
+          display: none;
+        }
         .carousel-inner {
           overflow: visible;
           margin-bottom: 120px;
@@ -266,6 +269,7 @@
             display: none;
           }
           .zoom-title-label {
+            font-family: "Gotham A", "Gotham B";
             position: absolute;
             top: 85%;
             left: -20px;
