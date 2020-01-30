@@ -252,7 +252,76 @@
     }
     /* Fin carrousel **************************************************************************************************/
   }
+  /* pour les smartphones, le carousel des zooms est dans la
+  région du contenu principal ".region-content" */
 
+  .region-content {
+    /* Carrousel ********************************************************************************************************/
+    .carousel {
+      @media (max-width: @screen-sm) {
+        .carousel-inner {
+          overflow: visible;
+          margin-bottom: 120px;
+          .field-name-scald-authors {
+            display: none;
+          }
+          .zoom-title-label {
+            position: absolute;
+            top: 85%;
+            left: -20px;
+            text-transform: uppercase;
+            color: white;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 2.375em;
+            padding-left: 20px;
+          }
+          .views-field-body {
+            position: absolute;
+            top: 101%;
+            width: 100%;
+            .views-field-field-link-more-infos {
+              display: none;
+            }
+            h3.title-event-list a {
+              color: #f74e2d;
+              text-transform: uppercase;
+              font-size: 1.5em;
+              font-style: normal;
+              font-weight: 700;
+            }
+          }
+        }
+        .icon-next,
+        .icon-prev {
+          background-image: none !important;
+          filter: none !important;
+          opacity: 1 !important;
+          background-color: #000;
+          padding: 0 !important;
+          margin-top: 0px;
+          width: auto;
+          height: auto;
+          top: 40%;
+          &:before {
+            left: 6px;
+            font-size: 2em;
+            color: white;
+          }
+        }
+        .icon-next {
+          &:before {
+            content: "\e834";
+          }
+        }
+        .icon-prev {
+          &:before {
+            content: "\e833";
+          }
+        }
+      }
+    }
+  }
   #quick-acces {
     background-color: @gris-clair-ddo;
     margin: 20px 0;
