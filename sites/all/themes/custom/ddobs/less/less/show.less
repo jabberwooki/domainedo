@@ -180,30 +180,39 @@
   }
   #imgfullshow {
     .field-name-scald-authors {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 30px;
+      color: #eeeeee;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 5px;
       /* display: none; */
     }
     #block-ds-extras-image-full-show {
       position: relative;
       .field-name-field-scald-image {
-        .field-item {
-          display: table;
-          border-bottom: 66px solid @gris-clair-ddo;
-          @media (max-width: @screen-sm) {
-            border-bottom: 3px solid @gris-clair-ddo;
-          }
-          &:after {
-            content: "";
-            display: block;
-            height: 50%;
-            z-index: 1;
-            position: absolute;
-            bottom: 60px;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000);
-            visibility: visible;
-            width: 100%;
+        > .field-items {
+          > .field-item {
+            display: table;
+            border-bottom: 66px solid @gris-clair-ddo;
             @media (max-width: @screen-sm) {
-              bottom: 0;
-              height: 300px;
+              border-bottom: 3px solid @gris-clair-ddo;
+            }
+            &:after {
+              content: "";
+              display: block;
+              height: 50%;
+              z-index: 1;
+              position: absolute;
+              bottom: 60px;
+              background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000);
+              visibility: visible;
+              width: 100%;
+              @media (max-width: @screen-sm) {
+                bottom: 0;
+                height: 300px;
+              }
             }
           }
         }
