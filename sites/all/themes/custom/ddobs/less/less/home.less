@@ -1,4 +1,5 @@
 .front {
+  /* Infos flash */
   #block-views-evenements-block-info-flash {
     a {
       display: block;
@@ -40,6 +41,7 @@
         margin-bottom: 0;
       }
     }
+    /* En ce moment */
     .region-homenow {
       .field-name-field-news-url-target {
         display: none;
@@ -50,6 +52,12 @@
         img {
           max-width: none;
           width: 100%;
+        }
+      }
+      @media (min-width: 1900px) {
+        .view-mode-right_now {
+          display: table;
+          float: right;
         }
       }
       #now-tranparent-gradient {
@@ -112,6 +120,9 @@
     .carousel {
       @media (max-width: @screen-sm) {
         display: none;
+      }
+      @media (min-width: 2000px) {
+        display: table;
       }
       .carousel-inner {
         @media (max-width: @screen-md) {
@@ -252,7 +263,80 @@
     }
     /* Fin carrousel **************************************************************************************************/
   }
+  /* pour les smartphones, le carousel des zooms est dans la
+  région du contenu principal ".region-content" */
 
+  .region-content {
+    /* Carrousel ********************************************************************************************************/
+    .carousel {
+      @media (max-width: @screen-sm) {
+        .carousel-indicators {
+          display: none;
+        }
+        .carousel-inner {
+          overflow: visible;
+          margin-bottom: 120px;
+          .field-name-scald-authors {
+            display: none;
+          }
+          .zoom-title-label {
+            font-family: "Gotham A", "Gotham B";
+            position: absolute;
+            top: 85%;
+            left: -20px;
+            text-transform: uppercase;
+            color: white;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 2.375em;
+            padding-left: 20px;
+          }
+          .views-field-body {
+            position: absolute;
+            top: 101%;
+            width: 100%;
+            .views-field-field-link-more-infos {
+              display: none;
+            }
+            h3.title-event-list a {
+              color: #f74e2d;
+              text-transform: uppercase;
+              font-size: 1.5em;
+              font-style: normal;
+              font-weight: 700;
+            }
+          }
+        }
+        .icon-next,
+        .icon-prev {
+          background-image: none !important;
+          filter: none !important;
+          opacity: 1 !important;
+          background-color: #000;
+          padding: 0 !important;
+          margin-top: 0px;
+          width: auto;
+          height: auto;
+          top: 40%;
+          &:before {
+            left: 6px;
+            font-size: 2em;
+            color: white;
+          }
+        }
+        .icon-next {
+          &:before {
+            content: "\e834";
+          }
+        }
+        .icon-prev {
+          &:before {
+            content: "\e833";
+          }
+        }
+      }
+    }
+  }
   #quick-acces {
     background-color: @gris-clair-ddo;
     margin: 20px 0;

@@ -288,11 +288,17 @@ function domainedo_contexts_context_default_contexts() {
           'region' => 'infoflash',
           'weight' => '-10',
         ),
+        'views-evenements-block_2' => array(
+          'module' => 'views',
+          'delta' => 'evenements-block_2',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
         'views-shows-block_1' => array(
           'module' => 'views',
           'delta' => 'shows-block_1',
           'region' => 'content',
-          'weight' => '-10',
+          'weight' => '-9',
         ),
       ),
     ),

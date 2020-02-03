@@ -5,3 +5,16 @@
  */
 
 include_once 'domainedo_seo.features.inc';
+
+function domainedo_seo_form_alter(&$form, $form_state, $form_id) {
+  // If we dont have permission to set the title then we need to abort this alter now!
+  if (!user_access('set page title')) return;
+
+  // If we're editing a node...
+  if (!empty($form['#node_edit_form'])) {
+    // ... and the show field is enabled for this node type
+    if (variable_get('page_title_type_' . $form['type']['#value'] . '_showfield', 0)) {
+      drupal_add_js(drupal_get_path('module', 'domainedo_seo') .'/js/domainedo_seo_title.js');
+    }
+  }
+}

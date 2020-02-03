@@ -101,11 +101,6 @@
                        onclick="_gaq.push(['_trackEvent', 'socialmedia', 'click', 'tripadvisor',1,true]);"
                        target="_blank"><span class="sr-only">tripadvisor</span></a>
                 </li>
-                <li><a class="icon-gplus"
-                       href="https://plus.google.com/100786072395186657061/about"
-                       onclick="_gaq.push(['_trackEvent', 'socialmedia', 'click', 'gplus',1,true]);"
-                       target="_blank"><span class="sr-only">google +</span></a>
-                </li>
             </ul>
         </div>
         <div class="col-md-5" id="col-logo">
