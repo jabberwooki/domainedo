@@ -31,6 +31,8 @@ function domainedo_shows_form_show_node_form_alter(&$form, &$form_state, $form_i
  * Implements hook_node_view_alter().
  */
 function domainedo_shows_node_view_alter(&$build) {
+  //dpm($build);
+
   // If show node
   // on recule la date de 4 h pour permettre aux internautes d'acheter alors que le
   // spectacle est en cours
@@ -41,6 +43,7 @@ function domainedo_shows_node_view_alter(&$build) {
   $show_is_past = false;
   if ($build['#bundle'] == 'festival') {
     drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_shows_manageTwoColsFestival.js');
+    drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_shows_empty_fields.js');
   }
 	if ($build['#bundle'] == 'show') {
     if ($build['#view_mode'] == 'teaser') {
@@ -92,6 +95,25 @@ function domainedo_shows_node_view_alter(&$build) {
 
     }
 		if ($build['#view_mode'] == 'full') {
+      // Structured datas
+      /* $structured_data = array(
+        '@context' => 'http://schema.org',
+        '@type' => 'Event',
+      );
+      // Add show name (title)
+      $structured_data['name'] = $build['body']['#object']->title;
+
+      // Encodage json
+      $json_ld_script = array(
+          '#tag' => 'script',
+          '#attributes' => array('type' => 'application/ld+json'),
+          '#value' => defined('JSON_UNESCAPED_SLASHES') ? json_encode($structured_data, JSON_UNESCAPED_SLASHES) : json_encode($structured_data),
+          //'#value' => 'console.log("Hello structured data");',
+      );
+
+        drupal_add_html_head($json_ld_script, 'structured_data_json_ld'); */
+      /* End of structured data */
+
       drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_shows.js');
       drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_date_show.js');
 
