@@ -1,4 +1,5 @@
 .front {
+  /* Infos flash */
   #block-views-evenements-block-info-flash {
     a {
       display: block;
@@ -40,6 +41,7 @@
         margin-bottom: 0;
       }
     }
+    /* En ce moment */
     .region-homenow {
       .field-name-field-news-url-target {
         display: none;
@@ -50,6 +52,12 @@
         img {
           max-width: none;
           width: 100%;
+        }
+      }
+      @media (min-width: 1900px) {
+        .view-mode-right_now {
+          display: table;
+          float: right;
         }
       }
       #now-tranparent-gradient {
@@ -112,6 +120,9 @@
     .carousel {
       @media (max-width: @screen-sm) {
         display: none;
+      }
+      @media (min-width: 2000px) {
+        display: table;
       }
       .carousel-inner {
         @media (max-width: @screen-md) {

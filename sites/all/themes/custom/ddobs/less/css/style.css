@@ -11289,6 +11289,7 @@ strong {
   display: none;
 }
 .front {
+  /* Infos flash */
   /* pour les smartphones, le carousel des zooms est dans la
   région du contenu principal ".region-content" */
 }
@@ -11305,6 +11306,7 @@ strong {
   font-size: 1.125em;
 }
 .front #homeheadband {
+  /* En ce moment */
   /* Carrousel ********************************************************************************************************/
   /* Fin carrousel **************************************************************************************************/
 }
@@ -11368,6 +11370,12 @@ strong {
   .front #homeheadband .region-homenow img {
     max-width: none;
     width: 100%;
+  }
+}
+@media (min-width: 1900px) {
+  .front #homeheadband .region-homenow .view-mode-right_now {
+    display: table;
+    float: right;
   }
 }
 .front #homeheadband .region-homenow #now-tranparent-gradient {
@@ -11461,6 +11469,11 @@ strong {
 @media (max-width: 768px) {
   .front #homeheadband .carousel {
     display: none;
+  }
+}
+@media (min-width: 2000px) {
+  .front #homeheadband .carousel {
+    display: table;
   }
 }
 .front #homeheadband .carousel .carousel-inner {
