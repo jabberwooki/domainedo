@@ -736,7 +736,7 @@ function domainedo_shows_node_postsave($node, $op) {
     // Cas où le festival a des spectacles
     if($nb) {
       $no_result_msg =
-      '<p class="field-no-result">' .
+      '<p class="field-no-result" data="with-show">' .
       '<a class="more-info-festival" href="/spectacles/' . $festival_name .
       '"><strong>L\'éditon ' . $festival_season . textFestival($festival_name, $festival_season) . '</a>' .
       ' est passée</strong>, rendez-vous prochainement pour l\'édition ' . $next_season .'.<br>
@@ -765,10 +765,19 @@ function domainedo_shows_node_postsave($node, $op) {
       '</div>'."\n" .
       '</div>'."\n";
 
+
+      // si on change de type de message dans le champ field_no_result
+      // on sauvegarde
+      if (!strpos($wrapper->field_no_result->value->raw() ,'with-show')) {
+        $wrapper->field_no_result->value = $no_result_msg;
+        watchdog('domainedo_shows', 'Node show avec spectacle ' . $node->nid . ' updated');
+        $wrapper->save();
+      } else watchdog('domainedo_shows', 'Node show avec spectacle' . $node->nid . 'not updated');
+
     }
     else { // cas où le festival n'a pas de spectacles
       $no_result_msg =
-      '<p class="field-no-result">' .
+      '<p class="field-no-result" data="no-show">' .
       '<a class="more-info-festival" href="/spectacles/' . $festival_name .
       '"><strong>L\'éditon ' . $festival_season . textFestival($festival_name, $festival_season) . '</a>' .
       ' n\'est pas encore programmée</strong>.<br>
@@ -796,13 +805,15 @@ function domainedo_shows_node_postsave($node, $op) {
       '</div>'."\n" .
       '</div>'."\n" .
       '</div>'."\n";
-    }
-    $wrapper->field_no_result->value = $no_result_msg;
-    $wrapper->save();
-    watchdog('domainedo_shows', 'Node ' . $node->nid . ' field field_no_result updated for festival ' .$festival_name);
-    /* if (!strpos($wrapper->field_no_result->value->raw() ,'myModal')) {
 
+      // si on change de type de message dans le champ field_no_result
+      // on sauvegarde
+      if (!strpos($wrapper->field_no_result->value->raw() ,'no-show')) {
+        $wrapper->field_no_result->value = $no_result_msg;
+        watchdog('domainedo_shows', 'Node show sans spectacle ' . $node->nid . ' updated');
+        $wrapper->save();
+      } else watchdog('domainedo_shows', 'Node show sans spectacle ' . $node->nid . ' not updated');
     }
-    else watchdog('domainedo_shows', 'Node ' . $node->nid . 'not updated'); */
+
   }
 }
