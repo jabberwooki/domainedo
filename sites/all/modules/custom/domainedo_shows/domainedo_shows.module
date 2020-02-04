@@ -615,6 +615,11 @@ function domainedo_shows_views_pre_render(&$view) {
     drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_date_show_list.js');
 	}
   if ($view->name == 'shows' && $view->current_display == 'list') {
+    /**
+     * Fait appel à l'affichage de la fenêtre modal qui n'existe que dans le cas
+     * où il n'y a pas de résultat à la requêtes de spectacles sur un festival passé
+    */
+    // Re
     drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_shows_festival_modal.js');
   }
 
@@ -700,11 +705,24 @@ function textFestival($festival_name, $festival_season) {
  * Implements hook_node_postsave().
  * Le principe est de placer dans le champ "field_no_result"
  * Le message qui s'affichera après un click sur le festival sur la page "/spectacles/tous-les-spectacles"
- * lorsqu'il n'y a plus de spectacles en cours
+ * lorsqu'il n'y a plus de spectacles en cours grâce au mécanisme suivant :
+ * la vue qui affiche tous les spectacles (admin/structure/views/view/shows/edit/list)
+ * affiche (en cas de non résultat) via le champ NO RESULTS BEHAVIOR une vue de festival :
+ * admin/structure/views/view/festivals. Cette dernière a un filtre contextuel capable
+ * de comprendre quel est est le festival concerné grâce à l'url qui indique le nid du
+ * festival. Cette vue ne sélectionne que le champ field_no_result...
+ * Par ailleurs si le festival n'a pas de spectacles (passés ou pas), on considère que
+ * c'est parce qu'il n'est pas encore programmé. On affichera dans la fenêtre modal un lien
+ * vers le festival tout en indiquant qu'il n'est pas encore programmé...
  */
 function domainedo_shows_node_postsave($node, $op) {
   if ($node->type == 'festival') {
     $wrapper = entity_metadata_wrapper('node', $node);
+
+    // nb de spectacles liés à ce festival
+    $nb = count($node->field_festival_shows['und']);
+    //watchdog('domainedo_shows', 'festival a  ' . $nb . ' spectacles');
+
     $festival_name =  $wrapper->field_festival_name->value();
     $festival_season = $wrapper->field_season->value();
     $next_season = $festival_season + 1;
@@ -714,9 +732,11 @@ function domainedo_shows_node_postsave($node, $op) {
       $season_second_year = $season_first_year + 1;
       $next_season = $season_second_year. "/" . ($season_second_year + 1);
     }
-
-    $no_result_msg =
-      '<p class="field-no-result">' .
+    $no_result_msg = "";
+    // Cas où le festival a des spectacles
+    if($nb) {
+      $no_result_msg =
+      '<p class="field-no-result" data="with-show">' .
       '<a class="more-info-festival" href="/spectacles/' . $festival_name .
       '"><strong>L\'éditon ' . $festival_season . textFestival($festival_name, $festival_season) . '</a>' .
       ' est passée</strong>, rendez-vous prochainement pour l\'édition ' . $next_season .'.<br>
@@ -745,11 +765,55 @@ function domainedo_shows_node_postsave($node, $op) {
       '</div>'."\n" .
       '</div>'."\n";
 
-    if (!strpos($wrapper->field_no_result->value->raw() ,'myModal')) {
-      $wrapper->field_no_result->value = $no_result_msg;
-      $wrapper->save();
-      watchdog('domainedo_shows', 'Node ' . $node->nid . ' field field_no_result updated for festival ' .$festival_name);
+
+      // si on change de type de message dans le champ field_no_result
+      // on sauvegarde
+      if (!strpos($wrapper->field_no_result->value->raw() ,'with-show')) {
+        $wrapper->field_no_result->value = $no_result_msg;
+        watchdog('domainedo_shows', 'Node show avec spectacle ' . $node->nid . ' updated');
+        $wrapper->save();
+      } else watchdog('domainedo_shows', 'Node show avec spectacle' . $node->nid . 'not updated');
+
     }
-    else watchdog('domainedo_shows', 'Node ' . $node->nid . 'not updated');
+    else { // cas où le festival n'a pas de spectacles
+      $no_result_msg =
+      '<p class="field-no-result" data="no-show">' .
+      '<a class="more-info-festival" href="/spectacles/' . $festival_name .
+      '"><strong>L\'éditon ' . $festival_season . textFestival($festival_name, $festival_season) . '</a>' .
+      ' n\'est pas encore programmée</strong>.<br>
+        Soyez les premiers à être informés : <strong>Inscrivez vous à la ' .
+        '<a class="link-nSaperlipopettel" href="/content/abonnement-la-lettre-dinformation-du-domaine-do">lettre d\'info</a>
+        ou aux notifications</strong> du domaine d\'O.
+        </p>'."\n".
+      '<div class="modal fade" id="myModal" role="dialog">'."\n" .
+      '<div class="modal-dialog">'."\n" .
+      ' <div class="modal-content">'."\n" .
+      '<div class="modal-header"><button class="close" data-dismiss="modal" type="button">×</button>'."\n" .
+      '<h4 class="modal-title"></h4>'."\n" .
+
+      '<div class="modal-body modal-no-result">'."\n" .
+      '<p class="field-no-result">'.
+      '<a class="more-info-festival" href="/spectacles/' . $festival_name .
+      '"><strong>L\'éditon ' . $festival_season . textFestival($festival_name, $festival_season) . '</a>' .
+      ' n\'est pas encore programmée</strong>, <br>
+        Soyez les premiers à être informés : <strong>Inscrivez vous à la ' .
+        '<a class="link-nl" href="/content/abonnement-la-lettre-dinformation-du-domaine-do">lettre d\'info</a>
+        ou aux notifications</strong> du domaine d\'O
+        </p>'."\n" .
+      '</div>'."\n" .
+      '<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Fermer</button></div>'."\n" .
+      '</div>'."\n" .
+      '</div>'."\n" .
+      '</div>'."\n";
+
+      // si on change de type de message dans le champ field_no_result
+      // on sauvegarde
+      if (!strpos($wrapper->field_no_result->value->raw() ,'no-show')) {
+        $wrapper->field_no_result->value = $no_result_msg;
+        watchdog('domainedo_shows', 'Node show sans spectacle ' . $node->nid . ' updated');
+        $wrapper->save();
+      } else watchdog('domainedo_shows', 'Node show sans spectacle ' . $node->nid . ' not updated');
+    }
+
   }
 }

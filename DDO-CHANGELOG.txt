@@ -1,7 +1,10 @@
+Domaine d'O 1.3.4 - 2020-02-03
+Managing with php when Festival page manage has no show
+
 Domaine d'O 1.3.3 - 2020-02-03
 Managing with js when Festival page manage has no show
 
-Domaine d'O 1.3.3 - 2020-02-03
+Domaine d'O 1.3.2 - 2020-02-03
 Layout CSS improved, title size controled with js, zoom added on smartphones, g+ deleted, summary added on home page for seo, scald sound ...
 
 Domaine d'O 1.3.1 - 2020-01-24
