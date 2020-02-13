@@ -122,7 +122,7 @@ function domainedo_shows_node_view_alter(&$build) {
       if (strtoupper($parent) == 'INTRAMUROS') {
         $structured_data['location'] = array(
           "@type" => "Place",
-          "name"=> $location,
+          "name"=> "Domaine d'O > " . $location,
           "address"=> array(
             "@type" => "PostalAddress",
             "@streetAddress" => "178, rue de la Carriérasse",
