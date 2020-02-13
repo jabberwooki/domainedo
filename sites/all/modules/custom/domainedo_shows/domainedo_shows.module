@@ -184,7 +184,7 @@ function domainedo_shows_node_view_alter(&$build) {
         $price = $build['body']['#object']->field_price['und'][0]['value'];
         $structured_data['offers'] = array(
           "@type" => "Offer",
-          "name"=> $price
+          "price" => $price
         );
       }
 
