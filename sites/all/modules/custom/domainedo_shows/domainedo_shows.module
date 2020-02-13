@@ -142,7 +142,7 @@ function domainedo_shows_node_view_alter(&$build) {
         );
       }
 
-      // image
+      // Image
       if (isset($build['body']['#object']->field_scald_image['und'][0]['sid'])) {
         $atom = scald_atom_load($build['body']['#object']->field_scald_image['und'][0]['sid']);
         $image_url = file_create_url($atom->file_source);
@@ -154,6 +154,38 @@ function domainedo_shows_node_view_alter(&$build) {
           $image_url_exploded[1];
 
         $structured_data['image'] = $image_url;
+      }
+
+      // Performer
+      if (isset($build['body']['#object']->field_by['und'][0]['target_id'])) {
+        $structure_titles = array();
+        $structure_type = "";
+        $has_structure_organization = false;
+        foreach($build['body']['#object']->field_by['und'] as $structure) {
+          $structure = node_load($structure['target_id']);
+          $structure_titles[] = $structure->title;
+
+          $structure_type = taxonomy_term_load($structure->field_structure_type['und'][0]['tid'])->name;
+          // il suffit qu'une seule structure ne soit pas un "artiste" seul pour
+          // que l'on considère que c'est une "organisation" au sens de https://schema.org/Event
+          if($structure_type != "Artiste seul") $has_structure_organization = true;
+        }
+        $structure_type = ($has_structure_organization) ? "Organization" : "Person";
+        $structure_titles_string = implode(' / ', $structure_titles);
+
+        $structured_data['performer'] = array(
+          "@type" => $structure_type,
+          "name"=> $structure_titles_string
+        );
+      }
+
+      // Offers
+      if (isset($build['body']['#object']->field_price['und'][0]['value'])) {
+        $price = $build['body']['#object']->field_price['und'][0]['value'];
+        $structured_data['offers'] = array(
+          "@type" => "Offer",
+          "name"=> $price
+        );
       }
 
       // Encodage json de la totalité des infos ********************************/
