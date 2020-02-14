@@ -96,23 +96,120 @@ function domainedo_shows_node_view_alter(&$build) {
     }
 		if ($build['#view_mode'] == 'full') {
       // Structured datas
-      /* $structured_data = array(
-        '@context' => 'http://schema.org',
-        '@type' => 'Event',
-      );
-      // Add show name (title)
-      $structured_data['name'] = $build['body']['#object']->title;
+      $array_structured_data = array();
 
-      // Encodage json
-      $json_ld_script = array(
-          '#tag' => 'script',
-          '#attributes' => array('type' => 'application/ld+json'),
-          '#value' => defined('JSON_UNESCAPED_SLASHES') ? json_encode($structured_data, JSON_UNESCAPED_SLASHES) : json_encode($structured_data),
-          //'#value' => 'console.log("Hello structured data");',
-      );
 
-        drupal_add_html_head($json_ld_script, 'structured_data_json_ld'); */
-      /* End of structured data */
+
+      /* Attention : S'il s'agit de plusieurs spectacles répartis sur plusieurs
+      jours et nécessitant chacun un billet d'entrée individuel, ajoutez un
+      élément Event distinct pour chaque spectacle.
+      cf : https://developers.google.com/search/docs/data-types/event */
+      if(isset($build['body']['#object']->field_show_dates['und'])) {
+        foreach($build['body']['#object']->field_show_dates['und'] as $key => $date) {
+          $structured_data = array(
+            '@context' => 'http://schema.org',
+            '@type' => 'Event',
+          );
+          // Titre
+          $structured_data['name'] = $build['body']['#object']->title;
+
+          // Gestion des dates
+          $structured_data['startDate'] = $date['value'];
+
+          // Adresse
+          $location_tid = $build['body']['#object']->field_location['und'][0]['tid'];
+          $location = taxonomy_term_load($location_tid)->name;
+          $parents = taxonomy_get_parents($location_tid);
+          $parent = reset($parents)->name;
+
+          // Gestion des lieux
+          if (strtoupper($parent) == 'INTRAMUROS') {
+            $structured_data['location'] = array(
+              "@type" => "Place",
+              "name"=> "Domaine d'O > " . $location,
+              "address"=> array(
+                "@type" => "PostalAddress",
+                "@streetAddress" => "178, rue de la Carriérasse",
+                "@addressLocality" => "Montpellier",
+                "@postalCode" => "34090")
+            );
+          } else {
+            $show_address = explode(' - ', $location);
+            $city = $show_address[0];
+            $place = $show_address[1];
+            $structured_data['location'] = array(
+              "@type" => "Place",
+              "name"=> $place ,
+              "address"=> array(
+                "@type" => "PostalAddress",
+                "@addressLocality" => $city)
+            );
+          }
+
+          // Image
+          if (isset($build['body']['#object']->field_scald_image['und'][0]['sid'])) {
+            $atom = scald_atom_load($build['body']['#object']->field_scald_image['und'][0]['sid']);
+            $image_url = file_create_url($atom->file_source);
+            $image_url_exploded = explode("default/files/", $image_url);
+            // choix arbitraire du style d'image zoom_ss_634x440
+            $image_url =
+              $image_url_exploded[0] .
+              "default/files/styles/zoom_ss_634x440/public/" .
+              $image_url_exploded[1];
+
+            $structured_data['image'] = $image_url;
+          }
+
+          // Performer
+          if (isset($build['body']['#object']->field_by['und'][0]['target_id'])) {
+            $structure_titles = array();
+            $structure_type = "";
+            $has_structure_organization = false;
+            foreach($build['body']['#object']->field_by['und'] as $structure) {
+              $structure = node_load($structure['target_id']);
+              $structure_titles[] = $structure->title;
+
+              $structure_type = taxonomy_term_load($structure->field_structure_type['und'][0]['tid'])->name;
+              // il suffit qu'une seule structure ne soit pas un "artiste" seul pour
+              // que l'on considère que c'est une "organisation" au sens de https://schema.org/Event
+              if($structure_type != "Artiste seul") $has_structure_organization = true;
+            }
+            $structure_type = ($has_structure_organization) ? "Organization" : "Person";
+            $structure_titles_string = implode(' / ', $structure_titles);
+
+            $structured_data['performer'] = array(
+              "@type" => $structure_type,
+              "name"=> $structure_titles_string
+            );
+          }
+
+          // Offers
+          if (isset($build['body']['#object']->field_price['und'][0]['value'])) {
+            $price = $build['body']['#object']->field_price['und'][0]['value'];
+            $structured_data['offers'] = array(
+              "@type" => "Offer",
+              "price" => $price
+            );
+          }
+
+          // on ajoute un spectacle au tableau $array_structured_data
+          array_push($array_structured_data,$structured_data);
+        }
+        if(count($build['body']['#object']->field_show_dates['und']) == 1){
+          $array_structured_data = $array_structured_data[0];
+        }
+        // Encodage json de la totalité des infos *****/
+        $json_ld_script = array(
+            '#tag' => 'script',
+            '#attributes' => array('type' => 'application/ld+json'),
+            '#value' => defined('JSON_UNESCAPED_SLASHES') ?
+            json_encode($array_structured_data, JSON_UNESCAPED_SLASHES) :
+            json_encode($array_structured_data),
+            //'#value' => 'console.log("Hello structured data");',
+        );
+        drupal_add_html_head($json_ld_script, 'structured_data_json_ld');
+      }
+      /* End of structured data ***********************************************/
 
       drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_shows.js');
       drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_date_show.js');
