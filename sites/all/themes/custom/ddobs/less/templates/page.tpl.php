@@ -104,7 +104,7 @@
             </ul>
         </div>
         <div class="col-md-5" id="col-logo">
-          <?php if ($logo): ?>
+            <?php if ($logo) : ?>
               <h1 id="logo-ddobs">
                   <a class="logo navbar-btn"
                      href="<?php print $front_page; ?>"
@@ -113,7 +113,7 @@
                            alt="<?php print t("Domaine d'O - Retour accueil"); ?>"/>
                   </a>
               </h1>
-          <?php endif; ?>
+            <?php endif; ?>
         </div>
         <div class="col-md-4" id="div-subscritpion">
           <!-- Affichage du bloc domainedo_webpush_user_panel. -->
@@ -124,16 +124,15 @@
           <div id="webpush-handling">
             <?php
             if ($variables['webpush_compatibility'] && webpush_is_enabled() && user_access('register webpush')) {
-              $block = block_load('domainedo_webpush', 'domainedo_webpush_user_panel');
-              $render_array = _block_get_renderable_array(_block_render_blocks(array($block)));
-              $output = drupal_render($render_array);
-              print $output;
+                $block = block_load('domainedo_webpush', 'domainedo_webpush_user_panel');
+                $render_array = _block_get_renderable_array(_block_render_blocks(array($block)));
+                $output = drupal_render($render_array);
+                print $output;
             }
             ?>
           </div><!-- Fin affichage du bloc domainedo_webpush_user_panel. -->
             <a id="link-subscritpion" href="/abonnement">Abonnement</a>
         </div>
-
 
     </div> <!-- Fin de la première ligne -->
 
@@ -144,33 +143,33 @@
             </button>
 
             <!-- Menu principal -->
-          <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
+            <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])) : ?>
               <div class="navbar-collapse collapse" id="navbar-collapse">
                   <nav role="navigation">
                       <div id="initial-main-nav">
-                        <?php if (!empty($page['navigation'])): ?>
-                          <?php print render($page['navigation']); ?>
+                        <?php if (!empty($page['navigation'])) : ?>
+                            <?php print render($page['navigation']); ?>
                         <?php endif; ?>
-                        <?php if (!empty($primary_nav)): ?>
-                          <?php print render($primary_nav); ?>
+                        <?php if (!empty($primary_nav)) : ?>
+                            <?php print render($primary_nav); ?>
                         <?php endif; ?>
-                        <?php if (!empty($secondary_nav)): ?>
-                          <?php print render($secondary_nav); ?>
+                        <?php if (!empty($secondary_nav)) : ?>
+                            <?php print render($secondary_nav); ?>
                         <?php endif; ?>
                       </div>
                   </nav>
               </div>
-          <?php endif; ?>
+            <?php endif; ?>
 
             <div id="top-search-icon"></div>
         </div>
     </div>
 </header>
 <div class="container" id="custom-msg">
-  <?php print $messages; ?>
+    <?php print $messages; ?>
 </div>
 <!-- Search Region ---------------------------------------------------->
-<?php if (!empty($page['search_region'])): ?>
+<?php if (!empty($page['search_region'])) : ?>
     <div class="container-fluid" id="search-region">
       <?php print render($page['search_region']); ?>
     </div>
@@ -204,7 +203,7 @@
 
 <!-- Home headband ----------------------------------------------------------->
 <div id="homeheadband">
-  <?php if (!empty($page['infoflash'])): ?>
+    <?php if (!empty($page['infoflash'])) : ?>
     <div id="info-flash">
         <div class="container">
             <div class="row">
@@ -218,12 +217,12 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-7 col-lg-5 col-lg-offset-1">
-              <?php if (!empty($page['homenow'])): ?>
-                <?php print render($page['homenow']); ?>
-              <?php endif; ?>
+                <?php if (!empty($page['homenow'])) : ?>
+                    <?php print render($page['homenow']); ?>
+                <?php endif; ?>
             </div>
             <div class="col-md-5 col-lg-4 ">
-              <?php if (!empty($page['homeslideshow'])): ?>
+              <?php if (!empty($page['homeslideshow'])) : ?>
                 <?php print render($page['homeslideshow']); ?>
               <?php endif; ?>
             </div>
@@ -234,9 +233,9 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-              <?php if (!empty($page['quickaccess'])): ?>
-                <?php print render($page['quickaccess']); ?>
-              <?php endif; ?>
+                <?php if (!empty($page['quickaccess'])) : ?>
+                    <?php print render($page['quickaccess']); ?>
+                <?php endif; ?>
             </div>
         </div>
     </div>
@@ -247,16 +246,16 @@
     <div class="container-fluid no-gutter">
         <div class="row">
             <div class="col-md-12">
-              <?php if (!empty($page['imagefullshow'])): ?>
-                <?php print render($page['imagefullshow']); ?>
-              <?php endif; ?>
+                <?php if (!empty($page['imagefullshow'])) : ?>
+                    <?php print render($page['imagefullshow']); ?>
+                <?php endif; ?>
             </div>
         </div>
     </div>
 </div>
 <!-- FIN IMAGE FULL SHOW   ---------------------------------------------------->
 <!-- TOP CLASSIC PAGE --------------------------------------------------------->
-<?php if (!empty($page['topclassicpage'])): ?>
+<?php if (!empty($page['topclassicpage'])) : ?>
 <div id="topclassicpage">
     <div class="container-fluid no-gutter">
         <div class="row">
@@ -271,9 +270,9 @@
 <!-- HEADBAND FESTIVAL -------------------------------------------------------->
 <div id="headband-festival">
     <div class="container">
-      <?php if (!empty($page['headbandfestival'])): ?>
-        <?php print render($page['headbandfestival']); ?>
-      <?php endif; ?>
+        <?php if (!empty($page['headbandfestival'])) : ?>
+            <?php print render($page['headbandfestival']); ?>
+        <?php endif; ?>
     </div>
 </div>
 <!-- FIN HEADBAND FESTIVAL ---------------------------------------------------->
@@ -282,68 +281,70 @@
     <header role="banner" id="page-header">
 
 
-      <?php print render($page['header']); ?>
+        <?php print render($page['header']); ?>
     </header> <!-- /#page-header -->
 
     <div class="row">
 
-      <?php if (!empty($page['sidebar_first'])): ?>
+        <?php if (!empty($page['sidebar_first'])) : ?>
           <aside class="col-sm-3" role="complementary">
             <?php print render($page['sidebar_first']); ?>
           </aside>  <!-- /#sidebar-first -->
-      <?php endif; ?>
+        <?php endif; ?>
 
         <section class="<?php
-        if (empty($page['topclassicpage'])) print'no-img-top ';
-        if (empty($page['sidebar_first']) && empty($page['sidebar_second']))
-        { print 'col-sm-12'; } else if (!empty($page['sidebar_first']) || !empty($page['sidebar_second']))
-        { print 'col-sm-8 col-sm-offset-1'; } else { print 'col-sm-4'; } ?>">
-          <?php if (!empty($page['highlighted'])): ?>
+        if (empty($page['topclassicpage'])) { print'no-img-top ';
+        }
+        if (empty($page['sidebar_first']) && empty($page['sidebar_second'])) { print 'col-sm-12';
+        } else if (!empty($page['sidebar_first']) || !empty($page['sidebar_second'])) { print 'col-sm-8 col-sm-offset-1';
+        } else { print 'col-sm-4';
+        } ?>">
+            <?php if (!empty($page['highlighted'])) : ?>
               <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
-          <?php endif; ?>
+            <?php endif; ?>
 
             <a id="main-content"></a>
-          <?php print render($title_prefix); ?>
-          <?php if (!empty($title)): ?>
+            <?php print render($title_prefix); ?>
+            <?php if (!empty($title)) : ?>
               <h2 class="page-header"><?php print $title; ?></h2>
-          <?php endif; ?>
-          <?php print render($title_suffix); ?>
-          <?php if (!empty($tabs)): ?>
-            <?php print render($tabs); ?>
-          <?php endif; ?>
-          <?php if (!empty($page['help'])): ?>
-            <?php print render($page['help']); ?>
-          <?php endif; ?>
-          <?php if (!empty($action_links)): ?>
+            <?php endif; ?>
+            <?php print render($title_suffix); ?>
+            <?php if (!empty($tabs)) : ?>
+                <?php print render($tabs); ?>
+            <?php endif; ?>
+            <?php if (!empty($page['help'])) : ?>
+                <?php print render($page['help']); ?>
+            <?php endif; ?>
+            <?php if (!empty($action_links)) : ?>
               <ul class="action-links"><?php print render($action_links); ?></ul>
-          <?php endif; ?>
-          <?php print render($page['content']); ?>
+            <?php endif; ?>
+            <?php print render($page['content']); ?>
         </section>
 
-      <?php if (!empty($page['sidebar_second'])): ?>
+        <?php if (!empty($page['sidebar_second'])) : ?>
           <aside class="col-sm-4" role="complementary">
             <?php print render($page['sidebar_second']); ?>
           </aside>  <!-- /#sidebar-second -->
-      <?php endif; ?>
+        <?php endif; ?>
 
     </div>
 </div>
 
 <footer class="footer <?php print $container_class; ?>">
     <section id="social-bottom"></section>
-  <?php if (!empty($page['footer'])): ?>
-    <?php print render($page['footer']); ?>
-  <?php endif; ?>
+    <?php if (!empty($page['footer'])) : ?>
+        <?php print render($page['footer']); ?>
+    <?php endif; ?>
     <div class="row" id="footer-menus">
         <div class="col-md-2 col-sm-6 col-xs-6">
-          <?php if (!empty($page['commodity_bottom_one'])): ?>
-            <?php print render($page['commodity_bottom_one']); ?>
-          <?php endif; ?>
+            <?php if (!empty($page['commodity_bottom_one'])) : ?>
+                <?php print render($page['commodity_bottom_one']); ?>
+            <?php endif; ?>
         </div>
         <div class="col-md-2 col-sm-6 col-xs-6">
-          <?php if (!empty($page['commodity_bottom_two'])): ?>
-            <?php print render($page['commodity_bottom_two']); ?>
-          <?php endif; ?>
+            <?php if (!empty($page['commodity_bottom_two'])) : ?>
+                <?php print render($page['commodity_bottom_two']); ?>
+            <?php endif; ?>
         </div>
         <div class="col-md-2 col-sm-6 col-xs-12">
             <p id="ddo-title-botton"><strong>Domaine d'O</strong></p>
