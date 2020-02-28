@@ -829,9 +829,24 @@ function domainedo_shows_node_postsave($node, $op) {
       $season_second_year = $season_first_year + 1;
       $next_season = $season_second_year. "/" . ($season_second_year + 1);
     }
-    $no_result_msg = "";
-    // Cas où le festival a des spectacles
+    $entities_reference_published = false;
+    // Récupériation des entity references
     if($nb) {
+      // teste si les spectacles référencés sont publiés
+      if (isset($wrapper->{"field_festival_shows"})) {
+        $target_ids = $wrapper->{"field_festival_shows"}->value();
+        //dpm($target_ids);
+        foreach($target_ids as $key => $value) {
+          if($value->status) {
+            $entities_reference_published = true;
+            break;
+          }
+        }
+      }
+    }
+    $no_result_msg = "";
+    // Cas où le festival a des spectacles publiés
+    if($entities_reference_published) {
       $no_result_msg =
       '<p class="field-no-result" data="with-show">' .
       '<a class="more-info-festival" href="/spectacles/' . $festival_name .
@@ -867,12 +882,11 @@ function domainedo_shows_node_postsave($node, $op) {
       // on sauvegarde
       if (!strpos($wrapper->field_no_result->value->raw() ,'with-show')) {
         $wrapper->field_no_result->value = $no_result_msg;
-        watchdog('domainedo_shows', 'Node show avec spectacle ' . $node->nid . ' updated');
+        watchdog('domainedo_shows', 'Node show avec spectacle publié ' . $node->nid . ' updated');
         $wrapper->save();
-      } else watchdog('domainedo_shows', 'Node show avec spectacle' . $node->nid . 'not updated');
+      } else watchdog('domainedo_shows', 'Node show avec spectacle publié' . $node->nid . 'not updated');
 
-    }
-    else { // cas où le festival n'a pas de spectacles
+    } else { // cas où le festival n'a pas de spectacles ou qu'ils ne sont pas encore publiés
       $no_result_msg =
       '<p class="field-no-result" data="no-show">' .
       '<a class="more-info-festival" href="/spectacles/' . $festival_name .
@@ -914,3 +928,85 @@ function domainedo_shows_node_postsave($node, $op) {
 
   }
 }
+function getFestival($node_show) {
+  $wrapper = entity_metadata_wrapper('node', $node_show);
+  $festival_id = 0;
+  $festival = NULL;
+  if (isset($wrapper->{"field_festival"})) {
+      $target_ids = $wrapper->{"field_festival"}->value();
+      //dpm($target_ids);
+      foreach($target_ids as $key => $value) {
+        $festival_id = $value;
+        break;
+      }
+  }
+  if($festival_id) {
+    $festival = node_load($festival_id);
+    return $festival;
+  } else return NULL;
+}
+
+/**
+ * Implements hook_node_update().
+ *
+ */
+function domainedo_shows_node_update($node) {
+  if ($node->type == 'show') {
+    // Si Dépublication
+    if ($node->original->status == 1 && $node->status == 0) {
+
+      $festival = getFestival($node);
+      if($festival) {
+        $entities_reference_published = false;
+        $wrapper = entity_metadata_wrapper('node', $festival);
+        watchdog('domainedo_shows', 'Node show dé-publié ' . $festival->title);
+        // teste si les spectacles référencés sont publiés
+        if (isset($wrapper->{"field_festival"})) {
+          $target_ids = $wrapper->{"field_festival"}->value();
+          //dpm($target_ids);
+          foreach($target_ids as $key => $value) {
+            if($value->status) {
+              $entities_reference_published = true;
+              break;
+            }
+          }
+        }
+        //Si tous les spectacles du festival sont dépubliés, on sauvegarde le festival
+        if(!$entities_reference_published){
+          watchdog('domainedo_shows', 'Node show Re-publié - festival sauvegardé');
+          $wrapper->save();
+        }
+      }
+
+
+    }
+    // Si Publication
+    if ($node->original->status == 0 && $node->status == 1) {
+      $festival = getFestival($node);
+
+      if($festival) {
+        $entities_reference_published = true;
+        $wrapper = entity_metadata_wrapper('node', $festival);
+
+        // teste si les spectacles référencés sont publiés
+        if (isset($wrapper->{"field_festival"})) {
+          $target_ids = $wrapper->{"field_festival"}->value();
+          //dpm($target_ids);
+          foreach($target_ids as $key => $value) {
+            // Si tous les autes spectacles sont dépubliés
+            if($value->status && $value != $node) {
+              $entities_reference_published = true;
+              break;
+            }
+          }
+        }
+        //Si tous les spectacles du festival sont dépubliés, on sauvegarde le festival
+        if(!$entities_reference_published) {
+          $wrapper->save();
+          watchdog('domainedo_shows', 'Node show Re-publié - festival sauvegardé');
+        }
+      }
+    }
+  }
+}
+
