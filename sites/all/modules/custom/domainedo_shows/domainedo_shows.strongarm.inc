@@ -527,20 +527,23 @@ function domainedo_shows_strongarm() {
       'liste_aussi' => array(
         'custom_settings' => TRUE,
       ),
+      'right_now' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '34',
+          'weight' => '36',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '35',
+          'weight' => '40',
         ),
         'redirect' => array(
-          'weight' => '36',
+          'weight' => '42',
         ),
       ),
       'display' => array(
