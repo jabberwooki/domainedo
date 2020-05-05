@@ -235,6 +235,7 @@ function domainedo_shows_field_group_info() {
       4 => 'field_restauration',
       5 => 'field_lieu_generique',
       6 => 'field_minimum_age',
+      7 => 'field_show_dump_age',
     ),
     'format_type' => 'div',
     'format_settings' => array(

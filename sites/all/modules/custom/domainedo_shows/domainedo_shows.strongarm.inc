@@ -534,16 +534,16 @@ function domainedo_shows_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '36',
+          'weight' => '37',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '40',
+          'weight' => '41',
         ),
         'redirect' => array(
-          'weight' => '42',
+          'weight' => '43',
         ),
       ),
       'display' => array(
