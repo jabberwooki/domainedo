@@ -32,7 +32,6 @@ function domainedo_shows_form_show_node_form_alter(&$form, &$form_state, $form_i
  */
 function domainedo_shows_node_view_alter(&$build) {
   //dpm($build);
-
   // If show node
   // on recule la date de 4 h pour permettre aux internautes d'acheter alors que le
   // spectacle est en cours
@@ -42,14 +41,14 @@ function domainedo_shows_node_view_alter(&$build) {
 
   $show_is_past = false;
   if ($build['#bundle'] == 'festival') {
-    drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_shows_manageTwoColsFestival.js');
-    drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_shows_empty_fields.js');
+    drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/js/domainedo_shows_manageTwoColsFestival.js');
+    drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/js/domainedo_shows_empty_fields.js');
   }
 	if ($build['#bundle'] == 'show') {
     if ($build['#view_mode'] == 'teaser') {
       // Récupération du lieu parent pour déterminer si le spectacle
       // est hors les murs
-      drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_date_show_list_festival.js');
+      drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/js/domainedo_date_show_list_festival.js');
       $tid = $build['body']['#object']->field_location['und'][0]['tid'];
       $parent = taxonomy_get_parents($tid);
       $is_extra = false;
@@ -97,8 +96,6 @@ function domainedo_shows_node_view_alter(&$build) {
 		if ($build['#view_mode'] == 'full') {
       // Structured datas
       $array_structured_data = array();
-
-
 
       /* Attention : S'il s'agit de plusieurs spectacles répartis sur plusieurs
       jours et nécessitant chacun un billet d'entrée individuel, ajoutez un
@@ -211,13 +208,13 @@ function domainedo_shows_node_view_alter(&$build) {
       }
       /* End of structured data ***********************************************/
 
-      drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_shows.js');
-      drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_date_show.js');
+      drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/js/domainedo_shows.js');
+      drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/js/domainedo_date_show.js');
 
       //dpm($build);
       /* Teste s'il y a bien un formulaire joint et appelle le script js le cas échéant */
       if(!empty($build['body']['#object']->field_formulaire)) {
-        drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_form.js');
+        drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/js/domainedo_form.js');
       }
       // Breadcrumb processing : if the show node is requested from a festival page,
 			// the breadcrumb link 'Tous les spectacles' must send user to the shows list
@@ -312,9 +309,53 @@ function domainedo_shows_node_view_alter(&$build) {
 			}
 			if (!isset($build['field_scald_gallery'])) {
 				unset($build['field_photos_link']);
-			}
+      }
+      /* Gestion du lien vers le tramway */
+      $wrapper = entity_metadata_wrapper('node', $build['body']['#object']->nid);
+      $field_entrance = $wrapper->{"field_entrance"}->value();
+      if($field_entrance[0] == "nord") {
+        drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/js/domainedo_shows_entrance.js');
+      }
 		}
 	}
+}
+
+function domainedo_shows_node_view($node, $view_mode, $langcode) {
+
+  /*dpm($view_mode); */
+  if($node->content['body']['#bundle'] == "show" && $view_mode == "full") {
+    $wrapper = entity_metadata_wrapper('node', $node->vid);
+    $age = $wrapper->field_minimum_age->value();
+    $suffix = "ans";
+    if($age == 1) {
+      $suffix = "an";
+    } else if ($age == 0.25 || $age == 0.5 || $age == 0.75) {
+      $suffix = "mois";
+      switch ($age) {
+      case 0.25:
+        $age = "3";
+        break;
+      case 0.5:
+        $age = "6";
+        break;
+      case 0.75:
+        $age = "9";
+        break;
+}
+
+    }
+    $node->content['field_minimum_age'] = array('#markup' =>
+    '<div class="field field-name-field-minimum-age field-type-number-decimal field-label-inline clearfix">
+      <div class="field-label">A partir de :&nbsp;</div>
+      <div class="field-items">
+          <div class="field-item even">' . intval($age) .
+            '<span class="suffix"> ' . $suffix . '</span>
+          </div>
+      </div>
+    </div>'
+    );
+  }
+
 }
 
 /**
@@ -694,13 +735,17 @@ function domainedo_shows_form_festival_node_form_alter(&$form, &$form_state, $fo
  * Implements hook_views_pre_render().
  */
 function domainedo_shows_views_pre_render(&$view) {
+
   if ($view->name == 'calendar' && $view->current_display == 'page_1') {
-    drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_shows_calendar.js');
+    drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/js/domainedo_shows_calendar.js');
   }
-	/*if ($view->name == 'shows' && $view->current_display == 'list') {
-		$block = module_invoke('views', 'block_view', '-exp-shows-list');
-		$view->header['area']->options['content'] = render($block['content']);
-	}*/
+  // si on se trouve sur la page de recherche des spectacles (/spectacles/tous-les-spectacles)
+  // on charge du code js qui va permettre de gérer l'age
+	if ($view->name == 'shows' && $view->current_display == 'list') {
+    drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/js/domainedo_show_age.js');
+		/* $block = module_invoke('views', 'block_view', '-exp-shows-list');
+		$view->header['area']->options['content'] = render($block['content']); */
+	}
 	if ($view->name == 'shows' && $view->current_display == 'views_data_export_1') {
 		foreach ($view->result as &$value) {
 			$array = array();
@@ -709,25 +754,64 @@ function domainedo_shows_views_pre_render(&$view) {
 		}
 	}
 	if ($view->name == 'shows' && ($view->current_display == 'block_1' || $view->current_display == 'list')) {
-    drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_date_show_list.js');
+    drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/js/domainedo_date_show_list.js');
 	}
-  if ($view->name == 'shows' && $view->current_display == 'list') {
+  if ($view->name == 'festivals' && $view->current_display == 'block_no_result_festival') {
     /**
-     * Fait appel à l'affichage de la fenêtre modal qui n'existe que dans le cas
-     * où il n'y a pas de résultat à la requêtes de spectacles sur un festival passé
+     * S'il n'y a pas de réponse, c'est la view block_no_result_festival qui est appellée.
+     * Soit les spectacles sont passés, soit ils ne sont pas encore validées.
+     * On va traiter différement les deux cas avec du js
     */
-    // Re
-    drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/domainedo_shows_festival_modal.js');
-  }
+    $entities_reference_published = false;
+    $wrapperwrapper = entity_metadata_wrapper('node', $view->result[0]->nid);
 
- /* dpm($view->name);
-  dpm($view->current_display);*/
+    if (isset($wrapper->{"field_festival_shows"})) {
+      $target_ids = $wrapper->{"field_festival_shows"}->value();
+      // si on a des spectacles il faut savoir s'ils sont publiés
+      if(count($target_ids) > 0) {
+        foreach($target_ids as $key => $value) {
+          if($value->status) {
+            $entities_reference_published = true;
+            break;
+          }
+        }
+      }
+     }
+     if(!$entities_reference_published) {
+      drupal_add_js(array('domainedo_shows' => array('shows_enable' => false)), array('type' => 'setting'));
+    } else {
+      drupal_add_js(array('domainedo_shows' => array('shows_enable' => true)), array('type' => 'setting'));
+    }
+     drupal_add_js(drupal_get_path('module', 'domainedo_shows') . '/js/domainedo_shows_festival_modal.js');
+  }
 }
 
 /**
  * Implements hook_form_FORM_ID_alter().
  */
 function domainedo_shows_form_views_exposed_form_alter(&$form, &$form_state, $form_id) {
+        /* if (isset($form['field_minimum_age_value'])) {
+         if (!empty($_GET['field_minimum_age_value'])) {
+           $age = 0;
+           switch ($_GET['field_minimum_age_value']) {
+            case "3 mois":
+              $age = 0.25;
+              break;
+            case "6 mois":
+              $age = 0.5;
+              break;
+            case "9 mois":
+              $age = 0.75;
+              break;
+            default:
+              $age = substr($_GET['field_minimum_age_value'], 0, strpos($_GET['field_minimum_age_value'], ' '));
+              $form_state['input']['field_minimum_age_value'] = $age;
+          }
+          dpm($age);
+          dpm($form['field_minimum_age_value']);
+          $form['field_minimum_age_value']['#default_value'] = $age;
+         }
+       } */
        if (isset($form['field_festival_target_id'])) {
                // Get the id of the latest festival for each festival type.
                $festivals = domainedo_shows_get_festivals();
@@ -750,6 +834,7 @@ function domainedo_shows_form_views_exposed_form_alter(&$form, &$form_state, $fo
 
                $form['field_festival_target_id']['#options']['All'] = t('All upcoming shows');
        }
+
 }
 
 /**
@@ -891,7 +976,7 @@ function domainedo_shows_node_postsave($node, $op) {
       '<p class="field-no-result" data="no-show">' .
       '<a class="more-info-festival" href="/spectacles/' . $festival_name .
       '"><strong>L\'éditon ' . $festival_season . textFestival($festival_name, $festival_season) . '</a>' .
-      ' n\'est pas encore programmée</strong>.<br>
+      ' <span class="not-yet-scheduled">n\'est pas encore programmée</span></strong>.<br>
         Soyez les premiers à être informés : <strong>Inscrivez vous à la ' .
         '<a class="link-nSaperlipopettel" href="/content/abonnement-la-lettre-dinformation-du-domaine-do">lettre d\'info</a>
         ou aux notifications</strong> du domaine d\'O.
@@ -906,7 +991,7 @@ function domainedo_shows_node_postsave($node, $op) {
       '<p class="field-no-result">'.
       '<a class="more-info-festival" href="/spectacles/' . $festival_name .
       '"><strong>L\'éditon ' . $festival_season . textFestival($festival_name, $festival_season) . '</a>' .
-      ' n\'est pas encore programmée</strong>, <br>
+      ' <span class="not-yet-scheduled">n\'est pas encore programmée</span></strong>, <br>
         Soyez les premiers à être informés : <strong>Inscrivez vous à la ' .
         '<a class="link-nl" href="/content/abonnement-la-lettre-dinformation-du-domaine-do">lettre d\'info</a>
         ou aux notifications</strong> du domaine d\'O
