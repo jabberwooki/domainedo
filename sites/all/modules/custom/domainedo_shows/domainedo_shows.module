@@ -94,6 +94,13 @@ function domainedo_shows_node_view_alter(&$build) {
 
     }
 		if ($build['#view_mode'] == 'full') {
+      // gestion de l'affichage de l'age. On n'affiche pas le champ qui indique
+      // s'il on doit afficher ou pas l'age. Puis en fonction de la valeur du
+      // champ field_show_dump_age, on affiche ou pas le champ "A partir de "
+      $build['field_show_dump_age']['#access'] = FALSE;
+      if(!$build['field_show_dump_age']['#items'][0]['value']) {
+        $build['field_minimum_age']['#access'] = FALSE;
+      }
       // Structured datas
       $array_structured_data = array();
 
@@ -341,9 +348,8 @@ function domainedo_shows_node_view($node, $view_mode, $langcode) {
       case 0.75:
         $age = "9";
         break;
-}
-
     }
+  }
     $node->content['field_minimum_age'] = array('#markup' =>
     '<div class="field field-name-field-minimum-age field-type-number-decimal field-label-inline clearfix">
       <div class="field-label">A partir de :&nbsp;</div>
