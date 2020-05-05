@@ -10701,6 +10701,9 @@ strong {
 .node-type-show .node-show.view-mode-full #node-show-full-group-lieu .field-name-field-lieu-generique:after {
   margin-bottom: 0;
 }
+.node-type-show .node-show.view-mode-full #node-show-full-group-lieu .field-name-field-restauration p {
+  font-size: 1rem;
+}
 .node-type-show .node-show.view-mode-full #node-show-full-group-lieu .field-name-field-location:after {
   display: block;
   margin-bottom: 20px;
@@ -11028,6 +11031,14 @@ strong {
     position: relative;
     padding-bottom: 100px;
   }
+}
+.page-spectacles #headband-festival #edit-field-minimum-age-value-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.page-spectacles #headband-festival #edit-field-minimum-age-value-wrapper label {
+  margin-right: 10px;
 }
 @media (min-width: 992px) {
   .page-spectacles #headband-festival {
