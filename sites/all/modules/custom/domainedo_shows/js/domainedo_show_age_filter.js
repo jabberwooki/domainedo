@@ -50,8 +50,9 @@
         // Sélection de tous les containers de spectacles
         list_show.each(function(){
           let show_age = $(".show-age", $(this)).attr("data-age");
+          $(this).hide(300);
 
-          if (Number(selected_age) < Number(show_age)) $(this).hide(700).removeClass("show-visible");
+          if (Number(selected_age) < Number(show_age)) $(this).removeClass("show-visible");
           else $(this).show(700).addClass("show-visible");
         });
         // Gestion des requêtes sur l'âge sans réponse
