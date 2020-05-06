@@ -1035,7 +1035,7 @@ else {
   $handler->display->display_options['filters']['field_minimum_age_value']['operator'] = '<=';
   $handler->display->display_options['filters']['field_minimum_age_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_minimum_age_value']['expose']['operator_id'] = 'field_minimum_age_value_op';
-  $handler->display->display_options['filters']['field_minimum_age_value']['expose']['label'] = 'Vous venez avec des enfants ? Spectacle à partir de : ';
+  $handler->display->display_options['filters']['field_minimum_age_value']['expose']['label'] = 'Vous venez avec des enfants ? Spectacles à partir de : ';
   $handler->display->display_options['filters']['field_minimum_age_value']['expose']['operator'] = 'field_minimum_age_value_op';
   $handler->display->display_options['filters']['field_minimum_age_value']['expose']['identifier'] = 'field_minimum_age_value';
   $handler->display->display_options['filters']['field_minimum_age_value']['expose']['remember_roles'] = array(
@@ -1635,7 +1635,7 @@ else {
 
 </div>'),
     t('Type de spectacle'),
-    t('Vous venez avec des enfants ? Spectacle à partir de : '),
+    t('Vous venez avec des enfants ? Spectacles à partir de : '),
     t('Accueil'),
     t('Spectacles à venir'),
     t('Voir tous les spectacles'),

@@ -46,6 +46,15 @@ function domainedo_shows_node_view_alter(&$build) {
   }
 	if ($build['#bundle'] == 'show') {
     if ($build['#view_mode'] == 'teaser') {
+      // Ajout d'un attribut data-age qui indique l'âge minimum pour le spectacle
+      $show_wrapper = entity_metadata_wrapper("node",$build['body']['#object']->vid);
+      $age = $show_wrapper->field_minimum_age->value();
+      $build['field_scald_image'][0]['#markup'] .=
+        '<div class="show-age" data-age="' . $age . '">'.
+        '</div>';
+      // Appel le script js qui va gérer l'affichage en fonction de l'âge
+      drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/js/domainedo_show_age_filter.js');
+
       // Récupération du lieu parent pour déterminer si le spectacle
       // est hors les murs
       drupal_add_js(drupal_get_path('module', 'domainedo_shows') .'/js/domainedo_date_show_list_festival.js');
