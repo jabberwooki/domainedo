@@ -168,12 +168,21 @@
     }
   }
   h3.show-festival-title {
+    float: left;
     font-size: 1.5em; /* 24/16 */
-    margin: 20px 0;
+    margin: 20px 20px 20px 0;
     font-style: normal;
     font-weight: 400;
     @media (max-width: @screen-sm) {
       text-align: center;
+    }
+  }
+  #select-age-wrapper {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 20px;
+    #title-age-wrapper {
+      margin-right: 15px;
     }
   }
   .node-show {

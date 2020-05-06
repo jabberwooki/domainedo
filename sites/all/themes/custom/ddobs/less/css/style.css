@@ -12097,9 +12097,10 @@ strong {
   }
 }
 .node-type-festival h3.show-festival-title {
+  float: left;
   font-size: 1.5em;
   /* 24/16 */
-  margin: 20px 0;
+  margin: 20px 20px 20px 0;
   font-style: normal;
   font-weight: 400;
 }
@@ -12107,6 +12108,14 @@ strong {
   .node-type-festival h3.show-festival-title {
     text-align: center;
   }
+}
+.node-type-festival #select-age-wrapper {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 20px;
+}
+.node-type-festival #select-age-wrapper #title-age-wrapper {
+  margin-right: 15px;
 }
 .node-type-festival .node-show .group-show-list:hover {
   transform: translate3d(0, -4px, 0);
