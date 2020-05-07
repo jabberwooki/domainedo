@@ -12096,6 +12096,79 @@ strong {
     background-color: #efefef;
   }
 }
+.node-type-festival [class*=" age-from-"]:before {
+  display: table;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 10px;
+  z-index: 1;
+}
+.node-type-festival .age-from-25:before {
+  content: "À partir de 3 mois";
+}
+.node-type-festival .age-from-50:before {
+  content: "À partir de 6 mois";
+}
+.node-type-festival .age-from-75:before {
+  content: "À partir de 9 mois";
+}
+.node-type-festival .age-from-100:before {
+  content: "À partir de 1 an";
+}
+.node-type-festival .age-from-200:before {
+  content: "À partir de 2 ans";
+}
+.node-type-festival .age-from-300:before {
+  content: "À partir de 3 ans";
+}
+.node-type-festival .age-from-400:before {
+  content: "À partir de 4 ans";
+}
+.node-type-festival .age-from-500:before {
+  content: "À partir de 5 ans";
+}
+.node-type-festival .age-from-600:before {
+  content: "À partir de 6 ans";
+}
+.node-type-festival .age-from-700:before {
+  content: "À partir de 7 ans";
+}
+.node-type-festival .age-from-800:before {
+  content: "À partir de 8 ans";
+}
+.node-type-festival .age-from-900:before {
+  content: "À partir de 9 ans";
+}
+.node-type-festival .age-from-1000:before {
+  content: "À partir de 10 ans";
+}
+.node-type-festival .age-from-1100:before {
+  content: "À partir de 11 ans";
+}
+.node-type-festival .age-from-1200:before {
+  content: "À partir de 12 ans";
+}
+.node-type-festival .age-from-1300:before {
+  content: "À partir de 13 ans";
+}
+.node-type-festival .age-from-1400:before {
+  content: "À partir de 14 ans";
+}
+.node-type-festival .age-from-1500:before {
+  content: "À partir de 15 ans";
+}
+.node-type-festival .age-from-1600:before {
+  content: "À partir de 16 ans";
+}
+.node-type-festival .age-from-1700:before {
+  content: "À partir de 17 ans";
+}
+.node-type-festival .age-from-1800:before {
+  content: "À partir de 18 ans";
+}
 .node-type-festival h3.show-festival-title {
   float: left;
   font-size: 1.5em;
