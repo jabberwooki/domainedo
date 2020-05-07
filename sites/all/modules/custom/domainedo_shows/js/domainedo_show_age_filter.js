@@ -44,8 +44,9 @@
       const list_show = $(".node-teaser");
       const msg_no_result = $('<h4 class="h3" style="clear:both;">Il n\' y pas de spectacle qui corresponde à la limite d\'âge que vous avez entrée.</h4>').
         insertAfter("#select-age-wrapper").hide();
-      select_age.on("change", function () {
 
+        // gestion de la recherche via la liste déroulante
+      select_age.on("change", function () {
         let selected_age = $(this).children("option:selected").val();
         // Sélection de tous les containers de spectacles
         list_show.each(function(){
@@ -53,7 +54,11 @@
           $(this).hide(300);
 
           if (Number(selected_age) < Number(show_age)) $(this).removeClass("show-visible");
-          else $(this).show(700).addClass("show-visible");
+          else {
+            $(this).show(700).addClass("show-visible");
+            $(".group-show-list", $(this)).addClass("age-from-" + parseInt(show_age * 100));
+          }
+
         });
         // Gestion des requêtes sur l'âge sans réponse
         if (!$(".show-visible").length) {
