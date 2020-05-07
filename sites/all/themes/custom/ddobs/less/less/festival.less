@@ -167,13 +167,139 @@
       background-color: @gris-clair-ddo;
     }
   }
+   [class*=" age-from-"] {
+     &:before {
+      display: table;
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      background-color: rgba(0, 0, 0, 0.9);
+      color: white;
+      padding: 10px;
+      z-index: 1;
+    }
+   }
+   .age-from-25 {
+    &:before {
+      content: "À partir de 3 mois";
+    }
+  }
+  .age-from-50 {
+    &:before {
+      content: "À partir de 6 mois";
+    }
+  }
+  .age-from-75 {
+    &:before {
+      content: "À partir de 9 mois";
+    }
+  }
+  .age-from-100 {
+    &:before {
+      content: "À partir de 1 an";
+    }
+  }
+  .age-from-200 {
+    &:before {
+      content: "À partir de 2 ans";
+    }
+  }
+  .age-from-300 {
+    &:before {
+      content: "À partir de 3 ans";
+    }
+  }
+  .age-from-400 {
+    &:before {
+      content: "À partir de 4 ans";
+    }
+  }
+  .age-from-500 {
+    &:before {
+      content: "À partir de 5 ans";
+    }
+  }
+  .age-from-600 {
+    &:before {
+      content: "À partir de 6 ans";
+    }
+  }
+  .age-from-700 {
+    &:before {
+      content: "À partir de 7 ans";
+    }
+  }
+  .age-from-800 {
+    &:before {
+      content: "À partir de 8 ans";
+    }
+  }
+  .age-from-900 {
+    &:before {
+      content: "À partir de 9 ans";
+    }
+  }
+  .age-from-1000 {
+    &:before {
+      content: "À partir de 10 ans";
+    }
+  }
+  .age-from-1100 {
+    &:before {
+      content: "À partir de 11 ans";
+    }
+  }
+  .age-from-1200 {
+    &:before {
+      content: "À partir de 12 ans";
+    }
+  }
+  .age-from-1300 {
+    &:before {
+      content: "À partir de 13 ans";
+    }
+  }
+  .age-from-1400 {
+    &:before {
+      content: "À partir de 14 ans";
+    }
+  }
+  .age-from-1500 {
+    &:before {
+      content: "À partir de 15 ans";
+    }
+  }
+  .age-from-1600 {
+    &:before {
+      content: "À partir de 16 ans";
+    }
+  }
+  .age-from-1700 {
+    &:before {
+      content: "À partir de 17 ans";
+    }
+  }
+  .age-from-1800 {
+    &:before {
+      content: "À partir de 18 ans";
+    }
+  }
   h3.show-festival-title {
+    float: left;
     font-size: 1.5em; /* 24/16 */
-    margin: 20px 0;
+    margin: 20px 20px 20px 0;
     font-style: normal;
     font-weight: 400;
     @media (max-width: @screen-sm) {
       text-align: center;
+    }
+  }
+  #select-age-wrapper {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 20px;
+    #title-age-wrapper {
+      margin-right: 15px;
     }
   }
   .node-show {

@@ -343,6 +343,7 @@ function domainedo_shows_field_default_field_bases() {
       'allowed_values' => array(
         'nord' => 'nord',
         'sud' => 'sud',
+        'hlm' => 'hors les murs',
       ),
       'allowed_values_function' => '',
     ),
@@ -789,9 +790,13 @@ function domainedo_shows_field_default_field_bases() {
     'indexes' => array(),
     'locked' => 0,
     'module' => 'number',
-    'settings' => array(),
+    'settings' => array(
+      'decimal_separator' => '.',
+      'precision' => 10,
+      'scale' => 2,
+    ),
     'translatable' => 0,
-    'type' => 'number_integer',
+    'type' => 'number_decimal',
   );
 
   // Exported field_base: 'field_no_result'.
@@ -1112,6 +1117,31 @@ function domainedo_shows_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'date',
+  );
+
+  // Exported field_base: 'field_show_dump_age'.
+  $field_bases['field_show_dump_age'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_show_dump_age',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => '',
+        1 => '',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_boolean',
   );
 
   // Exported field_base: 'field_show_type'.

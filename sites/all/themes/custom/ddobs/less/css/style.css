@@ -10701,6 +10701,9 @@ strong {
 .node-type-show .node-show.view-mode-full #node-show-full-group-lieu .field-name-field-lieu-generique:after {
   margin-bottom: 0;
 }
+.node-type-show .node-show.view-mode-full #node-show-full-group-lieu .field-name-field-restauration p {
+  font-size: 1rem;
+}
 .node-type-show .node-show.view-mode-full #node-show-full-group-lieu .field-name-field-location:after {
   display: block;
   margin-bottom: 20px;
@@ -11028,6 +11031,14 @@ strong {
     position: relative;
     padding-bottom: 100px;
   }
+}
+.page-spectacles #headband-festival #edit-field-minimum-age-value-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.page-spectacles #headband-festival #edit-field-minimum-age-value-wrapper label {
+  margin-right: 10px;
 }
 @media (min-width: 992px) {
   .page-spectacles #headband-festival {
@@ -12085,10 +12096,84 @@ strong {
     background-color: #efefef;
   }
 }
+.node-type-festival [class*=" age-from-"]:before {
+  display: table;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 10px;
+  z-index: 1;
+}
+.node-type-festival .age-from-25:before {
+  content: "À partir de 3 mois";
+}
+.node-type-festival .age-from-50:before {
+  content: "À partir de 6 mois";
+}
+.node-type-festival .age-from-75:before {
+  content: "À partir de 9 mois";
+}
+.node-type-festival .age-from-100:before {
+  content: "À partir de 1 an";
+}
+.node-type-festival .age-from-200:before {
+  content: "À partir de 2 ans";
+}
+.node-type-festival .age-from-300:before {
+  content: "À partir de 3 ans";
+}
+.node-type-festival .age-from-400:before {
+  content: "À partir de 4 ans";
+}
+.node-type-festival .age-from-500:before {
+  content: "À partir de 5 ans";
+}
+.node-type-festival .age-from-600:before {
+  content: "À partir de 6 ans";
+}
+.node-type-festival .age-from-700:before {
+  content: "À partir de 7 ans";
+}
+.node-type-festival .age-from-800:before {
+  content: "À partir de 8 ans";
+}
+.node-type-festival .age-from-900:before {
+  content: "À partir de 9 ans";
+}
+.node-type-festival .age-from-1000:before {
+  content: "À partir de 10 ans";
+}
+.node-type-festival .age-from-1100:before {
+  content: "À partir de 11 ans";
+}
+.node-type-festival .age-from-1200:before {
+  content: "À partir de 12 ans";
+}
+.node-type-festival .age-from-1300:before {
+  content: "À partir de 13 ans";
+}
+.node-type-festival .age-from-1400:before {
+  content: "À partir de 14 ans";
+}
+.node-type-festival .age-from-1500:before {
+  content: "À partir de 15 ans";
+}
+.node-type-festival .age-from-1600:before {
+  content: "À partir de 16 ans";
+}
+.node-type-festival .age-from-1700:before {
+  content: "À partir de 17 ans";
+}
+.node-type-festival .age-from-1800:before {
+  content: "À partir de 18 ans";
+}
 .node-type-festival h3.show-festival-title {
+  float: left;
   font-size: 1.5em;
   /* 24/16 */
-  margin: 20px 0;
+  margin: 20px 20px 20px 0;
   font-style: normal;
   font-weight: 400;
 }
@@ -12096,6 +12181,14 @@ strong {
   .node-type-festival h3.show-festival-title {
     text-align: center;
   }
+}
+.node-type-festival #select-age-wrapper {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 20px;
+}
+.node-type-festival #select-age-wrapper #title-age-wrapper {
+  margin-right: 15px;
 }
 .node-type-festival .node-show .group-show-list:hover {
   transform: translate3d(0, -4px, 0);

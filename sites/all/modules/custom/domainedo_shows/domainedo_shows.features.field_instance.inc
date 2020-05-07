@@ -1385,7 +1385,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 34,
+        'weight' => 36,
       ),
       'frontpage_block' => array(
         'label' => 'above',
@@ -1451,7 +1451,7 @@ function domainedo_shows_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 24,
+      'weight' => 25,
     ),
   );
 
@@ -1471,7 +1471,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 33,
+        'weight' => 35,
       ),
       'frontpage_block' => array(
         'label' => 'above',
@@ -1534,7 +1534,7 @@ function domainedo_shows_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 37,
+      'weight' => 44,
     ),
   );
 
@@ -1552,7 +1552,7 @@ function domainedo_shows_field_default_field_instances() {
           'custom_title' => '',
         ),
         'type' => 'link_default',
-        'weight' => 20,
+        'weight' => 22,
       ),
       'frontpage_block' => array(
         'label' => 'inline',
@@ -1634,7 +1634,7 @@ function domainedo_shows_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 27,
+      'weight' => 28,
     ),
   );
 
@@ -1719,7 +1719,7 @@ function domainedo_shows_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -1884,7 +1884,7 @@ function domainedo_shows_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 32,
+      'weight' => 33,
     ),
   );
 
@@ -1900,7 +1900,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 22,
+        'weight' => 24,
       ),
       'frontpage_block' => array(
         'label' => 'above',
@@ -1964,7 +1964,7 @@ function domainedo_shows_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 28,
+      'weight' => 29,
     ),
   );
 
@@ -1985,7 +1985,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 32,
+        'weight' => 34,
       ),
       'frontpage_block' => array(
         'label' => 'above',
@@ -2048,7 +2048,7 @@ function domainedo_shows_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 36,
+      'weight' => 42,
     ),
   );
 
@@ -2064,7 +2064,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 18,
+        'weight' => 20,
       ),
       'frontpage_block' => array(
         'label' => 'above',
@@ -2163,7 +2163,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 25,
+        'weight' => 6,
       ),
       'list' => array(
         'label' => 'inline',
@@ -2224,7 +2224,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 24,
+        'weight' => 26,
       ),
       'frontpage_block' => array(
         'label' => 'inline',
@@ -2243,7 +2243,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 24,
+        'weight' => 5,
       ),
       'list' => array(
         'label' => 'inline',
@@ -2270,6 +2270,7 @@ function domainedo_shows_field_default_field_instances() {
         'weight' => 32,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_entrance',
     'label' => 'Entrée',
@@ -2282,7 +2283,7 @@ function domainedo_shows_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 22,
+      'weight' => 21,
     ),
   );
 
@@ -2376,7 +2377,7 @@ function domainedo_shows_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -2399,7 +2400,7 @@ function domainedo_shows_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 43,
+        'weight' => 44,
       ),
       'frontpage_block' => array(
         'label' => 'above',
@@ -2462,7 +2463,7 @@ function domainedo_shows_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 41,
+      'weight' => 47,
     ),
   );
 
@@ -2542,7 +2543,7 @@ function domainedo_shows_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -2558,7 +2559,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 21,
+        'weight' => 23,
       ),
       'frontpage_block' => array(
         'label' => 'above',
@@ -2622,7 +2623,7 @@ function domainedo_shows_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 29,
+      'weight' => 30,
     ),
   );
 
@@ -2642,7 +2643,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 37,
+        'weight' => 39,
       ),
       'frontpage_block' => array(
         'label' => 'above',
@@ -2661,7 +2662,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 22,
+        'weight' => 3,
       ),
       'list' => array(
         'label' => 'above',
@@ -2706,7 +2707,7 @@ function domainedo_shows_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -2725,7 +2726,7 @@ function domainedo_shows_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 38,
+        'weight' => 40,
       ),
       'frontpage_block' => array(
         'label' => 'above',
@@ -2792,7 +2793,7 @@ function domainedo_shows_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 39,
+      'weight' => 45,
     ),
   );
 
@@ -2827,7 +2828,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 23,
+        'weight' => 4,
       ),
       'list' => array(
         'label' => 'above',
@@ -2876,7 +2877,7 @@ function domainedo_shows_field_default_field_instances() {
         'track_list' => 0,
       ),
       'type' => 'term_reference_tree',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -2885,7 +2886,7 @@ function domainedo_shows_field_default_field_instances() {
     'bundle' => 'show',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Par défaut, l\'unité de l\'âge est l\'année. Pour indiquer que l\'âge minimum est de 6 mois, renseignez 0.5, pour 3 mois renseignez 0.25 et 0.75 pour 9 mois.',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -2893,70 +2894,71 @@ function domainedo_shows_field_default_field_instances() {
         'settings' => array(
           'decimal_separator' => '.',
           'prefix_suffix' => TRUE,
-          'scale' => 0,
-          'thousand_separator' => ' ',
+          'scale' => 2,
+          'thousand_separator' => '',
         ),
-        'type' => 'number_integer',
-        'weight' => 10,
+        'type' => 'number_decimal',
+        'weight' => 13,
       ),
       'frontpage_block' => array(
-        'label' => 'inline',
+        'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 25,
+        'weight' => 0,
       ),
       'frontpage_block_mobile' => array(
-        'label' => 'inline',
+        'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 0,
       ),
       'full' => array(
         'label' => 'inline',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
+          'prefix_suffix' => 1,
           'scale' => 0,
-          'thousand_separator' => ' ',
+          'thousand_separator' => '',
         ),
-        'type' => 'number_integer',
-        'weight' => 26,
+        'type' => 'number_decimal',
+        'weight' => 0,
       ),
       'list' => array(
-        'label' => 'inline',
+        'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 0,
       ),
       'liste_aussi' => array(
-        'label' => 'inline',
+        'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 24,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 45,
+        'weight' => 0,
       ),
       'zoom' => array(
-        'label' => 'inline',
+        'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_minimum_age',
-    'label' => 'A partir de',
-    'required' => 0,
+    'label' => 'A partir de ',
+    'required' => 1,
     'settings' => array(
       'max' => '',
       'min' => '',
       'prefix' => '',
-      'suffix' => ' ans',
+      'suffix' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2964,7 +2966,7 @@ function domainedo_shows_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 20,
+      'weight' => 22,
     ),
   );
 
@@ -2986,7 +2988,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 41,
+        'weight' => 42,
       ),
       'frontpage_block' => array(
         'label' => 'above',
@@ -3051,7 +3053,7 @@ function domainedo_shows_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 31,
+      'weight' => 32,
     ),
   );
 
@@ -3067,7 +3069,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 35,
+        'weight' => 37,
       ),
       'frontpage_block' => array(
         'label' => 'above',
@@ -3151,7 +3153,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 31,
+        'weight' => 33,
       ),
       'frontpage_block' => array(
         'label' => 'above',
@@ -3214,7 +3216,7 @@ function domainedo_shows_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 35,
+      'weight' => 40,
     ),
   );
 
@@ -3230,7 +3232,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 12,
+        'weight' => 14,
       ),
       'frontpage_block' => array(
         'label' => 'inline',
@@ -3249,7 +3251,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 21,
+        'weight' => 2,
       ),
       'list' => array(
         'label' => 'inline',
@@ -3294,7 +3296,7 @@ function domainedo_shows_field_default_field_instances() {
         'size' => 255,
       ),
       'type' => 'text_textfield',
-      'weight' => 21,
+      'weight' => 20,
     ),
   );
 
@@ -3310,7 +3312,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 17,
+        'weight' => 19,
       ),
       'frontpage_block' => array(
         'label' => 'above',
@@ -3394,7 +3396,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 15,
+        'weight' => 17,
       ),
       'frontpage_block' => array(
         'label' => 'hidden',
@@ -3454,7 +3456,7 @@ function domainedo_shows_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 
@@ -3555,7 +3557,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 23,
+        'weight' => 25,
       ),
       'frontpage_block' => array(
         'label' => 'above',
@@ -3619,7 +3621,7 @@ function domainedo_shows_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 30,
+      'weight' => 31,
     ),
   );
 
@@ -3635,7 +3637,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 19,
+        'weight' => 21,
       ),
       'frontpage_block' => array(
         'label' => 'hidden',
@@ -3697,7 +3699,7 @@ function domainedo_shows_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 25,
+      'weight' => 26,
     ),
   );
 
@@ -3713,7 +3715,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 36,
+        'weight' => 38,
       ),
       'frontpage_block' => array(
         'label' => 'above',
@@ -3732,7 +3734,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 27,
+        'weight' => 7,
       ),
       'list' => array(
         'label' => 'above',
@@ -3779,7 +3781,7 @@ function domainedo_shows_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 23,
+      'weight' => 24,
     ),
   );
 
@@ -3795,7 +3797,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 40,
+        'weight' => 41,
       ),
       'frontpage_block' => array(
         'label' => 'above',
@@ -3852,7 +3854,7 @@ function domainedo_shows_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 26,
+      'weight' => 27,
     ),
   );
 
@@ -3870,7 +3872,7 @@ function domainedo_shows_field_default_field_instances() {
           'link' => 0,
         ),
         'type' => 'full',
-        'weight' => 25,
+        'weight' => 27,
       ),
       'frontpage_block' => array(
         'label' => 'hidden',
@@ -3940,7 +3942,7 @@ function domainedo_shows_field_default_field_instances() {
         'context' => 'sdl_editor_representation',
       ),
       'type' => 'atom_reference_textfield',
-      'weight' => 32,
+      'weight' => 34,
     ),
   );
 
@@ -3958,7 +3960,7 @@ function domainedo_shows_field_default_field_instances() {
           'link' => 0,
         ),
         'type' => 'full',
-        'weight' => 14,
+        'weight' => 16,
       ),
       'frontpage_block' => array(
         'label' => 'hidden',
@@ -4029,7 +4031,7 @@ function domainedo_shows_field_default_field_instances() {
         'context' => 'petit_100',
       ),
       'type' => 'atom_reference_textfield',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 
@@ -4047,7 +4049,7 @@ function domainedo_shows_field_default_field_instances() {
           'link' => 0,
         ),
         'type' => 'full',
-        'weight' => 27,
+        'weight' => 29,
       ),
       'frontpage_block' => array(
         'label' => 'hidden',
@@ -4117,7 +4119,7 @@ function domainedo_shows_field_default_field_instances() {
         'context' => 'sdl_editor_representation',
       ),
       'type' => 'atom_reference_textfield',
-      'weight' => 34,
+      'weight' => 38,
     ),
   );
 
@@ -4133,7 +4135,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'domainedo_media',
         'settings' => array(),
         'type' => 'title',
-        'weight' => 26,
+        'weight' => 28,
       ),
       'frontpage_block' => array(
         'label' => 'hidden',
@@ -4203,7 +4205,7 @@ function domainedo_shows_field_default_field_instances() {
         'context' => 'sdl_editor_representation',
       ),
       'type' => 'atom_reference_textfield',
-      'weight' => 33,
+      'weight' => 36,
     ),
   );
 
@@ -4351,7 +4353,88 @@ function domainedo_shows_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 13,
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'node-show-field_show_dump_age'.
+  $field_instances['node-show-field_show_dump_age'] = array(
+    'bundle' => 'show',
+    'default_value' => array(
+      0 => array(
+        'value' => 1,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 12,
+      ),
+      'frontpage_block' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'frontpage_block_mobile' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 1,
+      ),
+      'list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'liste_aussi' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'zoom' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_show_dump_age',
+    'label' => 'Afficher l\'âge sur la fiche du spectacle',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 23,
     ),
   );
 
@@ -4367,7 +4450,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 28,
+        'weight' => 30,
       ),
       'frontpage_block' => array(
         'label' => 'hidden',
@@ -4445,7 +4528,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 30,
+        'weight' => 32,
       ),
       'frontpage_block' => array(
         'label' => 'above',
@@ -4508,7 +4591,7 @@ function domainedo_shows_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 34,
+      'weight' => 39,
     ),
   );
 
@@ -4607,7 +4690,7 @@ function domainedo_shows_field_default_field_instances() {
           'link' => 0,
         ),
         'type' => 'full',
-        'weight' => 13,
+        'weight' => 15,
       ),
       'frontpage_block' => array(
         'label' => 'hidden',
@@ -4689,7 +4772,7 @@ function domainedo_shows_field_default_field_instances() {
         'context' => 'petit_100',
       ),
       'type' => 'atom_reference_textfield',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -4709,7 +4792,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 29,
+        'weight' => 31,
       ),
       'frontpage_block' => array(
         'label' => 'above',
@@ -4772,7 +4855,7 @@ function domainedo_shows_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 33,
+      'weight' => 35,
     ),
   );
 
@@ -4792,7 +4875,7 @@ function domainedo_shows_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 16,
+        'weight' => 18,
       ),
       'frontpage_block' => array(
         'label' => 'hidden',
@@ -4851,7 +4934,7 @@ function domainedo_shows_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 12,
+      'weight' => 13,
     ),
   );
 
@@ -5822,10 +5905,11 @@ function domainedo_shows_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('A partir de');
+  t('A partir de ');
   t('A utiliser dans le cas où la billetterie est externalisée (PDC) ou si gratuité (Radio France) ou pour préciser tout type d\'info supplémentaire');
   t('Adresse pour le public');
   t('Affiche du festival');
+  t('Afficher l\'âge sur la fiche du spectacle');
   t('Artiste associé');
   t('Billetterie indisponible');
   t('Coproducteurs');
@@ -5863,6 +5947,7 @@ function domainedo_shows_field_default_field_instances() {
   t('Nom du festival');
   t('Non disponible');
   t('Par');
+  t('Par défaut, l\'unité de l\'âge est l\'année. Pour indiquer que l\'âge minimum est de 6 mois, renseignez 0.5, pour 3 mois renseignez 0.25 et 0.75 pour 9 mois.');
   t('Partenariats');
   t('Pas de résultat');
   t('Photo du spectacle');
