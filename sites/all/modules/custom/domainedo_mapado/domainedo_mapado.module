@@ -560,7 +560,17 @@ function domainedo_mapado_send_request_to_ticketing_api($url, $method='GET', $no
       curl_close($ch2);
 
       // On ajoute imagePath aux données.
-      $data['imageList'] = array($imagePath);
+      // ATTENTION ! imageList est deprecated. On utilise maintenant mediaList
+      // et ce champ est maintenant un tableau d'objets.
+      // Voir documentation API Ticketing : https://ticketing.mapado.net/doc.html#operation/postTicketingCollection
+
+      // $data['imageList'] = array($imagePath);
+      $data['mediaList'] = array(
+        array(
+          'type' => 'image',
+          'path' => $imagePath
+        ),
+      );
       if ($is_watchdog_on) {
         watchdog('domainedo_mapado', "imagePath: {$imagePath}");
       }

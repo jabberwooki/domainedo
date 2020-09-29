@@ -1,3 +1,6 @@
+Hotfix mapado-event-image-update - 2020-09-29
+* domainedo-mapado up: Mapado event image is now updatable, after coding of Tickeking API change in domainedo_mapado.module.
+
 Domaine d'O 1.3.8 - 2020-09-10
 css home page shows list buttons improved - patch to make D7 working with mysql8
 
