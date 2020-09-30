@@ -567,7 +567,7 @@ function domainedo_mapado_send_request_to_ticketing_api($url, $method='GET', $no
       // $data['imageList'] = array($imagePath);
       $data['mediaList'] = array(
         array(
-          'type' => 'image',
+          'imageType' => 'image',
           'path' => $imagePath
         ),
       );
