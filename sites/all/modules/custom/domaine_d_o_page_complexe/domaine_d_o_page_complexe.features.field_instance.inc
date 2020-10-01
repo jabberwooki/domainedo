@@ -11,6 +11,242 @@
 function domaine_d_o_page_complexe_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance:
+  // 'field_collection_item-field_important_partners-field_img_imp_partner'.
+  $field_instances['field_collection_item-field_important_partners-field_img_imp_partner'] = array(
+    'bundle' => 'field_important_partners',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'domainedo_media',
+        'settings' => array(),
+        'type' => 'partner',
+        'weight' => 3,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_img_imp_partner',
+    'label' => 'Image',
+    'required' => 1,
+    'settings' => array(
+      'allow_override' => 0,
+      'referencable_types' => array(
+        'audio' => 0,
+        'file' => 0,
+        'gallery' => 0,
+        'image' => 'image',
+        'twitter' => 0,
+        'video' => 0,
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'atom_reference',
+      'settings' => array(
+        'context' => 'partner',
+      ),
+      'type' => 'atom_reference_textfield',
+      'weight' => 34,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_important_partners-field_link_important_partner'.
+  $field_instances['field_collection_item-field_important_partners-field_link_important_partner'] = array(
+    'bundle' => 'field_important_partners',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_absolute',
+        'weight' => 2,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_link_important_partner',
+    'label' => 'Lien',
+    'required' => 1,
+    'settings' => array(
+      'absolute_url' => 1,
+      'attributes' => array(
+        'class' => '',
+        'configurable_class' => 0,
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'default',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'rel_remove' => 'default',
+      'title' => 'none',
+      'title_allowed_values' => '',
+      'title_label_use_field_label' => 0,
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 33,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_important_partners-field_text_imp_partner'.
+  $field_instances['field_collection_item-field_important_partners-field_text_imp_partner'] = array(
+    'bundle' => 'field_important_partners',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_text_imp_partner',
+    'label' => 'Texte',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 1,
+      'mee_enabled' => 1,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 31,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_secondary_partners-field_img_imp_partner'.
+  $field_instances['field_collection_item-field_secondary_partners-field_img_imp_partner'] = array(
+    'bundle' => 'field_secondary_partners',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'domainedo_media',
+        'settings' => array(),
+        'type' => 'partner',
+        'weight' => 1,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_img_imp_partner',
+    'label' => 'Image',
+    'required' => 1,
+    'settings' => array(
+      'allow_override' => 0,
+      'referencable_types' => array(
+        'audio' => 0,
+        'file' => 0,
+        'gallery' => 0,
+        'image' => 'image',
+        'twitter' => 0,
+        'video' => 0,
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'atom_reference',
+      'settings' => array(
+        'context' => 'partner',
+      ),
+      'type' => 'atom_reference_textfield',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'field_collection_item-field_secondary_partners-field_link_important_partner'.
+  $field_instances['field_collection_item-field_secondary_partners-field_link_important_partner'] = array(
+    'bundle' => 'field_secondary_partners',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_absolute',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_link_important_partner',
+    'label' => 'Lien',
+    'required' => 0,
+    'settings' => array(
+      'absolute_url' => 1,
+      'attributes' => array(
+        'class' => '',
+        'configurable_class' => 0,
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'default',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'rel_remove' => 'default',
+      'title' => 'none',
+      'title_allowed_values' => '',
+      'title_label_use_field_label' => 0,
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'node-page-body'.
   $field_instances['node-page-body'] = array(
     'bundle' => 'page',
@@ -293,6 +529,63 @@ function domaine_d_o_page_complexe_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-page_complexe-field_important_partners'.
+  $field_instances['node-page_complexe-field_important_partners'] = array(
+    'bundle' => 'page_complexe',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => 'Ajouter',
+          'delete' => 'Supprimer',
+          'description' => TRUE,
+          'edit' => 'Modifier',
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_view',
+        'weight' => 5,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => 'Ajouter',
+          'delete' => 'Supprimer',
+          'description' => TRUE,
+          'edit' => 'Modifier',
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_view',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_important_partners',
+    'label' => 'Partenaires principaux',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
+      'weight' => 31,
+    ),
+  );
+
   // Exported field_instance: 'node-page_complexe-field_paragraphe_complexe'.
   $field_instances['node-page_complexe-field_paragraphe_complexe'] = array(
     'bundle' => 'page_complexe',
@@ -373,7 +666,7 @@ function domaine_d_o_page_complexe_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -406,6 +699,63 @@ function domaine_d_o_page_complexe_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-page_complexe-field_secondary_partners'.
+  $field_instances['node-page_complexe-field_secondary_partners'] = array(
+    'bundle' => 'page_complexe',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => 'Ajouter',
+          'delete' => 'Supprimer',
+          'description' => TRUE,
+          'edit' => 'Modifier',
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_view',
+        'weight' => 6,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'field_collection',
+        'settings' => array(
+          'add' => 'Ajouter',
+          'delete' => 'Supprimer',
+          'description' => TRUE,
+          'edit' => 'Modifier',
+          'view_mode' => 'full',
+        ),
+        'type' => 'field_collection_view',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_secondary_partners',
+    'label' => 'Partenaires secondaires',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'field_collection',
+      'settings' => array(),
+      'type' => 'field_collection_embed',
+      'weight' => 32,
+    ),
+  );
+
   // Exported field_instance: 'node-page_complexe-field_white_frame_left'.
   $field_instances['node-page_complexe-field_white_frame_left'] = array(
     'bundle' => 'page_complexe',
@@ -425,7 +775,7 @@ function domaine_d_o_page_complexe_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -521,7 +871,9 @@ function domaine_d_o_page_complexe_field_default_field_instances() {
       'default' => array(
         'label' => 'hidden',
         'module' => 'link',
-        'settings' => array(),
+        'settings' => array(
+          'custom_title' => '',
+        ),
         'type' => 'link_default',
         'weight' => 3,
       ),
@@ -538,6 +890,7 @@ function domaine_d_o_page_complexe_field_default_field_instances() {
     'label' => 'Lien plus d\'info',
     'required' => 1,
     'settings' => array(
+      'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
         'configurable_title' => 0,
@@ -551,6 +904,7 @@ function domaine_d_o_page_complexe_field_default_field_instances() {
       'enable_tokens' => 1,
       'rel_remove' => 'default',
       'title' => 'optional',
+      'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
       'title_value' => 'Plus d\'infos',
       'url' => 0,
@@ -928,8 +1282,11 @@ function domaine_d_o_page_complexe_field_default_field_instances() {
   t('Encart rouge gauche');
   t('Galerie');
   t('Image');
+  t('Lien');
   t('Lien plus d\'info');
   t('Paragraphe complexe');
+  t('Partenaires principaux');
+  t('Partenaires secondaires');
   t('Résumé');
   t('Texte');
   t('Titre niveau 3');

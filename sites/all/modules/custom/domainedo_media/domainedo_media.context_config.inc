@@ -93,6 +93,7 @@ function domainedo_media_default_scald_context_config() {
   $context_config->player = array(
     'audio' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'file' => array(
       '*' => 'default',
@@ -200,6 +201,7 @@ function domainedo_media_default_scald_context_config() {
   $context_config->player = array(
     'audio' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'file' => array(
       '*' => 'default',
@@ -371,6 +373,7 @@ function domainedo_media_default_scald_context_config() {
   $context_config->player = array(
     'audio' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'file' => array(
       '*' => 'default',
@@ -424,6 +427,7 @@ function domainedo_media_default_scald_context_config() {
   $context_config->player = array(
     'audio' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'file' => array(
       '*' => 'default',
@@ -540,6 +544,7 @@ function domainedo_media_default_scald_context_config() {
   $context_config->player = array(
     'audio' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'file' => array(
       '*' => 'default',
@@ -818,6 +823,7 @@ function domainedo_media_default_scald_context_config() {
   $context_config->player = array(
     'audio' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'file' => array(
       '*' => 'default',

@@ -138,14 +138,16 @@ function domaine_d_o_page_complexe_ds_layout_settings_info() {
         0 => 'body',
         2 => 'comments',
         3 => 'field_paragraphe_complexe',
+        4 => 'field_important_partners',
+        5 => 'field_secondary_partners',
       ),
       'top_complex_page' => array(
         1 => 'field_image_page_complexe',
-        4 => 'group_img_wrapper',
+        6 => 'group_img_wrapper',
       ),
       'left_block_page' => array(
-        5 => 'field_red_frame_left',
-        6 => 'field_white_frame_left',
+        7 => 'field_red_frame_left',
+        8 => 'field_white_frame_left',
       ),
     ),
     'fields' => array(
@@ -153,6 +155,8 @@ function domaine_d_o_page_complexe_ds_layout_settings_info() {
       'field_image_page_complexe' => 'top_complex_page',
       'comments' => 'ds_content',
       'field_paragraphe_complexe' => 'ds_content',
+      'field_important_partners' => 'ds_content',
+      'field_secondary_partners' => 'ds_content',
       'group_img_wrapper' => 'top_complex_page',
       'field_red_frame_left' => 'left_block_page',
       'field_white_frame_left' => 'left_block_page',

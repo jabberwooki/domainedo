@@ -13998,3 +13998,45 @@ strong {
   }
 }
  */
+.field-collection-item-field-important-partners > div.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.field-name-field-secondary-partners > .field-items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .field-name-field-secondary-partners > .field-items {
+    justify-content: space-between;
+  }
+  .field-name-field-secondary-partners > .field-items > .field-item {
+    max-width: 25%;
+  }
+  .field-name-field-secondary-partners > .field-items > .field-item .field-item {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: 980px) {
+  .field-name-field-secondary-partners > .field-items {
+    justify-content: space-between;
+  }
+  .field-name-field-secondary-partners > .field-items > .field-item {
+    max-width: 33%;
+  }
+  .field-name-field-secondary-partners > .field-items > .field-item .field-item {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 980px) {
+  .field-name-field-secondary-partners > .field-items {
+    justify-content: center;
+  }
+}
+.field-name-field-secondary-partners > .field-items img {
+  max-width: 100%;
+}
