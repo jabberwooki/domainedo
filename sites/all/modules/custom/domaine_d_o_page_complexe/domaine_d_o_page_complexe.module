@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Code for the Domaine d'O Page complexe feature.
@@ -10,15 +11,37 @@ include_once 'domaine_d_o_page_complexe.features.inc';
  * Implements hook_init().
  */
 function domaine_d_o_page_complexe_init() {
-  drupal_add_js(drupal_get_path('module', 'domaine_d_o_page_complexe') .'/js/domainedo_page_complex.js');
+  drupal_add_js(drupal_get_path('module', 'domaine_d_o_page_complexe') . '/js/domainedo_page_complex.js');
 }
 
 /**
  * Implements hook_node_view().
  */
 function domaine_d_o_page_complexe_node_view($node, $view_mode, $langcode) {
-  if($view_mode == "full" && $node->type=="page_complexe") {
-    drupal_add_js(drupal_get_path('theme','ddobs') . '/js/jquery.matchHeight-min.js');
-    drupal_add_js(drupal_get_path('theme','ddobs') . '/js/matchHeightPublicText.js');
+  if ($view_mode == "full" && $node->type == "page_complexe") {
+    drupal_add_js(drupal_get_path('theme', 'ddobs') . '/js/jquery.matchHeight-min.js');
+    drupal_add_js(drupal_get_path('theme', 'ddobs') . '/js/matchHeightPublicText.js');
+  }
+}
+
+function domaine_d_o_page_complexe_field_collection_item_view($field_collection_item, $view_mode, $langcode) {
+  //dpm($field_collection_item->field_name);
+  if ($field_collection_item->field_name == 'field_important_partners') {
+    $link = $field_collection_item->content['field_link_important_partner']['#object']->field_link_important_partner['und'][0]['url'];
+    // on n'affiche plus le lien
+    unset($field_collection_item->content['field_link_important_partner']);
+
+    // on wrap l'image dans un lien
+    $field_collection_item->content['field_img_imp_partner'][0]['#prefix'] = '<a target="_blank" href="'. $link .'" class="link-imp-partner">';
+    $field_collection_item->content['field_img_imp_partner'][0]['#suffix'] = '</a>';
+  }
+  if ($field_collection_item->field_name == 'field_secondary_partners') {
+    $link = $field_collection_item->content['field_link_important_partner']['#object']->field_link_important_partner['und'][0]['url'];
+    // on n'affiche plus le lien
+    unset($field_collection_item->content['field_link_important_partner']);
+
+    // on wrap l'image dans un lien
+    $field_collection_item->content['field_img_imp_partner'][0]['#prefix'] = '<a target="_blank" href="'. $link .'" class="link-sec-partner">';
+    $field_collection_item->content['field_img_imp_partner'][0]['#suffix'] = '</a>';
   }
 }

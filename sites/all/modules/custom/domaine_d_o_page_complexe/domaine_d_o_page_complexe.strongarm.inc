@@ -189,6 +189,9 @@ function domaine_d_o_page_complexe_strongarm() {
         'redirect' => array(
           'weight' => '5',
         ),
+        'xmlsitemap' => array(
+          'weight' => '30',
+        ),
       ),
       'display' => array(
         'sharethis' => array(
@@ -197,8 +200,8 @@ function domaine_d_o_page_complexe_strongarm() {
             'visible' => TRUE,
           ),
           'full' => array(
-            'weight' => '10',
-            'visible' => TRUE,
+            'weight' => '21',
+            'visible' => FALSE,
           ),
         ),
       ),

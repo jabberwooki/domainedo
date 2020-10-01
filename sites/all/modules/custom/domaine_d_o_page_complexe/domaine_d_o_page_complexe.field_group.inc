@@ -55,7 +55,7 @@ function domaine_d_o_page_complexe_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Entoure image',
-    'weight' => '3',
+    'weight' => '5',
     'children' => array(
       0 => 'field_image_page_complexe',
     ),
