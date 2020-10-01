@@ -18,9 +18,37 @@ function domaine_d_o_page_complexe_ctools_plugin_api($module = NULL, $api = NULL
   if ($module == "field_group" && $api == "field_group") {
     return array("version" => "1");
   }
+  if ($module == "scald" && $api == "context_config") {
+    return array("version" => "1");
+  }
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
+}
+
+/**
+ * Implements hook_image_default_styles().
+ */
+function domaine_d_o_page_complexe_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: partner-width-400.
+  $styles['partner-width-400'] = array(
+    'label' => 'partner-width-400',
+    'effects' => array(
+      18 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 400,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
 }
 
 /**
