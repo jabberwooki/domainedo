@@ -1,0 +1,40 @@
+.field-collection-item-field-important-partners {
+  > div.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.field-name-field-secondary-partners {
+  > .field-items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    @media screen and (min-width:1200px) {
+      justify-content: space-between;
+      > .field-item {
+        max-width: 25%;
+        .field-item {
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+    @media screen and (max-width:1200px) and (min-width:980px) {
+      justify-content: space-between;
+      > .field-item {
+        max-width: 33%;
+        .field-item {
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+    @media screen and (max-width:980px) {
+      justify-content: center;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+}
