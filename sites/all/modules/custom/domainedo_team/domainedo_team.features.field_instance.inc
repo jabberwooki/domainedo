@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * domainedo_team.features.field_instance.inc
@@ -10,7 +11,7 @@
 function domainedo_team_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-personne-field_person_dpt'
+  // Exported field_instance: 'node-personne-field_person_dpt'.
   $field_instances['node-personne-field_person_dpt'] = array(
     'bundle' => 'personne',
     'default_value' => NULL,
@@ -47,7 +48,7 @@ function domainedo_team_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-personne-field_person_img_1'
+  // Exported field_instance: 'node-personne-field_person_img_1'.
   $field_instances['node-personne-field_person_img_1'] = array(
     'bundle' => 'personne',
     'default_value' => NULL,
@@ -95,7 +96,7 @@ function domainedo_team_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-personne-field_person_img_2'
+  // Exported field_instance: 'node-personne-field_person_img_2'.
   $field_instances['node-personne-field_person_img_2'] = array(
     'bundle' => 'personne',
     'default_value' => NULL,
@@ -143,7 +144,7 @@ function domainedo_team_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-personne-field_person_txt_1'
+  // Exported field_instance: 'node-personne-field_person_txt_1'.
   $field_instances['node-personne-field_person_txt_1'] = array(
     'bundle' => 'personne',
     'default_value' => NULL,
@@ -188,7 +189,7 @@ function domainedo_team_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-personne-field_person_txt_2'
+  // Exported field_instance: 'node-personne-field_person_txt_2'.
   $field_instances['node-personne-field_person_txt_2'] = array(
     'bundle' => 'personne',
     'default_value' => NULL,
@@ -233,7 +234,7 @@ function domainedo_team_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-personne-field_person_txt_3'
+  // Exported field_instance: 'node-personne-field_person_txt_3'.
   $field_instances['node-personne-field_person_txt_3'] = array(
     'bundle' => 'personne',
     'default_value' => NULL,
