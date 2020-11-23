@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * domainedo_team.context_config.inc
@@ -37,6 +38,7 @@ function domainedo_team_default_scald_context_config() {
   $context_config->player = array(
     'audio' => array(
       '*' => 'default',
+      'settings' => array(),
     ),
     'file' => array(
       '*' => 'default',
@@ -56,7 +58,10 @@ function domainedo_team_default_scald_context_config() {
       '*' => 'default',
     ),
   );
-  $context_config->data = array();
+  $context_config->data = array(
+    'width' => '',
+    'height' => '',
+  );
   $export['polaroid'] = $context_config;
 
   return $export;

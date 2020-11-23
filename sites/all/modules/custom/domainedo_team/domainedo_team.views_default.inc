@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * domainedo_team.views_default.inc
@@ -49,7 +50,7 @@ function domainedo_team_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Contenu: Published */
+  /* Filter criterion: Contenu: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -105,7 +106,7 @@ function domainedo_team_views_default_views() {
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Contenu: Published */
+  /* Filter criterion: Contenu: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -203,7 +204,7 @@ function domainedo_team_views_default_views() {
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Contenu: Published */
+  /* Filter criterion: Contenu: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -246,7 +247,7 @@ function domainedo_team_views_default_views() {
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Contenu: Published */
+  /* Filter criterion: Contenu: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -289,7 +290,7 @@ function domainedo_team_views_default_views() {
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Contenu: Published */
+  /* Filter criterion: Contenu: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -308,11 +309,97 @@ function domainedo_team_views_default_views() {
   $handler->display->display_options['filters']['field_person_dpt_tid']['table'] = 'field_data_field_person_dpt';
   $handler->display->display_options['filters']['field_person_dpt_tid']['field'] = 'field_person_dpt_tid';
   $handler->display->display_options['filters']['field_person_dpt_tid']['value'] = array(
-    511 => '511',
+    553 => '553',
   );
   $handler->display->display_options['filters']['field_person_dpt_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_person_dpt_tid']['vocabulary'] = 'poles';
   $handler->display->display_options['block_description'] = 'Pôle artistique';
+
+  /* Display: billetterie */
+  $handler = $view->new_display('block', 'billetterie', 'block_billetterie');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Pôle billetterie';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Draggableviews: Poids */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'personnes:page_1';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
+  /* Sort criterion: Contenu: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Contenu: Published status */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Contenu: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'personne' => 'personne',
+  );
+  /* Filter criterion: Contenu: Service (field_person_dpt) */
+  $handler->display->display_options['filters']['field_person_dpt_tid']['id'] = 'field_person_dpt_tid';
+  $handler->display->display_options['filters']['field_person_dpt_tid']['table'] = 'field_data_field_person_dpt';
+  $handler->display->display_options['filters']['field_person_dpt_tid']['field'] = 'field_person_dpt_tid';
+  $handler->display->display_options['filters']['field_person_dpt_tid']['value'] = array(
+    3037 => '3037',
+  );
+  $handler->display->display_options['filters']['field_person_dpt_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_person_dpt_tid']['vocabulary'] = 'poles';
+  $handler->display->display_options['block_description'] = 'Pôle billetterie';
+
+  /* Display: RH */
+  $handler = $view->new_display('block', 'RH', 'block_rh');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Pôle RH';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Draggableviews: Poids */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'personnes:page_1';
+  $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
+  /* Sort criterion: Contenu: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Contenu: Published status */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Contenu: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'personne' => 'personne',
+  );
+  /* Filter criterion: Contenu: Service (field_person_dpt) */
+  $handler->display->display_options['filters']['field_person_dpt_tid']['id'] = 'field_person_dpt_tid';
+  $handler->display->display_options['filters']['field_person_dpt_tid']['table'] = 'field_data_field_person_dpt';
+  $handler->display->display_options['filters']['field_person_dpt_tid']['field'] = 'field_person_dpt_tid';
+  $handler->display->display_options['filters']['field_person_dpt_tid']['value'] = array(
+    3038 => '3038',
+  );
+  $handler->display->display_options['filters']['field_person_dpt_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_person_dpt_tid']['vocabulary'] = 'poles';
+  $handler->display->display_options['block_description'] = 'Pôle RH';
   $translatables['personnes'] = array(
     t('Master'),
     t('Personnes'),
@@ -336,6 +423,10 @@ function domainedo_team_views_default_views() {
     t('Pôle technique'),
     t('artistique'),
     t('Pôle artistique'),
+    t('billetterie'),
+    t('Pôle billetterie'),
+    t('RH'),
+    t('Pôle RH'),
   );
   $export['personnes'] = $view;
 

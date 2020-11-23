@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * domainedo_multimedia.views_default.inc
@@ -259,6 +260,7 @@ Morbi elementum augue eleifend, lacinia quam a, tincidunt mauris. Mauris consequ
     62 => '62',
     345 => '345',
     80 => '80',
+    2262 => '2262',
     243 => '243',
     132 => '132',
     78 => '78',
@@ -271,10 +273,6 @@ Morbi elementum augue eleifend, lacinia quam a, tincidunt mauris. Mauris consequ
   $handler->display->display_options['filters']['scald_tags_tid']['expose']['identifier'] = 'scald_tags_tid';
   $handler->display->display_options['filters']['scald_tags_tid']['expose']['remember_roles'] = array(
     2 => '2',
-    1 => 0,
-    3 => 0,
-    4 => 0,
-    5 => 0,
   );
   $handler->display->display_options['filters']['scald_tags_tid']['expose']['reduce'] = TRUE;
   $handler->display->display_options['filters']['scald_tags_tid']['type'] = 'select';
@@ -411,6 +409,7 @@ Morbi elementum augue eleifend, lacinia quam a, tincidunt mauris. Mauris consequ
     t('Trier par'),
     t('Asc'),
     t('Desc'),
+    t('Options avancées'),
     t('Éléments par page'),
     t('- Tout -'),
     t('Décalage'),

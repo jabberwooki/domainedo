@@ -13246,33 +13246,6 @@ strong {
 .node-type-news .galleria-thumbnails-list {
   top: -30px !important;
 }
-#block-views-personnes-block-artistique h2.block-title,
-#block-views-personnes-block-1 h2.block-title,
-#block-views-personnes-block-2 h2.block-title,
-#block-views-personnes-block-equipe-recettes h2.block-title,
-#block-views-personnes-block-3 h2.block-title {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 1.5em;
-  /* 24/16px */
-  margin: 10px 0;
-}
-#block-views-personnes-block-artistique .field-name-field-person-img-1,
-#block-views-personnes-block-1 .field-name-field-person-img-1,
-#block-views-personnes-block-2 .field-name-field-person-img-1,
-#block-views-personnes-block-equipe-recettes .field-name-field-person-img-1,
-#block-views-personnes-block-3 .field-name-field-person-img-1 {
-  float: left;
-  margin-right: 20px;
-  margin-bottom: 30px;
-}
-#block-views-personnes-block-artistique .field-name-field-person-img-2,
-#block-views-personnes-block-1 .field-name-field-person-img-2,
-#block-views-personnes-block-2 .field-name-field-person-img-2,
-#block-views-personnes-block-equipe-recettes .field-name-field-person-img-2,
-#block-views-personnes-block-3 .field-name-field-person-img-2 {
-  display: none;
-}
 .page-taxonomy-term .field-name-field-scald-image .field-name-scald-authors {
   position: absolute;
   right: 0;
@@ -13874,6 +13847,39 @@ strong {
 [id*="block-views-personnes"] [id*="node-personne"] .field {
   font-style: italic;
   font-weight: 400;
+}
+#block-views-personnes-block-artistique h2.block-title,
+#block-views-personnes-block-1 h2.block-title,
+#block-views-personnes-block-2 h2.block-title,
+#block-views-personnes-block-equipe-recettes h2.block-title,
+#block-views-personnes-block-3 h2.block-title,
+#block-views-personnes-block-billetterie h2.block-title,
+#block-views-personnes-block-rh h2.block-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.5em;
+  /* 24/16px */
+  margin: 10px 0;
+}
+#block-views-personnes-block-artistique .field-name-field-person-img-1,
+#block-views-personnes-block-1 .field-name-field-person-img-1,
+#block-views-personnes-block-2 .field-name-field-person-img-1,
+#block-views-personnes-block-equipe-recettes .field-name-field-person-img-1,
+#block-views-personnes-block-3 .field-name-field-person-img-1,
+#block-views-personnes-block-billetterie .field-name-field-person-img-1,
+#block-views-personnes-block-rh .field-name-field-person-img-1 {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 30px;
+}
+#block-views-personnes-block-artistique .field-name-field-person-img-2,
+#block-views-personnes-block-1 .field-name-field-person-img-2,
+#block-views-personnes-block-2 .field-name-field-person-img-2,
+#block-views-personnes-block-equipe-recettes .field-name-field-person-img-2,
+#block-views-personnes-block-3 .field-name-field-person-img-2,
+#block-views-personnes-block-billetterie .field-name-field-person-img-2,
+#block-views-personnes-block-rh .field-name-field-person-img-2 {
+  display: none;
 }
 .page-search h2.page-header {
   font-style: normal;

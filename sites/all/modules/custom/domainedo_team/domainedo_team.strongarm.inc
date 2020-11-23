@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * domainedo_team.strongarm.inc
