@@ -1,3 +1,6 @@
+Domaine d'O 1.3.10 - 2020-11-23
+CSS team page up to add billetterie and rh
+
 Domaine d'O 1.3.9 - 2020-10-01
 Fields patners added in page complexe conten type
 
