@@ -34,7 +34,7 @@ function domainedo_mapado_node_postinsert($node) {
     }
     // Modifs 2019 - Envoi d'une requete de création (POST) à Mapado via l'API Ticketing, et non plus Media.
     // La doc de cette API : https://ticketing.mapado.net/doc.html
-    $url = 'https://ticketing.mapado.net/v1/ticketings?fields=@id,title,slug';
+    $url = 'https://ticketing.mapado.net/v1/ticketings?fields=@id,title,slug,unlimitedStock';
     $request_result = domainedo_mapado_send_request_to_ticketing_api($url, 'POST', $node);
     if($is_watchdog_on) {
       watchdog('domainedo_mapado', "Postinsert (line ". __LINE__ . ") : Mapado insert response = {$request_result}");
@@ -649,6 +649,14 @@ function domainedo_mapado_send_event_date_request_to_mapado($url, $method='POST'
     // On peut en avoir besoin un jour.
   }
   elseif ($method == 'POST') {
+    // --------- Ajout 2020-12-11 ----------------------------------------------
+    // Gestion du stock de places.
+    // Suite à un bug découvert par Mapado dans leur API,
+    // il faut spécifier que le nombre de places est illimité.
+    // (unlimitedStock ne peut pas etre égal à FALSE et totalStock à NULL - voir échanges email du 9, 11 et 11 déc 2020)
+    $data['unlimitedStock'] = true;
+    // --------- Fin de Ajout 2020-12-11 ---------------------------------------
+
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
     $headers[] = "Content-Type: application/json";

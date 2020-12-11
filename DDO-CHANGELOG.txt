@@ -1,3 +1,8 @@
+Domaine d'O v1.3.11
+-------------------
+ * domainedo_mapado up: 'unlimitedStock: true' moved from POST request for shows to POST requests for show's dates.
+ * domainedo_mapado up: 'unlimitedStock: true' added to POST request to prevent mapado bug.
+
 Domaine d'O 1.3.10 - 2020-11-23
 CSS team page up to add billetterie and rh
 
