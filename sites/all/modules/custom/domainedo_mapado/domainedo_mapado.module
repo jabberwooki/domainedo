@@ -593,6 +593,8 @@ function domainedo_mapado_send_request_to_ticketing_api($url, $method='GET', $no
       $data['venue'] = '/v1/venues/391';
       // Ville
       $data['city'] = 'Montpellier';
+      // Gestion du nombre de places
+      $data['unlimitedStock'] = true;
     }
     // Sinon
     elseif ($method == 'PUT') {
