@@ -1,3 +1,6 @@
+v1.3.12 - Domaine d'O - 2021-01-05
+Mises à jour de sécurité du coeur, de ckeditor et de webform
+
 Domaine d'O v1.3.11
 -------------------
  * domainedo_mapado up: 'unlimitedStock: true' moved from POST request for shows to POST requests for show's dates.
