@@ -6,6 +6,11 @@
  */
 
 /**
+ * The default character for quoting identifiers in MySQL.
+ */
+define('MYSQL_IDENTIFIER_QUOTE_CHARACTER_DEFAULT', '`');
+
+/**
  * @addtogroup database
  * @{
  */
@@ -359,7 +364,7 @@ class DatabaseConnection_mysql extends DatabaseConnection {
     );
 
     $sql_mode = 'REAL_AS_FLOAT,PIPES_AS_CONCAT,ANSI_QUOTES,IGNORE_SPACE,STRICT_TRANS_TABLES,STRICT_ALL_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO';
-    // NO_AUTO_CREATE_USER is removed in MySQL 8.0.11
+    // NO_AUTO_CREATE_USER was removed in MySQL 8.0.11
     // https://dev.mysql.com/doc/relnotes/mysql/8.0/en/news-8-0-11.html#mysqld-8-0-11-deprecation-removal
     if (version_compare($this->getAttribute(PDO::ATTR_SERVER_VERSION), '8.0.11', '<')) {
       $sql_mode .= ',NO_AUTO_CREATE_USER';
@@ -381,16 +386,20 @@ class DatabaseConnection_mysql extends DatabaseConnection {
     parent::setPrefix($prefix);
     // Successive versions of MySQL have become increasingly strict about the
     // use of reserved keywords as table names. Drupal 7 uses at least one such
-    // table (system). Therefore we surround all table names with double quotes.
+    // table (system). Therefore we surround all table names with quotes.
+    $quote_char = variable_get('mysql_identifier_quote_character', MYSQL_IDENTIFIER_QUOTE_CHARACTER_DEFAULT);
     foreach ($this->prefixSearch as $i => $prefixSearch) {
       if (substr($prefixSearch, 0, 1) === '{') {
-        // If the prefix already contains one or more double quotes remove them.
+        // If the prefix already contains one or more quotes remove them.
         // This can happen when - for example - DrupalUnitTestCase sets up a
-        // "temporary prefixed database".
-        $this->prefixReplace[$i] = '"' . str_replace('"', '', $this->prefixReplace[$i]);
+        // "temporary prefixed database". Also if there's a dot in the prefix,
+        // wrap it in quotes to cater for schema names in prefixes.
+        $search = array($quote_char, '.');
+        $replace = array('', $quote_char . '.' . $quote_char);
+        $this->prefixReplace[$i] = $quote_char . str_replace($search, $replace, $this->prefixReplace[$i]);
       }
       if (substr($prefixSearch, -1) === '}') {
-        $this->prefixReplace[$i] .= '"';
+        $this->prefixReplace[$i] .= $quote_char;
       }
     }
   }
@@ -436,7 +445,8 @@ class DatabaseConnection_mysql extends DatabaseConnection {
     }
     if (in_array(strtolower($identifier), $this->reservedKeyWords, TRUE)) {
       // Quote the string for MySQL reserved keywords.
-      $identifier = '"' . $identifier . '"';
+      $quote_char = variable_get('mysql_identifier_quote_character', MYSQL_IDENTIFIER_QUOTE_CHARACTER_DEFAULT);
+      $identifier = $quote_char . $identifier . $quote_char;
     }
     return isset($table) ? $table . '.' . $identifier : $identifier;
   }

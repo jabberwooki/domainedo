@@ -57,9 +57,10 @@ class DatabaseSchema_mysql extends DatabaseSchema {
   protected function buildTableNameCondition($table_name, $operator = '=', $add_prefix = TRUE) {
     $info = $this->connection->getConnectionOptions();
 
-    // Ensure the table name is not surrounded with double quotes as that is not
+    // Ensure the table name is not surrounded with quotes as that is not
     // appropriate for schema queries.
-    $table_name = str_replace('"', '', $table_name);
+    $quote_char = variable_get('mysql_identifier_quote_character', MYSQL_IDENTIFIER_QUOTE_CHARACTER_DEFAULT);
+    $table_name = str_replace($quote_char, '', $table_name);
 
     $table_info = $this->getPrefixInfo($table_name, $add_prefix);
 
