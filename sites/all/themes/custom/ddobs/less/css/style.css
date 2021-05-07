@@ -10336,7 +10336,7 @@ strong {
 }
 .group-show-list .group-black-bg .field-name-field-boxoffice-url {
   display: table;
-  border: 1px solid #F74E2D;
+  /*border: 1px solid @grenadine-ddo;*/
 }
 .group-show-list .group-black-bg .field-name-field-boxoffice-url a {
   padding-left: 20px;
