@@ -443,6 +443,7 @@ function domainedo_shows_field_default_field_bases() {
         'nuit-gitane' => 'Nuit Gitane',
         'cine-metropole' => 'Ciné Métropole',
         'cirque-metropole' => 'Cirque Métropole',
+        'danseplatforma' => 'dansePlatForma',
       ),
       'allowed_values_function' => '',
     ),
