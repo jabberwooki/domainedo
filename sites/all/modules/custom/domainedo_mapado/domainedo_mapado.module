@@ -743,7 +743,7 @@ function domainedo_mapado_node_view($node, $view_mode, $langcode) {
       else {
         $ticketing = '/v1/ticketings/' . substr($slug, 0, strpos($slug, '-'));
       }
-      $url = 'https://ticketing.mapado.net' . $ticketing . '?fields=@id,title,slug,isOnSale,availabilityStatus,sellingDeviceData{hasTicketPriceOnSale,sellingDevice{name}}';
+      $url = 'https://ticketing.mapado.net' . $ticketing . '?fields=@id,title,slug,isOnSale,availabilityStatus,sellingDeviceData{hasTicketPriceOnSale,sellingDevice{@id,minisite{@id,domain}}}';
 
       $request_result = domainedo_mapado_send_request_to_ticketing_api($url);
       $result_data = json_decode($request_result);
@@ -765,7 +765,7 @@ function domainedo_mapado_node_view($node, $view_mode, $langcode) {
       else {
         $has_price = false;
         foreach ($result_data->sellingDeviceData as $item) {
-          if ($item->sellingDevice->name == 'domainedo' && $item->hasTicketPriceOnSale) {
+          if ($item->sellingDevice->minisite && $item->sellingDevice->minisite->domain == 'domainedo.mapado.com' && $item->hasTicketPriceOnSale) {
             $has_price = true;
           }
         }
